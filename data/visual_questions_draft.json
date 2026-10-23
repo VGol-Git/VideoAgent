@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "name": "ClipScout visual questions draft",
+  "status": "assistant-annotated draft; not independently human-verified",
+  "video": {
+    "filename": "Subagents vs Agent Teams 🧠 Hermes Bots Goal Loops Kanban Graphs.mp4",
+    "duration_seconds": 2575.0057666666667,
+    "width": 1920,
+    "height": 1080
+  },
+  "annotation_protocol": {
+    "source": "decoded source-video frames only; no audio or ASR used",
+    "overview_sampling_seconds": 60,
+    "refinement_sampling_seconds": [
+      10,
+      5
+    ],
+    "boundary_estimation": "midpoint between adjacent observed scene states; see per-question brackets",
+    "split_policy": "All questions sharing the Email/Article slide sequence are dev to avoid direct scene leakage into test. This remains one-video case study.",
+    "limitations": [
+      "Sparse visual review is not exhaustive continuous viewing.",
+      "Time boundaries are approximate.",
+      "Questions do not certify global absence of an event.",
+      "Text-heavy UI facts may be difficult after VLM image downsampling.",
+      "Question08 is unanswerable relative to the explicitly named diagram, not an assertion about audio."
+    ]
+  },
+  "questions": [
+    {
+      "id": "visual_01",
+      "question": "During the first on-camera introduction, before the full-screen goals outline, what black object stands on the desk at the left side of the image?",
+      "category": "visual",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "A black microphone on a desk stand.",
+        "A microphone."
+      ],
+      "required_terms": [
+        [
+          "microphone",
+          "mic"
+        ]
+      ],
+      "evidence_intervals": [
+        [
+          7.5,
+          42.5
+        ]
+      ],
+      "annotation_notes": {
+        "source": "visual",
+        "reviewer": "assistant_visual_review",
+        "audio_used": false,
+        "observed": "A black microphone on a small desk stand is visible at screen left while the presenter speaks. No brand or model is inferred.",
+        "inspected_frame_timestamps": [
+          5.038366666666667,
+          10.043366666666667,
+          20.05336666666667,
+          30.063366666666667,
+          35.03500000000001,
+          40.04,
+          45.045
+        ],
+        "inspected_frame_files": [
+          "../.cache/annotation/boundary_0005.jpg",
+          "../.cache/annotation/boundary_0010.jpg",
+          "../.cache/annotation/refine_0020.jpg",
+          "../.cache/annotation/refine_0030.jpg",
+          "../.cache/annotation/boundary_0035.jpg",
+          "../.cache/annotation/boundary_0040.jpg",
+          "../.cache/annotation/boundary_0045.jpg"
+        ],
+        "boundary_brackets_seconds": {
+          "start": [
+            5,
+            10
+          ],
+          "end": [
+            40,
+            45
+          ]
+        },
+        "uncertainty_note": "Scene boundaries estimated from adjacent inspected frames, with approximately 2.5–5 seconds boundary uncertainty; not frame-exact or continuous verification. "
+      }
+    },
+    {
+      "id": "visual_02",
+      "question": "In the Kanban view around 36 minutes, which column contains the Multi-agent research card, and which column contains the three stacked completed research cards?",
+      "category": "visual",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "Multi-agent research is in Ready on the left; the three completed cards are in Done on the right.",
+        "Ready and Done, respectively."
+      ],
+      "required_terms": [
+        [
+          "ready"
+        ],
+        [
+          "done"
+        ]
+      ],
+      "evidence_intervals": [
+        [
+          2145,
+          2175
+        ]
+      ],
+      "annotation_notes": {
+        "source": "visual",
+        "reviewer": "assistant_visual_review",
+        "audio_used": false,
+        "observed": "Frames at 2150 and 2160 show READY 1 with Multi-agent research at left and DONE 3 with three cards at right. A detail panel opens by 2170 but the same arrangement remains visible.",
+        "inspected_frame_timestamps": [
+          2140.0379000000003,
+          2150.0479,
+          2160.0579000000002,
+          2170.0345333333335,
+          2180.044533333333
+        ],
+        "inspected_frame_files": [
+          "../.cache/annotation/board_2140.jpg",
+          "../.cache/annotation/board_2150.jpg",
+          "../.cache/annotation/board_2160.jpg",
+          "../.cache/annotation/board_2170.jpg",
+          "../.cache/annotation/board_2180.jpg"
+        ],
+        "boundary_brackets_seconds": {
+          "start": [
+            2140,
+            2150
+          ],
+          "end": [
+            2170,
+            2180
+          ]
+        },
+        "uncertainty_note": "Scene boundaries estimated from adjacent inspected frames, with approximately 2.5–5 seconds boundary uncertainty; not frame-exact or continuous verification. "
+      }
+    },
+    {
+      "id": "visual_03",
+      "question": "Locate the full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library. Give its approximate time interval.",
+      "category": "localization",
+      "split": "dev",
+      "answerable": true,
+      "reference_answers": [
+        "Approximately 19:58 to 20:38.",
+        "Around 20 minutes, approximately 1198–1238 seconds."
+      ],
+      "evidence_intervals": [
+        [
+          1197.5,
+          1237.5
+        ]
+      ],
+      "annotation_notes": {
+        "source": "visual",
+        "reviewer": "assistant_visual_review",
+        "audio_used": false,
+        "observed": "The named five-stage diagram is visible at 1200,1210,1220,1230 and fading at1235. Email to Decision Brief is still visible at1195; Two Loops is visible at1240.",
+        "inspected_frame_timestamps": [
+          1195.0605333333333,
+          1200.0655333333334,
+          1210.0421666666666,
+          1220.0521666666668,
+          1230.0621666666668,
+          1235.0338000000002,
+          1240.0388
+        ],
+        "inspected_frame_files": [
+          "../.cache/annotation/boundary_1195.jpg",
+          "../.cache/annotation/boundary_1200.jpg",
+          "../.cache/annotation/refine_1210.jpg",
+          "../.cache/annotation/refine_1220.jpg",
+          "../.cache/annotation/boundary_1230.jpg",
+          "../.cache/annotation/boundary_1235.jpg",
+          "../.cache/annotation/boundary_1240.jpg"
+        ],
+        "boundary_brackets_seconds": {
+          "start": [
+            1195,
+            1200
+          ],
+          "end": [
+            1235,
+            1240
+          ]
+        },
+        "uncertainty_note": "Scene boundaries estimated from adjacent inspected frames, with approximately 2.5–5 seconds boundary uncertainty; not frame-exact or continuous verification. The gold interval represents the complete slide episode, not a one-frame timestamp."
+      }
+    },
+    {
+      "id": "visual_04",
+      "question": "Locate the main full-table comparison of Kanban and delegate_task, before scrolling hides its upper rows. The table compares parent behavior, child identity, resumability, human involvement, and audit trails.",
+      "category": "localization",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "Approximately 22:33 to 23:55.",
+        "Around 22.5–24 minutes, approximately 1353–1435 seconds."
+      ],
+      "evidence_intervals": [
+        [
+          1352.5,
+          1435
+        ]
+      ],
+      "annotation_notes": {
+        "source": "visual",
+        "reviewer": "assistant_visual_review",
+        "audio_used": false,
+        "observed": "The table is visible at1355. All comparison rows remain on screen through1430, although its title begins to scroll off. By1440 the upper rows are hidden. This annotation intentionally targets the full-table episode.",
+        "inspected_frame_timestamps": [
+          1350.0487,
+          1355.0537000000002,
+          1360.0587,
+          1380.0453333333335,
+          1400.0653333333335,
+          1410.0419666666667,
+          1420.0519666666667,
+          1430.0619666666666,
+          1440.0386
+        ],
+        "inspected_frame_files": [
+          "../.cache/annotation/boundary_1350.jpg",
+          "../.cache/annotation/boundary_1355.jpg",
+          "../.cache/annotation/boundary_1360.jpg",
+          "../.cache/annotation/refine_1380.jpg",
+          "../.cache/annotation/refine_1400.jpg",
+          "../.cache/annotation/boundary_1410.jpg",
+          "../.cache/annotation/boundary_1420.jpg",
+          "../.cache/annotation/refine_1430.jpg",
+          "../.cache/annotation/refine_1440.jpg"
+        ],
+        "boundary_brackets_seconds": {
+          "start": [
+            1350,
+            1355
+          ],
+          "end": [
+            1430,
+            1440
+          ]
+        },
+        "uncertainty_note": "Scene boundaries estimated from adjacent inspected frames, with approximately 2.5–5 seconds boundary uncertainty; not frame-exact or continuous verification. "
+      }
+    },
+    {
+      "id": "visual_05",
+      "question": "In the sequence of full-screen workflow illustrations around 19–21 minutes, does Email to Decision Brief appear before or after Article to Curated Knowledge? Cite both illustrations.",
+      "category": "temporal",
+      "split": "dev",
+      "answerable": true,
+      "reference_answers": [
+        "Email to Decision Brief appears before Article to Curated Knowledge.",
+        "First Email to Decision Brief, then Article to Curated Knowledge."
+      ],
+      "required_terms": [
+        [
+          "email"
+        ],
+        [
+          "before",
+          "first"
+        ],
+        [
+          "article"
+        ]
+      ],
+      "evidence_intervals": [
+        [
+          1152.5,
+          1197.5
+        ],
+        [
+          1197.5,
+          1237.5
+        ]
+      ],
+      "annotation_notes": {
+        "source": "visual",
+        "reviewer": "assistant_visual_review",
+        "audio_used": false,
+        "observed": "The specified later sequence starts with Email to Decision Brief (1155–1195 sampled), followed by Article to Curated Knowledge (1200–1235 sampled). There is also an early Email preview near90s, excluded by the question.",
+        "inspected_frame_timestamps": [
+          1150.0489,
+          1155.0539,
+          1160.0589,
+          1170.0355333333334,
+          1180.0455333333334,
+          1190.0555333333334,
+          1195.0605333333333,
+          1200.0655333333334,
+          1210.0421666666666,
+          1230.0621666666668,
+          1235.0338000000002,
+          1240.0388
+        ],
+        "inspected_frame_files": [
+          "../.cache/annotation/boundary_1150.jpg",
+          "../.cache/annotation/boundary_1155.jpg",
+          "../.cache/annotation/boundary_1160.jpg",
+          "../.cache/annotation/refine_1170.jpg",
+          "../.cache/annotation/refine_1180.jpg",
+          "../.cache/annotation/boundary_1190.jpg",
+          "../.cache/annotation/boundary_1195.jpg",
+          "../.cache/annotation/boundary_1200.jpg",
+          "../.cache/annotation/refine_1210.jpg",
+          "../.cache/annotation/boundary_1230.jpg",
+          "../.cache/annotation/boundary_1235.jpg",
+          "../.cache/annotation/boundary_1240.jpg"
+        ],
+        "boundary_brackets_seconds": {
+          "email_start": [
+            1150,
+            1155
+          ],
+          "transition": [
+            1195,
+            1200
+          ],
+          "article_end": [
+            1235,
+            1240
+          ]
+        },
+        "uncertainty_note": "Scene boundaries estimated from adjacent inspected frames, with approximately 2.5–5 seconds boundary uncertainty; not frame-exact or continuous verification. "
+      }
+    },
+    {
+      "id": "visual_06",
+      "question": "Which is shown earlier: the full Kanban vs. delegate_task comparison table or the diagram titled How Task Graphs Actually Run? Cite evidence for both.",
+      "category": "temporal",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "The Kanban vs. delegate_task table appears earlier; How Task Graphs Actually Run comes later.",
+        "First the Kanban comparison table, then How Task Graphs Actually Run."
+      ],
+      "required_terms": [
+        [
+          "kanban"
+        ],
+        [
+          "earlier",
+          "first",
+          "before"
+        ],
+        [
+          "graphs"
+        ]
+      ],
+      "evidence_intervals": [
+        [
+          1352.5,
+          1435
+        ],
+        [
+          1612.5,
+          1622.5
+        ]
+      ],
+      "annotation_notes": {
+        "source": "visual",
+        "reviewer": "assistant_visual_review",
+        "audio_used": false,
+        "observed": "The comparison table is visible near22:35–23:50. The task-graph diagram is visible at1615 and1620, between documentation at1610 and a task dialog at1625.",
+        "inspected_frame_timestamps": [
+          1350.0487,
+          1355.0537000000002,
+          1380.0453333333335,
+          1410.0419666666667,
+          1430.0619666666666,
+          1440.0386,
+          1610.0417666666667,
+          1615.0467666666668,
+          1620.0517666666667,
+          1625.0567666666668
+        ],
+        "inspected_frame_files": [
+          "../.cache/annotation/boundary_1350.jpg",
+          "../.cache/annotation/boundary_1355.jpg",
+          "../.cache/annotation/refine_1380.jpg",
+          "../.cache/annotation/boundary_1410.jpg",
+          "../.cache/annotation/refine_1430.jpg",
+          "../.cache/annotation/refine_1440.jpg",
+          "../.cache/annotation/boundary_1610.jpg",
+          "../.cache/annotation/boundary_1615.jpg",
+          "../.cache/annotation/boundary_1620.jpg",
+          "../.cache/annotation/boundary_1625.jpg"
+        ],
+        "boundary_brackets_seconds": {
+          "table_start": [
+            1350,
+            1355
+          ],
+          "table_end": [
+            1430,
+            1440
+          ],
+          "graph_start": [
+            1610,
+            1615
+          ],
+          "graph_end": [
+            1620,
+            1625
+          ]
+        },
+        "uncertainty_note": "Scene boundaries estimated from adjacent inspected frames, with approximately 2.5–5 seconds boundary uncertainty; not frame-exact or continuous verification. The graph insert genuinely lasts roughly10 seconds. Its short interval is a sparse-sampling challenge, not an instantaneous gold label. Report pointing metrics or boundary-tolerant review alongside strict IoU."
+      }
+    },
+    {
+      "id": "visual_07",
+      "question": "According to the arrows in Article to Curated Knowledge, where does a requested revision go, and what must happen before an entry reaches the Connected library?",
+      "category": "reasoning",
+      "split": "dev",
+      "answerable": true,
+      "reference_answers": [
+        "Revision returns to Draft an entry; human review and approval are required before the Connected library.",
+        "The reviewer sends it back to the draft, and only an approved entry goes to the library."
+      ],
+      "required_terms": [
+        [
+          "draft"
+        ],
+        [
+          "review",
+          "reviewer"
+        ],
+        [
+          "approval",
+          "approved"
+        ]
+      ],
+      "evidence_intervals": [
+        [
+          1197.5,
+          1237.5
+        ]
+      ],
+      "annotation_notes": {
+        "source": "visual",
+        "reviewer": "assistant_visual_review",
+        "audio_used": false,
+        "observed": "A curved Revise arrow goes from Human review back to Draft an entry. The forward arrow from Human review to Connected library is labeled Approved. This is a visual path-reading question; no real product policy is inferred.",
+        "inspected_frame_timestamps": [
+          1200.0655333333334,
+          1210.0421666666666,
+          1220.0521666666668,
+          1230.0621666666668,
+          1235.0338000000002
+        ],
+        "inspected_frame_files": [
+          "../.cache/annotation/boundary_1200.jpg",
+          "../.cache/annotation/refine_1210.jpg",
+          "../.cache/annotation/refine_1220.jpg",
+          "../.cache/annotation/boundary_1230.jpg",
+          "../.cache/annotation/boundary_1235.jpg"
+        ],
+        "boundary_brackets_seconds": {
+          "start": [
+            1195,
+            1200
+          ],
+          "end": [
+            1235,
+            1240
+          ]
+        },
+        "uncertainty_note": "Scene boundaries estimated from adjacent inspected frames, with approximately 2.5–5 seconds boundary uncertainty; not frame-exact or continuous verification. "
+      }
+    },
+    {
+      "id": "visual_08",
+      "question": "Using only the visible How Task Graphs Actually Run diagram, what exact dollar cost is assigned to each dispatcher cycle?",
+      "category": "unanswerable",
+      "split": "test",
+      "answerable": false,
+      "reference_answers": [],
+      "evidence_intervals": [],
+      "annotation_notes": {
+        "source": "visual",
+        "reviewer": "assistant_visual_review",
+        "audio_used": false,
+        "observed": "The complete diagram labels the dispatcher as a60s loop and describes queue checks. It contains no exact dollar cost. The question restricts evidence to this diagram; no claim about all audio or every video frame is made.",
+        "inspected_frame_timestamps": [
+          1610.0417666666667,
+          1615.0467666666668,
+          1620.0517666666667,
+          1625.0567666666668
+        ],
+        "inspected_frame_files": [
+          "../.cache/annotation/boundary_1610.jpg",
+          "../.cache/annotation/boundary_1615.jpg",
+          "../.cache/annotation/boundary_1620.jpg",
+          "../.cache/annotation/boundary_1625.jpg"
+        ],
+        "boundary_brackets_seconds": {
+          "diagram_start": [
+            1610,
+            1615
+          ],
+          "diagram_end": [
+            1620,
+            1625
+          ]
+        },
+        "uncertainty_note": "Scene boundaries estimated from adjacent inspected frames, with approximately 2.5–5 seconds boundary uncertainty; not frame-exact or continuous verification. Expected behavior is insufficient_evidence, not a guessed price. Context interval for manual review:1612.5–1622.5s."
+      }
+    }
+  ]
+}

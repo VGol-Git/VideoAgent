@@ -1,0 +1,2635 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.080
+That's just a really powerful way for you to significantly reduce the cost.
+
+00:00:04.080 --> 00:00:07.680
+There we go. It just dropped from 45,000 tokens down to 18,000.
+
+00:00:07.680 --> 00:00:12.800
+One agent can already delegate to subagents. So what is making an agent team actually add?
+
+00:00:12.800 --> 00:00:16.240
+This is the question I get asked most often about multi-agent workflows.
+
+00:00:16.240 --> 00:00:19.840
+Why build a team if one capable agent can actually get the job done?
+
+00:00:19.840 --> 00:00:24.640
+And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough.
+
+00:00:24.640 --> 00:00:28.560
+But other times a more complex workflow can improve the quality and the efficiency.
+
+00:00:28.560 --> 00:00:33.040
+Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,
+
+00:00:33.040 --> 00:00:37.680
+and Graphs, when are multi-agent teams worth it. This process also works with agents outside of
+
+00:00:37.680 --> 00:00:42.480
+Hermes as well. In today's video, we'll explore the different levels of agent workflows, one agent
+
+00:00:42.480 --> 00:00:47.280
+with temporary helpers, aka subagents, goal loops that check whether the work is actually done,
+
+00:00:47.280 --> 00:00:52.480
+adding specialists with their own tools, skills, and memories, aka bot mode, and then Kanban,
+
+00:00:52.480 --> 00:00:56.720
+a way to manage complex agent tasks. Along the way, we'll check what does each level
+
+00:00:56.720 --> 00:01:00.400
+actually need and when does it make sense for a specific task to add more
+
+00:01:00.400 --> 00:01:04.160
+agents or tooling, including a test at the end where I give the same task to
+
+00:01:04.160 --> 00:01:08.240
+each level and see how it does. Now let's take a look at agents graphs and loops.
+
+00:01:10.080 --> 00:01:13.920
+So there are three separate questions that we're going to ask here. Who does the work?
+
+00:01:13.920 --> 00:01:17.520
+How do they check it? And what do they do next? So today I want to go through an
+
+00:01:17.520 --> 00:01:21.680
+example scenario that applies to almost every type of task working with an agent.
+
+00:01:21.680 --> 00:01:25.680
+If information comes in, what actions should I take? How should I take them?
+
+00:01:25.680 --> 00:01:31.200
+and what does done look like for that particular task. For example, an email comes in, or I take
+
+00:01:31.200 --> 00:01:35.440
+notes on a new article and I want to add it to my LLM wiki. How does the agent process that
+
+00:01:35.440 --> 00:01:40.880
+information in a consistent repeatable way? So that it actually meets the satisfaction that I want
+
+00:01:40.880 --> 00:01:45.200
+for that particular task. But first, before we get into automations triggers, task graphs, and
+
+00:01:45.200 --> 00:01:49.200
+Kanban, let's start with just a single agent to see how it works and orchestrates with subagents.
+
+00:01:49.200 --> 00:01:53.360
+We'll build up in complexity until we get to a full graph system that lets you orchestrate your
+
+00:01:53.360 --> 00:01:55.600
+tasks. If you find this video helpful, please like,
+
+00:01:55.600 --> 00:01:58.560
+hype, and subscribe as I really appreciate your support a lot.
+
+00:01:58.560 --> 00:02:00.880
+If you're looking for more ways to support me, please consider joining my
+
+00:02:00.880 --> 00:02:04.480
+YouTube or Patreon memberships. Members get access to insights, tips, and
+
+00:02:04.480 --> 00:02:08.320
+kits for agentic and knowledge workflows. I've also put together a free article
+
+00:02:08.320 --> 00:02:11.440
+that I'll link in the top comment that goes through agents, loops, and graphs
+
+00:02:11.440 --> 00:02:15.200
+in a little bit more detail for beginners as a guide. I'll also include the results
+
+00:02:15.200 --> 00:02:18.000
+with the tests that I ran so you can go through it in a little bit more depth,
+
+00:02:18.000 --> 00:02:25.440
+and hopefully see how this can help you improve the quality of your own workflow.
+
+00:02:25.440 --> 00:02:29.520
+All right, so the first example that we're going to go through is using a single agent here,
+
+00:02:29.520 --> 00:02:33.600
+which you're probably already familiar with. This would be just any type of chatbot. But we're
+
+00:02:33.600 --> 00:02:38.400
+going to give this agent the ability to have subagents. So we can see in the bottom left here,
+
+00:02:38.400 --> 00:02:43.040
+we have this option for open agents. And we can see that right now at the moment we have no live
+
+00:02:43.040 --> 00:02:46.800
+subagents. So when we're working with this first example of a single specialized agent,
+
+00:02:46.800 --> 00:02:53.040
+we can think of this as a parent agent that has the ability to create multiple subagents or
+
+00:02:53.040 --> 00:02:57.520
+children agents. So if we go over to capabilities on the left here and go over to tools, we can
+
+00:02:57.520 --> 00:03:02.800
+search for delegation and we can see that right now task delegation is turned off. So I'm going to
+
+00:03:02.800 --> 00:03:08.480
+enable this tool right here. And this will enable the parent agent to create a series of sub-agents
+
+00:03:08.480 --> 00:03:14.560
+with specific capabilities. So let's get this started. It's going to be able to delegate to
+
+00:03:14.560 --> 00:03:19.600
+solve our particular problem, which is how do I turn incoming information into something useful,
+
+00:03:19.600 --> 00:03:25.040
+an action I can take or knowledge I can reuse and what is the best strategy for that action system?
+
+00:03:25.040 --> 00:03:29.360
+Does it make sense to use a single agent with delegation capabilities or a multi-agent team
+
+00:03:29.360 --> 00:03:33.840
+with different specialized agents? And the idea here is that if we can have one capable agent
+
+00:03:33.840 --> 00:03:39.200
+that's able to meet my standards, that's a complete solution on its own. So right now we can see that
+
+00:03:39.200 --> 00:03:43.600
+the agent was able to create all of these subagents that are now running in parallel. We have three
+
+00:03:43.600 --> 00:03:48.000
+of them. We can see on the bottom here that we have three different workers active at the moment
+
+00:03:48.000 --> 00:03:53.280
+And what's cool, this is a new update. If we click on the three subagents here and click on a specific agent,
+
+00:03:53.280 --> 00:03:57.760
+we're able to give instructions to this subagent and steer it. So I could get feedback saying,
+
+00:03:58.240 --> 00:04:04.960
+make sure to please include citations. And I would be able to now steer this agent. And that
+
+00:04:04.960 --> 00:04:10.640
+just sent off specific instructions to this particular agent that's looking at concrete end-to-end
+
+00:04:10.640 --> 00:04:14.720
+workflows for inbox information. And I could do that for each of the different subagents.
+
+00:04:14.720 --> 00:04:18.160
+And now we can see, for example, this particular agent, the one that I just
+
+00:04:18.160 --> 00:04:23.360
+steered, is now using the research grounded citation skill. So I was able to give
+
+00:04:23.360 --> 00:04:27.920
+some instruction to the agent as it's running to help control the direction that it's going in.
+
+00:04:27.920 --> 00:04:32.080
+You can click on it here and you can go and see how it's thinking. Oh, we just saw this one finished
+
+00:04:32.080 --> 00:04:36.160
+right now. Now we have two agents instead of three. And we can see that one has completed
+
+00:04:36.160 --> 00:04:41.280
+right here and the other two are running. So now the main agent, the parent agent is waiting for
+
+00:04:41.280 --> 00:04:44.840
+the sub-agents to complete its work and then it'll synthesize a concrete
+
+00:04:44.840 --> 00:04:47.740
+recommendation when they return. Okay, here we go, it looks like all three of
+
+00:04:47.740 --> 00:04:51.220
+those just finished. So now the main agent has gone through and it validated a few
+
+00:04:51.220 --> 00:04:55.040
+of the sources and now it is creating a report right here. Okay, so this gave
+
+00:04:55.040 --> 00:04:58.120
+what looks like a pretty comprehensive answer. You can see if I scroll all
+
+00:04:58.120 --> 00:05:00.440
+the way to the bottom. There's a lot of information here so I'd have to go
+
+00:05:00.440 --> 00:05:03.240
+through that a little bit more in depth. And what's nice is if we take a look at
+
+00:05:03.240 --> 00:05:07.440
+the bottom here, this only used up 36,000 tokens. And the reason for that is
+
+00:05:07.440 --> 00:05:12.840
+because the parent agent delegated to subagents and only had to give definitions for them to
+
+00:05:12.840 --> 00:05:17.480
+go off and run. So the subagents themselves then used up their own amount of context.
+
+00:05:17.480 --> 00:05:21.960
+And that's one of the major benefits of using a delegation system like this is I didn't
+
+00:05:21.960 --> 00:05:26.920
+have to have this main parent agent blow through its context window. Instead, it could delegate
+
+00:05:26.920 --> 00:05:31.600
+to subagents of lower intelligence and then take the synthesized reports rather than reading
+
+00:05:31.600 --> 00:05:35.400
+all of the pages itself. So the overall idea here is that we're delegating the work
+
+00:05:35.400 --> 00:05:36.520
+but not the judgment.
+
+00:05:36.520 --> 00:05:37.720
+And just to see how this compares,
+
+00:05:37.720 --> 00:05:39.200
+I'm gonna give the same prompt,
+
+00:05:39.200 --> 00:05:40.360
+asking it to do research,
+
+00:05:40.360 --> 00:05:41.920
+but do not delegate to sub-agent.
+
+00:05:43.520 --> 00:05:45.320
+So the approach where I just use a single agent
+
+00:05:45.320 --> 00:05:47.320
+and told it not to delegate to sub-agents.
+
+00:05:47.320 --> 00:05:49.560
+We can see that used 102,000 tokens,
+
+00:05:49.560 --> 00:05:51.680
+whereas the one that delegated to sub-agents
+
+00:05:51.680 --> 00:05:53.760
+only used 37,000 tokens.
+
+00:05:53.760 --> 00:05:56.400
+So keep in mind, this is not taking into account
+
+00:05:56.400 --> 00:05:57.880
+the sub-agent token usage.
+
+00:05:57.880 --> 00:06:00.560
+So the overall tokens was larger.
+
+00:06:00.560 --> 00:06:02.320
+There was more context used,
+
+00:06:02.320 --> 00:06:04.240
+but that context that made it back
+
+00:06:04.240 --> 00:06:06.400
+into the main higher intelligence agent
+
+00:06:06.400 --> 00:06:09.360
+was significantly compressed relative to the agent
+
+00:06:09.360 --> 00:06:11.660
+that just did it all itself and had 102,000.
+
+00:06:11.660 --> 00:06:13.080
+If I ran this turn one more time,
+
+00:06:13.080 --> 00:06:14.760
+I might have to compress the context here
+
+00:06:14.760 --> 00:06:16.000
+and then you lose some quality.
+
+00:06:16.000 --> 00:06:17.240
+So that's the first comparison,
+
+00:06:17.240 --> 00:06:19.880
+just using a single agent versus using a single agent
+
+00:06:19.880 --> 00:06:21.320
+with multiple subagents.
+
+00:06:21.320 --> 00:06:23.160
+So the biggest difference is that one
+
+00:06:23.160 --> 00:06:24.640
+uses up a lot more context,
+
+00:06:24.640 --> 00:06:27.040
+but this was also a very basic example.
+
+00:06:27.040 --> 00:06:29.560
+And the results of both of these are basically the same.
+
+00:06:29.560 --> 00:06:31.160
+Build an accountable action steward
+
+00:06:31.160 --> 00:06:32.520
+with delegation capabilities,
+
+00:06:32.520 --> 00:06:34.760
+not a standing team of specialized agents.
+
+00:06:34.760 --> 00:06:36.880
+A permanent multi-agent team adds coordination,
+
+00:06:36.880 --> 00:06:38.800
+cost, latency, and evaluation problems
+
+00:06:38.800 --> 00:06:40.600
+before it has proved its value.
+
+00:06:40.600 --> 00:06:42.520
+Multi-agent designs work well when the task
+
+00:06:42.520 --> 00:06:44.840
+is genuinely decomposable and parallel.
+
+00:06:44.840 --> 00:06:46.160
+And this is a very similar answer
+
+00:06:46.160 --> 00:06:48.600
+to what we got with the delegation system.
+
+00:06:48.600 --> 00:06:51.560
+Do not begin with a peer team of autonomous agents.
+
+00:06:51.560 --> 00:06:53.800
+Delegate bounded read-only work to specialists
+
+00:06:53.800 --> 00:06:55.680
+when that work is genuinely independent.
+
+00:06:55.680 --> 00:06:57.760
+So both of our researchers found effectively
+
+00:06:57.760 --> 00:07:00.680
+the same thing, that we should only delegate specialist work
+
+00:07:00.680 --> 00:07:02.360
+when it actually makes sense to do so,
+
+00:07:02.360 --> 00:07:03.840
+when the complexity needs it.
+
+00:07:03.840 --> 00:07:05.080
+But all of this is relative.
+
+00:07:05.080 --> 00:07:07.720
+This is specifically for a one-off research task
+
+00:07:07.720 --> 00:07:08.600
+that we just did here.
+
+00:07:08.600 --> 00:07:10.760
+As the system starts to scale in complexity,
+
+00:07:10.760 --> 00:07:13.920
+we need to start thinking about other ways of orchestrating.
+
+00:07:13.920 --> 00:07:15.640
+For example, using all of the different bots
+
+00:07:15.640 --> 00:07:17.440
+like we've set up in previous videos.
+
+00:07:17.440 --> 00:07:18.600
+And one thing I wanna mention too
+
+00:07:18.600 --> 00:07:21.080
+is that when we're delegating to subagents,
+
+00:07:21.080 --> 00:07:22.520
+subagents know nothing.
+
+00:07:22.520 --> 00:07:24.920
+They start with completely fresh conversations.
+
+00:07:24.920 --> 00:07:25.920
+So they have zero knowledge
+
+00:07:25.920 --> 00:07:27.480
+of the parent's conversation history,
+
+00:07:27.480 --> 00:07:29.200
+tool calls, or anything discussed
+
+00:07:29.200 --> 00:07:31.360
+before they were created for the delegation.
+
+00:07:31.360 --> 00:07:33.600
+The sub-agents only context comes from the goal,
+
+00:07:33.600 --> 00:07:35.520
+and the context field that the parent agent
+
+00:07:35.520 --> 00:07:37.640
+populates when it calls delegate task.
+
+00:07:37.640 --> 00:07:39.560
+Delegate task is this tool that we enabled
+
+00:07:39.560 --> 00:07:40.520
+at the beginning here,
+
+00:07:40.520 --> 00:07:42.120
+and the context is how much information
+
+00:07:42.120 --> 00:07:43.280
+goes into all of this.
+
+00:07:43.280 --> 00:07:45.760
+But before we get into an actual situation
+
+00:07:45.760 --> 00:07:48.240
+where it makes sense to have multi-agent workflows,
+
+00:07:48.240 --> 00:07:50.200
+there's one more thing I want to quickly talk about,
+
+00:07:50.200 --> 00:07:52.960
+which is a way that we can enhance the quality
+
+00:07:52.960 --> 00:07:55.000
+of the output of the single agent,
+
+00:07:55.000 --> 00:07:57.460
+whether it's a parent agent with delegated sub-agents
+
+00:07:57.460 --> 00:07:58.920
+or all in one,
+
+00:07:58.920 --> 00:08:01.040
+and that actually brings me back to
+
+00:08:01.040 --> 00:08:02.760
+the warning of the subagent system,
+
+00:08:02.760 --> 00:08:04.840
+which is that the context comes from the goal.
+
+00:08:04.840 --> 00:08:10.490
+So what is a goal?
+
+00:08:10.490 --> 00:08:13.250
+So to bring up goal, we can type in slash and goal.
+
+00:08:13.250 --> 00:08:15.370
+And this brings up the goal command,
+
+00:08:15.370 --> 00:08:17.570
+which is a way that we can set a standing goal
+
+00:08:17.570 --> 00:08:20.610
+that Hermes works across all turns until it's achieved.
+
+00:08:20.610 --> 00:08:22.330
+And basically what that means is before we get
+
+00:08:22.330 --> 00:08:25.210
+into the complexity of setting up all of these specialist
+
+00:08:25.210 --> 00:08:27.650
+agents and figuring out how to coordinate them,
+
+00:08:27.650 --> 00:08:29.370
+there's one more step that you should try first,
+
+00:08:29.370 --> 00:08:30.690
+which is to enable a goal.
+
+00:08:30.690 --> 00:08:33.250
+A goal effectively allows you to link multiple prompts
+
+00:08:33.250 --> 00:08:39.250
+into a bigger picture, a broader task than just one specific research task, for example.
+
+00:08:39.250 --> 00:08:42.250
+Instead of managing every step, I hand over a bounded outcome.
+
+00:08:42.250 --> 00:08:45.250
+What success means, how to verify it and when to ask me.
+
+00:08:45.250 --> 00:08:48.250
+The main agent acts as a judge that checks the progress
+
+00:08:48.250 --> 00:08:51.250
+and the session can continue within its own budget.
+
+00:08:51.250 --> 00:08:54.250
+And the goal is an endless research, the evidence matters.
+
+00:08:54.250 --> 00:08:57.250
+So before we get into setting up a complex system
+
+00:08:57.250 --> 00:08:59.250
+to see if we can get more out of our agent,
+
+00:08:59.250 --> 00:09:01.250
+we can try using this goal command.
+
+00:09:01.250 --> 00:09:05.250
+So let's give our multi-asian a goal here.
+
+00:09:05.250 --> 00:09:09.250
+So we can see by using slash goal, I now have turned this goal active.
+
+00:09:09.250 --> 00:09:12.250
+I've added a little bit more detail than just saying,
+
+00:09:12.250 --> 00:09:15.250
+hey, can you go research this thing? I've said specifically,
+
+00:09:15.250 --> 00:09:17.250
+I want different streams of information.
+
+00:09:17.250 --> 00:09:20.250
+Please use delegated subagents of lower intelligence to do the research.
+
+00:09:20.250 --> 00:09:24.250
+So each one of these should be using at least a Terra medium instead of Terra high.
+
+00:09:24.250 --> 00:09:28.250
+I'll talk about model routing in a moment, but then I've also said please
+
+00:09:28.250 --> 00:09:30.250
+prepare a synthesized report.
+
+00:09:30.250 --> 00:09:31.610
+And then once you are done that,
+
+00:09:31.610 --> 00:09:33.970
+corroborate the report against practical workflows
+
+00:09:33.970 --> 00:09:36.530
+from community best practices in Hermes.
+
+00:09:36.530 --> 00:09:37.930
+You also must make sure the report
+
+00:09:37.930 --> 00:09:40.290
+is less than 500 words and has clear citations.
+
+00:09:40.290 --> 00:09:42.170
+We can see that the subagents are all running right now.
+
+00:09:42.170 --> 00:09:43.810
+So what I've effectively done here
+
+00:09:43.810 --> 00:09:47.130
+is I've told the agent what done looks like.
+
+00:09:47.130 --> 00:09:49.090
+So it's taken all of these criteria
+
+00:09:49.090 --> 00:09:50.370
+and it will just keep running.
+
+00:09:50.370 --> 00:09:51.970
+We can see turn one of 20.
+
+00:09:51.970 --> 00:09:53.530
+The default limit is 20 turns.
+
+00:09:53.530 --> 00:09:56.690
+The agent is able to loop itself 20 times,
+
+00:09:56.690 --> 00:09:59.370
+checking to make sure that the information and the research
+
+00:09:59.370 --> 00:10:02.730
+and the output meet the quality standard that I've requested.
+
+00:10:02.730 --> 00:10:04.290
+So this is a really great way for you
+
+00:10:04.290 --> 00:10:05.830
+to increase the quality of your work
+
+00:10:05.830 --> 00:10:08.230
+without necessarily introducing a lot of complexity.
+
+00:10:08.230 --> 00:10:10.870
+I honestly use this all the time, especially for coding.
+
+00:10:10.870 --> 00:10:12.710
+So I can also add criteria on here.
+
+00:10:12.710 --> 00:10:17.190
+For example, we must have at least five peer-reviewed sources.
+
+00:10:17.190 --> 00:10:20.170
+And I can add that information to the criteria
+
+00:10:20.170 --> 00:10:22.010
+as the agent continues running.
+
+00:10:22.010 --> 00:10:24.210
+And that now becomes a new definition
+
+00:10:24.210 --> 00:10:25.470
+of what done looks like.
+
+00:10:25.470 --> 00:10:26.310
+So what we can see here,
+
+00:10:26.310 --> 00:10:28.870
+it took my criteria into account
+
+00:10:28.870 --> 00:10:30.790
+because now the criteria is we must have
+
+00:10:30.790 --> 00:10:32.270
+at least five peer reviewed sources.
+
+00:10:32.270 --> 00:10:33.110
+And if we look here,
+
+00:10:33.110 --> 00:10:34.910
+it only produced eight sources
+
+00:10:34.910 --> 00:10:36.670
+and it doesn't look like they're peer reviewed.
+
+00:10:36.670 --> 00:10:39.470
+So now the agent has started up its next task
+
+00:10:39.470 --> 00:10:41.190
+on turn two and turn three
+
+00:10:41.190 --> 00:10:43.790
+and it's delegated to another series of subagents
+
+00:10:43.790 --> 00:10:45.670
+to now cross-reference the output
+
+00:10:45.670 --> 00:10:48.110
+against peer reviewed academic sources.
+
+00:10:48.110 --> 00:10:49.990
+So it says it's now added an independent
+
+00:10:49.990 --> 00:10:51.310
+organizational coordination
+
+00:10:51.310 --> 00:10:53.670
+and team cognition literature to the evidence set
+
+00:10:53.670 --> 00:10:54.910
+and it's awaiting the peer review
+
+00:10:54.910 --> 00:10:56.430
+before it will work again.
+
+00:10:56.430 --> 00:10:58.550
+As this is working, I can think of more criteria
+
+00:10:58.550 --> 00:10:59.470
+and I can add this here,
+
+00:10:59.470 --> 00:11:01.150
+and the agent will just keep looping.
+
+00:11:01.150 --> 00:11:03.710
+The more specific you are on what done looks like
+
+00:11:03.710 --> 00:11:05.830
+at the beginning, what the actual goal is,
+
+00:11:05.830 --> 00:11:07.470
+the better this process will work.
+
+00:11:07.470 --> 00:11:08.550
+Depending on the type of task,
+
+00:11:08.550 --> 00:11:10.190
+depending on the type of budget you have,
+
+00:11:10.190 --> 00:11:11.710
+depending on your goals,
+
+00:11:11.710 --> 00:11:13.150
+you're gonna have different ways of doing this,
+
+00:11:13.150 --> 00:11:15.470
+so it's worth experimenting to see
+
+00:11:15.470 --> 00:11:16.710
+what actually makes the most sense
+
+00:11:16.710 --> 00:11:18.310
+for your particular situation.
+
+00:11:18.310 --> 00:11:21.010
+So it's kind of a hands-off method of operating.
+
+00:11:21.010 --> 00:11:23.470
+If you've established a good enough goal at the beginning,
+
+00:11:23.470 --> 00:11:25.030
+the agent can run on its own.
+
+00:11:25.030 --> 00:11:27.150
+In some systems, I've had my coding agents run
+
+00:11:27.150 --> 00:11:29.050
+for five or six hours straight,
+
+00:11:29.050 --> 00:11:30.550
+working on a coding system
+
+00:11:30.550 --> 00:11:32.790
+delegating to lower intelligence subagents,
+
+00:11:32.790 --> 00:11:35.150
+and it keeps automatically testing the code
+
+00:11:35.150 --> 00:11:37.550
+to make sure it works before it presents it back to me
+
+00:11:37.550 --> 00:11:38.430
+for approval.
+
+00:11:38.430 --> 00:11:40.130
+And that brings me to an important point,
+
+00:11:40.130 --> 00:11:42.310
+because if you're running a goal here
+
+00:11:42.310 --> 00:11:43.430
+and it runs for hours,
+
+00:11:43.430 --> 00:11:46.150
+and you have this set to Astra, for example,
+
+00:11:46.150 --> 00:11:48.830
+or to Fable, or whatever your frontier model is,
+
+00:11:48.830 --> 00:11:51.310
+it's possible that a goal could just completely blow
+
+00:11:51.310 --> 00:11:54.150
+through your quota in a very short period of time,
+
+00:11:54.150 --> 00:11:56.190
+especially if you're not sitting there monitoring it.
+
+00:11:56.190 --> 00:11:57.950
+So this brings me to an important question
+
+00:11:57.950 --> 00:12:00.050
+on who should actually be doing the work here.
+
+00:12:01.650 --> 00:12:03.570
+So what we can see is the sub-agents here.
+
+00:12:03.570 --> 00:12:05.710
+It just says GPT 5.6 Terra,
+
+00:12:05.710 --> 00:12:07.190
+so I can't actually see at the moment
+
+00:12:07.190 --> 00:12:08.670
+if it is medium or lower.
+
+00:12:08.670 --> 00:12:10.070
+So as part of the goal here,
+
+00:12:10.070 --> 00:12:11.430
+I could have specified,
+
+00:12:11.430 --> 00:12:13.630
+rather than just please use delegated sub-agents
+
+00:12:13.630 --> 00:12:14.750
+of lower intelligence,
+
+00:12:14.750 --> 00:12:17.030
+I could have said please use a local model
+
+00:12:17.030 --> 00:12:19.630
+or please use Luna only for the research
+
+00:12:19.630 --> 00:12:23.310
+and then you as the higher intelligence model can synthesize it.
+
+00:12:23.310 --> 00:12:26.430
+So this is where you can start being more specific with your prompting
+
+00:12:26.430 --> 00:12:29.150
+and specific with your orchestrating through a single agent
+
+00:12:29.150 --> 00:12:33.350
+delegating to lower intelligence subagents to significantly preserve your quota.
+
+00:12:33.350 --> 00:12:34.910
+It makes a massive difference.
+
+00:12:34.910 --> 00:12:39.270
+Because keeping an agent working isn't the same thing as using its intelligence well.
+
+00:12:39.270 --> 00:12:42.070
+I want the orchestrator agent, the main agent,
+
+00:12:42.070 --> 00:12:47.070
+to make the judgments not to carry every source detail or to every little action itself.
+
+00:12:47.070 --> 00:12:49.070
+So we can use these lightweight helpers
+
+00:12:49.070 --> 00:12:52.230
+for bounded extractions with limited actions.
+
+00:12:52.230 --> 00:12:54.270
+And what I mean by that is we can be specific
+
+00:12:54.270 --> 00:12:57.730
+about what type of model is used in which type of situation.
+
+00:12:57.730 --> 00:12:59.590
+So this can apply to the original goal
+
+00:12:59.590 --> 00:13:00.670
+that I just give here.
+
+00:13:00.670 --> 00:13:02.270
+I can be specific like I mentioned
+
+00:13:02.270 --> 00:13:04.790
+of what type of model I want to be used.
+
+00:13:04.790 --> 00:13:06.950
+I can bring in the agents.md file
+
+00:13:06.950 --> 00:13:09.030
+where for this particular profile,
+
+00:13:09.030 --> 00:13:11.310
+this particular bot or Hermes agent,
+
+00:13:11.310 --> 00:13:13.950
+I can specify inside of the agents.md
+
+00:13:13.950 --> 00:13:16.470
+or inside of, for example, the soul.md.
+
+00:13:16.470 --> 00:13:20.030
+I can say when using sub-agent delegation,
+
+00:13:20.030 --> 00:13:23.030
+always use lower intelligence models.
+
+00:13:23.030 --> 00:13:23.950
+By including it here,
+
+00:13:23.950 --> 00:13:26.910
+it means that every single time this particular bot,
+
+00:13:26.910 --> 00:13:29.790
+this particular agent wants to run a task
+
+00:13:29.790 --> 00:13:31.910
+that involves some sub-agent delegation,
+
+00:13:31.910 --> 00:13:34.390
+it will always know to use lower intelligence models.
+
+00:13:34.390 --> 00:13:35.870
+And I can go even a step further
+
+00:13:35.870 --> 00:13:37.850
+by going under settings in model,
+
+00:13:37.850 --> 00:13:39.950
+and I can choose the auxiliary model
+
+00:13:39.950 --> 00:13:41.550
+for different types of tasks,
+
+00:13:41.550 --> 00:13:43.390
+where for example, maybe for image analysis,
+
+00:13:43.390 --> 00:13:45.150
+I don't want to use my main model.
+
+00:13:45.150 --> 00:13:47.510
+I can change this and use a local model,
+
+00:13:47.510 --> 00:13:49.030
+or I could use a cheaper model.
+
+00:13:49.030 --> 00:13:51.310
+So you can go in and you can start limiting
+
+00:13:51.310 --> 00:13:53.630
+the specific actions to specific models
+
+00:13:53.630 --> 00:13:56.590
+to help conserve the quota and intelligence
+
+00:13:56.590 --> 00:13:58.950
+of the main agent for when it actually needs it.
+
+00:14:00.470 --> 00:14:02.150
+And honestly, this did a really good job.
+
+00:14:02.150 --> 00:14:04.750
+It was able to specifically limit the report
+
+00:14:04.750 --> 00:14:06.150
+to just a couple hundred words
+
+00:14:06.150 --> 00:14:08.590
+instead of the original thousands and thousands of words
+
+00:14:08.590 --> 00:14:09.870
+that gave me off of the first one.
+
+00:14:09.870 --> 00:14:12.190
+So it wasn't just about adding that limitation
+
+00:14:12.190 --> 00:14:14.550
+at the beginning, it was framing the goal
+
+00:14:14.550 --> 00:14:16.710
+that I wanted it to go in a particular order
+
+00:14:16.710 --> 00:14:19.510
+for cross-referencing and corroborating the report,
+
+00:14:19.510 --> 00:14:22.030
+and then make sure that it was 500 words.
+
+00:14:22.030 --> 00:14:23.790
+But honestly, this example here
+
+00:14:23.790 --> 00:14:27.070
+is kind of disconnected from my actual workflow.
+
+00:14:27.070 --> 00:14:29.670
+This might be the generic best answer
+
+00:14:29.670 --> 00:14:31.990
+of when delegation beats a specialist team,
+
+00:14:31.990 --> 00:14:34.390
+where we wanna have an orchestration and delegation
+
+00:14:34.390 --> 00:14:38.070
+for a single evolving state, sequential or predictable work.
+
+00:14:38.070 --> 00:14:40.230
+And in contrast, you might want a multi-agent team
+
+00:14:40.230 --> 00:14:42.030
+for breadth-first research,
+
+00:14:42.030 --> 00:14:43.550
+different types of due diligence,
+
+00:14:43.550 --> 00:14:45.890
+pipelines with different specialist identities.
+
+00:14:45.890 --> 00:14:49.690
+So this all makes sense, but everything I've just said here is not very specific to me.
+
+00:14:49.690 --> 00:14:52.450
+It doesn't know who I am or what I want.
+
+00:14:52.450 --> 00:14:58.090
+And that brings me back to Hermes' corroboration, where Delegate TAS brings up a fresh context
+
+00:14:58.090 --> 00:15:01.570
+fork-join primitive whose children return summaries.
+
+00:15:01.570 --> 00:15:06.650
+So it fits bounded research review and repair work, but it doesn't necessarily make sense
+
+00:15:06.650 --> 00:15:11.250
+for other types of situations that require more specialization and more context and more
+
+00:15:11.250 --> 00:15:12.250
+knowledge.
+
+00:15:12.250 --> 00:15:16.070
+I mentioned, sub-agents have zero knowledge from the parent's conversation history.
+
+00:15:16.070 --> 00:15:20.090
+They only have what comes from the goal and the context that the parent gives them.
+
+00:15:20.090 --> 00:15:22.850
+But what if we start getting into more specific contexts or
+
+00:15:22.850 --> 00:15:26.890
+more custom situations that involve other types of contexts outside of what
+
+00:15:26.890 --> 00:15:28.130
+the parent even knows?
+
+00:15:28.130 --> 00:15:31.690
+We can see here the decision test that the answer says is add a specialist.
+
+00:15:31.690 --> 00:15:35.250
+If it is independent, needs different context tools and policy and
+
+00:15:35.250 --> 00:15:39.610
+beats a single agent baseline on quality coverage, latency, and total review cost.
+
+00:15:39.610 --> 00:15:42.490
+So in other words, the answer is that we should add specialists
+
+00:15:42.490 --> 00:15:44.630
+if we want it to keep its own working knowledge
+
+00:15:44.630 --> 00:15:47.970
+and have access to different context tools and policies,
+
+00:15:47.970 --> 00:15:49.730
+perhaps have a different memory system
+
+00:15:49.730 --> 00:15:52.090
+rather than being spawned as a brand new agent
+
+00:15:52.090 --> 00:15:53.070
+every single time.
+
+00:15:53.070 --> 00:15:55.370
+And I note that the Hermes corroboration here
+
+00:15:55.370 --> 00:15:57.610
+mentions Kanban or Kanban,
+
+00:15:57.610 --> 00:15:59.050
+depending on how you wanna pronounce it.
+
+00:15:59.050 --> 00:16:00.570
+But before we get into Kanban,
+
+00:16:00.570 --> 00:16:02.050
+I thought that we could take a quick look
+
+00:16:02.050 --> 00:16:05.010
+at Hermes Bot Mode actually sets you up for success
+
+00:16:05.010 --> 00:16:06.290
+when you start using Kanban
+
+00:16:06.290 --> 00:16:09.130
+because it helps you prepare the specialist profiles
+
+00:16:09.130 --> 00:16:13.530
+we can see down here I have orchestrator, researcher, and librarian. So let's take a quick look at
+
+00:16:13.530 --> 00:16:23.110
+bot mode. So now we can go from a single agent operating in a loop with delegated subagents to
+
+00:16:23.110 --> 00:16:28.470
+a graph. That's where profiles come in. Okay, so this is bot mode. So we can see here a bot is just
+
+00:16:28.470 --> 00:16:33.990
+a profile is the same list of profiles that I have along the bottom here. A bot or a profile can
+
+00:16:33.990 --> 00:16:39.030
+retain its own skills, memory, and working context with a model suited to its role. Each of these
+
+00:16:39.030 --> 00:16:43.990
+different bots here can have a default model that's different. For example, maybe my orchestrator
+
+00:16:43.990 --> 00:16:48.150
+has one of the most powerful models available, a frontier model. But maybe the researcher
+
+00:16:48.150 --> 00:16:52.870
+needs a much less powerful model. And then I can use a feature like the group chat to coordinate
+
+00:16:52.870 --> 00:16:57.510
+how they work together. So rather than a sub-agent starting with zero knowledge, we can configure
+
+00:16:57.510 --> 00:17:01.830
+what type of knowledge and skills and memory we want available for each specialist, and
+
+00:17:01.830 --> 00:17:06.950
+that knowledge and all of that context and capabilities survives the chat conversation.
+
+00:17:06.950 --> 00:17:11.450
+it maintains it over time. And since Hermes is a self-learning system, it can also learn
+
+00:17:11.450 --> 00:17:15.650
+more skills as well, getting better at its particular specialized task. And we can take
+
+00:17:15.650 --> 00:17:19.130
+a quick look at a group chat here, where we can see, for example, I had the librarian,
+
+00:17:19.130 --> 00:17:22.810
+the orchestrator, and the researcher, and they're all working together to solve the original
+
+00:17:22.810 --> 00:17:26.890
+task that I put out. So you can think of this as a communication graph, where we've set
+
+00:17:26.890 --> 00:17:30.850
+up a group chat here, and the group chat has particular members, and they work together
+
+00:17:30.850 --> 00:17:34.970
+communicating back and forth with one another to solve a particular problem. So this is where
+
+00:17:34.970 --> 00:17:39.250
+we go from not just having a loop but going from a loop to a graph. Now I've
+
+00:17:39.250 --> 00:17:42.450
+already talked a lot about this in the last two videos. In the first video I
+
+00:17:42.450 --> 00:17:45.770
+gave an overview on what bot mode is, how to get it set up and how to customize
+
+00:17:45.770 --> 00:17:49.810
+each of these individual profiles. So I'm not gonna touch on that today. And then
+
+00:17:49.810 --> 00:17:53.090
+in the second video we did a specific research upgrade where I updated the
+
+00:17:53.090 --> 00:17:56.570
+capabilities of the researcher to be a much more powerful tool. The main skill
+
+00:17:56.570 --> 00:17:59.170
+that I gave the researcher as an upgrade allowed it to check both
+
+00:17:59.170 --> 00:18:02.970
+academic sources and state-of-the-art sources and then corroborate the two of
+
+00:18:02.970 --> 00:18:06.650
+them. I just wanted to quickly show you this because it is a form of graph in the sense that
+
+00:18:06.650 --> 00:18:11.370
+the orchestrator is able to communicate and message back and forth with the different sub-agents,
+
+00:18:11.370 --> 00:18:16.170
+but it's not the same as a full task graph like we can get into with Kanban. All you need to know
+
+00:18:16.170 --> 00:18:20.730
+at this point is that the orchestrator is the one that I message. It's my human proxy, the one that
+
+00:18:20.730 --> 00:18:25.210
+controls the other agents. The researcher is able to investigate. So in the example of information
+
+00:18:25.210 --> 00:18:30.170
+coming in, the orchestrator would create the task and then give it to the researcher to go
+
+00:18:30.170 --> 00:18:34.210
+investigate and then the librarian works with my existing LLM wiki to take the
+
+00:18:34.210 --> 00:18:38.730
+output research that I've approved as a human and file it into my LLM wiki or
+
+00:18:38.730 --> 00:18:43.130
+my knowledge base in obsidian. So in a graph each node can be a single agent or
+
+00:18:43.130 --> 00:18:48.010
+action or a bundle of actions for example like an agent loop built into the group
+
+00:18:48.010 --> 00:18:52.570
+as part of a bigger macro loop. So in group chats one of the key limitations is
+
+00:18:52.570 --> 00:18:55.730
+that they only have the ability to go back and forth three times before they
+
+00:18:55.730 --> 00:18:59.850
+have to stop and check what you actually want.
+
+00:18:59.850 --> 00:19:02.890
+So before we actually get into running these full control graphs, I just wanted to quickly
+
+00:19:02.890 --> 00:19:07.530
+talk about a couple examples on how this fits together so that you can see what the graph
+
+00:19:07.530 --> 00:19:11.290
+might look like before we get into how to set it up, just so it makes a little bit more
+
+00:19:11.290 --> 00:19:12.530
+practical sense.
+
+00:19:12.530 --> 00:19:16.610
+So imagine you have an email come in and you want to have a decision.
+
+00:19:16.610 --> 00:19:20.090
+Maybe you want to have a draft created, maybe you want to have some research done, maybe
+
+00:19:20.090 --> 00:19:21.090
+both.
+
+00:19:21.090 --> 00:19:24.890
+So the email can come in and it can trigger an agent, like the researcher agent, to pull
+
+00:19:24.890 --> 00:19:29.130
+in the relevant context and the evidence by doing some research. Once it's done, it can
+
+00:19:29.130 --> 00:19:34.170
+then create a brief, like a research brief and draft a reply and then hand it off to you for review.
+
+00:19:34.170 --> 00:19:37.450
+If you don't think it's good enough quality or you think it's missing something, you can provide
+
+00:19:37.450 --> 00:19:42.250
+some more context, some more commentary, or steer it, and you can have it go back and loop again.
+
+00:19:42.250 --> 00:19:46.170
+So this brings in a loop, but it's a human in the loop. Then if it meets your approval,
+
+00:19:46.170 --> 00:19:50.650
+you can have it create the draft or even potentially send it right away if you've already reviewed
+
+00:19:50.650 --> 00:19:55.610
+the final result. It's up to you if you want to have the send capability given to the agent or if
+
+00:19:55.610 --> 00:20:00.570
+you want to click the button. As another example, let's say you've come across a great article or a
+
+00:20:00.570 --> 00:20:05.770
+YouTube video or some other resource and you've taken some notes on it. You can drop in the raw
+
+00:20:05.770 --> 00:20:10.330
+source and your notes and you can send it off to the librarian. The librarian agent can try and find
+
+00:20:10.330 --> 00:20:15.450
+the fit. How does this fit into your existing knowledge base? It'll check the context, connections,
+
+00:20:15.450 --> 00:20:21.290
+and draft an entry for you for your review to see is this good enough for it to make it into your
+
+00:20:21.290 --> 00:20:26.250
+knowledge base, into your curated library. If it's not good enough, you can suggest revisions
+
+00:20:26.250 --> 00:20:30.730
+and the librarian will update the draft entry and then pass it back to you for a review. Once you
+
+00:20:30.730 --> 00:20:35.130
+approve it, the librarian can then file it into the library and connect it to the rest of your research.
+
+00:20:35.130 --> 00:20:39.210
+And as a more complex system, we can actually start linking these loops together. For example,
+
+00:20:39.210 --> 00:20:43.770
+you can propose a question or a topic to the researcher. The researcher can go through a research
+
+00:20:43.770 --> 00:20:48.490
+loop, checking sources, checking it against the quality that you've given, this could be a goal loop,
+
+00:20:48.490 --> 00:20:53.530
+and then when it's done all of its research, it can pass it off to you as the human to validate
+
+00:20:53.530 --> 00:20:58.250
+that the information is good enough. You can add your own notes, connect it to that site of source,
+
+00:20:58.250 --> 00:21:02.570
+and report, and then hand it off to the librarian. The librarian can then see how that fits into
+
+00:21:02.570 --> 00:21:06.890
+your existing knowledge base and prepare a draft for your review on whether or not it should make
+
+00:21:06.890 --> 00:21:11.530
+it into the library. Again, you can go through a curation loop, but this one has a human in the loop
+
+00:21:11.530 --> 00:21:15.850
+as part of the core loop itself. Once you've approved it, the librarian can then go and file
+
+00:21:15.850 --> 00:21:19.450
+this into the library. And then as a coding example, let's say you're building an app,
+
+00:21:19.450 --> 00:21:23.850
+and you want to add the ability to export to Markdown. You can hand this off to your orchestrator and
+
+00:21:23.850 --> 00:21:28.090
+explain what you're looking for, and the orchestrator can understand it and then delegate it to the
+
+00:21:28.090 --> 00:21:33.050
+implementer. The implementer can then go through a goal loop where it builds it, checks to see if
+
+00:21:33.050 --> 00:21:37.290
+it works, and if it doesn't, then it repairs it, and then it checks it again. So it can loop as many
+
+00:21:37.290 --> 00:21:41.610
+times as you want, until the task is actually done. Once it's done, you can pass it off to a
+
+00:21:41.610 --> 00:21:45.850
+reviewer for an independent review, kind of like a second version of the implementer, but specifically
+
+00:21:45.850 --> 00:21:50.010
+for quality insurance, who can then pass it off to the orchestrator and check to make sure it matches
+
+00:21:50.010 --> 00:21:54.890
+the original goal. If it does, then it can hand it off to you for either a pull request or for you
+
+00:21:54.890 --> 00:21:59.610
+to do something with that particular output. In the original research, the Hermes Corporation actually
+
+00:21:59.610 --> 00:22:05.610
+surfaced that Kanban is Hermes' durable alternative, with name profiles, shared state dependencies,
+
+00:22:05.610 --> 00:22:10.090
+retries and work that survives the lead session. So what that means is it's a lot easier to start
+
+00:22:10.090 --> 00:22:16.650
+and stop and add more tasks and modify and just it gives you a lot more control on the actual task
+
+00:22:16.650 --> 00:22:20.170
+system that's happening here and the way the different agents fit into it. That's why it's
+
+00:22:20.170 --> 00:22:23.610
+called a task graph. But you might be wondering, isn't that kind of similar to what I already showed
+
+00:22:23.610 --> 00:22:32.720
+you where we have the orchestrator or the main agent delegating to subagents? So the Hermes Docs
+
+00:22:32.720 --> 00:22:37.680
+has a good breakdown here of what the difference is because they are actually quite different systems.
+
+00:22:37.680 --> 00:22:42.880
+in delegate task, the parent is blocked from doing things until the sub-agent actually returns.
+
+00:22:42.880 --> 00:22:47.920
+Whereas in Kanban, the orchestrator can just set the agent off, can assign the task, and it can
+
+00:22:47.920 --> 00:22:51.760
+just go and do its own thing, and you don't have to have anything make it back to the orchestrator
+
+00:22:51.760 --> 00:22:56.480
+unless you want it to. Rather than having some random anonymous sub-agent that starts from scratch,
+
+00:22:56.480 --> 00:23:01.040
+you have a named profile with persistent memory. So that's a pretty important element. Also,
+
+00:23:01.040 --> 00:23:06.240
+for resumability, if the sub-agent fails to do its task, it's just done. It just comes back and
+
+00:23:06.240 --> 00:23:08.280
+and says incomplete, whereas in Kanban,
+
+00:23:08.280 --> 00:23:11.560
+you can set different types of restoration processes.
+
+00:23:11.560 --> 00:23:13.080
+So it can be blocked and unblock
+
+00:23:13.080 --> 00:23:15.160
+and then rerun again from where it left off.
+
+00:23:15.160 --> 00:23:18.040
+So this is what I mean when I say it's more durable.
+
+00:23:18.040 --> 00:23:21.120
+It has the ability to survive errors and keep going.
+
+00:23:21.120 --> 00:23:22.840
+With subagents, you can steer.
+
+00:23:22.840 --> 00:23:25.840
+You can add some feedback, but it's not necessarily
+
+00:23:25.840 --> 00:23:27.480
+actually adding a human in the loop.
+
+00:23:27.480 --> 00:23:30.560
+But in Kanban, we can have specific actions or tasks
+
+00:23:30.560 --> 00:23:32.720
+actually block from happening
+
+00:23:32.720 --> 00:23:34.600
+until the human comes in and says go.
+
+00:23:34.600 --> 00:23:36.960
+And with delegation, the audit trail,
+
+00:23:36.960 --> 00:23:38.760
+all of the context can be lost
+
+00:23:38.760 --> 00:23:40.880
+when the system actually compresses.
+
+00:23:40.880 --> 00:23:41.720
+This is what I was talking about
+
+00:23:41.720 --> 00:23:43.320
+with the context window on the bottom here.
+
+00:23:43.320 --> 00:23:44.560
+If this gets compressed,
+
+00:23:44.560 --> 00:23:46.920
+then if there was a sub-agent within that compression,
+
+00:23:46.920 --> 00:23:49.280
+you can lose the context associated with it.
+
+00:23:49.280 --> 00:23:52.240
+Whereas in Kanban, it's stored in a SQLite database.
+
+00:23:52.240 --> 00:23:53.720
+So you get access to that forever.
+
+00:23:53.720 --> 00:23:55.040
+You can go back and take a look.
+
+00:23:55.040 --> 00:23:58.320
+So a good summary here is that delegate task is a tool call.
+
+00:23:58.320 --> 00:24:01.200
+It's just one function, whereas Kanban is a work queue
+
+00:24:01.200 --> 00:24:03.360
+where every handoff is a row in a database
+
+00:24:03.360 --> 00:24:05.800
+that any profile or human can see in edit.
+
+00:24:05.800 --> 00:24:07.920
+So there's a lot more transparency that happens here,
+
+00:24:07.920 --> 00:24:09.840
+which is why it starts to get into being
+
+00:24:09.840 --> 00:24:11.960
+a proper control graph or task graph.
+
+00:24:11.960 --> 00:24:14.400
+Thankfully, Hermes has a built-in feature called Kanban.
+
+00:24:14.400 --> 00:24:15.800
+So let's take a look at that.
+
+00:24:17.280 --> 00:24:18.880
+So the first thing we need to do for Kanban
+
+00:24:18.880 --> 00:24:21.040
+is you may not have this appearing on the side here,
+
+00:24:21.040 --> 00:24:22.680
+so we can go up to capabilities
+
+00:24:22.680 --> 00:24:24.040
+and then go over to plugins.
+
+00:24:24.040 --> 00:24:26.200
+And we can see that we have three built-in plugins
+
+00:24:26.200 --> 00:24:27.200
+that come with Hermes.
+
+00:24:27.200 --> 00:24:29.200
+The first is bot mode that comes turned on
+
+00:24:29.200 --> 00:24:30.240
+like we've already looked at,
+
+00:24:30.240 --> 00:24:31.680
+and the second is the Kanban.
+
+00:24:31.680 --> 00:24:32.960
+So make sure this is turned on here,
+
+00:24:32.960 --> 00:24:35.840
+and then you should see this appear on the left-hand side.
+
+00:24:35.840 --> 00:24:37.240
+So if we go over to Kanban here,
+
+00:24:37.240 --> 00:24:40.120
+we are not gonna be the ones running things the agent is.
+
+00:24:40.120 --> 00:24:42.600
+All we need to do is put a card into the ready section,
+
+00:24:42.600 --> 00:24:44.360
+assign it to a particular agent,
+
+00:24:44.360 --> 00:24:46.280
+and the agent will pick it up in a minute.
+
+00:24:46.280 --> 00:24:48.040
+And there's even a triage section.
+
+00:24:48.040 --> 00:24:49.760
+So this is where if you're not quite sure
+
+00:24:49.760 --> 00:24:51.340
+exactly what the task is,
+
+00:24:51.340 --> 00:24:53.200
+you can have an agent rewrite the idea
+
+00:24:53.200 --> 00:24:54.920
+into a proper task first.
+
+00:24:54.920 --> 00:24:56.740
+So that's actually a really important part of it,
+
+00:24:56.740 --> 00:24:58.240
+and I'll show you how we can change the settings
+
+00:24:58.240 --> 00:24:59.200
+for that in a moment.
+
+00:24:59.200 --> 00:25:02.240
+So triage is for raw ideas where that the specifier
+
+00:25:02.240 --> 00:25:06.100
+going to flesh out the spec and then it will move it through the system. To do
+
+00:25:06.100 --> 00:25:10.640
+means it's waiting on dependencies or unassigned so we can create task and not
+
+00:25:10.640 --> 00:25:14.480
+assign it and that means the dispatcher won't send it off to go run. We can
+
+00:25:14.480 --> 00:25:18.760
+schedule which is we want a task to run at a particular time so it could be for
+
+00:25:18.760 --> 00:25:23.240
+example check the latest series of emails and see if something has come in
+
+00:25:23.240 --> 00:25:27.240
+that I've been waiting for if so then execute the next task. Ready means that
+
+00:25:27.240 --> 00:25:30.200
+the dependencies are satisfied it's been assigned to a profile and the
+
+00:25:30.200 --> 00:25:33.060
+dispatcher runs it. Running means it's claimed by a worker and an agent's
+
+00:25:33.060 --> 00:25:36.280
+actually working on it. Block means it's waiting for human input, so this brings
+
+00:25:36.280 --> 00:25:39.380
+that human in the loop. And then review means that there's a review agent
+
+00:25:39.380 --> 00:25:43.040
+specifically checking out the work. So you can establish which agent you want to
+
+00:25:43.040 --> 00:25:46.520
+operate as the reviewer. And this is the completed section. But with all that said,
+
+00:25:46.520 --> 00:25:52.200
+why don't we run a quick test task? So I'm going to leave auto decompose triage
+
+00:25:52.200 --> 00:25:55.240
+task turned on, and I'm going to click new task. I'm just going to call this
+
+00:25:55.240 --> 00:25:59.120
+test task. I'm going to leave this assigned to the wanderloots tutorials
+
+00:25:59.120 --> 00:26:05.680
+assignee and click create task. So what we should see now is we've added this card to triage and
+
+00:26:05.680 --> 00:26:10.080
+the dispatcher is going to recognize this and hand it over to the auto decomposer within a minute.
+
+00:26:10.080 --> 00:26:13.920
+And I'll explain all of that in a moment. So triage is a place for raw ideas where the
+
+00:26:13.920 --> 00:26:18.640
+specifier will flesh it out. So we just saw that it went from this raw idea into running,
+
+00:26:18.640 --> 00:26:23.200
+but this task here is clarify the scope because it sounds like a test. So that's where putting
+
+00:26:23.200 --> 00:26:28.000
+something in triage will automatically assign it to the default that we have set up and it will
+
+00:26:28.000 --> 00:26:33.360
+run over here. So this should get blocked because this was a task that had no clear outcome.
+
+00:26:33.360 --> 00:26:37.140
+So this is where the human in the loop starts to come in because it basically said, there's
+
+00:26:37.140 --> 00:26:42.840
+no body, there's no information here. We don't know what they want. So the dispatcher basically
+
+00:26:42.840 --> 00:26:46.920
+runs inside of their Hermes gateway inside of the back end and you don't have to install
+
+00:26:46.920 --> 00:26:51.920
+anything. It just checks every 60 second. Has there been a new card created? If so, let's
+
+00:26:51.920 --> 00:26:56.520
+move through the Kanban loop. Let's go through the graph. The idea is that once this task
+
+00:26:56.520 --> 00:26:59.240
+gets created as a card, the dispatcher will see,
+
+00:26:59.240 --> 00:27:01.760
+oh, there's a new card, let me run the system for you.
+
+00:27:01.760 --> 00:27:03.520
+But if we go back to my task for a second,
+
+00:27:03.520 --> 00:27:05.800
+we can see here that we have a rough idea,
+
+00:27:05.800 --> 00:27:07.640
+the specifier will flesh it out.
+
+00:27:07.640 --> 00:27:10.200
+So we can also see that we have auto-decompose
+
+00:27:10.200 --> 00:27:11.360
+the triage tasks.
+
+00:27:11.360 --> 00:27:13.980
+So this is where if we go over to settings again,
+
+00:27:13.980 --> 00:27:16.960
+and inside of models, we go down to auxiliary models.
+
+00:27:16.960 --> 00:27:20.060
+We can see here that we have two different models set,
+
+00:27:20.060 --> 00:27:22.360
+two different auxiliary models that we can control here.
+
+00:27:22.360 --> 00:27:24.220
+The first is the triage specifier,
+
+00:27:24.220 --> 00:27:25.980
+and this is the one that will take the idea,
+
+00:27:25.980 --> 00:27:28.820
+the goal that you have and frame it as a better task,
+
+00:27:28.820 --> 00:27:31.700
+which will then get passed on to the Kanban decomposer
+
+00:27:31.700 --> 00:27:34.540
+to break that task into a task graph.
+
+00:27:34.540 --> 00:27:37.180
+So you can control what you want these models to be here.
+
+00:27:37.180 --> 00:27:39.380
+Perhaps the specifier is a very lightweight model
+
+00:27:39.380 --> 00:27:41.580
+because you're basically just using text
+
+00:27:41.580 --> 00:27:43.340
+to explain text a little bit better,
+
+00:27:43.340 --> 00:27:44.660
+but for the decomposer,
+
+00:27:44.660 --> 00:27:47.100
+you probably want a much more powerful model.
+
+00:27:47.100 --> 00:27:49.620
+And Hermes Docs actually has a strategy for this
+
+00:27:49.620 --> 00:27:51.740
+where they say decomposing a project,
+
+00:27:51.740 --> 00:27:53.740
+breaking it into well scoped cards
+
+00:27:53.740 --> 00:27:55.500
+takes frontier level judgment,
+
+00:27:55.500 --> 00:28:00.220
+using the most intelligence that you have, but executing a card that has a clear goal,
+
+00:28:00.220 --> 00:28:03.660
+context and handoff doesn't really need that same level of intelligence,
+
+00:28:03.660 --> 00:28:07.260
+especially if it's running in a loop. Workers are where the vast majority of tokens are spent,
+
+00:28:07.260 --> 00:28:11.660
+so that's typically where the cost is. So that's what I'm getting at when I talk about this
+
+00:28:11.660 --> 00:28:16.620
+decomposer here. We can set this model to whatever we want. I could set this, for example, to GPT-6
+
+00:28:16.620 --> 00:28:21.900
+Astra, if I wanted to. And what would happen is now the Kanban decomposer, this decomposer setting
+
+00:28:21.900 --> 00:28:27.660
+that we have here would be using Astra to convert whatever task I put inside of this task card
+
+00:28:27.660 --> 00:28:32.780
+into a series of subtasks that then get assigned to the worker profile which is Waterloo's tutorials
+
+00:28:32.780 --> 00:28:38.540
+that I currently have set at Terra. So that's just a really powerful way for you to significantly
+
+00:28:38.540 --> 00:28:44.940
+reduce the cost of your operations by having a powerful planning model and a less powerful
+
+00:28:44.940 --> 00:28:51.420
+execution model or implementer or worker agent. And we can see up at the top here that we have a
+
+00:28:51.420 --> 00:28:55.580
+default board. So what we can do is we can click on the default, we can rename that
+
+00:28:55.580 --> 00:28:59.380
+board if we want to, or create a new one. So I can, for example, create a new board called
+
+00:28:59.380 --> 00:29:04.540
+test, create board. And now when I click on this, I can switch between different boards.
+
+00:29:04.540 --> 00:29:08.660
+And what's cool too is within that test board, you can assign it to a specific project. So
+
+00:29:08.660 --> 00:29:12.780
+what that means is you can have different tasks and different graphs and different configurations
+
+00:29:12.780 --> 00:29:16.740
+and settings and operations that you want for particular boards. And all of that can
+
+00:29:16.740 --> 00:29:20.740
+be controlled at the project level. So you can create a new project like, for example,
+
+00:29:20.740 --> 00:29:24.420
+Maybe one is your admin project and it deals with everything related to email.
+
+00:29:24.420 --> 00:29:27.460
+Maybe another one is a research project and it deals with all of your research that you're
+
+00:29:27.460 --> 00:29:28.460
+bringing in.
+
+00:29:28.460 --> 00:29:32.140
+Maybe another is for a particular coding project or app that you're working on and all
+
+00:29:32.140 --> 00:29:36.620
+of that can maintain the context within this particular project and then you can assign
+
+00:29:36.620 --> 00:29:41.980
+a particular board associated with that project to run these tasks.
+
+00:29:41.980 --> 00:29:45.180
+So we can open up the orchestration settings here and what that does is it brings up a
+
+00:29:45.180 --> 00:29:46.900
+list of all of the profiles.
+
+00:29:46.900 --> 00:29:50.580
+It brings up all of the different bots or agents that we have available with all of
+
+00:29:50.580 --> 00:29:53.900
+of the particular settings and skills and memory
+
+00:29:53.900 --> 00:29:56.700
+and context that we were talking about earlier.
+
+00:29:56.700 --> 00:29:59.980
+Each of these operates as a different specialized agent.
+
+00:29:59.980 --> 00:30:02.540
+So there's a few key settings we need to take a look at.
+
+00:30:02.540 --> 00:30:04.580
+The first is the orchestrator profile.
+
+00:30:04.580 --> 00:30:06.380
+So right now it's defaulting to default.
+
+00:30:06.380 --> 00:30:08.500
+You can change which agent you want to operate
+
+00:30:08.500 --> 00:30:10.180
+as your orchestrator.
+
+00:30:10.180 --> 00:30:11.780
+This is the orchestrating agent
+
+00:30:11.780 --> 00:30:14.340
+that will decide which agent gets which task.
+
+00:30:14.340 --> 00:30:16.220
+And those tasks get assigned to the assignee,
+
+00:30:16.220 --> 00:30:18.500
+which you can set which one you want to be the default.
+
+00:30:18.500 --> 00:30:20.380
+Maybe I want to create an implementer profile
+
+00:30:20.380 --> 00:30:22.540
+whose sole job is to execute on things.
+
+00:30:22.540 --> 00:30:24.140
+In a similar way that the researcher
+
+00:30:24.140 --> 00:30:25.780
+is the one that researches things.
+
+00:30:25.780 --> 00:30:27.880
+And the librarian is the one that files things
+
+00:30:27.880 --> 00:30:33.830
+in my LLM wiki.
+
+00:30:33.830 --> 00:30:36.110
+So for this one, I'm going to leave on auto-decompose
+
+00:30:36.110 --> 00:30:37.470
+just so you can see how this works.
+
+00:30:37.470 --> 00:30:38.990
+I'm gonna click New Task.
+
+00:30:38.990 --> 00:30:40.630
+Gotta call it multi-agent research.
+
+00:30:40.630 --> 00:30:41.990
+And I'm gonna include the description
+
+00:30:41.990 --> 00:30:44.150
+of the same prompt that I gave previously.
+
+00:30:44.150 --> 00:30:45.710
+So here we can set the priority.
+
+00:30:45.710 --> 00:30:47.270
+This basically just controls the order
+
+00:30:47.270 --> 00:30:49.110
+if you have multiple tasks going in there at once.
+
+00:30:49.110 --> 00:30:50.990
+And then we can have the workspace
+
+00:30:50.990 --> 00:30:51.830
+that we wanted to run in.
+
+00:30:51.830 --> 00:30:54.110
+I'm gonna leave the current assignee
+
+00:30:54.110 --> 00:30:56.670
+as the Waterloo tutorials, as the default,
+
+00:30:56.670 --> 00:30:58.430
+even though I'm asking for research.
+
+00:30:58.430 --> 00:31:00.390
+So this is where the task decomposer
+
+00:31:00.390 --> 00:31:02.430
+should be able to recognize that.
+
+00:31:02.430 --> 00:31:03.790
+This is actually a research task,
+
+00:31:03.790 --> 00:31:06.630
+not an implementation task for the tutorials agent.
+
+00:31:06.630 --> 00:31:08.590
+I can list specific skills if I want.
+
+00:31:08.590 --> 00:31:10.550
+I can change the model that I want this to run at
+
+00:31:10.550 --> 00:31:12.830
+or just have it run at the profile default.
+
+00:31:12.830 --> 00:31:15.750
+And importantly, I can have this run on goal mode.
+
+00:31:15.750 --> 00:31:18.510
+So by default, each worker agent gets one shot
+
+00:31:18.510 --> 00:31:20.070
+at its card to do the work.
+
+00:31:20.070 --> 00:31:22.830
+But turning goal mode into true for that particular task,
+
+00:31:22.830 --> 00:31:24.530
+Let's that worker run in a goal loop
+
+00:31:24.530 --> 00:31:25.690
+like I've already shown you.
+
+00:31:25.690 --> 00:31:27.890
+And this is its own self-contained goal loop.
+
+00:31:27.890 --> 00:31:29.530
+It doesn't connect to the existing goal
+
+00:31:29.530 --> 00:31:30.410
+that we have elsewhere.
+
+00:31:30.410 --> 00:31:33.050
+And what's cool too is we can also estimate the cost
+
+00:31:33.050 --> 00:31:34.330
+of what this task is going to be.
+
+00:31:34.330 --> 00:31:36.370
+So I can click estimate and then it gives me a list
+
+00:31:36.370 --> 00:31:38.250
+of the tokens that it thinks is going to cost
+
+00:31:38.250 --> 00:31:39.610
+for this particular prompt here.
+
+00:31:39.610 --> 00:31:42.330
+So it took this task and it analyzed it
+
+00:31:42.330 --> 00:31:43.410
+to give you an estimate.
+
+00:31:43.410 --> 00:31:46.170
+So it says it's going to be a broad ambiguous research task
+
+00:31:46.170 --> 00:31:48.450
+requiring extensive source review, synthesis,
+
+00:31:48.450 --> 00:31:51.130
+architecture comparison and likely iterative documentation
+
+00:31:51.130 --> 00:31:51.970
+or prototyping.
+
+00:31:51.970 --> 00:31:54.170
+So now, for example, I can include a limitation here.
+
+00:31:54.170 --> 00:31:55.910
+Please limit your search to five sources
+
+00:31:55.910 --> 00:31:58.250
+and the output document to 500 words or less.
+
+00:31:58.250 --> 00:31:59.550
+And then I can re-estimate it.
+
+00:31:59.550 --> 00:32:00.390
+There we go.
+
+00:32:00.390 --> 00:32:03.050
+It just dropped from 45,000 tokens down to 18,000.
+
+00:32:03.050 --> 00:32:05.250
+There's a rough estimate researching up to five sources,
+
+00:32:05.250 --> 00:32:06.690
+comparing this particular task
+
+00:32:06.690 --> 00:32:08.490
+and then a synthesis under 500 words.
+
+00:32:08.490 --> 00:32:11.810
+And that dropped the complexity of this task down to medium.
+
+00:32:11.810 --> 00:32:13.930
+That's a cool way for you to do a lightweight check ahead of time
+
+00:32:13.930 --> 00:32:15.210
+to make sure that your task isn't going
+
+00:32:15.210 --> 00:32:16.570
+to blow through your whole quota.
+
+00:32:16.570 --> 00:32:18.210
+So now let's click Create Task.
+
+00:32:18.210 --> 00:32:20.770
+And this brings up the board that I was talking about.
+
+00:32:21.970 --> 00:32:24.130
+The triage section is where raw ideas.
+
+00:32:24.130 --> 00:32:26.370
+We have a specifier that's going to flesh out the spec.
+
+00:32:26.370 --> 00:32:29.650
+So it's going to be converted from this into a different card.
+
+00:32:29.650 --> 00:32:32.250
+And this is using that auxiliary model that I was talking about.
+
+00:32:32.250 --> 00:32:32.850
+OK, here we go.
+
+00:32:32.850 --> 00:32:33.690
+So it just started.
+
+00:32:33.690 --> 00:32:37.330
+So that triage using the auto decomposer, the dispatcher checked.
+
+00:32:37.330 --> 00:32:38.370
+Oh, it's been a minute.
+
+00:32:38.370 --> 00:32:39.330
+There's something here.
+
+00:32:39.330 --> 00:32:41.050
+Let's break it into two different tasks.
+
+00:32:41.050 --> 00:32:43.690
+So the task decomposer broke it up and assigned it
+
+00:32:43.690 --> 00:32:47.570
+to these particular subagents where each one is now running on its own.
+
+00:32:47.570 --> 00:32:50.210
+And we can click into this and we can see the specific prompt that
+
+00:32:50.210 --> 00:32:54.890
+was given to it created by the auto decomposer using the default model, we can estimate the
+
+00:32:54.890 --> 00:32:58.370
+effort of this particular task, like I was just showing you, and we can comment. So as
+
+00:32:58.370 --> 00:33:02.330
+these tasks are currently running, we can actually send messages to the worker. And if there's
+
+00:33:02.330 --> 00:33:06.930
+a big enough change, we can even send a message and then recue it and have it start that task
+
+00:33:06.930 --> 00:33:10.610
+over again. So we get a chance to go through and see how all of this is working, what it's
+
+00:33:10.610 --> 00:33:14.810
+actually doing, how it's analyzing it. And we can see this for each card that's running
+
+00:33:14.810 --> 00:33:19.530
+here. So you get a lot of flexibility for controlling these cards here. And what's cool too is,
+
+00:33:19.530 --> 00:33:21.650
+For example, I can go back to the to-do section,
+
+00:33:21.650 --> 00:33:23.330
+which are the currently blocked tasks.
+
+00:33:23.330 --> 00:33:26.330
+So these ones are waiting for the researcher to finish
+
+00:33:26.330 --> 00:33:27.410
+before they run.
+
+00:33:27.410 --> 00:33:29.770
+And we can see this one was actually assigned to default
+
+00:33:29.770 --> 00:33:30.770
+instead of orchestrator.
+
+00:33:30.770 --> 00:33:32.810
+So I'm going to change the assignee from default here
+
+00:33:32.810 --> 00:33:34.210
+back to orchestrator.
+
+00:33:34.210 --> 00:33:36.690
+And now we can see that change the card over here as well.
+
+00:33:36.690 --> 00:33:38.290
+So I think it's just such a cool way
+
+00:33:38.290 --> 00:33:41.090
+for us to be able to take a look at how all of the tasks
+
+00:33:41.090 --> 00:33:43.250
+are broken up into their individual actions
+
+00:33:43.250 --> 00:33:45.490
+and see how they move through the Kanban.
+
+00:33:45.490 --> 00:33:47.210
+And you can kind of just get a sense
+
+00:33:47.210 --> 00:33:49.970
+on how all of the project is working together.
+
+00:33:49.970 --> 00:33:51.530
+And that's just for one card.
+
+00:33:51.530 --> 00:33:54.210
+I can now add a second card and it can start running itself
+
+00:33:54.210 --> 00:33:55.450
+and keep going from here.
+
+00:33:55.450 --> 00:33:56.890
+So you can really start to plan out.
+
+00:33:56.890 --> 00:33:59.210
+Maybe you have five or six or 10 or 20 tasks
+
+00:33:59.210 --> 00:34:00.210
+that you want to run.
+
+00:34:00.210 --> 00:34:02.490
+You can put them all in here, you can schedule them,
+
+00:34:02.490 --> 00:34:05.290
+you can let the agent know that some are waiting on others.
+
+00:34:05.290 --> 00:34:06.890
+There's a lot that you can do here
+
+00:34:06.890 --> 00:34:09.530
+and it just takes a lot of that sub-agent delegation
+
+00:34:09.530 --> 00:34:12.410
+that we were talking about in the first couple of examples
+
+00:34:12.410 --> 00:34:14.810
+and makes it a lot more transparent and controllable.
+
+00:34:14.810 --> 00:34:16.370
+And that's why it's called a control graph
+
+00:34:16.370 --> 00:34:19.210
+or a task graph, because we can actually see the graph
+
+00:34:19.210 --> 00:34:21.890
+of how this is operating, what needs to be done first
+
+00:34:21.890 --> 00:34:24.330
+before the next task can be accomplished.
+
+00:34:24.330 --> 00:34:25.490
+So this one is still running here,
+
+00:34:25.490 --> 00:34:26.850
+but we can see this one finished.
+
+00:34:26.850 --> 00:34:29.130
+We can go through and see the full activity.
+
+00:34:29.130 --> 00:34:30.570
+So we can see that it was created
+
+00:34:30.570 --> 00:34:32.210
+and then promoted to ready to run.
+
+00:34:32.210 --> 00:34:33.830
+And then it was claimed by a worker,
+
+00:34:33.830 --> 00:34:35.490
+which is this researcher agent.
+
+00:34:35.490 --> 00:34:36.890
+It ran through, completed it.
+
+00:34:36.890 --> 00:34:39.570
+And it created a briefing doc that was saved right here.
+
+00:34:39.570 --> 00:34:41.290
+It only reviewed two sources
+
+00:34:41.290 --> 00:34:43.730
+because it was given a two source limit
+
+00:34:43.730 --> 00:34:45.090
+and it maintained everything.
+
+00:34:45.090 --> 00:34:47.190
+Okay, and it looks like the second one just finished as well.
+
+00:34:47.190 --> 00:34:49.190
+And now we can see that the orchestrator task
+
+00:34:49.190 --> 00:34:52.510
+just moved from to do to ready.
+
+00:34:52.510 --> 00:34:53.910
+So once it's going from ready,
+
+00:34:53.910 --> 00:34:56.790
+once the dispatcher ticks in 60 seconds or so,
+
+00:34:56.790 --> 00:34:58.630
+it should get put over to running.
+
+00:34:58.630 --> 00:34:59.470
+And there we go.
+
+00:34:59.470 --> 00:35:01.710
+So basically, we had those two researcher tasks
+
+00:35:01.710 --> 00:35:02.790
+and once they were finished,
+
+00:35:02.790 --> 00:35:06.310
+the to do of delivering the report was unblocked
+
+00:35:06.310 --> 00:35:08.510
+because the previous tasks were completed.
+
+00:35:08.510 --> 00:35:10.430
+And then once that was unblocked,
+
+00:35:10.430 --> 00:35:12.190
+the dispatcher running in the background
+
+00:35:12.190 --> 00:35:13.430
+moved it over to ready.
+
+00:35:13.430 --> 00:35:14.630
+And then once it was ready,
+
+00:35:14.630 --> 00:35:17.950
+shifted it into running. And again, we can see all of this was done by the auto
+
+00:35:17.950 --> 00:35:22.070
+decomposer. And here's the specific prompt. So it's pretty complex here. This is
+
+00:35:22.070 --> 00:35:25.230
+where it's important to be really strategic with the information and the
+
+00:35:25.230 --> 00:35:28.550
+tools and the memory and the context, the skills and everything that you're
+
+00:35:28.550 --> 00:35:31.770
+giving to your specialized agents because you don't want to accidentally
+
+00:35:31.770 --> 00:35:35.270
+have them blow through your entire quota because you gave them more than they
+
+00:35:35.270 --> 00:35:38.270
+needed. So that's one of the dangers of running all of this autonomously is
+
+00:35:38.270 --> 00:35:41.910
+that you might be giving these agents more than they need. So it's up to you to
+
+00:35:41.910 --> 00:35:46.950
+go through and experiment and test and just make sure that you're able to be more specific
+
+00:35:46.950 --> 00:35:50.790
+and strategic with how you want to set up these task graphs and how you want to run them.
+
+00:35:50.790 --> 00:35:54.630
+So that task just completed right here and now we have multi-agent research ready.
+
+00:35:54.630 --> 00:35:59.510
+So we had the researcher run create its research report pass it off to the orchestrator who
+
+00:35:59.510 --> 00:36:05.710
+then constructed a 500 word or less recommendation and then pass it back to the original prompt
+
+00:36:05.710 --> 00:36:10.030
+that I had put in here called multi-agent research and now this should be answered by
+
+00:36:10.030 --> 00:36:12.790
+it passing along, the document that was created.
+
+00:36:12.790 --> 00:36:15.230
+Great, there we go, so now the dispatcher is running again.
+
+00:36:15.230 --> 00:36:17.310
+The multi-agent research, my original question
+
+00:36:17.310 --> 00:36:18.510
+that was created by me,
+
+00:36:18.510 --> 00:36:21.840
+then now it's gonna give me the report.
+
+00:36:21.840 --> 00:36:23.480
+Great, and everything is now done.
+
+00:36:23.480 --> 00:36:25.160
+And this is the report that it created
+
+00:36:25.160 --> 00:36:28.040
+from incoming information to action and reusable knowledge,
+
+00:36:28.040 --> 00:36:30.080
+which is the theme that we've been working with today.
+
+00:36:30.080 --> 00:36:32.000
+So you can see it's 484 words,
+
+00:36:32.000 --> 00:36:33.840
+it's limited to five sources,
+
+00:36:33.840 --> 00:36:35.880
+and it gave a pretty solid recommendation.
+
+00:36:35.880 --> 00:36:37.720
+Have a single accountable lead agent
+
+00:36:37.720 --> 00:36:40.000
+with bounded delegation is the best default.
+
+00:36:40.000 --> 00:36:43.360
+Use a manager style orchestration to keep one owner for state and a final
+
+00:36:43.360 --> 00:36:46.080
+output while allowing scoped specialists.
+
+00:36:46.280 --> 00:36:49.840
+Use a persistent team only when measurement shows sustained independent parallel
+
+00:36:49.840 --> 00:36:53.240
+work. So again, this is basically the same answer is what we had before.
+
+00:36:53.280 --> 00:36:56.520
+So now let's quickly break down what just happened here before I explained the
+
+00:36:56.520 --> 00:36:57.600
+alternative option.
+
+00:36:57.760 --> 00:37:00.040
+So this is the original prompt that I gave.
+
+00:37:00.080 --> 00:37:02.800
+And what happened is you can see this was created by dashboard.
+
+00:37:02.800 --> 00:37:04.120
+So this was created by me.
+
+00:37:04.280 --> 00:37:08.000
+I assigned it to the orchestrator and I gave it this particular prompt.
+
+00:37:08.000 --> 00:37:10.700
+Then we can see that the auto decomposer commented and said,
+
+00:37:10.700 --> 00:37:11.900
+Hey, I decomposed.
+
+00:37:11.900 --> 00:37:15.100
+I broke up this task into these three subtasks.
+
+00:37:15.300 --> 00:37:19.100
+So these were the two research tasks and then the writing of the article task.
+
+00:37:19.200 --> 00:37:23.300
+The root, this question here, this task will wake once all the children complete.
+
+00:37:23.500 --> 00:37:24.900
+So it took that description.
+
+00:37:24.900 --> 00:37:26.600
+It broke it into those three subtasks.
+
+00:37:26.600 --> 00:37:27.900
+It went through and ran.
+
+00:37:28.000 --> 00:37:32.200
+The researcher went into running completed its two tasks here, sent it back
+
+00:37:32.200 --> 00:37:35.500
+to the orchestrator to write the article, which honestly, in the future,
+
+00:37:35.500 --> 00:37:37.800
+I would probably have an implementer agent or a writing agent
+
+00:37:37.800 --> 00:37:41.480
+who specialized with this, leaving the orchestrator to just deal with
+
+00:37:41.480 --> 00:37:44.520
+orchestration. So that's one change I'm going to make. And then it gave the
+
+00:37:44.520 --> 00:37:49.200
+summary here. So it accepted the deliverable. The final is 485 words. All the
+
+00:37:49.200 --> 00:37:52.380
+sources check out. And here's the simple recommendation. So honestly that worked
+
+00:37:52.380 --> 00:37:55.880
+pretty well. But maybe we didn't need two researcher agents. That's a little bit
+
+00:37:55.880 --> 00:38:00.960
+of overkill for a five source limitation. That probably used up more tokens than
+
+00:38:00.960 --> 00:38:03.760
+what we needed here. So this is where if we close this and we go back to our
+
+00:38:03.760 --> 00:38:07.440
+orchestration settings, we can start moving beyond this auto
+
+00:38:07.440 --> 00:38:14.750
+decomposer. So this is where instead we can turn it off, and
+
+00:38:14.750 --> 00:38:17.950
+we could let the orchestrator be the one to decompose the triage
+
+00:38:17.950 --> 00:38:21.070
+tasks. So why would you want to do that? Well, my orchestrator has a
+
+00:38:21.070 --> 00:38:24.910
+specific soul associated with it. If I go here and click edit soul,
+
+00:38:24.910 --> 00:38:27.550
+I have very specific instructions on how I want the
+
+00:38:27.550 --> 00:38:30.190
+orchestrator to work, how I want it to coordinate my team,
+
+00:38:30.190 --> 00:38:33.070
+who I want it to work with, I can put limits, I can connect
+
+00:38:33.070 --> 00:38:36.750
+specific memories. There's more context that can be given here
+
+00:38:36.750 --> 00:38:38.590
+from the orchestrator profile,
+
+00:38:38.590 --> 00:38:40.230
+then just the auto decomposer,
+
+00:38:40.230 --> 00:38:42.630
+which doesn't necessarily have that same level of context.
+
+00:38:42.630 --> 00:38:44.230
+This is just automatic mode.
+
+00:38:44.230 --> 00:38:45.750
+This is more of a curated mode.
+
+00:38:45.750 --> 00:38:47.710
+And it doesn't even have to go through triage.
+
+00:38:47.710 --> 00:38:49.350
+Instead, it can just go straight into ready.
+
+00:38:49.350 --> 00:38:51.150
+But if we wanna use the orchestrator
+
+00:38:51.150 --> 00:38:53.630
+to operate as the task decomposer,
+
+00:38:53.630 --> 00:38:56.270
+we need to give it specific Kanban skills.
+
+00:38:56.270 --> 00:38:57.390
+So if I go over to orchestrator
+
+00:38:57.390 --> 00:38:58.750
+and then we go to capabilities,
+
+00:38:58.750 --> 00:39:00.910
+we can see here, if I go to tools again,
+
+00:39:00.910 --> 00:39:03.950
+and then to task, I've turned off task delegation.
+
+00:39:03.950 --> 00:39:06.030
+So basically what that means is I've removed
+
+00:39:06.030 --> 00:39:07.830
+the ability of the Orchestrator agent
+
+00:39:07.830 --> 00:39:10.670
+to be able to create those delegated subagents.
+
+00:39:10.670 --> 00:39:13.710
+Instead, I want the Orchestrator to run the Kanban board
+
+00:39:13.710 --> 00:39:15.470
+so I can turn on these tools here.
+
+00:39:15.470 --> 00:39:17.510
+And what that does is if we go back over to Kanban,
+
+00:39:17.510 --> 00:39:19.270
+by having auto-decomposed turned off
+
+00:39:19.270 --> 00:39:20.910
+and the Orchestrator turned on
+
+00:39:20.910 --> 00:39:24.270
+as the Orchestration profile with the Kanban tools,
+
+00:39:24.270 --> 00:39:26.710
+the Orchestrator will now break apart the tasks
+
+00:39:26.710 --> 00:39:28.830
+and then assign it to the particular profiles
+
+00:39:28.830 --> 00:39:30.990
+defaulting to the default assignee here.
+
+00:39:30.990 --> 00:39:33.630
+So automatic decomposition buys you convenience.
+
+00:39:33.630 --> 00:39:35.470
+It's really easy, you just type in the task
+
+00:39:35.470 --> 00:39:37.990
+click go and Hermes will break it down for you.
+
+00:39:37.990 --> 00:39:42.710
+But creating my own planner as the orchestration profile, the orchestrator, gives me a lot more
+
+00:39:42.710 --> 00:39:46.470
+deliberate control over the task design, the roles, and the review.
+
+00:39:46.470 --> 00:39:49.390
+It's not that one necessarily has to be lower cost than the other.
+
+00:39:49.390 --> 00:39:53.630
+It depends on the task, the complexity, and how much control you want to maintain and
+
+00:39:53.630 --> 00:39:55.030
+how the system operates.
+
+00:39:55.030 --> 00:39:56.910
+The real benefit is continuity.
+
+00:39:56.910 --> 00:40:01.150
+I can return tomorrow, I can see what's blocked, I can inspect the handoff, and I can resume
+
+00:40:01.150 --> 00:40:05.470
+without reconstructing the conversation or trying to set off more subagents.
+
+00:40:05.470 --> 00:40:09.710
+So the orchestrator plans, the dispatcher starts the system saying we're ready for work and
+
+00:40:09.710 --> 00:40:12.230
+then the worker executes on the tasks assigned to it.
+
+00:40:12.230 --> 00:40:16.550
+So you can kind of think of each card as work units, not necessarily different agents, but
+
+00:40:16.550 --> 00:40:19.910
+a card can use helpers or contain a goal loop in and of itself.
+
+00:40:19.910 --> 00:40:24.230
+So if we were to do that, again, we set which orchestration profile we want, what default
+
+00:40:24.230 --> 00:40:29.310
+assigning we want, but instead of creating a new card in triage here, new task in triage,
+
+00:40:29.310 --> 00:40:34.990
+would just sit here forever because the dispatcher doesn't have the auto decomposer to break that
+
+00:40:34.990 --> 00:40:40.270
+single task into the series of subtasks that then would be put into ready. I'm not going to go through
+
+00:40:40.270 --> 00:40:44.510
+that orchestration example. The key difference is that rather than dropping something into triage,
+
+00:40:44.510 --> 00:40:48.270
+you can either put it into to-do and then wait until you're ready. You can schedule it or if you
+
+00:40:48.270 --> 00:40:52.510
+want to trigger the orchestrator right away, you would drop the new task and ready and let it deal
+
+00:40:52.510 --> 00:40:57.390
+with the task decomposition instead of letting the auto decomposer do it. But I actually tested out
+
+00:40:57.390 --> 00:41:01.790
+the different scenarios to see which works best. So why don't we take a quick look at the results
+
+00:41:01.790 --> 00:41:10.060
+of my testing. So my thought was there's a lot of different coordination methods here,
+
+00:41:10.060 --> 00:41:14.620
+which one actually makes the most sense. The results showed that a single agent with task
+
+00:41:14.620 --> 00:41:19.900
+delegation for a simple task at least and running the orchestrator without the auto decomposer
+
+00:41:19.900 --> 00:41:24.780
+actually had pretty similar token usage and pretty similar quality, but using the auto
+
+00:41:24.780 --> 00:41:29.420
+decomposer and adding the goal loop actually added more overhead for this particular task.
+
+00:41:29.420 --> 00:41:33.900
+So this is obviously a very simple example. It's not by any means a proper benchmark.
+
+00:41:33.900 --> 00:41:37.420
+I just wanted to see how this worked for a particular research task for me.
+
+00:41:37.420 --> 00:41:42.060
+And one thing to keep in mind is that even if the workflow in the Kanban takes more tokens,
+
+00:41:42.060 --> 00:41:45.740
+it might be worth it because you can go through and take a look at what was actually done.
+
+00:41:45.740 --> 00:41:51.100
+So it gives you more transparency. The actual right choice just depends on what your work really needs.
+
+00:41:51.100 --> 00:41:55.420
+So I'm going to keep exploring this more. I'm going to try and do some more complex Kanban
+
+00:41:55.420 --> 00:42:00.620
+systems with coding so I can actually see what makes sense for my own workflows, how we can leverage
+
+00:42:00.620 --> 00:42:04.620
+the orchestration and control graphs that Hermes has built into it.
+
+00:42:06.460 --> 00:42:12.300
+So do you need an agent team? Not necessarily. Start with the simplest level that actually meets
+
+00:42:12.300 --> 00:42:17.820
+your needs and then add coordination and complexity as you find yourself actually needing more.
+
+00:42:17.820 --> 00:42:22.860
+You want to find a specific problem that that extra coordination and effort is going to actually
+
+00:42:22.860 --> 00:42:27.580
+solve. Now today's example was a very simple one. Next, we'll get more into how
+
+00:42:27.580 --> 00:42:31.420
+subagents, loops, and graphs can fit together to solve more complex workflows.
+
+00:42:31.420 --> 00:42:34.860
+What workflow would be the most helpful for you? Please let me know in the comments and I'm happy
+
+00:42:34.860 --> 00:42:38.940
+to explore these topics more in future videos. If you found this video helpful, please like and
+
+00:42:38.940 --> 00:42:43.340
+subscribe as I really appreciate it. And please consider joining my memberships. My members enabled
+
+00:42:43.340 --> 00:42:47.180
+me to continue making free videos like this one. Thanks again for watching and I will see you in
+
+00:42:47.180 --> 00:42:48.180
+in the next video.

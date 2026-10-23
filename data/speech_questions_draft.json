@@ -1,0 +1,836 @@
+{
+  "schema_version": 1,
+  "name": "ClipScout speech questions draft",
+  "status": "ASR-supported silver reference draft; not independently human-validated",
+  "video": {
+    "filename": "Subagents vs Agent Teams 🧠 Hermes Bots Goal Loops Kanban Graphs.mp4",
+    "duration_seconds": 2575.0057666666667,
+    "sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd"
+  },
+  "annotation_protocol": {
+    "source": "Complete automatic transcript reviewed as text; no independent audio listening or human validation.",
+    "transcript_path": "transcripts/user_video.json",
+    "transcript_sha256": "ec42515131e685e5bde1600f501afe63c8bc1a248962fafe7e89c5023b42e130",
+    "transcript_cue_count": 878,
+    "last_transcript_cue_end_seconds": 2568.18,
+    "asr_model": ".cache/whisper-base.en",
+    "asr_language": "en",
+    "asr_device": "cpu",
+    "asr_compute_type": "int8",
+    "complete_transcript_reconciled": true,
+    "split_policy": "All questions sharing the first delegation demonstration and first token comparison are dev. Remaining speech questions are test. No question evidence intersects the visual dev Email/Article interval 1152.5-1237.5 seconds. This split remains within one video, and related concepts recur; it is not held-out-video generalization.",
+    "boundary_policy": "Use full coherent speech passages bounded by ASR cues rather than instantaneous timestamps. Multiple separated events receive separate intervals; a contiguous causal explanation can use one interval.",
+    "negative_policy": "Unanswerable questions are scoped to explicitly named spoken comparisons and ask for absent numerical precision. Context cue IDs are retained in annotation_notes; reference_answers and evidence_intervals are empty.",
+    "limitations": [
+      "Automatic transcript errors may affect reference answers and timing; silver labels require independent human review before benchmark claims.",
+      "The same ASR transcript may be used as retrieval evidence, so these questions test retrieval and synthesis over a shared noisy transcript rather than independently validated audio understanding.",
+      "Questions attribute software behavior and cost reasoning to the presenter; they do not independently establish those claims.",
+      "Required-term agreement cannot verify negation, causal reasoning, or temporal order.",
+      "No audio-based global absence claim is made; negative questions have explicit local scope.",
+      "Sparse visual annotations and these speech annotations have different evidence modalities and should be reported separately."
+    ]
+  },
+  "questions": [
+    {
+      "id": "speech_01",
+      "question": "Locate the first demonstration of enabling Task Delegation. Which settings does the presenter open, and what capability does enabling the tool give the parent agent?",
+      "category": "localization",
+      "split": "dev",
+      "answerable": true,
+      "reference_answers": [
+        "Around 02:53-03:15, the presenter opens Capabilities, then Tools, searches for delegation and enables Task Delegation so the parent can create subagents with specific capabilities."
+      ],
+      "evidence_intervals": [
+        [
+          173.04,
+          194.56
+        ]
+      ],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00042",
+          "T00043",
+          "T00044",
+          "T00045"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00042",
+            "last": "T00045",
+            "start": 173.04,
+            "end": 194.56
+          }
+        ],
+        "support_summary": "The first enabling walkthrough names Capabilities, Tools and Task Delegation; enabling it allows the parent to create specialized subagents.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter."
+      },
+      "required_terms": [
+        [
+          "capabilities"
+        ],
+        [
+          "tools"
+        ],
+        [
+          "delegation"
+        ],
+        [
+          "subagents",
+          "sub-agents",
+          "child agents"
+        ]
+      ]
+    },
+    {
+      "id": "speech_02",
+      "question": "In the first delegated research demonstration, does the presenter ask a running subagent to include citations before or after the parent validates sources and begins the final report?",
+      "category": "temporal",
+      "split": "dev",
+      "answerable": true,
+      "reference_answers": [
+        "Before. The presenter steers a running child to include citations around 03:48-04:28; only after the children finish does the parent validate sources and begin the report around 04:41-04:55."
+      ],
+      "evidence_intervals": [
+        [
+          228.0,
+          267.92
+        ],
+        [
+          281.28,
+          295.04
+        ]
+      ],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00053",
+          "T00054",
+          "T00055",
+          "T00056",
+          "T00057",
+          "T00058",
+          "T00059",
+          "T00060",
+          "T00064",
+          "T00065",
+          "T00066",
+          "T00067"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00053",
+            "last": "T00060",
+            "start": 228.0,
+            "end": 267.92
+          },
+          {
+            "first": "T00064",
+            "last": "T00067",
+            "start": 281.28,
+            "end": 295.04
+          }
+        ],
+        "support_summary": "The citation instruction and observed citation-skill use precede completion of all children, parent source validation and report creation.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter."
+      },
+      "required_terms": [
+        [
+          "before",
+          "first"
+        ],
+        [
+          "citation",
+          "citations"
+        ],
+        [
+          "report",
+          "validates",
+          "validation",
+          "validated"
+        ]
+      ]
+    },
+    {
+      "id": "speech_03",
+      "question": "Why does the presenter caution against treating the 102,000-versus-37,000 token comparison as proof of total-token savings from delegation?",
+      "category": "reasoning",
+      "split": "dev",
+      "answerable": true,
+      "reference_answers": [
+        "The 37,000 figure excludes subagent token usage. The presenter says the overall token usage was larger, while the context returned to the main, higher-intelligence agent was compressed. The comparison demonstrates a smaller parent context, not an established reduction in total tokens."
+      ],
+      "evidence_intervals": [
+        [
+          343.52,
+          371.66
+        ]
+      ],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00083",
+          "T00084",
+          "T00085",
+          "T00086",
+          "T00087",
+          "T00088",
+          "T00089",
+          "T00090",
+          "T00091",
+          "T00092",
+          "T00093",
+          "T00094",
+          "T00095"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00083",
+            "last": "T00095",
+            "start": 343.52,
+            "end": 371.66
+          }
+        ],
+        "support_summary": "Both numbers and the exclusion of subagent tokens are explicit. The claimed benefit is compression of context returning to the main agent; total savings must not be inferred.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter."
+      },
+      "required_terms": [
+        [
+          "subagent",
+          "sub-agent",
+          "child"
+        ],
+        [
+          "exclude",
+          "excludes",
+          "excluding",
+          "not taking into account",
+          "not include",
+          "does not include",
+          "omits",
+          "omitted"
+        ],
+        [
+          "context",
+          "compressed",
+          "compression"
+        ]
+      ]
+    },
+    {
+      "id": "speech_04",
+      "question": "In the first 102,000-versus-37,000 comparison, what exact total number of tokens did the delegated workflow consume after including every subagent?",
+      "category": "unanswerable",
+      "split": "dev",
+      "answerable": false,
+      "reference_answers": [],
+      "evidence_intervals": [],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00083",
+          "T00084",
+          "T00085",
+          "T00086",
+          "T00087",
+          "T00088",
+          "T00089",
+          "T00090",
+          "T00091",
+          "T00092",
+          "T00093",
+          "T00094",
+          "T00095"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00083",
+            "last": "T00095",
+            "start": 343.52,
+            "end": 371.66
+          }
+        ],
+        "support_summary": "The presenter explicitly excludes child usage from the 37,000 figure and says overall usage was larger, but gives no exact all-agent total in this comparison.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter.",
+        "unanswerable_scope": "Only the first spoken 102,000-versus-37,000 comparison at 05:43-06:12 is in scope. The missing exact total cannot be recovered by adding an unspecified child cost. This is not a claim about all possible later figures.",
+        "context_intervals": [
+          [
+            343.52,
+            371.66
+          ]
+        ],
+        "expected_behavior": "Abstain from the requested numerical claim; explain the missing evidence without inventing a value. Context citations may support the explanation but do not supply the requested number."
+      }
+    },
+    {
+      "id": "speech_05",
+      "question": "According to the explanation of fresh subagent conversations, why must the parent put sufficient information in the goal and context fields of delegate_task?",
+      "category": "reasoning",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "The child starts with a fresh conversation and does not inherit the parent conversation history, tool calls or earlier discussion. Its context comes from the goal and context fields supplied by the parent, so those fields must contain the information needed for the bounded task."
+      ],
+      "evidence_intervals": [
+        [
+          438.6,
+          463.28
+        ]
+      ],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00131",
+          "T00132",
+          "T00133",
+          "T00134",
+          "T00135",
+          "T00136",
+          "T00137",
+          "T00138",
+          "T00139",
+          "T00140",
+          "T00141",
+          "T00142",
+          "T00143",
+          "T00144"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00131",
+            "last": "T00144",
+            "start": 438.6,
+            "end": 463.28
+          }
+        ],
+        "support_summary": "The speaker describes fresh child conversations with no inherited parent history and names goal and context as the only provided context.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter."
+      },
+      "required_terms": [
+        [
+          "fresh",
+          "new conversation",
+          "no history",
+          "does not inherit"
+        ],
+        [
+          "goal"
+        ],
+        [
+          "context"
+        ]
+      ]
+    },
+    {
+      "id": "speech_06",
+      "question": "Locate where the presenter first introduces the /goal command and explains bounded outcomes and progress checks. What does the command allow the session to do?",
+      "category": "localization",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "Around 08:10-08:51, /goal sets a standing goal across turns. The user supplies a bounded outcome, success criteria, verification and when to ask; the main agent checks progress and continues within its budget."
+      ],
+      "evidence_intervals": [
+        [
+          490.49,
+          531.25
+        ]
+      ],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00156",
+          "T00157",
+          "T00158",
+          "T00159",
+          "T00160",
+          "T00161",
+          "T00162",
+          "T00163",
+          "T00164",
+          "T00165",
+          "T00166",
+          "T00167",
+          "T00168",
+          "T00169",
+          "T00170"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00156",
+            "last": "T00170",
+            "start": 490.49,
+            "end": 531.25
+          }
+        ],
+        "support_summary": "The command introduction and bounded-outcome explanation form one continuous spoken passage. Cue T00171 is excluded because its wording about endless research is visibly unreliable ASR.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter."
+      },
+      "required_terms": [
+        [
+          "goal"
+        ],
+        [
+          "turns",
+          "across turns",
+          "continue",
+          "continues"
+        ],
+        [
+          "budget"
+        ],
+        [
+          "bounded",
+          "success",
+          "verify",
+          "verification"
+        ]
+      ]
+    },
+    {
+      "id": "speech_07",
+      "question": "In the goal-loop demonstration, what happens first: adding a requirement for at least five peer-reviewed sources, or delegating new research to cross-reference the output against academic sources?",
+      "category": "temporal",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "The presenter adds the requirement for at least five peer-reviewed sources first, around 10:11-10:25. After observing that the earlier sources do not look peer reviewed, the agent delegates further cross-referencing research around 10:33-10:48."
+      ],
+      "evidence_intervals": [
+        [
+          610.87,
+          625.47
+        ],
+        [
+          633.11,
+          648.11
+        ]
+      ],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00203",
+          "T00204",
+          "T00205",
+          "T00206",
+          "T00207",
+          "T00208",
+          "T00214",
+          "T00215",
+          "T00216",
+          "T00217",
+          "T00218",
+          "T00219",
+          "T00220"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00203",
+            "last": "T00208",
+            "start": 610.87,
+            "end": 625.47
+          },
+          {
+            "first": "T00214",
+            "last": "T00220",
+            "start": 633.11,
+            "end": 648.11
+          }
+        ],
+        "support_summary": "The new criterion is added while work continues, then the presenter explains later turns and new subagents cross-referencing academic sources. The answer does not claim that the eventual sources were independently verified.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter."
+      },
+      "required_terms": [
+        [
+          "first",
+          "before"
+        ],
+        [
+          "peer reviewed",
+          "peer-reviewed"
+        ],
+        [
+          "delegates",
+          "delegated",
+          "delegating",
+          "subagents",
+          "sub-agents"
+        ]
+      ]
+    },
+    {
+      "id": "speech_08",
+      "question": "According to the Kanban comparison, why is a database-backed work queue more durable for reviewing handoffs than keeping delegated work only in the parent conversation?",
+      "category": "reasoning",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "The presenter says conversation compression can lose delegated context and its audit trail. Kanban stores handoffs as rows in a SQLite database, allowing profiles or a human to revisit and inspect or edit the work queue."
+      ],
+      "evidence_intervals": [
+        [
+          1414.6,
+          1445.8
+        ]
+      ],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00464",
+          "T00465",
+          "T00466",
+          "T00467",
+          "T00468",
+          "T00469",
+          "T00470",
+          "T00471",
+          "T00472",
+          "T00473",
+          "T00474",
+          "T00475",
+          "T00476",
+          "T00477",
+          "T00478"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00464",
+            "last": "T00478",
+            "start": 1414.6,
+            "end": 1445.8
+          }
+        ],
+        "support_summary": "The stated mechanism is conversation compression versus durable SQLite rows for handoffs. This is attributed to the presenter, not an independent validation of the external product.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter."
+      },
+      "required_terms": [
+        [
+          "compression",
+          "compresses",
+          "compressed"
+        ],
+        [
+          "database",
+          "sqlite"
+        ],
+        [
+          "handoff",
+          "handoffs",
+          "audit",
+          "context"
+        ]
+      ]
+    },
+    {
+      "id": "speech_09",
+      "question": "Why does the presenter suggest using a powerful Kanban decomposer but a less powerful worker for a well-scoped card?",
+      "category": "reasoning",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "Decomposing a project into well-scoped cards requires high-level judgment. A worker executing a card with a clear goal, context and handoff needs less of that judgment, and workers consume most of the tokens, so cheaper execution can reduce cost."
+      ],
+      "evidence_intervals": [
+        [
+          1663.34,
+          1731.42
+        ]
+      ],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00556",
+          "T00557",
+          "T00558",
+          "T00559",
+          "T00560",
+          "T00561",
+          "T00562",
+          "T00563",
+          "T00564",
+          "T00565",
+          "T00566",
+          "T00567",
+          "T00568",
+          "T00569",
+          "T00570",
+          "T00571",
+          "T00572"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00556",
+            "last": "T00572",
+            "start": 1663.34,
+            "end": 1731.42
+          }
+        ],
+        "support_summary": "The explanation distinguishes frontier-level decomposition judgment from bounded execution and says most tokens are spent by workers. Model names are examples and are not required by the question.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter."
+      },
+      "required_terms": [
+        [
+          "judgment",
+          "planning",
+          "decomposing",
+          "decomposition"
+        ],
+        [
+          "worker",
+          "workers",
+          "execution"
+        ],
+        [
+          "tokens",
+          "cost"
+        ],
+        [
+          "less",
+          "cheaper",
+          "lower"
+        ]
+      ]
+    },
+    {
+      "id": "speech_10",
+      "question": "Locate the later Kanban task-estimation demonstration where the estimate drops from 45,000 to 18,000 tokens. What two limits does the presenter add before re-estimating?",
+      "category": "localization",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "Around 31:52-32:17, the presenter limits the search to five sources and the output document to 500 words or less, then re-estimates. The estimate falls from 45,000 to 18,000 tokens; this is an estimate, not measured final consumption."
+      ],
+      "evidence_intervals": [
+        [
+          1911.97,
+          1936.57
+        ]
+      ],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00648",
+          "T00649",
+          "T00650",
+          "T00651",
+          "T00652",
+          "T00653",
+          "T00654",
+          "T00655",
+          "T00656",
+          "T00657",
+          "T00658",
+          "T00659",
+          "T00660"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00648",
+            "last": "T00660",
+            "start": 1911.97,
+            "end": 1936.57
+          }
+        ],
+        "support_summary": "The later demonstration explicitly adds both limits and reruns the estimate. The opening teaser is excluded by the question wording. The result must not be described as measured token usage.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter."
+      },
+      "required_terms": [
+        [
+          "five sources",
+          "5 sources"
+        ],
+        [
+          "500 words"
+        ],
+        [
+          "estimate",
+          "estimated",
+          "estimation",
+          "re-estimates"
+        ]
+      ]
+    },
+    {
+      "id": "speech_11",
+      "question": "In the demonstrated Kanban research workflow around 35 minutes, do the two researcher tasks finish before or after the report-delivery task becomes unblocked and starts running?",
+      "category": "temporal",
+      "split": "test",
+      "answerable": true,
+      "reference_answers": [
+        "The two researcher tasks finish first. Their completion unblocks report delivery, which becomes Ready and then moves to Running when the dispatcher processes it."
+      ],
+      "evidence_intervals": [
+        [
+          2085.09,
+          2117.95
+        ]
+      ],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00726",
+          "T00727",
+          "T00728",
+          "T00729",
+          "T00730",
+          "T00731",
+          "T00732",
+          "T00733",
+          "T00734",
+          "T00735",
+          "T00736",
+          "T00737",
+          "T00738",
+          "T00739",
+          "T00740",
+          "T00741"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00726",
+            "last": "T00741",
+            "start": 2085.09,
+            "end": 2117.95
+          }
+        ],
+        "support_summary": "One continuous explanation states the dependency order: completed researchers, unblocked report delivery, Ready, Running. It is a temporal-order question within one natural spoken passage, so a single reference interval covers it.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter."
+      },
+      "required_terms": [
+        [
+          "first",
+          "before"
+        ],
+        [
+          "researcher",
+          "researchers",
+          "research"
+        ],
+        [
+          "unblocked",
+          "unblocks"
+        ],
+        [
+          "ready"
+        ],
+        [
+          "running"
+        ]
+      ]
+    },
+    {
+      "id": "speech_12",
+      "question": "In the closing comparison of coordination methods, what 95% confidence interval is reported for the token-usage difference between delegated single-agent and orchestrator-only workflows?",
+      "category": "unanswerable",
+      "split": "test",
+      "answerable": false,
+      "reference_answers": [],
+      "evidence_intervals": [],
+      "annotation_notes": {
+        "source": "automatic_speech_recognition",
+        "reference_status": "ASR-supported silver reference; not independently human-validated",
+        "reviewer": "assistant_text_review",
+        "audio_listened_to": false,
+        "frames_used_for_this_reference": false,
+        "transcript_path": "transcripts/user_video.json",
+        "evidence_cue_ids": [
+          "T00856",
+          "T00857",
+          "T00858",
+          "T00859",
+          "T00860",
+          "T00861",
+          "T00862",
+          "T00863",
+          "T00864",
+          "T00865"
+        ],
+        "cue_ranges": [
+          {
+            "first": "T00856",
+            "last": "T00865",
+            "start": 2461.79,
+            "end": 2511.1
+          }
+        ],
+        "support_summary": "The speaker reports qualitatively similar token usage and quality for one simple research task and explicitly says this is not a proper benchmark. No 95% confidence interval is provided in that closing comparison.",
+        "timing_uncertainty": "Intervals follow complete ASR cue boundaries and span coherent spoken explanations. Audio alignment was not manually checked; drift and word-level errors are uncalibrated. These are approximate speech spans, not frame-exact scene boundaries.",
+        "semantic_scoring_note": "Required-term agreement is only a lexical proxy. A human must check negation, causal explanation, temporal order and attribution to the presenter.",
+        "unanswerable_scope": "Only the closing spoken comparison at 41:02-41:51 is in scope. It gives an informal single-task comparison, not a statistical interval. The requested interval cannot be inferred from similar token usage.",
+        "context_intervals": [
+          [
+            2461.79,
+            2511.1
+          ]
+        ],
+        "expected_behavior": "Abstain from the requested numerical claim; explain the missing evidence without inventing a value. Context citations may support the explanation but do not supply the requested number."
+      }
+    }
+  ]
+}

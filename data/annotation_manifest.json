@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "name": "ClipScout one-video annotation freeze",
+  "frozen_at_utc": "2026-10-21T19:33:06.090499+00:00",
+  "status": "frozen draft references; independent human validation pending",
+  "freeze_policy": {
+    "question_text_and_reference_answers_changed": false,
+    "all_question_objects_preserved": true,
+    "ordering": "visual draft questions followed by speech draft questions",
+    "frozen_before_prediction_audit": true,
+    "changes_require_new_manifest_and_explicit_dataset_version": true
+  },
+  "dataset": {
+    "path": "data/questions.json",
+    "format": "bare JSON list",
+    "sha256": "69e053f8a6c5d2dec5d4cca8242ec3280be8bcc73ac77d18ca1fbd5056bcc772",
+    "size_bytes": 44840,
+    "question_ids": [
+      "visual_01",
+      "visual_02",
+      "visual_03",
+      "visual_04",
+      "visual_05",
+      "visual_06",
+      "visual_07",
+      "visual_08",
+      "speech_01",
+      "speech_02",
+      "speech_03",
+      "speech_04",
+      "speech_05",
+      "speech_06",
+      "speech_07",
+      "speech_08",
+      "speech_09",
+      "speech_10",
+      "speech_11",
+      "speech_12"
+    ]
+  },
+  "video": {
+    "filename": "Subagents vs Agent Teams 🧠 Hermes Bots Goal Loops Kanban Graphs.mp4",
+    "duration_seconds": 2575.0057666666667,
+    "sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "width": 1920,
+    "height": 1080,
+    "video_sha256_source": "data/transcripts/user_video.manifest.json; reused existing source-video fingerprint during freeze"
+  },
+  "counts": {
+    "total": 20,
+    "answerable": 17,
+    "unanswerable": 3,
+    "by_category": {
+      "localization": 5,
+      "reasoning": 5,
+      "temporal": 5,
+      "unanswerable": 3,
+      "visual": 2
+    },
+    "by_split": {
+      "dev": 7,
+      "test": 13
+    },
+    "by_split_and_category": {
+      "dev": {
+        "localization": 2,
+        "reasoning": 2,
+        "temporal": 2,
+        "unanswerable": 1
+      },
+      "test": {
+        "localization": 3,
+        "reasoning": 3,
+        "temporal": 3,
+        "unanswerable": 2,
+        "visual": 2
+      }
+    },
+    "by_source": {
+      "visual": 8,
+      "speech": 12
+    }
+  },
+  "source_files": [
+    {
+      "path": "data/visual_questions_draft.json",
+      "role": "8 assistant visually annotated questions",
+      "sha256": "44cbb6d752974ce8c7f5def12640055d209b9b68959a81d573db358218b885e5",
+      "size_bytes": 18916
+    },
+    {
+      "path": "data/speech_questions_draft.json",
+      "role": "12 ASR-supported silver questions",
+      "sha256": "123245fa532a859ec627916d51d9f43d3dfe5c90482e5b1d469ebdab92a14db6",
+      "size_bytes": 33676
+    },
+    {
+      "path": "data/transcripts/user_video.json",
+      "role": "complete automatic speech transcript",
+      "sha256": "ec42515131e685e5bde1600f501afe63c8bc1a248962fafe7e89c5023b42e130",
+      "size_bytes": 155589
+    },
+    {
+      "path": "data/transcripts/user_video.manifest.json",
+      "role": "ASR configuration and source video fingerprint",
+      "sha256": "9707c24942e0d29ef5a1dc22919e45480f14d7d2c9771a01e5a4d57f35964691",
+      "size_bytes": 376
+    },
+    {
+      "path": ".cache/annotation/overview_manifest.json",
+      "role": "decoded-frame annotation sampling manifest",
+      "sha256": "140790827a033f5ffbdf650476f6be7881482b8c895e1bea9b22542000cf8319",
+      "size_bytes": 4982
+    },
+    {
+      "path": ".cache/annotation/refinement_manifest.json",
+      "role": "decoded-frame annotation sampling manifest",
+      "sha256": "589d7f67ad4fbfbeeb4f863ca6411f9df82a1ca6ef79f0ef0c919d04b43b1789",
+      "size_bytes": 9244
+    },
+    {
+      "path": ".cache/annotation/boundary_manifest.json",
+      "role": "decoded-frame annotation sampling manifest",
+      "sha256": "73ccf9c8d6fbec3f65f207402abdc784af9284cbb66b183558a286dba7c2f720",
+      "size_bytes": 4021
+    },
+    {
+      "path": ".cache/annotation/board_manifest.json",
+      "role": "decoded-frame annotation sampling manifest",
+      "sha256": "9c9c2ed558371feeb62aa01488bd71bbae9596a3b5277648e3c5708f13adf8b6",
+      "size_bytes": 1638
+    }
+  ],
+  "provenance": {
+    "visual": {
+      "status": "assistant visual annotations; not independently human-verified",
+      "source": "sparse decoded frames at saved actual timestamps",
+      "audio_used": false,
+      "annotation_protocol": {
+        "source": "decoded source-video frames only; no audio or ASR used",
+        "overview_sampling_seconds": 60,
+        "refinement_sampling_seconds": [
+          10,
+          5
+        ],
+        "boundary_estimation": "midpoint between adjacent observed scene states; see per-question brackets",
+        "split_policy": "All questions sharing the Email/Article slide sequence are dev to avoid direct scene leakage into test. This remains one-video case study.",
+        "limitations": [
+          "Sparse visual review is not exhaustive continuous viewing.",
+          "Time boundaries are approximate.",
+          "Questions do not certify global absence of an event.",
+          "Text-heavy UI facts may be difficult after VLM image downsampling.",
+          "Question08 is unanswerable relative to the explicitly named diagram, not an assertion about audio."
+        ]
+      }
+    },
+    "speech": {
+      "status": "ASR-supported silver references; not independently human-validated",
+      "source": "text review of final automatic transcript",
+      "audio_listened_to": false,
+      "annotation_protocol": {
+        "source": "Complete automatic transcript reviewed as text; no independent audio listening or human validation.",
+        "transcript_path": "transcripts/user_video.json",
+        "transcript_sha256": "ec42515131e685e5bde1600f501afe63c8bc1a248962fafe7e89c5023b42e130",
+        "transcript_cue_count": 878,
+        "last_transcript_cue_end_seconds": 2568.18,
+        "asr_model": ".cache/whisper-base.en",
+        "asr_language": "en",
+        "asr_device": "cpu",
+        "asr_compute_type": "int8",
+        "complete_transcript_reconciled": true,
+        "split_policy": "All questions sharing the first delegation demonstration and first token comparison are dev. Remaining speech questions are test. No question evidence intersects the visual dev Email/Article interval 1152.5-1237.5 seconds. This split remains within one video, and related concepts recur; it is not held-out-video generalization.",
+        "boundary_policy": "Use full coherent speech passages bounded by ASR cues rather than instantaneous timestamps. Multiple separated events receive separate intervals; a contiguous causal explanation can use one interval.",
+        "negative_policy": "Unanswerable questions are scoped to explicitly named spoken comparisons and ask for absent numerical precision. Context cue IDs are retained in annotation_notes; reference_answers and evidence_intervals are empty.",
+        "limitations": [
+          "Automatic transcript errors may affect reference answers and timing; silver labels require independent human review before benchmark claims.",
+          "The same ASR transcript may be used as retrieval evidence, so these questions test retrieval and synthesis over a shared noisy transcript rather than independently validated audio understanding.",
+          "Questions attribute software behavior and cost reasoning to the presenter; they do not independently establish those claims.",
+          "Required-term agreement cannot verify negation, causal reasoning, or temporal order.",
+          "No audio-based global absence claim is made; negative questions have explicit local scope.",
+          "Sparse visual annotations and these speech annotations have different evidence modalities and should be reported separately."
+        ]
+      }
+    },
+    "independent_human_review_completed": false,
+    "statistical_scope": "One 42m55s source video with related repeated concepts; within-video dev/test split does not establish held-out-video generalization.",
+    "shared_asr_bias": "Speech questions and retrieval may use the same noisy transcript. Agreement can reflect shared ASR errors, not correct audio understanding.",
+    "split_policy": "Questions sharing the first delegation demonstration/token comparison are dev; all visual Email/Article examples are dev. Speech evidence avoids 1152.5-1237.5 seconds. Other concepts recur across the video; the split does not eliminate conceptual dependence.",
+    "negative_policy": "Negative questions specify a local diagram or comparison; they do not assert global absence in all video/audio.",
+    "scoring_policy": "Lexical scores and citation interval overlap are proxies. Independent review must separately score factual correctness, evidence support and temporal order."
+  },
+  "validation": {
+    "schema_valid": true,
+    "unique_question_ids": true,
+    "all_reference_intervals_strictly_within_video": true,
+    "all_speech_cue_ids_resolve_in_final_transcript": true,
+    "all_visual_frame_references_exist_locally": true,
+    "draft_question_objects_exactly_preserved": true
+  },
+  "guide": "docs/ANNOTATION_GUIDE.md"
+}

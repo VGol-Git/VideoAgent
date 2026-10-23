@@ -1,0 +1,22 @@
+{
+  "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+  "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+  "complete": true,
+  "interval_seconds": 60,
+  "frames_per_segment": 2,
+  "caption_prompt_version": "concise-visual-v1",
+  "max_new_tokens": 192,
+  "max_frame_side": 560,
+  "successful_model_calls": 43,
+  "successful_sampled_frames": 86,
+  "total_usage": null,
+  "total_latency_seconds": null,
+  "recovery_usage": {
+    "model_calls": 1,
+    "input_tokens": 505,
+    "output_tokens": 88
+  },
+  "recovery_latency_seconds": 17.791260899975896,
+  "sampling": "First 42 segments use interval endpoint samples; final segment uses bin midpoints. Actual timestamps in each record.",
+  "note": "Initial process failed reading final frame after 42 saved records. Its token/time totals were not persisted and are unavailable. Recovery generated only final segment. Preprocessing is separate from query-time cost. Reuse supplied captions for exact experiment reproduction; fresh captioning now uses bin midpoints throughout."
+}

@@ -1,0 +1,11 @@
+{
+  "model": ".cache/whisper-base.en",
+  "language": "en",
+  "duration": 2574.8709375,
+  "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+  "complete": true,
+  "device": "cpu",
+  "compute_type": "int8",
+  "latency_seconds": 325.2139412999968,
+  "note": "Automatic speech recognition; manually check question evidence and timing."
+}

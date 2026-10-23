@@ -1,0 +1,475 @@
+[
+  {
+    "id": "caption_00000",
+    "start": 0.0,
+    "end": 60.0,
+    "text": "- A person with glasses sits at a table, speaking into a microphone.\n- The background includes a bookshelf, plants, and a decorative lamp.\n- The person is gesturing with their hands as they speak.",
+    "source": "caption",
+    "sampled_timestamps": [
+      0.0,
+      59.99326666666667
+    ]
+  },
+  {
+    "id": "caption_00001",
+    "start": 60.0,
+    "end": 120.0,
+    "text": "- A man with glasses and a beard sits at a table, speaking into a microphone.\n- He wears a dark blue t-shirt with a small moon logo on the chest.\n- The background features a plant, a bookshelf, and a tall, industrial-style lamp.\n- The man gestures with his hands as he speaks.\n- The text on the screen reads: \"The Moon's orbit is not a perfect circle.\"",
+    "source": "caption",
+    "sampled_timestamps": [
+      60.026633333333336,
+      119.98653333333334
+    ]
+  },
+  {
+    "id": "caption_00002",
+    "start": 120.0,
+    "end": 180.0,
+    "text": "- **Frame 120.020**: A man with glasses sits at a table, speaking into a microphone. He is gesturing with his hands. The room is decorated with plants and a candelabra-style lamp. A bookshelf is visible in the background.\n- **Frame 179.980**: A screenshot of a software interface, likely a version control system. The user is in the \"Capabilities\" section of a project named \"Wanderloots Tutorials.\" A message appears at the bottom: \"double check this is turned on if you want to use subagents.\" The interface shows a \"Task Delegation\" section with a toggle switch.",
+    "source": "caption",
+    "sampled_timestamps": [
+      120.0199,
+      179.9798
+    ]
+  },
+  {
+    "id": "caption_00003",
+    "start": 180.0,
+    "end": 240.0,
+    "text": "- **Frame 180.013**: The screen shows a software interface, likely a task management or development tool. The user is in the \"Capabilities\" section, with a focus on \"Task Delegation.\" A yellow highlight indicates the \"delegated_task\" field. A prominent yellow text overlay reads: \"double check this is turned on if you want to use subagents.\" The interface includes a sidebar with \"New session,\" \"Capabilities,\" \"Messaging,\" \"Artifacts,\" \"Scheduled jobs,\" and \"Kanban.\" The top bar shows the application name \"SESSIONS\" and the user's name \"dol.\" The bottom bar displays \"Gateway ready\" and \"Agents.\"\n\n- **Frame 239.973**: The interface has shifted to a \"Thought\" section. The user is analyzing a workflow involving \"delegation capabilities\" and \"subagents.\" A \"Security scan\" is highlighted, with",
+    "source": "caption",
+    "sampled_timestamps": [
+      180.01316666666668,
+      239.97306666666668
+    ]
+  },
+  {
+    "id": "caption_00004",
+    "start": 240.0,
+    "end": 300.0,
+    "text": "- The video shows a software interface, likely a development or AI tool, with a dark theme.\n- The interface has a sidebar with options like \"New session,\" \"Capabilities,\" \"Messaging,\" \"Artifacts,\" \"Scheduled jobs,\" and \"Kanban.\"\n- The main content area displays a conversation about turning information into useful actions, with a focus on agent architecture and delegation.\n- A slide titled \"Recommended strategy for you\" is visible, listing five points about using a LLM-style portable canonical corpus.\n- The user is in a \"New session\" and has a \"Keep going\" button at the bottom right.",
+    "source": "caption",
+    "sampled_timestamps": [
+      240.00643333333335,
+      299.9997
+    ]
+  },
+  {
+    "id": "caption_00005",
+    "start": 300.0,
+    "end": 360.0,
+    "text": "- **Frame 300.033**: The screen displays a dark-themed interface for a session titled \"SESSIONS\" with the \"BOTS\" tab active. The main content area shows a text block with a heading \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system?\" Below this, a list of recommendations is presented, including \"unauthorized tool/action attempts\" and \"sampled discard false-positive rate.\" The interface includes a \"Keep going\" button and a \"GPT-5-terra\" model indicator. The sidebar shows \"New session,\" \"Capabilities,\" \"Messaging,\" and \"Kanban\" options.\n\n- **Frame 359.993**: The interface remains the same, but the text block has been updated. The heading \"How do I turn incoming information into something useful, an action",
+    "source": "caption",
+    "sampled_timestamps": [
+      300.0330666666667,
+      359.9929666666667
+    ]
+  },
+  {
+    "id": "caption_00006",
+    "start": 360.0,
+    "end": 420.0,
+    "text": "- **Frame 360.026**: The screen displays a software interface with a dark theme. The main content is a slide titled \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system?\" The slide lists a series of bullet points under \"8. Measure the system by outcomes, not capture volume.\" A yellow text box with the text \"I would have to check the actual total, likely more than 102,000\" is visible. The left sidebar shows \"SESSIONS\" and \"PROJECTS\" with various options like \"New session,\" \"Capabilities,\" and \"Artifacts.\" The bottom of the screen shows a \"Send a follow-up\" button.\n\n- **Frame 419.986**: The screen shows a slide titled \"Delegate only bounded specialist work.\" The slide lists various roles",
+    "source": "caption",
+    "sampled_timestamps": [
+      360.02633333333335,
+      419.98623333333336
+    ]
+  },
+  {
+    "id": "caption_00007",
+    "start": 420.0,
+    "end": 480.0,
+    "text": "- The screen displays a dark-themed interface for a software application, likely a tool for building actionable knowledge systems.\n- The main content area is titled \"Delegate only bounded specialist work\" and lists various roles such as \"Intake/Extraction worker,\" \"Research worker,\" and \"Librarian worker.\"\n- Each role has a corresponding action that must be done, a task that must not be done, and a description of the work.\n- The interface includes a \"Add more context\" button and a \"1 message\" button.\n- The user is in a \"New session\" state, and the sidebar shows \"Home,\" \"Build an actionable information system,\" and \"Wanderlots Tutorials.\"\n- The text \"GPT-5.6-terra\" is visible in the bottom right corner.",
+    "source": "caption",
+    "sampled_timestamps": [
+      420.0196,
+      479.97950000000003
+    ]
+  },
+  {
+    "id": "caption_00008",
+    "start": 480.0,
+    "end": 540.0,
+    "text": "- **Frame 480.013**: The screen displays a dark-themed interface for a \"SESSIONS\" tool, likely a software for building action-oriented systems. The main content is a table titled \"Delegate only bounded specialist work,\" listing various roles such as \"Intake/Extraction worker\" and \"Research worker,\" with columns for \"Must do\" and \"Must not do.\" The interface includes a \"Add more context\" button and a \"1 message\" input field. The sidebar shows \"Home,\" \"Build an actionable information system,\" and \"Wanderlots Tutorials.\" The bottom bar indicates the current session is \"GPT-5.6-terra\" and the user is \"Manual\" mode.\n\n- **Frame 539.973**: The interface has shifted to a new section titled \"Recommended strategy for you,\" which outlines a strategy for using the LLM. The text includes a list of steps",
+    "source": "caption",
+    "sampled_timestamps": [
+      480.0128666666667,
+      539.9727666666666
+    ]
+  },
+  {
+    "id": "caption_00009",
+    "start": 540.0,
+    "end": 600.0,
+    "text": "- The user is in a session of the \"Build Actionable Knowledge System\" project, with the \"Wanderlots Tutorials\" section visible.\n- The user is typing a command in the terminal, which is a part of the \"Build Actionable Knowledge System\" project.\n- The user is using the \"GPT-5.6\" model to generate a response.\n- The user is using the \"GPT-5.6\" model to generate a response.\n- The user is using the \"GPT-5.6\" model to generate a response.\n- The user is using the \"GPT-5.6\" model to generate a response.\n- The user is using the \"GPT-5.6\" model to generate a response.\n- The user is using the \"GPT-5.6\" model to generate a response.\n- The user is using the \"GPT-5.6\" model to",
+    "source": "caption",
+    "sampled_timestamps": [
+      540.0061333333333,
+      599.9994
+    ]
+  },
+  {
+    "id": "caption_00010",
+    "start": 600.0,
+    "end": 660.0,
+    "text": "- **Frame 600.033:** The screen shows a research task in a software interface. The main content area displays a text box with a research plan. A diagram titled \"Loop\" is visible on the left, illustrating a cycle of Idea, Plan, Check, and Execute. The user is in a \"New session\" state, with the \"Build an actionable information system\" project selected. The interface includes a \"Shift-click a chat to pin\" option and a \"Manual\" button at the bottom right.\n\n- **Frame 659.993:** The interface has shifted to a \"Projects\" tab. The user is now working on the \"Build an actionable information system\" project. The main content area shows a text box with a research plan. The user has added a new criterion: \"We must have at least 5 peer-reviewed sources.\" The interface includes a \"View details\" button and a \"",
+    "source": "caption",
+    "sampled_timestamps": [
+      600.0327666666667,
+      659.9926666666667
+    ]
+  },
+  {
+    "id": "caption_00011",
+    "start": 660.0,
+    "end": 720.0,
+    "text": "- **Frame 660.026:** A user is in a software application, likely a research or development tool, with a dark theme. The user is in a \"SESSIONS\" tab, and the main content area shows a text input field with a prompt: \"What should we tackle?\" The user is typing into this field. The interface includes a sidebar with \"PROJECTS\" and \"Wanderlots Tutorials\" listed. The user is likely working on a project related to building an \"actionable information system\" or \"actionable knowledge system.\" The user is also viewing a \"Build an actionable knowledge system\" project in the \"PROJECTS\" section.\n- **Frame 719.986:** The screen displays a slide with the title \"Model Routing & Auxiliary Models\" in large, yellow, bold text on a black background.",
+    "source": "caption",
+    "sampled_timestamps": [
+      660.0260333333333,
+      719.9859333333334
+    ]
+  },
+  {
+    "id": "caption_00012",
+    "start": 720.0,
+    "end": 780.0,
+    "text": "- **Frame 720.019:** A black background with the yellow text \"Model Routing & Auxiliary Models\".\n- **Frame 779.979:** A dark interface of the Wunderlist application, showing a \"SESSIONS\" tab with a \"Build an actionable information system\" project. The interface includes a \"Build actionable knowledge system\" project and a \"Wunderlist Tutorials\" section. The user is in the \"Build an actionable information system\" project, with a \"Build an actionable knowledge system\" project in the sidebar. The user is in the \"Build an actionable information system\" project, with a \"Build an actionable knowledge system\" project in the sidebar. The user is in the \"Build an actionable information system\" project, with a \"Build an actionable knowledge system\" project in the sidebar. The user is in the \"Build an actionable information system\" project, with a \"Build an actionable",
+    "source": "caption",
+    "sampled_timestamps": [
+      720.0193,
+      779.9792
+    ]
+  },
+  {
+    "id": "caption_00013",
+    "start": 780.0,
+    "end": 840.0,
+    "text": "- The video begins with a screen capture of a software interface, likely a productivity or AI assistant application.\n- The interface shows a \"SESSIONS\" tab with a \"BOTS\" section, indicating a focus on automated systems.\n- The main content area displays a text block titled \"When delegation beats a specialist team,\" which discusses the benefits of delegating tasks to a team over relying on a single expert.\n- The text includes a section on \"one codebase/transaction, or a runbook\" and mentions the need for \"at least 5 peer-reviewed sources.\"\n- The interface has a sidebar with options like \"Home,\" \"Build an actionable information system,\" and \"Wanderlots Tutorials.\"\n- The user is in a \"New session\" state, and the interface shows a \"Manual\" button at the bottom right.\n- The user is actively engaged in a task involving the creation of a knowledge system, possibly using a tool like Wunder",
+    "source": "caption",
+    "sampled_timestamps": [
+      780.0125666666667,
+      839.9724666666667
+    ]
+  },
+  {
+    "id": "caption_00014",
+    "start": 840.0,
+    "end": 900.0,
+    "text": "- The slide at 840.006 seconds displays the title \"Reviewing The Goal Output\" in large, yellow text on a black background.\n- The frame at 899.999 seconds shows a screenshot of a software interface, likely a knowledge management tool, with the heading \"SESSIONS\" at the top.\n- The interface includes a sidebar with options like \"New session,\" \"Capabilities,\" \"Artifacts,\" and \"Scheduled jobs.\"\n- The main content area contains a text block discussing the importance of goal output and the use of a \"goal output\" system.\n- The text mentions \"Hermes corroboration\" and \"decision test\" as key concepts in the process.\n- The interface also shows a \"GPT-3.5\" model and a \"Manual\" label, indicating the software's capabilities and settings.",
+    "source": "caption",
+    "sampled_timestamps": [
+      840.0058333333334,
+      899.9991
+    ]
+  },
+  {
+    "id": "caption_00015",
+    "start": 900.0,
+    "end": 960.0,
+    "text": "- The video shows a software interface, likely a development or AI tool, with a dark theme.\n- The main content area displays a text document titled \"BUILD AN ACTIONABLE INFORMATION SYSTEM\".\n- The document contains a paragraph discussing the use of a \"multi-agent system\" for research and development.\n- The text mentions \"Hermes corroboration\" and \"Kaban\" as key concepts.\n- The interface includes a sidebar with options like \"New session\", \"Capabilities\", \"Artifacts\", and \"Kaban\".\n- The text in the document is highlighted, with a yellow box around the phrase \"Hermes corroboration\".\n- The document has a \"Sources\" section at the bottom, listing references to \"Kudaravalli, Farsi, and Johnson (2017)\" and \"M.S. Quern\".\n- The interface shows a \"Manual\" button at the bottom right.",
+    "source": "caption",
+    "sampled_timestamps": [
+      900.0324666666667,
+      959.9923666666667
+    ]
+  },
+  {
+    "id": "caption_00016",
+    "start": 960.0,
+    "end": 1020.0,
+    "text": "- The video shows a user interface for a software development environment, likely a chatbot or AI assistant platform.\n- The left sidebar displays a list of bots and chat groups, including \"Hermes,\" \"Wanderloots Tutorials,\" \"Research Team (Limited),\" \"Researcher,\" \"Orchestrator,\" \"Librarian,\" and \"Research Team.\"\n- The main panel on the right shows a chat interface with a message from the \"Agent\" bot.\n- The Agent's message includes a list of tasks and responsibilities, such as \"Search and explain topics with cited, current sources,\" \"Write, review, debug, and run code,\" and \"Manage notes, reminders, email, calendars, tasks.\"\n- The Agent also mentions its role as a \"practical research, coding, and workflow partner\" and its ability to \"transform, teach, edit, or simply\" assist.\n- The interface has a dark theme with a \"Build",
+    "source": "caption",
+    "sampled_timestamps": [
+      960.0257333333334,
+      1019.9856333333333
+    ]
+  },
+  {
+    "id": "caption_00017",
+    "start": 1020.0,
+    "end": 1080.0,
+    "text": "- The video begins with a screen showing a dark-themed interface of a software application, likely a chatbot or AI assistant platform.\n- The interface displays a list of bots on the left, including \"Hermes,\" \"Wanderer,\" \"Skills-Based Research Team,\" \"Research Team (Limited),\" \"Researcher,\" \"Orchestrator,\" \"Librarian,\" and \"Research Team.\"\n- The central panel shows a \"Bot\" with a \"Model\" and \"Knowledge\" section, and a \"Tools\" section with a wrench and a document.\n- The user is interacting with the \"Researcher\" bot, which is highlighted in the list.\n- The screen then transitions to a slide titled \"CHOOSE YOUR RESEARCH LENS,\" which presents four options: \"Balanced,\" \"Current reality,\" \"Academic,\" and \"Combined,\" each with an icon.",
+    "source": "caption",
+    "sampled_timestamps": [
+      1020.019,
+      1079.9789
+    ]
+  },
+  {
+    "id": "caption_00018",
+    "start": 1080.0,
+    "end": 1140.0,
+    "text": "- The screen displays a slide titled \"One Workflow, Two Views\" with a workflow diagram.\n- The diagram shows a sequence of tasks, including \"Build & check export,\" \"Review,\" and \"Approve,\" with a dependency graph.\n- The tasks are represented by icons of people, and the workflow is shown with arrows indicating the flow of work.\n- The slide includes a \"Done\" section on the right and a \"Waiting\" section on the left.\n- The text \"One Workflow, Two Views\" is visible at the top of the slide.",
+    "source": "caption",
+    "sampled_timestamps": [
+      1080.0122666666666,
+      1139.9721666666667
+    ]
+  },
+  {
+    "id": "caption_00019",
+    "start": 1140.0,
+    "end": 1200.0,
+    "text": "- **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library",
+    "source": "caption",
+    "sampled_timestamps": [
+      1140.0055333333335,
+      1199.9988
+    ]
+  },
+  {
+    "id": "caption_00020",
+    "start": 1200.0,
+    "end": 1260.0,
+    "text": "- The first frame (1200.032 seconds) displays a flowchart titled \"Article to Curated Knowledge.\"\n- It shows a process with five stages: \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\"\n- The second frame (1259.992 seconds) shows a diagram titled \"Two Loops, One Knowledge Workflow.\"\n- It illustrates two loops: \"RESEARCH LOOP\" and \"CURATION LOOP,\" with a \"Library\" as the central point of interaction.\n- The diagram includes characters representing a researcher, a librarian, and a user, with arrows showing the flow of information and actions.",
+    "source": "caption",
+    "sampled_timestamps": [
+      1200.0321666666664,
+      1259.9920666666667
+    ]
+  },
+  {
+    "id": "caption_00021",
+    "start": 1260.0,
+    "end": 1320.0,
+    "text": "- The first frame shows a diagram titled \"Two Loops, One Knowledge Workflow\" illustrating a research process with three main stages: Research Loop, Human Handoff, and Curation Loop. The diagram includes icons of a researcher, a librarian, and a library, with arrows showing the flow of information and tasks.\n- The second frame shows a software interface, likely a knowledge management tool, with a dark theme. The interface displays a text box with a paragraph about a \"multi-agent system\" and a \"knowledge graph.\" The text is highlighted, and the interface includes a sidebar with options like \"Projects,\" \"Home,\" and \"Wanderlots Tutorials.\" The text in the main box is about the use of a \"knowledge graph\" in a research context.",
+    "source": "caption",
+    "sampled_timestamps": [
+      1260.0254333333337,
+      1319.9853333333333
+    ]
+  },
+  {
+    "id": "caption_00022",
+    "start": 1320.0,
+    "end": 1380.0,
+    "text": "- **Frame 1320.019:** A dark-themed software interface, likely a development or AI tool, is shown. The main content area displays a document titled \"Building an Actionable Information System\" with a section on \"Kanban vs. delegate_task.\" The interface includes a sidebar with navigation options like \"New session,\" \"Capabilities,\" \"Artifacts,\" and \"Scheduled jobs.\" The document text discusses the use of Kanban and delegate_task systems, highlighting their differences in shape, parent, child identity, and coordination. The text is in a monospace font, and the interface has a dark theme with white and light gray text.\n\n- **Frame 1379.979:** A comparison table titled \"Kanban vs. delegate_task\" is displayed. The table compares the two systems across several attributes: Shape, Parent, Child identity, Resumability, Human in the loop, Agents per task",
+    "source": "caption",
+    "sampled_timestamps": [
+      1320.0187,
+      1379.9786000000001
+    ]
+  },
+  {
+    "id": "caption_00023",
+    "start": 1380.0,
+    "end": 1440.0,
+    "text": "- **Frame 1380.012**: A slide titled \"Kanban vs. delegate_task\" is displayed. It compares two systems, highlighting differences in shape, parent, child identity, resumability, human in the loop, agents per task, audit trail, and coordination. The \"delegate_task\" system is described as having a \"Named profile with persistent memory\" and \"Blocks until child returns\" as its parent. The \"Kanban\" system is described as having a \"Durable message queue + state machine\" and \"Fire-and-forget after create\" as its parent. The slide lists the \"Resumability\" of \"delegate_task\" as \"None — failed = failed\" and \"Kanban\" as \"Block → unblock → re-run → crash → reclaim\". The \"Human in the loop\" is \"Not supported\" for \"delegate_task\" and \"Comment / unblock at any",
+    "source": "caption",
+    "sampled_timestamps": [
+      1380.0119666666667,
+      1439.9718666666668
+    ]
+  },
+  {
+    "id": "caption_00024",
+    "start": 1440.0,
+    "end": 1500.0,
+    "text": "- The screen displays a Kanban board with a \"test task\" and \"wanderer-tutorials\" in the \"TODO\" column.\n- The \"DONE\" column contains tasks like \"Multi-agent research\" and \"Research a practical information-to-action and knowledge.\"\n- The \"SCHEDULING\" column has a task titled \"Compare delegated single-agent and specialized multi-agent.\"\n- The \"REVIEW\" column has a task titled \"Deliver a recommendation in no more than 500 words.\"\n- The \"BLOCKED\" column has a task titled \"Accept the parent's research deliverable after inspecting both.\"\n- The \"PLAYING\" column has a task titled \"Complete the constrained information briefing.\"\n- The \"COORDINATION\" column has a task titled \"Complete the 400-word cited briefing comparing a bounded-delegation lead.\"\n- The \"COORDINATION\" column has a task titled \"Deliver a recommendation in no more",
+    "source": "caption",
+    "sampled_timestamps": [
+      1440.0052333333333,
+      1499.9985000000001
+    ]
+  },
+  {
+    "id": "caption_00025",
+    "start": 1500.0,
+    "end": 1560.0,
+    "text": "- The screen shows a Kanban board with a task titled \"test task\" in the \"TODO\" column.\n- A new task creation dialog is open, titled \"New task in Triage,\" with the task name \"test task\" entered.\n- The dialog includes fields for description, priority, workspace, assignee, skills, and model.\n- The \"Create task\" button is highlighted, indicating the action to create the task.\n- The workspace is set to \"scratch - board default,\" and the assignee is \"wanderloots-tutorials (default).\"",
+    "source": "caption",
+    "sampled_timestamps": [
+      1500.0318666666667,
+      1559.9917666666668
+    ]
+  },
+  {
+    "id": "caption_00026",
+    "start": 1560.0,
+    "end": 1620.0,
+    "text": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+    "source": "caption",
+    "sampled_timestamps": [
+      1560.0251333333333,
+      1619.9850333333334
+    ]
+  },
+  {
+    "id": "caption_00027",
+    "start": 1620.0,
+    "end": 1680.0,
+    "text": "- **Frame 1620.018**: A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flowchart with \"Raw Idea\" leading to \"The Decomposer,\" which then processes \"Task Cards\" through \"The Dispatcher\" to \"Ready\" worker nodes. The diagram includes text describing the roles of \"Intelligence\" and \"The Decomposer\" in breaking down tasks.\n- **Frame 1679.978**: A screenshot of a software interface, likely a development environment, shows a section titled \"Cost strategy: frontier orchestrator, inexpensive workers.\" The interface includes a code editor with a highlighted line of code and a sidebar with navigation options such as \"User,\" \"Features,\" \"Overview,\" and \"Automation.\" The text in the code editor is related to a task graph configuration.",
+    "source": "caption",
+    "sampled_timestamps": [
+      1620.0184000000002,
+      1679.9783
+    ]
+  },
+  {
+    "id": "caption_00028",
+    "start": 1680.0,
+    "end": 1740.0,
+    "text": "- **Frame 1680.012**: A computer screen displays a web browser with the \"Kanban\" application open. The browser's interface shows a \"Cost strategy: frontier orchestrator, inexpensive workers\" section with a code snippet. The user is on the \"Kanban (Multi-Agent Board)\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy\" section with a code block and a \"Lifecycle plugin hooks\" section. The user is on the \"Kanban\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy\" section with a code block and a \"Lifecycle plugin hooks\" section. The user is on the \"Kanban\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy",
+    "source": "caption",
+    "sampled_timestamps": [
+      1680.0116666666668,
+      1739.9715666666668
+    ]
+  },
+  {
+    "id": "caption_00029",
+    "start": 1740.0,
+    "end": 1800.0,
+    "text": "- The user is in the Kanban application, specifically on the 'Default' profile.\n- The 'ORCHESTRATOR PROFILE' is set to 'default'.\n- The 'DEFAULT ASSIGNEE' is set to 'wanderer-tutorials'.\n- The 'Auto-decompose triage tasks' toggle is enabled.\n- The user is interacting with the 'wanderer-tutorials' profile description, which is currently selected.\n- The user is in the 'New task' section, with a 'New task' button visible.\n- The user is in the 'New task' section, with a 'New task' button visible.\n- The user is in the 'New task' section, with a 'New task' button visible.\n- The user is in the 'New task' section, with a 'New task' button visible.\n- The user is in the 'New task' section, with a 'New task' button visible.\n-",
+    "source": "caption",
+    "sampled_timestamps": [
+      1740.0049333333334,
+      1799.9982
+    ]
+  },
+  {
+    "id": "caption_00030",
+    "start": 1800.0,
+    "end": 1860.0,
+    "text": "- **Frame 1800.032**: The user is in the \"Kanban\" view of a task management application. The \"PROFILE\" tab is active, showing a list of profiles with their descriptions. The \"DEFAULT\" profile is selected, and the \"Auto-decompose Triage tasks\" toggle is enabled. The user is editing the \"wander-skill\" profile description, which reads: \"What is this profile good at?\".\n- **Frame 1859.991**: A \"New task in Triage\" dialog box is open. The \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse...\" field is active. The \"ASSIGNEE\" is set to \"scratch - board default\", and the \"SKILLS\" are listed as \"translation, github\". The \"MODEL\" is set to \"Profile default\". The \"Create",
+    "source": "caption",
+    "sampled_timestamps": [
+      1800.0315666666668,
+      1859.9914666666668
+    ]
+  },
+  {
+    "id": "caption_00031",
+    "start": 1860.0,
+    "end": 1920.0,
+    "text": "- **Frame 1860.025**: A \"New task in Triage\" dialog box is open, titled \"Multi-agent research\". The task description reads: \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system: a single agent with delegation capabilities, or a multi-agent team with different specialized agents? Be thorough with your research.\" The \"PRIORITY\" is set to 0, \"WORKSPACE\" is \"scratch - board default\", \"ASSIGNEE\" is \"wanderloots-tutorials (default)\", \"SKILLS\" are \"translation, github\", and \"MODEL\" is \"Profile default\". The \"Create task\" button is visible.\n- **Frame 1919.985**: The same dialog box is shown, but a new message appears at the bottom: \"R",
+    "source": "caption",
+    "sampled_timestamps": [
+      1860.0248333333334,
+      1919.9847333333335
+    ]
+  },
+  {
+    "id": "caption_00032",
+    "start": 1920.0,
+    "end": 1980.0,
+    "text": "- **Frame 1920.018**: A \"New task in Triage\" dialog box is open, titled \"Multi-agent research.\" It includes fields for \"Priority,\" \"Workspace,\" \"Assignee,\" \"Skills,\" and \"Model.\" The \"Assignee\" is set to \"wanderloots-tutorials (default).\" The \"Model\" is \"translation, github.\" A message box at the bottom reads: \"Rough estimate for reviewing the repository, researching up to five credible sources, comparing single-agent delegation with specialized multi-agent systems, and drafting a cited synthesis under 500 words.\" A \"Create task\" button is visible.\n\n- **Frame 1979.978**: The Kanban interface shows two tasks in progress: \"Research a practical information-to-action and knowledge workflow\" and \"Compare delegated single-agent and specialized multi-agent systems.\" The first task is marked as \"RUNNING\"",
+    "source": "caption",
+    "sampled_timestamps": [
+      1920.0181,
+      1979.978
+    ]
+  },
+  {
+    "id": "caption_00033",
+    "start": 1980.0,
+    "end": 2040.0,
+    "text": "- **Frame 1980.011:** A dark-themed Kanban board interface is shown. The board has three columns: \"TRIAGE,\" \"DOOD,\" and \"READY.\" The \"TRIAGE\" column has a card labeled \"Research a practical information-to-action and knowledge workflow.\" The \"DOOD\" column has a card labeled \"Compare delegated single-agent and specialized multi-agent...\" The \"READY\" column is empty. The interface shows a \"RUNNING\" status for the task \"Research a practical information-to-action and knowledge workflow.\" The \"RUNNING\" task has a \"Message the runner worker\" field and a \"Comments\" section. The \"RUNNING\" task has a \"BUN\" section with \"1\" and \"2\" and a \"RUNNING\" section with \"2\" and \"2\" and a \"BUN\" section with \"1\" and \"2\" and a \"RUN",
+    "source": "caption",
+    "sampled_timestamps": [
+      1980.0113666666668,
+      2039.9712666666667
+    ]
+  },
+  {
+    "id": "caption_00034",
+    "start": 2040.0,
+    "end": 2100.0,
+    "text": "- **Frame 2040.005**: A dark-themed Kanban board interface titled \"Kanban 4\" is displayed. The board has four columns: \"TRIAGE,\" \"SCHEDULED,\" \"READY,\" and \"BLOCKED.\" The \"TRIAGE\" column has a card with a plus sign, indicating a new task is being added. The \"RUNNING\" column contains a task titled \"Compare delegated single-agent and specialized multi-agent...\" with a \"working\" status and a progress bar. The \"BLOCKED\" column is empty. The \"DONE\" column has a task titled \"Research a practical information-to-action and knowledge workflow...\" with a \"completed\" status. The interface shows the \"Gateway ready\" status and the \"RAM 19G/2G\" and \"Manual v0.21.3\" text at the bottom. The \"New task\" button is visible on the",
+    "source": "caption",
+    "sampled_timestamps": [
+      2040.0046333333335,
+      2099.9979000000003
+    ]
+  },
+  {
+    "id": "caption_00035",
+    "start": 2100.0,
+    "end": 2160.0,
+    "text": "- The screen displays a Kanban board with four columns: 'FILTER', 'WORKING', 'SCHEDULED', and 'DONE'.\n- The 'WORKING' column has a task titled 'Deliver a cited recommendation in no more than 500 words' with a 'working' status.\n- The 'DONE' column shows three tasks: 'Research a practical information-to-action and knowledge workflow', 'Compare delegated single-agent and specialized multi-agent', and 'Deliver a cited recommendation in no more than 500 words'.\n- The 'SCHEDULED' column has a task titled 'Multi-agent research' with a 'ready' status.\n- The 'FILTER' column has a 'Filter cards...' input field.\n- The 'New task' button is visible in the top-right corner.\n- The bottom of the screen shows the 'Gateway ready' status and 'Agents' label.",
+    "source": "caption",
+    "sampled_timestamps": [
+      2100.031266666667,
+      2159.9911666666667
+    ]
+  },
+  {
+    "id": "caption_00036",
+    "start": 2160.0,
+    "end": 2220.0,
+    "text": "- **Frame 2160.025**: The screen shows a Kanban board with four columns: \"READY\", \"SCHEDULED\", \"IN PROGRESS\", and \"DONE\". The \"DONE\" column contains three tasks: \"Multi-agent research\", \"Research a practical information-to-action and knowledge workflow\", and \"Compare delegated single-agent and specialized multi-agent...\". The \"READY\" column has a task titled \"Multi-agent research\". The \"SCHEDULED\" column has a task titled \"Research a practical information-to-action and knowledge workflow\". The \"IN PROGRESS\" column has a task titled \"Compare delegated single-agent and specialized multi-agent...\". The \"DONE\" column has a task titled \"Deliver a cited recommendation in no more than 500 words\". The \"DONE\" column has a task titled \"Deliver a cited recommendation in no more than 500 words\". The \"DONE\" column has",
+    "source": "caption",
+    "sampled_timestamps": [
+      2160.0245333333332,
+      2219.9844333333335
+    ]
+  },
+  {
+    "id": "caption_00037",
+    "start": 2220.0,
+    "end": 2280.0,
+    "text": "- **Frame 2220.00:** The screen displays a dark-themed task management interface, likely a version of Kanban or a similar tool. The main panel shows a list of tasks with titles like \"Multi-agent research,\" \"Research a practical information-to-action and knowledge...\", and \"Compare delegated single-agent and specialized multi-agent systems.\" The right panel is titled \"Multi-agent research\" and contains a description, estimate, and summary. The interface has a \"DONE\" button and a \"Profile\" section with a \"dashboard\" label. The user is in the \"workspace\" and has a \"Profile\" set to \"dashboard default.\" The task \"Compare delegated single-agent and specialized multi-agent systems\" is highlighted.\n\n- **Frame 2279.978:** The interface remains the same, but the highlighted task is now \"Compare delegated single-agent and specialized multi-agent systems.\" The description, estimate, and summary are",
+    "source": "caption",
+    "sampled_timestamps": [
+      2220.0178,
+      2279.9777
+    ]
+  },
+  {
+    "id": "caption_00038",
+    "start": 2280.0,
+    "end": 2340.0,
+    "text": "- **Frame 2280.011**: The screen shows the Kanban application with a task list on the left. The task \"Compare delegated single-agent and specialized multi-agent systems\" is highlighted. The right panel displays a detailed description of the task, including a \"DONE\" button and a \"Profile\" section. The task is assigned to \"researcher\" and was created 11 minutes ago.\n\n- **Frame 2339.971**: The screen shows the \"Skills\" tab in a software interface. The \"AI-daily-intel\" skill is selected, and the \"Tools\" tab is open. The \"Tools\" tab displays a list of tools, including \"wanderer-youtube-script-audits\" and \"hermes-feature-research.\" The \"Tools\" tab is highlighted, and the \"Tools\" section is visible.",
+    "source": "caption",
+    "sampled_timestamps": [
+      2280.011066666667,
+      2339.9709666666668
+    ]
+  },
+  {
+    "id": "caption_00039",
+    "start": 2340.0,
+    "end": 2400.0,
+    "text": "- **Frame 2340.004**: The screen shows the \"Sessions\" tab of a software application, likely a development or AI tool. The user is in the \"Capabilities\" section, with a list of AI skills such as \"ai-daily-intel,\" \"wanderer-youtube-script-audits,\" and \"hermes-feature-research.\" The \"Tools\" tab is open, and the \"MCP\" section is visible. A pop-up window titled \"ai-daily-intel\" is open, showing details about the AI agent, including its name, version, and description. The user has a toggle switch for \"ai-daily-intel\" and is viewing its configuration.\n\n- **Frame 2399.998**: The screen shows a task management interface with a \"Kanban\" board. The board has columns labeled \"TO DO,\" \"IN PROGRESS,\" \"DONE,\"",
+    "source": "caption",
+    "sampled_timestamps": [
+      2340.0043333333333,
+      2399.9976
+    ]
+  },
+  {
+    "id": "caption_00040",
+    "start": 2400.0,
+    "end": 2460.0,
+    "text": "- **Frame 2400.031**: A dark-themed task management interface, likely from the Kanban application, is shown. The main panel displays a task titled \"Compare delegated single-agent and specialized multi-agent...\" with a \"working\" status. A sidebar shows a \"DONE\" task with a \"Research a practical information-to-action and knowledge workflow\" task. The \"WORKER LOG\" section indicates a \"1.071 words\" count. The interface has a \"Gateway ready\" status and a \"Manual\" label at the bottom.\n- **Frame 2459.991**: The interface shows a \"Kanban\" tab with a \"New task\" button. The \"ORCHESTRATOR PROFILE\" section lists \"wanderlots-tutorials\" as the default assignee. The \"PROFILE DESCRIPTIONS\" section includes entries for \"librarian,\" \"researcher,\" and \"wanderlots",
+    "source": "caption",
+    "sampled_timestamps": [
+      2400.0309666666667,
+      2459.990866666667
+    ]
+  },
+  {
+    "id": "caption_00041",
+    "start": 2460.0,
+    "end": 2520.0,
+    "text": "- **Frame 2460.024**: A dark-themed software interface for Kanban, showing a \"Default\" board with \"orchestrator\" and \"wanderloots-tutorials\" as profile descriptions. The \"Auto-decompose triage tasks\" toggle is on. A \"New task\" button is visible. The \"Multi-agent research\" task is marked as \"DONE\". The interface shows a \"Gateway ready\" status and a \"Manual\" label.\n- **Frame 2519.984**: A slide titled \"One Workflow, Two Views\" displays a workflow diagram. The \"Working\" column shows \"Independent review\" and \"Build & check\" as steps. The \"Done\" column shows \"Scope goal\" and \"Build & check export\". The \"Dependency graph\" shows \"Scope\" and \"Build & check\" as tasks. The \"Approve\" step is marked as \"Done\".",
+    "source": "caption",
+    "sampled_timestamps": [
+      2460.0242333333335,
+      2519.9841333333334
+    ]
+  },
+  {
+    "id": "caption_00042",
+    "start": 2520,
+    "end": 2575.0057666666667,
+    "text": "- A man with glasses and a beard sits at a wooden table, speaking into a microphone.\n- He wears a dark blue t-shirt and gestures with his hands.\n- The background features a shelf with plants, a bookshelf, and a decorative candelabra with three lit bulbs.\n- The man is in a room with a neutral-colored wall and a wooden table.\n- The text on the screen is not visible in the frame.",
+    "source": "caption",
+    "sampled_timestamps": [
+      2533.7645666666667,
+      2561.2587000000003
+    ]
+  }
+]
