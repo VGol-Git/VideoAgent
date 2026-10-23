@@ -1,0 +1,28 @@
+param([switch]$StopDemo, [switch]$PlanOnly)
+$ErrorActionPreference = 'Stop'
+$questionPath = Join-Path $PSScriptRoot 'data\simple24\questions.json'
+$protocolPath = Join-Path $PSScriptRoot 'data\simple24\protocol.json'
+$protocol = Get-Content -LiteralPath $protocolPath -Raw -Encoding UTF8 | ConvertFrom-Json
+$questionHash = (Get-FileHash -LiteralPath $questionPath -Algorithm SHA256).Hash.ToLowerInvariant()
+if ($questionHash -ne $protocol.questions_sha256) { throw 'The frozen simple24 question file differs. No experiment was started.' }
+$questions = Get-Content -LiteralPath $questionPath -Raw -Encoding UTF8 | ConvertFrom-Json
+if ($questions.Count -ne 24 -or @($questions | Where-Object split -ne 'test').Count -ne 0) {
+    throw 'Expected 24 test questions. No experiment was started.'
+}
+foreach ($task in @('timestamp_search', 'reasoning', 'onset', 'unanswerable')) {
+    if (@($questions | Where-Object task -eq $task).Count -ne 6) { throw "Expected six $task questions." }
+}
+foreach ($reference in $protocol.reference_frame_sha256.PSObject.Properties) {
+    $framePath = Join-Path $PSScriptRoot $reference.Name
+    if ((Get-FileHash -LiteralPath $framePath -Algorithm SHA256).Hash.ToLowerInvariant() -ne $reference.Value) {
+        throw "Reference frame differs: $($reference.Name). No experiment was started."
+    }
+}
+$launchOptions = @{
+    QuestionsPath = $questionPath
+    OutputRoot = (Join-Path $PSScriptRoot 'results\simple24_v6_adaptive')
+    Split = 'test'
+    StopDemo = $StopDemo
+    PlanOnly = $PlanOnly
+}
+& (Join-Path $PSScriptRoot 'run_v6_adaptive.ps1') @launchOptions

@@ -1,0 +1,38 @@
+36 additions to the unchanged simple24 set
+
+simple60_time_01 [timestamp_search] At 00:20, what black object is on the desk?
+simple60_time_02 [timestamp_search] At 19:00, what is the middle column called?
+simple60_time_03 [timestamp_search] At 21:20, which feature is being added?
+simple60_time_04 [timestamp_search] At 23:00, which two systems does the table compare?
+simple60_time_05 [timestamp_search] Which tool does he enable between 02:50 and 03:10?
+simple60_time_06 [timestamp_search] Between 05:45 and 06:00, what token count is shown for the delegating parent?
+simple60_time_07 [timestamp_search] Between 11:40 and 12:00, what can a long-running goal exhaust?
+simple60_time_08 [timestamp_search] Between 30:00 and 30:20, which profile assigns tasks to agents?
+simple60_time_09 [timestamp_search] What benefit of automatic decomposition is named between 39:30 and 39:40?
+simple60_reason_01 [reasoning] In "Email to Decision Brief," what must be prepared between research and human review?
+simple60_reason_02 [reasoning] In "Article to Curated Knowledge," why check context and connections before drafting?
+simple60_reason_03 [reasoning] In "Two Loops," should blocked work continue automatically?
+simple60_reason_04 [reasoning] Why can a well-scoped worker task use a cheaper model?
+simple60_reason_05 [reasoning] In "One Workflow, Two Views," is checking separate from the build task?
+simple60_reason_06 [reasoning] In "One Workflow, Two Views," which comes first: independent review or whole-outcome review?
+simple60_reason_07 [reasoning] In "How Task Graphs Actually Run," are raw ideas sent directly to workers?
+simple60_reason_08 [reasoning] At 36:00, is "Multi-agent research" already finished?
+simple60_reason_09 [reasoning] At 36:00, did the final recommendation stay within 500 words?
+simple60_onset_01 [onset] When does he first mention the context window?
+simple60_onset_02 [onset] At what point does he introduce the /goal command?
+simple60_onset_03 [onset] When does he first suggest using a local model?
+simple60_onset_04 [onset] When does he first mention an auxiliary model?
+simple60_onset_05 [onset] When does he start talking about group chats?
+simple60_onset_06 [onset] When does he first mention adding Markdown export?
+simple60_onset_07 [onset] When does he first describe Triage?
+simple60_onset_08 [onset] When does he first explain scheduling a task?
+simple60_onset_09 [onset] When does he introduce the task-cost estimation feature?
+simple60_negative_01 [unanswerable] On the diagram at 19:30, what is the email's subject line?
+simple60_negative_02 [unanswerable] On the diagram at 20:20, what is the article's DOI?
+simple60_negative_03 [unanswerable] On the diagram at 20:50, how many repair attempts are allowed?
+simple60_negative_04 [unanswerable] On the diagram at 20:50, which software stores the library?
+simple60_negative_05 [unanswerable] On the diagram at 21:20, which programming language implements Markdown export?
+simple60_negative_06 [unanswerable] On the diagram at 21:20, what is the planned release date?
+simple60_negative_07 [unanswerable] On the diagram at 19:00, how many minutes will task two take?
+simple60_negative_08 [unanswerable] On the diagram at 26:55, what is the queue database's file path?
+simple60_negative_09 [unanswerable] On the diagram at 26:55, how much RAM does each worker need?
