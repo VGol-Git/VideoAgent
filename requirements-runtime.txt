@@ -1,0 +1,15 @@
+# Tested Windows/Python 3.12 environment. Install torch/torchvision from the
+# matching CUDA index first when needed; do not mix incompatible wheel families.
+torch==2.6.0
+torchvision==0.21.0
+transformers==4.57.6
+huggingface-hub==0.36.0
+tokenizers==0.22.2
+numpy==2.2.6
+Pillow==12.3.0
+opencv-python-headless==4.11.0.86
+faster-whisper==1.2.1
+ctranslate2==4.6.0
+av==19.0.2
+onnxruntime==1.22.0
+sympy==1.13.1

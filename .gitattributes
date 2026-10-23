@@ -1,0 +1,5 @@
+# Preserve exact bytes for files whose SHA-256 is recorded in experiment manifests.
+# Python and JSON readers accept both LF and CRLF on all supported platforms.
+*.py -text
+*.json -text
+*.vtt -text
