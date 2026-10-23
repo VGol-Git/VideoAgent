@@ -3,3 +3,5 @@
 *.py -text
 *.json -text
 *.vtt -text
+# Frozen experiment artifacts contain hashes of source snapshots and run inputs.
+results/** -text
