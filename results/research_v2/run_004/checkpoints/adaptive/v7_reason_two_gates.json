@@ -1,0 +1,60 @@
+{
+  "saved_at_utc": "2026-10-22T19:13:48.416348+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "adaptive",
+  "question_id": "v7_reason_two_gates",
+  "prediction_sha256": "b97c13fb6f2a7cfeb0caaa76b7270d8c579e5eba2de3103b179ad6729d38237d",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Unknown planned task",
+    "error": "Unknown planned task",
+    "error_type": "planning_error",
+    "question_id": "v7_reason_two_gates",
+    "question": "Compare the gates shown in Article to Curated Knowledge and How Task Graphs Actually Run. Why does creating a draft entry or a task card not by itself guarantee that it reaches the library or a worker? Cite both diagrams.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 0,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 21.7425,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 828,
+      "output_tokens": 150
+    },
+    "trace": [],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"reasoning|event|lookup\",\"modality\":\"transcript|visual|audiovisual\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":\"when a draft entry or task card is created\"}",
+        "error": "Unknown planned task",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"reasoning|event|lookup\",\"modality\":\"transcript|visual|audiovisual\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":\"when a draft entry or task card is created\"}",
+        "error": "Unknown planned task",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"reasoning|event|lookup\",\"modality\":\"transcript|visual|audiovisual\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":\"when a draft entry or task card is created\"}",
+        "error": "Unknown planned task",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "validated_at_utc": "2026-10-22T15:25:28.678689+00:00",
+  "unit_tests": {
+    "count": 301,
+    "status": "passed",
+    "log": "unit_tests.txt"
+  },
+  "javascript_syntax": "passed",
+  "powershell_parser_and_help": "passed",
+  "new_experiment_inference_runs": 0,
+  "new_experiment_folders": [],
+  "source_sha256": {
+    "clipscout/__init__.py": "0fea446cab00641a910e7be4f11c790955039a633ae4f1303aac1c8fe0d61c8a",
+    "clipscout/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+    "clipscout/agent.py": "2ed6f15467d38e2210a4b613f1c8b6355a744520f3192ad8906c9d4e93ab60a7",
+    "clipscout/backends.py": "41d278c1318ed7094b4a8e0ea29f54dd15d1e1f5f0c1802a067c45b46a2fa8a2",
+    "clipscout/cli.py": "2e7c3b52f29c35c825c6f36e402cca3543dc3556b5244435ae3033edd05d5f1d",
+    "clipscout/evaluation.py": "73c27877e4ee42c3b935c03e831804c1eb015927b40f3d3222fbcff7894ad2eb",
+    "clipscout/events.py": "6ef445b433aeddacf7ad66f60aa18ec3cb141ea070d58976b219d8a09af07471",
+    "clipscout/index.py": "955220c04d1c332806111cb7a07c81e1d53a0c1ca3d61ae285289be3df449e58",
+    "clipscout/media.py": "6daa7a748555afa3e8cd4367d96787de823f01b5dcadf8ebd80bba26281e7e9f",
+    "clipscout/ocr.py": "a7c2f040630ed3a9df177a30e9d914f588b682e657a905065a90fe93d5b6129c",
+    "clipscout/research_agent.py": "31a3c6d08488779b35e841381edede3cddd6e6acdd052ae04a08b8d9da613f48",
+    "clipscout/research_evaluation.py": "cef9c96d4bd38391f55025d88b26daa70432eff6086406b6ba4824e9001a464a",
+    "clipscout/retrieval.py": "00968d418e2585daf8ad27beb7964c101efe6e5bf7c338bc78fd328fcf1b386a",
+    "clipscout/server.py": "960f4199b9bebe2a00a18b6d3663d09b9a63d744514ef22301a15440343ebe7b",
+    "clipscout/temporal.py": "308e8ee71ee877f2c9ffc861cb45933ec625f7c50d65b4c519817a20fad65a3c",
+    "clipscout/transcribe.py": "4fc5de271f44a00d7eaef32cdd398022dae250bb59979fd516db66a3fc41172e",
+    "clipscout/visual_index.py": "6cd7baac9b0ac8d867cfec62c33f7b53d4d58a8523e946b7db7b3c5ee9dd872c",
+    "pyproject.toml": "3a3a8494cbbe01abf6f354d5a9d358d662ed29daaf65f0f45764cccdd8dde2ef",
+    "requirements-research.txt": "94db184eff0301cd65406ad79388bfeb46601f2ca769fd785eb6a63c0a992b33",
+    "run_experiment.ps1": "78e8dab2e4cad0310a47d06c678fcd0da4e5e6ac5b317ba5088f7332e9e7ab35",
+    "scripts/download_model.py": "3dc11ab71d9b885a9bdc14a5d3f6173a9fffed257fe4c27e70aebc84c4b39e8f",
+    "scripts/prepare_research_assets.py": "0f78a3e89190be4ddf952d3c63f1cd87af87736ed5418c946487206b3f31d0a1",
+    "scripts/run_research_study.py": "6c3e4477e7b9242676a21d8b9d4f2f7f00edb704c953783922f8a18590abbe9e",
+    "THIRD_PARTY_NOTICES.txt": "9f4f197cdbd4e59cd9ff511e88dd4a8d61d7301ade808dea2d67ab70686dc9c2"
+  },
+  "limitations": [
+    "Model quality has not been measured for v7. User will run the study.",
+    "CLIP download is partial; the launcher resumes verified downloads before preprocessing."
+  ]
+}

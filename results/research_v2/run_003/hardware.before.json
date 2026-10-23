@@ -1,0 +1,13 @@
+{
+  "captured_at_utc": "2026-10-22T18:28:16.671352+00:00",
+  "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+  "cpu_count": 16,
+  "gpu_csv_columns": [
+    "name",
+    "driver_version",
+    "memory_total",
+    "memory_used",
+    "utilization_gpu"
+  ],
+  "gpu_csv": "NVIDIA GeForce RTX 4070 Laptop GPU, 581.08, 8188 MiB, 780 MiB, 0 %"
+}

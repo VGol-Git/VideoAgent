@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "cache_path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\indexes\\user_video_visual",
+  "preparation_seconds_this_invocation": 220.51234740001382,
+  "error": "MediaError: Decoder could not read frame 77172.",
+  "partial_frame_checkpoints_preserved": true
+}

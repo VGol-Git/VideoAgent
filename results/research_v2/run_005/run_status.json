@@ -1,0 +1,27 @@
+{
+  "status": "running",
+  "started_at_utc": "2026-10-22T20:04:08.310613+00:00",
+  "run_directory": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\results\\research_v2\\run_005",
+  "phase": "inference",
+  "completed_predictions": 47,
+  "argv": [
+    "--prepare-assets",
+    "--download-models",
+    "--local-files-only",
+    "--output-root",
+    "results/research_v2",
+    "--split",
+    "test",
+    "--modes",
+    "adaptive",
+    "retrieval-only",
+    "static",
+    "uniform"
+  ],
+  "dry_run": false,
+  "total_predictions": 64,
+  "current": {
+    "mode": "static",
+    "question_id": "v7_negative_dispatch_cost"
+  }
+}

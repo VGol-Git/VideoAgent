@@ -1,0 +1,577 @@
+{
+  "saved_at_utc": "2026-10-22T19:15:27.026966+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "adaptive",
+  "question_id": "v7_reason_context_durability",
+  "prediction_sha256": "d25c355a9ad5f0b02cd6063f24e0a40dccf4a235bdb782b145337a03a0ff7adb",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Each claim needs observed evidence IDs",
+    "error": "Each claim needs observed evidence IDs",
+    "error_type": "invalid_model_response",
+    "plan": {
+      "task": "reasoning",
+      "modality": "transcript",
+      "queries": [
+        "distinctive search terms"
+      ],
+      "requirements": {
+        "R1": "one fact that must be established"
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": true
+    },
+    "question_id": "v7_reason_context_durability",
+    "question": "Contrast a fresh subagent's lack of inherited history with the later explanation of durable Kanban handoffs. What different context problems do the parent-supplied fields and the database-backed queue address? Cite both explanations.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 56.8747,
+    "usage": {
+      "model_calls": 5,
+      "input_tokens": 6661,
+      "output_tokens": 401
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "fresh subagent lack inherited history",
+          "queries": [
+            "parent-supplied fields",
+            "database-backed queue"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:30",
+              "start": 901.57,
+              "end": 931.69,
+              "text": "So it fits bounded research review and repair work, but it doesn't necessarily make sense for other types of situations that require more specialization and more context and more knowledge. I mentioned, sub-agents have zero knowledge from the parent's conversation history. They only have what comes from the goal and the context that the parent gives them. But what if we start getting into more specific contexts or more custom situations that involve other types of contexts outside of what the parent even knows? We can see here the decision test that the answer says is add a specialist.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00333",
+                "T00334",
+                "T00335",
+                "T00336",
+                "T00337",
+                "T00338",
+                "T00339",
+                "T00340",
+                "T00341"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.010592686002522068,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "fresh subagent lack inherited history",
+                  "rank": 5,
+                  "retrieval_score": 3.511122406417701,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "parent-supplied fields",
+                  "rank": 1,
+                  "retrieval_score": 3.8529351909748453,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "fresh subagent lack inherited history",
+                "parent-supplied fields"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:30",
+                  "start": 901.57,
+                  "end": 931.69,
+                  "text": "So it fits bounded research review and repair work, but it doesn't necessarily make sense for other types of situations that require more specialization and more context and more knowledge. I mentioned, sub-agents have zero knowledge from the parent's conversation history. They only have what comes from the goal and the context that the parent gives them. But what if we start getting into more specific contexts or more custom situations that involve other types of contexts outside of what the parent even knows? We can see here the decision test that the answer says is add a specialist.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00333",
+                    "T00334",
+                    "T00335",
+                    "T00336",
+                    "T00337",
+                    "T00338",
+                    "T00339",
+                    "T00340",
+                    "T00341"
+                  ]
+                }
+              ],
+              "selection_score": 0.8833333333333333,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:14",
+              "start": 420.68,
+              "end": 451.36,
+              "text": "when it actually makes sense to do so, when the complexity needs it. But all of this is relative. This is specifically for a one-off research task that we just did here. As the system starts to scale in complexity, we need to start thinking about other ways of orchestrating. For example, using all of the different bots like we've set up in previous videos. And one thing I wanna mention too is that when we're delegating to subagents, subagents know nothing. They start with completely fresh conversations. So they have zero knowledge of the parent's conversation history, tool calls, or anything discussed before they were created for the delegation.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00121",
+                "T00122",
+                "T00123",
+                "T00124",
+                "T00125",
+                "T00126",
+                "T00127",
+                "T00128",
+                "T00129",
+                "T00130",
+                "T00131",
+                "T00132",
+                "T00133",
+                "T00134",
+                "T00135",
+                "T00136",
+                "T00137"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.010439605252426393,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "fresh subagent lack inherited history",
+                  "rank": 1,
+                  "retrieval_score": 7.022244812835402,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "parent-supplied fields",
+                  "rank": 7,
+                  "retrieval_score": 2.3006186055308095,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "fresh subagent lack inherited history",
+                "parent-supplied fields"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:14",
+                  "start": 420.68,
+                  "end": 451.36,
+                  "text": "when it actually makes sense to do so, when the complexity needs it. But all of this is relative. This is specifically for a one-off research task that we just did here. As the system starts to scale in complexity, we need to start thinking about other ways of orchestrating. For example, using all of the different bots like we've set up in previous videos. And one thing I wanna mention too is that when we're delegating to subagents, subagents know nothing. They start with completely fresh conversations. So they have zero knowledge of the parent's conversation history, tool calls, or anything discussed before they were created for the delegation.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00121",
+                    "T00122",
+                    "T00123",
+                    "T00124",
+                    "T00125",
+                    "T00126",
+                    "T00127",
+                    "T00128",
+                    "T00129",
+                    "T00130",
+                    "T00131",
+                    "T00132",
+                    "T00133",
+                    "T00134",
+                    "T00135",
+                    "T00136",
+                    "T00137"
+                  ]
+                }
+              ],
+              "selection_score": 0.64060649135276,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:47",
+              "start": 1410.56,
+              "end": 1441.2,
+              "text": "actually block from happening until the human comes in and says go. And with delegation, the audit trail, all of the context can be lost when the system actually compresses. This is what I was talking about with the context window on the bottom here. If this gets compressed, then if there was a sub-agent within that compression, you can lose the context associated with it. Whereas in Kanban, it's stored in a SQLite database. So you get access to that forever. You can go back and take a look. So a good summary here is that delegate task is a tool call. It's just one function, whereas Kanban is a work queue",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00462",
+                "T00463",
+                "T00464",
+                "T00465",
+                "T00466",
+                "T00467",
+                "T00468",
+                "T00469",
+                "T00470",
+                "T00471",
+                "T00472",
+                "T00473",
+                "T00474",
+                "T00475",
+                "T00476"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.00546448087431694,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "database-backed queue",
+                  "rank": 1,
+                  "retrieval_score": 7.686845617490738,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "database-backed queue"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:47",
+                  "start": 1410.56,
+                  "end": 1441.2,
+                  "text": "actually block from happening until the human comes in and says go. And with delegation, the audit trail, all of the context can be lost when the system actually compresses. This is what I was talking about with the context window on the bottom here. If this gets compressed, then if there was a sub-agent within that compression, you can lose the context associated with it. Whereas in Kanban, it's stored in a SQLite database. So you get access to that forever. You can go back and take a look. So a good summary here is that delegate task is a tool call. It's just one function, whereas Kanban is a work queue",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00462",
+                    "T00463",
+                    "T00464",
+                    "T00465",
+                    "T00466",
+                    "T00467",
+                    "T00468",
+                    "T00469",
+                    "T00470",
+                    "T00471",
+                    "T00472",
+                    "T00473",
+                    "T00474",
+                    "T00475",
+                    "T00476"
+                  ]
+                }
+              ],
+              "selection_score": 0.451984126984127,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 3,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:15",
+              "start": 451.36,
+              "end": 481.04,
+              "text": "The sub-agents only context comes from the goal, and the context field that the parent agent populates when it calls delegate task. Delegate task is this tool that we enabled at the beginning here, and the context is how much information goes into all of this. But before we get into an actual situation where it makes sense to have multi-agent workflows, there's one more thing I want to quickly talk about, which is a way that we can enhance the quality of the output of the single agent, whether it's a parent agent with delegated sub-agents or all in one, and that actually brings me back to",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00138",
+                "T00139",
+                "T00140",
+                "T00141",
+                "T00142",
+                "T00143",
+                "T00144",
+                "T00145",
+                "T00146",
+                "T00147",
+                "T00148",
+                "T00149",
+                "T00150",
+                "T00151",
+                "T00152"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.005376344086021505,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "parent-supplied fields",
+                  "rank": 2,
+                  "retrieval_score": 3.3634090243906947,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "parent-supplied fields"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:15",
+                  "start": 451.36,
+                  "end": 481.04,
+                  "text": "The sub-agents only context comes from the goal, and the context field that the parent agent populates when it calls delegate task. Delegate task is this tool that we enabled at the beginning here, and the context is how much information goes into all of this. But before we get into an actual situation where it makes sense to have multi-agent workflows, there's one more thing I want to quickly talk about, which is a way that we can enhance the quality of the output of the single agent, whether it's a parent agent with delegated sub-agents or all in one, and that actually brings me back to",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00138",
+                    "T00139",
+                    "T00140",
+                    "T00141",
+                    "T00142",
+                    "T00143",
+                    "T00144",
+                    "T00145",
+                    "T00146",
+                    "T00147",
+                    "T00148",
+                    "T00149",
+                    "T00150",
+                    "T00151",
+                    "T00152"
+                  ]
+                }
+              ],
+              "selection_score": 0.3299091141833077,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 4,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:16",
+              "start": 481.04,
+              "end": 510.69,
+              "text": "the warning of the subagent system, which is that the context comes from the goal. So what is a goal? So to bring up goal, we can type in slash and goal. And this brings up the goal command, which is a way that we can set a standing goal that Hermes works across all turns until it's achieved. And basically what that means is before we get into the complexity of setting up all of these specialist agents and figuring out how to coordinate them, there's one more step that you should try first, which is to enable a goal.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00153",
+                "T00154",
+                "T00155",
+                "T00156",
+                "T00157",
+                "T00158",
+                "T00159",
+                "T00160",
+                "T00161",
+                "T00162",
+                "T00163",
+                "T00164"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.005376344086021505,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "fresh subagent lack inherited history",
+                  "rank": 2,
+                  "retrieval_score": 3.8575760132879013,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "fresh subagent lack inherited history"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:16",
+                  "start": 481.04,
+                  "end": 510.69,
+                  "text": "the warning of the subagent system, which is that the context comes from the goal. So what is a goal? So to bring up goal, we can type in slash and goal. And this brings up the goal command, which is a way that we can set a standing goal that Hermes works across all turns until it's achieved. And basically what that means is before we get into the complexity of setting up all of these specialist agents and figuring out how to coordinate them, there's one more step that you should try first, which is to enable a goal.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00153",
+                    "T00154",
+                    "T00155",
+                    "T00156",
+                    "T00157",
+                    "T00158",
+                    "T00159",
+                    "T00160",
+                    "T00161",
+                    "T00162",
+                    "T00163",
+                    "T00164"
+                  ]
+                }
+              ],
+              "selection_score": 0.3299091141833077,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 5,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:48",
+              "start": 1441.2,
+              "end": 1470.24,
+              "text": "where every handoff is a row in a database that any profile or human can see in edit. So there's a lot more transparency that happens here, which is why it starts to get into being a proper control graph or task graph. Thankfully, Hermes has a built-in feature called Kanban. So let's take a look at that. So the first thing we need to do for Kanban is you may not have this appearing on the side here, so we can go up to capabilities and then go over to plugins. And we can see that we have three built-in plugins that come with Hermes. The first is bot mode that comes turned on like we've already looked at,",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00477",
+                "T00478",
+                "T00479",
+                "T00480",
+                "T00481",
+                "T00482",
+                "T00483",
+                "T00484",
+                "T00485",
+                "T00486",
+                "T00487",
+                "T00488",
+                "T00489",
+                "T00490",
+                "T00491"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.005376344086021505,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "database-backed queue",
+                  "rank": 2,
+                  "retrieval_score": 3.4167044393170136,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "database-backed queue"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:48",
+                  "start": 1441.2,
+                  "end": 1470.24,
+                  "text": "where every handoff is a row in a database that any profile or human can see in edit. So there's a lot more transparency that happens here, which is why it starts to get into being a proper control graph or task graph. Thankfully, Hermes has a built-in feature called Kanban. So let's take a look at that. So the first thing we need to do for Kanban is you may not have this appearing on the side here, so we can go up to capabilities and then go over to plugins. And we can see that we have three built-in plugins that come with Hermes. The first is bot mode that comes turned on like we've already looked at,",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00477",
+                    "T00478",
+                    "T00479",
+                    "T00480",
+                    "T00481",
+                    "T00482",
+                    "T00483",
+                    "T00484",
+                    "T00485",
+                    "T00486",
+                    "T00487",
+                    "T00488",
+                    "T00489",
+                    "T00490",
+                    "T00491"
+                  ]
+                }
+              ],
+              "selection_score": 0.3299091141833077,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 6,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false
+        },
+        "latency_seconds": 0.0304
+      }
+    ],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"reasoning\",\"modality\":\"transcript\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":null}"
+      },
+      {
+        "role": "controller",
+        "step": 0,
+        "raw": "{\n  \"action\": \"search\",\n  \"args\": {\n    \"query\": \"fresh subagent lack inherited history\",\n    \"queries\": [\n      \"parent-supplied fields\",\n      \"database-backed queue\"\n    ],\n    \"source\": \"transcript\",\n    \"top_k\": 6\n  }\n}"
+      },
+      {
+        "role": "controller",
+        "step": 1,
+        "raw": "{\n  \"action\": \"answer\",\n  \"status\": \"answered\",\n  \"claims\": [\n    {\n      \"text\": \"A fresh subagent lacks inherited history because it only has context from the goal and the parent's provided information, whereas a durable Kanban handoff preserves context in a database, allowing for full access and audit trail.\",\n      \"evidence_ids\": [\n        \"transcript:14\",\n        \"transcript:47\",\n        \"transcript:16\"\n      ],\n      \"requirement_ids\": [\n        \"R1\"\n      ]\n    }\n  ]\n}",
+        "error": "Each claim needs observed evidence IDs",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "controller",
+        "step": 2,
+        "raw": "{\n  \"action\": \"answer\",\n  \"status\": \"answered\",\n  \"claims\": [\n    {\n      \"text\": \"A fresh subagent lacks inherited history from the parent's conversation, while the Kanban handoff system preserves context through a database-backed queue.\",\n      \"evidence_ids\": [\n        \"transcript:14\"\n      ],\n      \"requirement_ids\": [\n        \"R1\"\n      ]\n    }\n  ]\n}",
+        "error": "Each claim needs observed evidence IDs",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "controller",
+        "step": 3,
+        "raw": "{\n  \"action\": \"answer\",\n  \"status\": \"answered\",\n  \"claims\": [\n    {\n      \"text\": \"A fresh subagent lacks inherited history from the parent's conversation, while the Kanban handoff system preserves context through a database-backed queue.\",\n      \"evidence_ids\": [\n        \"transcript:14\"\n      ],\n      \"requirement_ids\": [\n        \"R1\"\n      ]\n    }\n  ]\n}",
+        "error": "Each claim needs observed evidence IDs",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

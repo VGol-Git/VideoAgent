@@ -1,0 +1,3418 @@
+{
+  "saved_at_utc": "2026-10-22T21:10:26.542094+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "adaptive",
+  "question_id": "v7_negative_total_tokens",
+  "prediction_sha256": "ab84d8834a058cdb7a17695cd5cc7274b6ecc810a9e53c7262ec57287f39027d",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "No citable evidence after invalid or failed tool attempts. ValueError: Duplicate call; change query or interval",
+    "error": "No citable evidence after invalid or failed tool attempts. ValueError: Duplicate call; change query or interval",
+    "error_type": "invalid_model_response",
+    "failure_origin": "model_protocol",
+    "finalization_route": "repeated_invalid_tools",
+    "model_protocol_attempts": 2,
+    "tool_failures": [
+      {
+        "call": 2,
+        "tool": "inspect_clip",
+        "error_type": "tool_argument_error",
+        "error": "ValueError: Invalid inspection modality"
+      },
+      {
+        "call": 3,
+        "tool": "search",
+        "error_type": "duplicate_tool_call",
+        "error": "ValueError: Duplicate call; change query or interval"
+      }
+    ],
+    "question_contract": {
+      "basis": "question_text_only",
+      "overview": false
+    },
+    "model_protocol_failures": [
+      {
+        "call": 2,
+        "tool": "inspect_clip",
+        "error_type": "tool_argument_error",
+        "error": "ValueError: Invalid inspection modality"
+      },
+      {
+        "call": 3,
+        "tool": "search",
+        "error_type": "duplicate_tool_call",
+        "error": "ValueError: Duplicate call; change query or interval"
+      }
+    ],
+    "plan": {
+      "task": "reasoning",
+      "modality": "transcript",
+      "queries": [
+        "what exact total number of tokens did the delegated workflow consume after including every subagent",
+        "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+        "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+      ],
+      "requirements": {
+        "R1": "the delegated workflow consumed a specific total number of tokens in the first 102,000-versus-37,000 comparison",
+        "R2": "this total includes all subagents",
+        "R3": "the answer must provide a number only if the explanation provides it",
+        "R4": "the number must be exact and derived from the transcript"
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": true
+    },
+    "question_id": "v7_negative_total_tokens",
+    "question": "In the first 102,000-versus-37,000 comparison, what exact total number of tokens did the delegated workflow consume after including every subagent? Give a number only if this explanation provides it.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 3,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 186.953,
+    "usage": {
+      "model_calls": 5,
+      "input_tokens": 11430,
+      "output_tokens": 1173
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {},
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "fusion:3af669840f02c530",
+              "start": 2475.010866666667,
+              "end": 2485.010866666667,
+              "text": "[dense_visual] CLIP retrieval candidate at 2480.011 seconds; inspect the frame to verify its content.\n[ocr] Time & token use\nAll-in totals for this research task.\nWorkflow\nTotal tokens\nCompletion\nTool calls\nSessions\nMain agent\n1,864,433\n5m 36s\n57\n3\n+ subagents\nKanban\n2,368,325\n8m 39s\n73\n5 + auxiliary\nauto-decomposer\nKanban orchestrator\n1,974,215\n6m 36s\n82\n6\n(goal)\nKanban orchestrator\n1,769,942\n4m 59s\n74\n5\n(no goal)\nObserved in this test only • Auto-decomposer total includes identified auxiliary overhead",
+              "source": "hybrid",
+              "modalities": [
+                "dense_visual",
+                "ocr"
+              ],
+              "segment_ids": [
+                "visual_000496",
+                "ocr:visual_000496"
+              ],
+              "sampled_timestamps": [
+                2480.010866666667
+              ],
+              "score": 0.03186036009938707,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "dense_visual",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 2,
+                  "retrieval_score": 0.28602492809295654,
+                  "channel_score_type": "cosine_similarity",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "dense_visual",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 1,
+                  "retrieval_score": 0.2977433204650879,
+                  "channel_score_type": "cosine_similarity",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "dense_visual",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 1,
+                  "retrieval_score": 0.30243629217147827,
+                  "channel_score_type": "cosine_similarity",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "ocr",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 6,
+                  "retrieval_score": 11.095153942704531,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005050505050505051,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "ocr",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 5,
+                  "retrieval_score": 11.095153942704531,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "ocr",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 2,
+                  "retrieval_score": 13.385608831661727,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "dense_visual:visual_000496",
+                  "source": "dense_visual",
+                  "score_type": "cosine_similarity",
+                  "rank": 2,
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "start": 2477.510866666667,
+                  "end": 2482.510866666667,
+                  "sampled_timestamps": [
+                    2480.010866666667
+                  ],
+                  "frame_ids": [
+                    "visual_000496"
+                  ],
+                  "text": "CLIP retrieval candidate at 2480.011 seconds; inspect the frame to verify its content.",
+                  "window_kind": "context_around_sample",
+                  "provenance": {
+                    "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+                    "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+                    "model_id": "openai/clip-vit-base-patch32",
+                    "model_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+                    "image_sha256": "1933a6eaf96a3de3c9636edc44f3a60c8de4509d8acadf44f67f22492b07346b",
+                    "warning": "Similarity is a retrieval score, not event presence or confidence."
+                  },
+                  "segment_ids": [
+                    "visual_000496"
+                  ],
+                  "candidate_original_range": [
+                    2477.510866666667,
+                    2482.510866666667
+                  ],
+                  "dense_similarity": 0.28602492809295654
+                },
+                {
+                  "id": "ocr:visual_000496",
+                  "start": 2475.010866666667,
+                  "end": 2485.010866666667,
+                  "source": "ocr",
+                  "text": "Time & token use\nAll-in totals for this research task.\nWorkflow\nTotal tokens\nCompletion\nTool calls\nSessions\nMain agent\n1,864,433\n5m 36s\n57\n3\n+ subagents\nKanban\n2,368,325\n8m 39s\n73\n5 + auxiliary\nauto-decomposer\nKanban orchestrator\n1,974,215\n6m 36s\n82\n6\n(goal)\nKanban orchestrator\n1,769,942\n4m 59s\n74\n5\n(no goal)\nObserved in this test only • Auto-decomposer total includes identified auxiliary overhead",
+                  "segment_ids": [
+                    "ocr:visual_000496"
+                  ],
+                  "sampled_timestamps": [
+                    2480.010866666667
+                  ],
+                  "window_kind": "context_around_sample",
+                  "ocr_lines": [
+                    {
+                      "text": "Time & token use",
+                      "confidence": 0.99965,
+                      "polygon": [
+                        [
+                          57.0,
+                          74.0
+                        ],
+                        [
+                          527.0,
+                          78.0
+                        ],
+                        [
+                          527.0,
+                          131.0
+                        ],
+                        [
+                          57.0,
+                          127.0
+                        ]
+                      ],
+                      "bbox": [
+                        57.0,
+                        74.0,
+                        527.0,
+                        131.0
+                      ],
+                      "bbox_normalized": [
+                        0.037109375,
+                        0.08564814814814815,
+                        0.3430989583333333,
+                        0.15162037037037038
+                      ]
+                    },
+                    {
+                      "text": "All-in totals for this research task.",
+                      "confidence": 0.98115,
+                      "polygon": [
+                        [
+                          62.0,
+                          142.0
+                        ],
+                        [
+                          419.0,
+                          142.0
+                        ],
+                        [
+                          419.0,
+                          172.0
+                        ],
+                        [
+                          62.0,
+                          172.0
+                        ]
+                      ],
+                      "bbox": [
+                        62.0,
+                        142.0,
+                        419.0,
+                        172.0
+                      ],
+                      "bbox_normalized": [
+                        0.040364583333333336,
+                        0.16435185185185186,
+                        0.2727864583333333,
+                        0.19907407407407407
+                      ]
+                    },
+                    {
+                      "text": "Workflow",
+                      "confidence": 0.99997,
+                      "polygon": [
+                        [
+                          75.0,
+                          244.0
+                        ],
+                        [
+                          183.0,
+                          244.0
+                        ],
+                        [
+                          183.0,
+                          272.0
+                        ],
+                        [
+                          75.0,
+                          272.0
+                        ]
+                      ],
+                      "bbox": [
+                        75.0,
+                        244.0,
+                        183.0,
+                        272.0
+                      ],
+                      "bbox_normalized": [
+                        0.048828125,
+                        0.2824074074074074,
+                        0.119140625,
+                        0.3148148148148148
+                      ]
+                    },
+                    {
+                      "text": "Total tokens",
+                      "confidence": 0.99998,
+                      "polygon": [
+                        [
+                          582.0,
+                          243.0
+                        ],
+                        [
+                          721.0,
+                          245.0
+                        ],
+                        [
+                          721.0,
+                          273.0
+                        ],
+                        [
+                          582.0,
+                          271.0
+                        ]
+                      ],
+                      "bbox": [
+                        582.0,
+                        243.0,
+                        721.0,
+                        273.0
+                      ],
+                      "bbox_normalized": [
+                        0.37890625,
+                        0.28125,
+                        0.4694010416666667,
+                        0.3159722222222222
+                      ]
+                    },
+                    {
+                      "text": "Completion",
+                      "confidence": 0.99999,
+                      "polygon": [
+                        [
+                          862.0,
+                          243.0
+                        ],
+                        [
+                          993.0,
+                          243.0
+                        ],
+                        [
+                          993.0,
+                          274.0
+                        ],
+                        [
+                          862.0,
+                          274.0
+                        ]
+                      ],
+                      "bbox": [
+                        862.0,
+                        243.0,
+                        993.0,
+                        274.0
+                      ],
+                      "bbox_normalized": [
+                        0.5611979166666666,
+                        0.28125,
+                        0.646484375,
+                        0.31712962962962965
+                      ]
+                    },
+                    {
+                      "text": "Tool calls",
+                      "confidence": 0.99996,
+                      "polygon": [
+                        [
+                          1102.0,
+                          244.0
+                        ],
+                        [
+                          1209.0,
+                          244.0
+                        ],
+                        [
+                          1209.0,
+                          272.0
+                        ],
+                        [
+                          1102.0,
+                          272.0
+                        ]
+                      ],
+                      "bbox": [
+                        1102.0,
+                        244.0,
+                        1209.0,
+                        272.0
+                      ],
+                      "bbox_normalized": [
+                        0.7174479166666666,
+                        0.2824074074074074,
+                        0.787109375,
+                        0.3148148148148148
+                      ]
+                    },
+                    {
+                      "text": "Sessions",
+                      "confidence": 0.99998,
+                      "polygon": [
+                        [
+                          1310.0,
+                          244.0
+                        ],
+                        [
+                          1412.0,
+                          244.0
+                        ],
+                        [
+                          1412.0,
+                          272.0
+                        ],
+                        [
+                          1310.0,
+                          272.0
+                        ]
+                      ],
+                      "bbox": [
+                        1310.0,
+                        244.0,
+                        1412.0,
+                        272.0
+                      ],
+                      "bbox_normalized": [
+                        0.8528645833333334,
+                        0.2824074074074074,
+                        0.9192708333333334,
+                        0.3148148148148148
+                      ]
+                    },
+                    {
+                      "text": "Main agent",
+                      "confidence": 0.99998,
+                      "polygon": [
+                        [
+                          74.0,
+                          323.0
+                        ],
+                        [
+                          250.0,
+                          323.0
+                        ],
+                        [
+                          250.0,
+                          360.0
+                        ],
+                        [
+                          74.0,
+                          360.0
+                        ]
+                      ],
+                      "bbox": [
+                        74.0,
+                        323.0,
+                        250.0,
+                        360.0
+                      ],
+                      "bbox_normalized": [
+                        0.048177083333333336,
+                        0.3738425925925926,
+                        0.16276041666666666,
+                        0.4166666666666667
+                      ]
+                    },
+                    {
+                      "text": "1,864,433",
+                      "confidence": 0.99992,
+                      "polygon": [
+                        [
+                          577.0,
+                          339.0
+                        ],
+                        [
+                          727.0,
+                          339.0
+                        ],
+                        [
+                          727.0,
+                          376.0
+                        ],
+                        [
+                          577.0,
+                          376.0
+                        ]
+                      ],
+                      "bbox": [
+                        577.0,
+                        339.0,
+                        727.0,
+                        376.0
+                      ],
+                      "bbox_normalized": [
+                        0.3756510416666667,
+                        0.3923611111111111,
+                        0.4733072916666667,
+                        0.4351851851851852
+                      ]
+                    },
+                    {
+                      "text": "5m 36s",
+                      "confidence": 0.91828,
+                      "polygon": [
+                        [
+                          870.0,
+                          338.0
+                        ],
+                        [
+                          986.0,
+                          338.0
+                        ],
+                        [
+                          986.0,
+                          376.0
+                        ],
+                        [
+                          870.0,
+                          376.0
+                        ]
+                      ],
+                      "bbox": [
+                        870.0,
+                        338.0,
+                        986.0,
+                        376.0
+                      ],
+                      "bbox_normalized": [
+                        0.56640625,
+                        0.3912037037037037,
+                        0.6419270833333334,
+                        0.4351851851851852
+                      ]
+                    },
+                    {
+                      "text": "57",
+                      "confidence": 0.99998,
+                      "polygon": [
+                        [
+                          1127.0,
+                          334.0
+                        ],
+                        [
+                          1183.0,
+                          334.0
+                        ],
+                        [
+                          1183.0,
+                          378.0
+                        ],
+                        [
+                          1127.0,
+                          378.0
+                        ]
+                      ],
+                      "bbox": [
+                        1127.0,
+                        334.0,
+                        1183.0,
+                        378.0
+                      ],
+                      "bbox_normalized": [
+                        0.7337239583333334,
+                        0.38657407407407407,
+                        0.7701822916666666,
+                        0.4375
+                      ]
+                    },
+                    {
+                      "text": "3",
+                      "confidence": 0.99981,
+                      "polygon": [
+                        [
+                          1345.0,
+                          337.0
+                        ],
+                        [
+                          1377.0,
+                          337.0
+                        ],
+                        [
+                          1377.0,
+                          376.0
+                        ],
+                        [
+                          1345.0,
+                          376.0
+                        ]
+                      ],
+                      "bbox": [
+                        1345.0,
+                        337.0,
+                        1377.0,
+                        376.0
+                      ],
+                      "bbox_normalized": [
+                        0.8756510416666666,
+                        0.3900462962962963,
+                        0.896484375,
+                        0.4351851851851852
+                      ]
+                    },
+                    {
+                      "text": "+ subagents",
+                      "confidence": 0.99461,
+                      "polygon": [
+                        [
+                          74.0,
+                          359.0
+                        ],
+                        [
+                          265.0,
+                          359.0
+                        ],
+                        [
+                          265.0,
+                          393.0
+                        ],
+                        [
+                          74.0,
+                          393.0
+                        ]
+                      ],
+                      "bbox": [
+                        74.0,
+                        359.0,
+                        265.0,
+                        393.0
+                      ],
+                      "bbox_normalized": [
+                        0.048177083333333336,
+                        0.41550925925925924,
+                        0.17252604166666666,
+                        0.4548611111111111
+                      ]
+                    },
+                    {
+                      "text": "Kanban",
+                      "confidence": 0.99997,
+                      "polygon": [
+                        [
+                          73.0,
+                          439.0
+                        ],
+                        [
+                          193.0,
+                          439.0
+                        ],
+                        [
+                          193.0,
+                          474.0
+                        ],
+                        [
+                          73.0,
+                          474.0
+                        ]
+                      ],
+                      "bbox": [
+                        73.0,
+                        439.0,
+                        193.0,
+                        474.0
+                      ],
+                      "bbox_normalized": [
+                        0.047526041666666664,
+                        0.5081018518518519,
+                        0.12565104166666666,
+                        0.5486111111111112
+                      ]
+                    },
+                    {
+                      "text": "2,368,325",
+                      "confidence": 0.99998,
+                      "polygon": [
+                        [
+                          576.0,
+                          454.0
+                        ],
+                        [
+                          727.0,
+                          454.0
+                        ],
+                        [
+                          727.0,
+                          492.0
+                        ],
+                        [
+                          576.0,
+                          492.0
+                        ]
+                      ],
+                      "bbox": [
+                        576.0,
+                        454.0,
+                        727.0,
+                        492.0
+                      ],
+                      "bbox_normalized": [
+                        0.375,
+                        0.5254629629629629,
+                        0.4733072916666667,
+                        0.5694444444444444
+                      ]
+                    },
+                    {
+                      "text": "8m 39s",
+                      "confidence": 0.94348,
+                      "polygon": [
+                        [
+                          870.0,
+                          454.0
+                        ],
+                        [
+                          986.0,
+                          454.0
+                        ],
+                        [
+                          986.0,
+                          492.0
+                        ],
+                        [
+                          870.0,
+                          492.0
+                        ]
+                      ],
+                      "bbox": [
+                        870.0,
+                        454.0,
+                        986.0,
+                        492.0
+                      ],
+                      "bbox_normalized": [
+                        0.56640625,
+                        0.5254629629629629,
+                        0.6419270833333334,
+                        0.5694444444444444
+                      ]
+                    },
+                    {
+                      "text": "73",
+                      "confidence": 0.99999,
+                      "polygon": [
+                        [
+                          1127.0,
+                          450.0
+                        ],
+                        [
+                          1184.0,
+                          450.0
+                        ],
+                        [
+                          1184.0,
+                          495.0
+                        ],
+                        [
+                          1127.0,
+                          495.0
+                        ]
+                      ],
+                      "bbox": [
+                        1127.0,
+                        450.0,
+                        1184.0,
+                        495.0
+                      ],
+                      "bbox_normalized": [
+                        0.7337239583333334,
+                        0.5208333333333334,
+                        0.7708333333333334,
+                        0.5729166666666666
+                      ]
+                    },
+                    {
+                      "text": "5 + auxiliary",
+                      "confidence": 0.99364,
+                      "polygon": [
+                        [
+                          1292.0,
+                          460.0
+                        ],
+                        [
+                          1430.0,
+                          462.0
+                        ],
+                        [
+                          1430.0,
+                          493.0
+                        ],
+                        [
+                          1292.0,
+                          491.0
+                        ]
+                      ],
+                      "bbox": [
+                        1292.0,
+                        460.0,
+                        1430.0,
+                        493.0
+                      ],
+                      "bbox_normalized": [
+                        0.8411458333333334,
+                        0.5324074074074074,
+                        0.9309895833333334,
+                        0.5706018518518519
+                      ]
+                    },
+                    {
+                      "text": "auto-decomposer",
+                      "confidence": 0.99999,
+                      "polygon": [
+                        [
+                          73.0,
+                          474.0
+                        ],
+                        [
+                          338.0,
+                          477.0
+                        ],
+                        [
+                          338.0,
+                          511.0
+                        ],
+                        [
+                          73.0,
+                          508.0
+                        ]
+                      ],
+                      "bbox": [
+                        73.0,
+                        474.0,
+                        338.0,
+                        511.0
+                      ],
+                      "bbox_normalized": [
+                        0.047526041666666664,
+                        0.5486111111111112,
+                        0.22005208333333334,
+                        0.5914351851851852
+                      ]
+                    },
+                    {
+                      "text": "Kanban orchestrator",
+                      "confidence": 0.99972,
+                      "polygon": [
+                        [
+                          74.0,
+                          554.0
+                        ],
+                        [
+                          385.0,
+                          556.0
+                        ],
+                        [
+                          385.0,
+                          589.0
+                        ],
+                        [
+                          74.0,
+                          587.0
+                        ]
+                      ],
+                      "bbox": [
+                        74.0,
+                        554.0,
+                        385.0,
+                        589.0
+                      ],
+                      "bbox_normalized": [
+                        0.048177083333333336,
+                        0.6412037037037037,
+                        0.2506510416666667,
+                        0.6817129629629629
+                      ]
+                    },
+                    {
+                      "text": "1,974,215",
+                      "confidence": 0.99995,
+                      "polygon": [
+                        [
+                          576.0,
+                          570.0
+                        ],
+                        [
+                          725.0,
+                          570.0
+                        ],
+                        [
+                          725.0,
+                          607.0
+                        ],
+                        [
+                          576.0,
+                          607.0
+                        ]
+                      ],
+                      "bbox": [
+                        576.0,
+                        570.0,
+                        725.0,
+                        607.0
+                      ],
+                      "bbox_normalized": [
+                        0.375,
+                        0.6597222222222222,
+                        0.4720052083333333,
+                        0.7025462962962963
+                      ]
+                    },
+                    {
+                      "text": "6m 36s",
+                      "confidence": 0.99808,
+                      "polygon": [
+                        [
+                          871.0,
+                          570.0
+                        ],
+                        [
+                          986.0,
+                          570.0
+                        ],
+                        [
+                          986.0,
+                          608.0
+                        ],
+                        [
+                          871.0,
+                          608.0
+                        ]
+                      ],
+                      "bbox": [
+                        871.0,
+                        570.0,
+                        986.0,
+                        608.0
+                      ],
+                      "bbox_normalized": [
+                        0.5670572916666666,
+                        0.6597222222222222,
+                        0.6419270833333334,
+                        0.7037037037037037
+                      ]
+                    },
+                    {
+                      "text": "82",
+                      "confidence": 0.99998,
+                      "polygon": [
+                        [
+                          1128.0,
+                          567.0
+                        ],
+                        [
+                          1183.0,
+                          567.0
+                        ],
+                        [
+                          1183.0,
+                          611.0
+                        ],
+                        [
+                          1128.0,
+                          611.0
+                        ]
+                      ],
+                      "bbox": [
+                        1128.0,
+                        567.0,
+                        1183.0,
+                        611.0
+                      ],
+                      "bbox_normalized": [
+                        0.734375,
+                        0.65625,
+                        0.7701822916666666,
+                        0.7071759259259259
+                      ]
+                    },
+                    {
+                      "text": "6",
+                      "confidence": 0.99939,
+                      "polygon": [
+                        [
+                          1348.0,
+                          571.0
+                        ],
+                        [
+                          1376.0,
+                          571.0
+                        ],
+                        [
+                          1376.0,
+                          607.0
+                        ],
+                        [
+                          1348.0,
+                          607.0
+                        ]
+                      ],
+                      "bbox": [
+                        1348.0,
+                        571.0,
+                        1376.0,
+                        607.0
+                      ],
+                      "bbox_normalized": [
+                        0.8776041666666666,
+                        0.6608796296296297,
+                        0.8958333333333334,
+                        0.7025462962962963
+                      ]
+                    },
+                    {
+                      "text": "(goal)",
+                      "confidence": 0.99992,
+                      "polygon": [
+                        [
+                          73.0,
+                          588.0
+                        ],
+                        [
+                          171.0,
+                          588.0
+                        ],
+                        [
+                          171.0,
+                          630.0
+                        ],
+                        [
+                          73.0,
+                          630.0
+                        ]
+                      ],
+                      "bbox": [
+                        73.0,
+                        588.0,
+                        171.0,
+                        630.0
+                      ],
+                      "bbox_normalized": [
+                        0.047526041666666664,
+                        0.6805555555555556,
+                        0.111328125,
+                        0.7291666666666666
+                      ]
+                    },
+                    {
+                      "text": "Kanban orchestrator",
+                      "confidence": 0.99997,
+                      "polygon": [
+                        [
+                          75.0,
+                          672.0
+                        ],
+                        [
+                          385.0,
+                          672.0
+                        ],
+                        [
+                          385.0,
+                          705.0
+                        ],
+                        [
+                          75.0,
+                          705.0
+                        ]
+                      ],
+                      "bbox": [
+                        75.0,
+                        672.0,
+                        385.0,
+                        705.0
+                      ],
+                      "bbox_normalized": [
+                        0.048828125,
+                        0.7777777777777778,
+                        0.2506510416666667,
+                        0.8159722222222222
+                      ]
+                    },
+                    {
+                      "text": "1,769,942",
+                      "confidence": 0.99998,
+                      "polygon": [
+                        [
+                          571.0,
+                          687.0
+                        ],
+                        [
+                          734.0,
+                          687.0
+                        ],
+                        [
+                          734.0,
+                          724.0
+                        ],
+                        [
+                          571.0,
+                          724.0
+                        ]
+                      ],
+                      "bbox": [
+                        571.0,
+                        687.0,
+                        734.0,
+                        724.0
+                      ],
+                      "bbox_normalized": [
+                        0.3717447916666667,
+                        0.7951388888888888,
+                        0.4778645833333333,
+                        0.8379629629629629
+                      ]
+                    },
+                    {
+                      "text": "4m 59s",
+                      "confidence": 0.9999,
+                      "polygon": [
+                        [
+                          865.0,
+                          686.0
+                        ],
+                        [
+                          991.0,
+                          686.0
+                        ],
+                        [
+                          991.0,
+                          724.0
+                        ],
+                        [
+                          865.0,
+                          724.0
+                        ]
+                      ],
+                      "bbox": [
+                        865.0,
+                        686.0,
+                        991.0,
+                        724.0
+                      ],
+                      "bbox_normalized": [
+                        0.5631510416666666,
+                        0.7939814814814815,
+                        0.6451822916666666,
+                        0.8379629629629629
+                      ]
+                    },
+                    {
+                      "text": "74",
+                      "confidence": 0.99998,
+                      "polygon": [
+                        [
+                          1129.0,
+                          684.0
+                        ],
+                        [
+                          1182.0,
+                          684.0
+                        ],
+                        [
+                          1182.0,
+                          724.0
+                        ],
+                        [
+                          1129.0,
+                          724.0
+                        ]
+                      ],
+                      "bbox": [
+                        1129.0,
+                        684.0,
+                        1182.0,
+                        724.0
+                      ],
+                      "bbox_normalized": [
+                        0.7350260416666666,
+                        0.7916666666666666,
+                        0.76953125,
+                        0.8379629629629629
+                      ]
+                    },
+                    {
+                      "text": "5",
+                      "confidence": 0.99987,
+                      "polygon": [
+                        [
+                          1345.0,
+                          685.0
+                        ],
+                        [
+                          1378.0,
+                          685.0
+                        ],
+                        [
+                          1378.0,
+                          724.0
+                        ],
+                        [
+                          1345.0,
+                          724.0
+                        ]
+                      ],
+                      "bbox": [
+                        1345.0,
+                        685.0,
+                        1378.0,
+                        724.0
+                      ],
+                      "bbox_normalized": [
+                        0.8756510416666666,
+                        0.7928240740740741,
+                        0.8971354166666666,
+                        0.8379629629629629
+                      ]
+                    },
+                    {
+                      "text": "(no goal)",
+                      "confidence": 0.99996,
+                      "polygon": [
+                        [
+                          74.0,
+                          706.0
+                        ],
+                        [
+                          214.0,
+                          706.0
+                        ],
+                        [
+                          214.0,
+                          744.0
+                        ],
+                        [
+                          74.0,
+                          744.0
+                        ]
+                      ],
+                      "bbox": [
+                        74.0,
+                        706.0,
+                        214.0,
+                        744.0
+                      ],
+                      "bbox_normalized": [
+                        0.048177083333333336,
+                        0.8171296296296297,
+                        0.13932291666666666,
+                        0.8611111111111112
+                      ]
+                    },
+                    {
+                      "text": "Observed in this test only • Auto-decomposer total includes identified auxiliary overhead",
+                      "confidence": 0.99247,
+                      "polygon": [
+                        [
+                          61.0,
+                          795.0
+                        ],
+                        [
+                          784.0,
+                          796.0
+                        ],
+                        [
+                          784.0,
+                          820.0
+                        ],
+                        [
+                          61.0,
+                          819.0
+                        ]
+                      ],
+                      "bbox": [
+                        61.0,
+                        795.0,
+                        784.0,
+                        820.0
+                      ],
+                      "bbox_normalized": [
+                        0.039713541666666664,
+                        0.9201388888888888,
+                        0.5104166666666666,
+                        0.9490740740740741
+                      ]
+                    }
+                  ],
+                  "ocr_provenance": {
+                    "engine": "RapidOCR",
+                    "package_version": "3.9.2",
+                    "runtime": "CPU ONNX Runtime",
+                    "model_info": {
+                      "engine": "RapidOCR",
+                      "package_version": "3.9.2",
+                      "runtime": "CPU ONNX Runtime",
+                      "identity_status": "resolved",
+                      "model_files": [
+                        {
+                          "component": "detector",
+                          "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\PP-OCRv6_det_small.onnx",
+                          "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+                          "size_bytes": 9929594
+                        },
+                        {
+                          "component": "classifier",
+                          "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\ch_ppocr_mobile_v2.0_cls_mobile.onnx",
+                          "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+                          "size_bytes": 585532
+                        },
+                        {
+                          "component": "recognizer",
+                          "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\PP-OCRv6_rec_small.onnx",
+                          "sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+                          "size_bytes": 21234383
+                        }
+                      ],
+                      "unresolved_components": [],
+                      "disabled_components": [],
+                      "model_hash_policy": "SHA-256 of actual enabled session model files on disk, cached per adapter engine; no inference. Injected or in-memory engines have unknown model identity.",
+                      "config": {
+                        "params": {
+                          "EngineConfig.onnxruntime.use_cuda": false,
+                          "EngineConfig.onnxruntime.use_dml": false
+                        },
+                        "max_side": 1536,
+                        "min_confidence": 0.5,
+                        "effective": {
+                          "Global": {
+                            "text_score": 0.5,
+                            "use_det": true,
+                            "use_cls": true,
+                            "use_rec": true,
+                            "use_preprocess_img": true,
+                            "min_side_len": 30,
+                            "max_side_len": 2000,
+                            "use_vertical_padding": true,
+                            "min_height": 30,
+                            "width_height_ratio": 8,
+                            "return_word_box": false,
+                            "return_single_char_box": false,
+                            "font_path": null,
+                            "log_level": "info",
+                            "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                          },
+                          "EngineConfig": {
+                            "onnxruntime": {
+                              "intra_op_num_threads": -1,
+                              "inter_op_num_threads": -1,
+                              "enable_cpu_mem_arena": false,
+                              "cpu_ep_cfg": {
+                                "arena_extend_strategy": "kSameAsRequested"
+                              },
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "cudnn_conv_algo_search": "EXHAUSTIVE",
+                                "do_copy_in_default_stream": true
+                              },
+                              "use_dml": false,
+                              "dml_ep_cfg": null,
+                              "use_cann": false,
+                              "cann_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "npu_mem_limit": 21474836480,
+                                "op_select_impl_mode": "high_performance",
+                                "optypelist_for_implmode": "Gelu",
+                                "enable_cann_graph": true
+                              },
+                              "use_coreml": false,
+                              "coreml_ep_cfg": {
+                                "ModelFormat": "MLProgram",
+                                "MLComputeUnits": "ALL",
+                                "RequireStaticInputShapes": 0,
+                                "EnableOnSubgraphs": 0,
+                                "SpecializationStrategy": "FastPrediction",
+                                "ProfileComputePlan": 0,
+                                "AllowLowPrecisionAccumulationOnGPU": 0,
+                                "ModelCacheDirectory": "/tmp/RapidOCR"
+                              }
+                            },
+                            "openvino": {
+                              "inference_num_threads": -1,
+                              "performance_hint": null,
+                              "performance_num_requests": -1,
+                              "enable_cpu_pinning": null,
+                              "num_streams": -1,
+                              "enable_hyper_threading": null,
+                              "scheduling_core_type": null
+                            },
+                            "paddle": {
+                              "cpu_math_library_num_threads": -1,
+                              "use_npu": false,
+                              "npu_ep_cfg": {
+                                "device_id": 0,
+                                "envs": {
+                                  "FLAGS_npu_jit_compile": 0,
+                                  "FLAGS_use_stride_kernel": 0,
+                                  "FLAGS_allocator_strategy": "auto_growth",
+                                  "CUSTOM_DEVICE_BLACK_LIST": "pad3d,pad3d_grad,set_value,set_value_with_tensor",
+                                  "FLAGS_npu_scale_aclnn": "True",
+                                  "FLAGS_npu_split_aclnn": "True"
+                                }
+                              },
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0,
+                                "gpu_mem": 500
+                              }
+                            },
+                            "torch": {
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0
+                              },
+                              "use_npu": false,
+                              "npu_ep_cfg": {
+                                "device_id": 0
+                              },
+                              "use_mps": false
+                            },
+                            "tensorrt": {
+                              "device_id": 0,
+                              "use_fp16": true,
+                              "use_int8": false,
+                              "workspace_size": 1073741824,
+                              "cache_dir": null,
+                              "force_rebuild": false,
+                              "det_profile": {
+                                "min_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "opt_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "max_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                }
+                              },
+                              "rec_profile": {
+                                "min_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "opt_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "max_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                }
+                              },
+                              "cls_profile": {
+                                "min_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "opt_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "max_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                }
+                              }
+                            },
+                            "mnn": {}
+                          },
+                          "Det": {
+                            "engine_type": "onnxruntime",
+                            "lang_type": "ch",
+                            "model_type": "small",
+                            "ocr_version": "PP-OCRv6",
+                            "task_type": "det",
+                            "model_path": null,
+                            "model_dir": null,
+                            "limit_side_len": 736,
+                            "limit_type": "min",
+                            "std": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "mean": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "thresh": 0.3,
+                            "box_thresh": 0.5,
+                            "max_candidates": 1000,
+                            "unclip_ratio": 1.6,
+                            "use_dilation": true,
+                            "score_mode": "fast",
+                            "engine_cfg": {
+                              "intra_op_num_threads": -1,
+                              "inter_op_num_threads": -1,
+                              "enable_cpu_mem_arena": false,
+                              "cpu_ep_cfg": {
+                                "arena_extend_strategy": "kSameAsRequested"
+                              },
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "cudnn_conv_algo_search": "EXHAUSTIVE",
+                                "do_copy_in_default_stream": true
+                              },
+                              "use_dml": false,
+                              "dml_ep_cfg": null,
+                              "use_cann": false,
+                              "cann_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "npu_mem_limit": 21474836480,
+                                "op_select_impl_mode": "high_performance",
+                                "optypelist_for_implmode": "Gelu",
+                                "enable_cann_graph": true
+                              },
+                              "use_coreml": false,
+                              "coreml_ep_cfg": {
+                                "ModelFormat": "MLProgram",
+                                "MLComputeUnits": "ALL",
+                                "RequireStaticInputShapes": 0,
+                                "EnableOnSubgraphs": 0,
+                                "SpecializationStrategy": "FastPrediction",
+                                "ProfileComputePlan": 0,
+                                "AllowLowPrecisionAccumulationOnGPU": 0,
+                                "ModelCacheDirectory": "/tmp/RapidOCR"
+                              }
+                            },
+                            "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                          },
+                          "Cls": {
+                            "engine_type": "onnxruntime",
+                            "lang_type": "ch",
+                            "model_type": "mobile",
+                            "ocr_version": "PP-OCRv4",
+                            "task_type": "cls",
+                            "model_path": null,
+                            "model_dir": null,
+                            "cls_image_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "cls_batch_num": 6,
+                            "cls_thresh": 0.9,
+                            "label_list": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "engine_cfg": {
+                              "intra_op_num_threads": -1,
+                              "inter_op_num_threads": -1,
+                              "enable_cpu_mem_arena": false,
+                              "cpu_ep_cfg": {
+                                "arena_extend_strategy": "kSameAsRequested"
+                              },
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "cudnn_conv_algo_search": "EXHAUSTIVE",
+                                "do_copy_in_default_stream": true
+                              },
+                              "use_dml": false,
+                              "dml_ep_cfg": null,
+                              "use_cann": false,
+                              "cann_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "npu_mem_limit": 21474836480,
+                                "op_select_impl_mode": "high_performance",
+                                "optypelist_for_implmode": "Gelu",
+                                "enable_cann_graph": true
+                              },
+                              "use_coreml": false,
+                              "coreml_ep_cfg": {
+                                "ModelFormat": "MLProgram",
+                                "MLComputeUnits": "ALL",
+                                "RequireStaticInputShapes": 0,
+                                "EnableOnSubgraphs": 0,
+                                "SpecializationStrategy": "FastPrediction",
+                                "ProfileComputePlan": 0,
+                                "AllowLowPrecisionAccumulationOnGPU": 0,
+                                "ModelCacheDirectory": "/tmp/RapidOCR"
+                              }
+                            },
+                            "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                          },
+                          "Rec": {
+                            "engine_type": "onnxruntime",
+                            "lang_type": "ch",
+                            "model_type": "small",
+                            "ocr_version": "PP-OCRv6",
+                            "task_type": "rec",
+                            "model_path": null,
+                            "model_dir": null,
+                            "rec_keys_path": null,
+                            "rec_img_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "rec_batch_num": 6,
+                            "engine_cfg": {
+                              "intra_op_num_threads": -1,
+                              "inter_op_num_threads": -1,
+                              "enable_cpu_mem_arena": false,
+                              "cpu_ep_cfg": {
+                                "arena_extend_strategy": "kSameAsRequested"
+                              },
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "cudnn_conv_algo_search": "EXHAUSTIVE",
+                                "do_copy_in_default_stream": true
+                              },
+                              "use_dml": false,
+                              "dml_ep_cfg": null,
+                              "use_cann": false,
+                              "cann_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "npu_mem_limit": 21474836480,
+                                "op_select_impl_mode": "high_performance",
+                                "optypelist_for_implmode": "Gelu",
+                                "enable_cann_graph": true
+                              },
+                              "use_coreml": false,
+                              "coreml_ep_cfg": {
+                                "ModelFormat": "MLProgram",
+                                "MLComputeUnits": "ALL",
+                                "RequireStaticInputShapes": 0,
+                                "EnableOnSubgraphs": 0,
+                                "SpecializationStrategy": "FastPrediction",
+                                "ProfileComputePlan": 0,
+                                "AllowLowPrecisionAccumulationOnGPU": 0,
+                                "ModelCacheDirectory": "/tmp/RapidOCR"
+                              }
+                            },
+                            "font_path": null,
+                            "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                          }
+                        }
+                      },
+                      "config_sha256": "73e31c01e93f73a026d964bbd58a7ae63126758d7d230b70f8dde27cc26b3401"
+                    },
+                    "image_sha256": "1933a6eaf96a3de3c9636edc44f3a60c8de4509d8acadf44f67f22492b07346b",
+                    "original_size": [
+                      1536,
+                      864
+                    ],
+                    "processed_size": [
+                      1536,
+                      864
+                    ],
+                    "min_confidence": 0.5,
+                    "evidence_kind": "sampled_frame_screen_text",
+                    "warning": "OCR may misread text; this observation does not establish text duration."
+                  }
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "fusion:47ea9e4fde1c753b",
+              "start": 1920.0,
+              "end": 1980.0,
+              "text": "[caption] - **Frame 1920.018**: A \"New task in Triage\" dialog box is open, titled \"Multi-agent research.\" It includes fields for \"Priority,\" \"Workspace,\" \"Assignee,\" \"Skills,\" and \"Model.\" The \"Assignee\" is set to \"wanderloots-tutorials (default).\" The \"Model\" is \"translation, github.\" A message box at the bottom reads: \"Rough estimate for reviewing the repository, researching up to five credible sources, comparing single-agent delegation with specialized multi-agent systems, and drafting a cited synthesis under 500 words.\" A \"Create task\" button is visible.\n\n- **Frame 1979.978**: The Kanban interface shows two tasks in progress: \"Research a practical information-to-action and knowledge workflow\" and \"Compare delegated single-agent and specialized multi-agent systems.\" The first task is marked as \"RUNNING\"\n[transcript] It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00032",
+                "T00653",
+                "T00654",
+                "T00655",
+                "T00656",
+                "T00657",
+                "T00658",
+                "T00659",
+                "T00660",
+                "T00661",
+                "T00662",
+                "T00663",
+                "T00664",
+                "T00665",
+                "T00666"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.028721271631132226,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 13,
+                  "retrieval_score": 2.43389915480845,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0045662100456621,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 2,
+                  "retrieval_score": 4.790630769662552,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 4,
+                  "retrieval_score": 4.790630769662552,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 26,
+                  "retrieval_score": 2.165946550622636,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.003875968992248062,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 5,
+                  "retrieval_score": 5.912883764803078,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 13,
+                  "retrieval_score": 3.746937214180442,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0045662100456621,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:64",
+                  "start": 1920.0,
+                  "end": 1980.0,
+                  "text": "- **Frame 1920.018**: A \"New task in Triage\" dialog box is open, titled \"Multi-agent research.\" It includes fields for \"Priority,\" \"Workspace,\" \"Assignee,\" \"Skills,\" and \"Model.\" The \"Assignee\" is set to \"wanderloots-tutorials (default).\" The \"Model\" is \"translation, github.\" A message box at the bottom reads: \"Rough estimate for reviewing the repository, researching up to five credible sources, comparing single-agent delegation with specialized multi-agent systems, and drafting a cited synthesis under 500 words.\" A \"Create task\" button is visible.\n\n- **Frame 1979.978**: The Kanban interface shows two tasks in progress: \"Research a practical information-to-action and knowledge workflow\" and \"Compare delegated single-agent and specialized multi-agent systems.\" The first task is marked as \"RUNNING\"",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00032"
+                  ]
+                },
+                {
+                  "id": "transcript:64",
+                  "start": 1920.39,
+                  "end": 1952.25,
+                  "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00653",
+                    "T00654",
+                    "T00655",
+                    "T00656",
+                    "T00657",
+                    "T00658",
+                    "T00659",
+                    "T00660",
+                    "T00661",
+                    "T00662",
+                    "T00663",
+                    "T00664",
+                    "T00665",
+                    "T00666"
+                  ]
+                }
+              ],
+              "selection_score": 0.5859578015439662,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "fusion:fef0d99d78fb785e",
+              "start": 59.998266666666666,
+              "end": 69.99826666666667,
+              "text": "[ocr] Time & token use\nAll-in totals for this research task.\nWorkflow\nTotal tokens\nCompletion\nTool calls\nSessions\nMain agent\n1,864,433\n5m 36s\n57\n+ subagents\nKanban\nauto-decomposer\nKanban orchestrator\n(goal)\nKanban orchestrator\n(no goal)\nObserved in this test only • Auto-decomposer total includes identified auxiliary overhead\n[dense_visual] CLIP retrieval candidate at 64.998 seconds; inspect the frame to verify its content.",
+              "source": "hybrid",
+              "modalities": [
+                "dense_visual",
+                "ocr"
+              ],
+              "segment_ids": [
+                "ocr:visual_000013",
+                "visual_000013"
+              ],
+              "sampled_timestamps": [
+                64.99826666666667
+              ],
+              "score": 0.02697812004230566,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "ocr",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 1,
+                  "retrieval_score": 12.08727389740685,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "ocr",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 1,
+                  "retrieval_score": 12.08727389740685,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "ocr",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 1,
+                  "retrieval_score": 14.80871908630631,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "dense_visual",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 4,
+                  "retrieval_score": 0.2816983759403229,
+                  "channel_score_type": "cosine_similarity",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "dense_visual",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 2,
+                  "retrieval_score": 0.2780901789665222,
+                  "channel_score_type": "cosine_similarity",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "ocr:visual_000013",
+                  "start": 59.998266666666666,
+                  "end": 69.99826666666667,
+                  "source": "ocr",
+                  "text": "Time & token use\nAll-in totals for this research task.\nWorkflow\nTotal tokens\nCompletion\nTool calls\nSessions\nMain agent\n1,864,433\n5m 36s\n57\n+ subagents\nKanban\nauto-decomposer\nKanban orchestrator\n(goal)\nKanban orchestrator\n(no goal)\nObserved in this test only • Auto-decomposer total includes identified auxiliary overhead",
+                  "segment_ids": [
+                    "ocr:visual_000013"
+                  ],
+                  "sampled_timestamps": [
+                    64.99826666666667
+                  ],
+                  "window_kind": "context_around_sample",
+                  "ocr_lines": [
+                    {
+                      "text": "Time & token use",
+                      "confidence": 0.99956,
+                      "polygon": [
+                        [
+                          57.0,
+                          74.0
+                        ],
+                        [
+                          527.0,
+                          78.0
+                        ],
+                        [
+                          527.0,
+                          131.0
+                        ],
+                        [
+                          57.0,
+                          127.0
+                        ]
+                      ],
+                      "bbox": [
+                        57.0,
+                        74.0,
+                        527.0,
+                        131.0
+                      ],
+                      "bbox_normalized": [
+                        0.037109375,
+                        0.08564814814814815,
+                        0.3430989583333333,
+                        0.15162037037037038
+                      ]
+                    },
+                    {
+                      "text": "All-in totals for this research task.",
+                      "confidence": 0.99996,
+                      "polygon": [
+                        [
+                          62.0,
+                          143.0
+                        ],
+                        [
+                          419.0,
+                          143.0
+                        ],
+                        [
+                          419.0,
+                          172.0
+                        ],
+                        [
+                          62.0,
+                          172.0
+                        ]
+                      ],
+                      "bbox": [
+                        62.0,
+                        143.0,
+                        419.0,
+                        172.0
+                      ],
+                      "bbox_normalized": [
+                        0.040364583333333336,
+                        0.16550925925925927,
+                        0.2727864583333333,
+                        0.19907407407407407
+                      ]
+                    },
+                    {
+                      "text": "Workflow",
+                      "confidence": 0.99993,
+                      "polygon": [
+                        [
+                          74.0,
+                          243.0
+                        ],
+                        [
+                          182.0,
+                          245.0
+                        ],
+                        [
+                          182.0,
+                          273.0
+                        ],
+                        [
+                          74.0,
+                          271.0
+                        ]
+                      ],
+                      "bbox": [
+                        74.0,
+                        243.0,
+                        182.0,
+                        273.0
+                      ],
+                      "bbox_normalized": [
+                        0.048177083333333336,
+                        0.28125,
+                        0.11848958333333333,
+                        0.3159722222222222
+                      ]
+                    },
+                    {
+                      "text": "Total tokens",
+                      "confidence": 0.99992,
+                      "polygon": [
+                        [
+                          584.0,
+                          246.0
+                        ],
+                        [
+                          720.0,
+                          246.0
+                        ],
+                        [
+                          720.0,
+                          270.0
+                        ],
+                        [
+                          584.0,
+                          270.0
+                        ]
+                      ],
+                      "bbox": [
+                        584.0,
+                        246.0,
+                        720.0,
+                        270.0
+                      ],
+                      "bbox_normalized": [
+                        0.3802083333333333,
+                        0.2847222222222222,
+                        0.46875,
+                        0.3125
+                      ]
+                    },
+                    {
+                      "text": "Completion",
+                      "confidence": 0.99999,
+                      "polygon": [
+                        [
+                          863.0,
+                          243.0
+                        ],
+                        [
+                          992.0,
+                          243.0
+                        ],
+                        [
+                          992.0,
+                          273.0
+                        ],
+                        [
+                          863.0,
+                          273.0
+                        ]
+                      ],
+                      "bbox": [
+                        863.0,
+                        243.0,
+                        992.0,
+                        273.0
+                      ],
+                      "bbox_normalized": [
+                        0.5618489583333334,
+                        0.28125,
+                        0.6458333333333334,
+                        0.3159722222222222
+                      ]
+                    },
+                    {
+                      "text": "Tool calls",
+                      "confidence": 0.99996,
+                      "polygon": [
+                        [
+                          1102.0,
+                          244.0
+                        ],
+                        [
+                          1209.0,
+                          244.0
+                        ],
+                        [
+                          1209.0,
+                          272.0
+                        ],
+                        [
+                          1102.0,
+                          272.0
+                        ]
+                      ],
+                      "bbox": [
+                        1102.0,
+                        244.0,
+                        1209.0,
+                        272.0
+                      ],
+                      "bbox_normalized": [
+                        0.7174479166666666,
+                        0.2824074074074074,
+                        0.787109375,
+                        0.3148148148148148
+                      ]
+                    },
+                    {
+                      "text": "Sessions",
+                      "confidence": 0.99998,
+                      "polygon": [
+                        [
+                          1311.0,
+                          243.0
+                        ],
+                        [
+                          1412.0,
+                          245.0
+                        ],
+                        [
+                          1412.0,
+                          272.0
+                        ],
+                        [
+                          1311.0,
+                          270.0
+                        ]
+                      ],
+                      "bbox": [
+                        1311.0,
+                        243.0,
+                        1412.0,
+                        272.0
+                      ],
+                      "bbox_normalized": [
+                        0.853515625,
+                        0.28125,
+                        0.9192708333333334,
+                        0.3148148148148148
+                      ]
+                    },
+                    {
+                      "text": "Main agent",
+                      "confidence": 0.98191,
+                      "polygon": [
+                        [
+                          76.0,
+                          325.0
+                        ],
+                        [
+                          249.0,
+                          325.0
+                        ],
+                        [
+                          249.0,
+                          359.0
+                        ],
+                        [
+                          76.0,
+                          359.0
+                        ]
+                      ],
+                      "bbox": [
+                        76.0,
+                        325.0,
+                        249.0,
+                        359.0
+                      ],
+                      "bbox_normalized": [
+                        0.049479166666666664,
+                        0.3761574074074074,
+                        0.162109375,
+                        0.41550925925925924
+                      ]
+                    },
+                    {
+                      "text": "1,864,433",
+                      "confidence": 0.99997,
+                      "polygon": [
+                        [
+                          579.0,
+                          341.0
+                        ],
+                        [
+                          724.0,
+                          341.0
+                        ],
+                        [
+                          724.0,
+                          372.0
+                        ],
+                        [
+                          579.0,
+                          372.0
+                        ]
+                      ],
+                      "bbox": [
+                        579.0,
+                        341.0,
+                        724.0,
+                        372.0
+                      ],
+                      "bbox_normalized": [
+                        0.376953125,
+                        0.39467592592592593,
+                        0.4713541666666667,
+                        0.4305555555555556
+                      ]
+                    },
+                    {
+                      "text": "5m 36s",
+                      "confidence": 0.99851,
+                      "polygon": [
+                        [
+                          872.0,
+                          339.0
+                        ],
+                        [
+                          984.0,
+                          339.0
+                        ],
+                        [
+                          984.0,
+                          374.0
+                        ],
+                        [
+                          872.0,
+                          374.0
+                        ]
+                      ],
+                      "bbox": [
+                        872.0,
+                        339.0,
+                        984.0,
+                        374.0
+                      ],
+                      "bbox_normalized": [
+                        0.5677083333333334,
+                        0.3923611111111111,
+                        0.640625,
+                        0.43287037037037035
+                      ]
+                    },
+                    {
+                      "text": "57",
+                      "confidence": 0.99999,
+                      "polygon": [
+                        [
+                          1131.0,
+                          337.0
+                        ],
+                        [
+                          1178.0,
+                          337.0
+                        ],
+                        [
+                          1178.0,
+                          375.0
+                        ],
+                        [
+                          1131.0,
+                          375.0
+                        ]
+                      ],
+                      "bbox": [
+                        1131.0,
+                        337.0,
+                        1178.0,
+                        375.0
+                      ],
+                      "bbox_normalized": [
+                        0.736328125,
+                        0.3900462962962963,
+                        0.7669270833333334,
+                        0.4340277777777778
+                      ]
+                    },
+                    {
+                      "text": "+ subagents",
+                      "confidence": 0.99423,
+                      "polygon": [
+                        [
+                          76.0,
+                          361.0
+                        ],
+                        [
+                          266.0,
+                          361.0
+                        ],
+                        [
+                          266.0,
+                          394.0
+                        ],
+                        [
+                          76.0,
+                          394.0
+                        ]
+                      ],
+                      "bbox": [
+                        76.0,
+                        361.0,
+                        266.0,
+                        394.0
+                      ],
+                      "bbox_normalized": [
+                        0.049479166666666664,
+                        0.41782407407407407,
+                        0.17317708333333334,
+                        0.45601851851851855
+                      ]
+                    },
+                    {
+                      "text": "Kanban",
+                      "confidence": 0.99997,
+                      "polygon": [
+                        [
+                          73.0,
+                          438.0
+                        ],
+                        [
+                          194.0,
+                          440.0
+                        ],
+                        [
+                          194.0,
+                          474.0
+                        ],
+                        [
+                          73.0,
+                          472.0
+                        ]
+                      ],
+                      "bbox": [
+                        73.0,
+                        438.0,
+                        194.0,
+                        474.0
+                      ],
+                      "bbox_normalized": [
+                        0.047526041666666664,
+                        0.5069444444444444,
+                        0.12630208333333334,
+                        0.5486111111111112
+                      ]
+                    },
+                    {
+                      "text": "auto-decomposer",
+                      "confidence": 0.99999,
+                      "polygon": [
+                        [
+                          74.0,
+                          475.0
+                        ],
+                        [
+                          338.0,
+                          478.0
+                        ],
+                        [
+                          338.0,
+                          511.0
+                        ],
+                        [
+                          74.0,
+                          508.0
+                        ]
+                      ],
+                      "bbox": [
+                        74.0,
+                        475.0,
+                        338.0,
+                        511.0
+                      ],
+                      "bbox_normalized": [
+                        0.048177083333333336,
+                        0.5497685185185185,
+                        0.22005208333333334,
+                        0.5914351851851852
+                      ]
+                    },
+                    {
+                      "text": "Kanban orchestrator",
+                      "confidence": 0.99997,
+                      "polygon": [
+                        [
+                          77.0,
+                          557.0
+                        ],
+                        [
+                          383.0,
+                          557.0
+                        ],
+                        [
+                          383.0,
+                          587.0
+                        ],
+                        [
+                          77.0,
+                          587.0
+                        ]
+                      ],
+                      "bbox": [
+                        77.0,
+                        557.0,
+                        383.0,
+                        587.0
+                      ],
+                      "bbox_normalized": [
+                        0.050130208333333336,
+                        0.6446759259259259,
+                        0.24934895833333334,
+                        0.6793981481481481
+                      ]
+                    },
+                    {
+                      "text": "(goal)",
+                      "confidence": 0.99992,
+                      "polygon": [
+                        [
+                          74.0,
+                          590.0
+                        ],
+                        [
+                          169.0,
+                          590.0
+                        ],
+                        [
+                          169.0,
+                          629.0
+                        ],
+                        [
+                          74.0,
+                          629.0
+                        ]
+                      ],
+                      "bbox": [
+                        74.0,
+                        590.0,
+                        169.0,
+                        629.0
+                      ],
+                      "bbox_normalized": [
+                        0.048177083333333336,
+                        0.6828703703703703,
+                        0.11002604166666667,
+                        0.7280092592592593
+                      ]
+                    },
+                    {
+                      "text": "Kanban orchestrator",
+                      "confidence": 0.99635,
+                      "polygon": [
+                        [
+                          74.0,
+                          671.0
+                        ],
+                        [
+                          385.0,
+                          673.0
+                        ],
+                        [
+                          385.0,
+                          706.0
+                        ],
+                        [
+                          74.0,
+                          704.0
+                        ]
+                      ],
+                      "bbox": [
+                        74.0,
+                        671.0,
+                        385.0,
+                        706.0
+                      ],
+                      "bbox_normalized": [
+                        0.048177083333333336,
+                        0.7766203703703703,
+                        0.2506510416666667,
+                        0.8171296296296297
+                      ]
+                    },
+                    {
+                      "text": "(no goal)",
+                      "confidence": 0.99995,
+                      "polygon": [
+                        [
+                          76.0,
+                          707.0
+                        ],
+                        [
+                          213.0,
+                          707.0
+                        ],
+                        [
+                          213.0,
+                          744.0
+                        ],
+                        [
+                          76.0,
+                          744.0
+                        ]
+                      ],
+                      "bbox": [
+                        76.0,
+                        707.0,
+                        213.0,
+                        744.0
+                      ],
+                      "bbox_normalized": [
+                        0.049479166666666664,
+                        0.8182870370370371,
+                        0.138671875,
+                        0.8611111111111112
+                      ]
+                    },
+                    {
+                      "text": "Observed in this test only • Auto-decomposer total includes identified auxiliary overhead",
+                      "confidence": 0.99621,
+                      "polygon": [
+                        [
+                          63.0,
+                          798.0
+                        ],
+                        [
+                          782.0,
+                          798.0
+                        ],
+                        [
+                          782.0,
+                          818.0
+                        ],
+                        [
+                          63.0,
+                          818.0
+                        ]
+                      ],
+                      "bbox": [
+                        63.0,
+                        798.0,
+                        782.0,
+                        818.0
+                      ],
+                      "bbox_normalized": [
+                        0.041015625,
+                        0.9236111111111112,
+                        0.5091145833333334,
+                        0.9467592592592593
+                      ]
+                    }
+                  ],
+                  "ocr_provenance": {
+                    "engine": "RapidOCR",
+                    "package_version": "3.9.2",
+                    "runtime": "CPU ONNX Runtime",
+                    "model_info": {
+                      "engine": "RapidOCR",
+                      "package_version": "3.9.2",
+                      "runtime": "CPU ONNX Runtime",
+                      "identity_status": "resolved",
+                      "model_files": [
+                        {
+                          "component": "detector",
+                          "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\PP-OCRv6_det_small.onnx",
+                          "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+                          "size_bytes": 9929594
+                        },
+                        {
+                          "component": "classifier",
+                          "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\ch_ppocr_mobile_v2.0_cls_mobile.onnx",
+                          "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+                          "size_bytes": 585532
+                        },
+                        {
+                          "component": "recognizer",
+                          "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\PP-OCRv6_rec_small.onnx",
+                          "sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+                          "size_bytes": 21234383
+                        }
+                      ],
+                      "unresolved_components": [],
+                      "disabled_components": [],
+                      "model_hash_policy": "SHA-256 of actual enabled session model files on disk, cached per adapter engine; no inference. Injected or in-memory engines have unknown model identity.",
+                      "config": {
+                        "params": {
+                          "EngineConfig.onnxruntime.use_cuda": false,
+                          "EngineConfig.onnxruntime.use_dml": false
+                        },
+                        "max_side": 1536,
+                        "min_confidence": 0.5,
+                        "effective": {
+                          "Global": {
+                            "text_score": 0.5,
+                            "use_det": true,
+                            "use_cls": true,
+                            "use_rec": true,
+                            "use_preprocess_img": true,
+                            "min_side_len": 30,
+                            "max_side_len": 2000,
+                            "use_vertical_padding": true,
+                            "min_height": 30,
+                            "width_height_ratio": 8,
+                            "return_word_box": false,
+                            "return_single_char_box": false,
+                            "font_path": null,
+                            "log_level": "info",
+                            "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                          },
+                          "EngineConfig": {
+                            "onnxruntime": {
+                              "intra_op_num_threads": -1,
+                              "inter_op_num_threads": -1,
+                              "enable_cpu_mem_arena": false,
+                              "cpu_ep_cfg": {
+                                "arena_extend_strategy": "kSameAsRequested"
+                              },
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "cudnn_conv_algo_search": "EXHAUSTIVE",
+                                "do_copy_in_default_stream": true
+                              },
+                              "use_dml": false,
+                              "dml_ep_cfg": null,
+                              "use_cann": false,
+                              "cann_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "npu_mem_limit": 21474836480,
+                                "op_select_impl_mode": "high_performance",
+                                "optypelist_for_implmode": "Gelu",
+                                "enable_cann_graph": true
+                              },
+                              "use_coreml": false,
+                              "coreml_ep_cfg": {
+                                "ModelFormat": "MLProgram",
+                                "MLComputeUnits": "ALL",
+                                "RequireStaticInputShapes": 0,
+                                "EnableOnSubgraphs": 0,
+                                "SpecializationStrategy": "FastPrediction",
+                                "ProfileComputePlan": 0,
+                                "AllowLowPrecisionAccumulationOnGPU": 0,
+                                "ModelCacheDirectory": "/tmp/RapidOCR"
+                              }
+                            },
+                            "openvino": {
+                              "inference_num_threads": -1,
+                              "performance_hint": null,
+                              "performance_num_requests": -1,
+                              "enable_cpu_pinning": null,
+                              "num_streams": -1,
+                              "enable_hyper_threading": null,
+                              "scheduling_core_type": null
+                            },
+                            "paddle": {
+                              "cpu_math_library_num_threads": -1,
+                              "use_npu": false,
+                              "npu_ep_cfg": {
+                                "device_id": 0,
+                                "envs": {
+                                  "FLAGS_npu_jit_compile": 0,
+                                  "FLAGS_use_stride_kernel": 0,
+                                  "FLAGS_allocator_strategy": "auto_growth",
+                                  "CUSTOM_DEVICE_BLACK_LIST": "pad3d,pad3d_grad,set_value,set_value_with_tensor",
+                                  "FLAGS_npu_scale_aclnn": "True",
+                                  "FLAGS_npu_split_aclnn": "True"
+                                }
+                              },
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0,
+                                "gpu_mem": 500
+                              }
+                            },
+                            "torch": {
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0
+                              },
+                              "use_npu": false,
+                              "npu_ep_cfg": {
+                                "device_id": 0
+                              },
+                              "use_mps": false
+                            },
+                            "tensorrt": {
+                              "device_id": 0,
+                              "use_fp16": true,
+                              "use_int8": false,
+                              "workspace_size": 1073741824,
+                              "cache_dir": null,
+                              "force_rebuild": false,
+                              "det_profile": {
+                                "min_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "opt_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "max_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                }
+                              },
+                              "rec_profile": {
+                                "min_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "opt_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "max_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                }
+                              },
+                              "cls_profile": {
+                                "min_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "opt_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                },
+                                "max_shape": {
+                                  "unserialized_type": "omegaconf.listconfig.ListConfig"
+                                }
+                              }
+                            },
+                            "mnn": {}
+                          },
+                          "Det": {
+                            "engine_type": "onnxruntime",
+                            "lang_type": "ch",
+                            "model_type": "small",
+                            "ocr_version": "PP-OCRv6",
+                            "task_type": "det",
+                            "model_path": null,
+                            "model_dir": null,
+                            "limit_side_len": 736,
+                            "limit_type": "min",
+                            "std": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "mean": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "thresh": 0.3,
+                            "box_thresh": 0.5,
+                            "max_candidates": 1000,
+                            "unclip_ratio": 1.6,
+                            "use_dilation": true,
+                            "score_mode": "fast",
+                            "engine_cfg": {
+                              "intra_op_num_threads": -1,
+                              "inter_op_num_threads": -1,
+                              "enable_cpu_mem_arena": false,
+                              "cpu_ep_cfg": {
+                                "arena_extend_strategy": "kSameAsRequested"
+                              },
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "cudnn_conv_algo_search": "EXHAUSTIVE",
+                                "do_copy_in_default_stream": true
+                              },
+                              "use_dml": false,
+                              "dml_ep_cfg": null,
+                              "use_cann": false,
+                              "cann_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "npu_mem_limit": 21474836480,
+                                "op_select_impl_mode": "high_performance",
+                                "optypelist_for_implmode": "Gelu",
+                                "enable_cann_graph": true
+                              },
+                              "use_coreml": false,
+                              "coreml_ep_cfg": {
+                                "ModelFormat": "MLProgram",
+                                "MLComputeUnits": "ALL",
+                                "RequireStaticInputShapes": 0,
+                                "EnableOnSubgraphs": 0,
+                                "SpecializationStrategy": "FastPrediction",
+                                "ProfileComputePlan": 0,
+                                "AllowLowPrecisionAccumulationOnGPU": 0,
+                                "ModelCacheDirectory": "/tmp/RapidOCR"
+                              }
+                            },
+                            "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                          },
+                          "Cls": {
+                            "engine_type": "onnxruntime",
+                            "lang_type": "ch",
+                            "model_type": "mobile",
+                            "ocr_version": "PP-OCRv4",
+                            "task_type": "cls",
+                            "model_path": null,
+                            "model_dir": null,
+                            "cls_image_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "cls_batch_num": 6,
+                            "cls_thresh": 0.9,
+                            "label_list": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "engine_cfg": {
+                              "intra_op_num_threads": -1,
+                              "inter_op_num_threads": -1,
+                              "enable_cpu_mem_arena": false,
+                              "cpu_ep_cfg": {
+                                "arena_extend_strategy": "kSameAsRequested"
+                              },
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "cudnn_conv_algo_search": "EXHAUSTIVE",
+                                "do_copy_in_default_stream": true
+                              },
+                              "use_dml": false,
+                              "dml_ep_cfg": null,
+                              "use_cann": false,
+                              "cann_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "npu_mem_limit": 21474836480,
+                                "op_select_impl_mode": "high_performance",
+                                "optypelist_for_implmode": "Gelu",
+                                "enable_cann_graph": true
+                              },
+                              "use_coreml": false,
+                              "coreml_ep_cfg": {
+                                "ModelFormat": "MLProgram",
+                                "MLComputeUnits": "ALL",
+                                "RequireStaticInputShapes": 0,
+                                "EnableOnSubgraphs": 0,
+                                "SpecializationStrategy": "FastPrediction",
+                                "ProfileComputePlan": 0,
+                                "AllowLowPrecisionAccumulationOnGPU": 0,
+                                "ModelCacheDirectory": "/tmp/RapidOCR"
+                              }
+                            },
+                            "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                          },
+                          "Rec": {
+                            "engine_type": "onnxruntime",
+                            "lang_type": "ch",
+                            "model_type": "small",
+                            "ocr_version": "PP-OCRv6",
+                            "task_type": "rec",
+                            "model_path": null,
+                            "model_dir": null,
+                            "rec_keys_path": null,
+                            "rec_img_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "rec_batch_num": 6,
+                            "engine_cfg": {
+                              "intra_op_num_threads": -1,
+                              "inter_op_num_threads": -1,
+                              "enable_cpu_mem_arena": false,
+                              "cpu_ep_cfg": {
+                                "arena_extend_strategy": "kSameAsRequested"
+                              },
+                              "use_cuda": false,
+                              "cuda_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "cudnn_conv_algo_search": "EXHAUSTIVE",
+                                "do_copy_in_default_stream": true
+                              },
+                              "use_dml": false,
+                              "dml_ep_cfg": null,
+                              "use_cann": false,
+                              "cann_ep_cfg": {
+                                "device_id": 0,
+                                "arena_extend_strategy": "kNextPowerOfTwo",
+                                "npu_mem_limit": 21474836480,
+                                "op_select_impl_mode": "high_performance",
+                                "optypelist_for_implmode": "Gelu",
+                                "enable_cann_graph": true
+                              },
+                              "use_coreml": false,
+                              "coreml_ep_cfg": {
+                                "ModelFormat": "MLProgram",
+                                "MLComputeUnits": "ALL",
+                                "RequireStaticInputShapes": 0,
+                                "EnableOnSubgraphs": 0,
+                                "SpecializationStrategy": "FastPrediction",
+                                "ProfileComputePlan": 0,
+                                "AllowLowPrecisionAccumulationOnGPU": 0,
+                                "ModelCacheDirectory": "/tmp/RapidOCR"
+                              }
+                            },
+                            "font_path": null,
+                            "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                          }
+                        }
+                      },
+                      "config_sha256": "73e31c01e93f73a026d964bbd58a7ae63126758d7d230b70f8dde27cc26b3401"
+                    },
+                    "image_sha256": "c9375f90e4a060b22a9eee690f37e49ee8524a6cf8f7265920aa9ba45c0b82a3",
+                    "original_size": [
+                      1536,
+                      864
+                    ],
+                    "processed_size": [
+                      1536,
+                      864
+                    ],
+                    "min_confidence": 0.5,
+                    "evidence_kind": "sampled_frame_screen_text",
+                    "warning": "OCR may misread text; this observation does not establish text duration."
+                  }
+                },
+                {
+                  "id": "dense_visual:visual_000013",
+                  "source": "dense_visual",
+                  "score_type": "cosine_similarity",
+                  "rank": 4,
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "start": 62.498266666666666,
+                  "end": 67.49826666666667,
+                  "sampled_timestamps": [
+                    64.99826666666667
+                  ],
+                  "frame_ids": [
+                    "visual_000013"
+                  ],
+                  "text": "CLIP retrieval candidate at 64.998 seconds; inspect the frame to verify its content.",
+                  "window_kind": "context_around_sample",
+                  "provenance": {
+                    "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+                    "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+                    "model_id": "openai/clip-vit-base-patch32",
+                    "model_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+                    "image_sha256": "c9375f90e4a060b22a9eee690f37e49ee8524a6cf8f7265920aa9ba45c0b82a3",
+                    "warning": "Similarity is a retrieval score, not event presence or confidence."
+                  },
+                  "segment_ids": [
+                    "visual_000013"
+                  ],
+                  "candidate_original_range": [
+                    62.498266666666666,
+                    67.49826666666667
+                  ],
+                  "dense_similarity": 0.2816983759403229
+                }
+              ],
+              "selection_score": 0.5503948471642048,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 3,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "fusion:2b869c0344f28962",
+              "start": 960.0,
+              "end": 1020.0,
+              "text": "[caption] - The video shows a user interface for a software development environment, likely a chatbot or AI assistant platform.\n- The left sidebar displays a list of bots and chat groups, including \"Hermes,\" \"Wanderloots Tutorials,\" \"Research Team (Limited),\" \"Researcher,\" \"Orchestrator,\" \"Librarian,\" and \"Research Team.\"\n- The main panel on the right shows a chat interface with a message from the \"Agent\" bot.\n- The Agent's message includes a list of tasks and responsibilities, such as \"Search and explain topics with cited, current sources,\" \"Write, review, debug, and run code,\" and \"Manage notes, reminders, email, calendars, tasks.\"\n- The Agent also mentions its role as a \"practical research, coding, and workflow partner\" and its ability to \"transform, teach, edit, or simply\" assist.\n- The interface has a dark theme with a \"Build\n[transcript] I thought that we could take a quick look at Hermes Bot Mode actually sets you up for success when you start using Kanban because it helps you prepare the specialist profiles we can see down here I have orchestrator, researcher, and librarian. So let's take a quick look at bot mode. So now we can go from a single agent operating in a loop with delegated subagents to a graph. That's where profiles come in. Okay, so this is bot mode. So we can see here a bot is just a profile is the same list of profiles that I have along the bottom here. A bot or a profile can",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00016",
+                "T00354",
+                "T00355",
+                "T00356",
+                "T00357",
+                "T00358",
+                "T00359",
+                "T00360",
+                "T00361"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.026863011855603858,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 7,
+                  "retrieval_score": 2.7628272880782507,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 18,
+                  "retrieval_score": 1.1062407361853615,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004273504273504273,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 14,
+                  "retrieval_score": 2.7628272880782507,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0045045045045045045,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 19,
+                  "retrieval_score": 2.332851878235849,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004219409282700422,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 16,
+                  "retrieval_score": 2.332851878235849,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0043859649122807015,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 14,
+                  "retrieval_score": 3.734920098368476,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0045045045045045045,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:32",
+                  "start": 960.0,
+                  "end": 1020.0,
+                  "text": "- The video shows a user interface for a software development environment, likely a chatbot or AI assistant platform.\n- The left sidebar displays a list of bots and chat groups, including \"Hermes,\" \"Wanderloots Tutorials,\" \"Research Team (Limited),\" \"Researcher,\" \"Orchestrator,\" \"Librarian,\" and \"Research Team.\"\n- The main panel on the right shows a chat interface with a message from the \"Agent\" bot.\n- The Agent's message includes a list of tasks and responsibilities, such as \"Search and explain topics with cited, current sources,\" \"Write, review, debug, and run code,\" and \"Manage notes, reminders, email, calendars, tasks.\"\n- The Agent also mentions its role as a \"practical research, coding, and workflow partner\" and its ability to \"transform, teach, edit, or simply\" assist.\n- The interface has a dark theme with a \"Build",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00016"
+                  ]
+                },
+                {
+                  "id": "transcript:32",
+                  "start": 960.57,
+                  "end": 993.99,
+                  "text": "I thought that we could take a quick look at Hermes Bot Mode actually sets you up for success when you start using Kanban because it helps you prepare the specialist profiles we can see down here I have orchestrator, researcher, and librarian. So let's take a quick look at bot mode. So now we can go from a single agent operating in a loop with delegated subagents to a graph. That's where profiles come in. Okay, so this is bot mode. So we can see here a bot is just a profile is the same list of profiles that I have along the bottom here. A bot or a profile can",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00354",
+                    "T00355",
+                    "T00356",
+                    "T00357",
+                    "T00358",
+                    "T00359",
+                    "T00360",
+                    "T00361"
+                  ]
+                }
+              ],
+              "selection_score": 0.5480464643737163,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 4,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "fusion:ca79a5645a8a939d",
+              "start": 360.0,
+              "end": 420.0,
+              "text": "[caption] - **Frame 360.026**: The screen displays a software interface with a dark theme. The main content is a slide titled \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system?\" The slide lists a series of bullet points under \"8. Measure the system by outcomes, not capture volume.\" A yellow text box with the text \"I would have to check the actual total, likely more than 102,000\" is visible. The left sidebar shows \"SESSIONS\" and \"PROJECTS\" with various options like \"New session,\" \"Capabilities,\" and \"Artifacts.\" The bottom of the screen shows a \"Send a follow-up\" button.\n\n- **Frame 419.986**: The screen shows a slide titled \"Delegate only bounded specialist work.\" The slide lists various roles\n[transcript] There was more context used, but that context that made it back into the main higher intelligence agent was significantly compressed relative to the agent that just did it all itself and had 102,000. If I ran this turn one more time, I might have to compress the context here and then you lose some quality. So that's the first comparison, just using a single agent versus using a single agent with multiple subagents. So the biggest difference is that one uses up a lot more context, but this was also a very basic example. And the results of both of these are basically the same. Build an accountable action steward",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00006",
+                "T00091",
+                "T00092",
+                "T00093",
+                "T00094",
+                "T00095",
+                "T00096",
+                "T00097",
+                "T00098",
+                "T00099",
+                "T00100",
+                "T00101",
+                "T00102",
+                "T00103",
+                "T00104",
+                "T00105",
+                "T00106"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.026721718260586586,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 5,
+                  "retrieval_score": 3.092910382149422,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 1,
+                  "retrieval_score": 9.278731146448266,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 2,
+                  "retrieval_score": 6.185820764298844,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 2,
+                  "retrieval_score": 14.892672923897742,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 2,
+                  "retrieval_score": 17.298266277062712,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:12",
+                  "start": 360.0,
+                  "end": 420.0,
+                  "text": "- **Frame 360.026**: The screen displays a software interface with a dark theme. The main content is a slide titled \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system?\" The slide lists a series of bullet points under \"8. Measure the system by outcomes, not capture volume.\" A yellow text box with the text \"I would have to check the actual total, likely more than 102,000\" is visible. The left sidebar shows \"SESSIONS\" and \"PROJECTS\" with various options like \"New session,\" \"Capabilities,\" and \"Artifacts.\" The bottom of the screen shows a \"Send a follow-up\" button.\n\n- **Frame 419.986**: The screen shows a slide titled \"Delegate only bounded specialist work.\" The slide lists various roles",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00006"
+                  ]
+                },
+                {
+                  "id": "transcript:12",
+                  "start": 360.56,
+                  "end": 391.16,
+                  "text": "There was more context used, but that context that made it back into the main higher intelligence agent was significantly compressed relative to the agent that just did it all itself and had 102,000. If I ran this turn one more time, I might have to compress the context here and then you lose some quality. So that's the first comparison, just using a single agent versus using a single agent with multiple subagents. So the biggest difference is that one uses up a lot more context, but this was also a very basic example. And the results of both of these are basically the same. Build an accountable action steward",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00091",
+                    "T00092",
+                    "T00093",
+                    "T00094",
+                    "T00095",
+                    "T00096",
+                    "T00097",
+                    "T00098",
+                    "T00099",
+                    "T00100",
+                    "T00101",
+                    "T00102",
+                    "T00103",
+                    "T00104",
+                    "T00105",
+                    "T00106"
+                  ]
+                }
+              ],
+              "selection_score": 0.5451638592658414,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 5,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "fusion:e8538ab4777a3dc4",
+              "start": 300.0,
+              "end": 360.0,
+              "text": "[transcript] through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading\n[caption] - **Frame 300.033**: The screen displays a dark-themed interface for a session titled \"SESSIONS\" with the \"BOTS\" tab active. The main content area shows a text block with a heading \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system?\" Below this, a list of recommendations is presented, including \"unauthorized tool/action attempts\" and \"sampled discard false-positive rate.\" The interface includes a \"Keep going\" button and a \"GPT-5-terra\" model indicator. The sidebar shows \"New session,\" \"Capabilities,\" \"Messaging,\" and \"Kanban\" options.\n\n- **Frame 359.993**: The interface remains the same, but the text block has been updated. The heading \"How do I turn incoming information into something useful, an action",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00070",
+                "T00071",
+                "T00072",
+                "T00073",
+                "T00074",
+                "T00075",
+                "T00076",
+                "caption_00005"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.023526711679696753,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 7,
+                  "retrieval_score": 4.4476045980871275,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 4,
+                  "retrieval_score": 7.087626634474157,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 4,
+                  "retrieval_score": 7.135669576279927,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 20,
+                  "retrieval_score": 1.647187238104238,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004166666666666667,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 24,
+                  "retrieval_score": 1.647187238104238,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.003968253968253968,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:10",
+                  "start": 300.44,
+                  "end": 331.6,
+                  "text": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00070",
+                    "T00071",
+                    "T00072",
+                    "T00073",
+                    "T00074",
+                    "T00075",
+                    "T00076"
+                  ]
+                },
+                {
+                  "id": "caption:10",
+                  "start": 300.0,
+                  "end": 360.0,
+                  "text": "- **Frame 300.033**: The screen displays a dark-themed interface for a session titled \"SESSIONS\" with the \"BOTS\" tab active. The main content area shows a text block with a heading \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system?\" Below this, a list of recommendations is presented, including \"unauthorized tool/action attempts\" and \"sampled discard false-positive rate.\" The interface includes a \"Keep going\" button and a \"GPT-5-terra\" model indicator. The sidebar shows \"New session,\" \"Capabilities,\" \"Messaging,\" and \"Kanban\" options.\n\n- **Frame 359.993**: The interface remains the same, but the text block has been updated. The heading \"How do I turn incoming information into something useful, an action",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00005"
+                  ]
+                }
+              ],
+              "selection_score": 0.4799808459194748,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 6,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": true
+        },
+        "latency_seconds": 0.4591
+      },
+      {
+        "call": 2,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 59.998266666666666,
+          "end": 69.99826666666667,
+          "question": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+          "modality": "ocr"
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Invalid inspection modality",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "error_type": "tool_argument_error",
+        "latency_seconds": 0.0003
+      },
+      {
+        "call": 3,
+        "tool": "search",
+        "args": {},
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Duplicate call; change query or interval",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "error_type": "duplicate_tool_call",
+        "latency_seconds": 0.0
+      }
+    ],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"what exact total number of tokens did the delegated workflow consume after including every subagent\",\n    \"in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume\",\n    \"delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison\"\n  ],\n  \"requirements\": [\n    \"the delegated workflow consumed a specific total number of tokens in the first 102,000-versus-37,000 comparison\",\n    \"this total includes all subagents\",\n    \"the answer must provide a number only if the explanation provides it\",\n    \"the number must be exact and derived from the transcript\"\n  ],\n  \"event_query\": []\n}"
+      },
+      {
+        "role": "controller",
+        "step": 0,
+        "raw": "{\"action\": \"search\", \"query\": \"what exact total number of tokens did the delegated workflow consume after including every subagent\", \"queries\": [\"in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume\", \"delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison\"], \"source\": \"transcript\", \"top_k\": 5}"
+      },
+      {
+        "role": "controller",
+        "step": 1,
+        "raw": "{\"action\": \"search\", \"args\": {}, \"ok\": true, \"selected_by\": \"model\", \"latency_seconds\": 0.4591, \"result\": {\"hits\": [{\"id\": \"fusion:3af669840f02c530\", \"start\": 2475.010866666667, \"end\": 2485.010866666667, \"source\": \"hybrid\", \"modalities\": [\"dense_visual\", \"ocr\"], \"sampled_timestamps\": [2480.010866666667], \"text\": \"[dense_visual] CLIP retrieval candidate at 2480.011 seconds; inspect the frame to verify its content.\\n[ocr] Time & token use\\nAll-in totals for this research task.\\nWorkflow\\nTotal tokens\\nCompletion\\nTool calls\\nSessions\\nMain agent\\n1,864,433\\n5m 36s\\n57\\n3\\n+ subagents\\nKanban\\n2,368,325\\n8m 39s\\n73\\n5 + auxiliary\\nauto-decomposer\\nKanban orchestrator\\n1,974,215\\n6m 36s\\n82\\n6\\n(goal)\\nKanban orchestrator\\n1,769,942\\n4m 59s\\n74\\n5\\n(no goal)\\nObserved in this test only • Auto-decomposer total includes identified auxiliary overhead\", \"text_truncated\": false}, {\"id\": \"fusion:47ea9e4fde1c753b\", \"start\": 1920.0, \"end\": 1980.0, \"source\": \"hybrid\", \"modalities\": [\"caption\", \"transcript\"], \"sampled_timestamps\": [], \"text\": \"[caption] - **Frame 1920.018**: A \\\"New task in Triage\\\" dialog box is open, titled \\\"Multi-agent research.\\\" It includes fields for \\\"Priority,\\\" \\\"Workspace,\\\" \\\"Assignee,\\\" \\\"Skills,\\\" and \\\"Model.\\\" The \\\"Assignee\\\" is set to \\\"wanderloots-tutorials (default).\\\" The \\\"Model\\\" is \\\"translation, github.\\\" A message box at the bottom reads: \\\"Rough estimate for reviewing the repository, researching up to five credible sources, comparing single-agent delegation with specialized multi-agent systems, and drafting a cited synthesis under 500 words.\\\" A \\\"Create task\\\" button is visible.\\n\\n- **Frame 1979.978**: The Kanban interface shows two tasks in progress: \\\"Research a practical information-to-action and knowledge workflow\\\" and \\\"Compare delegated single-agent and specialized multi-agent systems.\\\" The first task is marked as \\\"RUNNING\\\"\\n[transcript] It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500\", \"text_truncated\": true}, {\"id\": \"fusion:fef0d99d78fb785e\", \"start\": 59.998266666666666, \"end\": 69.99826666666667, \"source\": \"hybrid\", \"modalities\": [\"dense_visual\", \"ocr",
+        "error": "Unterminated string starting at: line 1 column 2250 (char 2249)",
+        "error_type": "format_error"
+      },
+      {
+        "role": "controller",
+        "step": 2,
+        "raw": "{\"action\": \"inspect_clip\", \"args\": {\"start\": 59.998266666666666, \"end\": 69.99826666666667, \"question\": \"what exact total number of tokens did the delegated workflow consume after including every subagent\", \"modality\": \"ocr\"}}"
+      },
+      {
+        "role": "controller",
+        "step": 3,
+        "raw": "{\"action\": \"search\", \"args\": {}}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

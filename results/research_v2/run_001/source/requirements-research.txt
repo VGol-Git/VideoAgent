@@ -1,0 +1,9 @@
+# Additional reproducible CPU OCR dependencies for the existing local runtime.
+# Install project video/local extras separately when creating a fresh environment.
+rapidocr==3.9.2
+onnxruntime>=1.20,<2
+omegaconf==2.3.0
+antlr4-python3-runtime==4.9.3
+pyclipper==1.3.0.post6
+Shapely==2.1.2
+colorlog==6.10.1

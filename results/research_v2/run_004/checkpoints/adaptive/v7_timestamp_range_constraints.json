@@ -1,0 +1,355 @@
+{
+  "saved_at_utc": "2026-10-22T19:32:15.439632+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "adaptive",
+  "question_id": "v7_timestamp_range_constraints",
+  "prediction_sha256": "a28bc195a9025de0831866fd911f988957539e93dfb8cae2ea52afd4cc24d036",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "A temporal overview must cite every supplied observation window",
+    "error": "A temporal overview must cite every supplied observation window",
+    "error_type": "invalid_model_response",
+    "fixed_schedule": [
+      {
+        "start": 1910.0,
+        "end": 1925.0
+      },
+      {
+        "start": 1925.0,
+        "end": 1940.0
+      }
+    ],
+    "schedule_policy": "distributed_scope_windows",
+    "plan": {
+      "task": "reasoning",
+      "modality": "transcript",
+      "queries": [
+        "distinctive search terms"
+      ],
+      "requirements": {
+        "R1": "one fact that must be established"
+      }
+    },
+    "routing": "temporal_scope",
+    "temporal_scope": {
+      "kind": "range",
+      "start": 1910.0,
+      "end": 1940.0,
+      "interpretation": "Requested video interval: 1910–1940 seconds. Minute/hour numbers, including ordinal wording, are timestamp boundaries."
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": true
+    },
+    "coverage": {
+      "strategy": "distributed_windows",
+      "requested_start": 1910.0,
+      "requested_end": 1940.0,
+      "inspection_intervals": [
+        [
+          1910.0,
+          1925.0
+        ],
+        [
+          1925.0,
+          1940.0
+        ]
+      ],
+      "omitted_intervals": [],
+      "sampled_frame_count": 0,
+      "complete_visual_coverage": false,
+      "note": "Requested interval: 31:50–32:20. Selected text evidence only; no visual coverage was verified."
+    },
+    "question_id": "v7_timestamp_range_constraints",
+    "question": "Within 31:50–32:20, what search limit and output limit does the presenter add before re-estimating the task? Answer from the speech in that time interval.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 2,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 9.3255,
+    "usage": {
+      "model_calls": 5,
+      "input_tokens": 3492,
+      "output_tokens": 237
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1910.0,
+          "end": 1925.0,
+          "question": "Within 31:50–32:20, what search limit and output limit does the presenter add before re-estimating the task? Answer from the speech in that time interval.",
+          "modality": "transcript"
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "start": 1910.0,
+          "end": 1925.0,
+          "transcript": "[1911.13–1911.97] or prototyping.\n[1911.97–1914.17] So now, for example, I can include a limitation here.\n[1914.17–1915.91] Please limit your search to five sources\n[1915.91–1918.25] and the output document to 500 words or less.\n[1918.25–1919.55] And then I can re-estimate it.\n[1919.55–1920.39] There we go.\n[1920.39–1923.05] It just dropped from 45,000 tokens down to 18,000.",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00647",
+              "start": 1911.13,
+              "end": 1911.97
+            },
+            {
+              "id": "T00648",
+              "start": 1911.97,
+              "end": 1914.17
+            },
+            {
+              "id": "T00649",
+              "start": 1914.17,
+              "end": 1915.91
+            },
+            {
+              "id": "T00650",
+              "start": 1915.91,
+              "end": 1918.25
+            },
+            {
+              "id": "T00651",
+              "start": 1918.25,
+              "end": 1919.55
+            },
+            {
+              "id": "T00652",
+              "start": 1919.55,
+              "end": 1920.39
+            },
+            {
+              "id": "T00653",
+              "start": 1920.39,
+              "end": 1923.05
+            }
+          ],
+          "visual_observation": null,
+          "sampled_timestamps": [],
+          "modality": "transcript",
+          "coverage": "subtitle_cues_only",
+          "cache_hit": false,
+          "decoded_image_max_side": 560,
+          "backend_image_pixel_limit": 313600,
+          "evidence_id": "E001"
+        },
+        "latency_seconds": 0.0024
+      },
+      {
+        "call": 2,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1925.0,
+          "end": 1940.0,
+          "question": "Within 31:50–32:20, what search limit and output limit does the presenter add before re-estimating the task? Answer from the speech in that time interval.",
+          "modality": "transcript"
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "start": 1925.0,
+          "end": 1940.0,
+          "transcript": "[1925.25–1926.69] comparing this particular task\n[1926.69–1928.49] and then a synthesis under 500 words.\n[1928.49–1931.81] And that dropped the complexity of this task down to medium.\n[1931.81–1933.93] That's a cool way for you to do a lightweight check ahead of time\n[1933.93–1935.21] to make sure that your task isn't going\n[1935.21–1936.57] to blow through your whole quota.\n[1936.57–1938.21] So now let's click Create Task.",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00655",
+              "start": 1925.25,
+              "end": 1926.69
+            },
+            {
+              "id": "T00656",
+              "start": 1926.69,
+              "end": 1928.49
+            },
+            {
+              "id": "T00657",
+              "start": 1928.49,
+              "end": 1931.81
+            },
+            {
+              "id": "T00658",
+              "start": 1931.81,
+              "end": 1933.93
+            },
+            {
+              "id": "T00659",
+              "start": 1933.93,
+              "end": 1935.21
+            },
+            {
+              "id": "T00660",
+              "start": 1935.21,
+              "end": 1936.57
+            },
+            {
+              "id": "T00661",
+              "start": 1936.57,
+              "end": 1938.21
+            }
+          ],
+          "visual_observation": null,
+          "sampled_timestamps": [],
+          "modality": "transcript",
+          "coverage": "subtitle_cues_only",
+          "cache_hit": false,
+          "decoded_image_max_side": 560,
+          "backend_image_pixel_limit": 313600,
+          "evidence_id": "E002"
+        },
+        "latency_seconds": 0.0025
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "start": 1910.0,
+        "end": 1925.0,
+        "transcript": "[1911.13–1911.97] or prototyping.\n[1911.97–1914.17] So now, for example, I can include a limitation here.\n[1914.17–1915.91] Please limit your search to five sources\n[1915.91–1918.25] and the output document to 500 words or less.\n[1918.25–1919.55] And then I can re-estimate it.\n[1919.55–1920.39] There we go.\n[1920.39–1923.05] It just dropped from 45,000 tokens down to 18,000.",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00647",
+            "start": 1911.13,
+            "end": 1911.97
+          },
+          {
+            "id": "T00648",
+            "start": 1911.97,
+            "end": 1914.17
+          },
+          {
+            "id": "T00649",
+            "start": 1914.17,
+            "end": 1915.91
+          },
+          {
+            "id": "T00650",
+            "start": 1915.91,
+            "end": 1918.25
+          },
+          {
+            "id": "T00651",
+            "start": 1918.25,
+            "end": 1919.55
+          },
+          {
+            "id": "T00652",
+            "start": 1919.55,
+            "end": 1920.39
+          },
+          {
+            "id": "T00653",
+            "start": 1920.39,
+            "end": 1923.05
+          }
+        ],
+        "visual_observation": null,
+        "sampled_timestamps": [],
+        "modality": "transcript",
+        "coverage": "subtitle_cues_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E001"
+      },
+      "E002": {
+        "start": 1925.0,
+        "end": 1940.0,
+        "transcript": "[1925.25–1926.69] comparing this particular task\n[1926.69–1928.49] and then a synthesis under 500 words.\n[1928.49–1931.81] And that dropped the complexity of this task down to medium.\n[1931.81–1933.93] That's a cool way for you to do a lightweight check ahead of time\n[1933.93–1935.21] to make sure that your task isn't going\n[1935.21–1936.57] to blow through your whole quota.\n[1936.57–1938.21] So now let's click Create Task.",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00655",
+            "start": 1925.25,
+            "end": 1926.69
+          },
+          {
+            "id": "T00656",
+            "start": 1926.69,
+            "end": 1928.49
+          },
+          {
+            "id": "T00657",
+            "start": 1928.49,
+            "end": 1931.81
+          },
+          {
+            "id": "T00658",
+            "start": 1931.81,
+            "end": 1933.93
+          },
+          {
+            "id": "T00659",
+            "start": 1933.93,
+            "end": 1935.21
+          },
+          {
+            "id": "T00660",
+            "start": 1935.21,
+            "end": 1936.57
+          },
+          {
+            "id": "T00661",
+            "start": 1936.57,
+            "end": 1938.21
+          }
+        ],
+        "visual_observation": null,
+        "sampled_timestamps": [],
+        "modality": "transcript",
+        "coverage": "subtitle_cues_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E002"
+      }
+    },
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"transcript\",\"modality\":\"transcript\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":null}",
+        "error": "Unknown planned task",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"reasoning\",\"modality\":\"transcript\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":null}"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[{\"text\":\"The presenter adds a search limit of five sources and an output limit of 500 words before re-estimating the task.\",\"evidence_ids\":[\"E001\"],\"requirement_ids\":[\"R1\"]}]}",
+        "error": "A temporal overview must cite every supplied observation window",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[{\"text\":\"The presenter adds a search limit of five sources and an output limit of 500 words before re-estimating the task.\",\"evidence_ids\":[\"E001\"],\"requirement_ids\":[\"R1\"]}]}",
+        "error": "A temporal overview must cite every supplied observation window",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[{\"text\":\"The presenter adds a search limit of five sources and an output limit of 500 words before re-estimating the task.\",\"evidence_ids\":[\"E001\"],\"requirement_ids\":[\"R1\"]}]}",
+        "error": "A temporal overview must cite every supplied observation window",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

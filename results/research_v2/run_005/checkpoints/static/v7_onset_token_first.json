@@ -1,0 +1,1098 @@
+{
+  "saved_at_utc": "2026-10-22T20:36:35.220590+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "static",
+  "question_id": "v7_onset_token_first",
+  "prediction_sha256": "64d1eb206eeef3bd59ab703b7adc07ec2f5f2b86eb9405e5435ffdbbabf1995e",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Answered response must support every planned requirement",
+    "error": "Answered response must support every planned requirement",
+    "error_type": "invalid_model_response",
+    "fixed_schedule": [
+      {
+        "start": 360.56,
+        "end": 391.16
+      },
+      {
+        "start": 1920.39,
+        "end": 1952.25
+      },
+      {
+        "start": 0.0,
+        "end": 33.04
+      }
+    ],
+    "question_contract": {
+      "basis": "question_text_only",
+      "task": "event",
+      "modality": "transcript",
+      "allowed_modalities": [
+        "transcript"
+      ],
+      "event_query_hint": "the estimate dropped from 45,000 to 18,000 tokens",
+      "overview": false
+    },
+    "schedule_policy": "search_then_fixed_candidates",
+    "model_protocol_attempts": 0,
+    "model_protocol_failures": [],
+    "event": null,
+    "plan": {
+      "task": "event",
+      "modality": "transcript",
+      "queries": [
+        "the estimate dropped from 45,000 to 18,000 tokens",
+        "when does the transcript first state this",
+        "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+      ],
+      "requirements": {
+        "R1": "The answer must identify the first time the transcript states that the estimate dropped from 45,000 to 18,000 tokens.",
+        "R2": "The response must include the opening preview when selecting the first occurrence.",
+        "R3": "The output must return the matching cue time or cue span.",
+        "R4": "The answer must be based solely on the transcript content, without external inference."
+      },
+      "event_query": [
+        "the estimate dropped from 45,000 to 18,000 tokens"
+      ]
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "question_id": "v7_onset_token_first",
+    "question": "When does the transcript first state that the estimate dropped from 45,000 to 18,000 tokens? Include the opening preview when selecting the first occurrence. Return the matching cue time or cue span.",
+    "mode": "static",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 4,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 13.2033,
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 7593,
+      "output_tokens": 241
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "the estimate dropped from 45,000 to 18,000 tokens",
+          "queries": [
+            "when does the transcript first state this",
+            "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "source": "transcript",
+          "top_k": 3
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:12",
+              "start": 360.56,
+              "end": 391.16,
+              "text": "There was more context used, but that context that made it back into the main higher intelligence agent was significantly compressed relative to the agent that just did it all itself and had 102,000. If I ran this turn one more time, I might have to compress the context here and then you lose some quality. So that's the first comparison, just using a single agent versus using a single agent with multiple subagents. So the biggest difference is that one uses up a lot more context, but this was also a very basic example. And the results of both of these are basically the same. Build an accountable action steward",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00091",
+                "T00092",
+                "T00093",
+                "T00094",
+                "T00095",
+                "T00096",
+                "T00097",
+                "T00098",
+                "T00099",
+                "T00100",
+                "T00101",
+                "T00102",
+                "T00103",
+                "T00104",
+                "T00105",
+                "T00106"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.014655259058244132,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "the estimate dropped from 45,000 to 18,000 tokens",
+                  "rank": 7,
+                  "retrieval_score": 2.605227232403078,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "when does the transcript first state this",
+                  "rank": 12,
+                  "retrieval_score": 1.7579956814074937,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004629629629629629,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 6,
+                  "retrieval_score": 4.363222913810572,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005050505050505051,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "the estimate dropped from 45,000 to 18,000 tokens",
+                "when does the transcript first state this",
+                "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:12",
+                  "start": 360.56,
+                  "end": 391.16,
+                  "text": "There was more context used, but that context that made it back into the main higher intelligence agent was significantly compressed relative to the agent that just did it all itself and had 102,000. If I ran this turn one more time, I might have to compress the context here and then you lose some quality. So that's the first comparison, just using a single agent versus using a single agent with multiple subagents. So the biggest difference is that one uses up a lot more context, but this was also a very basic example. And the results of both of these are basically the same. Build an accountable action steward",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00091",
+                    "T00092",
+                    "T00093",
+                    "T00094",
+                    "T00095",
+                    "T00096",
+                    "T00097",
+                    "T00098",
+                    "T00099",
+                    "T00100",
+                    "T00101",
+                    "T00102",
+                    "T00103",
+                    "T00104",
+                    "T00105",
+                    "T00106"
+                  ]
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:64",
+              "start": 1920.39,
+              "end": 1952.25,
+              "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00653",
+                "T00654",
+                "T00655",
+                "T00656",
+                "T00657",
+                "T00658",
+                "T00659",
+                "T00660",
+                "T00661",
+                "T00662",
+                "T00663",
+                "T00664",
+                "T00665",
+                "T00666"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01092896174863388,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "the estimate dropped from 45,000 to 18,000 tokens",
+                  "rank": 1,
+                  "retrieval_score": 20.333201338609996,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 1,
+                  "retrieval_score": 15.516315190981501,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "the estimate dropped from 45,000 to 18,000 tokens",
+                "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:64",
+                  "start": 1920.39,
+                  "end": 1952.25,
+                  "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00653",
+                    "T00654",
+                    "T00655",
+                    "T00656",
+                    "T00657",
+                    "T00658",
+                    "T00659",
+                    "T00660",
+                    "T00661",
+                    "T00662",
+                    "T00663",
+                    "T00664",
+                    "T00665",
+                    "T00666"
+                  ]
+                }
+              ],
+              "selection_score": 0.4847287317391947,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:0",
+              "start": 0.0,
+              "end": 33.04,
+              "text": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00001",
+                "T00002",
+                "T00003",
+                "T00004",
+                "T00005",
+                "T00006",
+                "T00007",
+                "T00008"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01075268817204301,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "the estimate dropped from 45,000 to 18,000 tokens",
+                  "rank": 2,
+                  "retrieval_score": 15.829655862592354,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 2,
+                  "retrieval_score": 12.524065163329261,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "the estimate dropped from 45,000 to 18,000 tokens",
+                "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:0",
+                  "start": 0.0,
+                  "end": 33.04,
+                  "text": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00001",
+                    "T00002",
+                    "T00003",
+                    "T00004",
+                    "T00005",
+                    "T00006",
+                    "T00007",
+                    "T00008"
+                  ]
+                }
+              ],
+              "selection_score": 0.4769105263885624,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 3,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false
+        },
+        "latency_seconds": 0.0143
+      },
+      {
+        "call": 2,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 360.56,
+          "end": 391.16,
+          "question": "When does the transcript first state that the estimate dropped from 45,000 to 18,000 tokens? Include the opening preview when selecting the first occurrence. Return the matching cue time or cue span.",
+          "modality": "transcript"
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "start": 360.56,
+          "end": 391.16,
+          "transcript": "[360.56–362.32] There was more context used,\n[362.32–364.24] but that context that made it back\n[364.24–366.40] into the main higher intelligence agent\n[366.40–369.36] was significantly compressed relative to the agent\n[369.36–371.66] that just did it all itself and had 102,000.\n[371.66–373.08] If I ran this turn one more time,\n[373.08–374.76] I might have to compress the context here\n[374.76–376.00] and then you lose some quality.\n[376.00–377.24] So that's the first comparison,\n[377.24–379.88] just using a single agent versus using a single agent\n[379.88–381.32] with multiple subagents.\n[381.32–383.16] So the biggest difference is that one\n[383.16–384.64] uses up a lot more context,\n[384.64–387.04] but this was also a very basic example.\n[387.04–389.56] And the results of both of these are basically the same.\n[389.56–391.16] Build an accountable action steward",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00091",
+              "start": 360.56,
+              "end": 362.32
+            },
+            {
+              "id": "T00092",
+              "start": 362.32,
+              "end": 364.24
+            },
+            {
+              "id": "T00093",
+              "start": 364.24,
+              "end": 366.4
+            },
+            {
+              "id": "T00094",
+              "start": 366.4,
+              "end": 369.36
+            },
+            {
+              "id": "T00095",
+              "start": 369.36,
+              "end": 371.66
+            },
+            {
+              "id": "T00096",
+              "start": 371.66,
+              "end": 373.08
+            },
+            {
+              "id": "T00097",
+              "start": 373.08,
+              "end": 374.76
+            },
+            {
+              "id": "T00098",
+              "start": 374.76,
+              "end": 376.0
+            },
+            {
+              "id": "T00099",
+              "start": 376.0,
+              "end": 377.24
+            },
+            {
+              "id": "T00100",
+              "start": 377.24,
+              "end": 379.88
+            },
+            {
+              "id": "T00101",
+              "start": 379.88,
+              "end": 381.32
+            },
+            {
+              "id": "T00102",
+              "start": 381.32,
+              "end": 383.16
+            },
+            {
+              "id": "T00103",
+              "start": 383.16,
+              "end": 384.64
+            },
+            {
+              "id": "T00104",
+              "start": 384.64,
+              "end": 387.04
+            },
+            {
+              "id": "T00105",
+              "start": 387.04,
+              "end": 389.56
+            },
+            {
+              "id": "T00106",
+              "start": 389.56,
+              "end": 391.16
+            }
+          ],
+          "visual_observation": null,
+          "sampled_timestamps": [],
+          "modality": "transcript",
+          "coverage": "subtitle_cues_only",
+          "cache_hit": false,
+          "decoded_image_max_side": 560,
+          "backend_image_pixel_limit": 313600,
+          "event": {
+            "event_query": [
+              "the estimate dropped from 45,000 to 18,000 tokens"
+            ],
+            "scope": {
+              "start": 0.0,
+              "end": 2575.0057666666667
+            },
+            "modality": "transcript",
+            "claim": "first_matching_observed_transcript_cue",
+            "match": "phrase",
+            "first_matching_cue": null,
+            "first_matching_cue_start": null,
+            "first_observed_timestamp": null,
+            "onset_bracket": null,
+            "global_first_verified": false,
+            "earliest_match_in_index": false,
+            "audio_onset_verified": false,
+            "cue_onset_uncertainty": null,
+            "source_ids": [],
+            "matches": [],
+            "matching_cue_count": 0,
+            "history_truncated": false,
+            "neighbors": [],
+            "examined_cue_count": 16,
+            "excluded_boundary_cues": 0,
+            "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+            "selector": "first_matching_observed_cue",
+            "search_coverage": "retrieved_or_inspected_cues_only"
+          },
+          "evidence_id": "E001"
+        },
+        "latency_seconds": 0.0026
+      },
+      {
+        "call": 3,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1920.39,
+          "end": 1952.25,
+          "question": "When does the transcript first state that the estimate dropped from 45,000 to 18,000 tokens? Include the opening preview when selecting the first occurrence. Return the matching cue time or cue span.",
+          "modality": "transcript"
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "start": 1920.39,
+          "end": 1952.25,
+          "transcript": "[1920.39–1923.05] It just dropped from 45,000 tokens down to 18,000.\n[1923.05–1925.25] There's a rough estimate researching up to five sources,\n[1925.25–1926.69] comparing this particular task\n[1926.69–1928.49] and then a synthesis under 500 words.\n[1928.49–1931.81] And that dropped the complexity of this task down to medium.\n[1931.81–1933.93] That's a cool way for you to do a lightweight check ahead of time\n[1933.93–1935.21] to make sure that your task isn't going\n[1935.21–1936.57] to blow through your whole quota.\n[1936.57–1938.21] So now let's click Create Task.\n[1938.21–1940.77] And this brings up the board that I was talking about.\n[1941.97–1944.13] The triage section is where raw ideas.\n[1944.13–1946.37] We have a specifier that's going to flesh out the spec.\n[1946.37–1949.65] So it's going to be converted from this into a different card.\n[1949.65–1952.25] And this is using that auxiliary model that I was talking about.",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00653",
+              "start": 1920.39,
+              "end": 1923.05
+            },
+            {
+              "id": "T00654",
+              "start": 1923.05,
+              "end": 1925.25
+            },
+            {
+              "id": "T00655",
+              "start": 1925.25,
+              "end": 1926.69
+            },
+            {
+              "id": "T00656",
+              "start": 1926.69,
+              "end": 1928.49
+            },
+            {
+              "id": "T00657",
+              "start": 1928.49,
+              "end": 1931.81
+            },
+            {
+              "id": "T00658",
+              "start": 1931.81,
+              "end": 1933.93
+            },
+            {
+              "id": "T00659",
+              "start": 1933.93,
+              "end": 1935.21
+            },
+            {
+              "id": "T00660",
+              "start": 1935.21,
+              "end": 1936.57
+            },
+            {
+              "id": "T00661",
+              "start": 1936.57,
+              "end": 1938.21
+            },
+            {
+              "id": "T00662",
+              "start": 1938.21,
+              "end": 1940.77
+            },
+            {
+              "id": "T00663",
+              "start": 1941.97,
+              "end": 1944.13
+            },
+            {
+              "id": "T00664",
+              "start": 1944.13,
+              "end": 1946.37
+            },
+            {
+              "id": "T00665",
+              "start": 1946.37,
+              "end": 1949.65
+            },
+            {
+              "id": "T00666",
+              "start": 1949.65,
+              "end": 1952.25
+            }
+          ],
+          "visual_observation": null,
+          "sampled_timestamps": [],
+          "modality": "transcript",
+          "coverage": "subtitle_cues_only",
+          "cache_hit": false,
+          "decoded_image_max_side": 560,
+          "backend_image_pixel_limit": 313600,
+          "event": {
+            "event_query": [
+              "the estimate dropped from 45,000 to 18,000 tokens"
+            ],
+            "scope": {
+              "start": 0.0,
+              "end": 2575.0057666666667
+            },
+            "modality": "transcript",
+            "claim": "first_matching_observed_transcript_cue",
+            "match": "phrase",
+            "first_matching_cue": null,
+            "first_matching_cue_start": null,
+            "first_observed_timestamp": null,
+            "onset_bracket": null,
+            "global_first_verified": false,
+            "earliest_match_in_index": false,
+            "audio_onset_verified": false,
+            "cue_onset_uncertainty": null,
+            "source_ids": [],
+            "matches": [],
+            "matching_cue_count": 0,
+            "history_truncated": false,
+            "neighbors": [],
+            "examined_cue_count": 14,
+            "excluded_boundary_cues": 0,
+            "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+            "selector": "first_matching_observed_cue",
+            "search_coverage": "retrieved_or_inspected_cues_only"
+          },
+          "evidence_id": "E002"
+        },
+        "latency_seconds": 0.0024
+      },
+      {
+        "call": 4,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 0.0,
+          "end": 33.04,
+          "question": "When does the transcript first state that the estimate dropped from 45,000 to 18,000 tokens? Include the opening preview when selecting the first occurrence. Return the matching cue time or cue span.",
+          "modality": "transcript"
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "start": 0.0,
+          "end": 33.04,
+          "transcript": "[0.00–4.08] That's just a really powerful way for you to significantly reduce the cost.\n[4.08–7.68] There we go. It just dropped from 45,000 tokens down to 18,000.\n[7.68–12.80] One agent can already delegate to subagents. So what is making an agent team actually add?\n[12.80–16.24] This is the question I get asked most often about multi-agent workflows.\n[16.24–19.84] Why build a team if one capable agent can actually get the job done?\n[19.84–24.64] And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough.\n[24.64–28.56] But other times a more complex workflow can improve the quality and the efficiency.\n[28.56–33.04] Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00001",
+              "start": 0.0,
+              "end": 4.08
+            },
+            {
+              "id": "T00002",
+              "start": 4.08,
+              "end": 7.68
+            },
+            {
+              "id": "T00003",
+              "start": 7.68,
+              "end": 12.8
+            },
+            {
+              "id": "T00004",
+              "start": 12.8,
+              "end": 16.24
+            },
+            {
+              "id": "T00005",
+              "start": 16.24,
+              "end": 19.84
+            },
+            {
+              "id": "T00006",
+              "start": 19.84,
+              "end": 24.64
+            },
+            {
+              "id": "T00007",
+              "start": 24.64,
+              "end": 28.56
+            },
+            {
+              "id": "T00008",
+              "start": 28.56,
+              "end": 33.04
+            }
+          ],
+          "visual_observation": null,
+          "sampled_timestamps": [],
+          "modality": "transcript",
+          "coverage": "subtitle_cues_only",
+          "cache_hit": false,
+          "decoded_image_max_side": 560,
+          "backend_image_pixel_limit": 313600,
+          "event": {
+            "event_query": [
+              "the estimate dropped from 45,000 to 18,000 tokens"
+            ],
+            "scope": {
+              "start": 0.0,
+              "end": 2575.0057666666667
+            },
+            "modality": "transcript",
+            "claim": "first_matching_observed_transcript_cue",
+            "match": "phrase",
+            "first_matching_cue": null,
+            "first_matching_cue_start": null,
+            "first_observed_timestamp": null,
+            "onset_bracket": null,
+            "global_first_verified": false,
+            "earliest_match_in_index": false,
+            "audio_onset_verified": false,
+            "cue_onset_uncertainty": null,
+            "source_ids": [],
+            "matches": [],
+            "matching_cue_count": 0,
+            "history_truncated": false,
+            "neighbors": [],
+            "examined_cue_count": 8,
+            "excluded_boundary_cues": 0,
+            "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+            "selector": "first_matching_observed_cue",
+            "search_coverage": "retrieved_or_inspected_cues_only"
+          },
+          "evidence_id": "E003"
+        },
+        "latency_seconds": 0.0024
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "start": 360.56,
+        "end": 391.16,
+        "transcript": "[360.56–362.32] There was more context used,\n[362.32–364.24] but that context that made it back\n[364.24–366.40] into the main higher intelligence agent\n[366.40–369.36] was significantly compressed relative to the agent\n[369.36–371.66] that just did it all itself and had 102,000.\n[371.66–373.08] If I ran this turn one more time,\n[373.08–374.76] I might have to compress the context here\n[374.76–376.00] and then you lose some quality.\n[376.00–377.24] So that's the first comparison,\n[377.24–379.88] just using a single agent versus using a single agent\n[379.88–381.32] with multiple subagents.\n[381.32–383.16] So the biggest difference is that one\n[383.16–384.64] uses up a lot more context,\n[384.64–387.04] but this was also a very basic example.\n[387.04–389.56] And the results of both of these are basically the same.\n[389.56–391.16] Build an accountable action steward",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00091",
+            "start": 360.56,
+            "end": 362.32
+          },
+          {
+            "id": "T00092",
+            "start": 362.32,
+            "end": 364.24
+          },
+          {
+            "id": "T00093",
+            "start": 364.24,
+            "end": 366.4
+          },
+          {
+            "id": "T00094",
+            "start": 366.4,
+            "end": 369.36
+          },
+          {
+            "id": "T00095",
+            "start": 369.36,
+            "end": 371.66
+          },
+          {
+            "id": "T00096",
+            "start": 371.66,
+            "end": 373.08
+          },
+          {
+            "id": "T00097",
+            "start": 373.08,
+            "end": 374.76
+          },
+          {
+            "id": "T00098",
+            "start": 374.76,
+            "end": 376.0
+          },
+          {
+            "id": "T00099",
+            "start": 376.0,
+            "end": 377.24
+          },
+          {
+            "id": "T00100",
+            "start": 377.24,
+            "end": 379.88
+          },
+          {
+            "id": "T00101",
+            "start": 379.88,
+            "end": 381.32
+          },
+          {
+            "id": "T00102",
+            "start": 381.32,
+            "end": 383.16
+          },
+          {
+            "id": "T00103",
+            "start": 383.16,
+            "end": 384.64
+          },
+          {
+            "id": "T00104",
+            "start": 384.64,
+            "end": 387.04
+          },
+          {
+            "id": "T00105",
+            "start": 387.04,
+            "end": 389.56
+          },
+          {
+            "id": "T00106",
+            "start": 389.56,
+            "end": 391.16
+          }
+        ],
+        "visual_observation": null,
+        "sampled_timestamps": [],
+        "modality": "transcript",
+        "coverage": "subtitle_cues_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "event": {
+          "event_query": [
+            "the estimate dropped from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 0.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 16,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E001"
+      },
+      "E002": {
+        "start": 1920.39,
+        "end": 1952.25,
+        "transcript": "[1920.39–1923.05] It just dropped from 45,000 tokens down to 18,000.\n[1923.05–1925.25] There's a rough estimate researching up to five sources,\n[1925.25–1926.69] comparing this particular task\n[1926.69–1928.49] and then a synthesis under 500 words.\n[1928.49–1931.81] And that dropped the complexity of this task down to medium.\n[1931.81–1933.93] That's a cool way for you to do a lightweight check ahead of time\n[1933.93–1935.21] to make sure that your task isn't going\n[1935.21–1936.57] to blow through your whole quota.\n[1936.57–1938.21] So now let's click Create Task.\n[1938.21–1940.77] And this brings up the board that I was talking about.\n[1941.97–1944.13] The triage section is where raw ideas.\n[1944.13–1946.37] We have a specifier that's going to flesh out the spec.\n[1946.37–1949.65] So it's going to be converted from this into a different card.\n[1949.65–1952.25] And this is using that auxiliary model that I was talking about.",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00653",
+            "start": 1920.39,
+            "end": 1923.05
+          },
+          {
+            "id": "T00654",
+            "start": 1923.05,
+            "end": 1925.25
+          },
+          {
+            "id": "T00655",
+            "start": 1925.25,
+            "end": 1926.69
+          },
+          {
+            "id": "T00656",
+            "start": 1926.69,
+            "end": 1928.49
+          },
+          {
+            "id": "T00657",
+            "start": 1928.49,
+            "end": 1931.81
+          },
+          {
+            "id": "T00658",
+            "start": 1931.81,
+            "end": 1933.93
+          },
+          {
+            "id": "T00659",
+            "start": 1933.93,
+            "end": 1935.21
+          },
+          {
+            "id": "T00660",
+            "start": 1935.21,
+            "end": 1936.57
+          },
+          {
+            "id": "T00661",
+            "start": 1936.57,
+            "end": 1938.21
+          },
+          {
+            "id": "T00662",
+            "start": 1938.21,
+            "end": 1940.77
+          },
+          {
+            "id": "T00663",
+            "start": 1941.97,
+            "end": 1944.13
+          },
+          {
+            "id": "T00664",
+            "start": 1944.13,
+            "end": 1946.37
+          },
+          {
+            "id": "T00665",
+            "start": 1946.37,
+            "end": 1949.65
+          },
+          {
+            "id": "T00666",
+            "start": 1949.65,
+            "end": 1952.25
+          }
+        ],
+        "visual_observation": null,
+        "sampled_timestamps": [],
+        "modality": "transcript",
+        "coverage": "subtitle_cues_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "event": {
+          "event_query": [
+            "the estimate dropped from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 0.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 14,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E002"
+      },
+      "E003": {
+        "start": 0.0,
+        "end": 33.04,
+        "transcript": "[0.00–4.08] That's just a really powerful way for you to significantly reduce the cost.\n[4.08–7.68] There we go. It just dropped from 45,000 tokens down to 18,000.\n[7.68–12.80] One agent can already delegate to subagents. So what is making an agent team actually add?\n[12.80–16.24] This is the question I get asked most often about multi-agent workflows.\n[16.24–19.84] Why build a team if one capable agent can actually get the job done?\n[19.84–24.64] And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough.\n[24.64–28.56] But other times a more complex workflow can improve the quality and the efficiency.\n[28.56–33.04] Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00001",
+            "start": 0.0,
+            "end": 4.08
+          },
+          {
+            "id": "T00002",
+            "start": 4.08,
+            "end": 7.68
+          },
+          {
+            "id": "T00003",
+            "start": 7.68,
+            "end": 12.8
+          },
+          {
+            "id": "T00004",
+            "start": 12.8,
+            "end": 16.24
+          },
+          {
+            "id": "T00005",
+            "start": 16.24,
+            "end": 19.84
+          },
+          {
+            "id": "T00006",
+            "start": 19.84,
+            "end": 24.64
+          },
+          {
+            "id": "T00007",
+            "start": 24.64,
+            "end": 28.56
+          },
+          {
+            "id": "T00008",
+            "start": 28.56,
+            "end": 33.04
+          }
+        ],
+        "visual_observation": null,
+        "sampled_timestamps": [],
+        "modality": "transcript",
+        "coverage": "subtitle_cues_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "event": {
+          "event_query": [
+            "the estimate dropped from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 0.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 8,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E003"
+      }
+    },
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"event\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"the estimate dropped from 45,000 to 18,000 tokens\",\n    \"when does the transcript first state this\",\n    \"first occurrence of the estimate dropping from 45,000 to 18,000 tokens\"\n  ],\n  \"requirements\": [\n    \"The answer must identify the first time the transcript states that the estimate dropped from 45,000 to 18,000 tokens.\",\n    \"The response must include the opening preview when selecting the first occurrence.\",\n    \"The output must return the matching cue time or cue span.\",\n    \"The answer must be based solely on the transcript content, without external inference.\"\n  ],\n  \"event_query\": [\n    \"the estimate dropped from 45,000 to 18,000 tokens\"\n  ]\n}"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "static",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

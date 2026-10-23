@@ -1,0 +1,105 @@
+{
+  "schema_version": "clipscout-research-study-v2.1",
+  "created_at_utc": "2026-10-22T14:49:46.386396+00:00",
+  "status": "questions and scoring criteria frozen before new study inference",
+  "questions_file": "data/research_v2/questions.json",
+  "questions_sha256": "f8b02e6a4d13d793145454d6ab221cb2b8f0edc1a76288c4d09b5e7ea5350555",
+  "visual_annotations_file": "data/research_v2/visual_annotations.json",
+  "visual_annotations_sha256": "a90a09ae3bd334953b5348274ff82f9867797fecb3439bec49ff5c099d68b046",
+  "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+  "design": {
+    "test_count": 12,
+    "dev_count": 4,
+    "test_tasks": {
+      "reasoning": 6,
+      "onset": 4,
+      "unanswerable": 2
+    },
+    "planned_test_policies": [
+      "legacy",
+      "research",
+      "no-refinement"
+    ],
+    "planned_test_runs": 36,
+    "planned_dev_policies": [
+      "research"
+    ],
+    "planned_dev_runs": 4,
+    "schedule": "question-major; policy order rotates by question index; fixed in manifest before inference"
+  },
+  "policies": {
+    "legacy": "Current VideoAgent adaptive policy, native response schema; no event-output adapter or post-hoc citation-to-onset conversion.",
+    "research": "ResearchAgent with hybrid retrieval, CPU visual index/OCR, claim audit and event refinement.",
+    "no-refinement": "Same ResearchAgent and resources with refine_events=False. Actual trajectories may differ; no-refinement is not forced matched evidence."
+  },
+  "controls": {
+    "same_backend": true,
+    "same_configured_tool_frame_and_context_limits": true,
+    "inspection_cache_enabled": false,
+    "question_reference_and_rubric_visible_to_agents": false,
+    "actual_costs_must_be_reported": true,
+    "additional_modality_controls": "Run in separate outputs and label access regimes explicitly. Transcript-only must remove captions, visual index and frame inspection; selecting retrieval-only is insufficient."
+  },
+  "reasoning_scoring": {
+    "source": "Prewritten claim atoms with required supports; named external reviewer annotations, never the answering model audit as ground truth.",
+    "required_review_fields": [
+      "reviewer",
+      "method",
+      "atom_judgments",
+      "extra_claims_supported"
+    ],
+    "unknown": "Null accuracy with explicit unknown counts and lower/upper bounds.",
+    "strict_success": "Every required atom correct, every claimed relation correct, and additional claims supported; evidence support scored separately.",
+    "independence": "Assistant audit is neither independent human validation nor blind unless an actual masked protocol is recorded."
+  },
+  "event_scoring": {
+    "prediction_source": "Explicit result.event only, no regex extraction from prose or citation starts.",
+    "tolerances_seconds": [
+      1,
+      2,
+      5
+    ],
+    "uncertainty": "Point distance to reference bracket; both predicted endpoints must fit tolerated reference bracket.",
+    "wide_brackets": "Reference containment alone is not success; report bracket widths and worst endpoint error.",
+    "denominator": "All onset cases, including missing, errors, abstention and wrong occurrence. Error means are conditional on valid same-modality predictions and include out-of-scope wrong occurrences.",
+    "reference_domains": {
+      "transcript": "ASR cue spans, not independently aligned spoken-word onsets.",
+      "visual": "Locally refined complete-title legibility transition; not global first appearance, not animation completion."
+    },
+    "legacy_limitation": "Legacy native schema has no explicit event output. Its onset score assesses absent interface capability, not a fair content-only localization comparison. Research vs no-refinement is the comparable explicit-event ablation."
+  },
+  "support_geometry": {
+    "matching": "One-to-one support/citation matching at IoU>=0.3",
+    "meaning": "Geometry only; does not verify entailment or full continuous observation."
+  },
+  "limits": [
+    "One user-supplied42m55s video; no cross-video generalization estimate.",
+    "Diagnostic questions include reformulations of earlier inspected examples, not untouched held-out benchmark cases.",
+    "Two transcript onset cases intentionally reuse the same utterance at different occurrences; correlated control pair.",
+    "Visual reference supports for onset are narrow transition brackets; citation-IoU is secondary and can penalize otherwise useful surrounding context.",
+    "Refinement, extra planning and auditing may alter actual generations and latency; equal ceilings do not imply equal computational cost."
+  ],
+  "preservation": "Original52-run study and subsequent temporal regressions remain separate and unchanged.",
+  "runner": "scripts/run_research_study.py",
+  "diagnostic_metrics": {
+    "evaluator_protocol_version": "research-v2.2",
+    "definitions": {
+      "retrieval": "Candidates follow chronological search calls and returned rank; duplicate physical regions are removed. Recall@k is the maximum one-to-one fraction of required supports matched in the first k unique candidates. A hit requires compatible known modality and either an actual sampled timestamp in the reference interval or interval IoU>=0.3. These are localization diagnostics, not semantic correctness.",
+      "reciprocal_rank": "Inverse rank of the first candidate matching any required support; zero for a recorded search with no relevant hit. Questions without required supports or without a recorded search have null retrieval metrics.",
+      "ndcg_at_5": "Binary unique-support gain, discounted by log2(rank+1). At most one previously unmatched support earns gain for each candidate (highest geometric score breaks ambiguity); ideal DCG contains min(5, number of required supports) gains. Repeated evidence for the same support cannot increase gain.",
+      "citation_geometry": "Unique final citation intervals with known/inferred-from-ledger modality are matched to required supports at interval IoU>=0.3. Precision counts matching citations divided by unique valid citations plus invalid citations. Support recall uses one-to-one assignment. Unknown modality earns no modality-qualified credit; temporal-only precision is reported separately. Neither is entailment or event-onset accuracy.",
+      "cost": "Only observed finite nonnegative telemetry contributes. Missing fields remain null. Latency quantiles use linear interpolation at (n-1)*p; every distribution reports measured and missing counts. Counts include failed tool attempts where recorded.",
+      "duplicate_frames": "(decoded frame count - unique sampled timestamp count) / decoded frame count, only when both counts are observed and consistent. Zero decoded frames and zero unique samples yield zero. Unobserved timestamps do not imply all frames were unique.",
+      "rates": "Operational error and abstention rates use non-missing predictions as their denominator. Tool failure rates use attempts with known ok/error outcomes. Format repair requires an explicitly classified format/validation rejection followed by another decision; unclassified errors leave that rate unknown. Decision-repair counts are reported separately.",
+      "budget": "Hard limits are at most four attempted tools (or a stricter configured limit) and the configured frame limit, default 16. Reported counts are checked against trace counts; the larger tool count is used. Unknown telemetry cannot establish budget compliance.",
+      "joint_reviewed": "Reasoning joint success requires a complete named semantic review, supported correct required/extra claims, and all required geometric supports. Event joint success requires an explicit boolean event-identity review and an explicit within-scope, modality-compatible timing prediction. Unreviewed quality remains null; citation times are never substituted for event predictions."
+    },
+    "exports": [
+      "comparison.json",
+      "comparison.csv",
+      "per_question.metrics.csv",
+      "POLICY.metrics.json"
+    ],
+    "unknown_values": "JSON null / CSV unknown; never imputed as zero"
+  }
+}

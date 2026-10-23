@@ -1,0 +1,34 @@
+[
+  {
+    "started_at_utc": "2026-10-22T20:04:08.310613+00:00",
+    "argv": [
+      "--prepare-assets",
+      "--download-models",
+      "--local-files-only",
+      "--output-root",
+      "results/research_v2",
+      "--split",
+      "test",
+      "--modes",
+      "adaptive",
+      "retrieval-only",
+      "static",
+      "uniform"
+    ],
+    "resume": false,
+    "prepare_only": false,
+    "launch_context": {
+      "stop_demo_requested": true,
+      "stopped_demo_pids": []
+    },
+    "warmup": {
+      "seconds": 10.770889499981422,
+      "frames": 4,
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 788,
+        "output_tokens": 2
+      }
+    }
+  }
+]

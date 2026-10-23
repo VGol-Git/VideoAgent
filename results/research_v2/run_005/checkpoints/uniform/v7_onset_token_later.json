@@ -1,0 +1,929 @@
+{
+  "saved_at_utc": "2026-10-22T20:38:37.155277+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "uniform",
+  "question_id": "v7_onset_token_later",
+  "prediction_sha256": "9099e27b5480225afb7ba32509e74d3b1fa37bfe1ba00d5019ae72bcc989a1b4",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Answered response must support every planned requirement",
+    "error": "Answered response must support every planned requirement",
+    "error_type": "invalid_model_response",
+    "fixed_schedule": [
+      {
+        "start": 1881.8757208333334,
+        "end": 1911.8757208333334
+      },
+      {
+        "start": 2075.6271625,
+        "end": 2105.6271625
+      },
+      {
+        "start": 2269.3786041666667,
+        "end": 2299.3786041666667
+      },
+      {
+        "start": 2463.1300458333335,
+        "end": 2493.1300458333335
+      }
+    ],
+    "question_contract": {
+      "basis": "question_text_only",
+      "task": "event",
+      "modality": "transcript",
+      "allowed_modalities": [
+        "transcript"
+      ],
+      "event_query_hint": "the estimate dropping from 45,000 to 18,000 tokens",
+      "overview": false
+    },
+    "schedule_policy": "uniform_scope_positions",
+    "model_protocol_attempts": 0,
+    "model_protocol_failures": [],
+    "event": null,
+    "plan": {
+      "task": "event",
+      "modality": "transcript",
+      "queries": [
+        "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+        "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+        "time of first mention of estimate decreasing from 45,000 to 18,000 tokens"
+      ],
+      "requirements": {
+        "R1": "the transcript first reports the estimate dropping from 45,000 to 18,000 tokens at a specific time",
+        "R2": "the time must be within the given scope [1800.0, 2575.0057666666667]",
+        "R3": "the answer must return the matching cue time or cue span",
+        "R4": "the event is the estimation demonstration after 30 minutes",
+        "R5": "the estimate drops from 45,000 to 18,000 tokens is the key event",
+        "R6": "the answer must be precise and match the exact time or span in the transcript"
+      },
+      "event_query": [
+        "the estimate dropping from 45,000 to 18,000 tokens"
+      ]
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 1800.0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "question_id": "v7_onset_token_later",
+    "question": "During the later estimation demonstration after 30 minutes, when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens? Return the matching cue time or cue span.",
+    "mode": "uniform",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 4,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 18.3511,
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 8807,
+      "output_tokens": 328
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1881.8757208333334,
+          "end": 1911.8757208333334,
+          "question": "During the later estimation demonstration after 30 minutes, when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens? Return the matching cue time or cue span.",
+          "modality": "transcript"
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "start": 1881.8757208333334,
+          "end": 1911.8757208333334,
+          "transcript": "[1882.83–1884.53] Let's that worker run in a goal loop\n[1884.53–1885.69] like I've already shown you.\n[1885.69–1887.89] And this is its own self-contained goal loop.\n[1887.89–1889.53] It doesn't connect to the existing goal\n[1889.53–1890.41] that we have elsewhere.\n[1890.41–1893.05] And what's cool too is we can also estimate the cost\n[1893.05–1894.33] of what this task is going to be.\n[1894.33–1896.37] So I can click estimate and then it gives me a list\n[1896.37–1898.25] of the tokens that it thinks is going to cost\n[1898.25–1899.61] for this particular prompt here.\n[1899.61–1902.33] So it took this task and it analyzed it\n[1902.33–1903.41] to give you an estimate.\n[1903.41–1906.17] So it says it's going to be a broad ambiguous research task\n[1906.17–1908.45] requiring extensive source review, synthesis,\n[1908.45–1911.13] architecture comparison and likely iterative documentation",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00632",
+              "start": 1882.83,
+              "end": 1884.53
+            },
+            {
+              "id": "T00633",
+              "start": 1884.53,
+              "end": 1885.69
+            },
+            {
+              "id": "T00634",
+              "start": 1885.69,
+              "end": 1887.89
+            },
+            {
+              "id": "T00635",
+              "start": 1887.89,
+              "end": 1889.53
+            },
+            {
+              "id": "T00636",
+              "start": 1889.53,
+              "end": 1890.41
+            },
+            {
+              "id": "T00637",
+              "start": 1890.41,
+              "end": 1893.05
+            },
+            {
+              "id": "T00638",
+              "start": 1893.05,
+              "end": 1894.33
+            },
+            {
+              "id": "T00639",
+              "start": 1894.33,
+              "end": 1896.37
+            },
+            {
+              "id": "T00640",
+              "start": 1896.37,
+              "end": 1898.25
+            },
+            {
+              "id": "T00641",
+              "start": 1898.25,
+              "end": 1899.61
+            },
+            {
+              "id": "T00642",
+              "start": 1899.61,
+              "end": 1902.33
+            },
+            {
+              "id": "T00643",
+              "start": 1902.33,
+              "end": 1903.41
+            },
+            {
+              "id": "T00644",
+              "start": 1903.41,
+              "end": 1906.17
+            },
+            {
+              "id": "T00645",
+              "start": 1906.17,
+              "end": 1908.45
+            },
+            {
+              "id": "T00646",
+              "start": 1908.45,
+              "end": 1911.13
+            }
+          ],
+          "visual_observation": null,
+          "sampled_timestamps": [],
+          "modality": "transcript",
+          "coverage": "subtitle_cues_only",
+          "cache_hit": false,
+          "decoded_image_max_side": 560,
+          "backend_image_pixel_limit": 313600,
+          "event": {
+            "event_query": [
+              "the estimate dropping from 45,000 to 18,000 tokens"
+            ],
+            "scope": {
+              "start": 1800.0,
+              "end": 2575.0057666666667
+            },
+            "modality": "transcript",
+            "claim": "first_matching_observed_transcript_cue",
+            "match": "phrase",
+            "first_matching_cue": null,
+            "first_matching_cue_start": null,
+            "first_observed_timestamp": null,
+            "onset_bracket": null,
+            "global_first_verified": false,
+            "earliest_match_in_index": false,
+            "audio_onset_verified": false,
+            "cue_onset_uncertainty": null,
+            "source_ids": [],
+            "matches": [],
+            "matching_cue_count": 0,
+            "history_truncated": false,
+            "neighbors": [],
+            "examined_cue_count": 15,
+            "excluded_boundary_cues": 0,
+            "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+            "selector": "first_matching_observed_cue",
+            "search_coverage": "retrieved_or_inspected_cues_only"
+          },
+          "evidence_id": "E001"
+        },
+        "latency_seconds": 0.0026
+      },
+      {
+        "call": 2,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 2075.6271625,
+          "end": 2105.6271625,
+          "question": "During the later estimation demonstration after 30 minutes, when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens? Return the matching cue time or cue span.",
+          "modality": "transcript"
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "start": 2075.6271625,
+          "end": 2105.6271625,
+          "transcript": "[2076.89–2079.57] And it created a briefing doc that was saved right here.\n[2079.57–2081.29] It only reviewed two sources\n[2081.29–2083.73] because it was given a two source limit\n[2083.73–2085.09] and it maintained everything.\n[2085.09–2087.19] Okay, and it looks like the second one just finished as well.\n[2087.19–2089.19] And now we can see that the orchestrator task\n[2089.19–2092.51] just moved from to do to ready.\n[2092.51–2093.91] So once it's going from ready,\n[2093.91–2096.79] once the dispatcher ticks in 60 seconds or so,\n[2096.79–2098.63] it should get put over to running.\n[2098.63–2099.47] And there we go.\n[2099.47–2101.71] So basically, we had those two researcher tasks\n[2101.71–2102.79] and once they were finished,",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00722",
+              "start": 2076.89,
+              "end": 2079.57
+            },
+            {
+              "id": "T00723",
+              "start": 2079.57,
+              "end": 2081.29
+            },
+            {
+              "id": "T00724",
+              "start": 2081.29,
+              "end": 2083.73
+            },
+            {
+              "id": "T00725",
+              "start": 2083.73,
+              "end": 2085.09
+            },
+            {
+              "id": "T00726",
+              "start": 2085.09,
+              "end": 2087.19
+            },
+            {
+              "id": "T00727",
+              "start": 2087.19,
+              "end": 2089.19
+            },
+            {
+              "id": "T00728",
+              "start": 2089.19,
+              "end": 2092.51
+            },
+            {
+              "id": "T00729",
+              "start": 2092.51,
+              "end": 2093.91
+            },
+            {
+              "id": "T00730",
+              "start": 2093.91,
+              "end": 2096.79
+            },
+            {
+              "id": "T00731",
+              "start": 2096.79,
+              "end": 2098.63
+            },
+            {
+              "id": "T00732",
+              "start": 2098.63,
+              "end": 2099.47
+            },
+            {
+              "id": "T00733",
+              "start": 2099.47,
+              "end": 2101.71
+            },
+            {
+              "id": "T00734",
+              "start": 2101.71,
+              "end": 2102.79
+            }
+          ],
+          "visual_observation": null,
+          "sampled_timestamps": [],
+          "modality": "transcript",
+          "coverage": "subtitle_cues_only",
+          "cache_hit": false,
+          "decoded_image_max_side": 560,
+          "backend_image_pixel_limit": 313600,
+          "event": {
+            "event_query": [
+              "the estimate dropping from 45,000 to 18,000 tokens"
+            ],
+            "scope": {
+              "start": 1800.0,
+              "end": 2575.0057666666667
+            },
+            "modality": "transcript",
+            "claim": "first_matching_observed_transcript_cue",
+            "match": "phrase",
+            "first_matching_cue": null,
+            "first_matching_cue_start": null,
+            "first_observed_timestamp": null,
+            "onset_bracket": null,
+            "global_first_verified": false,
+            "earliest_match_in_index": false,
+            "audio_onset_verified": false,
+            "cue_onset_uncertainty": null,
+            "source_ids": [],
+            "matches": [],
+            "matching_cue_count": 0,
+            "history_truncated": false,
+            "neighbors": [],
+            "examined_cue_count": 13,
+            "excluded_boundary_cues": 0,
+            "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+            "selector": "first_matching_observed_cue",
+            "search_coverage": "retrieved_or_inspected_cues_only"
+          },
+          "evidence_id": "E002"
+        },
+        "latency_seconds": 0.0024
+      },
+      {
+        "call": 3,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 2269.3786041666667,
+          "end": 2299.3786041666667,
+          "question": "During the later estimation demonstration after 30 minutes, when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens? Return the matching cue time or cue span.",
+          "modality": "transcript"
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "start": 2269.3786041666667,
+          "end": 2299.3786041666667,
+          "transcript": "[2272.38–2275.88] pretty well. But maybe we didn't need two researcher agents. That's a little bit\n[2275.88–2280.96] of overkill for a five source limitation. That probably used up more tokens than\n[2280.96–2283.76] what we needed here. So this is where if we close this and we go back to our\n[2283.76–2287.44] orchestration settings, we can start moving beyond this auto\n[2287.44–2294.75] decomposer. So this is where instead we can turn it off, and\n[2294.75–2297.95] we could let the orchestrator be the one to decompose the triage",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00794",
+              "start": 2272.38,
+              "end": 2275.88
+            },
+            {
+              "id": "T00795",
+              "start": 2275.88,
+              "end": 2280.96
+            },
+            {
+              "id": "T00796",
+              "start": 2280.96,
+              "end": 2283.76
+            },
+            {
+              "id": "T00797",
+              "start": 2283.76,
+              "end": 2287.44
+            },
+            {
+              "id": "T00798",
+              "start": 2287.44,
+              "end": 2294.75
+            },
+            {
+              "id": "T00799",
+              "start": 2294.75,
+              "end": 2297.95
+            }
+          ],
+          "visual_observation": null,
+          "sampled_timestamps": [],
+          "modality": "transcript",
+          "coverage": "subtitle_cues_only",
+          "cache_hit": false,
+          "decoded_image_max_side": 560,
+          "backend_image_pixel_limit": 313600,
+          "event": {
+            "event_query": [
+              "the estimate dropping from 45,000 to 18,000 tokens"
+            ],
+            "scope": {
+              "start": 1800.0,
+              "end": 2575.0057666666667
+            },
+            "modality": "transcript",
+            "claim": "first_matching_observed_transcript_cue",
+            "match": "phrase",
+            "first_matching_cue": null,
+            "first_matching_cue_start": null,
+            "first_observed_timestamp": null,
+            "onset_bracket": null,
+            "global_first_verified": false,
+            "earliest_match_in_index": false,
+            "audio_onset_verified": false,
+            "cue_onset_uncertainty": null,
+            "source_ids": [],
+            "matches": [],
+            "matching_cue_count": 0,
+            "history_truncated": false,
+            "neighbors": [],
+            "examined_cue_count": 6,
+            "excluded_boundary_cues": 0,
+            "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+            "selector": "first_matching_observed_cue",
+            "search_coverage": "retrieved_or_inspected_cues_only"
+          },
+          "evidence_id": "E003"
+        },
+        "latency_seconds": 0.0023
+      },
+      {
+        "call": 4,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 2463.1300458333335,
+          "end": 2493.1300458333335,
+          "question": "During the later estimation demonstration after 30 minutes, when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens? Return the matching cue time or cue span.",
+          "modality": "transcript"
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "start": 2463.1300458333335,
+          "end": 2493.1300458333335,
+          "transcript": "[2470.06–2474.62] which one actually makes the most sense. The results showed that a single agent with task\n[2474.62–2479.90] delegation for a simple task at least and running the orchestrator without the auto decomposer\n[2479.90–2484.78] actually had pretty similar token usage and pretty similar quality, but using the auto\n[2484.78–2489.42] decomposer and adding the goal loop actually added more overhead for this particular task.",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00857",
+              "start": 2470.06,
+              "end": 2474.62
+            },
+            {
+              "id": "T00858",
+              "start": 2474.62,
+              "end": 2479.9
+            },
+            {
+              "id": "T00859",
+              "start": 2479.9,
+              "end": 2484.78
+            },
+            {
+              "id": "T00860",
+              "start": 2484.78,
+              "end": 2489.42
+            }
+          ],
+          "visual_observation": null,
+          "sampled_timestamps": [],
+          "modality": "transcript",
+          "coverage": "subtitle_cues_only",
+          "cache_hit": false,
+          "decoded_image_max_side": 560,
+          "backend_image_pixel_limit": 313600,
+          "event": {
+            "event_query": [
+              "the estimate dropping from 45,000 to 18,000 tokens"
+            ],
+            "scope": {
+              "start": 1800.0,
+              "end": 2575.0057666666667
+            },
+            "modality": "transcript",
+            "claim": "first_matching_observed_transcript_cue",
+            "match": "phrase",
+            "first_matching_cue": null,
+            "first_matching_cue_start": null,
+            "first_observed_timestamp": null,
+            "onset_bracket": null,
+            "global_first_verified": false,
+            "earliest_match_in_index": false,
+            "audio_onset_verified": false,
+            "cue_onset_uncertainty": null,
+            "source_ids": [],
+            "matches": [],
+            "matching_cue_count": 0,
+            "history_truncated": false,
+            "neighbors": [],
+            "examined_cue_count": 4,
+            "excluded_boundary_cues": 0,
+            "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+            "selector": "first_matching_observed_cue",
+            "search_coverage": "retrieved_or_inspected_cues_only"
+          },
+          "evidence_id": "E004"
+        },
+        "latency_seconds": 0.0024
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "start": 1881.8757208333334,
+        "end": 1911.8757208333334,
+        "transcript": "[1882.83–1884.53] Let's that worker run in a goal loop\n[1884.53–1885.69] like I've already shown you.\n[1885.69–1887.89] And this is its own self-contained goal loop.\n[1887.89–1889.53] It doesn't connect to the existing goal\n[1889.53–1890.41] that we have elsewhere.\n[1890.41–1893.05] And what's cool too is we can also estimate the cost\n[1893.05–1894.33] of what this task is going to be.\n[1894.33–1896.37] So I can click estimate and then it gives me a list\n[1896.37–1898.25] of the tokens that it thinks is going to cost\n[1898.25–1899.61] for this particular prompt here.\n[1899.61–1902.33] So it took this task and it analyzed it\n[1902.33–1903.41] to give you an estimate.\n[1903.41–1906.17] So it says it's going to be a broad ambiguous research task\n[1906.17–1908.45] requiring extensive source review, synthesis,\n[1908.45–1911.13] architecture comparison and likely iterative documentation",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00632",
+            "start": 1882.83,
+            "end": 1884.53
+          },
+          {
+            "id": "T00633",
+            "start": 1884.53,
+            "end": 1885.69
+          },
+          {
+            "id": "T00634",
+            "start": 1885.69,
+            "end": 1887.89
+          },
+          {
+            "id": "T00635",
+            "start": 1887.89,
+            "end": 1889.53
+          },
+          {
+            "id": "T00636",
+            "start": 1889.53,
+            "end": 1890.41
+          },
+          {
+            "id": "T00637",
+            "start": 1890.41,
+            "end": 1893.05
+          },
+          {
+            "id": "T00638",
+            "start": 1893.05,
+            "end": 1894.33
+          },
+          {
+            "id": "T00639",
+            "start": 1894.33,
+            "end": 1896.37
+          },
+          {
+            "id": "T00640",
+            "start": 1896.37,
+            "end": 1898.25
+          },
+          {
+            "id": "T00641",
+            "start": 1898.25,
+            "end": 1899.61
+          },
+          {
+            "id": "T00642",
+            "start": 1899.61,
+            "end": 1902.33
+          },
+          {
+            "id": "T00643",
+            "start": 1902.33,
+            "end": 1903.41
+          },
+          {
+            "id": "T00644",
+            "start": 1903.41,
+            "end": 1906.17
+          },
+          {
+            "id": "T00645",
+            "start": 1906.17,
+            "end": 1908.45
+          },
+          {
+            "id": "T00646",
+            "start": 1908.45,
+            "end": 1911.13
+          }
+        ],
+        "visual_observation": null,
+        "sampled_timestamps": [],
+        "modality": "transcript",
+        "coverage": "subtitle_cues_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "event": {
+          "event_query": [
+            "the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 1800.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 15,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E001"
+      },
+      "E002": {
+        "start": 2075.6271625,
+        "end": 2105.6271625,
+        "transcript": "[2076.89–2079.57] And it created a briefing doc that was saved right here.\n[2079.57–2081.29] It only reviewed two sources\n[2081.29–2083.73] because it was given a two source limit\n[2083.73–2085.09] and it maintained everything.\n[2085.09–2087.19] Okay, and it looks like the second one just finished as well.\n[2087.19–2089.19] And now we can see that the orchestrator task\n[2089.19–2092.51] just moved from to do to ready.\n[2092.51–2093.91] So once it's going from ready,\n[2093.91–2096.79] once the dispatcher ticks in 60 seconds or so,\n[2096.79–2098.63] it should get put over to running.\n[2098.63–2099.47] And there we go.\n[2099.47–2101.71] So basically, we had those two researcher tasks\n[2101.71–2102.79] and once they were finished,",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00722",
+            "start": 2076.89,
+            "end": 2079.57
+          },
+          {
+            "id": "T00723",
+            "start": 2079.57,
+            "end": 2081.29
+          },
+          {
+            "id": "T00724",
+            "start": 2081.29,
+            "end": 2083.73
+          },
+          {
+            "id": "T00725",
+            "start": 2083.73,
+            "end": 2085.09
+          },
+          {
+            "id": "T00726",
+            "start": 2085.09,
+            "end": 2087.19
+          },
+          {
+            "id": "T00727",
+            "start": 2087.19,
+            "end": 2089.19
+          },
+          {
+            "id": "T00728",
+            "start": 2089.19,
+            "end": 2092.51
+          },
+          {
+            "id": "T00729",
+            "start": 2092.51,
+            "end": 2093.91
+          },
+          {
+            "id": "T00730",
+            "start": 2093.91,
+            "end": 2096.79
+          },
+          {
+            "id": "T00731",
+            "start": 2096.79,
+            "end": 2098.63
+          },
+          {
+            "id": "T00732",
+            "start": 2098.63,
+            "end": 2099.47
+          },
+          {
+            "id": "T00733",
+            "start": 2099.47,
+            "end": 2101.71
+          },
+          {
+            "id": "T00734",
+            "start": 2101.71,
+            "end": 2102.79
+          }
+        ],
+        "visual_observation": null,
+        "sampled_timestamps": [],
+        "modality": "transcript",
+        "coverage": "subtitle_cues_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "event": {
+          "event_query": [
+            "the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 1800.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 13,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E002"
+      },
+      "E003": {
+        "start": 2269.3786041666667,
+        "end": 2299.3786041666667,
+        "transcript": "[2272.38–2275.88] pretty well. But maybe we didn't need two researcher agents. That's a little bit\n[2275.88–2280.96] of overkill for a five source limitation. That probably used up more tokens than\n[2280.96–2283.76] what we needed here. So this is where if we close this and we go back to our\n[2283.76–2287.44] orchestration settings, we can start moving beyond this auto\n[2287.44–2294.75] decomposer. So this is where instead we can turn it off, and\n[2294.75–2297.95] we could let the orchestrator be the one to decompose the triage",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00794",
+            "start": 2272.38,
+            "end": 2275.88
+          },
+          {
+            "id": "T00795",
+            "start": 2275.88,
+            "end": 2280.96
+          },
+          {
+            "id": "T00796",
+            "start": 2280.96,
+            "end": 2283.76
+          },
+          {
+            "id": "T00797",
+            "start": 2283.76,
+            "end": 2287.44
+          },
+          {
+            "id": "T00798",
+            "start": 2287.44,
+            "end": 2294.75
+          },
+          {
+            "id": "T00799",
+            "start": 2294.75,
+            "end": 2297.95
+          }
+        ],
+        "visual_observation": null,
+        "sampled_timestamps": [],
+        "modality": "transcript",
+        "coverage": "subtitle_cues_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "event": {
+          "event_query": [
+            "the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 1800.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 6,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E003"
+      },
+      "E004": {
+        "start": 2463.1300458333335,
+        "end": 2493.1300458333335,
+        "transcript": "[2470.06–2474.62] which one actually makes the most sense. The results showed that a single agent with task\n[2474.62–2479.90] delegation for a simple task at least and running the orchestrator without the auto decomposer\n[2479.90–2484.78] actually had pretty similar token usage and pretty similar quality, but using the auto\n[2484.78–2489.42] decomposer and adding the goal loop actually added more overhead for this particular task.",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00857",
+            "start": 2470.06,
+            "end": 2474.62
+          },
+          {
+            "id": "T00858",
+            "start": 2474.62,
+            "end": 2479.9
+          },
+          {
+            "id": "T00859",
+            "start": 2479.9,
+            "end": 2484.78
+          },
+          {
+            "id": "T00860",
+            "start": 2484.78,
+            "end": 2489.42
+          }
+        ],
+        "visual_observation": null,
+        "sampled_timestamps": [],
+        "modality": "transcript",
+        "coverage": "subtitle_cues_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "event": {
+          "event_query": [
+            "the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 1800.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 4,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E004"
+      }
+    },
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"event\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens\",\n    \"first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript\",\n    \"time of first mention of estimate decreasing from 45,000 to 18,000 tokens\"\n  ],\n  \"requirements\": [\n    \"the transcript first reports the estimate dropping from 45,000 to 18,000 tokens at a specific time\",\n    \"the time must be within the given scope [1800.0, 2575.0057666666667]\",\n    \"the answer must return the matching cue time or cue span\",\n    \"the event is the estimation demonstration after 30 minutes\",\n    \"the estimate drops from 45,000 to 18,000 tokens is the key event\",\n    \"the answer must be precise and match the exact time or span in the transcript\"\n  ],\n  \"event_query\": [\n    \"the estimate dropping from 45,000 to 18,000 tokens\"\n  ]\n}"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "uniform",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

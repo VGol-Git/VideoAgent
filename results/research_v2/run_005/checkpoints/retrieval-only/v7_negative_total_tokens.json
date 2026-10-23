@@ -1,0 +1,1103 @@
+{
+  "saved_at_utc": "2026-10-22T21:10:38.535835+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "retrieval-only",
+  "question_id": "v7_negative_total_tokens",
+  "prediction_sha256": "0794ad574c051e57e37418f33cb1875b57868045a2f5c932eaf0b92e3a427ae5",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Answered response must support every planned requirement",
+    "error": "Answered response must support every planned requirement",
+    "error_type": "invalid_model_response",
+    "fixed_schedule": [],
+    "question_contract": {
+      "basis": "question_text_only",
+      "overview": false
+    },
+    "schedule_policy": "retrieved_text_only",
+    "model_protocol_attempts": 0,
+    "model_protocol_failures": [],
+    "plan": {
+      "task": "reasoning",
+      "modality": "transcript",
+      "queries": [
+        "what exact total number of tokens did the delegated workflow consume after including every subagent",
+        "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+        "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+      ],
+      "requirements": {
+        "R1": "the delegated workflow consumed a specific total number of tokens in the first 102,000-versus-37,000 comparison",
+        "R2": "this total includes all subagents",
+        "R3": "the answer must provide a number only if the explanation provides it",
+        "R4": "the number must be exact and derived from the transcript"
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "question_id": "v7_negative_total_tokens",
+    "question": "In the first 102,000-versus-37,000 comparison, what exact total number of tokens did the delegated workflow consume after including every subagent? Give a number only if this explanation provides it.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 11.694,
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 6688,
+      "output_tokens": 238
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+          "queries": [
+            "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+            "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:11",
+              "start": 331.6,
+              "end": 360.56,
+              "text": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00077",
+                "T00078",
+                "T00079",
+                "T00080",
+                "T00081",
+                "T00082",
+                "T00083",
+                "T00084",
+                "T00085",
+                "T00086",
+                "T00087",
+                "T00088",
+                "T00089",
+                "T00090"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.016137295081967214,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 4,
+                  "retrieval_score": 6.0627714327862865,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 1,
+                  "retrieval_score": 17.2940500913739,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 1,
+                  "retrieval_score": 18.041113202560812,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:11",
+                  "start": 331.6,
+                  "end": 360.56,
+                  "text": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00077",
+                    "T00078",
+                    "T00079",
+                    "T00080",
+                    "T00081",
+                    "T00082",
+                    "T00083",
+                    "T00084",
+                    "T00085",
+                    "T00086",
+                    "T00087",
+                    "T00088",
+                    "T00089",
+                    "T00090"
+                  ]
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:0",
+              "start": 0.0,
+              "end": 33.04,
+              "text": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00001",
+                "T00002",
+                "T00003",
+                "T00004",
+                "T00005",
+                "T00006",
+                "T00007",
+                "T00008"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.015632515632515633,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 6,
+                  "retrieval_score": 4.73728422112489,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005050505050505051,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 3,
+                  "retrieval_score": 8.484221435305331,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005291005291005291,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 3,
+                  "retrieval_score": 8.215186167281542,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005291005291005291,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:0",
+                  "start": 0.0,
+                  "end": 33.04,
+                  "text": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00001",
+                    "T00002",
+                    "T00003",
+                    "T00004",
+                    "T00005",
+                    "T00006",
+                    "T00007",
+                    "T00008"
+                  ]
+                }
+              ],
+              "selection_score": 0.6296678042709789,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:10",
+              "start": 300.44,
+              "end": 331.6,
+              "text": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00070",
+                "T00071",
+                "T00072",
+                "T00073",
+                "T00074",
+                "T00075",
+                "T00076"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.015391791044776119,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 7,
+                  "retrieval_score": 4.4476045980871275,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 4,
+                  "retrieval_score": 7.087626634474157,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 4,
+                  "retrieval_score": 7.135669576279927,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:10",
+                  "start": 300.44,
+                  "end": 331.6,
+                  "text": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00070",
+                    "T00071",
+                    "T00072",
+                    "T00073",
+                    "T00074",
+                    "T00075",
+                    "T00076"
+                  ]
+                }
+              ],
+              "selection_score": 0.6199715707178394,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 3,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:28",
+              "start": 840.47,
+              "end": 871.99,
+              "text": "And honestly, this did a really good job. It was able to specifically limit the report to just a couple hundred words instead of the original thousands and thousands of words that gave me off of the first one. So it wasn't just about adding that limitation at the beginning, it was framing the goal that I wanted it to go in a particular order for cross-referencing and corroborating the report, and then make sure that it was 500 words. But honestly, this example here is kind of disconnected from my actual workflow. This might be the generic best answer of when delegation beats a specialist team,",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00309",
+                "T00310",
+                "T00311",
+                "T00312",
+                "T00313",
+                "T00314",
+                "T00315",
+                "T00316",
+                "T00317",
+                "T00318",
+                "T00319",
+                "T00320",
+                "T00321",
+                "T00322"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.014582095464448407,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 12,
+                  "retrieval_score": 2.87000904290534,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004629629629629629,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 8,
+                  "retrieval_score": 4.80667830548405,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004901960784313725,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 6,
+                  "retrieval_score": 4.80667830548405,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005050505050505051,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:28",
+                  "start": 840.47,
+                  "end": 871.99,
+                  "text": "And honestly, this did a really good job. It was able to specifically limit the report to just a couple hundred words instead of the original thousands and thousands of words that gave me off of the first one. So it wasn't just about adding that limitation at the beginning, it was framing the goal that I wanted it to go in a particular order for cross-referencing and corroborating the report, and then make sure that it was 500 words. But honestly, this example here is kind of disconnected from my actual workflow. This might be the generic best answer of when delegation beats a specialist team,",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00309",
+                    "T00310",
+                    "T00311",
+                    "T00312",
+                    "T00313",
+                    "T00314",
+                    "T00315",
+                    "T00316",
+                    "T00317",
+                    "T00318",
+                    "T00319",
+                    "T00320",
+                    "T00321",
+                    "T00322"
+                  ]
+                }
+              ],
+              "selection_score": 0.587357546834671,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 4,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:4",
+              "start": 120.88,
+              "end": 153.6,
+              "text": "YouTube or Patreon memberships. Members get access to insights, tips, and kits for agentic and knowledge workflows. I've also put together a free article that I'll link in the top comment that goes through agents, loops, and graphs in a little bit more detail for beginners as a guide. I'll also include the results with the tests that I ran so you can go through it in a little bit more depth, and hopefully see how this can help you improve the quality of your own workflow. All right, so the first example that we're going to go through is using a single agent here, which you're probably already familiar with. This would be just any type of chatbot. But we're",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00030",
+                "T00031",
+                "T00032",
+                "T00033",
+                "T00034",
+                "T00035",
+                "T00036",
+                "T00037"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.014525333048263363,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 13,
+                  "retrieval_score": 2.538318477361394,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0045662100456621,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 9,
+                  "retrieval_score": 4.251164430196791,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004830917874396135,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 5,
+                  "retrieval_score": 5.309935922880195,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:4",
+                  "start": 120.88,
+                  "end": 153.6,
+                  "text": "YouTube or Patreon memberships. Members get access to insights, tips, and kits for agentic and knowledge workflows. I've also put together a free article that I'll link in the top comment that goes through agents, loops, and graphs in a little bit more detail for beginners as a guide. I'll also include the results with the tests that I ran so you can go through it in a little bit more depth, and hopefully see how this can help you improve the quality of your own workflow. All right, so the first example that we're going to go through is using a single agent here, which you're probably already familiar with. This would be just any type of chatbot. But we're",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00030",
+                    "T00031",
+                    "T00032",
+                    "T00033",
+                    "T00034",
+                    "T00035",
+                    "T00036",
+                    "T00037"
+                  ]
+                }
+              ],
+              "selection_score": 0.5850711927503669,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 5,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:83",
+              "start": 2493.9,
+              "end": 2520.62,
+              "text": "I just wanted to see how this worked for a particular research task for me. And one thing to keep in mind is that even if the workflow in the Kanban takes more tokens, it might be worth it because you can go through and take a look at what was actually done. So it gives you more transparency. The actual right choice just depends on what your work really needs. So I'm going to keep exploring this more. I'm going to try and do some more complex Kanban systems with coding so I can actually see what makes sense for my own workflows, how we can leverage",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00862",
+                "T00863",
+                "T00864",
+                "T00865",
+                "T00866",
+                "T00867"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01389120829419337,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                  "rank": 5,
+                  "retrieval_score": 5.102333845593445,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                  "rank": 7,
+                  "retrieval_score": 5.102333845593445,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison",
+                  "rank": 28,
+                  "retrieval_score": 2.7694819673575957,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.003787878787878788,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "what exact total number of tokens did the delegated workflow consume after including every subagent",
+                "in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume",
+                "delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:83",
+                  "start": 2493.9,
+                  "end": 2520.62,
+                  "text": "I just wanted to see how this worked for a particular research task for me. And one thing to keep in mind is that even if the workflow in the Kanban takes more tokens, it might be worth it because you can go through and take a look at what was actually done. So it gives you more transparency. The actual right choice just depends on what your work really needs. So I'm going to keep exploring this more. I'm going to try and do some more complex Kanban systems with coding so I can actually see what makes sense for my own workflows, how we can leverage",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00862",
+                    "T00863",
+                    "T00864",
+                    "T00865",
+                    "T00866",
+                    "T00867"
+                  ]
+                }
+              ],
+              "selection_score": 0.559529050275319,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 6,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false,
+          "citable_evidence_ids": [
+            "E001",
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006"
+          ]
+        },
+        "latency_seconds": 0.0175
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:11",
+        "start": 331.6,
+        "end": 360.56,
+        "text": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00077",
+          "T00078",
+          "T00079",
+          "T00080",
+          "T00081",
+          "T00082",
+          "T00083",
+          "T00084",
+          "T00085",
+          "T00086",
+          "T00087",
+          "T00088",
+          "T00089",
+          "T00090"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00077",
+            "start": 331.6,
+            "end": 335.4
+          },
+          {
+            "id": "T00078",
+            "start": 335.4,
+            "end": 336.52
+          },
+          {
+            "id": "T00079",
+            "start": 336.52,
+            "end": 337.72
+          },
+          {
+            "id": "T00080",
+            "start": 337.72,
+            "end": 339.2
+          },
+          {
+            "id": "T00081",
+            "start": 339.2,
+            "end": 340.36
+          },
+          {
+            "id": "T00082",
+            "start": 340.36,
+            "end": 341.92
+          },
+          {
+            "id": "T00083",
+            "start": 343.52,
+            "end": 345.32
+          },
+          {
+            "id": "T00084",
+            "start": 345.32,
+            "end": 347.32
+          },
+          {
+            "id": "T00085",
+            "start": 347.32,
+            "end": 349.56
+          },
+          {
+            "id": "T00086",
+            "start": 349.56,
+            "end": 351.68
+          },
+          {
+            "id": "T00087",
+            "start": 351.68,
+            "end": 353.76
+          },
+          {
+            "id": "T00088",
+            "start": 353.76,
+            "end": 356.4
+          },
+          {
+            "id": "T00089",
+            "start": 356.4,
+            "end": 357.88
+          },
+          {
+            "id": "T00090",
+            "start": 357.88,
+            "end": 360.56
+          }
+        ],
+        "transcript": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+        "evidence_id": "E001"
+      },
+      "E002": {
+        "id": "transcript:0",
+        "start": 0.0,
+        "end": 33.04,
+        "text": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+        "source": "transcript",
+        "segment_ids": [
+          "T00001",
+          "T00002",
+          "T00003",
+          "T00004",
+          "T00005",
+          "T00006",
+          "T00007",
+          "T00008"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00001",
+            "start": 0.0,
+            "end": 4.08
+          },
+          {
+            "id": "T00002",
+            "start": 4.08,
+            "end": 7.68
+          },
+          {
+            "id": "T00003",
+            "start": 7.68,
+            "end": 12.8
+          },
+          {
+            "id": "T00004",
+            "start": 12.8,
+            "end": 16.24
+          },
+          {
+            "id": "T00005",
+            "start": 16.24,
+            "end": 19.84
+          },
+          {
+            "id": "T00006",
+            "start": 19.84,
+            "end": 24.64
+          },
+          {
+            "id": "T00007",
+            "start": 24.64,
+            "end": 28.56
+          },
+          {
+            "id": "T00008",
+            "start": 28.56,
+            "end": 33.04
+          }
+        ],
+        "transcript": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+        "evidence_id": "E002"
+      },
+      "E003": {
+        "id": "transcript:10",
+        "start": 300.44,
+        "end": 331.6,
+        "text": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+        "source": "transcript",
+        "segment_ids": [
+          "T00070",
+          "T00071",
+          "T00072",
+          "T00073",
+          "T00074",
+          "T00075",
+          "T00076"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00070",
+            "start": 300.44,
+            "end": 303.24
+          },
+          {
+            "id": "T00071",
+            "start": 303.24,
+            "end": 307.44
+          },
+          {
+            "id": "T00072",
+            "start": 307.44,
+            "end": 312.84
+          },
+          {
+            "id": "T00073",
+            "start": 312.84,
+            "end": 317.48
+          },
+          {
+            "id": "T00074",
+            "start": 317.48,
+            "end": 321.96
+          },
+          {
+            "id": "T00075",
+            "start": 321.96,
+            "end": 326.92
+          },
+          {
+            "id": "T00076",
+            "start": 326.92,
+            "end": 331.6
+          }
+        ],
+        "transcript": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+        "evidence_id": "E003"
+      },
+      "E004": {
+        "id": "transcript:28",
+        "start": 840.47,
+        "end": 871.99,
+        "text": "And honestly, this did a really good job. It was able to specifically limit the report to just a couple hundred words instead of the original thousands and thousands of words that gave me off of the first one. So it wasn't just about adding that limitation at the beginning, it was framing the goal that I wanted it to go in a particular order for cross-referencing and corroborating the report, and then make sure that it was 500 words. But honestly, this example here is kind of disconnected from my actual workflow. This might be the generic best answer of when delegation beats a specialist team,",
+        "source": "transcript",
+        "segment_ids": [
+          "T00309",
+          "T00310",
+          "T00311",
+          "T00312",
+          "T00313",
+          "T00314",
+          "T00315",
+          "T00316",
+          "T00317",
+          "T00318",
+          "T00319",
+          "T00320",
+          "T00321",
+          "T00322"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00309",
+            "start": 840.47,
+            "end": 842.15
+          },
+          {
+            "id": "T00310",
+            "start": 842.15,
+            "end": 844.75
+          },
+          {
+            "id": "T00311",
+            "start": 844.75,
+            "end": 846.15
+          },
+          {
+            "id": "T00312",
+            "start": 846.15,
+            "end": 848.59
+          },
+          {
+            "id": "T00313",
+            "start": 848.59,
+            "end": 849.87
+          },
+          {
+            "id": "T00314",
+            "start": 849.87,
+            "end": 852.19
+          },
+          {
+            "id": "T00315",
+            "start": 852.19,
+            "end": 854.55
+          },
+          {
+            "id": "T00316",
+            "start": 854.55,
+            "end": 856.71
+          },
+          {
+            "id": "T00317",
+            "start": 856.71,
+            "end": 859.51
+          },
+          {
+            "id": "T00318",
+            "start": 859.51,
+            "end": 862.03
+          },
+          {
+            "id": "T00319",
+            "start": 862.03,
+            "end": 863.79
+          },
+          {
+            "id": "T00320",
+            "start": 863.79,
+            "end": 867.07
+          },
+          {
+            "id": "T00321",
+            "start": 867.07,
+            "end": 869.67
+          },
+          {
+            "id": "T00322",
+            "start": 869.67,
+            "end": 871.99
+          }
+        ],
+        "transcript": "And honestly, this did a really good job. It was able to specifically limit the report to just a couple hundred words instead of the original thousands and thousands of words that gave me off of the first one. So it wasn't just about adding that limitation at the beginning, it was framing the goal that I wanted it to go in a particular order for cross-referencing and corroborating the report, and then make sure that it was 500 words. But honestly, this example here is kind of disconnected from my actual workflow. This might be the generic best answer of when delegation beats a specialist team,",
+        "evidence_id": "E004"
+      },
+      "E005": {
+        "id": "transcript:4",
+        "start": 120.88,
+        "end": 153.6,
+        "text": "YouTube or Patreon memberships. Members get access to insights, tips, and kits for agentic and knowledge workflows. I've also put together a free article that I'll link in the top comment that goes through agents, loops, and graphs in a little bit more detail for beginners as a guide. I'll also include the results with the tests that I ran so you can go through it in a little bit more depth, and hopefully see how this can help you improve the quality of your own workflow. All right, so the first example that we're going to go through is using a single agent here, which you're probably already familiar with. This would be just any type of chatbot. But we're",
+        "source": "transcript",
+        "segment_ids": [
+          "T00030",
+          "T00031",
+          "T00032",
+          "T00033",
+          "T00034",
+          "T00035",
+          "T00036",
+          "T00037"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00030",
+            "start": 120.88,
+            "end": 124.48
+          },
+          {
+            "id": "T00031",
+            "start": 124.48,
+            "end": 128.32
+          },
+          {
+            "id": "T00032",
+            "start": 128.32,
+            "end": 131.44
+          },
+          {
+            "id": "T00033",
+            "start": 131.44,
+            "end": 135.2
+          },
+          {
+            "id": "T00034",
+            "start": 135.2,
+            "end": 138.0
+          },
+          {
+            "id": "T00035",
+            "start": 138.0,
+            "end": 145.44
+          },
+          {
+            "id": "T00036",
+            "start": 145.44,
+            "end": 149.52
+          },
+          {
+            "id": "T00037",
+            "start": 149.52,
+            "end": 153.6
+          }
+        ],
+        "transcript": "YouTube or Patreon memberships. Members get access to insights, tips, and kits for agentic and knowledge workflows. I've also put together a free article that I'll link in the top comment that goes through agents, loops, and graphs in a little bit more detail for beginners as a guide. I'll also include the results with the tests that I ran so you can go through it in a little bit more depth, and hopefully see how this can help you improve the quality of your own workflow. All right, so the first example that we're going to go through is using a single agent here, which you're probably already familiar with. This would be just any type of chatbot. But we're",
+        "evidence_id": "E005"
+      },
+      "E006": {
+        "id": "transcript:83",
+        "start": 2493.9,
+        "end": 2520.62,
+        "text": "I just wanted to see how this worked for a particular research task for me. And one thing to keep in mind is that even if the workflow in the Kanban takes more tokens, it might be worth it because you can go through and take a look at what was actually done. So it gives you more transparency. The actual right choice just depends on what your work really needs. So I'm going to keep exploring this more. I'm going to try and do some more complex Kanban systems with coding so I can actually see what makes sense for my own workflows, how we can leverage",
+        "source": "transcript",
+        "segment_ids": [
+          "T00862",
+          "T00863",
+          "T00864",
+          "T00865",
+          "T00866",
+          "T00867"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00862",
+            "start": 2493.9,
+            "end": 2497.42
+          },
+          {
+            "id": "T00863",
+            "start": 2497.42,
+            "end": 2502.06
+          },
+          {
+            "id": "T00864",
+            "start": 2502.06,
+            "end": 2505.74
+          },
+          {
+            "id": "T00865",
+            "start": 2505.74,
+            "end": 2511.1
+          },
+          {
+            "id": "T00866",
+            "start": 2511.1,
+            "end": 2515.42
+          },
+          {
+            "id": "T00867",
+            "start": 2515.42,
+            "end": 2520.62
+          }
+        ],
+        "transcript": "I just wanted to see how this worked for a particular research task for me. And one thing to keep in mind is that even if the workflow in the Kanban takes more tokens, it might be worth it because you can go through and take a look at what was actually done. So it gives you more transparency. The actual right choice just depends on what your work really needs. So I'm going to keep exploring this more. I'm going to try and do some more complex Kanban systems with coding so I can actually see what makes sense for my own workflows, how we can leverage",
+        "evidence_id": "E006"
+      }
+    },
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"what exact total number of tokens did the delegated workflow consume after including every subagent\",\n    \"in the first 102,000-versus-37,000 comparison, what total number of tokens did the delegated workflow consume\",\n    \"delegated workflow token count after including all subagents in the first 102,000-versus-37,000 comparison\"\n  ],\n  \"requirements\": [\n    \"the delegated workflow consumed a specific total number of tokens in the first 102,000-versus-37,000 comparison\",\n    \"this total includes all subagents\",\n    \"the answer must provide a number only if the explanation provides it\",\n    \"the number must be exact and derived from the transcript\"\n  ],\n  \"event_query\": []\n}"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}\"",
+        "syntax_repair": {
+          "kind": "remove_trailing_quote",
+          "framed_json": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+          "removed_suffix": "\""
+        },
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}\"",
+        "syntax_repair": {
+          "kind": "remove_trailing_quote",
+          "framed_json": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+          "removed_suffix": "\""
+        },
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "retrieval-only",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

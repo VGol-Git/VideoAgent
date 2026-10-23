@@ -1,0 +1,25 @@
+{
+  "status": "completed_with_errors",
+  "started_at_utc": "2026-10-22T19:07:50.002336+00:00",
+  "run_directory": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\results\\research_v2\\run_004",
+  "phase": "complete",
+  "completed_predictions": 64,
+  "argv": [
+    "--prepare-assets",
+    "--download-models",
+    "--local-files-only",
+    "--output-root",
+    "results/research_v2",
+    "--split",
+    "test",
+    "--modes",
+    "adaptive",
+    "retrieval-only",
+    "static",
+    "uniform"
+  ],
+  "dry_run": false,
+  "total_predictions": 64,
+  "finished_at_utc": "2026-10-22T19:32:33.422228+00:00",
+  "error_prediction_count": 23
+}

@@ -1,0 +1,70 @@
+{
+  "saved_at_utc": "2026-10-22T21:04:15.102227+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "static",
+  "question_id": "v7_onset_task_graph",
+  "prediction_sha256": "e29f1d246cae91ddc96448dd5e3d0a1924c1d67cb8b514ed6bdff1a9e4362150",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Plan needs 1–6 requirements; preserve all requested facts",
+    "error": "Plan needs 1–6 requirements; preserve all requested facts",
+    "error_type": "planning_error",
+    "question_contract": {
+      "basis": "question_text_only",
+      "task": "event",
+      "modality": "visual",
+      "allowed_modalities": [
+        "visual"
+      ],
+      "event_query_hint": "How Task Graphs Actually Run",
+      "overview": false
+    },
+    "question_id": "v7_onset_task_graph",
+    "question": "Within the sequence from 25:00 to 28:00, when does the complete title How Task Graphs Actually Run become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.",
+    "mode": "static",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 0,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 65.1644,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 2492,
+      "output_tokens": 1416
+    },
+    "trace": [],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"event\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"when does the title How Task Graphs Actually Run become clearly readable on the full-screen slide from 25:00 to 28:00\",\n    \"what is the onset time of the title How Task Graphs Actually Run appearing on the full-screen slide in the sequence 25:00–28:00\",\n    \"at what time does the title How Task Graphs Actually Run first become fully visible on the full-screen slide during the 25:00–28:00 segment\",\n    \"locate the transition where the title How Task Graphs Actually Run is clearly readable on the full-screen slide\",\n    \"when does the title How Task Graphs Actually Run appear on the full-screen slide in the 25:00–28:00 window\",\n    \"find the local title-appearance transition of How Task Graphs Actually Run on the full-screen slide\",\n    \"determine the onset estimate for the title How Task Graphs Actually Run becoming clearly readable\",\n    \"identify the time when the full-screen slide displays the title How Task Graphs Actually Run\"\n  ],\n  \"requirements\": [\n    \"The complete title How Task Graphs Actually Run becomes clearly readable on the full-screen slide within the 25:00 to 28:00 time window.\",\n    \"The title appears on the full-screen slide at a specific onset time, which is the first time it is fully visible and readable.\",\n    \"The onset estimate or bracket should be provided as a time interval, either a specific time or a last-absent/first-present bracket.\",\n    \"The answer must specify the exact time when the title becomes clearly readable, or a range if the transition is not fully resolved.\",\n    \"The answer must include the local title-appearance transition, which is the moment the title becomes fully visible.\",\n    \"The answer must not include any invented times, IDs, or transcript wording.\",\n    \"The answer must preserve the four-part question structure and the distinction between the last-absent and first-present states.\"\n  ],\n  \"event_query\": [\n    \"How Task Graphs Actually Run becomes clearly readable on the full-screen slide\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"event\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"when does the title How Task Graphs Actually Run become clearly readable on the full-screen slide from 25:00 to 28:00\",\n    \"what is the onset time of the title How Task Graphs Actually Run appearing on the full-screen slide in the sequence 25:00–28:00\",\n    \"at what time does the title How Task Graphs Actually Run first become fully visible on the full-screen slide during the 25:00–28:00 segment\",\n    \"locate the transition where the title How Task Graphs Actually Run is clearly readable on the full-screen slide\",\n    \"when does the title How Task Graphs Actually Run appear on the full-screen slide in the 25:00–28:00 window\",\n    \"find the local title-appearance transition of How Task Graphs Actually Run on the full-screen slide\",\n    \"determine the onset estimate for the title How Task Graphs Actually Run becoming clearly readable\",\n    \"identify the time when the full-screen slide displays the title How Task Graphs Actually Run\"\n  ],\n  \"requirements\": [\n    \"The complete title How Task Graphs Actually Run becomes clearly readable on the full-screen slide within the 25:00 to 28:00 time window.\",\n    \"The title appears on the full-screen slide at a specific onset time, which is the first time it is fully visible and readable.\",\n    \"The onset estimate or bracket should be provided as a time interval, either a specific time or a last-absent/first-present bracket.\",\n    \"The answer must specify the exact time when the title becomes clearly readable, or a range if the transition is not fully resolved.\",\n    \"The answer must include the local title-appearance transition, which is the moment the title becomes fully visible.\",\n    \"The answer must not include any invented times, IDs, or transcript wording.\",\n    \"The answer must preserve the four-part question structure and the distinction between the last-absent and first-present states.\"\n  ],\n  \"event_query\": [\n    \"How Task Graphs Actually Run becomes clearly readable on the full-screen slide\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"event\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"when does the title How Task Graphs Actually Run become clearly readable on the full-screen slide from 25:00 to 28:00\",\n    \"what is the onset time of the title How Task Graphs Actually Run appearing on the full-screen slide in the sequence 25:00–28:00\",\n    \"at what time does the title How Task Graphs Actually Run first become fully visible on the full-screen slide during the 25:00–28:00 segment\",\n    \"locate the transition where the title How Task Graphs Actually Run is clearly readable on the full-screen slide\",\n    \"when does the title How Task Graphs Actually Run appear on the full-screen slide in the 25:00–28:00 window\",\n    \"find the local title-appearance transition of How Task Graphs Actually Run on the full-screen slide\",\n    \"determine the onset estimate for the title How Task Graphs Actually Run becoming clearly readable\",\n    \"identify the time when the full-screen slide displays the title How Task Graphs Actually Run\"\n  ],\n  \"requirements\": [\n    \"The complete title How Task Graphs Actually Run becomes clearly readable on the full-screen slide within the 25:00 to 28:00 time window.\",\n    \"The title appears on the full-screen slide at a specific onset time, which is the first time it is fully visible and readable.\",\n    \"The onset estimate or bracket should be provided as a time interval, either a specific time or a last-absent/first-present bracket.\",\n    \"The answer must specify the exact time when the title becomes clearly readable, or a range if the transition is not fully resolved.\",\n    \"The answer must include the local title-appearance transition, which is the moment the title becomes fully visible.\",\n    \"The answer must not include any invented times, IDs, or transcript wording.\",\n    \"The answer must preserve the four-part question structure and the distinction between the last-absent and first-present states.\"\n  ],\n  \"event_query\": [\n    \"How Task Graphs Actually Run becomes clearly readable on the full-screen slide\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "static",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

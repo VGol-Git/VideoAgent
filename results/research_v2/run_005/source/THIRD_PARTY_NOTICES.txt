@@ -1,0 +1,37 @@
+ClipScout mechanism provenance and third-party notices
+
+Grounded Video Agent
+Local source: grounded-video-agent-main/grounded-video-agent-main/
+License: Apache License, Version 2.0 (see the source project's LICENSE).
+The weighted reciprocal-rank contribution and evidence-fusion approach in
+clipscout/retrieval.py adapts capabilities/retrieval/candidate_fusion/capability.py.
+RapidOCR conversion in clipscout/ocr.py adapts infrastructure/ocr/rapidocr_backend.py.
+These ClipScout files are changed implementations: they use a compact dictionary
+contract, preserve whole bounded cues, add explicit subqueries and temporal
+diversification, use CPU OCR, validate outputs, and retain frame provenance.
+The complete upstream Apache-2.0 license is supplied separately with this project.
+
+VideoSeek
+Local source: videoseek-main/videoseek-main/videoseek/tools/
+License: MIT; copyright (c) 2026 Jingyang Lin.
+Reference mechanisms: overview, skim, and focus for progressive inspection.
+clipscout/research_agent.py and clipscout/events.py independently implement
+progressive search, sampled event inspection and narrower local refinement.
+No VideoSeek source files are copied or redistributed. This is an adaptation of
+the workflow, not a claim that VideoSeek's entire stack is bundled.
+
+VideoAgent
+Local source: VideoAgent-main/VideoAgent-main/
+Reference mechanisms: evidence-driven tool selection in video_agent_tools/prompts.py
+and visual-diversity frame selection in tools/interface/temporal_spatial_understanding.py.
+The local archive contains no root LICENSE; its README says research purposes.
+ClipScout implements the relevant algorithms independently and does not copy
+or redistribute those implementation files or claim to bundle TStar/VideoTree.
+
+LongVideoAgent
+Local source: LongVideoAgent-main/LongVideoAgent-main/
+Reference mechanism: separate grounding, targeted vision observations, and answer
+assembly in src/evaluation/lvagent/evaluate_api_unified.py.
+ClipScout implements those roles independently. The archive has no root LICENSE;
+the Apache-2.0 notices on vendored verl files do not establish licensing of all
+LongVideoAgent-specific files. No RL training or published model is bundled.

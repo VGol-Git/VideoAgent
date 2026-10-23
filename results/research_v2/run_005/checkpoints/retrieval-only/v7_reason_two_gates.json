@@ -1,0 +1,64 @@
+{
+  "saved_at_utc": "2026-10-22T20:18:20.630381+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "retrieval-only",
+  "question_id": "v7_reason_two_gates",
+  "prediction_sha256": "9d2f82ba64526ed57c0e83a779d44146cbb9d8774f12e3edb1cd76312cb50efd",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Unknown planned modality",
+    "error": "Unknown planned modality",
+    "error_type": "planning_error",
+    "question_contract": {
+      "basis": "question_text_only",
+      "overview": false
+    },
+    "question_id": "v7_reason_two_gates",
+    "question": "Compare the gates shown in Article to Curated Knowledge and How Task Graphs Actually Run. Why does creating a draft entry or a task card not by itself guarantee that it reaches the library or a worker? Cite both diagrams.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 0,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 75.7735,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 1692,
+      "output_tokens": 516
+    },
+    "trace": [],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"text\",\n  \"queries\": [\n    \"Compare the gates shown in Article to Curated Knowledge\",\n    \"How Task Graphs Actually Run\",\n    \"Why creating a draft entry or a task card does not guarantee it reaches the library or a worker\",\n    \"Cite both diagrams\"\n  ],\n  \"requirements\": [\n    \"Compare the gates in Article with those in Curated Knowledge\",\n    \"Explain how Task Graphs actually run\",\n    \"Explain why a draft entry or task card does not guarantee reaching the library or a worker\",\n    \"Cite both diagrams\"\n  ],\n  \"event_query\": [\n    \"Article and Curated Knowledge gates comparison\",\n    \"Task Graph execution process\",\n    \"Draft entry and task card lifecycle\"\n  ]\n}",
+        "error": "Unknown planned modality",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"text\",\n  \"queries\": [\n    \"Compare the gates shown in Article to Curated Knowledge\",\n    \"How Task Graphs Actually Run\",\n    \"Why creating a draft entry or a task card does not by itself guarantee that it reaches the library or a worker\",\n    \"Cite both diagrams\"\n  ],\n  \"requirements\": [\n    \"Compare the gates in Article with those in Curated Knowledge\",\n    \"Explain how Task Graphs actually run\",\n    \"Explain why a draft entry or task card does not guarantee reaching the library or a worker\",\n    \"Cite both diagrams\"\n  ],\n  \"event_query\": [\n    \"Article and Curated Knowledge gates comparison\",\n    \"Task Graph execution process\",\n    \"Draft entry and task card lifecycle\"\n  ]\n}",
+        "error": "Unknown planned modality",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"text\",\n  \"queries\": [\n    \"Compare the gates shown in Article to Curated Knowledge\",\n    \"How Task Graphs Actually Run\",\n    \"Why creating a draft entry or a task card does not by itself guarantee that it reaches the library or a worker\",\n    \"Cite both diagrams\"\n  ],\n  \"requirements\": [\n    \"Compare the gates in Article with those in Curated Knowledge\",\n    \"Explain how Task Graphs actually run\",\n    \"Explain why a draft entry or task card does not guarantee reaching the library or a worker\",\n    \"Cite both diagrams\"\n  ],\n  \"event_query\": [\n    \"Article and Curated Knowledge gates comparison\",\n    \"Task Graph execution process\",\n    \"Draft entry and task card lifecycle\"\n  ]\n}",
+        "error": "Unknown planned modality",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "retrieval-only",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

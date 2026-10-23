@@ -1,0 +1,642 @@
+[
+  {
+    "id": "r2_reason_fresh_context",
+    "split": "test",
+    "task": "reasoning",
+    "question": "According to the explanation of fresh subagent conversations, why must the parent put sufficient information in the goal and context fields of delegate_task? Cite the statements supporting the explanation.",
+    "modality": "transcript",
+    "answerable": true,
+    "supports": [
+      {
+        "id": "fresh_context",
+        "start": 438.6,
+        "end": 463.28,
+        "modality": "transcript",
+        "required": true,
+        "cue_ids": [
+          "T00131",
+          "T00132",
+          "T00133",
+          "T00134",
+          "T00135",
+          "T00136",
+          "T00137",
+          "T00138",
+          "T00139",
+          "T00140",
+          "T00141",
+          "T00142",
+          "T00143",
+          "T00144"
+        ]
+      }
+    ],
+    "claim_atoms": [
+      {
+        "id": "fresh",
+        "text": "The child starts a fresh conversation.",
+        "support_ids": [
+          "fresh_context"
+        ]
+      },
+      {
+        "id": "no_history",
+        "text": "The child does not inherit prior parent conversation or tool calls.",
+        "support_ids": [
+          "fresh_context"
+        ]
+      },
+      {
+        "id": "provided_context",
+        "text": "The parent's supplied goal/context must contain what the child needs.",
+        "support_ids": [
+          "fresh_context"
+        ]
+      }
+    ],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "derived_from": "speech_05",
+    "annotation_status": "ASR-silver semantic reference; audio not independently validated.",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_reason_model_roles",
+    "split": "test",
+    "task": "reasoning",
+    "question": "Why does the presenter suggest a powerful Kanban decomposer but a less powerful worker for a well-scoped card? Explain the connection to cost.",
+    "modality": "transcript",
+    "answerable": true,
+    "supports": [
+      {
+        "id": "role_cost",
+        "start": 1663.34,
+        "end": 1691.66,
+        "modality": "transcript",
+        "required": true,
+        "cue_ids": [
+          "T00556",
+          "T00557",
+          "T00558",
+          "T00559",
+          "T00560",
+          "T00561",
+          "T00562",
+          "T00563",
+          "T00564",
+          "T00565"
+        ]
+      }
+    ],
+    "claim_atoms": [
+      {
+        "id": "planning_judgment",
+        "text": "Breaking broad work into well-scoped cards requires high-level judgment.",
+        "support_ids": [
+          "role_cost"
+        ]
+      },
+      {
+        "id": "scoped_execution",
+        "text": "Executing a card with clear goal, context and handoff needs less judgment.",
+        "support_ids": [
+          "role_cost"
+        ]
+      },
+      {
+        "id": "worker_cost",
+        "text": "Workers consume most tokens, so cheaper worker execution can lower cost.",
+        "support_ids": [
+          "role_cost"
+        ]
+      }
+    ],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "derived_from": "speech_09",
+    "annotation_status": "ASR-silver semantic reference; the claim is attributed to the presenter, not an independently measured cost reduction.",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_reason_changed_criteria",
+    "split": "test",
+    "task": "reasoning",
+    "question": "In the goal-loop demonstration, how did the added requirement for peer-reviewed sources lead to another research step? Explain the order and why the earlier output was not sufficient, citing both stages.",
+    "modality": "transcript",
+    "answerable": true,
+    "supports": [
+      {
+        "id": "criteria",
+        "start": 610.87,
+        "end": 625.47,
+        "modality": "transcript",
+        "required": true,
+        "cue_ids": [
+          "T00203",
+          "T00204",
+          "T00205",
+          "T00206",
+          "T00207",
+          "T00208"
+        ]
+      },
+      {
+        "id": "followup",
+        "start": 633.11,
+        "end": 648.11,
+        "modality": "transcript",
+        "required": true,
+        "cue_ids": [
+          "T00214",
+          "T00215",
+          "T00216",
+          "T00217",
+          "T00218",
+          "T00219",
+          "T00220"
+        ]
+      }
+    ],
+    "claim_atoms": [
+      {
+        "id": "changed_criterion",
+        "text": "At least five peer-reviewed sources were added as a new completion criterion.",
+        "support_ids": [
+          "criteria"
+        ]
+      },
+      {
+        "id": "prior_inadequate",
+        "text": "The earlier sources did not appear peer-reviewed according to the presenter.",
+        "support_ids": [
+          "followup"
+        ]
+      },
+      {
+        "id": "causal_order",
+        "text": "The criterion change preceded additional delegated cross-referencing against academic sources.",
+        "support_ids": [
+          "criteria",
+          "followup"
+        ]
+      }
+    ],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "derived_from": "speech_07, rewritten as causal multi-support reasoning",
+    "annotation_status": "ASR-silver references.",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_reason_two_gates",
+    "split": "test",
+    "task": "reasoning",
+    "question": "Compare the gates shown in Article to Curated Knowledge and How Task Graphs Actually Run. Why does creating a draft entry or a task card not by itself guarantee that it reaches the library or a worker? Cite both diagrams.",
+    "modality": "visual",
+    "answerable": true,
+    "supports": [
+      {
+        "id": "article",
+        "start": 1197.5,
+        "end": 1237.5,
+        "modality": "visual",
+        "required": true,
+        "review_frame": "ClipScout/.cache/annotation/refine_1220.jpg"
+      },
+      {
+        "id": "task_graph",
+        "start": 1612.5,
+        "end": 1622.5,
+        "modality": "visual",
+        "required": true,
+        "review_frame": "ClipScout/.cache/annotation/boundary_1615.jpg"
+      }
+    ],
+    "claim_atoms": [
+      {
+        "id": "library_gate",
+        "text": "An entry passes Human review and the Approved transition before the Connected library; a requested revision returns to the draft.",
+        "support_ids": [
+          "article"
+        ]
+      },
+      {
+        "id": "task_gate",
+        "text": "The dispatcher verifies dependencies and surfaces unblocked tasks to Ready/worker nodes.",
+        "support_ids": [
+          "task_graph"
+        ]
+      },
+      {
+        "id": "comparison",
+        "text": "Both workflows have a gate between creating the item and passing it onward; creation alone is insufficient.",
+        "support_ids": [
+          "article",
+          "task_graph"
+        ]
+      }
+    ],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "annotation_status": "Assistant visually reviewed saved 1220s and1615s frames; approximate episode intervals, not independent human annotation.",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_reason_context_durability",
+    "split": "test",
+    "task": "reasoning",
+    "question": "Contrast a fresh subagent's lack of inherited history with the later explanation of durable Kanban handoffs. What different context problems do the parent-supplied fields and the database-backed queue address? Cite both explanations.",
+    "modality": "transcript",
+    "answerable": true,
+    "supports": [
+      {
+        "id": "fresh_child",
+        "start": 438.6,
+        "end": 457.64,
+        "modality": "transcript",
+        "required": true,
+        "cue_ids": [
+          "T00131",
+          "T00132",
+          "T00133",
+          "T00134",
+          "T00135",
+          "T00136",
+          "T00137",
+          "T00138",
+          "T00139",
+          "T00140"
+        ]
+      },
+      {
+        "id": "durable_queue",
+        "start": 1414.6,
+        "end": 1445.8,
+        "modality": "transcript",
+        "required": true,
+        "cue_ids": [
+          "T00464",
+          "T00465",
+          "T00466",
+          "T00469",
+          "T00470",
+          "T00471",
+          "T00472",
+          "T00473",
+          "T00474",
+          "T00475",
+          "T00476",
+          "T00477",
+          "T00478"
+        ]
+      }
+    ],
+    "claim_atoms": [
+      {
+        "id": "child_initialization",
+        "text": "Parent-provided goal/context initializes a fresh child that did not inherit the parent's history.",
+        "support_ids": [
+          "fresh_child"
+        ]
+      },
+      {
+        "id": "compression_loss",
+        "text": "Conversation compression can lose delegated context or its audit trail.",
+        "support_ids": [
+          "durable_queue"
+        ]
+      },
+      {
+        "id": "persistent_handoff",
+        "text": "Kanban stores handoffs as database rows that can be revisited or inspected.",
+        "support_ids": [
+          "durable_queue"
+        ]
+      },
+      {
+        "id": "distinction",
+        "text": "Supplying a new child with task context and preserving handoff records across conversation changes address different stages of the context problem.",
+        "support_ids": [
+          "fresh_child",
+          "durable_queue"
+        ]
+      }
+    ],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "annotation_status": "ASR-silver references.",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_reason_dispatch_delay",
+    "split": "test",
+    "task": "reasoning",
+    "question": "Connect the How Task Graphs Actually Run diagram to the later Kanban research demonstration: why do completed researcher tasks unblock report delivery without implying that it starts running at exactly the same instant? Cite the diagram and the demonstration.",
+    "modality": "audiovisual",
+    "answerable": true,
+    "supports": [
+      {
+        "id": "dispatcher_diagram",
+        "start": 1612.5,
+        "end": 1622.5,
+        "modality": "visual",
+        "required": true,
+        "review_frame": "ClipScout/.cache/annotation/boundary_1615.jpg"
+      },
+      {
+        "id": "research_completion",
+        "start": 2085.09,
+        "end": 2117.95,
+        "modality": "transcript",
+        "required": true,
+        "cue_ids": [
+          "T00726",
+          "T00727",
+          "T00728",
+          "T00729",
+          "T00730",
+          "T00731",
+          "T00732",
+          "T00733",
+          "T00734",
+          "T00735",
+          "T00736",
+          "T00737",
+          "T00738",
+          "T00739",
+          "T00740",
+          "T00741"
+        ]
+      }
+    ],
+    "claim_atoms": [
+      {
+        "id": "dependencies",
+        "text": "Finishing the two researcher tasks satisfies report-delivery dependencies and unblocks it.",
+        "support_ids": [
+          "research_completion"
+        ]
+      },
+      {
+        "id": "dispatcher",
+        "text": "The diagram and explanation describe a background dispatcher checking dependencies/queue periodically, approximately every 60s.",
+        "support_ids": [
+          "dispatcher_diagram",
+          "research_completion"
+        ]
+      },
+      {
+        "id": "state_sequence",
+        "text": "Unblocked/Ready and Running are distinct states; dispatch processes the ready work, so no exact simultaneous start or measured 60-second wait follows.",
+        "support_ids": [
+          "dispatcher_diagram",
+          "research_completion"
+        ]
+      }
+    ],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "annotation_status": "Mixed assistant frame review and ASR-silver explanation; no frame-exact UI transition claim.",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_onset_token_first",
+    "split": "test",
+    "task": "onset",
+    "question": "When does the transcript first state that the estimate dropped from 45,000 to 18,000 tokens? Include the opening preview when selecting the first occurrence. Return the matching cue time or cue span.",
+    "modality": "transcript",
+    "answerable": true,
+    "supports": [
+      {
+        "id": "opening_drop",
+        "start": 4.08,
+        "end": 7.68,
+        "modality": "transcript",
+        "required": true,
+        "cue_ids": [
+          "T00002"
+        ]
+      }
+    ],
+    "claim_atoms": [],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "event": {
+      "label": "Statement that estimate dropped from45,000 to18,000 tokens",
+      "selector": "first_matching_transcript_cue",
+      "scope": [
+        0,
+        2575.0057666666667
+      ],
+      "reference_bracket": [
+        4.08,
+        7.68
+      ],
+      "reference_kind": "transcript_cue",
+      "annotation_status": "ASR-silver cue span; repeated later at1920.39–1923.05s."
+    },
+    "occurrence_distractors": [
+      [
+        1920.39,
+        1923.05
+      ]
+    ],
+    "annotation_status": "Cue onset is not word-level acoustic onset.",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_onset_token_later",
+    "split": "test",
+    "task": "onset",
+    "question": "During the later estimation demonstration after 30 minutes, when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens? Return the matching cue time or cue span.",
+    "modality": "transcript",
+    "answerable": true,
+    "supports": [
+      {
+        "id": "later_drop",
+        "start": 1920.39,
+        "end": 1923.05,
+        "modality": "transcript",
+        "required": true,
+        "cue_ids": [
+          "T00653"
+        ]
+      }
+    ],
+    "claim_atoms": [],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "event": {
+      "label": "Statement that estimate dropped from45,000 to18,000 tokens",
+      "selector": "first_matching_transcript_cue_in_scope",
+      "scope": [
+        1800,
+        2575.0057666666667
+      ],
+      "reference_bracket": [
+        1920.39,
+        1923.05
+      ],
+      "reference_kind": "transcript_cue",
+      "annotation_status": "ASR-silver cue span; earlier preview at4.08–7.68s is outside scope."
+    },
+    "occurrence_distractors": [
+      [
+        4.08,
+        7.68
+      ]
+    ],
+    "annotation_status": "Paired occurrence-control case; correlated with r2_onset_token_first.",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_onset_article",
+    "split": "test",
+    "task": "onset",
+    "question": "Within the sequence from 19:00 to 21:00, when does the complete title Article to Curated Knowledge become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.",
+    "modality": "visual",
+    "answerable": true,
+    "supports": [
+      {
+        "id": "local_title_transition",
+        "start": 1196.4953,
+        "end": 1196.7622333333334,
+        "modality": "visual",
+        "required": true,
+        "annotation_id": "article_title_onset"
+      }
+    ],
+    "claim_atoms": [],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "event": {
+      "label": "The complete slide title is clearly readable in the full-screen slide. Artwork may still be animating.",
+      "event_query": "Article to Curated Knowledge",
+      "selector": "local_readable_title_appearance_in_reviewed_sequence",
+      "scope": [
+        1140.0,
+        1260.0
+      ],
+      "reference_bracket": [
+        1196.4953,
+        1196.7622333333334
+      ],
+      "reference_kind": "visual_transition_bracket",
+      "annotation_status": "Refined assistant visual annotation; not independent human validation.",
+      "annotation_id": "article_title_onset",
+      "global_first_verified": false,
+      "annotation_resolution_seconds": 0.266933333333327
+    },
+    "annotation_files": [
+      "results/research_v2/annotations/article_fine/01196.500.png",
+      "results/research_v2/annotations/article_fine/01196.750.png"
+    ],
+    "annotation_status": "Local title legibility transition. Context sampled at5-second spacing; global first appearance and continuously unique episode are not established.",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_onset_task_graph",
+    "split": "test",
+    "task": "onset",
+    "question": "Within the sequence from 25:00 to 28:00, when does the complete title How Task Graphs Actually Run become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.",
+    "modality": "visual",
+    "answerable": true,
+    "supports": [
+      {
+        "id": "local_title_transition",
+        "start": 1613.5119,
+        "end": 1613.7454666666667,
+        "modality": "visual",
+        "required": true,
+        "annotation_id": "taskgraphs_title_onset"
+      }
+    ],
+    "claim_atoms": [],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "event": {
+      "label": "The complete slide title is clearly readable in the full-screen slide. Artwork may still be animating.",
+      "event_query": "How Task Graphs Actually Run",
+      "selector": "local_readable_title_appearance_in_reviewed_sequence",
+      "scope": [
+        1500.0,
+        1680.0
+      ],
+      "reference_bracket": [
+        1613.5119,
+        1613.7454666666667
+      ],
+      "reference_kind": "visual_transition_bracket",
+      "annotation_status": "Refined assistant visual annotation; not independent human validation.",
+      "annotation_id": "taskgraphs_title_onset",
+      "global_first_verified": false,
+      "annotation_resolution_seconds": 0.23356666666677484
+    },
+    "annotation_files": [
+      "results/research_v2/annotations/taskgraphs_fine/01613.500.png",
+      "results/research_v2/annotations/taskgraphs_fine/01613.750.png"
+    ],
+    "annotation_status": "Local title legibility transition. Context sampled at5-second spacing; global first appearance and continuously unique episode are not established.",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_negative_total_tokens",
+    "split": "test",
+    "task": "unanswerable",
+    "question": "In the first 102,000-versus-37,000 comparison, what exact total number of tokens did the delegated workflow consume after including every subagent? Give a number only if this explanation provides it.",
+    "modality": "transcript",
+    "answerable": false,
+    "supports": [
+      {
+        "id": "comparison_context",
+        "start": 343.52,
+        "end": 371.66,
+        "modality": "transcript",
+        "required": false,
+        "cue_ids": [
+          "T00083",
+          "T00084",
+          "T00085",
+          "T00086",
+          "T00087",
+          "T00088",
+          "T00089",
+          "T00090",
+          "T00091",
+          "T00092",
+          "T00093",
+          "T00094",
+          "T00095"
+        ]
+      }
+    ],
+    "claim_atoms": [],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "expected_abstention_reason": "The explanation says child tokens are excluded and overall usage was larger, without an exact total including every child.",
+    "scope": [
+      330,
+      380
+    ],
+    "annotation_status": "Localized ASR-silver absence claim; no absence claim about every frame/audio sample.",
+    "derived_from": "speech_04",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  },
+  {
+    "id": "r2_negative_dispatch_cost",
+    "split": "test",
+    "task": "unanswerable",
+    "question": "Using only the visible How Task Graphs Actually Run diagram, what exact dollar cost is assigned to each dispatcher cycle? Give a price only if it appears on that diagram.",
+    "modality": "visual",
+    "answerable": false,
+    "supports": [
+      {
+        "id": "diagram_context",
+        "start": 1612.5,
+        "end": 1622.5,
+        "modality": "visual",
+        "required": false,
+        "review_frame": "ClipScout/.cache/annotation/boundary_1615.jpg"
+      }
+    ],
+    "claim_atoms": [],
+    "reference_status": "Assistant-authored diagnostic reference. Not independent human validation; existing video and some questions already inspected during development.",
+    "expected_abstention_reason": "The diagram provides a60-second loop period, dependency checks and task flow, but no dollar cost.",
+    "scope": [
+      1600,
+      1630
+    ],
+    "annotation_status": "Assistant reviewed the complete saved diagram image; localized absence claim.",
+    "derived_from": "visual_08",
+    "freeze_stage": "pre-inference diagnostic protocol"
+  }
+]

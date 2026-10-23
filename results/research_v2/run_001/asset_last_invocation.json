@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "cache_path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\indexes\\user_video_visual",
+  "preparation_seconds_this_invocation": 7624.219317300012,
+  "error": "ValueError: end exceeds video duration (496.462633s).",
+  "partial_frame_checkpoints_preserved": true
+}

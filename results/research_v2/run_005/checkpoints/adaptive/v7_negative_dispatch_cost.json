@@ -1,0 +1,989 @@
+{
+  "saved_at_utc": "2026-10-22T21:16:06.709305+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "adaptive",
+  "question_id": "v7_negative_dispatch_cost",
+  "prediction_sha256": "8f1bd5c1da8714aed17ea21c8693937186da829434e60eb860bddf8eec61c90c",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "No citable evidence after invalid or failed tool attempts. ValueError: Duplicate call; change query or interval",
+    "error": "No citable evidence after invalid or failed tool attempts. ValueError: Duplicate call; change query or interval",
+    "error_type": "invalid_model_response",
+    "failure_origin": "model_protocol",
+    "finalization_route": "tool_budget",
+    "model_protocol_attempts": 1,
+    "tool_failures": [
+      {
+        "call": 4,
+        "tool": "search",
+        "error_type": "duplicate_tool_call",
+        "error": "ValueError: Duplicate call; change query or interval"
+      }
+    ],
+    "question_contract": {
+      "basis": "question_text_only",
+      "modality": "visual",
+      "allowed_modalities": [
+        "visual"
+      ],
+      "overview": false
+    },
+    "model_protocol_failures": [
+      {
+        "call": 4,
+        "tool": "search",
+        "error_type": "duplicate_tool_call",
+        "error": "ValueError: Duplicate call; change query or interval"
+      }
+    ],
+    "plan": {
+      "task": "lookup",
+      "modality": "visual",
+      "queries": [
+        "How Task Graphs Actually Run diagram",
+        "exact dollar cost assigned to each dispatcher cycle",
+        "price only if it appears on that diagram"
+      ],
+      "requirements": {
+        "R1": "The diagram must be used to determine the exact dollar cost assigned to each dispatcher cycle.",
+        "R2": "The answer must provide a price only if it appears on the diagram.",
+        "R3": "The response must be based solely on the visible content of the diagram.",
+        "R4": "The answer must not invent any information not present in the diagram.",
+        "R5": "The answer must preserve the four-part question structure if present.",
+        "R6": "The answer must not include any external data or assumptions."
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": true
+    },
+    "question_id": "v7_negative_dispatch_cost",
+    "question": "Using only the visible How Task Graphs Actually Run diagram, what exact dollar cost is assigned to each dispatcher cycle? Give a price only if it appears on that diagram.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 4,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 88.9684,
+    "usage": {
+      "model_calls": 5,
+      "input_tokens": 10631,
+      "output_tokens": 317
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {},
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "fusion:d8417a58dfb40b6c",
+              "start": 1860.0,
+              "end": 1920.0,
+              "text": "[transcript] should be able to recognize that. This is actually a research task, not an implementation task for the tutorials agent. I can list specific skills if I want. I can change the model that I want this to run at or just have it run at the profile default. And importantly, I can have this run on goal mode. So by default, each worker agent gets one shot at its card to do the work. But turning goal mode into true for that particular task, Let's that worker run in a goal loop like I've already shown you. And this is its own self-contained goal loop. It doesn't connect to the existing goal that we have elsewhere.\n[caption] - **Frame 1860.025**: A \"New task in Triage\" dialog box is open, titled \"Multi-agent research\". The task description reads: \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system: a single agent with delegation capabilities, or a multi-agent team with different specialized agents? Be thorough with your research.\" The \"PRIORITY\" is set to 0, \"WORKSPACE\" is \"scratch - board default\", \"ASSIGNEE\" is \"wanderloots-tutorials (default)\", \"SKILLS\" are \"translation, github\", and \"MODEL\" is \"Profile default\". The \"Create task\" button is visible.\n- **Frame 1919.985**: The same dialog box is shown, but a new message appears at the bottom: \"R",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00622",
+                "T00623",
+                "T00624",
+                "T00625",
+                "T00626",
+                "T00627",
+                "T00628",
+                "T00629",
+                "T00630",
+                "T00631",
+                "T00632",
+                "T00633",
+                "T00634",
+                "T00635",
+                "T00636",
+                "caption_00031"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.022231749947796225,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 2,
+                  "retrieval_score": 5.269239651344762,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 26,
+                  "retrieval_score": 1.8801707752657044,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.003875968992248062,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 37,
+                  "retrieval_score": 0.7900346407227269,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.003436426116838488,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 20,
+                  "retrieval_score": 0.8995523018949682,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004166666666666667,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 2,
+                  "retrieval_score": 2.8136638693498663,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:62",
+                  "start": 1860.39,
+                  "end": 1890.41,
+                  "text": "should be able to recognize that. This is actually a research task, not an implementation task for the tutorials agent. I can list specific skills if I want. I can change the model that I want this to run at or just have it run at the profile default. And importantly, I can have this run on goal mode. So by default, each worker agent gets one shot at its card to do the work. But turning goal mode into true for that particular task, Let's that worker run in a goal loop like I've already shown you. And this is its own self-contained goal loop. It doesn't connect to the existing goal that we have elsewhere.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00622",
+                    "T00623",
+                    "T00624",
+                    "T00625",
+                    "T00626",
+                    "T00627",
+                    "T00628",
+                    "T00629",
+                    "T00630",
+                    "T00631",
+                    "T00632",
+                    "T00633",
+                    "T00634",
+                    "T00635",
+                    "T00636"
+                  ]
+                },
+                {
+                  "id": "caption:62",
+                  "start": 1860.0,
+                  "end": 1920.0,
+                  "text": "- **Frame 1860.025**: A \"New task in Triage\" dialog box is open, titled \"Multi-agent research\". The task description reads: \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system: a single agent with delegation capabilities, or a multi-agent team with different specialized agents? Be thorough with your research.\" The \"PRIORITY\" is set to 0, \"WORKSPACE\" is \"scratch - board default\", \"ASSIGNEE\" is \"wanderloots-tutorials (default)\", \"SKILLS\" are \"translation, github\", and \"MODEL\" is \"Profile default\". The \"Create task\" button is visible.\n- **Frame 1919.985**: The same dialog box is shown, but a new message appears at the bottom: \"R",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00031"
+                  ]
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "fusion:1f48ef407b4b96d1",
+              "start": 1680.0,
+              "end": 1740.0,
+              "text": "[transcript] context and handoff doesn't really need that same level of intelligence, especially if it's running in a loop. Workers are where the vast majority of tokens are spent, so that's typically where the cost is. So that's what I'm getting at when I talk about this decomposer here. We can set this model to whatever we want. I could set this, for example, to GPT-6 Astra, if I wanted to. And what would happen is now the Kanban decomposer, this decomposer setting that we have here would be using Astra to convert whatever task I put inside of this task card into a series of subtasks that then get assigned to the worker profile which is Waterloo's tutorials\n[caption] - **Frame 1680.012**: A computer screen displays a web browser with the \"Kanban\" application open. The browser's interface shows a \"Cost strategy: frontier orchestrator, inexpensive workers\" section with a code snippet. The user is on the \"Kanban (Multi-Agent Board)\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy\" section with a code block and a \"Lifecycle plugin hooks\" section. The user is on the \"Kanban\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy\" section with a code block and a \"Lifecycle plugin hooks\" section. The user is on the \"Kanban\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00563",
+                "T00564",
+                "T00565",
+                "T00566",
+                "T00567",
+                "T00568",
+                "T00569",
+                "caption_00028"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.017971785723894334,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 49,
+                  "retrieval_score": 0.9279857603818334,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0030581039755351682,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 4,
+                  "retrieval_score": 4.791244132282092,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 17,
+                  "retrieval_score": 1.167147775204326,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004329004329004329,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 2,
+                  "retrieval_score": 5.140836999246306,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:56",
+                  "start": 1680.22,
+                  "end": 1712.78,
+                  "text": "context and handoff doesn't really need that same level of intelligence, especially if it's running in a loop. Workers are where the vast majority of tokens are spent, so that's typically where the cost is. So that's what I'm getting at when I talk about this decomposer here. We can set this model to whatever we want. I could set this, for example, to GPT-6 Astra, if I wanted to. And what would happen is now the Kanban decomposer, this decomposer setting that we have here would be using Astra to convert whatever task I put inside of this task card into a series of subtasks that then get assigned to the worker profile which is Waterloo's tutorials",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00563",
+                    "T00564",
+                    "T00565",
+                    "T00566",
+                    "T00567",
+                    "T00568",
+                    "T00569"
+                  ]
+                },
+                {
+                  "id": "caption:56",
+                  "start": 1680.0,
+                  "end": 1740.0,
+                  "text": "- **Frame 1680.012**: A computer screen displays a web browser with the \"Kanban\" application open. The browser's interface shows a \"Cost strategy: frontier orchestrator, inexpensive workers\" section with a code snippet. The user is on the \"Kanban (Multi-Agent Board)\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy\" section with a code block and a \"Lifecycle plugin hooks\" section. The user is on the \"Kanban\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy\" section with a code block and a \"Lifecycle plugin hooks\" section. The user is on the \"Kanban\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00028"
+                  ]
+                }
+              ],
+              "selection_score": 0.525449447207789,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "fusion:c1c4f74c7e0ab939",
+              "start": 420.0,
+              "end": 480.0,
+              "text": "[caption] - The screen displays a dark-themed interface for a software application, likely a tool for building actionable knowledge systems.\n- The main content area is titled \"Delegate only bounded specialist work\" and lists various roles such as \"Intake/Extraction worker,\" \"Research worker,\" and \"Librarian worker.\"\n- Each role has a corresponding action that must be done, a task that must not be done, and a description of the work.\n- The interface includes a \"Add more context\" button and a \"1 message\" button.\n- The user is in a \"New session\" state, and the sidebar shows \"Home,\" \"Build an actionable information system,\" and \"Wanderlots Tutorials.\"\n- The text \"GPT-5.6-terra\" is visible in the bottom right corner.\n[transcript] when it actually makes sense to do so, when the complexity needs it. But all of this is relative. This is specifically for a one-off research task that we just did here. As the system starts to scale in complexity, we need to start thinking about other ways of orchestrating. For example, using all of the different bots like we've set up in previous videos. And one thing I wanna mention too is that when we're delegating to subagents, subagents know nothing. They start with completely fresh conversations. So they have zero knowledge of the parent's conversation history, tool calls, or anything discussed before they were created for the delegation.",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00007",
+                "T00121",
+                "T00122",
+                "T00123",
+                "T00124",
+                "T00125",
+                "T00126",
+                "T00127",
+                "T00128",
+                "T00129",
+                "T00130",
+                "T00131",
+                "T00132",
+                "T00133",
+                "T00134",
+                "T00135",
+                "T00136",
+                "T00137"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.017365895771420982,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 27,
+                  "retrieval_score": 0.5351949824079387,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0038314176245210726,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 7,
+                  "retrieval_score": 2.4835546822562526,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 7,
+                  "retrieval_score": 2.4835546822562526,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 33,
+                  "retrieval_score": 1.7803981114673848,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.003584229390681004,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:14",
+                  "start": 420.0,
+                  "end": 480.0,
+                  "text": "- The screen displays a dark-themed interface for a software application, likely a tool for building actionable knowledge systems.\n- The main content area is titled \"Delegate only bounded specialist work\" and lists various roles such as \"Intake/Extraction worker,\" \"Research worker,\" and \"Librarian worker.\"\n- Each role has a corresponding action that must be done, a task that must not be done, and a description of the work.\n- The interface includes a \"Add more context\" button and a \"1 message\" button.\n- The user is in a \"New session\" state, and the sidebar shows \"Home,\" \"Build an actionable information system,\" and \"Wanderlots Tutorials.\"\n- The text \"GPT-5.6-terra\" is visible in the bottom right corner.",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00007"
+                  ]
+                },
+                {
+                  "id": "transcript:14",
+                  "start": 420.68,
+                  "end": 451.36,
+                  "text": "when it actually makes sense to do so, when the complexity needs it. But all of this is relative. This is specifically for a one-off research task that we just did here. As the system starts to scale in complexity, we need to start thinking about other ways of orchestrating. For example, using all of the different bots like we've set up in previous videos. And one thing I wanna mention too is that when we're delegating to subagents, subagents know nothing. They start with completely fresh conversations. So they have zero knowledge of the parent's conversation history, tool calls, or anything discussed before they were created for the delegation.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00121",
+                    "T00122",
+                    "T00123",
+                    "T00124",
+                    "T00125",
+                    "T00126",
+                    "T00127",
+                    "T00128",
+                    "T00129",
+                    "T00130",
+                    "T00131",
+                    "T00132",
+                    "T00133",
+                    "T00134",
+                    "T00135",
+                    "T00136",
+                    "T00137"
+                  ]
+                }
+              ],
+              "selection_score": 0.5077347612279425,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 3,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "caption:52",
+              "start": 1560.0,
+              "end": 1620.0,
+              "text": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+              "source": "caption",
+              "modalities": [
+                "caption"
+              ],
+              "segment_ids": [
+                "caption_00026"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.015801019335855402,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 1,
+                  "retrieval_score": 12.423730413282287,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 4,
+                  "retrieval_score": 3.1958370819844304,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 5,
+                  "retrieval_score": 2.5345173910418626,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:52",
+                  "start": 1560.0,
+                  "end": 1620.0,
+                  "text": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00026"
+                  ]
+                }
+              ],
+              "selection_score": 0.46198174198716707,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 4,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "caption:54",
+              "start": 1620.0,
+              "end": 1680.0,
+              "text": "- **Frame 1620.018**: A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flowchart with \"Raw Idea\" leading to \"The Decomposer,\" which then processes \"Task Cards\" through \"The Dispatcher\" to \"Ready\" worker nodes. The diagram includes text describing the roles of \"Intelligence\" and \"The Decomposer\" in breaking down tasks.\n- **Frame 1679.978**: A screenshot of a software interface, likely a development environment, shows a section titled \"Cost strategy: frontier orchestrator, inexpensive workers.\" The interface includes a code editor with a highlighted line of code and a sidebar with navigation options such as \"User,\" \"Features,\" \"Overview,\" and \"Automation.\" The text in the code editor is related to a task graph configuration.",
+              "source": "caption",
+              "modalities": [
+                "caption"
+              ],
+              "segment_ids": [
+                "caption_00027"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01567174283473458,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 2,
+                  "retrieval_score": 11.002783993428611,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 1,
+                  "retrieval_score": 5.695436443465232,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 9,
+                  "retrieval_score": 2.3369186429053475,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004830917874396135,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:54",
+                  "start": 1620.0,
+                  "end": 1680.0,
+                  "text": "- **Frame 1620.018**: A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flowchart with \"Raw Idea\" leading to \"The Decomposer,\" which then processes \"Task Cards\" through \"The Dispatcher\" to \"Ready\" worker nodes. The diagram includes text describing the roles of \"Intelligence\" and \"The Decomposer\" in breaking down tasks.\n- **Frame 1679.978**: A screenshot of a software interface, likely a development environment, shows a section titled \"Cost strategy: frontier orchestrator, inexpensive workers.\" The interface includes a code editor with a highlighted line of code and a sidebar with navigation options such as \"User,\" \"Features,\" \"Overview,\" and \"Automation.\" The text in the code editor is related to a task graph configuration.",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00027"
+                  ]
+                }
+              ],
+              "selection_score": 0.4582020248742161,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 5,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:50",
+              "start": 1502.24,
+              "end": 1530.2,
+              "text": "going to flesh out the spec and then it will move it through the system. To do means it's waiting on dependencies or unassigned so we can create task and not assign it and that means the dispatcher won't send it off to go run. We can schedule which is we want a task to run at a particular time so it could be for example check the latest series of emails and see if something has come in that I've been waiting for if so then execute the next task. Ready means that the dependencies are satisfied it's been assigned to a profile and the",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00509",
+                "T00510",
+                "T00511",
+                "T00512",
+                "T00513",
+                "T00514",
+                "T00515"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.014557414557414557,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 10,
+                  "retrieval_score": 3.6894364546364447,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0047619047619047615,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 3,
+                  "retrieval_score": 4.824522614299568,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005291005291005291,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 14,
+                  "retrieval_score": 1.2157740243317503,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0045045045045045045,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:50",
+                  "start": 1502.24,
+                  "end": 1530.2,
+                  "text": "going to flesh out the spec and then it will move it through the system. To do means it's waiting on dependencies or unassigned so we can create task and not assign it and that means the dispatcher won't send it off to go run. We can schedule which is we want a task to run at a particular time so it could be for example check the latest series of emails and see if something has come in that I've been waiting for if so then execute the next task. Ready means that the dependencies are satisfied it's been assigned to a profile and the",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00509",
+                    "T00510",
+                    "T00511",
+                    "T00512",
+                    "T00513",
+                    "T00514",
+                    "T00515"
+                  ]
+                }
+              ],
+              "selection_score": 0.4256218914182883,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 6,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": true
+        },
+        "latency_seconds": 0.2114
+      },
+      {
+        "call": 2,
+        "tool": "search",
+        "args": {
+          "query": "How Task Graphs Actually Run diagram",
+          "top_k": 1
+        },
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "fusion:d8417a58dfb40b6c",
+              "start": 1860.0,
+              "end": 1920.0,
+              "text": "[transcript] should be able to recognize that. This is actually a research task, not an implementation task for the tutorials agent. I can list specific skills if I want. I can change the model that I want this to run at or just have it run at the profile default. And importantly, I can have this run on goal mode. So by default, each worker agent gets one shot at its card to do the work. But turning goal mode into true for that particular task, Let's that worker run in a goal loop like I've already shown you. And this is its own self-contained goal loop. It doesn't connect to the existing goal that we have elsewhere.\n[caption] - **Frame 1860.025**: A \"New task in Triage\" dialog box is open, titled \"Multi-agent research\". The task description reads: \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system: a single agent with delegation capabilities, or a multi-agent team with different specialized agents? Be thorough with your research.\" The \"PRIORITY\" is set to 0, \"WORKSPACE\" is \"scratch - board default\", \"ASSIGNEE\" is \"wanderloots-tutorials (default)\", \"SKILLS\" are \"translation, github\", and \"MODEL\" is \"Profile default\". The \"Create task\" button is visible.\n- **Frame 1919.985**: The same dialog box is shown, but a new message appears at the bottom: \"R",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00622",
+                "T00623",
+                "T00624",
+                "T00625",
+                "T00626",
+                "T00627",
+                "T00628",
+                "T00629",
+                "T00630",
+                "T00631",
+                "T00632",
+                "T00633",
+                "T00634",
+                "T00635",
+                "T00636",
+                "caption_00031"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.022231749947796225,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 2,
+                  "retrieval_score": 5.269239651344762,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 26,
+                  "retrieval_score": 1.8801707752657044,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.003875968992248062,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 37,
+                  "retrieval_score": 0.7900346407227269,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.003436426116838488,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 20,
+                  "retrieval_score": 0.8995523018949682,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004166666666666667,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 2,
+                  "retrieval_score": 2.8136638693498663,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:62",
+                  "start": 1860.39,
+                  "end": 1890.41,
+                  "text": "should be able to recognize that. This is actually a research task, not an implementation task for the tutorials agent. I can list specific skills if I want. I can change the model that I want this to run at or just have it run at the profile default. And importantly, I can have this run on goal mode. So by default, each worker agent gets one shot at its card to do the work. But turning goal mode into true for that particular task, Let's that worker run in a goal loop like I've already shown you. And this is its own self-contained goal loop. It doesn't connect to the existing goal that we have elsewhere.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00622",
+                    "T00623",
+                    "T00624",
+                    "T00625",
+                    "T00626",
+                    "T00627",
+                    "T00628",
+                    "T00629",
+                    "T00630",
+                    "T00631",
+                    "T00632",
+                    "T00633",
+                    "T00634",
+                    "T00635",
+                    "T00636"
+                  ]
+                },
+                {
+                  "id": "caption:62",
+                  "start": 1860.0,
+                  "end": 1920.0,
+                  "text": "- **Frame 1860.025**: A \"New task in Triage\" dialog box is open, titled \"Multi-agent research\". The task description reads: \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system: a single agent with delegation capabilities, or a multi-agent team with different specialized agents? Be thorough with your research.\" The \"PRIORITY\" is set to 0, \"WORKSPACE\" is \"scratch - board default\", \"ASSIGNEE\" is \"wanderloots-tutorials (default)\", \"SKILLS\" are \"translation, github\", and \"MODEL\" is \"Profile default\". The \"Create task\" button is visible.\n- **Frame 1919.985**: The same dialog box is shown, but a new message appears at the bottom: \"R",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00031"
+                  ]
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": true
+        },
+        "latency_seconds": 0.18
+      },
+      {
+        "call": 3,
+        "tool": "search",
+        "args": {
+          "query": "exact dollar cost assigned to each dispatcher cycle",
+          "top_k": 1
+        },
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "fusion:1f48ef407b4b96d1",
+              "start": 1680.0,
+              "end": 1740.0,
+              "text": "[transcript] context and handoff doesn't really need that same level of intelligence, especially if it's running in a loop. Workers are where the vast majority of tokens are spent, so that's typically where the cost is. So that's what I'm getting at when I talk about this decomposer here. We can set this model to whatever we want. I could set this, for example, to GPT-6 Astra, if I wanted to. And what would happen is now the Kanban decomposer, this decomposer setting that we have here would be using Astra to convert whatever task I put inside of this task card into a series of subtasks that then get assigned to the worker profile which is Waterloo's tutorials\n[caption] - **Frame 1680.012**: A computer screen displays a web browser with the \"Kanban\" application open. The browser's interface shows a \"Cost strategy: frontier orchestrator, inexpensive workers\" section with a code snippet. The user is on the \"Kanban (Multi-Agent Board)\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy\" section with a code block and a \"Lifecycle plugin hooks\" section. The user is on the \"Kanban\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy\" section with a code block and a \"Lifecycle plugin hooks\" section. The user is on the \"Kanban\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00563",
+                "T00564",
+                "T00565",
+                "T00566",
+                "T00567",
+                "T00568",
+                "T00569",
+                "caption_00028"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.022370522622538754,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 4,
+                  "retrieval_score": 4.791244132282092,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0078125,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 17,
+                  "retrieval_score": 1.167147775204326,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.006493506493506494,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 2,
+                  "retrieval_score": 5.140836999246306,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.008064516129032258,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:56",
+                  "start": 1680.22,
+                  "end": 1712.78,
+                  "text": "context and handoff doesn't really need that same level of intelligence, especially if it's running in a loop. Workers are where the vast majority of tokens are spent, so that's typically where the cost is. So that's what I'm getting at when I talk about this decomposer here. We can set this model to whatever we want. I could set this, for example, to GPT-6 Astra, if I wanted to. And what would happen is now the Kanban decomposer, this decomposer setting that we have here would be using Astra to convert whatever task I put inside of this task card into a series of subtasks that then get assigned to the worker profile which is Waterloo's tutorials",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00563",
+                    "T00564",
+                    "T00565",
+                    "T00566",
+                    "T00567",
+                    "T00568",
+                    "T00569"
+                  ]
+                },
+                {
+                  "id": "caption:56",
+                  "start": 1680.0,
+                  "end": 1740.0,
+                  "text": "- **Frame 1680.012**: A computer screen displays a web browser with the \"Kanban\" application open. The browser's interface shows a \"Cost strategy: frontier orchestrator, inexpensive workers\" section with a code snippet. The user is on the \"Kanban (Multi-Agent Board)\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy\" section with a code block and a \"Lifecycle plugin hooks\" section. The user is on the \"Kanban\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy\" section with a code block and a \"Lifecycle plugin hooks\" section. The user is on the \"Kanban\" tab, and the \"Kanban\" application is visible in the top-left corner. The screen shows a \"Cost strategy",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00028"
+                  ]
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": true
+        },
+        "latency_seconds": 0.1379
+      },
+      {
+        "call": 4,
+        "tool": "search",
+        "args": {
+          "query": "How Task Graphs Actually Run diagram",
+          "top_k": 1
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Duplicate call; change query or interval",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "error_type": "duplicate_tool_call",
+        "latency_seconds": 0.0
+      }
+    ],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"lookup\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"How Task Graphs Actually Run diagram\",\n    \"exact dollar cost assigned to each dispatcher cycle\",\n    \"price only if it appears on that diagram\"\n  ],\n  \"requirements\": [\n    \"The diagram must be used to determine the exact dollar cost assigned to each dispatcher cycle.\",\n    \"The answer must provide a price only if it appears on the diagram.\",\n    \"The response must be based solely on the visible content of the diagram.\",\n    \"The answer must not invent any information not present in the diagram.\",\n    \"The answer must preserve the four-part question structure if present.\",\n    \"The answer must not include any external data or assumptions.\"\n  ],\n  \"event_query\": [\n    \"dispatcher cycle cost on How Task Graphs Actually Run diagram\"\n  ]\n}"
+      },
+      {
+        "role": "controller",
+        "step": 0,
+        "raw": "{\"action\": \"search\", \"query\": \"How Task Graphs Actually Run diagram\", \"queries\": [\"exact dollar cost assigned to each dispatcher cycle\", \"price only if it appears on that diagram\"], \"source\": \"visual\", \"top_k\": 1}"
+      },
+      {
+        "role": "controller",
+        "step": 1,
+        "raw": "{\"action\": \"search\", \"args\": {\"query\": \"How Task Graphs Actually Run diagram\", \"top_k\": 1}}"
+      },
+      {
+        "role": "controller",
+        "step": 2,
+        "raw": "{\"action\": \"search\", \"args\": {\"query\": \"exact dollar cost assigned to each dispatcher cycle\", \"top_k\": 1}}"
+      },
+      {
+        "role": "controller",
+        "step": 3,
+        "raw": "{\"action\": \"search\", \"args\": {\"query\": \"How Task Graphs Actually Run diagram\", \"top_k\": 1}}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

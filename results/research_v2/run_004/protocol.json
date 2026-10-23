@@ -1,0 +1,198 @@
+{
+  "schema_version": "clipscout-assignment-study-v7",
+  "created_at_utc": "2026-10-22T18:51:08.593495+00:00",
+  "status": "Diagnostic questions and scoring criteria prepared before user-run inference; no new experiment executed by assistant.",
+  "questions_file": "data/assignment_v7/questions.json",
+  "questions_sha256": "a266010d5276b4e3c9aaa9f3d55ff8bba25d766211902508690734664f637725",
+  "visual_annotations_file": "data/assignment_v7/visual_annotations.json",
+  "visual_annotations_sha256": "2f18601d12955cf9bb9b5ea06322bcd0f0d01518b170f0b8b504d56e40d70dc6",
+  "timestamp_annotations_file": "data/assignment_v7/timestamp_annotations.json",
+  "timestamp_annotations_sha256": "3c4f0ec54b3909aaacfe940a3e45d163ba0e1823f430e29f0ba6516a08737114",
+  "annotation_assets": [
+    {
+      "path": "data/assignment_v7/reference_frames/point_610.png",
+      "sha256": "bb0b453b4da758892952211e8d2025a49237bfa08a0d84a66dddfd07686d6f22",
+      "role": "timestamp reference frame"
+    },
+    {
+      "path": "data/assignment_v7/reference_frames/point_800.png",
+      "sha256": "ee6febcfa8ae507f6e9ad819646ff9e0fe0427a0fe144794a40acb0dda9eb7cc",
+      "role": "timestamp reference frame"
+    },
+    {
+      "path": "data/assignment_v7/reference_frames/range_article_1231.897.png",
+      "sha256": "4037f29f839480f7eeced1dcd4ec86e02b1ffbf580df4f2acfdcbffbc4f97810",
+      "role": "timestamp reference frame"
+    },
+    {
+      "path": "data/assignment_v7/reference_frames/range_two_loops_1235.634.png",
+      "sha256": "3cc56581e0171a7873ae5a7ed6612d539bed3e0c690893a2725363c83f2561e5",
+      "role": "timestamp reference frame"
+    },
+    {
+      "path": "data/assignment_v7/reference_frames/dev_1220.png",
+      "sha256": "3bca9af40813e8ef38b10965e2c59ec463e517fe6f33fdf685f60a3c1c91bad9",
+      "role": "timestamp reference frame"
+    },
+    {
+      "path": "data/assignment_v7/reference_frames/article_title_onset_last_absent.png",
+      "sha256": "6c1ccc39a95457d89d5da85d8e6c9dabf546686ef0b157a2e77cf05c805a844a",
+      "role": "visual onset bracket endpoint"
+    },
+    {
+      "path": "data/assignment_v7/reference_frames/article_title_onset_first_present.png",
+      "sha256": "8922af1aab4ad4dfd0c6921d25d9b6742768468e526fd85ccc45858a4a22747c",
+      "role": "visual onset bracket endpoint"
+    },
+    {
+      "path": "data/assignment_v7/reference_frames/taskgraphs_title_onset_last_absent.png",
+      "sha256": "72f914bea358880357a568cf1eec66c7a1a95ffc9b08663255f7a5e5e26b4750",
+      "role": "visual onset bracket endpoint"
+    },
+    {
+      "path": "data/assignment_v7/reference_frames/taskgraphs_title_onset_first_present.png",
+      "sha256": "a9da7b64bd11a80d89b9fd873830db99c3f2d382f111cfdcfa43b30feed0a5b0",
+      "role": "visual onset bracket endpoint"
+    },
+    {
+      "path": "data/assignment_v7/reference_frames/task_graph_1615.jpg",
+      "sha256": "fb9eb317cc911106f3feafbcea781eb208133464dc4bde04d5cc61423814cb41",
+      "role": "reused reasoning/negative-control reference frame"
+    }
+  ],
+  "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+  "source_questions_archive": {
+    "path": "data/research_v2/questions.json",
+    "sha256": "f8b02e6a4d13d793145454d6ab221cb2b8f0edc1a76288c4d09b5e7ea5350555"
+  },
+  "design": {
+    "test_count": 16,
+    "dev_count": 6,
+    "test_tasks": {
+      "timestamp_search": 4,
+      "reasoning": 6,
+      "onset": 4,
+      "unanswerable": 2
+    },
+    "dev_tasks": {
+      "timestamp_search": 2,
+      "reasoning": 2,
+      "onset": 2
+    },
+    "planned_test_modes": [
+      "adaptive",
+      "retrieval-only",
+      "static",
+      "uniform"
+    ],
+    "planned_test_runs": 64,
+    "planned_dev_modes": [
+      "adaptive",
+      "retrieval-only",
+      "static",
+      "uniform"
+    ],
+    "planned_dev_runs": 24,
+    "schedule": "Question-major, with mode order rotated by question index and frozen before inference.",
+    "negative_controls": "Two unanswerable cases are reported separately; they are not counted as timestamp, reasoning or onset successes."
+  },
+  "modes": {
+    "adaptive": "v7 ResearchAgent selects subsequent searches and inspections from evidence; explicit temporal requests constrain every tool.",
+    "retrieval-only": "Same v7 retrieval and final-answer machinery; uses precomputed text/captions/OCR and source timestamps, without new visual frame inspection. It is not necessarily transcript-only.",
+    "static": "Same v7 system with search followed by a fixed inspection schedule over up to three retrieved regions; no adaptive region selection.",
+    "uniform": "Same v7 system with up to four inspection positions/windows distributed over the allowed video interval; no query-guided search."
+  },
+  "controls": {
+    "same_implementation_version": "v7",
+    "same_backend": true,
+    "maximum_tool_calls": 4,
+    "same_configured_tool_frame_and_context_limits": true,
+    "inspection_cache_enabled": false,
+    "question_reference_and_rubric_visible_to_agents": false,
+    "actual_costs_must_be_reported": true,
+    "modalities": "Visual, audio-derived transcript, text descriptions and combined evidence are permitted. Modality is explicit per question/source. Retrieval-only is a policy, not an isolated modality control.",
+    "architecture_comparison": "None in the main study. All four modes use v7. Previous legacy/research/no-refinement plans and runs remain archived separately.",
+    "maximum_inspection_frames": 16,
+    "frame_budget_definition": "At most 16 selected inspection frames presented as model observations. Codec seek preroll may decode more raw frames; report raw_decoder_frames_decoded separately without conflating it with the inspection budget."
+  },
+  "timestamp_scoring": {
+    "point_tolerance_seconds": 0.1,
+    "observations": "Actual sampled frame timestamps linked to final evidence citations, not requested timestamps.",
+    "range": "All cited/source intervals and actual frames must obey the requested scope. Required annotated observations must be represented. Sparse samples do not establish continuous coverage.",
+    "content": "Same prewritten atomic rubric and named review contract as reasoning.",
+    "unknown": "Unobserved telemetry and unreviewed semantics remain null; missing/error/abstained task answers are failures."
+  },
+  "reasoning_scoring": {
+    "source": "Prewritten atomic claims, required source intervals and separate named reviewer judgments. Never answering-model self-audit as ground truth.",
+    "required_review_fields": [
+      "reviewer",
+      "method",
+      "atom_judgments",
+      "extra_claims_supported"
+    ],
+    "strict_success": "Every required atom correct and supported, with additional claims supported; causal/cross-scene relations are explicit atoms.",
+    "unknown": "Report null accuracy, unknown counts, bounds and review coverage. Do not replace semantic scores with word F1.",
+    "independence": "Assistant annotations and development-reused questions are not independent human or blind validation."
+  },
+  "event_scoring": {
+    "prediction_source": "Explicit result.event only; never citation starts or numbers extracted from prose.",
+    "tolerances_seconds": [
+      1,
+      2,
+      5
+    ],
+    "uncertainty": "Both predicted endpoints must lie within tolerated reference bracket; report conditional error, width, coverage, known counts and all-case denominator.",
+    "identity": "Correct occurrence and modality are required; event identity requires a named review for joint semantic/timing success.",
+    "reference_domains": {
+      "transcript": "Silver ASR cue intervals, not independently aligned spoken-word onsets.",
+      "visual": "Refined local complete-title legibility transition within stated window; not global first appearance or animation completion."
+    }
+  },
+  "reporting": {
+    "primary_groups": [
+      "timestamp_search",
+      "reasoning",
+      "onset"
+    ],
+    "separate_controls": "unanswerable",
+    "stratify_by": [
+      "task",
+      "modality",
+      "split"
+    ],
+    "require_review_coverage": true,
+    "unknown_values": "JSON null / CSV unknown, never imputed zero.",
+    "exports": [
+      "study_summary.json",
+      "mode_metrics.csv",
+      "task_metrics.csv",
+      "per_question.metrics.csv",
+      "MODE.metrics.json"
+    ]
+  },
+  "diagnostic_metrics": {
+    "evaluator_protocol_version": "assignment-v7.0",
+    "definitions": {
+      "timestamp_search": "Explicit point requests require actual sampled visual timestamps within the predeclared tolerance, linked to final citations. Range requests require cited, modality-compatible source observations in every required reference support, and all cited/source intervals and observed frames inside the requested range. Transcript cases use cue intervals, not visual frames. Requested timestamps alone are never observations. Unknown telemetry remains null; known missing/error/abstention is failure. These are temporal compliance diagnostics, not semantic answer correctness or continuous range coverage.",
+      "semantic_review_coverage": "A named review is present only with reviewer and method. Complete atom reviews require boolean correct/supported for every required atom plus extra_claims_supported; event review completeness requires event_identity_correct; negative controls require abstention_correct. Operational failures can have known zero task scores without being reviewed. Review coverage and score known-count are therefore separate.",
+      "retrieval": "Candidates follow chronological search calls and returned rank; duplicate physical regions are removed. Recall@k is the maximum one-to-one fraction of required supports matched in the first k unique candidates. A hit requires compatible known modality and either an actual sampled timestamp in the reference interval or interval IoU>=0.3. These are localization diagnostics, not semantic correctness.",
+      "reciprocal_rank": "Inverse rank of the first candidate matching any required support; zero for a recorded search with no relevant hit. Questions without required supports or without a recorded search have null retrieval metrics.",
+      "ndcg_at_5": "Binary unique-support gain, discounted by log2(rank+1). At most one previously unmatched support earns gain for each candidate (highest geometric score breaks ambiguity); ideal DCG contains min(5, number of required supports) gains. Repeated evidence for the same support cannot increase gain.",
+      "citation_geometry": "Unique final citation intervals with known/inferred-from-ledger modality are matched to required supports at interval IoU>=0.3. Precision counts matching citations divided by unique valid citations plus invalid citations. Support recall uses one-to-one assignment. Unknown modality earns no modality-qualified credit; temporal-only precision is reported separately. Neither is entailment or event-onset accuracy.",
+      "cost": "Only observed finite nonnegative telemetry contributes. Missing fields remain null. Latency quantiles use linear interpolation at (n-1)*p; every distribution reports measured and missing counts. Counts include failed tool attempts where recorded. inspection_frames is selected model observations; decoded_frames is its retained legacy alias, not all codec work. raw_decoder_frames_decoded separately records codec decoding including seek preroll when available.",
+      "duplicate_frames": "(selected inspection frame count - unique sampled timestamp count) / selected inspection frame count, only when both counts are observed and consistent. Zero selected frames and zero unique samples yield zero. Unobserved timestamps do not imply all frames were unique. This metric excludes codec seek preroll.",
+      "rates": "Operational error and abstention rates use non-missing predictions as their denominator. Tool failure rates use attempts with known ok/error outcomes. Format repair requires an explicitly classified format/validation rejection followed by another decision; unclassified errors leave that rate unknown. Decision-repair counts are reported separately.",
+      "budget": "Hard limits are at most four attempted tools (or a stricter configured limit) and the configured selected-inspection-frame limit, default 16 model observations. Codec seek preroll can decode additional frames and is reported separately, not charged to this inspection budget. Reported counts are checked against trace counts; the larger tool count is used. Unknown telemetry cannot establish budget compliance.",
+      "joint_reviewed": "Reasoning joint success requires a complete named semantic review, supported correct required/extra claims, and all required geometric supports. Event joint success requires an explicit boolean event-identity review and an explicit within-scope, modality-compatible timing prediction. Unreviewed quality remains null; citation times are never substituted for event predictions."
+    }
+  },
+  "limits": [
+    "One supplied video; no cross-video generalization estimate.",
+    "Diagnostic questions reuse inspected development examples and related scenes; dev/test is an operational split, not an untouched held-out benchmark.",
+    "Two transcript onset questions intentionally reuse the same utterance at distinct occurrences; correlated controls.",
+    "Timing brackets and semantic rubrics have assistant-authored or ASR provenance; independent human verification remains outstanding.",
+    "Equal tool/frame ceilings do not imply equal actual tokens, computation or latency; report all measured costs."
+  ],
+  "preservation": "Original52-run study, temporal regressions and research_v2 are unchanged and separate.",
+  "runner": "scripts/run_research_study.py"
+}

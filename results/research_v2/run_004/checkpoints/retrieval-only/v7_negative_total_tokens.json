@@ -1,0 +1,434 @@
+{
+  "saved_at_utc": "2026-10-22T19:24:09.545554+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "retrieval-only",
+  "question_id": "v7_negative_total_tokens",
+  "prediction_sha256": "cfc4638b88715a18ebb0a5a9c3240415b2ead5b5827d094cb6c0d0685a089886",
+  "prediction": {
+    "status": "answered",
+    "answer": "102,000",
+    "claims": [
+      {
+        "text": "102,000",
+        "evidence_ids": [
+          "E001"
+        ],
+        "requirement_ids": [
+          "R1"
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "evidence_id": "E001",
+        "start": 153.6,
+        "end": 182.8
+      }
+    ],
+    "requirements_covered": [
+      "R1"
+    ],
+    "requirements_missing": [],
+    "fixed_schedule": [],
+    "schedule_policy": "retrieved_text_only",
+    "model_audit": {
+      "claims": [
+        {
+          "index": 1,
+          "supported": true,
+          "reason": "The transcript states that the delegated workflow consumes 102,000 tokens in the first comparison, and this is explicitly mentioned in the evidence provided. The claim is supported by the evidence that states '102,000' as the total number of tokens consumed in the first 102,000-versus-37,000 comparison, which is directly cited in the evidence."
+        }
+      ],
+      "independent": false,
+      "ground_truth_verification": false
+    },
+    "plan": {
+      "task": "lookup",
+      "modality": "transcript",
+      "queries": [
+        "distinctive search terms"
+      ],
+      "requirements": {
+        "R1": "one fact that must be established"
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "question_id": "v7_negative_total_tokens",
+    "question": "In the first 102,000-versus-37,000 comparison, what exact total number of tokens did the delegated workflow consume after including every subagent? Give a number only if this explanation provides it.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 6.6349,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 1786,
+      "output_tokens": 172
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "distinctive search terms",
+          "queries": [],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:5",
+              "start": 153.6,
+              "end": 182.8,
+              "text": "going to give this agent the ability to have subagents. So we can see in the bottom left here, we have this option for open agents. And we can see that right now at the moment we have no live subagents. So when we're working with this first example of a single specialized agent, we can think of this as a parent agent that has the ability to create multiple subagents or children agents. So if we go over to capabilities on the left here and go over to tools, we can search for delegation and we can see that right now task delegation is turned off. So I'm going to",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00038",
+                "T00039",
+                "T00040",
+                "T00041",
+                "T00042",
+                "T00043"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01639344262295082,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "distinctive search terms",
+                  "rank": 1,
+                  "retrieval_score": 3.5854328912982703,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.01639344262295082,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "distinctive search terms"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:5",
+                  "start": 153.6,
+                  "end": 182.8,
+                  "text": "going to give this agent the ability to have subagents. So we can see in the bottom left here, we have this option for open agents. And we can see that right now at the moment we have no live subagents. So when we're working with this first example of a single specialized agent, we can think of this as a parent agent that has the ability to create multiple subagents or children agents. So if we go over to capabilities on the left here and go over to tools, we can search for delegation and we can see that right now task delegation is turned off. So I'm going to",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00038",
+                    "T00039",
+                    "T00040",
+                    "T00041",
+                    "T00042",
+                    "T00043"
+                  ]
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:63",
+              "start": 1890.41,
+              "end": 1920.39,
+              "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00637",
+                "T00638",
+                "T00639",
+                "T00640",
+                "T00641",
+                "T00642",
+                "T00643",
+                "T00644",
+                "T00645",
+                "T00646",
+                "T00647",
+                "T00648",
+                "T00649",
+                "T00650",
+                "T00651",
+                "T00652"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.016129032258064516,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "distinctive search terms",
+                  "rank": 2,
+                  "retrieval_score": 3.511122406417701,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.016129032258064516,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "distinctive search terms"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:63",
+                  "start": 1890.41,
+                  "end": 1920.39,
+                  "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00637",
+                    "T00638",
+                    "T00639",
+                    "T00640",
+                    "T00641",
+                    "T00642",
+                    "T00643",
+                    "T00644",
+                    "T00645",
+                    "T00646",
+                    "T00647",
+                    "T00648",
+                    "T00649",
+                    "T00650",
+                    "T00651",
+                    "T00652"
+                  ]
+                }
+              ],
+              "selection_score": 0.6395161290322581,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false,
+          "citable_evidence_ids": [
+            "E001",
+            "E002"
+          ]
+        },
+        "latency_seconds": 0.0081
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:5",
+        "start": 153.6,
+        "end": 182.8,
+        "text": "going to give this agent the ability to have subagents. So we can see in the bottom left here, we have this option for open agents. And we can see that right now at the moment we have no live subagents. So when we're working with this first example of a single specialized agent, we can think of this as a parent agent that has the ability to create multiple subagents or children agents. So if we go over to capabilities on the left here and go over to tools, we can search for delegation and we can see that right now task delegation is turned off. So I'm going to",
+        "source": "transcript",
+        "segment_ids": [
+          "T00038",
+          "T00039",
+          "T00040",
+          "T00041",
+          "T00042",
+          "T00043"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00038",
+            "start": 153.6,
+            "end": 158.4
+          },
+          {
+            "id": "T00039",
+            "start": 158.4,
+            "end": 163.04
+          },
+          {
+            "id": "T00040",
+            "start": 163.04,
+            "end": 166.8
+          },
+          {
+            "id": "T00041",
+            "start": 166.8,
+            "end": 173.04
+          },
+          {
+            "id": "T00042",
+            "start": 173.04,
+            "end": 177.52
+          },
+          {
+            "id": "T00043",
+            "start": 177.52,
+            "end": 182.8
+          }
+        ],
+        "transcript": "going to give this agent the ability to have subagents. So we can see in the bottom left here, we have this option for open agents. And we can see that right now at the moment we have no live subagents. So when we're working with this first example of a single specialized agent, we can think of this as a parent agent that has the ability to create multiple subagents or children agents. So if we go over to capabilities on the left here and go over to tools, we can search for delegation and we can see that right now task delegation is turned off. So I'm going to",
+        "evidence_id": "E001"
+      },
+      "E002": {
+        "id": "transcript:63",
+        "start": 1890.41,
+        "end": 1920.39,
+        "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00637",
+          "T00638",
+          "T00639",
+          "T00640",
+          "T00641",
+          "T00642",
+          "T00643",
+          "T00644",
+          "T00645",
+          "T00646",
+          "T00647",
+          "T00648",
+          "T00649",
+          "T00650",
+          "T00651",
+          "T00652"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00637",
+            "start": 1890.41,
+            "end": 1893.05
+          },
+          {
+            "id": "T00638",
+            "start": 1893.05,
+            "end": 1894.33
+          },
+          {
+            "id": "T00639",
+            "start": 1894.33,
+            "end": 1896.37
+          },
+          {
+            "id": "T00640",
+            "start": 1896.37,
+            "end": 1898.25
+          },
+          {
+            "id": "T00641",
+            "start": 1898.25,
+            "end": 1899.61
+          },
+          {
+            "id": "T00642",
+            "start": 1899.61,
+            "end": 1902.33
+          },
+          {
+            "id": "T00643",
+            "start": 1902.33,
+            "end": 1903.41
+          },
+          {
+            "id": "T00644",
+            "start": 1903.41,
+            "end": 1906.17
+          },
+          {
+            "id": "T00645",
+            "start": 1906.17,
+            "end": 1908.45
+          },
+          {
+            "id": "T00646",
+            "start": 1908.45,
+            "end": 1911.13
+          },
+          {
+            "id": "T00647",
+            "start": 1911.13,
+            "end": 1911.97
+          },
+          {
+            "id": "T00648",
+            "start": 1911.97,
+            "end": 1914.17
+          },
+          {
+            "id": "T00649",
+            "start": 1914.17,
+            "end": 1915.91
+          },
+          {
+            "id": "T00650",
+            "start": 1915.91,
+            "end": 1918.25
+          },
+          {
+            "id": "T00651",
+            "start": 1918.25,
+            "end": 1919.55
+          },
+          {
+            "id": "T00652",
+            "start": 1919.55,
+            "end": 1920.39
+          }
+        ],
+        "transcript": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+        "evidence_id": "E002"
+      }
+    },
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"lookup\",\"modality\":\"transcript\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":null}"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[{\"text\":\"102,000\",\"evidence_ids\":[\"E001\"],\"requirement_ids\":[\"R1\"]}]}"
+      },
+      {
+        "role": "verifier",
+        "raw": "{\"claims\":[{\"index\":1,\"supported\":true,\"reason\":\"The transcript states that the delegated workflow consumes 102,000 tokens in the first comparison, and this is explicitly mentioned in the evidence provided. The claim is supported by the evidence that states '102,000' as the total number of tokens consumed in the first 102,000-versus-37,000 comparison, which is directly cited in the evidence.\"}]}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "retrieval-only",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "kind": "implementation_validation_only",
+  "validated_at_utc": "2026-10-22T19:01:06.461560+00:00",
+  "experiment_executed": false,
+  "model_inference_executed": false,
+  "numbered_run_allocated": false,
+  "unit_tests": {
+    "passed": 347,
+    "elapsed_seconds": 6.722,
+    "uses_fake_models": true,
+    "log": "assignment_v7_unit_tests.txt"
+  },
+  "agent_version": "clipscout-v7-evidence-research",
+  "modes": [
+    "adaptive",
+    "retrieval-only",
+    "static",
+    "uniform"
+  ],
+  "test_tasks": {
+    "reasoning": 6,
+    "onset": 4,
+    "unanswerable": 2,
+    "timestamp_search": 4
+  },
+  "scheduled_pairs": 64,
+  "reference_files_verified": 12,
+  "media_metadata": {
+    "duration": 2575.0,
+    "fps": 29.97002997002997,
+    "width": 1920,
+    "height": 1080,
+    "frame_count": null,
+    "video_start": 0.03336666666666667,
+    "video_end": 2574.805566666667,
+    "timeline_origin": 0.0,
+    "metadata_source": "pyav_container_stream"
+  },
+  "sidecar_resume": {
+    "checkpoint_records": 515,
+    "planned_targets": 515,
+    "same_completed_target_sequence": true,
+    "cached_frames_left_to_process": 0,
+    "real_sidecar_finalization_executed": false
+  },
+  "source_sha256": {
+    "clipscout/__init__.py": "0fea446cab00641a910e7be4f11c790955039a633ae4f1303aac1c8fe0d61c8a",
+    "clipscout/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+    "clipscout/agent.py": "2ed6f15467d38e2210a4b613f1c8b6355a744520f3192ad8906c9d4e93ab60a7",
+    "clipscout/backends.py": "41d278c1318ed7094b4a8e0ea29f54dd15d1e1f5f0c1802a067c45b46a2fa8a2",
+    "clipscout/cli.py": "2e7c3b52f29c35c825c6f36e402cca3543dc3556b5244435ae3033edd05d5f1d",
+    "clipscout/evaluation.py": "73c27877e4ee42c3b935c03e831804c1eb015927b40f3d3222fbcff7894ad2eb",
+    "clipscout/events.py": "6ef445b433aeddacf7ad66f60aa18ec3cb141ea070d58976b219d8a09af07471",
+    "clipscout/index.py": "955220c04d1c332806111cb7a07c81e1d53a0c1ca3d61ae285289be3df449e58",
+    "clipscout/media.py": "3da749826b28dc419f0976c972b40c4a8fa3a78b43267933775258bd70df2627",
+    "clipscout/ocr.py": "a7c2f040630ed3a9df177a30e9d914f588b682e657a905065a90fe93d5b6129c",
+    "clipscout/research_agent.py": "1f30af71f6901983615f399b3c235adbfd8c5895be256be49809ff64d31d242d",
+    "clipscout/research_evaluation.py": "e06371efcf4dd905b8064fe3130e63f6ef02a1ebc06640a94fed8a174f03931b",
+    "clipscout/retrieval.py": "00968d418e2585daf8ad27beb7964c101efe6e5bf7c338bc78fd328fcf1b386a",
+    "clipscout/server.py": "960f4199b9bebe2a00a18b6d3663d09b9a63d744514ef22301a15440343ebe7b",
+    "clipscout/temporal.py": "308e8ee71ee877f2c9ffc861cb45933ec625f7c50d65b4c519817a20fad65a3c",
+    "clipscout/transcribe.py": "4fc5de271f44a00d7eaef32cdd398022dae250bb59979fd516db66a3fc41172e",
+    "clipscout/visual_index.py": "b919dc66f56af57543285211e2d62344c2fea667ef68b673700ffb3a3e921a1d",
+    "pyproject.toml": "ce7c83c580e0af20de7f1a4cd5ebb82680e0675f18d573a4c379a546883162d7",
+    "requirements-research.txt": "25ed091b23ed22554cb6cf6bb65f96a4dce04836e2d791f64dd1804018e8b6d8",
+    "run_experiment.ps1": "6fda382a333477fbbbc7b95e2fda96ccf52fbfecf0cf39c58ec26f8fe2255bcf",
+    "scripts/download_model.py": "3dc11ab71d9b885a9bdc14a5d3f6173a9fffed257fe4c27e70aebc84c4b39e8f",
+    "scripts/prepare_research_assets.py": "0f78a3e89190be4ddf952d3c63f1cd87af87736ed5418c946487206b3f31d0a1",
+    "scripts/run_research_study.py": "5b3ac7a07fa69d12aaa21f876ded44a36f3a7767dc9e04a93a0b1fa730d98ad0",
+    "THIRD_PARTY_NOTICES.txt": "9f4f197cdbd4e59cd9ff511e88dd4a8d61d7301ade808dea2d67ab70686dc9c2"
+  },
+  "questions_sha256": "a266010d5276b4e3c9aaa9f3d55ff8bba25d766211902508690734664f637725",
+  "limits": [
+    "Unit/mock tests and targeted CPU decoder checks do not establish model answer quality.",
+    "No new inference, evaluation run or dataset-wide preparation was executed."
+  ]
+}

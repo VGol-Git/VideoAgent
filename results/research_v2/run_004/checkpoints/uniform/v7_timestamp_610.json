@@ -1,0 +1,2359 @@
+{
+  "saved_at_utc": "2026-10-22T19:28:46.316726+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "uniform",
+  "question_id": "v7_timestamp_610",
+  "prediction_sha256": "6bbc1964bca7209816947bb2aeaefbf9862044078f1c1359bb2566a572c03747",
+  "prediction": {
+    "status": "answered",
+    "answer": "At 10 minutes 10 seconds, the slide displays a diagram titled \"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL.\" The diagram shows a circular process with four numbered steps: 1. TRIGGER /GOAL, 2. SPAWN SUB-AGENTS, 3. EVALUATE VS. CRITERIA, and 4. FAIL → RETRY. The mechanism is to establish a standard for 'Done' and loop until verified. The example constraints are: must contain 5 peer-reviewed sources and total output must be <500 words. The execution strategy involves an orchestrator acting as an unyielding judge, issuing repair prompts up to 20 times until constraints are satisfied.",
+    "claims": [
+      {
+        "text": "At 10 minutes 10 seconds, the slide displays a diagram titled \"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL.\" The diagram shows a circular process with four numbered steps: 1. TRIGGER /GOAL, 2. SPAWN SUB-AGENTS, 3. EVALUATE VS. CRITERIA, and 4. FAIL → RETRY. The mechanism is to establish a standard for 'Done' and loop until verified. The example constraints are: must contain 5 peer-reviewed sources and total output must be <500 words. The execution strategy involves an orchestrator acting as an unyielding judge, issuing repair prompts up to 20 times until constraints are satisfied.",
+        "evidence_ids": [
+          "E001"
+        ],
+        "requirement_ids": [
+          "R1"
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "evidence_id": "E001",
+        "start": 609.5,
+        "end": 610.5
+      }
+    ],
+    "requirements_covered": [
+      "R1"
+    ],
+    "requirements_missing": [],
+    "fixed_schedule": [
+      {
+        "start": 609.5,
+        "end": 610.5,
+        "timestamp": 610.0
+      }
+    ],
+    "schedule_policy": "requested_moments",
+    "requested_timestamps": [
+      610.0
+    ],
+    "model_audit": {
+      "claims": [
+        {
+          "index": 1,
+          "supported": true,
+          "reason": "The visual observation at 10 minutes 10 seconds matches the claim's description of the slide. The title is 'GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL,' and the diagram shows a circular process with four numbered steps: TRIGGER /GOAL, SPAWN SUB-AGENTS, EVALUATE VS. CRITERIA, and FAIL → RETRY. The mechanism described—establishing a standard for 'Done' and looping until verified—is consistent with the diagram. The example constraints mentioned—5 peer-reviewed sources and total output <500 words—appear in the text, and the execution strategy involving an orchestrator issuing repair prompts up to 20 times is also accurately described in the observation."
+        }
+      ],
+      "independent": false,
+      "ground_truth_verification": false
+    },
+    "plan": {
+      "task": "lookup",
+      "modality": "visual",
+      "queries": [
+        "what was on the slide at 10 minutes 10 seconds",
+        "title of the slide",
+        "numbered steps and outcome branches on the slide"
+      ],
+      "requirements": {
+        "R1": "the slide content at 10 minutes 10 seconds"
+      }
+    },
+    "routing": "research_fixed_policy",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "question_id": "v7_timestamp_610",
+    "question": "Describe what was on the slide at 10 minutes 10 seconds. Give the title and explain the numbered steps and outcome branches.",
+    "mode": "uniform",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 1,
+    "unique_sampled_timestamps": [
+      610.0094
+    ],
+    "latency_seconds": 30.4227,
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 2172,
+      "output_tokens": 558
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 609.5,
+          "end": 610.5,
+          "timestamp": 610.0,
+          "question": "Describe what was on the slide at 10 minutes 10 seconds. Give the title and explain the numbered steps and outcome branches.",
+          "modality": "visual"
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "start": 609.5,
+          "end": 610.5,
+          "transcript": "",
+          "transcript_segments": [],
+          "transcript_truncated": false,
+          "visual_observation": "At 10 minutes 10 seconds, the slide displays a diagram titled \"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL.\" The diagram shows a circular process with four numbered steps: 1. TRIGGER /GOAL, 2. SPAWN SUB-AGENTS, 3. EVALUATE VS. CRITERIA, and 4. FAIL → RETRY. The mechanism is to establish a standard for 'Done' and loop until verified. The example constraints are: must contain 5 peer-reviewed sources and total output must be <500 words. The execution strategy involves an orchestrator acting as an unyielding judge, issuing repair prompts up to 20 times until constraints are satisfied.",
+          "sampled_timestamps": [
+            610.0094
+          ],
+          "ocr": [
+            {
+              "id": "frame_610.009400_1512839424a0",
+              "frame_id": "frame_610.009400_1512839424a0",
+              "timestamp": 610.0094,
+              "text": "GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL\n1. TRIGGER\nTHE MECHANISM\n/GOAL\nEstablish a standing standard for 'Done'.\nThe system loops autonomously until\nverified.\nEXAMPLE CONSTRAINTS:\n2.SPAWN\nFAIL →RETRY\n- Must contain 5 peer-reviewed sources\nSUB-AGENTS\n- Total output must be <500 words\nEXECUTION STRATEGY\nThe orchestrator acts as an unyielding\njudge, automatically issuing repair\n3. EVALUATE\nprompts for up to 20 turns until\nPASS → EXIT LOOP\nconstraints are fully satisfied.\nVS. CRITERIA",
+              "lines": [
+                {
+                  "text": "GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL",
+                  "confidence": 0.9881,
+                  "polygon": [
+                    [
+                      40.0,
+                      71.0
+                    ],
+                    [
+                      1511.0,
+                      71.0
+                    ],
+                    [
+                      1511.0,
+                      136.0
+                    ],
+                    [
+                      40.0,
+                      136.0
+                    ]
+                  ],
+                  "bbox": [
+                    40.0,
+                    71.0,
+                    1511.0,
+                    136.0
+                  ],
+                  "bbox_normalized": [
+                    0.026041666666666668,
+                    0.08217592592592593,
+                    0.9837239583333334,
+                    0.1574074074074074
+                  ]
+                },
+                {
+                  "text": "1. TRIGGER",
+                  "confidence": 0.98713,
+                  "polygon": [
+                    [
+                      377.0,
+                      209.0
+                    ],
+                    [
+                      554.0,
+                      209.0
+                    ],
+                    [
+                      554.0,
+                      249.0
+                    ],
+                    [
+                      377.0,
+                      249.0
+                    ]
+                  ],
+                  "bbox": [
+                    377.0,
+                    209.0,
+                    554.0,
+                    249.0
+                  ],
+                  "bbox_normalized": [
+                    0.24544270833333334,
+                    0.24189814814814814,
+                    0.3606770833333333,
+                    0.2881944444444444
+                  ]
+                },
+                {
+                  "text": "THE MECHANISM",
+                  "confidence": 0.9995,
+                  "polygon": [
+                    [
+                      1002.0,
+                      213.0
+                    ],
+                    [
+                      1297.0,
+                      213.0
+                    ],
+                    [
+                      1297.0,
+                      253.0
+                    ],
+                    [
+                      1002.0,
+                      253.0
+                    ]
+                  ],
+                  "bbox": [
+                    1002.0,
+                    213.0,
+                    1297.0,
+                    253.0
+                  ],
+                  "bbox_normalized": [
+                    0.65234375,
+                    0.2465277777777778,
+                    0.8444010416666666,
+                    0.29282407407407407
+                  ]
+                },
+                {
+                  "text": "/GOAL",
+                  "confidence": 0.99815,
+                  "polygon": [
+                    [
+                      410.0,
+                      248.0
+                    ],
+                    [
+                      518.0,
+                      248.0
+                    ],
+                    [
+                      518.0,
+                      291.0
+                    ],
+                    [
+                      410.0,
+                      291.0
+                    ]
+                  ],
+                  "bbox": [
+                    410.0,
+                    248.0,
+                    518.0,
+                    291.0
+                  ],
+                  "bbox_normalized": [
+                    0.2669270833333333,
+                    0.28703703703703703,
+                    0.3372395833333333,
+                    0.3368055555555556
+                  ]
+                },
+                {
+                  "text": "Establish a standing standard for 'Done'.",
+                  "confidence": 0.98126,
+                  "polygon": [
+                    [
+                      1001.0,
+                      268.0
+                    ],
+                    [
+                      1503.0,
+                      268.0
+                    ],
+                    [
+                      1503.0,
+                      304.0
+                    ],
+                    [
+                      1001.0,
+                      304.0
+                    ]
+                  ],
+                  "bbox": [
+                    1001.0,
+                    268.0,
+                    1503.0,
+                    304.0
+                  ],
+                  "bbox_normalized": [
+                    0.6516927083333334,
+                    0.3101851851851852,
+                    0.978515625,
+                    0.35185185185185186
+                  ]
+                },
+                {
+                  "text": "The system loops autonomously until",
+                  "confidence": 0.99457,
+                  "polygon": [
+                    [
+                      1000.0,
+                      302.0
+                    ],
+                    [
+                      1472.0,
+                      304.0
+                    ],
+                    [
+                      1472.0,
+                      344.0
+                    ],
+                    [
+                      1000.0,
+                      342.0
+                    ]
+                  ],
+                  "bbox": [
+                    1000.0,
+                    302.0,
+                    1472.0,
+                    344.0
+                  ],
+                  "bbox_normalized": [
+                    0.6510416666666666,
+                    0.34953703703703703,
+                    0.9583333333333334,
+                    0.39814814814814814
+                  ]
+                },
+                {
+                  "text": "verified.",
+                  "confidence": 0.99983,
+                  "polygon": [
+                    [
+                      999.0,
+                      338.0
+                    ],
+                    [
+                      1106.0,
+                      338.0
+                    ],
+                    [
+                      1106.0,
+                      376.0
+                    ],
+                    [
+                      999.0,
+                      376.0
+                    ]
+                  ],
+                  "bbox": [
+                    999.0,
+                    338.0,
+                    1106.0,
+                    376.0
+                  ],
+                  "bbox_normalized": [
+                    0.650390625,
+                    0.3912037037037037,
+                    0.7200520833333334,
+                    0.4351851851851852
+                  ]
+                },
+                {
+                  "text": "EXAMPLE CONSTRAINTS:",
+                  "confidence": 0.99967,
+                  "polygon": [
+                    [
+                      1003.0,
+                      422.0
+                    ],
+                    [
+                      1434.0,
+                      422.0
+                    ],
+                    [
+                      1434.0,
+                      462.0
+                    ],
+                    [
+                      1003.0,
+                      462.0
+                    ]
+                  ],
+                  "bbox": [
+                    1003.0,
+                    422.0,
+                    1434.0,
+                    462.0
+                  ],
+                  "bbox_normalized": [
+                    0.6529947916666666,
+                    0.48842592592592593,
+                    0.93359375,
+                    0.5347222222222222
+                  ]
+                },
+                {
+                  "text": "2.SPAWN",
+                  "confidence": 0.99998,
+                  "polygon": [
+                    [
+                      664.0,
+                      457.0
+                    ],
+                    [
+                      821.0,
+                      457.0
+                    ],
+                    [
+                      821.0,
+                      495.0
+                    ],
+                    [
+                      664.0,
+                      495.0
+                    ]
+                  ],
+                  "bbox": [
+                    664.0,
+                    457.0,
+                    821.0,
+                    495.0
+                  ],
+                  "bbox_normalized": [
+                    0.4322916666666667,
+                    0.5289351851851852,
+                    0.5345052083333334,
+                    0.5729166666666666
+                  ]
+                },
+                {
+                  "text": "FAIL →RETRY",
+                  "confidence": 0.98043,
+                  "polygon": [
+                    [
+                      70.0,
+                      476.0
+                    ],
+                    [
+                      288.0,
+                      476.0
+                    ],
+                    [
+                      288.0,
+                      516.0
+                    ],
+                    [
+                      70.0,
+                      516.0
+                    ]
+                  ],
+                  "bbox": [
+                    70.0,
+                    476.0,
+                    288.0,
+                    516.0
+                  ],
+                  "bbox_normalized": [
+                    0.045572916666666664,
+                    0.5509259259259259,
+                    0.1875,
+                    0.5972222222222222
+                  ]
+                },
+                {
+                  "text": "- Must contain 5 peer-reviewed sources",
+                  "confidence": 0.98927,
+                  "polygon": [
+                    [
+                      1012.0,
+                      475.0
+                    ],
+                    [
+                      1518.0,
+                      475.0
+                    ],
+                    [
+                      1518.0,
+                      511.0
+                    ],
+                    [
+                      1012.0,
+                      511.0
+                    ]
+                  ],
+                  "bbox": [
+                    1012.0,
+                    475.0,
+                    1518.0,
+                    511.0
+                  ],
+                  "bbox_normalized": [
+                    0.6588541666666666,
+                    0.5497685185185185,
+                    0.98828125,
+                    0.5914351851851852
+                  ]
+                },
+                {
+                  "text": "SUB-AGENTS",
+                  "confidence": 0.99993,
+                  "polygon": [
+                    [
+                      638.0,
+                      496.0
+                    ],
+                    [
+                      847.0,
+                      496.0
+                    ],
+                    [
+                      847.0,
+                      536.0
+                    ],
+                    [
+                      638.0,
+                      536.0
+                    ]
+                  ],
+                  "bbox": [
+                    638.0,
+                    496.0,
+                    847.0,
+                    536.0
+                  ],
+                  "bbox_normalized": [
+                    0.4153645833333333,
+                    0.5740740740740741,
+                    0.5514322916666666,
+                    0.6203703703703703
+                  ]
+                },
+                {
+                  "text": "- Total output must be <500 words",
+                  "confidence": 0.99241,
+                  "polygon": [
+                    [
+                      1012.0,
+                      509.0
+                    ],
+                    [
+                      1457.0,
+                      509.0
+                    ],
+                    [
+                      1457.0,
+                      548.0
+                    ],
+                    [
+                      1012.0,
+                      548.0
+                    ]
+                  ],
+                  "bbox": [
+                    1012.0,
+                    509.0,
+                    1457.0,
+                    548.0
+                  ],
+                  "bbox_normalized": [
+                    0.6588541666666666,
+                    0.5891203703703703,
+                    0.9485677083333334,
+                    0.6342592592592593
+                  ]
+                },
+                {
+                  "text": "EXECUTION STRATEGY",
+                  "confidence": 0.99975,
+                  "polygon": [
+                    [
+                      1011.0,
+                      601.0
+                    ],
+                    [
+                      1397.0,
+                      601.0
+                    ],
+                    [
+                      1397.0,
+                      641.0
+                    ],
+                    [
+                      1011.0,
+                      641.0
+                    ]
+                  ],
+                  "bbox": [
+                    1011.0,
+                    601.0,
+                    1397.0,
+                    641.0
+                  ],
+                  "bbox_normalized": [
+                    0.658203125,
+                    0.6956018518518519,
+                    0.9095052083333334,
+                    0.7418981481481481
+                  ]
+                },
+                {
+                  "text": "The orchestrator acts as an unyielding",
+                  "confidence": 0.99361,
+                  "polygon": [
+                    [
+                      1009.0,
+                      651.0
+                    ],
+                    [
+                      1512.0,
+                      655.0
+                    ],
+                    [
+                      1512.0,
+                      695.0
+                    ],
+                    [
+                      1009.0,
+                      691.0
+                    ]
+                  ],
+                  "bbox": [
+                    1009.0,
+                    651.0,
+                    1512.0,
+                    695.0
+                  ],
+                  "bbox_normalized": [
+                    0.6569010416666666,
+                    0.7534722222222222,
+                    0.984375,
+                    0.8043981481481481
+                  ]
+                },
+                {
+                  "text": "judge, automatically issuing repair",
+                  "confidence": 0.99188,
+                  "polygon": [
+                    [
+                      1010.0,
+                      691.0
+                    ],
+                    [
+                      1467.0,
+                      691.0
+                    ],
+                    [
+                      1467.0,
+                      730.0
+                    ],
+                    [
+                      1010.0,
+                      730.0
+                    ]
+                  ],
+                  "bbox": [
+                    1010.0,
+                    691.0,
+                    1467.0,
+                    730.0
+                  ],
+                  "bbox_normalized": [
+                    0.6575520833333334,
+                    0.7997685185185185,
+                    0.955078125,
+                    0.8449074074074074
+                  ]
+                },
+                {
+                  "text": "3. EVALUATE",
+                  "confidence": 0.9984,
+                  "polygon": [
+                    [
+                      361.0,
+                      736.0
+                    ],
+                    [
+                      569.0,
+                      736.0
+                    ],
+                    [
+                      569.0,
+                      776.0
+                    ],
+                    [
+                      361.0,
+                      776.0
+                    ]
+                  ],
+                  "bbox": [
+                    361.0,
+                    736.0,
+                    569.0,
+                    776.0
+                  ],
+                  "bbox_normalized": [
+                    0.23502604166666666,
+                    0.8518518518518519,
+                    0.3704427083333333,
+                    0.8981481481481481
+                  ]
+                },
+                {
+                  "text": "prompts for up to 20 turns until",
+                  "confidence": 0.9996,
+                  "polygon": [
+                    [
+                      1009.0,
+                      728.0
+                    ],
+                    [
+                      1429.0,
+                      725.0
+                    ],
+                    [
+                      1429.0,
+                      764.0
+                    ],
+                    [
+                      1009.0,
+                      767.0
+                    ]
+                  ],
+                  "bbox": [
+                    1009.0,
+                    725.0,
+                    1429.0,
+                    767.0
+                  ],
+                  "bbox_normalized": [
+                    0.6569010416666666,
+                    0.8391203703703703,
+                    0.9303385416666666,
+                    0.8877314814814815
+                  ]
+                },
+                {
+                  "text": "PASS → EXIT LOOP",
+                  "confidence": 0.97032,
+                  "polygon": [
+                    [
+                      637.0,
+                      764.0
+                    ],
+                    [
+                      907.0,
+                      764.0
+                    ],
+                    [
+                      907.0,
+                      800.0
+                    ],
+                    [
+                      637.0,
+                      800.0
+                    ]
+                  ],
+                  "bbox": [
+                    637.0,
+                    764.0,
+                    907.0,
+                    800.0
+                  ],
+                  "bbox_normalized": [
+                    0.4147135416666667,
+                    0.8842592592592593,
+                    0.5904947916666666,
+                    0.9259259259259259
+                  ]
+                },
+                {
+                  "text": "constraints are fully satisfied.",
+                  "confidence": 0.99864,
+                  "polygon": [
+                    [
+                      1010.0,
+                      763.0
+                    ],
+                    [
+                      1402.0,
+                      763.0
+                    ],
+                    [
+                      1402.0,
+                      802.0
+                    ],
+                    [
+                      1010.0,
+                      802.0
+                    ]
+                  ],
+                  "bbox": [
+                    1010.0,
+                    763.0,
+                    1402.0,
+                    802.0
+                  ],
+                  "bbox_normalized": [
+                    0.6575520833333334,
+                    0.8831018518518519,
+                    0.9127604166666666,
+                    0.9282407407407407
+                  ]
+                },
+                {
+                  "text": "VS. CRITERIA",
+                  "confidence": 0.99368,
+                  "polygon": [
+                    [
+                      360.0,
+                      776.0
+                    ],
+                    [
+                      571.0,
+                      776.0
+                    ],
+                    [
+                      571.0,
+                      816.0
+                    ],
+                    [
+                      360.0,
+                      816.0
+                    ]
+                  ],
+                  "bbox": [
+                    360.0,
+                    776.0,
+                    571.0,
+                    816.0
+                  ],
+                  "bbox_normalized": [
+                    0.234375,
+                    0.8981481481481481,
+                    0.3717447916666667,
+                    0.9444444444444444
+                  ]
+                }
+              ],
+              "width": 1536,
+              "height": 864,
+              "source": "ocr",
+              "provenance": {
+                "engine": "RapidOCR",
+                "package_version": "3.9.2",
+                "runtime": "CPU ONNX Runtime",
+                "model_info": {
+                  "engine": "RapidOCR",
+                  "package_version": "3.9.2",
+                  "runtime": "CPU ONNX Runtime",
+                  "identity_status": "resolved",
+                  "model_files": [
+                    {
+                      "component": "detector",
+                      "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\PP-OCRv6_det_small.onnx",
+                      "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+                      "size_bytes": 9929594
+                    },
+                    {
+                      "component": "classifier",
+                      "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\ch_ppocr_mobile_v2.0_cls_mobile.onnx",
+                      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+                      "size_bytes": 585532
+                    },
+                    {
+                      "component": "recognizer",
+                      "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\PP-OCRv6_rec_small.onnx",
+                      "sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+                      "size_bytes": 21234383
+                    }
+                  ],
+                  "unresolved_components": [],
+                  "disabled_components": [],
+                  "model_hash_policy": "SHA-256 of actual enabled session model files on disk, cached per adapter engine; no inference. Injected or in-memory engines have unknown model identity.",
+                  "config": {
+                    "params": {
+                      "EngineConfig.onnxruntime.use_cuda": false,
+                      "EngineConfig.onnxruntime.use_dml": false
+                    },
+                    "max_side": 1536,
+                    "min_confidence": 0.5,
+                    "effective": {
+                      "Global": {
+                        "text_score": 0.5,
+                        "use_det": true,
+                        "use_cls": true,
+                        "use_rec": true,
+                        "use_preprocess_img": true,
+                        "min_side_len": 30,
+                        "max_side_len": 2000,
+                        "use_vertical_padding": true,
+                        "min_height": 30,
+                        "width_height_ratio": 8,
+                        "return_word_box": false,
+                        "return_single_char_box": false,
+                        "font_path": null,
+                        "log_level": "info",
+                        "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                      },
+                      "EngineConfig": {
+                        "onnxruntime": {
+                          "intra_op_num_threads": -1,
+                          "inter_op_num_threads": -1,
+                          "enable_cpu_mem_arena": false,
+                          "cpu_ep_cfg": {
+                            "arena_extend_strategy": "kSameAsRequested"
+                          },
+                          "use_cuda": false,
+                          "cuda_ep_cfg": {
+                            "device_id": 0,
+                            "arena_extend_strategy": "kNextPowerOfTwo",
+                            "cudnn_conv_algo_search": "EXHAUSTIVE",
+                            "do_copy_in_default_stream": true
+                          },
+                          "use_dml": false,
+                          "dml_ep_cfg": null,
+                          "use_cann": false,
+                          "cann_ep_cfg": {
+                            "device_id": 0,
+                            "arena_extend_strategy": "kNextPowerOfTwo",
+                            "npu_mem_limit": 21474836480,
+                            "op_select_impl_mode": "high_performance",
+                            "optypelist_for_implmode": "Gelu",
+                            "enable_cann_graph": true
+                          },
+                          "use_coreml": false,
+                          "coreml_ep_cfg": {
+                            "ModelFormat": "MLProgram",
+                            "MLComputeUnits": "ALL",
+                            "RequireStaticInputShapes": 0,
+                            "EnableOnSubgraphs": 0,
+                            "SpecializationStrategy": "FastPrediction",
+                            "ProfileComputePlan": 0,
+                            "AllowLowPrecisionAccumulationOnGPU": 0,
+                            "ModelCacheDirectory": "/tmp/RapidOCR"
+                          }
+                        },
+                        "openvino": {
+                          "inference_num_threads": -1,
+                          "performance_hint": null,
+                          "performance_num_requests": -1,
+                          "enable_cpu_pinning": null,
+                          "num_streams": -1,
+                          "enable_hyper_threading": null,
+                          "scheduling_core_type": null
+                        },
+                        "paddle": {
+                          "cpu_math_library_num_threads": -1,
+                          "use_npu": false,
+                          "npu_ep_cfg": {
+                            "device_id": 0,
+                            "envs": {
+                              "FLAGS_npu_jit_compile": 0,
+                              "FLAGS_use_stride_kernel": 0,
+                              "FLAGS_allocator_strategy": "auto_growth",
+                              "CUSTOM_DEVICE_BLACK_LIST": "pad3d,pad3d_grad,set_value,set_value_with_tensor",
+                              "FLAGS_npu_scale_aclnn": "True",
+                              "FLAGS_npu_split_aclnn": "True"
+                            }
+                          },
+                          "use_cuda": false,
+                          "cuda_ep_cfg": {
+                            "device_id": 0,
+                            "gpu_mem": 500
+                          }
+                        },
+                        "torch": {
+                          "use_cuda": false,
+                          "cuda_ep_cfg": {
+                            "device_id": 0
+                          },
+                          "use_npu": false,
+                          "npu_ep_cfg": {
+                            "device_id": 0
+                          },
+                          "use_mps": false
+                        },
+                        "tensorrt": {
+                          "device_id": 0,
+                          "use_fp16": true,
+                          "use_int8": false,
+                          "workspace_size": 1073741824,
+                          "cache_dir": null,
+                          "force_rebuild": false,
+                          "det_profile": {
+                            "min_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "opt_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "max_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            }
+                          },
+                          "rec_profile": {
+                            "min_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "opt_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "max_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            }
+                          },
+                          "cls_profile": {
+                            "min_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "opt_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            },
+                            "max_shape": {
+                              "unserialized_type": "omegaconf.listconfig.ListConfig"
+                            }
+                          }
+                        },
+                        "mnn": {}
+                      },
+                      "Det": {
+                        "engine_type": "onnxruntime",
+                        "lang_type": "ch",
+                        "model_type": "small",
+                        "ocr_version": "PP-OCRv6",
+                        "task_type": "det",
+                        "model_path": null,
+                        "model_dir": null,
+                        "limit_side_len": 736,
+                        "limit_type": "min",
+                        "std": {
+                          "unserialized_type": "omegaconf.listconfig.ListConfig"
+                        },
+                        "mean": {
+                          "unserialized_type": "omegaconf.listconfig.ListConfig"
+                        },
+                        "thresh": 0.3,
+                        "box_thresh": 0.5,
+                        "max_candidates": 1000,
+                        "unclip_ratio": 1.6,
+                        "use_dilation": true,
+                        "score_mode": "fast",
+                        "engine_cfg": {
+                          "intra_op_num_threads": -1,
+                          "inter_op_num_threads": -1,
+                          "enable_cpu_mem_arena": false,
+                          "cpu_ep_cfg": {
+                            "arena_extend_strategy": "kSameAsRequested"
+                          },
+                          "use_cuda": false,
+                          "cuda_ep_cfg": {
+                            "device_id": 0,
+                            "arena_extend_strategy": "kNextPowerOfTwo",
+                            "cudnn_conv_algo_search": "EXHAUSTIVE",
+                            "do_copy_in_default_stream": true
+                          },
+                          "use_dml": false,
+                          "dml_ep_cfg": null,
+                          "use_cann": false,
+                          "cann_ep_cfg": {
+                            "device_id": 0,
+                            "arena_extend_strategy": "kNextPowerOfTwo",
+                            "npu_mem_limit": 21474836480,
+                            "op_select_impl_mode": "high_performance",
+                            "optypelist_for_implmode": "Gelu",
+                            "enable_cann_graph": true
+                          },
+                          "use_coreml": false,
+                          "coreml_ep_cfg": {
+                            "ModelFormat": "MLProgram",
+                            "MLComputeUnits": "ALL",
+                            "RequireStaticInputShapes": 0,
+                            "EnableOnSubgraphs": 0,
+                            "SpecializationStrategy": "FastPrediction",
+                            "ProfileComputePlan": 0,
+                            "AllowLowPrecisionAccumulationOnGPU": 0,
+                            "ModelCacheDirectory": "/tmp/RapidOCR"
+                          }
+                        },
+                        "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                      },
+                      "Cls": {
+                        "engine_type": "onnxruntime",
+                        "lang_type": "ch",
+                        "model_type": "mobile",
+                        "ocr_version": "PP-OCRv4",
+                        "task_type": "cls",
+                        "model_path": null,
+                        "model_dir": null,
+                        "cls_image_shape": {
+                          "unserialized_type": "omegaconf.listconfig.ListConfig"
+                        },
+                        "cls_batch_num": 6,
+                        "cls_thresh": 0.9,
+                        "label_list": {
+                          "unserialized_type": "omegaconf.listconfig.ListConfig"
+                        },
+                        "engine_cfg": {
+                          "intra_op_num_threads": -1,
+                          "inter_op_num_threads": -1,
+                          "enable_cpu_mem_arena": false,
+                          "cpu_ep_cfg": {
+                            "arena_extend_strategy": "kSameAsRequested"
+                          },
+                          "use_cuda": false,
+                          "cuda_ep_cfg": {
+                            "device_id": 0,
+                            "arena_extend_strategy": "kNextPowerOfTwo",
+                            "cudnn_conv_algo_search": "EXHAUSTIVE",
+                            "do_copy_in_default_stream": true
+                          },
+                          "use_dml": false,
+                          "dml_ep_cfg": null,
+                          "use_cann": false,
+                          "cann_ep_cfg": {
+                            "device_id": 0,
+                            "arena_extend_strategy": "kNextPowerOfTwo",
+                            "npu_mem_limit": 21474836480,
+                            "op_select_impl_mode": "high_performance",
+                            "optypelist_for_implmode": "Gelu",
+                            "enable_cann_graph": true
+                          },
+                          "use_coreml": false,
+                          "coreml_ep_cfg": {
+                            "ModelFormat": "MLProgram",
+                            "MLComputeUnits": "ALL",
+                            "RequireStaticInputShapes": 0,
+                            "EnableOnSubgraphs": 0,
+                            "SpecializationStrategy": "FastPrediction",
+                            "ProfileComputePlan": 0,
+                            "AllowLowPrecisionAccumulationOnGPU": 0,
+                            "ModelCacheDirectory": "/tmp/RapidOCR"
+                          }
+                        },
+                        "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                      },
+                      "Rec": {
+                        "engine_type": "onnxruntime",
+                        "lang_type": "ch",
+                        "model_type": "small",
+                        "ocr_version": "PP-OCRv6",
+                        "task_type": "rec",
+                        "model_path": null,
+                        "model_dir": null,
+                        "rec_keys_path": null,
+                        "rec_img_shape": {
+                          "unserialized_type": "omegaconf.listconfig.ListConfig"
+                        },
+                        "rec_batch_num": 6,
+                        "engine_cfg": {
+                          "intra_op_num_threads": -1,
+                          "inter_op_num_threads": -1,
+                          "enable_cpu_mem_arena": false,
+                          "cpu_ep_cfg": {
+                            "arena_extend_strategy": "kSameAsRequested"
+                          },
+                          "use_cuda": false,
+                          "cuda_ep_cfg": {
+                            "device_id": 0,
+                            "arena_extend_strategy": "kNextPowerOfTwo",
+                            "cudnn_conv_algo_search": "EXHAUSTIVE",
+                            "do_copy_in_default_stream": true
+                          },
+                          "use_dml": false,
+                          "dml_ep_cfg": null,
+                          "use_cann": false,
+                          "cann_ep_cfg": {
+                            "device_id": 0,
+                            "arena_extend_strategy": "kNextPowerOfTwo",
+                            "npu_mem_limit": 21474836480,
+                            "op_select_impl_mode": "high_performance",
+                            "optypelist_for_implmode": "Gelu",
+                            "enable_cann_graph": true
+                          },
+                          "use_coreml": false,
+                          "coreml_ep_cfg": {
+                            "ModelFormat": "MLProgram",
+                            "MLComputeUnits": "ALL",
+                            "RequireStaticInputShapes": 0,
+                            "EnableOnSubgraphs": 0,
+                            "SpecializationStrategy": "FastPrediction",
+                            "ProfileComputePlan": 0,
+                            "AllowLowPrecisionAccumulationOnGPU": 0,
+                            "ModelCacheDirectory": "/tmp/RapidOCR"
+                          }
+                        },
+                        "font_path": null,
+                        "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                      }
+                    }
+                  },
+                  "config_sha256": "73e31c01e93f73a026d964bbd58a7ae63126758d7d230b70f8dde27cc26b3401"
+                },
+                "image_sha256": "1512839424a02395364dd8e1f1dccdd5a4d419d5353f6e07eada4d6b179853b1",
+                "original_size": [
+                  1536,
+                  864
+                ],
+                "processed_size": [
+                  1536,
+                  864
+                ],
+                "min_confidence": 0.5,
+                "evidence_kind": "sampled_frame_screen_text",
+                "warning": "OCR may misread text; this observation does not establish text duration."
+              }
+            }
+          ],
+          "modality": "visual",
+          "coverage": "nearest_target_frame",
+          "cache_hit": false,
+          "decoder": "pyav_pts",
+          "decoder_frames_decoded": 130,
+          "requested_timestamp": 610.0,
+          "target_frame_timestamp": 610.0094,
+          "target_frame_verified": true,
+          "target_time_error_seconds": 0.00940000000002783,
+          "evidence_id": "E001"
+        },
+        "latency_seconds": 8.012
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "start": 609.5,
+        "end": 610.5,
+        "transcript": "",
+        "transcript_segments": [],
+        "transcript_truncated": false,
+        "visual_observation": "At 10 minutes 10 seconds, the slide displays a diagram titled \"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL.\" The diagram shows a circular process with four numbered steps: 1. TRIGGER /GOAL, 2. SPAWN SUB-AGENTS, 3. EVALUATE VS. CRITERIA, and 4. FAIL → RETRY. The mechanism is to establish a standard for 'Done' and loop until verified. The example constraints are: must contain 5 peer-reviewed sources and total output must be <500 words. The execution strategy involves an orchestrator acting as an unyielding judge, issuing repair prompts up to 20 times until constraints are satisfied.",
+        "sampled_timestamps": [
+          610.0094
+        ],
+        "ocr": [
+          {
+            "id": "frame_610.009400_1512839424a0",
+            "frame_id": "frame_610.009400_1512839424a0",
+            "timestamp": 610.0094,
+            "text": "GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL\n1. TRIGGER\nTHE MECHANISM\n/GOAL\nEstablish a standing standard for 'Done'.\nThe system loops autonomously until\nverified.\nEXAMPLE CONSTRAINTS:\n2.SPAWN\nFAIL →RETRY\n- Must contain 5 peer-reviewed sources\nSUB-AGENTS\n- Total output must be <500 words\nEXECUTION STRATEGY\nThe orchestrator acts as an unyielding\njudge, automatically issuing repair\n3. EVALUATE\nprompts for up to 20 turns until\nPASS → EXIT LOOP\nconstraints are fully satisfied.\nVS. CRITERIA",
+            "lines": [
+              {
+                "text": "GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL",
+                "confidence": 0.9881,
+                "polygon": [
+                  [
+                    40.0,
+                    71.0
+                  ],
+                  [
+                    1511.0,
+                    71.0
+                  ],
+                  [
+                    1511.0,
+                    136.0
+                  ],
+                  [
+                    40.0,
+                    136.0
+                  ]
+                ],
+                "bbox": [
+                  40.0,
+                  71.0,
+                  1511.0,
+                  136.0
+                ],
+                "bbox_normalized": [
+                  0.026041666666666668,
+                  0.08217592592592593,
+                  0.9837239583333334,
+                  0.1574074074074074
+                ]
+              },
+              {
+                "text": "1. TRIGGER",
+                "confidence": 0.98713,
+                "polygon": [
+                  [
+                    377.0,
+                    209.0
+                  ],
+                  [
+                    554.0,
+                    209.0
+                  ],
+                  [
+                    554.0,
+                    249.0
+                  ],
+                  [
+                    377.0,
+                    249.0
+                  ]
+                ],
+                "bbox": [
+                  377.0,
+                  209.0,
+                  554.0,
+                  249.0
+                ],
+                "bbox_normalized": [
+                  0.24544270833333334,
+                  0.24189814814814814,
+                  0.3606770833333333,
+                  0.2881944444444444
+                ]
+              },
+              {
+                "text": "THE MECHANISM",
+                "confidence": 0.9995,
+                "polygon": [
+                  [
+                    1002.0,
+                    213.0
+                  ],
+                  [
+                    1297.0,
+                    213.0
+                  ],
+                  [
+                    1297.0,
+                    253.0
+                  ],
+                  [
+                    1002.0,
+                    253.0
+                  ]
+                ],
+                "bbox": [
+                  1002.0,
+                  213.0,
+                  1297.0,
+                  253.0
+                ],
+                "bbox_normalized": [
+                  0.65234375,
+                  0.2465277777777778,
+                  0.8444010416666666,
+                  0.29282407407407407
+                ]
+              },
+              {
+                "text": "/GOAL",
+                "confidence": 0.99815,
+                "polygon": [
+                  [
+                    410.0,
+                    248.0
+                  ],
+                  [
+                    518.0,
+                    248.0
+                  ],
+                  [
+                    518.0,
+                    291.0
+                  ],
+                  [
+                    410.0,
+                    291.0
+                  ]
+                ],
+                "bbox": [
+                  410.0,
+                  248.0,
+                  518.0,
+                  291.0
+                ],
+                "bbox_normalized": [
+                  0.2669270833333333,
+                  0.28703703703703703,
+                  0.3372395833333333,
+                  0.3368055555555556
+                ]
+              },
+              {
+                "text": "Establish a standing standard for 'Done'.",
+                "confidence": 0.98126,
+                "polygon": [
+                  [
+                    1001.0,
+                    268.0
+                  ],
+                  [
+                    1503.0,
+                    268.0
+                  ],
+                  [
+                    1503.0,
+                    304.0
+                  ],
+                  [
+                    1001.0,
+                    304.0
+                  ]
+                ],
+                "bbox": [
+                  1001.0,
+                  268.0,
+                  1503.0,
+                  304.0
+                ],
+                "bbox_normalized": [
+                  0.6516927083333334,
+                  0.3101851851851852,
+                  0.978515625,
+                  0.35185185185185186
+                ]
+              },
+              {
+                "text": "The system loops autonomously until",
+                "confidence": 0.99457,
+                "polygon": [
+                  [
+                    1000.0,
+                    302.0
+                  ],
+                  [
+                    1472.0,
+                    304.0
+                  ],
+                  [
+                    1472.0,
+                    344.0
+                  ],
+                  [
+                    1000.0,
+                    342.0
+                  ]
+                ],
+                "bbox": [
+                  1000.0,
+                  302.0,
+                  1472.0,
+                  344.0
+                ],
+                "bbox_normalized": [
+                  0.6510416666666666,
+                  0.34953703703703703,
+                  0.9583333333333334,
+                  0.39814814814814814
+                ]
+              },
+              {
+                "text": "verified.",
+                "confidence": 0.99983,
+                "polygon": [
+                  [
+                    999.0,
+                    338.0
+                  ],
+                  [
+                    1106.0,
+                    338.0
+                  ],
+                  [
+                    1106.0,
+                    376.0
+                  ],
+                  [
+                    999.0,
+                    376.0
+                  ]
+                ],
+                "bbox": [
+                  999.0,
+                  338.0,
+                  1106.0,
+                  376.0
+                ],
+                "bbox_normalized": [
+                  0.650390625,
+                  0.3912037037037037,
+                  0.7200520833333334,
+                  0.4351851851851852
+                ]
+              },
+              {
+                "text": "EXAMPLE CONSTRAINTS:",
+                "confidence": 0.99967,
+                "polygon": [
+                  [
+                    1003.0,
+                    422.0
+                  ],
+                  [
+                    1434.0,
+                    422.0
+                  ],
+                  [
+                    1434.0,
+                    462.0
+                  ],
+                  [
+                    1003.0,
+                    462.0
+                  ]
+                ],
+                "bbox": [
+                  1003.0,
+                  422.0,
+                  1434.0,
+                  462.0
+                ],
+                "bbox_normalized": [
+                  0.6529947916666666,
+                  0.48842592592592593,
+                  0.93359375,
+                  0.5347222222222222
+                ]
+              },
+              {
+                "text": "2.SPAWN",
+                "confidence": 0.99998,
+                "polygon": [
+                  [
+                    664.0,
+                    457.0
+                  ],
+                  [
+                    821.0,
+                    457.0
+                  ],
+                  [
+                    821.0,
+                    495.0
+                  ],
+                  [
+                    664.0,
+                    495.0
+                  ]
+                ],
+                "bbox": [
+                  664.0,
+                  457.0,
+                  821.0,
+                  495.0
+                ],
+                "bbox_normalized": [
+                  0.4322916666666667,
+                  0.5289351851851852,
+                  0.5345052083333334,
+                  0.5729166666666666
+                ]
+              },
+              {
+                "text": "FAIL →RETRY",
+                "confidence": 0.98043,
+                "polygon": [
+                  [
+                    70.0,
+                    476.0
+                  ],
+                  [
+                    288.0,
+                    476.0
+                  ],
+                  [
+                    288.0,
+                    516.0
+                  ],
+                  [
+                    70.0,
+                    516.0
+                  ]
+                ],
+                "bbox": [
+                  70.0,
+                  476.0,
+                  288.0,
+                  516.0
+                ],
+                "bbox_normalized": [
+                  0.045572916666666664,
+                  0.5509259259259259,
+                  0.1875,
+                  0.5972222222222222
+                ]
+              },
+              {
+                "text": "- Must contain 5 peer-reviewed sources",
+                "confidence": 0.98927,
+                "polygon": [
+                  [
+                    1012.0,
+                    475.0
+                  ],
+                  [
+                    1518.0,
+                    475.0
+                  ],
+                  [
+                    1518.0,
+                    511.0
+                  ],
+                  [
+                    1012.0,
+                    511.0
+                  ]
+                ],
+                "bbox": [
+                  1012.0,
+                  475.0,
+                  1518.0,
+                  511.0
+                ],
+                "bbox_normalized": [
+                  0.6588541666666666,
+                  0.5497685185185185,
+                  0.98828125,
+                  0.5914351851851852
+                ]
+              },
+              {
+                "text": "SUB-AGENTS",
+                "confidence": 0.99993,
+                "polygon": [
+                  [
+                    638.0,
+                    496.0
+                  ],
+                  [
+                    847.0,
+                    496.0
+                  ],
+                  [
+                    847.0,
+                    536.0
+                  ],
+                  [
+                    638.0,
+                    536.0
+                  ]
+                ],
+                "bbox": [
+                  638.0,
+                  496.0,
+                  847.0,
+                  536.0
+                ],
+                "bbox_normalized": [
+                  0.4153645833333333,
+                  0.5740740740740741,
+                  0.5514322916666666,
+                  0.6203703703703703
+                ]
+              },
+              {
+                "text": "- Total output must be <500 words",
+                "confidence": 0.99241,
+                "polygon": [
+                  [
+                    1012.0,
+                    509.0
+                  ],
+                  [
+                    1457.0,
+                    509.0
+                  ],
+                  [
+                    1457.0,
+                    548.0
+                  ],
+                  [
+                    1012.0,
+                    548.0
+                  ]
+                ],
+                "bbox": [
+                  1012.0,
+                  509.0,
+                  1457.0,
+                  548.0
+                ],
+                "bbox_normalized": [
+                  0.6588541666666666,
+                  0.5891203703703703,
+                  0.9485677083333334,
+                  0.6342592592592593
+                ]
+              },
+              {
+                "text": "EXECUTION STRATEGY",
+                "confidence": 0.99975,
+                "polygon": [
+                  [
+                    1011.0,
+                    601.0
+                  ],
+                  [
+                    1397.0,
+                    601.0
+                  ],
+                  [
+                    1397.0,
+                    641.0
+                  ],
+                  [
+                    1011.0,
+                    641.0
+                  ]
+                ],
+                "bbox": [
+                  1011.0,
+                  601.0,
+                  1397.0,
+                  641.0
+                ],
+                "bbox_normalized": [
+                  0.658203125,
+                  0.6956018518518519,
+                  0.9095052083333334,
+                  0.7418981481481481
+                ]
+              },
+              {
+                "text": "The orchestrator acts as an unyielding",
+                "confidence": 0.99361,
+                "polygon": [
+                  [
+                    1009.0,
+                    651.0
+                  ],
+                  [
+                    1512.0,
+                    655.0
+                  ],
+                  [
+                    1512.0,
+                    695.0
+                  ],
+                  [
+                    1009.0,
+                    691.0
+                  ]
+                ],
+                "bbox": [
+                  1009.0,
+                  651.0,
+                  1512.0,
+                  695.0
+                ],
+                "bbox_normalized": [
+                  0.6569010416666666,
+                  0.7534722222222222,
+                  0.984375,
+                  0.8043981481481481
+                ]
+              },
+              {
+                "text": "judge, automatically issuing repair",
+                "confidence": 0.99188,
+                "polygon": [
+                  [
+                    1010.0,
+                    691.0
+                  ],
+                  [
+                    1467.0,
+                    691.0
+                  ],
+                  [
+                    1467.0,
+                    730.0
+                  ],
+                  [
+                    1010.0,
+                    730.0
+                  ]
+                ],
+                "bbox": [
+                  1010.0,
+                  691.0,
+                  1467.0,
+                  730.0
+                ],
+                "bbox_normalized": [
+                  0.6575520833333334,
+                  0.7997685185185185,
+                  0.955078125,
+                  0.8449074074074074
+                ]
+              },
+              {
+                "text": "3. EVALUATE",
+                "confidence": 0.9984,
+                "polygon": [
+                  [
+                    361.0,
+                    736.0
+                  ],
+                  [
+                    569.0,
+                    736.0
+                  ],
+                  [
+                    569.0,
+                    776.0
+                  ],
+                  [
+                    361.0,
+                    776.0
+                  ]
+                ],
+                "bbox": [
+                  361.0,
+                  736.0,
+                  569.0,
+                  776.0
+                ],
+                "bbox_normalized": [
+                  0.23502604166666666,
+                  0.8518518518518519,
+                  0.3704427083333333,
+                  0.8981481481481481
+                ]
+              },
+              {
+                "text": "prompts for up to 20 turns until",
+                "confidence": 0.9996,
+                "polygon": [
+                  [
+                    1009.0,
+                    728.0
+                  ],
+                  [
+                    1429.0,
+                    725.0
+                  ],
+                  [
+                    1429.0,
+                    764.0
+                  ],
+                  [
+                    1009.0,
+                    767.0
+                  ]
+                ],
+                "bbox": [
+                  1009.0,
+                  725.0,
+                  1429.0,
+                  767.0
+                ],
+                "bbox_normalized": [
+                  0.6569010416666666,
+                  0.8391203703703703,
+                  0.9303385416666666,
+                  0.8877314814814815
+                ]
+              },
+              {
+                "text": "PASS → EXIT LOOP",
+                "confidence": 0.97032,
+                "polygon": [
+                  [
+                    637.0,
+                    764.0
+                  ],
+                  [
+                    907.0,
+                    764.0
+                  ],
+                  [
+                    907.0,
+                    800.0
+                  ],
+                  [
+                    637.0,
+                    800.0
+                  ]
+                ],
+                "bbox": [
+                  637.0,
+                  764.0,
+                  907.0,
+                  800.0
+                ],
+                "bbox_normalized": [
+                  0.4147135416666667,
+                  0.8842592592592593,
+                  0.5904947916666666,
+                  0.9259259259259259
+                ]
+              },
+              {
+                "text": "constraints are fully satisfied.",
+                "confidence": 0.99864,
+                "polygon": [
+                  [
+                    1010.0,
+                    763.0
+                  ],
+                  [
+                    1402.0,
+                    763.0
+                  ],
+                  [
+                    1402.0,
+                    802.0
+                  ],
+                  [
+                    1010.0,
+                    802.0
+                  ]
+                ],
+                "bbox": [
+                  1010.0,
+                  763.0,
+                  1402.0,
+                  802.0
+                ],
+                "bbox_normalized": [
+                  0.6575520833333334,
+                  0.8831018518518519,
+                  0.9127604166666666,
+                  0.9282407407407407
+                ]
+              },
+              {
+                "text": "VS. CRITERIA",
+                "confidence": 0.99368,
+                "polygon": [
+                  [
+                    360.0,
+                    776.0
+                  ],
+                  [
+                    571.0,
+                    776.0
+                  ],
+                  [
+                    571.0,
+                    816.0
+                  ],
+                  [
+                    360.0,
+                    816.0
+                  ]
+                ],
+                "bbox": [
+                  360.0,
+                  776.0,
+                  571.0,
+                  816.0
+                ],
+                "bbox_normalized": [
+                  0.234375,
+                  0.8981481481481481,
+                  0.3717447916666667,
+                  0.9444444444444444
+                ]
+              }
+            ],
+            "width": 1536,
+            "height": 864,
+            "source": "ocr",
+            "provenance": {
+              "engine": "RapidOCR",
+              "package_version": "3.9.2",
+              "runtime": "CPU ONNX Runtime",
+              "model_info": {
+                "engine": "RapidOCR",
+                "package_version": "3.9.2",
+                "runtime": "CPU ONNX Runtime",
+                "identity_status": "resolved",
+                "model_files": [
+                  {
+                    "component": "detector",
+                    "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\PP-OCRv6_det_small.onnx",
+                    "sha256": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+                    "size_bytes": 9929594
+                  },
+                  {
+                    "component": "classifier",
+                    "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\ch_ppocr_mobile_v2.0_cls_mobile.onnx",
+                    "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+                    "size_bytes": 585532
+                  },
+                  {
+                    "component": "recognizer",
+                    "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models\\PP-OCRv6_rec_small.onnx",
+                    "sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+                    "size_bytes": 21234383
+                  }
+                ],
+                "unresolved_components": [],
+                "disabled_components": [],
+                "model_hash_policy": "SHA-256 of actual enabled session model files on disk, cached per adapter engine; no inference. Injected or in-memory engines have unknown model identity.",
+                "config": {
+                  "params": {
+                    "EngineConfig.onnxruntime.use_cuda": false,
+                    "EngineConfig.onnxruntime.use_dml": false
+                  },
+                  "max_side": 1536,
+                  "min_confidence": 0.5,
+                  "effective": {
+                    "Global": {
+                      "text_score": 0.5,
+                      "use_det": true,
+                      "use_cls": true,
+                      "use_rec": true,
+                      "use_preprocess_img": true,
+                      "min_side_len": 30,
+                      "max_side_len": 2000,
+                      "use_vertical_padding": true,
+                      "min_height": 30,
+                      "width_height_ratio": 8,
+                      "return_word_box": false,
+                      "return_single_char_box": false,
+                      "font_path": null,
+                      "log_level": "info",
+                      "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                    },
+                    "EngineConfig": {
+                      "onnxruntime": {
+                        "intra_op_num_threads": -1,
+                        "inter_op_num_threads": -1,
+                        "enable_cpu_mem_arena": false,
+                        "cpu_ep_cfg": {
+                          "arena_extend_strategy": "kSameAsRequested"
+                        },
+                        "use_cuda": false,
+                        "cuda_ep_cfg": {
+                          "device_id": 0,
+                          "arena_extend_strategy": "kNextPowerOfTwo",
+                          "cudnn_conv_algo_search": "EXHAUSTIVE",
+                          "do_copy_in_default_stream": true
+                        },
+                        "use_dml": false,
+                        "dml_ep_cfg": null,
+                        "use_cann": false,
+                        "cann_ep_cfg": {
+                          "device_id": 0,
+                          "arena_extend_strategy": "kNextPowerOfTwo",
+                          "npu_mem_limit": 21474836480,
+                          "op_select_impl_mode": "high_performance",
+                          "optypelist_for_implmode": "Gelu",
+                          "enable_cann_graph": true
+                        },
+                        "use_coreml": false,
+                        "coreml_ep_cfg": {
+                          "ModelFormat": "MLProgram",
+                          "MLComputeUnits": "ALL",
+                          "RequireStaticInputShapes": 0,
+                          "EnableOnSubgraphs": 0,
+                          "SpecializationStrategy": "FastPrediction",
+                          "ProfileComputePlan": 0,
+                          "AllowLowPrecisionAccumulationOnGPU": 0,
+                          "ModelCacheDirectory": "/tmp/RapidOCR"
+                        }
+                      },
+                      "openvino": {
+                        "inference_num_threads": -1,
+                        "performance_hint": null,
+                        "performance_num_requests": -1,
+                        "enable_cpu_pinning": null,
+                        "num_streams": -1,
+                        "enable_hyper_threading": null,
+                        "scheduling_core_type": null
+                      },
+                      "paddle": {
+                        "cpu_math_library_num_threads": -1,
+                        "use_npu": false,
+                        "npu_ep_cfg": {
+                          "device_id": 0,
+                          "envs": {
+                            "FLAGS_npu_jit_compile": 0,
+                            "FLAGS_use_stride_kernel": 0,
+                            "FLAGS_allocator_strategy": "auto_growth",
+                            "CUSTOM_DEVICE_BLACK_LIST": "pad3d,pad3d_grad,set_value,set_value_with_tensor",
+                            "FLAGS_npu_scale_aclnn": "True",
+                            "FLAGS_npu_split_aclnn": "True"
+                          }
+                        },
+                        "use_cuda": false,
+                        "cuda_ep_cfg": {
+                          "device_id": 0,
+                          "gpu_mem": 500
+                        }
+                      },
+                      "torch": {
+                        "use_cuda": false,
+                        "cuda_ep_cfg": {
+                          "device_id": 0
+                        },
+                        "use_npu": false,
+                        "npu_ep_cfg": {
+                          "device_id": 0
+                        },
+                        "use_mps": false
+                      },
+                      "tensorrt": {
+                        "device_id": 0,
+                        "use_fp16": true,
+                        "use_int8": false,
+                        "workspace_size": 1073741824,
+                        "cache_dir": null,
+                        "force_rebuild": false,
+                        "det_profile": {
+                          "min_shape": {
+                            "unserialized_type": "omegaconf.listconfig.ListConfig"
+                          },
+                          "opt_shape": {
+                            "unserialized_type": "omegaconf.listconfig.ListConfig"
+                          },
+                          "max_shape": {
+                            "unserialized_type": "omegaconf.listconfig.ListConfig"
+                          }
+                        },
+                        "rec_profile": {
+                          "min_shape": {
+                            "unserialized_type": "omegaconf.listconfig.ListConfig"
+                          },
+                          "opt_shape": {
+                            "unserialized_type": "omegaconf.listconfig.ListConfig"
+                          },
+                          "max_shape": {
+                            "unserialized_type": "omegaconf.listconfig.ListConfig"
+                          }
+                        },
+                        "cls_profile": {
+                          "min_shape": {
+                            "unserialized_type": "omegaconf.listconfig.ListConfig"
+                          },
+                          "opt_shape": {
+                            "unserialized_type": "omegaconf.listconfig.ListConfig"
+                          },
+                          "max_shape": {
+                            "unserialized_type": "omegaconf.listconfig.ListConfig"
+                          }
+                        }
+                      },
+                      "mnn": {}
+                    },
+                    "Det": {
+                      "engine_type": "onnxruntime",
+                      "lang_type": "ch",
+                      "model_type": "small",
+                      "ocr_version": "PP-OCRv6",
+                      "task_type": "det",
+                      "model_path": null,
+                      "model_dir": null,
+                      "limit_side_len": 736,
+                      "limit_type": "min",
+                      "std": {
+                        "unserialized_type": "omegaconf.listconfig.ListConfig"
+                      },
+                      "mean": {
+                        "unserialized_type": "omegaconf.listconfig.ListConfig"
+                      },
+                      "thresh": 0.3,
+                      "box_thresh": 0.5,
+                      "max_candidates": 1000,
+                      "unclip_ratio": 1.6,
+                      "use_dilation": true,
+                      "score_mode": "fast",
+                      "engine_cfg": {
+                        "intra_op_num_threads": -1,
+                        "inter_op_num_threads": -1,
+                        "enable_cpu_mem_arena": false,
+                        "cpu_ep_cfg": {
+                          "arena_extend_strategy": "kSameAsRequested"
+                        },
+                        "use_cuda": false,
+                        "cuda_ep_cfg": {
+                          "device_id": 0,
+                          "arena_extend_strategy": "kNextPowerOfTwo",
+                          "cudnn_conv_algo_search": "EXHAUSTIVE",
+                          "do_copy_in_default_stream": true
+                        },
+                        "use_dml": false,
+                        "dml_ep_cfg": null,
+                        "use_cann": false,
+                        "cann_ep_cfg": {
+                          "device_id": 0,
+                          "arena_extend_strategy": "kNextPowerOfTwo",
+                          "npu_mem_limit": 21474836480,
+                          "op_select_impl_mode": "high_performance",
+                          "optypelist_for_implmode": "Gelu",
+                          "enable_cann_graph": true
+                        },
+                        "use_coreml": false,
+                        "coreml_ep_cfg": {
+                          "ModelFormat": "MLProgram",
+                          "MLComputeUnits": "ALL",
+                          "RequireStaticInputShapes": 0,
+                          "EnableOnSubgraphs": 0,
+                          "SpecializationStrategy": "FastPrediction",
+                          "ProfileComputePlan": 0,
+                          "AllowLowPrecisionAccumulationOnGPU": 0,
+                          "ModelCacheDirectory": "/tmp/RapidOCR"
+                        }
+                      },
+                      "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                    },
+                    "Cls": {
+                      "engine_type": "onnxruntime",
+                      "lang_type": "ch",
+                      "model_type": "mobile",
+                      "ocr_version": "PP-OCRv4",
+                      "task_type": "cls",
+                      "model_path": null,
+                      "model_dir": null,
+                      "cls_image_shape": {
+                        "unserialized_type": "omegaconf.listconfig.ListConfig"
+                      },
+                      "cls_batch_num": 6,
+                      "cls_thresh": 0.9,
+                      "label_list": {
+                        "unserialized_type": "omegaconf.listconfig.ListConfig"
+                      },
+                      "engine_cfg": {
+                        "intra_op_num_threads": -1,
+                        "inter_op_num_threads": -1,
+                        "enable_cpu_mem_arena": false,
+                        "cpu_ep_cfg": {
+                          "arena_extend_strategy": "kSameAsRequested"
+                        },
+                        "use_cuda": false,
+                        "cuda_ep_cfg": {
+                          "device_id": 0,
+                          "arena_extend_strategy": "kNextPowerOfTwo",
+                          "cudnn_conv_algo_search": "EXHAUSTIVE",
+                          "do_copy_in_default_stream": true
+                        },
+                        "use_dml": false,
+                        "dml_ep_cfg": null,
+                        "use_cann": false,
+                        "cann_ep_cfg": {
+                          "device_id": 0,
+                          "arena_extend_strategy": "kNextPowerOfTwo",
+                          "npu_mem_limit": 21474836480,
+                          "op_select_impl_mode": "high_performance",
+                          "optypelist_for_implmode": "Gelu",
+                          "enable_cann_graph": true
+                        },
+                        "use_coreml": false,
+                        "coreml_ep_cfg": {
+                          "ModelFormat": "MLProgram",
+                          "MLComputeUnits": "ALL",
+                          "RequireStaticInputShapes": 0,
+                          "EnableOnSubgraphs": 0,
+                          "SpecializationStrategy": "FastPrediction",
+                          "ProfileComputePlan": 0,
+                          "AllowLowPrecisionAccumulationOnGPU": 0,
+                          "ModelCacheDirectory": "/tmp/RapidOCR"
+                        }
+                      },
+                      "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                    },
+                    "Rec": {
+                      "engine_type": "onnxruntime",
+                      "lang_type": "ch",
+                      "model_type": "small",
+                      "ocr_version": "PP-OCRv6",
+                      "task_type": "rec",
+                      "model_path": null,
+                      "model_dir": null,
+                      "rec_keys_path": null,
+                      "rec_img_shape": {
+                        "unserialized_type": "omegaconf.listconfig.ListConfig"
+                      },
+                      "rec_batch_num": 6,
+                      "engine_cfg": {
+                        "intra_op_num_threads": -1,
+                        "inter_op_num_threads": -1,
+                        "enable_cpu_mem_arena": false,
+                        "cpu_ep_cfg": {
+                          "arena_extend_strategy": "kSameAsRequested"
+                        },
+                        "use_cuda": false,
+                        "cuda_ep_cfg": {
+                          "device_id": 0,
+                          "arena_extend_strategy": "kNextPowerOfTwo",
+                          "cudnn_conv_algo_search": "EXHAUSTIVE",
+                          "do_copy_in_default_stream": true
+                        },
+                        "use_dml": false,
+                        "dml_ep_cfg": null,
+                        "use_cann": false,
+                        "cann_ep_cfg": {
+                          "device_id": 0,
+                          "arena_extend_strategy": "kNextPowerOfTwo",
+                          "npu_mem_limit": 21474836480,
+                          "op_select_impl_mode": "high_performance",
+                          "optypelist_for_implmode": "Gelu",
+                          "enable_cann_graph": true
+                        },
+                        "use_coreml": false,
+                        "coreml_ep_cfg": {
+                          "ModelFormat": "MLProgram",
+                          "MLComputeUnits": "ALL",
+                          "RequireStaticInputShapes": 0,
+                          "EnableOnSubgraphs": 0,
+                          "SpecializationStrategy": "FastPrediction",
+                          "ProfileComputePlan": 0,
+                          "AllowLowPrecisionAccumulationOnGPU": 0,
+                          "ModelCacheDirectory": "/tmp/RapidOCR"
+                        }
+                      },
+                      "font_path": null,
+                      "model_root_dir": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.runtime-packages\\rapidocr\\models"
+                    }
+                  }
+                },
+                "config_sha256": "73e31c01e93f73a026d964bbd58a7ae63126758d7d230b70f8dde27cc26b3401"
+              },
+              "image_sha256": "1512839424a02395364dd8e1f1dccdd5a4d419d5353f6e07eada4d6b179853b1",
+              "original_size": [
+                1536,
+                864
+              ],
+              "processed_size": [
+                1536,
+                864
+              ],
+              "min_confidence": 0.5,
+              "evidence_kind": "sampled_frame_screen_text",
+              "warning": "OCR may misread text; this observation does not establish text duration."
+            }
+          }
+        ],
+        "modality": "visual",
+        "coverage": "nearest_target_frame",
+        "cache_hit": false,
+        "decoder": "pyav_pts",
+        "decoder_frames_decoded": 130,
+        "requested_timestamp": 610.0,
+        "target_frame_timestamp": 610.0094,
+        "target_frame_verified": true,
+        "target_time_error_seconds": 0.00940000000002783,
+        "evidence_id": "E001"
+      }
+    },
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"lookup\",\"modality\":\"visual\",\"queries\":[\"what was on the slide at 10 minutes 10 seconds\",\"title of the slide\",\"numbered steps and outcome branches on the slide\"],\"requirements\":[\"the slide content at 10 minutes 10 seconds\"],\"event_query\":null}"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[{\"text\":\"At 10 minutes 10 seconds, the slide displays a diagram titled \\\"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL.\\\" The diagram shows a circular process with four numbered steps: 1. TRIGGER /GOAL, 2. SPAWN SUB-AGENTS, 3. EVALUATE VS. CRITERIA, and 4. FAIL → RETRY. The mechanism is to establish a standard for 'Done' and loop until verified. The example constraints are: must contain 5 peer-reviewed sources and total output must be <500 words. The execution strategy involves an orchestrator acting as an unyielding judge, issuing repair prompts up to 20 times until constraints are satisfied.\",\"evidence_ids\":[\"E001\"],\"requirement_ids\":[\"R1\"]}]}"
+      },
+      {
+        "role": "verifier",
+        "raw": "{\"claims\":[{\"index\":1,\"supported\":true,\"reason\":\"The visual observation at 10 minutes 10 seconds matches the claim's description of the slide. The title is 'GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL,' and the diagram shows a circular process with four numbered steps: TRIGGER /GOAL, SPAWN SUB-AGENTS, EVALUATE VS. CRITERIA, and FAIL → RETRY. The mechanism described—establishing a standard for 'Done' and looping until verified—is consistent with the diagram. The example constraints mentioned—5 peer-reviewed sources and total output <500 words—appear in the text, and the execution strategy involving an orchestrator issuing repair prompts up to 20 times is also accurately described in the observation.\"}]}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 130,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "uniform",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

@@ -1,0 +1,1306 @@
+{
+  "saved_at_utc": "2026-10-22T20:12:12.385100+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "adaptive",
+  "question_id": "v7_reason_changed_criteria",
+  "prediction_sha256": "5c879d30748f25556d7b8555503b20e46b0be520b56c407fc26e228bcfe3424b",
+  "prediction": {
+    "status": "insufficient_evidence",
+    "answer": "The available observations do not establish the requested answer.",
+    "claims": [],
+    "citations": [],
+    "requirements_covered": [],
+    "requirements_missing": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5"
+    ],
+    "finalization_route": "tool_budget",
+    "model_protocol_attempts": 0,
+    "tool_failures": [],
+    "question_contract": {
+      "basis": "question_text_only",
+      "overview": false
+    },
+    "model_protocol_failures": [],
+    "plan": {
+      "task": "reasoning",
+      "modality": "transcript",
+      "queries": [
+        "goal-loop demonstration",
+        "added requirement for peer-reviewed sources",
+        "another research step",
+        "order of steps",
+        "earlier output was not sufficient",
+        "citing both stages",
+        "how did the requirement lead to another step",
+        "explain the order and why earlier output was insufficient"
+      ],
+      "requirements": {
+        "R1": "Explain the order of steps in the goal-loop demonstration when the requirement for peer-reviewed sources was added.",
+        "R2": "Identify why the earlier output was not sufficient in addressing the added requirement.",
+        "R3": "Cite both stages of the process to support the explanation.",
+        "R4": "Preserve the four-part question structure in the answer.",
+        "R5": "Ensure the answer is grounded in the transcript content and not speculative."
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": true
+    },
+    "question_id": "v7_reason_changed_criteria",
+    "question": "In the goal-loop demonstration, how did the added requirement for peer-reviewed sources lead to another research step? Explain the order and why the earlier output was not sufficient, citing both stages.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 4,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 124.773,
+    "usage": {
+      "model_calls": 5,
+      "input_tokens": 11077,
+      "output_tokens": 296
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {},
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "fusion:441a648d16c9f8b0",
+              "start": 2460.0,
+              "end": 2520.0,
+              "text": "[caption] - **Frame 2460.024**: A dark-themed software interface for Kanban, showing a \"Default\" board with \"orchestrator\" and \"wanderloots-tutorials\" as profile descriptions. The \"Auto-decompose triage tasks\" toggle is on. A \"New task\" button is visible. The \"Multi-agent research\" task is marked as \"DONE\". The interface shows a \"Gateway ready\" status and a \"Manual\" label.\n- **Frame 2519.984**: A slide titled \"One Workflow, Two Views\" displays a workflow diagram. The \"Working\" column shows \"Independent review\" and \"Build & check\" as steps. The \"Done\" column shows \"Scope goal\" and \"Build & check export\". The \"Dependency graph\" shows \"Scope\" and \"Build & check\" as tasks. The \"Approve\" step is marked as \"Done\".\n[transcript] of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00041",
+                "T00856",
+                "T00857",
+                "T00858",
+                "T00859",
+                "T00860",
+                "T00861"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.013391925066950958,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "goal-loop demonstration",
+                  "rank": 5,
+                  "retrieval_score": 2.8136638693498663,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0019230769230769232,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "another research step",
+                  "rank": 2,
+                  "retrieval_score": 3.516257657941809,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020161290322580645,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "order of steps",
+                  "rank": 1,
+                  "retrieval_score": 2.4835546822562526,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020491803278688526,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "how did the requirement lead to another step",
+                  "rank": 3,
+                  "retrieval_score": 2.8136638693498663,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001984126984126984,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "goal-loop demonstration",
+                  "rank": 4,
+                  "retrieval_score": 3.276169717849227,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001953125,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "added requirement for peer-reviewed sources",
+                  "rank": 5,
+                  "retrieval_score": 3.012971301357221,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0019230769230769232,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "earlier output was not sufficient",
+                  "rank": 21,
+                  "retrieval_score": 1.5213156595421906,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0015432098765432098,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "goal-loop demonstration",
+                "another research step",
+                "order of steps",
+                "how did the requirement lead to another step",
+                "added requirement for peer-reviewed sources",
+                "earlier output was not sufficient"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:82",
+                  "start": 2460.0,
+                  "end": 2520.0,
+                  "text": "- **Frame 2460.024**: A dark-themed software interface for Kanban, showing a \"Default\" board with \"orchestrator\" and \"wanderloots-tutorials\" as profile descriptions. The \"Auto-decompose triage tasks\" toggle is on. A \"New task\" button is visible. The \"Multi-agent research\" task is marked as \"DONE\". The interface shows a \"Gateway ready\" status and a \"Manual\" label.\n- **Frame 2519.984**: A slide titled \"One Workflow, Two Views\" displays a workflow diagram. The \"Working\" column shows \"Independent review\" and \"Build & check\" as steps. The \"Done\" column shows \"Scope goal\" and \"Build & check export\". The \"Dependency graph\" shows \"Scope\" and \"Build & check\" as tasks. The \"Approve\" step is marked as \"Done\".",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00041"
+                  ]
+                },
+                {
+                  "id": "transcript:82",
+                  "start": 2461.79,
+                  "end": 2493.9,
+                  "text": "of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00856",
+                    "T00857",
+                    "T00858",
+                    "T00859",
+                    "T00860",
+                    "T00861"
+                  ]
+                }
+              ],
+              "selection_score": 0.9125,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "fusion:aec020ece71d190c",
+              "start": 1260.0,
+              "end": 1320.0,
+              "text": "[caption] - The first frame shows a diagram titled \"Two Loops, One Knowledge Workflow\" illustrating a research process with three main stages: Research Loop, Human Handoff, and Curation Loop. The diagram includes icons of a researcher, a librarian, and a library, with arrows showing the flow of information and tasks.\n- The second frame shows a software interface, likely a knowledge management tool, with a dark theme. The interface displays a text box with a paragraph about a \"multi-agent system\" and a \"knowledge graph.\" The text is highlighted, and the interface includes a sidebar with options like \"Projects,\" \"Home,\" and \"Wanderlots Tutorials.\" The text in the main box is about the use of a \"knowledge graph\" in a research context.\n[transcript] your existing knowledge base and prepare a draft for your review on whether or not it should make it into the library. Again, you can go through a curation loop, but this one has a human in the loop as part of the core loop itself. Once you've approved it, the librarian can then go and file this into the library. And then as a coding example, let's say you're building an app, and you want to add the ability to export to Markdown. You can hand this off to your orchestrator and explain what you're looking for, and the orchestrator can understand it and then delegate it to the implementer. The implementer can then go through a goal loop where it builds it, checks to see if",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00021",
+                "T00426",
+                "T00427",
+                "T00428",
+                "T00429",
+                "T00430",
+                "T00431",
+                "T00432"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.011254887689621372,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "goal-loop demonstration",
+                  "rank": 3,
+                  "retrieval_score": 2.9814969720165636,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001984126984126984,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "another research step",
+                  "rank": 5,
+                  "retrieval_score": 1.1969541054123212,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0019230769230769232,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "citing both stages",
+                  "rank": 3,
+                  "retrieval_score": 2.8826070070881467,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001984126984126984,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "goal-loop demonstration",
+                  "rank": 2,
+                  "retrieval_score": 4.502289665834918,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020161290322580645,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "earlier output was not sufficient",
+                  "rank": 26,
+                  "retrieval_score": 1.429883151157126,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0014534883720930232,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "explain the order and why earlier output was insufficient",
+                  "rank": 6,
+                  "retrieval_score": 3.072177607011296,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001893939393939394,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "goal-loop demonstration",
+                "another research step",
+                "citing both stages",
+                "earlier output was not sufficient",
+                "explain the order and why earlier output was insufficient"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:42",
+                  "start": 1260.0,
+                  "end": 1320.0,
+                  "text": "- The first frame shows a diagram titled \"Two Loops, One Knowledge Workflow\" illustrating a research process with three main stages: Research Loop, Human Handoff, and Curation Loop. The diagram includes icons of a researcher, a librarian, and a library, with arrows showing the flow of information and tasks.\n- The second frame shows a software interface, likely a knowledge management tool, with a dark theme. The interface displays a text box with a paragraph about a \"multi-agent system\" and a \"knowledge graph.\" The text is highlighted, and the interface includes a sidebar with options like \"Projects,\" \"Home,\" and \"Wanderlots Tutorials.\" The text in the main box is about the use of a \"knowledge graph\" in a research context.",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00021"
+                  ]
+                },
+                {
+                  "id": "transcript:42",
+                  "start": 1262.57,
+                  "end": 1293.05,
+                  "text": "your existing knowledge base and prepare a draft for your review on whether or not it should make it into the library. Again, you can go through a curation loop, but this one has a human in the loop as part of the core loop itself. Once you've approved it, the librarian can then go and file this into the library. And then as a coding example, let's say you're building an app, and you want to add the ability to export to Markdown. You can hand this off to your orchestrator and explain what you're looking for, and the orchestrator can understand it and then delegate it to the implementer. The implementer can then go through a goal loop where it builds it, checks to see if",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00426",
+                    "T00427",
+                    "T00428",
+                    "T00429",
+                    "T00430",
+                    "T00431",
+                    "T00432"
+                  ]
+                }
+              ],
+              "selection_score": 0.6337752338950705,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "fusion:8cb98e8a510fb263",
+              "start": 840.0,
+              "end": 900.0,
+              "text": "[caption] - The slide at 840.006 seconds displays the title \"Reviewing The Goal Output\" in large, yellow text on a black background.\n- The frame at 899.999 seconds shows a screenshot of a software interface, likely a knowledge management tool, with the heading \"SESSIONS\" at the top.\n- The interface includes a sidebar with options like \"New session,\" \"Capabilities,\" \"Artifacts,\" and \"Scheduled jobs.\"\n- The main content area contains a text block discussing the importance of goal output and the use of a \"goal output\" system.\n- The text mentions \"Hermes corroboration\" and \"decision test\" as key concepts in the process.\n- The interface also shows a \"GPT-3.5\" model and a \"Manual\" label, indicating the software's capabilities and settings.\n[transcript] And honestly, this did a really good job. It was able to specifically limit the report to just a couple hundred words instead of the original thousands and thousands of words that gave me off of the first one. So it wasn't just about adding that limitation at the beginning, it was framing the goal that I wanted it to go in a particular order for cross-referencing and corroborating the report, and then make sure that it was 500 words. But honestly, this example here is kind of disconnected from my actual workflow. This might be the generic best answer of when delegation beats a specialist team,",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00014",
+                "T00309",
+                "T00310",
+                "T00311",
+                "T00312",
+                "T00313",
+                "T00314",
+                "T00315",
+                "T00316",
+                "T00317",
+                "T00318",
+                "T00319",
+                "T00320",
+                "T00321",
+                "T00322"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.011756060220276685,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "goal-loop demonstration",
+                  "rank": 1,
+                  "retrieval_score": 4.74508403761955,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020491803278688526,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "earlier output was not sufficient",
+                  "rank": 1,
+                  "retrieval_score": 5.590270913492826,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020491803278688526,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "explain the order and why earlier output was insufficient",
+                  "rank": 1,
+                  "retrieval_score": 5.590270913492826,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020491803278688526,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "goal-loop demonstration",
+                  "rank": 21,
+                  "retrieval_score": 1.5544482271576454,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0015432098765432098,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "order of steps",
+                  "rank": 1,
+                  "retrieval_score": 3.6895485598263607,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020491803278688526,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "explain the order and why earlier output was insufficient",
+                  "rank": 2,
+                  "retrieval_score": 3.6895485598263607,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020161290322580645,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "goal-loop demonstration",
+                "earlier output was not sufficient",
+                "explain the order and why earlier output was insufficient",
+                "order of steps"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:28",
+                  "start": 840.0,
+                  "end": 900.0,
+                  "text": "- The slide at 840.006 seconds displays the title \"Reviewing The Goal Output\" in large, yellow text on a black background.\n- The frame at 899.999 seconds shows a screenshot of a software interface, likely a knowledge management tool, with the heading \"SESSIONS\" at the top.\n- The interface includes a sidebar with options like \"New session,\" \"Capabilities,\" \"Artifacts,\" and \"Scheduled jobs.\"\n- The main content area contains a text block discussing the importance of goal output and the use of a \"goal output\" system.\n- The text mentions \"Hermes corroboration\" and \"decision test\" as key concepts in the process.\n- The interface also shows a \"GPT-3.5\" model and a \"Manual\" label, indicating the software's capabilities and settings.",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00014"
+                  ]
+                },
+                {
+                  "id": "transcript:28",
+                  "start": 840.47,
+                  "end": 871.99,
+                  "text": "And honestly, this did a really good job. It was able to specifically limit the report to just a couple hundred words instead of the original thousands and thousands of words that gave me off of the first one. So it wasn't just about adding that limitation at the beginning, it was framing the goal that I wanted it to go in a particular order for cross-referencing and corroborating the report, and then make sure that it was 500 words. But honestly, this example here is kind of disconnected from my actual workflow. This might be the generic best answer of when delegation beats a specialist team,",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00309",
+                    "T00310",
+                    "T00311",
+                    "T00312",
+                    "T00313",
+                    "T00314",
+                    "T00315",
+                    "T00316",
+                    "T00317",
+                    "T00318",
+                    "T00319",
+                    "T00320",
+                    "T00321",
+                    "T00322"
+                  ]
+                }
+              ],
+              "selection_score": 0.5706005002998147,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 3,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:35",
+              "start": 1050.85,
+              "end": 1082.97,
+              "text": "communicating back and forth with one another to solve a particular problem. So this is where we go from not just having a loop but going from a loop to a graph. Now I've already talked a lot about this in the last two videos. In the first video I gave an overview on what bot mode is, how to get it set up and how to customize each of these individual profiles. So I'm not gonna touch on that today. And then in the second video we did a specific research upgrade where I updated the capabilities of the researcher to be a much more powerful tool. The main skill that I gave the researcher as an upgrade allowed it to check both academic sources and state-of-the-art sources and then corroborate the two of",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00375",
+                "T00376",
+                "T00377",
+                "T00378",
+                "T00379",
+                "T00380",
+                "T00381",
+                "T00382",
+                "T00383"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.011229105195834891,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "goal-loop demonstration",
+                  "rank": 12,
+                  "retrieval_score": 2.3747047800146603,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001736111111111111,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "added requirement for peer-reviewed sources",
+                  "rank": 6,
+                  "retrieval_score": 2.9108365687261344,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001893939393939394,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "another research step",
+                  "rank": 3,
+                  "retrieval_score": 4.097586127247933,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001984126984126984,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "earlier output was not sufficient",
+                  "rank": 11,
+                  "retrieval_score": 2.0586757921688705,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0017605633802816902,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "citing both stages",
+                  "rank": 2,
+                  "retrieval_score": 2.8131033056381547,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020161290322580645,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "how did the requirement lead to another step",
+                  "rank": 8,
+                  "retrieval_score": 2.8131033056381547,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001838235294117647,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "goal-loop demonstration",
+                "added requirement for peer-reviewed sources",
+                "another research step",
+                "earlier output was not sufficient",
+                "citing both stages",
+                "how did the requirement lead to another step"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:35",
+                  "start": 1050.85,
+                  "end": 1082.97,
+                  "text": "communicating back and forth with one another to solve a particular problem. So this is where we go from not just having a loop but going from a loop to a graph. Now I've already talked a lot about this in the last two videos. In the first video I gave an overview on what bot mode is, how to get it set up and how to customize each of these individual profiles. So I'm not gonna touch on that today. And then in the second video we did a specific research upgrade where I updated the capabilities of the researcher to be a much more powerful tool. The main skill that I gave the researcher as an upgrade allowed it to check both academic sources and state-of-the-art sources and then corroborate the two of",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00375",
+                    "T00376",
+                    "T00377",
+                    "T00378",
+                    "T00379",
+                    "T00380",
+                    "T00381",
+                    "T00382",
+                    "T00383"
+                  ]
+                }
+              ],
+              "selection_score": 0.5450238364389595,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 4,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "fusion:787f76e3887a3d40",
+              "start": 1140.0,
+              "end": 1200.0,
+              "text": "[caption] - **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library\n[transcript] talk about a couple examples on how this fits together so that you can see what the graph might look like before we get into how to set it up, just so it makes a little bit more practical sense. So imagine you have an email come in and you want to have a decision. Maybe you want to have a draft created, maybe you want to have some research done, maybe both. So the email can come in and it can trigger an agent, like the researcher agent, to pull in the relevant context and the evidence by doing some research. Once it's done, it can then create a brief, like a research brief and draft a reply and then hand it off to you for review.",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00019",
+                "T00398",
+                "T00399",
+                "T00400",
+                "T00401",
+                "T00402",
+                "T00403",
+                "T00404",
+                "T00405",
+                "T00406"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.00987920889089432,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "another research step",
+                  "rank": 1,
+                  "retrieval_score": 3.9234233576379256,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020491803278688526,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "order of steps",
+                  "rank": 2,
+                  "retrieval_score": 2.3837823210350084,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020161290322580645,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "how did the requirement lead to another step",
+                  "rank": 1,
+                  "retrieval_score": 3.9234233576379256,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020491803278688526,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "another research step",
+                  "rank": 9,
+                  "retrieval_score": 2.1732888319863,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0018115942028985507,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "citing both stages",
+                  "rank": 4,
+                  "retrieval_score": 2.7762700618179794,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001953125,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "another research step",
+                "order of steps",
+                "how did the requirement lead to another step",
+                "citing both stages"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:38",
+                  "start": 1140.0,
+                  "end": 1200.0,
+                  "text": "- **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00019"
+                  ]
+                },
+                {
+                  "id": "transcript:38",
+                  "start": 1142.89,
+                  "end": 1174.17,
+                  "text": "talk about a couple examples on how this fits together so that you can see what the graph might look like before we get into how to set it up, just so it makes a little bit more practical sense. So imagine you have an email come in and you want to have a decision. Maybe you want to have a draft created, maybe you want to have some research done, maybe both. So the email can come in and it can trigger an agent, like the researcher agent, to pull in the relevant context and the evidence by doing some research. Once it's done, it can then create a brief, like a research brief and draft a reply and then hand it off to you for review.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00398",
+                    "T00399",
+                    "T00400",
+                    "T00401",
+                    "T00402",
+                    "T00403",
+                    "T00404",
+                    "T00405",
+                    "T00406"
+                  ]
+                }
+              ],
+              "selection_score": 0.4795043092742855,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 5,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:21",
+              "start": 630.79,
+              "end": 661.15,
+              "text": "at least five peer reviewed sources. And if we look here, it only produced eight sources and it doesn't look like they're peer reviewed. So now the agent has started up its next task on turn two and turn three and it's delegated to another series of subagents to now cross-reference the output against peer reviewed academic sources. So it says it's now added an independent organizational coordination and team cognition literature to the evidence set and it's awaiting the peer review before it will work again. As this is working, I can think of more criteria and I can add this here, and the agent will just keep looping.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00212",
+                "T00213",
+                "T00214",
+                "T00215",
+                "T00216",
+                "T00217",
+                "T00218",
+                "T00219",
+                "T00220",
+                "T00221",
+                "T00222",
+                "T00223",
+                "T00224",
+                "T00225",
+                "T00226",
+                "T00227",
+                "T00228"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.009300792577787206,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "added requirement for peer-reviewed sources",
+                  "rank": 1,
+                  "retrieval_score": 16.603789554418448,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020491803278688526,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "another research step",
+                  "rank": 7,
+                  "retrieval_score": 2.7762700618179794,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0018656716417910447,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "earlier output was not sufficient",
+                  "rank": 8,
+                  "retrieval_score": 2.2974480023413193,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001838235294117647,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "how did the requirement lead to another step",
+                  "rank": 9,
+                  "retrieval_score": 2.7762700618179794,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0018115942028985507,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "explain the order and why earlier output was insufficient",
+                  "rank": 12,
+                  "retrieval_score": 2.2974480023413193,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001736111111111111,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "added requirement for peer-reviewed sources",
+                "another research step",
+                "earlier output was not sufficient",
+                "how did the requirement lead to another step",
+                "explain the order and why earlier output was insufficient"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:21",
+                  "start": 630.79,
+                  "end": 661.15,
+                  "text": "at least five peer reviewed sources. And if we look here, it only produced eight sources and it doesn't look like they're peer reviewed. So now the agent has started up its next task on turn two and turn three and it's delegated to another series of subagents to now cross-reference the output against peer reviewed academic sources. So it says it's now added an independent organizational coordination and team cognition literature to the evidence set and it's awaiting the peer review before it will work again. As this is working, I can think of more criteria and I can add this here, and the agent will just keep looping.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00212",
+                    "T00213",
+                    "T00214",
+                    "T00215",
+                    "T00216",
+                    "T00217",
+                    "T00218",
+                    "T00219",
+                    "T00220",
+                    "T00221",
+                    "T00222",
+                    "T00223",
+                    "T00224",
+                    "T00225",
+                    "T00226",
+                    "T00227",
+                    "T00228"
+                  ]
+                }
+              ],
+              "selection_score": 0.45142988370514475,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 6,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": true
+        },
+        "latency_seconds": 4.3119
+      },
+      {
+        "call": 2,
+        "tool": "search",
+        "args": {
+          "query": "goal-loop demonstration",
+          "top_k": 1
+        },
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "fusion:441a648d16c9f8b0",
+              "start": 2460.0,
+              "end": 2520.0,
+              "text": "[caption] - **Frame 2460.024**: A dark-themed software interface for Kanban, showing a \"Default\" board with \"orchestrator\" and \"wanderloots-tutorials\" as profile descriptions. The \"Auto-decompose triage tasks\" toggle is on. A \"New task\" button is visible. The \"Multi-agent research\" task is marked as \"DONE\". The interface shows a \"Gateway ready\" status and a \"Manual\" label.\n- **Frame 2519.984**: A slide titled \"One Workflow, Two Views\" displays a workflow diagram. The \"Working\" column shows \"Independent review\" and \"Build & check\" as steps. The \"Done\" column shows \"Scope goal\" and \"Build & check export\". The \"Dependency graph\" shows \"Scope\" and \"Build & check\" as tasks. The \"Approve\" step is marked as \"Done\".\n[transcript] of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00041",
+                "T00856",
+                "T00857",
+                "T00858",
+                "T00859",
+                "T00860",
+                "T00861"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.013391925066950958,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "goal-loop demonstration",
+                  "rank": 5,
+                  "retrieval_score": 2.8136638693498663,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0019230769230769232,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "another research step",
+                  "rank": 2,
+                  "retrieval_score": 3.516257657941809,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020161290322580645,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "order of steps",
+                  "rank": 1,
+                  "retrieval_score": 2.4835546822562526,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0020491803278688526,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "how did the requirement lead to another step",
+                  "rank": 3,
+                  "retrieval_score": 2.8136638693498663,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001984126984126984,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "goal-loop demonstration",
+                  "rank": 4,
+                  "retrieval_score": 3.276169717849227,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001953125,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "added requirement for peer-reviewed sources",
+                  "rank": 5,
+                  "retrieval_score": 3.012971301357221,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0019230769230769232,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "earlier output was not sufficient",
+                  "rank": 21,
+                  "retrieval_score": 1.5213156595421906,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0015432098765432098,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "goal-loop demonstration",
+                "another research step",
+                "order of steps",
+                "how did the requirement lead to another step",
+                "added requirement for peer-reviewed sources",
+                "earlier output was not sufficient"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:82",
+                  "start": 2460.0,
+                  "end": 2520.0,
+                  "text": "- **Frame 2460.024**: A dark-themed software interface for Kanban, showing a \"Default\" board with \"orchestrator\" and \"wanderloots-tutorials\" as profile descriptions. The \"Auto-decompose triage tasks\" toggle is on. A \"New task\" button is visible. The \"Multi-agent research\" task is marked as \"DONE\". The interface shows a \"Gateway ready\" status and a \"Manual\" label.\n- **Frame 2519.984**: A slide titled \"One Workflow, Two Views\" displays a workflow diagram. The \"Working\" column shows \"Independent review\" and \"Build & check\" as steps. The \"Done\" column shows \"Scope goal\" and \"Build & check export\". The \"Dependency graph\" shows \"Scope\" and \"Build & check\" as tasks. The \"Approve\" step is marked as \"Done\".",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00041"
+                  ]
+                },
+                {
+                  "id": "transcript:82",
+                  "start": 2461.79,
+                  "end": 2493.9,
+                  "text": "of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00856",
+                    "T00857",
+                    "T00858",
+                    "T00859",
+                    "T00860",
+                    "T00861"
+                  ]
+                }
+              ],
+              "selection_score": 0.9125,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": true
+        },
+        "latency_seconds": 1.6542
+      },
+      {
+        "call": 3,
+        "tool": "search",
+        "args": {
+          "query": "added requirement for peer-reviewed sources",
+          "top_k": 1
+        },
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "fusion:441a648d16c9f8b0",
+              "start": 2460.0,
+              "end": 2520.0,
+              "text": "[caption] - **Frame 2460.024**: A dark-themed software interface for Kanban, showing a \"Default\" board with \"orchestrator\" and \"wanderloots-tutorials\" as profile descriptions. The \"Auto-decompose triage tasks\" toggle is on. A \"New task\" button is visible. The \"Multi-agent research\" task is marked as \"DONE\". The interface shows a \"Gateway ready\" status and a \"Manual\" label.\n- **Frame 2519.984**: A slide titled \"One Workflow, Two Views\" displays a workflow diagram. The \"Working\" column shows \"Independent review\" and \"Build & check\" as steps. The \"Done\" column shows \"Scope goal\" and \"Build & check export\". The \"Dependency graph\" shows \"Scope\" and \"Build & check\" as tasks. The \"Approve\" step is marked as \"Done\".\n[transcript] of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00041",
+                "T00856",
+                "T00857",
+                "T00858",
+                "T00859",
+                "T00860",
+                "T00861"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.010875112164427467,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "another research step",
+                  "rank": 2,
+                  "retrieval_score": 3.516257657941809,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.002304147465437788,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "order of steps",
+                  "rank": 1,
+                  "retrieval_score": 2.4835546822562526,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00234192037470726,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "how did the requirement lead to another step",
+                  "rank": 3,
+                  "retrieval_score": 2.8136638693498663,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0022675736961451248,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "added requirement for peer-reviewed sources",
+                  "rank": 5,
+                  "retrieval_score": 3.012971301357221,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.002197802197802198,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "earlier output was not sufficient",
+                  "rank": 21,
+                  "retrieval_score": 1.5213156595421906,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001763668430335097,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "another research step",
+                "order of steps",
+                "how did the requirement lead to another step",
+                "added requirement for peer-reviewed sources",
+                "earlier output was not sufficient"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:82",
+                  "start": 2460.0,
+                  "end": 2520.0,
+                  "text": "- **Frame 2460.024**: A dark-themed software interface for Kanban, showing a \"Default\" board with \"orchestrator\" and \"wanderloots-tutorials\" as profile descriptions. The \"Auto-decompose triage tasks\" toggle is on. A \"New task\" button is visible. The \"Multi-agent research\" task is marked as \"DONE\". The interface shows a \"Gateway ready\" status and a \"Manual\" label.\n- **Frame 2519.984**: A slide titled \"One Workflow, Two Views\" displays a workflow diagram. The \"Working\" column shows \"Independent review\" and \"Build & check\" as steps. The \"Done\" column shows \"Scope goal\" and \"Build & check export\". The \"Dependency graph\" shows \"Scope\" and \"Build & check\" as tasks. The \"Approve\" step is marked as \"Done\".",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00041"
+                  ]
+                },
+                {
+                  "id": "transcript:82",
+                  "start": 2461.79,
+                  "end": 2493.9,
+                  "text": "of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00856",
+                    "T00857",
+                    "T00858",
+                    "T00859",
+                    "T00860",
+                    "T00861"
+                  ]
+                }
+              ],
+              "selection_score": 0.8760845490592923,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": true
+        },
+        "latency_seconds": 2.29
+      },
+      {
+        "call": 4,
+        "tool": "search",
+        "args": {
+          "query": "another research step",
+          "top_k": 1
+        },
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "fusion:441a648d16c9f8b0",
+              "start": 2460.0,
+              "end": 2520.0,
+              "text": "[caption] - **Frame 2460.024**: A dark-themed software interface for Kanban, showing a \"Default\" board with \"orchestrator\" and \"wanderloots-tutorials\" as profile descriptions. The \"Auto-decompose triage tasks\" toggle is on. A \"New task\" button is visible. The \"Multi-agent research\" task is marked as \"DONE\". The interface shows a \"Gateway ready\" status and a \"Manual\" label.\n- **Frame 2519.984**: A slide titled \"One Workflow, Two Views\" displays a workflow diagram. The \"Working\" column shows \"Independent review\" and \"Build & check\" as steps. The \"Done\" column shows \"Scope goal\" and \"Build & check export\". The \"Dependency graph\" shows \"Scope\" and \"Build & check\" as tasks. The \"Approve\" step is marked as \"Done\".\n[transcript] of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+              "source": "hybrid",
+              "modalities": [
+                "caption",
+                "transcript"
+              ],
+              "segment_ids": [
+                "caption_00041",
+                "T00856",
+                "T00857",
+                "T00858",
+                "T00859",
+                "T00860",
+                "T00861"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.010875112164427467,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "another research step",
+                  "rank": 2,
+                  "retrieval_score": 3.516257657941809,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.002304147465437788,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "order of steps",
+                  "rank": 1,
+                  "retrieval_score": 2.4835546822562526,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00234192037470726,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "how did the requirement lead to another step",
+                  "rank": 3,
+                  "retrieval_score": 2.8136638693498663,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0022675736961451248,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "added requirement for peer-reviewed sources",
+                  "rank": 5,
+                  "retrieval_score": 3.012971301357221,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.002197802197802198,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "earlier output was not sufficient",
+                  "rank": 21,
+                  "retrieval_score": 1.5213156595421906,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.001763668430335097,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "another research step",
+                "order of steps",
+                "how did the requirement lead to another step",
+                "added requirement for peer-reviewed sources",
+                "earlier output was not sufficient"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:82",
+                  "start": 2460.0,
+                  "end": 2520.0,
+                  "text": "- **Frame 2460.024**: A dark-themed software interface for Kanban, showing a \"Default\" board with \"orchestrator\" and \"wanderloots-tutorials\" as profile descriptions. The \"Auto-decompose triage tasks\" toggle is on. A \"New task\" button is visible. The \"Multi-agent research\" task is marked as \"DONE\". The interface shows a \"Gateway ready\" status and a \"Manual\" label.\n- **Frame 2519.984**: A slide titled \"One Workflow, Two Views\" displays a workflow diagram. The \"Working\" column shows \"Independent review\" and \"Build & check\" as steps. The \"Done\" column shows \"Scope goal\" and \"Build & check export\". The \"Dependency graph\" shows \"Scope\" and \"Build & check\" as tasks. The \"Approve\" step is marked as \"Done\".",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00041"
+                  ]
+                },
+                {
+                  "id": "transcript:82",
+                  "start": 2461.79,
+                  "end": 2493.9,
+                  "text": "of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00856",
+                    "T00857",
+                    "T00858",
+                    "T00859",
+                    "T00860",
+                    "T00861"
+                  ]
+                }
+              ],
+              "selection_score": 0.8760845490592923,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": true
+        },
+        "latency_seconds": 1.8748
+      }
+    ],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"goal-loop demonstration\",\n    \"added requirement for peer-reviewed sources\",\n    \"another research step\",\n    \"order of steps\",\n    \"earlier output was not sufficient\",\n    \"citing both stages\",\n    \"how did the requirement lead to another step\",\n    \"explain the order and why earlier output was insufficient\"\n  ],\n  \"requirements\": [\n    \"Explain the order of steps in the goal-loop demonstration when the requirement for peer-reviewed sources was added.\",\n    \"Identify why the earlier output was not sufficient in addressing the added requirement.\",\n    \"Cite both stages of the process to support the explanation.\",\n    \"Preserve the four-part question structure in the answer.\",\n    \"Ensure the answer is grounded in the transcript content and not speculative.\"\n  ],\n  \"event_query\": [\n    \"goal-loop demonstration with peer-reviewed sources added\"\n  ]\n}"
+      },
+      {
+        "role": "controller",
+        "step": 0,
+        "raw": "{\"action\": \"search\", \"query\": \"goal-loop demonstration\", \"top_k\": 1}"
+      },
+      {
+        "role": "controller",
+        "step": 1,
+        "raw": "{\"action\": \"search\", \"args\": {\"query\": \"goal-loop demonstration\", \"top_k\": 1}}"
+      },
+      {
+        "role": "controller",
+        "step": 2,
+        "raw": "{\"action\": \"search\", \"args\": {\"query\": \"added requirement for peer-reviewed sources\", \"top_k\": 1}}"
+      },
+      {
+        "role": "controller",
+        "step": 3,
+        "raw": "{\"action\": \"search\", \"args\": {\"query\": \"another research step\", \"top_k\": 1}}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

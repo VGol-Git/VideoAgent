@@ -1,0 +1,486 @@
+{
+  "created_at_utc": "2026-10-22T19:07:50.922567+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "configuration": {
+    "schema_version": "assignment-v7-run-v1",
+    "split": "test",
+    "modes": [
+      "adaptive",
+      "retrieval-only",
+      "static",
+      "uniform"
+    ],
+    "question_ids": [
+      "v7_reason_fresh_context",
+      "v7_reason_model_roles",
+      "v7_reason_changed_criteria",
+      "v7_reason_two_gates",
+      "v7_reason_context_durability",
+      "v7_reason_dispatch_delay",
+      "v7_onset_token_first",
+      "v7_onset_token_later",
+      "v7_onset_article",
+      "v7_onset_task_graph",
+      "v7_negative_total_tokens",
+      "v7_negative_dispatch_cost",
+      "v7_timestamp_610",
+      "v7_timestamp_800",
+      "v7_timestamp_range_titles",
+      "v7_timestamp_range_constraints"
+    ],
+    "schedule": [
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_fresh_context"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_fresh_context"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_fresh_context"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_fresh_context"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_model_roles"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_model_roles"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_model_roles"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_model_roles"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_changed_criteria"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_changed_criteria"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_changed_criteria"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_changed_criteria"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_two_gates"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_two_gates"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_two_gates"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_two_gates"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_context_durability"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_context_durability"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_context_durability"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_context_durability"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_dispatch_delay"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_dispatch_delay"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_dispatch_delay"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_dispatch_delay"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_token_first"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_token_first"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_token_first"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_token_first"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_token_later"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_token_later"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_token_later"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_token_later"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_article"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_article"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_article"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_article"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_task_graph"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_task_graph"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_task_graph"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_task_graph"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_negative_total_tokens"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_negative_total_tokens"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_negative_total_tokens"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_negative_total_tokens"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_negative_dispatch_cost"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_negative_dispatch_cost"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_negative_dispatch_cost"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_negative_dispatch_cost"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_timestamp_610"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_timestamp_610"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_timestamp_610"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_timestamp_610"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_timestamp_800"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_timestamp_800"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_timestamp_800"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_timestamp_800"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_timestamp_range_titles"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_timestamp_range_titles"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_timestamp_range_titles"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_timestamp_range_titles"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_timestamp_range_constraints"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_timestamp_range_constraints"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_timestamp_range_constraints"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_timestamp_range_constraints"
+      }
+    ],
+    "files": {
+      "questions": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\questions.json",
+        "sha256": "a266010d5276b4e3c9aaa9f3d55ff8bba25d766211902508690734664f637725"
+      },
+      "protocol": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\protocol.json",
+        "sha256": "a37e76ae43a9a1b4db5ebb13115facac21c8499cc2edae0e5d9c27f49499b6a5"
+      },
+      "index": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\indexes\\user_video.json",
+        "sha256": "a09bbc3b33b596a9f714bd2cc42540fd86b082ff26a33f9d41670733c448ff0b"
+      }
+    },
+    "visual_annotations": {
+      "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\visual_annotations.json",
+      "sha256": "2f18601d12955cf9bb9b5ea06322bcd0f0d01518b170f0b8b504d56e40d70dc6"
+    },
+    "reference_assets": {
+      "data/assignment_v7/reference_frames/point_610.png": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\reference_frames\\point_610.png",
+        "sha256": "bb0b453b4da758892952211e8d2025a49237bfa08a0d84a66dddfd07686d6f22"
+      },
+      "data/assignment_v7/reference_frames/point_800.png": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\reference_frames\\point_800.png",
+        "sha256": "ee6febcfa8ae507f6e9ad819646ff9e0fe0427a0fe144794a40acb0dda9eb7cc"
+      },
+      "data/assignment_v7/reference_frames/range_article_1231.897.png": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\reference_frames\\range_article_1231.897.png",
+        "sha256": "4037f29f839480f7eeced1dcd4ec86e02b1ffbf580df4f2acfdcbffbc4f97810"
+      },
+      "data/assignment_v7/reference_frames/range_two_loops_1235.634.png": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\reference_frames\\range_two_loops_1235.634.png",
+        "sha256": "3cc56581e0171a7873ae5a7ed6612d539bed3e0c690893a2725363c83f2561e5"
+      },
+      "data/assignment_v7/reference_frames/dev_1220.png": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\reference_frames\\dev_1220.png",
+        "sha256": "3bca9af40813e8ef38b10965e2c59ec463e517fe6f33fdf685f60a3c1c91bad9"
+      },
+      "data/assignment_v7/reference_frames/article_title_onset_last_absent.png": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\reference_frames\\article_title_onset_last_absent.png",
+        "sha256": "6c1ccc39a95457d89d5da85d8e6c9dabf546686ef0b157a2e77cf05c805a844a"
+      },
+      "data/assignment_v7/reference_frames/article_title_onset_first_present.png": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\reference_frames\\article_title_onset_first_present.png",
+        "sha256": "8922af1aab4ad4dfd0c6921d25d9b6742768468e526fd85ccc45858a4a22747c"
+      },
+      "data/assignment_v7/reference_frames/taskgraphs_title_onset_last_absent.png": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\reference_frames\\taskgraphs_title_onset_last_absent.png",
+        "sha256": "72f914bea358880357a568cf1eec66c7a1a95ffc9b08663255f7a5e5e26b4750"
+      },
+      "data/assignment_v7/reference_frames/taskgraphs_title_onset_first_present.png": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\reference_frames\\taskgraphs_title_onset_first_present.png",
+        "sha256": "a9da7b64bd11a80d89b9fd873830db99c3f2d382f111cfdcfa43b30feed0a5b0"
+      },
+      "data/assignment_v7/reference_frames/task_graph_1615.jpg": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\reference_frames\\task_graph_1615.jpg",
+        "sha256": "fb9eb317cc911106f3feafbcea781eb208133464dc4bde04d5cc61423814cb41"
+      },
+      "data/assignment_v7/visual_annotations.json": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\visual_annotations.json",
+        "sha256": "2f18601d12955cf9bb9b5ea06322bcd0f0d01518b170f0b8b504d56e40d70dc6"
+      },
+      "data/assignment_v7/timestamp_annotations.json": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\assignment_v7\\timestamp_annotations.json",
+        "sha256": "3c4f0ec54b3909aaacfe940a3e45d163ba0e1823f430e29f0ba6516a08737114"
+      }
+    },
+    "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+    "video": {
+      "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\Subagents vs Agent Teams 🧠 Hermes Bots Goal Loops Kanban Graphs.mp4",
+      "sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "duration": 2575.0057666666667
+    },
+    "model": {
+      "name": "Qwen/Qwen3-VL-2B-Instruct",
+      "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+      "device": "cuda",
+      "local_files_only": true,
+      "max_new_tokens": 768,
+      "max_context_tokens": 8192,
+      "image_pixel_cap": 313600
+    },
+    "agent_config": {
+      "max_tool_calls": 4,
+      "frames_per_clip": 4,
+      "max_frames": 16,
+      "image_size": 560,
+      "max_clip_seconds": 120.0,
+      "use_vision": true,
+      "max_format_retries": 2
+    },
+    "inspection_cache_enabled": false,
+    "visual_preparation": {
+      "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\indexes\\user_video_visual",
+      "clip_model": "openai/clip-vit-base-patch32",
+      "clip_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "cadence_seconds": 5.0,
+      "device": "cpu",
+      "ocr": true
+    },
+    "warmup_enabled": true,
+    "source_sha256": {
+      "clipscout/__init__.py": "0fea446cab00641a910e7be4f11c790955039a633ae4f1303aac1c8fe0d61c8a",
+      "clipscout/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+      "clipscout/agent.py": "2ed6f15467d38e2210a4b613f1c8b6355a744520f3192ad8906c9d4e93ab60a7",
+      "clipscout/backends.py": "41d278c1318ed7094b4a8e0ea29f54dd15d1e1f5f0c1802a067c45b46a2fa8a2",
+      "clipscout/cli.py": "2e7c3b52f29c35c825c6f36e402cca3543dc3556b5244435ae3033edd05d5f1d",
+      "clipscout/evaluation.py": "73c27877e4ee42c3b935c03e831804c1eb015927b40f3d3222fbcff7894ad2eb",
+      "clipscout/events.py": "6ef445b433aeddacf7ad66f60aa18ec3cb141ea070d58976b219d8a09af07471",
+      "clipscout/index.py": "955220c04d1c332806111cb7a07c81e1d53a0c1ca3d61ae285289be3df449e58",
+      "clipscout/media.py": "3da749826b28dc419f0976c972b40c4a8fa3a78b43267933775258bd70df2627",
+      "clipscout/ocr.py": "a7c2f040630ed3a9df177a30e9d914f588b682e657a905065a90fe93d5b6129c",
+      "clipscout/research_agent.py": "1f30af71f6901983615f399b3c235adbfd8c5895be256be49809ff64d31d242d",
+      "clipscout/research_evaluation.py": "e06371efcf4dd905b8064fe3130e63f6ef02a1ebc06640a94fed8a174f03931b",
+      "clipscout/retrieval.py": "00968d418e2585daf8ad27beb7964c101efe6e5bf7c338bc78fd328fcf1b386a",
+      "clipscout/server.py": "960f4199b9bebe2a00a18b6d3663d09b9a63d744514ef22301a15440343ebe7b",
+      "clipscout/temporal.py": "308e8ee71ee877f2c9ffc861cb45933ec625f7c50d65b4c519817a20fad65a3c",
+      "clipscout/transcribe.py": "4fc5de271f44a00d7eaef32cdd398022dae250bb59979fd516db66a3fc41172e",
+      "clipscout/visual_index.py": "b919dc66f56af57543285211e2d62344c2fea667ef68b673700ffb3a3e921a1d",
+      "pyproject.toml": "ce7c83c580e0af20de7f1a4cd5ebb82680e0675f18d573a4c379a546883162d7",
+      "requirements-research.txt": "25ed091b23ed22554cb6cf6bb65f96a4dce04836e2d791f64dd1804018e8b6d8",
+      "run_experiment.ps1": "6fda382a333477fbbbc7b95e2fda96ccf52fbfecf0cf39c58ec26f8fe2255bcf",
+      "scripts/download_model.py": "3dc11ab71d9b885a9bdc14a5d3f6173a9fffed257fe4c27e70aebc84c4b39e8f",
+      "scripts/prepare_research_assets.py": "0f78a3e89190be4ddf952d3c63f1cd87af87736ed5418c946487206b3f31d0a1",
+      "scripts/run_research_study.py": "5b3ac7a07fa69d12aaa21f876ded44a36f3a7767dc9e04a93a0b1fa730d98ad0",
+      "THIRD_PARTY_NOTICES.txt": "9f4f197cdbd4e59cd9ff511e88dd4a8d61d7301ade808dea2d67ab70686dc9c2"
+    },
+    "runtime": {
+      "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\.venv\\Scripts\\python.exe",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "packages": {
+        "torch": "2.6.0+cu124",
+        "torchvision": "0.21.0+cu124",
+        "transformers": "4.57.6",
+        "numpy": "2.2.6",
+        "Pillow": "12.3.0",
+        "opencv-python-headless": "4.11.0.86",
+        "faster-whisper": "1.2.1",
+        "ctranslate2": "4.6.0",
+        "av": "19.0.2",
+        "rapidocr": "3.9.2",
+        "onnxruntime": "1.22.0",
+        "tokenizers": "0.22.2",
+        "safetensors": "0.8.0"
+      }
+    },
+    "agent_version": "clipscout-v7-evidence-research"
+  },
+  "notes": [
+    "References and rubric are used by the evaluator/reviewer only; agents receive question text and ID.",
+    "Model weights and source video remain shared; exact references and checksums are recorded."
+  ],
+  "snapshot_sha256": {
+    "source/pyproject.toml": "ce7c83c580e0af20de7f1a4cd5ebb82680e0675f18d573a4c379a546883162d7",
+    "source/requirements-research.txt": "25ed091b23ed22554cb6cf6bb65f96a4dce04836e2d791f64dd1804018e8b6d8",
+    "source/run_experiment.ps1": "6fda382a333477fbbbc7b95e2fda96ccf52fbfecf0cf39c58ec26f8fe2255bcf",
+    "source/THIRD_PARTY_NOTICES.txt": "9f4f197cdbd4e59cd9ff511e88dd4a8d61d7301ade808dea2d67ab70686dc9c2",
+    "source/clipscout/agent.py": "2ed6f15467d38e2210a4b613f1c8b6355a744520f3192ad8906c9d4e93ab60a7",
+    "source/clipscout/backends.py": "41d278c1318ed7094b4a8e0ea29f54dd15d1e1f5f0c1802a067c45b46a2fa8a2",
+    "source/clipscout/cli.py": "2e7c3b52f29c35c825c6f36e402cca3543dc3556b5244435ae3033edd05d5f1d",
+    "source/clipscout/evaluation.py": "73c27877e4ee42c3b935c03e831804c1eb015927b40f3d3222fbcff7894ad2eb",
+    "source/clipscout/events.py": "6ef445b433aeddacf7ad66f60aa18ec3cb141ea070d58976b219d8a09af07471",
+    "source/clipscout/index.py": "955220c04d1c332806111cb7a07c81e1d53a0c1ca3d61ae285289be3df449e58",
+    "source/clipscout/media.py": "3da749826b28dc419f0976c972b40c4a8fa3a78b43267933775258bd70df2627",
+    "source/clipscout/ocr.py": "a7c2f040630ed3a9df177a30e9d914f588b682e657a905065a90fe93d5b6129c",
+    "source/clipscout/research_agent.py": "1f30af71f6901983615f399b3c235adbfd8c5895be256be49809ff64d31d242d",
+    "source/clipscout/research_evaluation.py": "e06371efcf4dd905b8064fe3130e63f6ef02a1ebc06640a94fed8a174f03931b",
+    "source/clipscout/retrieval.py": "00968d418e2585daf8ad27beb7964c101efe6e5bf7c338bc78fd328fcf1b386a",
+    "source/clipscout/server.py": "960f4199b9bebe2a00a18b6d3663d09b9a63d744514ef22301a15440343ebe7b",
+    "source/clipscout/temporal.py": "308e8ee71ee877f2c9ffc861cb45933ec625f7c50d65b4c519817a20fad65a3c",
+    "source/clipscout/transcribe.py": "4fc5de271f44a00d7eaef32cdd398022dae250bb59979fd516db66a3fc41172e",
+    "source/clipscout/visual_index.py": "b919dc66f56af57543285211e2d62344c2fea667ef68b673700ffb3a3e921a1d",
+    "source/clipscout/__init__.py": "0fea446cab00641a910e7be4f11c790955039a633ae4f1303aac1c8fe0d61c8a",
+    "source/clipscout/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+    "source/scripts/download_model.py": "3dc11ab71d9b885a9bdc14a5d3f6173a9fffed257fe4c27e70aebc84c4b39e8f",
+    "source/scripts/prepare_research_assets.py": "0f78a3e89190be4ddf952d3c63f1cd87af87736ed5418c946487206b3f31d0a1",
+    "source/scripts/run_research_study.py": "5b3ac7a07fa69d12aaa21f876ded44a36f3a7767dc9e04a93a0b1fa730d98ad0",
+    "protocol.json": "a76fe62459a5178ca33919358dbfb9e0141f062c97cfd80b139d7bf639a4c6e2",
+    "questions.all.json": "3ef5979c59f60f66f27f22cf139ba1330ae2dab12b741f8b5ebf39cf932614d7",
+    "questions.selected.json": "7895d228681d140d61555dc30cacad49ff47911f206ee6ce535065805b4267ae",
+    "visual_annotations.json": "2f18601d12955cf9bb9b5ea06322bcd0f0d01518b170f0b8b504d56e40d70dc6",
+    "assets/index.json": "350ad12c0d5eae355f8013f761ea1eb30e1ddbbd7350cac3eda71a72240b575c",
+    "data/assignment_v7/reference_frames/point_610.png": "bb0b453b4da758892952211e8d2025a49237bfa08a0d84a66dddfd07686d6f22",
+    "data/assignment_v7/reference_frames/point_800.png": "ee6febcfa8ae507f6e9ad819646ff9e0fe0427a0fe144794a40acb0dda9eb7cc",
+    "data/assignment_v7/reference_frames/range_article_1231.897.png": "4037f29f839480f7eeced1dcd4ec86e02b1ffbf580df4f2acfdcbffbc4f97810",
+    "data/assignment_v7/reference_frames/range_two_loops_1235.634.png": "3cc56581e0171a7873ae5a7ed6612d539bed3e0c690893a2725363c83f2561e5",
+    "data/assignment_v7/reference_frames/dev_1220.png": "3bca9af40813e8ef38b10965e2c59ec463e517fe6f33fdf685f60a3c1c91bad9",
+    "data/assignment_v7/reference_frames/article_title_onset_last_absent.png": "6c1ccc39a95457d89d5da85d8e6c9dabf546686ef0b157a2e77cf05c805a844a",
+    "data/assignment_v7/reference_frames/article_title_onset_first_present.png": "8922af1aab4ad4dfd0c6921d25d9b6742768468e526fd85ccc45858a4a22747c",
+    "data/assignment_v7/reference_frames/taskgraphs_title_onset_last_absent.png": "72f914bea358880357a568cf1eec66c7a1a95ffc9b08663255f7a5e5e26b4750",
+    "data/assignment_v7/reference_frames/taskgraphs_title_onset_first_present.png": "a9da7b64bd11a80d89b9fd873830db99c3f2d382f111cfdcfa43b30feed0a5b0",
+    "data/assignment_v7/reference_frames/task_graph_1615.jpg": "fb9eb317cc911106f3feafbcea781eb208133464dc4bde04d5cc61423814cb41",
+    "data/assignment_v7/visual_annotations.json": "2f18601d12955cf9bb9b5ea06322bcd0f0d01518b170f0b8b504d56e40d70dc6",
+    "data/assignment_v7/timestamp_annotations.json": "3c4f0ec54b3909aaacfe940a3e45d163ba0e1823f430e29f0ba6516a08737114"
+  }
+}

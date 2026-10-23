@@ -1,0 +1,6171 @@
+{
+  "protocol_version": "assignment-v7.0",
+  "summary": {
+    "question_count": 16,
+    "status_counts": {
+      "answered": 9,
+      "insufficient_evidence": 5,
+      "error": 2,
+      "missing": 0
+    },
+    "reasoning": {
+      "question_count": 6,
+      "known_count": 1,
+      "unknown_count": 5,
+      "success_count": 0.0,
+      "accuracy_all": null,
+      "accuracy_known": 0.0,
+      "accuracy_lower_bound": 0.0,
+      "accuracy_upper_bound": 0.8333333333333334
+    },
+    "supported_reasoning": {
+      "question_count": 6,
+      "known_count": 1,
+      "unknown_count": 5,
+      "success_count": 0.0,
+      "accuracy_all": null,
+      "accuracy_known": 0.0,
+      "accuracy_lower_bound": 0.0,
+      "accuracy_upper_bound": 0.8333333333333334
+    },
+    "timestamp_search": {
+      "question_count": 4,
+      "semantic": {
+        "question_count": 4,
+        "known_count": 3,
+        "unknown_count": 1,
+        "success_count": 0.0,
+        "accuracy_all": null,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.25
+      },
+      "supported_semantic": {
+        "question_count": 4,
+        "known_count": 3,
+        "unknown_count": 1,
+        "success_count": 0.0,
+        "accuracy_all": null,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.25
+      },
+      "temporal": {
+        "question_count": 4,
+        "known_count": 4,
+        "unknown_count": 0,
+        "success_count": 1.0,
+        "accuracy_all": 0.25,
+        "accuracy_known": 0.25,
+        "accuracy_lower_bound": 0.25,
+        "accuracy_upper_bound": 0.25
+      },
+      "target_coverage": {
+        "measured_count": 4,
+        "missing_count": 0,
+        "sum": 1.0,
+        "mean": 0.25,
+        "median": 0.0,
+        "p90": 0.7000000000000002,
+        "p95": 0.8499999999999996
+      },
+      "citation_scope_precision": {
+        "measured_count": 4,
+        "missing_count": 0,
+        "sum": 1.0,
+        "mean": 0.25,
+        "median": 0.0,
+        "p90": 0.7000000000000002,
+        "p95": 0.8499999999999996
+      },
+      "source_scope_compliance": {
+        "measured_count": 4,
+        "missing_count": 0,
+        "sum": 4.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "p90": 1.0,
+        "p95": 1.0
+      },
+      "frame_scope_compliance": {
+        "measured_count": 3,
+        "missing_count": 1,
+        "sum": 3.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "p90": 1.0,
+        "p95": 1.0
+      },
+      "mean_point_distance_seconds_conditional": {
+        "measured_count": 0,
+        "missing_count": 4,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "p95": null
+      },
+      "max_citation_width_seconds": {
+        "measured_count": 1,
+        "missing_count": 3,
+        "sum": 9.259999999999991,
+        "mean": 9.259999999999991,
+        "median": 9.259999999999991,
+        "p90": 9.259999999999991,
+        "p95": 9.259999999999991
+      }
+    },
+    "review_coverage": {
+      "question_count": 16,
+      "named_review_count": 0,
+      "complete_semantic_review_count": 0,
+      "complete_semantic_review_fraction": 0.0,
+      "required_atom_count": 30,
+      "reviewed_atom_count": 0
+    },
+    "negative_abstention": {
+      "question_count": 2,
+      "known_count": 1,
+      "unknown_count": 1,
+      "success_count": 0.0,
+      "accuracy_all": null,
+      "accuracy_known": 0.0,
+      "accuracy_lower_bound": 0.0,
+      "accuracy_upper_bound": 0.5
+    },
+    "onset": {
+      "question_count": 4,
+      "explicit_prediction_count": 0,
+      "valid_prediction_count": 0,
+      "modality_mismatch_count": 0,
+      "error_measured_count": 0,
+      "mean_absolute_error_seconds_conditional": null,
+      "median_absolute_error_seconds_conditional": null,
+      "bracket_count": 0,
+      "mean_bracket_width_seconds": null,
+      "reference_bracket_coverage_conditional": null,
+      "success_at_1s": 0.0,
+      "success_at_2s": 0.0,
+      "success_at_5s": 0.0
+    },
+    "support_geometry": {
+      "question_count": 14,
+      "macro_support_recall_at_0_3": 0.07142857142857142,
+      "all_supports_hit_at_0_3": 0.07142857142857142
+    },
+    "diagnostics": {
+      "retrieval": {
+        "annotated_question_count": 14,
+        "recorded_search_question_count": 14,
+        "recall_at_1": {
+          "measured_count": 12,
+          "missing_count": 4,
+          "sum": 1.0,
+          "mean": 0.08333333333333333,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.4499999999999993
+        },
+        "recall_at_3": {
+          "measured_count": 12,
+          "missing_count": 4,
+          "sum": 1.0,
+          "mean": 0.08333333333333333,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.4499999999999993
+        },
+        "recall_at_5": {
+          "measured_count": 12,
+          "missing_count": 4,
+          "sum": 1.0,
+          "mean": 0.08333333333333333,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.4499999999999993
+        },
+        "reciprocal_rank": {
+          "measured_count": 12,
+          "missing_count": 4,
+          "sum": 1.0,
+          "mean": 0.08333333333333333,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.4499999999999993
+        },
+        "ndcg_at_5": {
+          "measured_count": 12,
+          "missing_count": 4,
+          "sum": 1.0,
+          "mean": 0.08333333333333333,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.4499999999999993
+        },
+        "unique_support_coverage": {
+          "measured_count": 12,
+          "missing_count": 4,
+          "sum": 1.0,
+          "mean": 0.08333333333333333,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.4499999999999993
+        }
+      },
+      "citation_geometry": {
+        "annotated_question_count": 14,
+        "matching_citation_count": 1,
+        "precision_denominator": 11,
+        "micro_precision_at_0_3": 0.09090909090909091,
+        "precision_at_0_3": {
+          "measured_count": 8,
+          "missing_count": 8,
+          "sum": 1.0,
+          "mean": 0.125,
+          "median": 0.0,
+          "p90": 0.2999999999999998,
+          "p95": 0.6499999999999995
+        },
+        "temporal_only_precision_at_0_3": {
+          "measured_count": 8,
+          "missing_count": 8,
+          "sum": 1.0,
+          "mean": 0.125,
+          "median": 0.0,
+          "p90": 0.2999999999999998,
+          "p95": 0.6499999999999995
+        },
+        "support_recall_at_0_3": {
+          "measured_count": 14,
+          "missing_count": 2,
+          "sum": 1.0,
+          "mean": 0.07142857142857142,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.34999999999999964
+        },
+        "all_supports_hit_at_0_3": {
+          "measured_count": 14,
+          "missing_count": 2,
+          "sum": 1.0,
+          "mean": 0.07142857142857142,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.34999999999999964
+        }
+      },
+      "cost": {
+        "latency_seconds": {
+          "measured_count": 16,
+          "missing_count": 0,
+          "sum": 207.7991,
+          "mean": 12.98744375,
+          "median": 8.842749999999999,
+          "p90": 31.61515,
+          "p95": 38.523825
+        },
+        "model_calls": {
+          "measured_count": 16,
+          "missing_count": 0,
+          "sum": 41,
+          "mean": 2.5625,
+          "median": 3.0,
+          "p90": 3.0,
+          "p95": 3.25
+        },
+        "input_tokens": {
+          "measured_count": 16,
+          "missing_count": 0,
+          "sum": 22007,
+          "mean": 1375.4375,
+          "median": 1608.0,
+          "p90": 1831.5,
+          "p95": 2333.0
+        },
+        "output_tokens": {
+          "measured_count": 16,
+          "missing_count": 0,
+          "sum": 3001,
+          "mean": 187.5625,
+          "median": 208.0,
+          "p90": 281.0,
+          "p95": 306.0
+        },
+        "decoded_frames": {
+          "measured_count": 16,
+          "missing_count": 0,
+          "sum": 0,
+          "mean": 0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0
+        },
+        "inspection_frames": {
+          "measured_count": 16,
+          "missing_count": 0,
+          "sum": 0,
+          "mean": 0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0
+        },
+        "raw_decoder_frames_decoded": {
+          "measured_count": 0,
+          "missing_count": 16,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "unique_frames": {
+          "measured_count": 16,
+          "missing_count": 0,
+          "sum": 0,
+          "mean": 0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0
+        },
+        "tool_calls": {
+          "measured_count": 16,
+          "missing_count": 0,
+          "sum": 14,
+          "mean": 0.875,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0
+        },
+        "duplicate_frame_fraction": {
+          "measured_count": 16,
+          "missing_count": 0,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0
+        },
+        "decision_repair_attempt_count": {
+          "measured_count": 16,
+          "missing_count": 0,
+          "sum": 5,
+          "mean": 0.3125,
+          "median": 0.0,
+          "p90": 1.5,
+          "p95": 2.0
+        },
+        "aggregate_duplicate_frame_fraction": 0.0,
+        "duplicate_frame_denominator": 0,
+        "duplicate_frame_measured_question_count": 16,
+        "per_tool": {
+          "search": {
+            "attempt_count": 14,
+            "known_outcome_count": 14,
+            "failure_count": 0,
+            "failure_rate": 0.0,
+            "latency_seconds": {
+              "measured_count": 14,
+              "missing_count": 0,
+              "sum": 0.1093,
+              "mean": 0.007807142857142857,
+              "median": 0.00585,
+              "p90": 0.012910000000000007,
+              "p95": 0.02496499999999999
+            }
+          }
+        },
+        "telemetry_inconsistent_question_count": 0
+      },
+      "rates": {
+        "question_count": 16,
+        "observed_prediction_count": 16,
+        "missing_prediction_count": 0,
+        "operational_error_rate": 0.125,
+        "abstention_rate": 0.3125,
+        "format_repair_measured_count": 16,
+        "format_repair_unknown_count": 0,
+        "format_repair_rate": 0.1875,
+        "hard_budget_measured_count": 16,
+        "hard_budget_unknown_count": 0,
+        "hard_budget_violation_count": 0,
+        "hard_budget_violation_rate": 0.0
+      },
+      "joint_reviewed": {
+        "reasoning_and_support": {
+          "question_count": 6,
+          "known_count": 0,
+          "unknown_count": 6,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 1.0
+        },
+        "timestamp_content_and_temporal": {
+          "question_count": 4,
+          "known_count": 0,
+          "unknown_count": 4,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 1.0
+        },
+        "event_identity_and_timing_at_1s": {
+          "question_count": 4,
+          "known_count": 0,
+          "unknown_count": 4,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 1.0
+        },
+        "event_identity_and_timing_at_2s": {
+          "question_count": 4,
+          "known_count": 0,
+          "unknown_count": 4,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 1.0
+        },
+        "event_identity_and_timing_at_5s": {
+          "question_count": 4,
+          "known_count": 0,
+          "unknown_count": 4,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 1.0
+        }
+      }
+    }
+  },
+  "by_task": {
+    "onset": {
+      "question_count": 4,
+      "status_counts": {
+        "answered": 2,
+        "insufficient_evidence": 2,
+        "error": 0,
+        "missing": 0
+      },
+      "reasoning": {
+        "question_count": 0,
+        "known_count": 0,
+        "unknown_count": 0,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": null,
+        "accuracy_upper_bound": null
+      },
+      "supported_reasoning": {
+        "question_count": 0,
+        "known_count": 0,
+        "unknown_count": 0,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": null,
+        "accuracy_upper_bound": null
+      },
+      "timestamp_search": {
+        "question_count": 0,
+        "semantic": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "supported_semantic": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "temporal": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "target_coverage": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "citation_scope_precision": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "source_scope_compliance": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "frame_scope_compliance": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "mean_point_distance_seconds_conditional": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "max_citation_width_seconds": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        }
+      },
+      "review_coverage": {
+        "question_count": 4,
+        "named_review_count": 0,
+        "complete_semantic_review_count": 0,
+        "complete_semantic_review_fraction": 0.0,
+        "required_atom_count": 0,
+        "reviewed_atom_count": 0
+      },
+      "negative_abstention": {
+        "question_count": 0,
+        "known_count": 0,
+        "unknown_count": 0,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": null,
+        "accuracy_upper_bound": null
+      },
+      "onset": {
+        "question_count": 4,
+        "explicit_prediction_count": 0,
+        "valid_prediction_count": 0,
+        "modality_mismatch_count": 0,
+        "error_measured_count": 0,
+        "mean_absolute_error_seconds_conditional": null,
+        "median_absolute_error_seconds_conditional": null,
+        "bracket_count": 0,
+        "mean_bracket_width_seconds": null,
+        "reference_bracket_coverage_conditional": null,
+        "success_at_1s": 0.0,
+        "success_at_2s": 0.0,
+        "success_at_5s": 0.0
+      },
+      "support_geometry": {
+        "question_count": 4,
+        "macro_support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0
+      },
+      "diagnostics": {
+        "retrieval": {
+          "annotated_question_count": 4,
+          "recorded_search_question_count": 4,
+          "recall_at_1": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "recall_at_3": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "recall_at_5": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "reciprocal_rank": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "ndcg_at_5": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "unique_support_coverage": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          }
+        },
+        "citation_geometry": {
+          "annotated_question_count": 4,
+          "matching_citation_count": 0,
+          "precision_denominator": 2,
+          "micro_precision_at_0_3": 0.0,
+          "precision_at_0_3": {
+            "measured_count": 2,
+            "missing_count": 2,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "temporal_only_precision_at_0_3": {
+            "measured_count": 2,
+            "missing_count": 2,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "support_recall_at_0_3": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "all_supports_hit_at_0_3": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          }
+        },
+        "cost": {
+          "latency_seconds": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 24.8236,
+            "mean": 6.2059,
+            "median": 5.43535,
+            "p90": 11.14837,
+            "p95": 11.645785
+          },
+          "model_calls": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 8,
+            "mean": 2,
+            "median": 2.0,
+            "p90": 3.0,
+            "p95": 3.0
+          },
+          "input_tokens": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 3796,
+            "mean": 949,
+            "median": 850.0,
+            "p90": 1688.9,
+            "p95": 1748.4499999999998
+          },
+          "output_tokens": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 658,
+            "mean": 164.5,
+            "median": 138.5,
+            "p90": 301.5,
+            "p95": 317.24999999999994
+          },
+          "decoded_frames": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "inspection_frames": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "raw_decoder_frames_decoded": {
+            "measured_count": 0,
+            "missing_count": 4,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "unique_frames": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "tool_calls": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 4,
+            "mean": 1,
+            "median": 1.0,
+            "p90": 1.0,
+            "p95": 1.0
+          },
+          "duplicate_frame_fraction": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "decision_repair_attempt_count": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "aggregate_duplicate_frame_fraction": 0.0,
+          "duplicate_frame_denominator": 0,
+          "duplicate_frame_measured_question_count": 4,
+          "per_tool": {
+            "search": {
+              "attempt_count": 4,
+              "known_outcome_count": 4,
+              "failure_count": 0,
+              "failure_rate": 0.0,
+              "latency_seconds": {
+                "measured_count": 4,
+                "missing_count": 0,
+                "sum": 0.0095,
+                "mean": 0.002375,
+                "median": 0.0014,
+                "p90": 0.004840000000000001,
+                "p95": 0.005469999999999999
+              }
+            }
+          },
+          "telemetry_inconsistent_question_count": 0
+        },
+        "rates": {
+          "question_count": 4,
+          "observed_prediction_count": 4,
+          "missing_prediction_count": 0,
+          "operational_error_rate": 0.0,
+          "abstention_rate": 0.5,
+          "format_repair_measured_count": 4,
+          "format_repair_unknown_count": 0,
+          "format_repair_rate": 0.0,
+          "hard_budget_measured_count": 4,
+          "hard_budget_unknown_count": 0,
+          "hard_budget_violation_count": 0,
+          "hard_budget_violation_rate": 0.0
+        },
+        "joint_reviewed": {
+          "reasoning_and_support": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "timestamp_content_and_temporal": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_1s": {
+            "question_count": 4,
+            "known_count": 0,
+            "unknown_count": 4,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_2s": {
+            "question_count": 4,
+            "known_count": 0,
+            "unknown_count": 4,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_5s": {
+            "question_count": 4,
+            "known_count": 0,
+            "unknown_count": 4,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          }
+        }
+      }
+    },
+    "reasoning": {
+      "question_count": 6,
+      "status_counts": {
+        "answered": 5,
+        "insufficient_evidence": 0,
+        "error": 1,
+        "missing": 0
+      },
+      "reasoning": {
+        "question_count": 6,
+        "known_count": 1,
+        "unknown_count": 5,
+        "success_count": 0.0,
+        "accuracy_all": null,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.8333333333333334
+      },
+      "supported_reasoning": {
+        "question_count": 6,
+        "known_count": 1,
+        "unknown_count": 5,
+        "success_count": 0.0,
+        "accuracy_all": null,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.8333333333333334
+      },
+      "timestamp_search": {
+        "question_count": 0,
+        "semantic": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "supported_semantic": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "temporal": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "target_coverage": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "citation_scope_precision": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "source_scope_compliance": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "frame_scope_compliance": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "mean_point_distance_seconds_conditional": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "max_citation_width_seconds": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        }
+      },
+      "review_coverage": {
+        "question_count": 6,
+        "named_review_count": 0,
+        "complete_semantic_review_count": 0,
+        "complete_semantic_review_fraction": 0.0,
+        "required_atom_count": 19,
+        "reviewed_atom_count": 0
+      },
+      "negative_abstention": {
+        "question_count": 0,
+        "known_count": 0,
+        "unknown_count": 0,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": null,
+        "accuracy_upper_bound": null
+      },
+      "onset": {
+        "question_count": 0,
+        "explicit_prediction_count": 0,
+        "valid_prediction_count": 0,
+        "modality_mismatch_count": 0,
+        "error_measured_count": 0,
+        "mean_absolute_error_seconds_conditional": null,
+        "median_absolute_error_seconds_conditional": null,
+        "bracket_count": 0,
+        "mean_bracket_width_seconds": null,
+        "reference_bracket_coverage_conditional": null,
+        "success_at_1s": null,
+        "success_at_2s": null,
+        "success_at_5s": null
+      },
+      "support_geometry": {
+        "question_count": 6,
+        "macro_support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0
+      },
+      "diagnostics": {
+        "retrieval": {
+          "annotated_question_count": 6,
+          "recorded_search_question_count": 5,
+          "recall_at_1": {
+            "measured_count": 5,
+            "missing_count": 1,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "recall_at_3": {
+            "measured_count": 5,
+            "missing_count": 1,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "recall_at_5": {
+            "measured_count": 5,
+            "missing_count": 1,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "reciprocal_rank": {
+            "measured_count": 5,
+            "missing_count": 1,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "ndcg_at_5": {
+            "measured_count": 5,
+            "missing_count": 1,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "unique_support_coverage": {
+            "measured_count": 5,
+            "missing_count": 1,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          }
+        },
+        "citation_geometry": {
+          "annotated_question_count": 6,
+          "matching_citation_count": 0,
+          "precision_denominator": 8,
+          "micro_precision_at_0_3": 0.0,
+          "precision_at_0_3": {
+            "measured_count": 5,
+            "missing_count": 1,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "temporal_only_precision_at_0_3": {
+            "measured_count": 5,
+            "missing_count": 1,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "support_recall_at_0_3": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "all_supports_hit_at_0_3": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          }
+        },
+        "cost": {
+          "latency_seconds": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 145.3594,
+            "mean": 24.226566666666667,
+            "median": 23.051000000000002,
+            "p90": 40.023250000000004,
+            "p95": 41.522675
+          },
+          "model_calls": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 18,
+            "mean": 3,
+            "median": 3.0,
+            "p90": 3.0,
+            "p95": 3.0
+          },
+          "input_tokens": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 9859,
+            "mean": 1643.1666666666667,
+            "median": 1800.5,
+            "p90": 1831.5,
+            "p95": 1836.25
+          },
+          "output_tokens": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 1455,
+            "mean": 242.5,
+            "median": 256.5,
+            "p90": 281.0,
+            "p95": 289.0
+          },
+          "decoded_frames": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "inspection_frames": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "raw_decoder_frames_decoded": {
+            "measured_count": 0,
+            "missing_count": 6,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "unique_frames": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "tool_calls": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 5,
+            "mean": 0.8333333333333334,
+            "median": 1.0,
+            "p90": 1.0,
+            "p95": 1.0
+          },
+          "duplicate_frame_fraction": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "decision_repair_attempt_count": {
+            "measured_count": 6,
+            "missing_count": 0,
+            "sum": 2,
+            "mean": 0.3333333333333333,
+            "median": 0.0,
+            "p90": 1.0,
+            "p95": 1.5
+          },
+          "aggregate_duplicate_frame_fraction": 0.0,
+          "duplicate_frame_denominator": 0,
+          "duplicate_frame_measured_question_count": 6,
+          "per_tool": {
+            "search": {
+              "attempt_count": 5,
+              "known_outcome_count": 5,
+              "failure_count": 0,
+              "failure_rate": 0.0,
+              "latency_seconds": {
+                "measured_count": 5,
+                "missing_count": 0,
+                "sum": 0.0451,
+                "mean": 0.00902,
+                "median": 0.009,
+                "p90": 0.01238,
+                "p95": 0.01344
+              }
+            }
+          },
+          "telemetry_inconsistent_question_count": 0
+        },
+        "rates": {
+          "question_count": 6,
+          "observed_prediction_count": 6,
+          "missing_prediction_count": 0,
+          "operational_error_rate": 0.16666666666666666,
+          "abstention_rate": 0.0,
+          "format_repair_measured_count": 6,
+          "format_repair_unknown_count": 0,
+          "format_repair_rate": 0.16666666666666666,
+          "hard_budget_measured_count": 6,
+          "hard_budget_unknown_count": 0,
+          "hard_budget_violation_count": 0,
+          "hard_budget_violation_rate": 0.0
+        },
+        "joint_reviewed": {
+          "reasoning_and_support": {
+            "question_count": 6,
+            "known_count": 0,
+            "unknown_count": 6,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "timestamp_content_and_temporal": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_1s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_2s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_5s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          }
+        }
+      }
+    },
+    "timestamp_search": {
+      "question_count": 4,
+      "status_counts": {
+        "answered": 1,
+        "insufficient_evidence": 2,
+        "error": 1,
+        "missing": 0
+      },
+      "reasoning": {
+        "question_count": 0,
+        "known_count": 0,
+        "unknown_count": 0,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": null,
+        "accuracy_upper_bound": null
+      },
+      "supported_reasoning": {
+        "question_count": 0,
+        "known_count": 0,
+        "unknown_count": 0,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": null,
+        "accuracy_upper_bound": null
+      },
+      "timestamp_search": {
+        "question_count": 4,
+        "semantic": {
+          "question_count": 4,
+          "known_count": 3,
+          "unknown_count": 1,
+          "success_count": 0.0,
+          "accuracy_all": null,
+          "accuracy_known": 0.0,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 0.25
+        },
+        "supported_semantic": {
+          "question_count": 4,
+          "known_count": 3,
+          "unknown_count": 1,
+          "success_count": 0.0,
+          "accuracy_all": null,
+          "accuracy_known": 0.0,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 0.25
+        },
+        "temporal": {
+          "question_count": 4,
+          "known_count": 4,
+          "unknown_count": 0,
+          "success_count": 1.0,
+          "accuracy_all": 0.25,
+          "accuracy_known": 0.25,
+          "accuracy_lower_bound": 0.25,
+          "accuracy_upper_bound": 0.25
+        },
+        "target_coverage": {
+          "measured_count": 4,
+          "missing_count": 0,
+          "sum": 1.0,
+          "mean": 0.25,
+          "median": 0.0,
+          "p90": 0.7000000000000002,
+          "p95": 0.8499999999999996
+        },
+        "citation_scope_precision": {
+          "measured_count": 4,
+          "missing_count": 0,
+          "sum": 1.0,
+          "mean": 0.25,
+          "median": 0.0,
+          "p90": 0.7000000000000002,
+          "p95": 0.8499999999999996
+        },
+        "source_scope_compliance": {
+          "measured_count": 4,
+          "missing_count": 0,
+          "sum": 4.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0
+        },
+        "frame_scope_compliance": {
+          "measured_count": 3,
+          "missing_count": 1,
+          "sum": 3.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0
+        },
+        "mean_point_distance_seconds_conditional": {
+          "measured_count": 0,
+          "missing_count": 4,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "max_citation_width_seconds": {
+          "measured_count": 1,
+          "missing_count": 3,
+          "sum": 9.259999999999991,
+          "mean": 9.259999999999991,
+          "median": 9.259999999999991,
+          "p90": 9.259999999999991,
+          "p95": 9.259999999999991
+        }
+      },
+      "review_coverage": {
+        "question_count": 4,
+        "named_review_count": 0,
+        "complete_semantic_review_count": 0,
+        "complete_semantic_review_fraction": 0.0,
+        "required_atom_count": 11,
+        "reviewed_atom_count": 0
+      },
+      "negative_abstention": {
+        "question_count": 0,
+        "known_count": 0,
+        "unknown_count": 0,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": null,
+        "accuracy_upper_bound": null
+      },
+      "onset": {
+        "question_count": 0,
+        "explicit_prediction_count": 0,
+        "valid_prediction_count": 0,
+        "modality_mismatch_count": 0,
+        "error_measured_count": 0,
+        "mean_absolute_error_seconds_conditional": null,
+        "median_absolute_error_seconds_conditional": null,
+        "bracket_count": 0,
+        "mean_bracket_width_seconds": null,
+        "reference_bracket_coverage_conditional": null,
+        "success_at_1s": null,
+        "success_at_2s": null,
+        "success_at_5s": null
+      },
+      "support_geometry": {
+        "question_count": 4,
+        "macro_support_recall_at_0_3": 0.25,
+        "all_supports_hit_at_0_3": 0.25
+      },
+      "diagnostics": {
+        "retrieval": {
+          "annotated_question_count": 4,
+          "recorded_search_question_count": 3,
+          "recall_at_1": {
+            "measured_count": 3,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.3333333333333333,
+            "median": 0.0,
+            "p90": 0.8,
+            "p95": 0.8999999999999999
+          },
+          "recall_at_3": {
+            "measured_count": 3,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.3333333333333333,
+            "median": 0.0,
+            "p90": 0.8,
+            "p95": 0.8999999999999999
+          },
+          "recall_at_5": {
+            "measured_count": 3,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.3333333333333333,
+            "median": 0.0,
+            "p90": 0.8,
+            "p95": 0.8999999999999999
+          },
+          "reciprocal_rank": {
+            "measured_count": 3,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.3333333333333333,
+            "median": 0.0,
+            "p90": 0.8,
+            "p95": 0.8999999999999999
+          },
+          "ndcg_at_5": {
+            "measured_count": 3,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.3333333333333333,
+            "median": 0.0,
+            "p90": 0.8,
+            "p95": 0.8999999999999999
+          },
+          "unique_support_coverage": {
+            "measured_count": 3,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.3333333333333333,
+            "median": 0.0,
+            "p90": 0.8,
+            "p95": 0.8999999999999999
+          }
+        },
+        "citation_geometry": {
+          "annotated_question_count": 4,
+          "matching_citation_count": 1,
+          "precision_denominator": 1,
+          "micro_precision_at_0_3": 1.0,
+          "precision_at_0_3": {
+            "measured_count": 1,
+            "missing_count": 3,
+            "sum": 1.0,
+            "mean": 1.0,
+            "median": 1.0,
+            "p90": 1.0,
+            "p95": 1.0
+          },
+          "temporal_only_precision_at_0_3": {
+            "measured_count": 1,
+            "missing_count": 3,
+            "sum": 1.0,
+            "mean": 1.0,
+            "median": 1.0,
+            "p90": 1.0,
+            "p95": 1.0
+          },
+          "support_recall_at_0_3": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 1.0,
+            "mean": 0.25,
+            "median": 0.0,
+            "p90": 0.7000000000000002,
+            "p95": 0.8499999999999996
+          },
+          "all_supports_hit_at_0_3": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 1.0,
+            "mean": 0.25,
+            "median": 0.0,
+            "p90": 0.7000000000000002,
+            "p95": 0.8499999999999996
+          }
+        },
+        "cost": {
+          "latency_seconds": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 18.5013,
+            "mean": 4.625325,
+            "median": 4.61045,
+            "p90": 7.37384,
+            "p95": 7.46927
+          },
+          "model_calls": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 9,
+            "mean": 2.25,
+            "median": 2.0,
+            "p90": 3.7,
+            "p95": 3.8499999999999996
+          },
+          "input_tokens": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 2757,
+            "mean": 689.25,
+            "median": 526.5,
+            "p90": 1253.4,
+            "p95": 1351.1999999999998
+          },
+          "output_tokens": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 470,
+            "mean": 117.5,
+            "median": 119.0,
+            "p90": 184.1,
+            "p95": 186.04999999999998
+          },
+          "decoded_frames": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "inspection_frames": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "raw_decoder_frames_decoded": {
+            "measured_count": 0,
+            "missing_count": 4,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "unique_frames": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "tool_calls": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 3,
+            "mean": 0.75,
+            "median": 1.0,
+            "p90": 1.0,
+            "p95": 1.0
+          },
+          "duplicate_frame_fraction": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "decision_repair_attempt_count": {
+            "measured_count": 4,
+            "missing_count": 0,
+            "sum": 3,
+            "mean": 0.75,
+            "median": 0.5,
+            "p90": 1.7000000000000002,
+            "p95": 1.8499999999999996
+          },
+          "aggregate_duplicate_frame_fraction": 0.0,
+          "duplicate_frame_denominator": 0,
+          "duplicate_frame_measured_question_count": 4,
+          "per_tool": {
+            "search": {
+              "attempt_count": 3,
+              "known_outcome_count": 3,
+              "failure_count": 0,
+              "failure_rate": 0.0,
+              "latency_seconds": {
+                "measured_count": 3,
+                "missing_count": 0,
+                "sum": 0.0021999999999999997,
+                "mean": 0.0007333333333333332,
+                "median": 0.0006,
+                "p90": 0.0010799999999999998,
+                "p95": 0.00114
+              }
+            }
+          },
+          "telemetry_inconsistent_question_count": 0
+        },
+        "rates": {
+          "question_count": 4,
+          "observed_prediction_count": 4,
+          "missing_prediction_count": 0,
+          "operational_error_rate": 0.25,
+          "abstention_rate": 0.5,
+          "format_repair_measured_count": 4,
+          "format_repair_unknown_count": 0,
+          "format_repair_rate": 0.5,
+          "hard_budget_measured_count": 4,
+          "hard_budget_unknown_count": 0,
+          "hard_budget_violation_count": 0,
+          "hard_budget_violation_rate": 0.0
+        },
+        "joint_reviewed": {
+          "reasoning_and_support": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "timestamp_content_and_temporal": {
+            "question_count": 4,
+            "known_count": 0,
+            "unknown_count": 4,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_1s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_2s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_5s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          }
+        }
+      }
+    },
+    "unanswerable": {
+      "question_count": 2,
+      "status_counts": {
+        "answered": 1,
+        "insufficient_evidence": 1,
+        "error": 0,
+        "missing": 0
+      },
+      "reasoning": {
+        "question_count": 0,
+        "known_count": 0,
+        "unknown_count": 0,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": null,
+        "accuracy_upper_bound": null
+      },
+      "supported_reasoning": {
+        "question_count": 0,
+        "known_count": 0,
+        "unknown_count": 0,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": null,
+        "accuracy_upper_bound": null
+      },
+      "timestamp_search": {
+        "question_count": 0,
+        "semantic": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "supported_semantic": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "temporal": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "target_coverage": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "citation_scope_precision": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "source_scope_compliance": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "frame_scope_compliance": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "mean_point_distance_seconds_conditional": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "max_citation_width_seconds": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        }
+      },
+      "review_coverage": {
+        "question_count": 2,
+        "named_review_count": 0,
+        "complete_semantic_review_count": 0,
+        "complete_semantic_review_fraction": 0.0,
+        "required_atom_count": 0,
+        "reviewed_atom_count": 0
+      },
+      "negative_abstention": {
+        "question_count": 2,
+        "known_count": 1,
+        "unknown_count": 1,
+        "success_count": 0.0,
+        "accuracy_all": null,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.5
+      },
+      "onset": {
+        "question_count": 0,
+        "explicit_prediction_count": 0,
+        "valid_prediction_count": 0,
+        "modality_mismatch_count": 0,
+        "error_measured_count": 0,
+        "mean_absolute_error_seconds_conditional": null,
+        "median_absolute_error_seconds_conditional": null,
+        "bracket_count": 0,
+        "mean_bracket_width_seconds": null,
+        "reference_bracket_coverage_conditional": null,
+        "success_at_1s": null,
+        "success_at_2s": null,
+        "success_at_5s": null
+      },
+      "support_geometry": {
+        "question_count": 0,
+        "macro_support_recall_at_0_3": null,
+        "all_supports_hit_at_0_3": null
+      },
+      "diagnostics": {
+        "retrieval": {
+          "annotated_question_count": 0,
+          "recorded_search_question_count": 2,
+          "recall_at_1": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "recall_at_3": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "recall_at_5": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "reciprocal_rank": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "ndcg_at_5": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "unique_support_coverage": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          }
+        },
+        "citation_geometry": {
+          "annotated_question_count": 0,
+          "matching_citation_count": 0,
+          "precision_denominator": 0,
+          "micro_precision_at_0_3": null,
+          "precision_at_0_3": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "temporal_only_precision_at_0_3": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "support_recall_at_0_3": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "all_supports_hit_at_0_3": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          }
+        },
+        "cost": {
+          "latency_seconds": {
+            "measured_count": 2,
+            "missing_count": 0,
+            "sum": 19.114800000000002,
+            "mean": 9.557400000000001,
+            "median": 9.557400000000001,
+            "p90": 11.8954,
+            "p95": 12.187650000000001
+          },
+          "model_calls": {
+            "measured_count": 2,
+            "missing_count": 0,
+            "sum": 6,
+            "mean": 3,
+            "median": 3.0,
+            "p90": 3.0,
+            "p95": 3.0
+          },
+          "input_tokens": {
+            "measured_count": 2,
+            "missing_count": 0,
+            "sum": 5595,
+            "mean": 2797.5,
+            "median": 2797.5,
+            "p90": 3606.7,
+            "p95": 3707.85
+          },
+          "output_tokens": {
+            "measured_count": 2,
+            "missing_count": 0,
+            "sum": 418,
+            "mean": 209,
+            "median": 209.0,
+            "p90": 238.60000000000002,
+            "p95": 242.3
+          },
+          "decoded_frames": {
+            "measured_count": 2,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "inspection_frames": {
+            "measured_count": 2,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "raw_decoder_frames_decoded": {
+            "measured_count": 0,
+            "missing_count": 2,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "unique_frames": {
+            "measured_count": 2,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "tool_calls": {
+            "measured_count": 2,
+            "missing_count": 0,
+            "sum": 2,
+            "mean": 1,
+            "median": 1.0,
+            "p90": 1.0,
+            "p95": 1.0
+          },
+          "duplicate_frame_fraction": {
+            "measured_count": 2,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "decision_repair_attempt_count": {
+            "measured_count": 2,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "aggregate_duplicate_frame_fraction": 0.0,
+          "duplicate_frame_denominator": 0,
+          "duplicate_frame_measured_question_count": 2,
+          "per_tool": {
+            "search": {
+              "attempt_count": 2,
+              "known_outcome_count": 2,
+              "failure_count": 0,
+              "failure_rate": 0.0,
+              "latency_seconds": {
+                "measured_count": 2,
+                "missing_count": 0,
+                "sum": 0.052500000000000005,
+                "mean": 0.026250000000000002,
+                "median": 0.026250000000000002,
+                "p90": 0.04077,
+                "p95": 0.042585
+              }
+            }
+          },
+          "telemetry_inconsistent_question_count": 0
+        },
+        "rates": {
+          "question_count": 2,
+          "observed_prediction_count": 2,
+          "missing_prediction_count": 0,
+          "operational_error_rate": 0.0,
+          "abstention_rate": 0.5,
+          "format_repair_measured_count": 2,
+          "format_repair_unknown_count": 0,
+          "format_repair_rate": 0.0,
+          "hard_budget_measured_count": 2,
+          "hard_budget_unknown_count": 0,
+          "hard_budget_violation_count": 0,
+          "hard_budget_violation_rate": 0.0
+        },
+        "joint_reviewed": {
+          "reasoning_and_support": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "timestamp_content_and_temporal": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_1s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_2s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_5s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          }
+        }
+      }
+    }
+  },
+  "by_modality": {
+    "audiovisual": {
+      "question_count": 1,
+      "status_counts": {
+        "answered": 1,
+        "insufficient_evidence": 0,
+        "error": 0,
+        "missing": 0
+      },
+      "reasoning": {
+        "question_count": 1,
+        "known_count": 0,
+        "unknown_count": 1,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 1.0
+      },
+      "supported_reasoning": {
+        "question_count": 1,
+        "known_count": 0,
+        "unknown_count": 1,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 1.0
+      },
+      "timestamp_search": {
+        "question_count": 0,
+        "semantic": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "supported_semantic": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "temporal": {
+          "question_count": 0,
+          "known_count": 0,
+          "unknown_count": 0,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": null,
+          "accuracy_upper_bound": null
+        },
+        "target_coverage": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "citation_scope_precision": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "source_scope_compliance": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "frame_scope_compliance": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "mean_point_distance_seconds_conditional": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "max_citation_width_seconds": {
+          "measured_count": 0,
+          "missing_count": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        }
+      },
+      "review_coverage": {
+        "question_count": 1,
+        "named_review_count": 0,
+        "complete_semantic_review_count": 0,
+        "complete_semantic_review_fraction": 0.0,
+        "required_atom_count": 3,
+        "reviewed_atom_count": 0
+      },
+      "negative_abstention": {
+        "question_count": 0,
+        "known_count": 0,
+        "unknown_count": 0,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": null,
+        "accuracy_upper_bound": null
+      },
+      "onset": {
+        "question_count": 0,
+        "explicit_prediction_count": 0,
+        "valid_prediction_count": 0,
+        "modality_mismatch_count": 0,
+        "error_measured_count": 0,
+        "mean_absolute_error_seconds_conditional": null,
+        "median_absolute_error_seconds_conditional": null,
+        "bracket_count": 0,
+        "mean_bracket_width_seconds": null,
+        "reference_bracket_coverage_conditional": null,
+        "success_at_1s": null,
+        "success_at_2s": null,
+        "success_at_5s": null
+      },
+      "support_geometry": {
+        "question_count": 1,
+        "macro_support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0
+      },
+      "diagnostics": {
+        "retrieval": {
+          "annotated_question_count": 1,
+          "recorded_search_question_count": 1,
+          "recall_at_1": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "recall_at_3": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "recall_at_5": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "reciprocal_rank": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "ndcg_at_5": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "unique_support_coverage": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          }
+        },
+        "citation_geometry": {
+          "annotated_question_count": 1,
+          "matching_citation_count": 0,
+          "precision_denominator": 1,
+          "micro_precision_at_0_3": 0.0,
+          "precision_at_0_3": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "temporal_only_precision_at_0_3": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "support_recall_at_0_3": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "all_supports_hit_at_0_3": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          }
+        },
+        "cost": {
+          "latency_seconds": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 26.2059,
+            "mean": 26.2059,
+            "median": 26.2059,
+            "p90": 26.2059,
+            "p95": 26.2059
+          },
+          "model_calls": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 3,
+            "mean": 3,
+            "median": 3,
+            "p90": 3.0,
+            "p95": 3.0
+          },
+          "input_tokens": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 1822,
+            "mean": 1822,
+            "median": 1822,
+            "p90": 1822.0,
+            "p95": 1822.0
+          },
+          "output_tokens": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 257,
+            "mean": 257,
+            "median": 257,
+            "p90": 257.0,
+            "p95": 257.0
+          },
+          "decoded_frames": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "inspection_frames": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "raw_decoder_frames_decoded": {
+            "measured_count": 0,
+            "missing_count": 1,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "unique_frames": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "tool_calls": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 1,
+            "mean": 1,
+            "median": 1,
+            "p90": 1.0,
+            "p95": 1.0
+          },
+          "duplicate_frame_fraction": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "decision_repair_attempt_count": {
+            "measured_count": 1,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "aggregate_duplicate_frame_fraction": 0.0,
+          "duplicate_frame_denominator": 0,
+          "duplicate_frame_measured_question_count": 1,
+          "per_tool": {
+            "search": {
+              "attempt_count": 1,
+              "known_outcome_count": 1,
+              "failure_count": 0,
+              "failure_rate": 0.0,
+              "latency_seconds": {
+                "measured_count": 1,
+                "missing_count": 0,
+                "sum": 0.0092,
+                "mean": 0.0092,
+                "median": 0.0092,
+                "p90": 0.0092,
+                "p95": 0.0092
+              }
+            }
+          },
+          "telemetry_inconsistent_question_count": 0
+        },
+        "rates": {
+          "question_count": 1,
+          "observed_prediction_count": 1,
+          "missing_prediction_count": 0,
+          "operational_error_rate": 0.0,
+          "abstention_rate": 0.0,
+          "format_repair_measured_count": 1,
+          "format_repair_unknown_count": 0,
+          "format_repair_rate": 0.0,
+          "hard_budget_measured_count": 1,
+          "hard_budget_unknown_count": 0,
+          "hard_budget_violation_count": 0,
+          "hard_budget_violation_rate": 0.0
+        },
+        "joint_reviewed": {
+          "reasoning_and_support": {
+            "question_count": 1,
+            "known_count": 0,
+            "unknown_count": 1,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "timestamp_content_and_temporal": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_1s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_2s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          },
+          "event_identity_and_timing_at_5s": {
+            "question_count": 0,
+            "known_count": 0,
+            "unknown_count": 0,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": null,
+            "accuracy_upper_bound": null
+          }
+        }
+      }
+    },
+    "transcript": {
+      "question_count": 8,
+      "status_counts": {
+        "answered": 8,
+        "insufficient_evidence": 0,
+        "error": 0,
+        "missing": 0
+      },
+      "reasoning": {
+        "question_count": 4,
+        "known_count": 0,
+        "unknown_count": 4,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 1.0
+      },
+      "supported_reasoning": {
+        "question_count": 4,
+        "known_count": 0,
+        "unknown_count": 4,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 1.0
+      },
+      "timestamp_search": {
+        "question_count": 1,
+        "semantic": {
+          "question_count": 1,
+          "known_count": 0,
+          "unknown_count": 1,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 1.0
+        },
+        "supported_semantic": {
+          "question_count": 1,
+          "known_count": 0,
+          "unknown_count": 1,
+          "success_count": 0,
+          "accuracy_all": null,
+          "accuracy_known": null,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 1.0
+        },
+        "temporal": {
+          "question_count": 1,
+          "known_count": 1,
+          "unknown_count": 0,
+          "success_count": 1.0,
+          "accuracy_all": 1.0,
+          "accuracy_known": 1.0,
+          "accuracy_lower_bound": 1.0,
+          "accuracy_upper_bound": 1.0
+        },
+        "target_coverage": {
+          "measured_count": 1,
+          "missing_count": 0,
+          "sum": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0
+        },
+        "citation_scope_precision": {
+          "measured_count": 1,
+          "missing_count": 0,
+          "sum": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0
+        },
+        "source_scope_compliance": {
+          "measured_count": 1,
+          "missing_count": 0,
+          "sum": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0
+        },
+        "frame_scope_compliance": {
+          "measured_count": 0,
+          "missing_count": 1,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "mean_point_distance_seconds_conditional": {
+          "measured_count": 0,
+          "missing_count": 1,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "max_citation_width_seconds": {
+          "measured_count": 1,
+          "missing_count": 0,
+          "sum": 9.259999999999991,
+          "mean": 9.259999999999991,
+          "median": 9.259999999999991,
+          "p90": 9.259999999999991,
+          "p95": 9.259999999999991
+        }
+      },
+      "review_coverage": {
+        "question_count": 8,
+        "named_review_count": 0,
+        "complete_semantic_review_count": 0,
+        "complete_semantic_review_fraction": 0.0,
+        "required_atom_count": 15,
+        "reviewed_atom_count": 0
+      },
+      "negative_abstention": {
+        "question_count": 1,
+        "known_count": 1,
+        "unknown_count": 0,
+        "success_count": 0.0,
+        "accuracy_all": 0.0,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.0
+      },
+      "onset": {
+        "question_count": 2,
+        "explicit_prediction_count": 0,
+        "valid_prediction_count": 0,
+        "modality_mismatch_count": 0,
+        "error_measured_count": 0,
+        "mean_absolute_error_seconds_conditional": null,
+        "median_absolute_error_seconds_conditional": null,
+        "bracket_count": 0,
+        "mean_bracket_width_seconds": null,
+        "reference_bracket_coverage_conditional": null,
+        "success_at_1s": 0.0,
+        "success_at_2s": 0.0,
+        "success_at_5s": 0.0
+      },
+      "support_geometry": {
+        "question_count": 7,
+        "macro_support_recall_at_0_3": 0.14285714285714285,
+        "all_supports_hit_at_0_3": 0.14285714285714285
+      },
+      "diagnostics": {
+        "retrieval": {
+          "annotated_question_count": 7,
+          "recorded_search_question_count": 8,
+          "recall_at_1": {
+            "measured_count": 7,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.14285714285714285,
+            "median": 0.0,
+            "p90": 0.40000000000000036,
+            "p95": 0.6999999999999993
+          },
+          "recall_at_3": {
+            "measured_count": 7,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.14285714285714285,
+            "median": 0.0,
+            "p90": 0.40000000000000036,
+            "p95": 0.6999999999999993
+          },
+          "recall_at_5": {
+            "measured_count": 7,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.14285714285714285,
+            "median": 0.0,
+            "p90": 0.40000000000000036,
+            "p95": 0.6999999999999993
+          },
+          "reciprocal_rank": {
+            "measured_count": 7,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.14285714285714285,
+            "median": 0.0,
+            "p90": 0.40000000000000036,
+            "p95": 0.6999999999999993
+          },
+          "ndcg_at_5": {
+            "measured_count": 7,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.14285714285714285,
+            "median": 0.0,
+            "p90": 0.40000000000000036,
+            "p95": 0.6999999999999993
+          },
+          "unique_support_coverage": {
+            "measured_count": 7,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.14285714285714285,
+            "median": 0.0,
+            "p90": 0.40000000000000036,
+            "p95": 0.6999999999999993
+          }
+        },
+        "citation_geometry": {
+          "annotated_question_count": 7,
+          "matching_citation_count": 1,
+          "precision_denominator": 10,
+          "micro_precision_at_0_3": 0.1,
+          "precision_at_0_3": {
+            "measured_count": 7,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.14285714285714285,
+            "median": 0.0,
+            "p90": 0.40000000000000036,
+            "p95": 0.6999999999999993
+          },
+          "temporal_only_precision_at_0_3": {
+            "measured_count": 7,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.14285714285714285,
+            "median": 0.0,
+            "p90": 0.40000000000000036,
+            "p95": 0.6999999999999993
+          },
+          "support_recall_at_0_3": {
+            "measured_count": 7,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.14285714285714285,
+            "median": 0.0,
+            "p90": 0.40000000000000036,
+            "p95": 0.6999999999999993
+          },
+          "all_supports_hit_at_0_3": {
+            "measured_count": 7,
+            "missing_count": 1,
+            "sum": 1.0,
+            "mean": 0.14285714285714285,
+            "median": 0.0,
+            "p90": 0.40000000000000036,
+            "p95": 0.6999999999999993
+          }
+        },
+        "cost": {
+          "latency_seconds": {
+            "measured_count": 8,
+            "missing_count": 0,
+            "sum": 133.7911,
+            "mean": 16.7238875,
+            "median": 9.60545,
+            "p90": 38.82371,
+            "p95": 40.922905
+          },
+          "model_calls": {
+            "measured_count": 8,
+            "missing_count": 0,
+            "sum": 25,
+            "mean": 3.125,
+            "median": 3.0,
+            "p90": 3.3,
+            "p95": 3.6499999999999995
+          },
+          "input_tokens": {
+            "measured_count": 8,
+            "missing_count": 0,
+            "sum": 13663,
+            "mean": 1707.875,
+            "median": 1784.0,
+            "p90": 1825.6,
+            "p95": 1833.3
+          },
+          "output_tokens": {
+            "measured_count": 8,
+            "missing_count": 0,
+            "sum": 1969,
+            "mean": 246.125,
+            "median": 243.0,
+            "p90": 307.8,
+            "p95": 320.4
+          },
+          "decoded_frames": {
+            "measured_count": 8,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "inspection_frames": {
+            "measured_count": 8,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "raw_decoder_frames_decoded": {
+            "measured_count": 0,
+            "missing_count": 8,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "unique_frames": {
+            "measured_count": 8,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "tool_calls": {
+            "measured_count": 8,
+            "missing_count": 0,
+            "sum": 8,
+            "mean": 1,
+            "median": 1.0,
+            "p90": 1.0,
+            "p95": 1.0
+          },
+          "duplicate_frame_fraction": {
+            "measured_count": 8,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "decision_repair_attempt_count": {
+            "measured_count": 8,
+            "missing_count": 0,
+            "sum": 1,
+            "mean": 0.125,
+            "median": 0.0,
+            "p90": 0.2999999999999998,
+            "p95": 0.6499999999999995
+          },
+          "aggregate_duplicate_frame_fraction": 0.0,
+          "duplicate_frame_denominator": 0,
+          "duplicate_frame_measured_question_count": 8,
+          "per_tool": {
+            "search": {
+              "attempt_count": 8,
+              "known_outcome_count": 8,
+              "failure_count": 0,
+              "failure_rate": 0.0,
+              "latency_seconds": {
+                "measured_count": 8,
+                "missing_count": 0,
+                "sum": 0.0526,
+                "mean": 0.006575,
+                "median": 0.00645,
+                "p90": 0.010649999999999998,
+                "p95": 0.012574999999999998
+              }
+            }
+          },
+          "telemetry_inconsistent_question_count": 0
+        },
+        "rates": {
+          "question_count": 8,
+          "observed_prediction_count": 8,
+          "missing_prediction_count": 0,
+          "operational_error_rate": 0.0,
+          "abstention_rate": 0.0,
+          "format_repair_measured_count": 8,
+          "format_repair_unknown_count": 0,
+          "format_repair_rate": 0.125,
+          "hard_budget_measured_count": 8,
+          "hard_budget_unknown_count": 0,
+          "hard_budget_violation_count": 0,
+          "hard_budget_violation_rate": 0.0
+        },
+        "joint_reviewed": {
+          "reasoning_and_support": {
+            "question_count": 4,
+            "known_count": 0,
+            "unknown_count": 4,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "timestamp_content_and_temporal": {
+            "question_count": 1,
+            "known_count": 0,
+            "unknown_count": 1,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_1s": {
+            "question_count": 2,
+            "known_count": 0,
+            "unknown_count": 2,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_2s": {
+            "question_count": 2,
+            "known_count": 0,
+            "unknown_count": 2,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_5s": {
+            "question_count": 2,
+            "known_count": 0,
+            "unknown_count": 2,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          }
+        }
+      }
+    },
+    "visual": {
+      "question_count": 7,
+      "status_counts": {
+        "answered": 0,
+        "insufficient_evidence": 5,
+        "error": 2,
+        "missing": 0
+      },
+      "reasoning": {
+        "question_count": 1,
+        "known_count": 1,
+        "unknown_count": 0,
+        "success_count": 0.0,
+        "accuracy_all": 0.0,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.0
+      },
+      "supported_reasoning": {
+        "question_count": 1,
+        "known_count": 1,
+        "unknown_count": 0,
+        "success_count": 0.0,
+        "accuracy_all": 0.0,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.0
+      },
+      "timestamp_search": {
+        "question_count": 3,
+        "semantic": {
+          "question_count": 3,
+          "known_count": 3,
+          "unknown_count": 0,
+          "success_count": 0.0,
+          "accuracy_all": 0.0,
+          "accuracy_known": 0.0,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 0.0
+        },
+        "supported_semantic": {
+          "question_count": 3,
+          "known_count": 3,
+          "unknown_count": 0,
+          "success_count": 0.0,
+          "accuracy_all": 0.0,
+          "accuracy_known": 0.0,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 0.0
+        },
+        "temporal": {
+          "question_count": 3,
+          "known_count": 3,
+          "unknown_count": 0,
+          "success_count": 0.0,
+          "accuracy_all": 0.0,
+          "accuracy_known": 0.0,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 0.0
+        },
+        "target_coverage": {
+          "measured_count": 3,
+          "missing_count": 0,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0
+        },
+        "citation_scope_precision": {
+          "measured_count": 3,
+          "missing_count": 0,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0
+        },
+        "source_scope_compliance": {
+          "measured_count": 3,
+          "missing_count": 0,
+          "sum": 3.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0
+        },
+        "frame_scope_compliance": {
+          "measured_count": 3,
+          "missing_count": 0,
+          "sum": 3.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0
+        },
+        "mean_point_distance_seconds_conditional": {
+          "measured_count": 0,
+          "missing_count": 3,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "max_citation_width_seconds": {
+          "measured_count": 0,
+          "missing_count": 3,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        }
+      },
+      "review_coverage": {
+        "question_count": 7,
+        "named_review_count": 0,
+        "complete_semantic_review_count": 0,
+        "complete_semantic_review_fraction": 0.0,
+        "required_atom_count": 12,
+        "reviewed_atom_count": 0
+      },
+      "negative_abstention": {
+        "question_count": 1,
+        "known_count": 0,
+        "unknown_count": 1,
+        "success_count": 0,
+        "accuracy_all": null,
+        "accuracy_known": null,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 1.0
+      },
+      "onset": {
+        "question_count": 2,
+        "explicit_prediction_count": 0,
+        "valid_prediction_count": 0,
+        "modality_mismatch_count": 0,
+        "error_measured_count": 0,
+        "mean_absolute_error_seconds_conditional": null,
+        "median_absolute_error_seconds_conditional": null,
+        "bracket_count": 0,
+        "mean_bracket_width_seconds": null,
+        "reference_bracket_coverage_conditional": null,
+        "success_at_1s": 0.0,
+        "success_at_2s": 0.0,
+        "success_at_5s": 0.0
+      },
+      "support_geometry": {
+        "question_count": 6,
+        "macro_support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0
+      },
+      "diagnostics": {
+        "retrieval": {
+          "annotated_question_count": 6,
+          "recorded_search_question_count": 5,
+          "recall_at_1": {
+            "measured_count": 4,
+            "missing_count": 3,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "recall_at_3": {
+            "measured_count": 4,
+            "missing_count": 3,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "recall_at_5": {
+            "measured_count": 4,
+            "missing_count": 3,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "reciprocal_rank": {
+            "measured_count": 4,
+            "missing_count": 3,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "ndcg_at_5": {
+            "measured_count": 4,
+            "missing_count": 3,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "unique_support_coverage": {
+            "measured_count": 4,
+            "missing_count": 3,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          }
+        },
+        "citation_geometry": {
+          "annotated_question_count": 6,
+          "matching_citation_count": 0,
+          "precision_denominator": 0,
+          "micro_precision_at_0_3": null,
+          "precision_at_0_3": {
+            "measured_count": 0,
+            "missing_count": 7,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "temporal_only_precision_at_0_3": {
+            "measured_count": 0,
+            "missing_count": 7,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "support_recall_at_0_3": {
+            "measured_count": 6,
+            "missing_count": 1,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "all_supports_hit_at_0_3": {
+            "measured_count": 6,
+            "missing_count": 1,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          }
+        },
+        "cost": {
+          "latency_seconds": {
+            "measured_count": 7,
+            "missing_count": 0,
+            "sum": 47.8021,
+            "mean": 6.8288714285714285,
+            "median": 2.2924,
+            "p90": 15.446380000000003,
+            "p95": 17.671239999999997
+          },
+          "model_calls": {
+            "measured_count": 7,
+            "missing_count": 0,
+            "sum": 13,
+            "mean": 1.8571428571428572,
+            "median": 1,
+            "p90": 3.0,
+            "p95": 3.0
+          },
+          "input_tokens": {
+            "measured_count": 7,
+            "missing_count": 0,
+            "sum": 6522,
+            "mean": 931.7142857142857,
+            "median": 289,
+            "p90": 2020.400000000001,
+            "p95": 2914.699999999998
+          },
+          "output_tokens": {
+            "measured_count": 7,
+            "missing_count": 0,
+            "sum": 775,
+            "mean": 110.71428571428571,
+            "median": 63,
+            "p90": 203.40000000000003,
+            "p95": 224.69999999999993
+          },
+          "decoded_frames": {
+            "measured_count": 7,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "inspection_frames": {
+            "measured_count": 7,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "raw_decoder_frames_decoded": {
+            "measured_count": 0,
+            "missing_count": 7,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "unique_frames": {
+            "measured_count": 7,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "tool_calls": {
+            "measured_count": 7,
+            "missing_count": 0,
+            "sum": 5,
+            "mean": 0.7142857142857143,
+            "median": 1,
+            "p90": 1.0,
+            "p95": 1.0
+          },
+          "duplicate_frame_fraction": {
+            "measured_count": 7,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "decision_repair_attempt_count": {
+            "measured_count": 7,
+            "missing_count": 0,
+            "sum": 4,
+            "mean": 0.5714285714285714,
+            "median": 0,
+            "p90": 2.0,
+            "p95": 2.0
+          },
+          "aggregate_duplicate_frame_fraction": 0.0,
+          "duplicate_frame_denominator": 0,
+          "duplicate_frame_measured_question_count": 7,
+          "per_tool": {
+            "search": {
+              "attempt_count": 5,
+              "known_outcome_count": 5,
+              "failure_count": 0,
+              "failure_rate": 0.0,
+              "latency_seconds": {
+                "measured_count": 5,
+                "missing_count": 0,
+                "sum": 0.0475,
+                "mean": 0.0095,
+                "median": 0.0009,
+                "p90": 0.027120000000000005,
+                "p95": 0.03575999999999999
+              }
+            }
+          },
+          "telemetry_inconsistent_question_count": 0
+        },
+        "rates": {
+          "question_count": 7,
+          "observed_prediction_count": 7,
+          "missing_prediction_count": 0,
+          "operational_error_rate": 0.2857142857142857,
+          "abstention_rate": 0.7142857142857143,
+          "format_repair_measured_count": 7,
+          "format_repair_unknown_count": 0,
+          "format_repair_rate": 0.2857142857142857,
+          "hard_budget_measured_count": 7,
+          "hard_budget_unknown_count": 0,
+          "hard_budget_violation_count": 0,
+          "hard_budget_violation_rate": 0.0
+        },
+        "joint_reviewed": {
+          "reasoning_and_support": {
+            "question_count": 1,
+            "known_count": 0,
+            "unknown_count": 1,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "timestamp_content_and_temporal": {
+            "question_count": 3,
+            "known_count": 0,
+            "unknown_count": 3,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_1s": {
+            "question_count": 2,
+            "known_count": 0,
+            "unknown_count": 2,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_2s": {
+            "question_count": 2,
+            "known_count": 0,
+            "unknown_count": 2,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_5s": {
+            "question_count": 2,
+            "known_count": 0,
+            "unknown_count": 2,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          }
+        }
+      }
+    }
+  },
+  "by_split": {
+    "test": {
+      "question_count": 16,
+      "status_counts": {
+        "answered": 9,
+        "insufficient_evidence": 5,
+        "error": 2,
+        "missing": 0
+      },
+      "reasoning": {
+        "question_count": 6,
+        "known_count": 1,
+        "unknown_count": 5,
+        "success_count": 0.0,
+        "accuracy_all": null,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.8333333333333334
+      },
+      "supported_reasoning": {
+        "question_count": 6,
+        "known_count": 1,
+        "unknown_count": 5,
+        "success_count": 0.0,
+        "accuracy_all": null,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.8333333333333334
+      },
+      "timestamp_search": {
+        "question_count": 4,
+        "semantic": {
+          "question_count": 4,
+          "known_count": 3,
+          "unknown_count": 1,
+          "success_count": 0.0,
+          "accuracy_all": null,
+          "accuracy_known": 0.0,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 0.25
+        },
+        "supported_semantic": {
+          "question_count": 4,
+          "known_count": 3,
+          "unknown_count": 1,
+          "success_count": 0.0,
+          "accuracy_all": null,
+          "accuracy_known": 0.0,
+          "accuracy_lower_bound": 0.0,
+          "accuracy_upper_bound": 0.25
+        },
+        "temporal": {
+          "question_count": 4,
+          "known_count": 4,
+          "unknown_count": 0,
+          "success_count": 1.0,
+          "accuracy_all": 0.25,
+          "accuracy_known": 0.25,
+          "accuracy_lower_bound": 0.25,
+          "accuracy_upper_bound": 0.25
+        },
+        "target_coverage": {
+          "measured_count": 4,
+          "missing_count": 0,
+          "sum": 1.0,
+          "mean": 0.25,
+          "median": 0.0,
+          "p90": 0.7000000000000002,
+          "p95": 0.8499999999999996
+        },
+        "citation_scope_precision": {
+          "measured_count": 4,
+          "missing_count": 0,
+          "sum": 1.0,
+          "mean": 0.25,
+          "median": 0.0,
+          "p90": 0.7000000000000002,
+          "p95": 0.8499999999999996
+        },
+        "source_scope_compliance": {
+          "measured_count": 4,
+          "missing_count": 0,
+          "sum": 4.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0
+        },
+        "frame_scope_compliance": {
+          "measured_count": 3,
+          "missing_count": 1,
+          "sum": 3.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0
+        },
+        "mean_point_distance_seconds_conditional": {
+          "measured_count": 0,
+          "missing_count": 4,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "p95": null
+        },
+        "max_citation_width_seconds": {
+          "measured_count": 1,
+          "missing_count": 3,
+          "sum": 9.259999999999991,
+          "mean": 9.259999999999991,
+          "median": 9.259999999999991,
+          "p90": 9.259999999999991,
+          "p95": 9.259999999999991
+        }
+      },
+      "review_coverage": {
+        "question_count": 16,
+        "named_review_count": 0,
+        "complete_semantic_review_count": 0,
+        "complete_semantic_review_fraction": 0.0,
+        "required_atom_count": 30,
+        "reviewed_atom_count": 0
+      },
+      "negative_abstention": {
+        "question_count": 2,
+        "known_count": 1,
+        "unknown_count": 1,
+        "success_count": 0.0,
+        "accuracy_all": null,
+        "accuracy_known": 0.0,
+        "accuracy_lower_bound": 0.0,
+        "accuracy_upper_bound": 0.5
+      },
+      "onset": {
+        "question_count": 4,
+        "explicit_prediction_count": 0,
+        "valid_prediction_count": 0,
+        "modality_mismatch_count": 0,
+        "error_measured_count": 0,
+        "mean_absolute_error_seconds_conditional": null,
+        "median_absolute_error_seconds_conditional": null,
+        "bracket_count": 0,
+        "mean_bracket_width_seconds": null,
+        "reference_bracket_coverage_conditional": null,
+        "success_at_1s": 0.0,
+        "success_at_2s": 0.0,
+        "success_at_5s": 0.0
+      },
+      "support_geometry": {
+        "question_count": 14,
+        "macro_support_recall_at_0_3": 0.07142857142857142,
+        "all_supports_hit_at_0_3": 0.07142857142857142
+      },
+      "diagnostics": {
+        "retrieval": {
+          "annotated_question_count": 14,
+          "recorded_search_question_count": 14,
+          "recall_at_1": {
+            "measured_count": 12,
+            "missing_count": 4,
+            "sum": 1.0,
+            "mean": 0.08333333333333333,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.4499999999999993
+          },
+          "recall_at_3": {
+            "measured_count": 12,
+            "missing_count": 4,
+            "sum": 1.0,
+            "mean": 0.08333333333333333,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.4499999999999993
+          },
+          "recall_at_5": {
+            "measured_count": 12,
+            "missing_count": 4,
+            "sum": 1.0,
+            "mean": 0.08333333333333333,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.4499999999999993
+          },
+          "reciprocal_rank": {
+            "measured_count": 12,
+            "missing_count": 4,
+            "sum": 1.0,
+            "mean": 0.08333333333333333,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.4499999999999993
+          },
+          "ndcg_at_5": {
+            "measured_count": 12,
+            "missing_count": 4,
+            "sum": 1.0,
+            "mean": 0.08333333333333333,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.4499999999999993
+          },
+          "unique_support_coverage": {
+            "measured_count": 12,
+            "missing_count": 4,
+            "sum": 1.0,
+            "mean": 0.08333333333333333,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.4499999999999993
+          }
+        },
+        "citation_geometry": {
+          "annotated_question_count": 14,
+          "matching_citation_count": 1,
+          "precision_denominator": 11,
+          "micro_precision_at_0_3": 0.09090909090909091,
+          "precision_at_0_3": {
+            "measured_count": 8,
+            "missing_count": 8,
+            "sum": 1.0,
+            "mean": 0.125,
+            "median": 0.0,
+            "p90": 0.2999999999999998,
+            "p95": 0.6499999999999995
+          },
+          "temporal_only_precision_at_0_3": {
+            "measured_count": 8,
+            "missing_count": 8,
+            "sum": 1.0,
+            "mean": 0.125,
+            "median": 0.0,
+            "p90": 0.2999999999999998,
+            "p95": 0.6499999999999995
+          },
+          "support_recall_at_0_3": {
+            "measured_count": 14,
+            "missing_count": 2,
+            "sum": 1.0,
+            "mean": 0.07142857142857142,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.34999999999999964
+          },
+          "all_supports_hit_at_0_3": {
+            "measured_count": 14,
+            "missing_count": 2,
+            "sum": 1.0,
+            "mean": 0.07142857142857142,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.34999999999999964
+          }
+        },
+        "cost": {
+          "latency_seconds": {
+            "measured_count": 16,
+            "missing_count": 0,
+            "sum": 207.7991,
+            "mean": 12.98744375,
+            "median": 8.842749999999999,
+            "p90": 31.61515,
+            "p95": 38.523825
+          },
+          "model_calls": {
+            "measured_count": 16,
+            "missing_count": 0,
+            "sum": 41,
+            "mean": 2.5625,
+            "median": 3.0,
+            "p90": 3.0,
+            "p95": 3.25
+          },
+          "input_tokens": {
+            "measured_count": 16,
+            "missing_count": 0,
+            "sum": 22007,
+            "mean": 1375.4375,
+            "median": 1608.0,
+            "p90": 1831.5,
+            "p95": 2333.0
+          },
+          "output_tokens": {
+            "measured_count": 16,
+            "missing_count": 0,
+            "sum": 3001,
+            "mean": 187.5625,
+            "median": 208.0,
+            "p90": 281.0,
+            "p95": 306.0
+          },
+          "decoded_frames": {
+            "measured_count": 16,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "inspection_frames": {
+            "measured_count": 16,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "raw_decoder_frames_decoded": {
+            "measured_count": 0,
+            "missing_count": 16,
+            "sum": null,
+            "mean": null,
+            "median": null,
+            "p90": null,
+            "p95": null
+          },
+          "unique_frames": {
+            "measured_count": 16,
+            "missing_count": 0,
+            "sum": 0,
+            "mean": 0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "tool_calls": {
+            "measured_count": 16,
+            "missing_count": 0,
+            "sum": 14,
+            "mean": 0.875,
+            "median": 1.0,
+            "p90": 1.0,
+            "p95": 1.0
+          },
+          "duplicate_frame_fraction": {
+            "measured_count": 16,
+            "missing_count": 0,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "p95": 0.0
+          },
+          "decision_repair_attempt_count": {
+            "measured_count": 16,
+            "missing_count": 0,
+            "sum": 5,
+            "mean": 0.3125,
+            "median": 0.0,
+            "p90": 1.5,
+            "p95": 2.0
+          },
+          "aggregate_duplicate_frame_fraction": 0.0,
+          "duplicate_frame_denominator": 0,
+          "duplicate_frame_measured_question_count": 16,
+          "per_tool": {
+            "search": {
+              "attempt_count": 14,
+              "known_outcome_count": 14,
+              "failure_count": 0,
+              "failure_rate": 0.0,
+              "latency_seconds": {
+                "measured_count": 14,
+                "missing_count": 0,
+                "sum": 0.1093,
+                "mean": 0.007807142857142857,
+                "median": 0.00585,
+                "p90": 0.012910000000000007,
+                "p95": 0.02496499999999999
+              }
+            }
+          },
+          "telemetry_inconsistent_question_count": 0
+        },
+        "rates": {
+          "question_count": 16,
+          "observed_prediction_count": 16,
+          "missing_prediction_count": 0,
+          "operational_error_rate": 0.125,
+          "abstention_rate": 0.3125,
+          "format_repair_measured_count": 16,
+          "format_repair_unknown_count": 0,
+          "format_repair_rate": 0.1875,
+          "hard_budget_measured_count": 16,
+          "hard_budget_unknown_count": 0,
+          "hard_budget_violation_count": 0,
+          "hard_budget_violation_rate": 0.0
+        },
+        "joint_reviewed": {
+          "reasoning_and_support": {
+            "question_count": 6,
+            "known_count": 0,
+            "unknown_count": 6,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "timestamp_content_and_temporal": {
+            "question_count": 4,
+            "known_count": 0,
+            "unknown_count": 4,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_1s": {
+            "question_count": 4,
+            "known_count": 0,
+            "unknown_count": 4,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_2s": {
+            "question_count": 4,
+            "known_count": 0,
+            "unknown_count": 4,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          },
+          "event_identity_and_timing_at_5s": {
+            "question_count": 4,
+            "known_count": 0,
+            "unknown_count": 4,
+            "success_count": 0,
+            "accuracy_all": null,
+            "accuracy_known": null,
+            "accuracy_lower_bound": 0.0,
+            "accuracy_upper_bound": 1.0
+          }
+        }
+      }
+    }
+  },
+  "per_question": [
+    {
+      "question_id": "v7_reason_fresh_context",
+      "task": "reasoning",
+      "split": "test",
+      "modality": "transcript",
+      "answerable": true,
+      "status": "answered",
+      "support_coverage": {
+        "required_support_count": 1,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 2,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 2
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 3,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [
+          {
+            "atom_id": "fresh",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "no_history",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "provided_context",
+            "correct": null,
+            "supported": null
+          }
+        ],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 1,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 2,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 2,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 1,
+          "unique_citation_count": 2,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 2,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": 0.0,
+          "temporal_only_precision_at_0_3": 0.0,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 10.3525,
+          "model_calls": 3,
+          "input_tokens": 1782,
+          "output_tokens": 256,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0068
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_reason_model_roles",
+      "task": "reasoning",
+      "split": "test",
+      "modality": "transcript",
+      "answerable": true,
+      "status": "answered",
+      "support_coverage": {
+        "required_support_count": 1,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 2,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 2
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 3,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [
+          {
+            "atom_id": "planning_judgment",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "scoped_execution",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "worker_cost",
+            "correct": null,
+            "supported": null
+          }
+        ],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 1,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 2,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 2,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 1,
+          "unique_citation_count": 2,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 2,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": 0.0,
+          "temporal_only_precision_at_0_3": 0.0,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 37.0244,
+          "model_calls": 3,
+          "input_tokens": 1767,
+          "output_tokens": 265,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.009
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_reason_changed_criteria",
+      "task": "reasoning",
+      "split": "test",
+      "modality": "transcript",
+      "answerable": true,
+      "status": "answered",
+      "support_coverage": {
+        "required_support_count": 2,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 1,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 1
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 3,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [
+          {
+            "atom_id": "changed_criterion",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "prior_inadequate",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "causal_order",
+            "correct": null,
+            "supported": null
+          }
+        ],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 2,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 2,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 2,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 2,
+          "unique_citation_count": 1,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 1,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": 0.0,
+          "temporal_only_precision_at_0_3": 0.0,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 8.8584,
+          "model_calls": 3,
+          "input_tokens": 1819,
+          "output_tokens": 230,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0056
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_reason_two_gates",
+      "task": "reasoning",
+      "split": "test",
+      "modality": "visual",
+      "answerable": true,
+      "status": "error",
+      "support_coverage": {
+        "required_support_count": 2,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 0,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 0
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 3,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [],
+        "semantic_success": 0.0,
+        "supported_semantic_success": 0.0,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 2,
+          "trace_available": true,
+          "search_call_count": 0,
+          "unique_candidate_count": 0,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [],
+          "recall_at_1": null,
+          "recall_at_3": null,
+          "recall_at_5": null,
+          "reciprocal_rank": null,
+          "ndcg_at_5": null,
+          "unique_support_coverage": null,
+          "matched_support_ids": []
+        },
+        "citation_geometry": {
+          "required_support_count": 2,
+          "unique_citation_count": 0,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 0,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": null,
+          "temporal_only_precision_at_0_3": null,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 19.8961,
+          "model_calls": 3,
+          "input_tokens": 828,
+          "output_tokens": 150,
+          "tool_calls": 0,
+          "reported_tool_calls": 0,
+          "traced_tool_calls": 0,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [],
+          "decision_repair_attempt_count": 2,
+          "format_repair_attempt_count": 2,
+          "format_rejection_count": 3,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_reason_context_durability",
+      "task": "reasoning",
+      "split": "test",
+      "modality": "transcript",
+      "answerable": true,
+      "status": "answered",
+      "support_coverage": {
+        "required_support_count": 2,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 2,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 2
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 4,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [
+          {
+            "atom_id": "child_initialization",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "compression_loss",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "persistent_handoff",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "distinction",
+            "correct": null,
+            "supported": null
+          }
+        ],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 2,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 2,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 2,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 2,
+          "unique_citation_count": 2,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 2,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": 0.0,
+          "temporal_only_precision_at_0_3": 0.0,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 43.0221,
+          "model_calls": 3,
+          "input_tokens": 1841,
+          "output_tokens": 297,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0145
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_reason_dispatch_delay",
+      "task": "reasoning",
+      "split": "test",
+      "modality": "audiovisual",
+      "answerable": true,
+      "status": "answered",
+      "support_coverage": {
+        "required_support_count": 2,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 1,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 1
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 3,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [
+          {
+            "atom_id": "dependencies",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "dispatcher",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "state_sequence",
+            "correct": null,
+            "supported": null
+          }
+        ],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 2,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 2,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 2,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 2,
+          "unique_citation_count": 1,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 1,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": 0.0,
+          "temporal_only_precision_at_0_3": 0.0,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 26.2059,
+          "model_calls": 3,
+          "input_tokens": 1822,
+          "output_tokens": 257,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0092
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_onset_token_first",
+      "task": "onset",
+      "split": "test",
+      "modality": "transcript",
+      "answerable": true,
+      "status": "answered",
+      "support_coverage": {
+        "required_support_count": 1,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 1,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 1
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 0,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "event": {
+        "reference_kind": "transcript_cue",
+        "annotation_status": "ASR-silver cue span; repeated later at1920.39–1923.05s.",
+        "reference_bracket": [
+          4.08,
+          7.68
+        ],
+        "reference_width_seconds": 3.5999999999999996,
+        "explicit_prediction": false,
+        "prediction_valid": false,
+        "modality_matches": false,
+        "within_scope": false,
+        "event_identity_reviewed": null,
+        "absolute_error_to_reference_bracket_seconds": null,
+        "worst_endpoint_error_seconds": null,
+        "predicted_bracket_width_seconds": null,
+        "bracket_covers_reference": null,
+        "success_at_1s": 0.0,
+        "success_at_2s": 0.0,
+        "success_at_5s": 0.0,
+        "failure_reason": "no_explicit_event_prediction"
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 1,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 2,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 2,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 1,
+          "unique_citation_count": 1,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 1,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": 0.0,
+          "temporal_only_precision_at_0_3": 0.0,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 12.1432,
+          "model_calls": 3,
+          "input_tokens": 1808,
+          "output_tokens": 333,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0061
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_onset_token_later",
+      "task": "onset",
+      "split": "test",
+      "modality": "transcript",
+      "answerable": true,
+      "status": "answered",
+      "support_coverage": {
+        "required_support_count": 1,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 1,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 1
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 0,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "event": {
+        "reference_kind": "transcript_cue",
+        "annotation_status": "ASR-silver cue span; earlier preview at4.08–7.68s is outside scope.",
+        "reference_bracket": [
+          1920.39,
+          1923.05
+        ],
+        "reference_width_seconds": 2.6599999999998545,
+        "explicit_prediction": false,
+        "prediction_valid": false,
+        "modality_matches": false,
+        "within_scope": false,
+        "event_identity_reviewed": null,
+        "absolute_error_to_reference_bracket_seconds": null,
+        "worst_endpoint_error_seconds": null,
+        "predicted_bracket_width_seconds": null,
+        "bracket_covers_reference": null,
+        "success_at_1s": 0.0,
+        "success_at_2s": 0.0,
+        "success_at_5s": 0.0,
+        "failure_reason": "no_explicit_event_prediction"
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 1,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 1,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 1,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 1,
+          "unique_citation_count": 1,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 1,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": 0.0,
+          "temporal_only_precision_at_0_3": 0.0,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 8.8271,
+          "model_calls": 3,
+          "input_tokens": 1411,
+          "output_tokens": 228,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0019
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_onset_article",
+      "task": "onset",
+      "split": "test",
+      "modality": "visual",
+      "answerable": true,
+      "status": "insufficient_evidence",
+      "support_coverage": {
+        "required_support_count": 1,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 0,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 0
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 0,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "event": {
+        "reference_kind": "visual_transition_bracket",
+        "annotation_status": "Refined assistant visual annotation; not independent human validation.",
+        "reference_bracket": [
+          1196.4953,
+          1196.7622333333334
+        ],
+        "reference_width_seconds": 0.266933333333327,
+        "explicit_prediction": false,
+        "prediction_valid": false,
+        "modality_matches": false,
+        "within_scope": false,
+        "event_identity_reviewed": null,
+        "absolute_error_to_reference_bracket_seconds": null,
+        "worst_endpoint_error_seconds": null,
+        "predicted_bracket_width_seconds": null,
+        "bracket_covers_reference": null,
+        "success_at_1s": 0.0,
+        "success_at_2s": 0.0,
+        "success_at_5s": 0.0,
+        "failure_reason": "missing_abstained_or_error"
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 1,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 0,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 0,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 1,
+          "unique_citation_count": 0,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 0,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": null,
+          "temporal_only_precision_at_0_3": null,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 1.8097,
+          "model_calls": 1,
+          "input_tokens": 288,
+          "output_tokens": 48,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0006
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_onset_task_graph",
+      "task": "onset",
+      "split": "test",
+      "modality": "visual",
+      "answerable": true,
+      "status": "insufficient_evidence",
+      "support_coverage": {
+        "required_support_count": 1,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 0,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 0
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 0,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "event": {
+        "reference_kind": "visual_transition_bracket",
+        "annotation_status": "Refined assistant visual annotation; not independent human validation.",
+        "reference_bracket": [
+          1613.5119,
+          1613.7454666666667
+        ],
+        "reference_width_seconds": 0.23356666666677484,
+        "explicit_prediction": false,
+        "prediction_valid": false,
+        "modality_matches": false,
+        "within_scope": false,
+        "event_identity_reviewed": null,
+        "absolute_error_to_reference_bracket_seconds": null,
+        "worst_endpoint_error_seconds": null,
+        "predicted_bracket_width_seconds": null,
+        "bracket_covers_reference": null,
+        "success_at_1s": 0.0,
+        "success_at_2s": 0.0,
+        "success_at_5s": 0.0,
+        "failure_reason": "missing_abstained_or_error"
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 1,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 0,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 0,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 1,
+          "unique_citation_count": 0,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 0,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": null,
+          "temporal_only_precision_at_0_3": null,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 2.0436,
+          "model_calls": 1,
+          "input_tokens": 289,
+          "output_tokens": 49,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0009
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_negative_total_tokens",
+      "task": "unanswerable",
+      "split": "test",
+      "modality": "transcript",
+      "answerable": false,
+      "status": "answered",
+      "support_coverage": {
+        "required_support_count": 0,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": null,
+        "all_supports_hit_at_0_3": null,
+        "citation_count": 1,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 1
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 0,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": 0.0
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 0,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 2,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 2,
+              "recall_at_1": null,
+              "recall_at_3": null,
+              "recall_at_5": null,
+              "reciprocal_rank": null,
+              "ndcg_at_5": null,
+              "unique_support_coverage": null,
+              "matched_support_ids": []
+            }
+          ],
+          "recall_at_1": null,
+          "recall_at_3": null,
+          "recall_at_5": null,
+          "reciprocal_rank": null,
+          "ndcg_at_5": null,
+          "unique_support_coverage": null,
+          "matched_support_ids": []
+        },
+        "citation_geometry": {
+          "required_support_count": 0,
+          "unique_citation_count": 1,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 1,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": null,
+          "temporal_only_precision_at_0_3": null,
+          "support_recall_at_0_3": null,
+          "all_supports_hit_at_0_3": null,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 6.6349,
+          "model_calls": 3,
+          "input_tokens": 1786,
+          "output_tokens": 172,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0081
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_negative_dispatch_cost",
+      "task": "unanswerable",
+      "split": "test",
+      "modality": "visual",
+      "answerable": false,
+      "status": "insufficient_evidence",
+      "support_coverage": {
+        "required_support_count": 0,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": null,
+        "all_supports_hit_at_0_3": null,
+        "citation_count": 0,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 0
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 0,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 0,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 6,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "How Task Graphs Actually Run diagram",
+              "unique_candidate_count": 6,
+              "recall_at_1": null,
+              "recall_at_3": null,
+              "recall_at_5": null,
+              "reciprocal_rank": null,
+              "ndcg_at_5": null,
+              "unique_support_coverage": null,
+              "matched_support_ids": []
+            }
+          ],
+          "recall_at_1": null,
+          "recall_at_3": null,
+          "recall_at_5": null,
+          "reciprocal_rank": null,
+          "ndcg_at_5": null,
+          "unique_support_coverage": null,
+          "matched_support_ids": []
+        },
+        "citation_geometry": {
+          "required_support_count": 0,
+          "unique_citation_count": 0,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 0,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": null,
+          "temporal_only_precision_at_0_3": null,
+          "support_recall_at_0_3": null,
+          "all_supports_hit_at_0_3": null,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 12.4799,
+          "model_calls": 3,
+          "input_tokens": 3809,
+          "output_tokens": 246,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0444
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_timestamp_610",
+      "task": "timestamp_search",
+      "split": "test",
+      "modality": "visual",
+      "answerable": true,
+      "status": "insufficient_evidence",
+      "support_coverage": {
+        "required_support_count": 1,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 0,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 0
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 3,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [],
+        "semantic_success": 0.0,
+        "supported_semantic_success": 0.0,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "timestamp_search": {
+        "kind": "points",
+        "requested_points": [
+          610
+        ],
+        "requested_scope": null,
+        "point_tolerance_seconds": 0.1,
+        "actual_frame_timestamps_observed": [],
+        "observed_frame_count": 0,
+        "cited_compatible_source_count": 0,
+        "cited_actual_frame_count": 0,
+        "citation_count": 0,
+        "invalid_citation_count": 0,
+        "invalid_source_count": 0,
+        "citation_scope_precision": 0.0,
+        "source_scope_compliance": 1.0,
+        "frame_scope_compliance": 1.0,
+        "point_hits": [
+          false
+        ],
+        "target_coverage": 0.0,
+        "temporal_success": 0.0,
+        "required_observation_count": 1,
+        "observed_support_ids": [],
+        "mean_point_distance_seconds_conditional": null,
+        "max_citation_width_seconds": null
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 1,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 0,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "what was on the slide at 10 minutes 10 seconds",
+              "unique_candidate_count": 0,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 1,
+          "unique_citation_count": 0,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 0,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": null,
+          "temporal_only_precision_at_0_3": null,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 2.2924,
+          "model_calls": 1,
+          "input_tokens": 256,
+          "output_tokens": 63,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0004
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_timestamp_800",
+      "task": "timestamp_search",
+      "split": "test",
+      "modality": "visual",
+      "answerable": true,
+      "status": "error",
+      "support_coverage": {
+        "required_support_count": 1,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 0,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 0
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 3,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [],
+        "semantic_success": 0.0,
+        "supported_semantic_success": 0.0,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "timestamp_search": {
+        "kind": "points",
+        "requested_points": [
+          800
+        ],
+        "requested_scope": null,
+        "point_tolerance_seconds": 0.1,
+        "actual_frame_timestamps_observed": [],
+        "observed_frame_count": 0,
+        "cited_compatible_source_count": 0,
+        "cited_actual_frame_count": 0,
+        "citation_count": 0,
+        "invalid_citation_count": 0,
+        "invalid_source_count": 0,
+        "citation_scope_precision": 0.0,
+        "source_scope_compliance": 1.0,
+        "frame_scope_compliance": 1.0,
+        "point_hits": [
+          false
+        ],
+        "target_coverage": 0.0,
+        "temporal_success": 0.0,
+        "required_observation_count": 1,
+        "observed_support_ids": [],
+        "mean_point_distance_seconds_conditional": null,
+        "max_citation_width_seconds": null
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 1,
+          "trace_available": true,
+          "search_call_count": 0,
+          "unique_candidate_count": 0,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [],
+          "recall_at_1": null,
+          "recall_at_3": null,
+          "recall_at_5": null,
+          "reciprocal_rank": null,
+          "ndcg_at_5": null,
+          "unique_support_coverage": null,
+          "matched_support_ids": []
+        },
+        "citation_geometry": {
+          "required_support_count": 1,
+          "unique_citation_count": 0,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 0,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": null,
+          "temporal_only_precision_at_0_3": null,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 7.5647,
+          "model_calls": 3,
+          "input_tokens": 797,
+          "output_tokens": 175,
+          "tool_calls": 0,
+          "reported_tool_calls": 0,
+          "traced_tool_calls": 0,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [],
+          "decision_repair_attempt_count": 2,
+          "format_repair_attempt_count": 2,
+          "format_rejection_count": 3,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_timestamp_range_titles",
+      "task": "timestamp_search",
+      "split": "test",
+      "modality": "visual",
+      "answerable": true,
+      "status": "insufficient_evidence",
+      "support_coverage": {
+        "required_support_count": 2,
+        "matched_support_ids": [],
+        "support_recall_at_0_3": 0.0,
+        "all_supports_hit_at_0_3": 0.0,
+        "citation_count": 0,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 0
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 3,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [],
+        "semantic_success": 0.0,
+        "supported_semantic_success": 0.0,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "timestamp_search": {
+        "kind": "range",
+        "requested_points": [],
+        "requested_scope": [
+          1200,
+          1260
+        ],
+        "point_tolerance_seconds": null,
+        "actual_frame_timestamps_observed": [],
+        "observed_frame_count": 0,
+        "cited_compatible_source_count": 0,
+        "cited_actual_frame_count": 0,
+        "citation_count": 0,
+        "invalid_citation_count": 0,
+        "invalid_source_count": 0,
+        "citation_scope_precision": 0.0,
+        "source_scope_compliance": 1.0,
+        "frame_scope_compliance": 1.0,
+        "point_hits": [],
+        "target_coverage": 0.0,
+        "temporal_success": 0.0,
+        "required_observation_count": 2,
+        "observed_support_ids": [],
+        "mean_point_distance_seconds_conditional": null,
+        "max_citation_width_seconds": null
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 2,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 0,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "slide titles",
+              "unique_candidate_count": 0,
+              "recall_at_1": 0.0,
+              "recall_at_3": 0.0,
+              "recall_at_5": 0.0,
+              "reciprocal_rank": 0.0,
+              "ndcg_at_5": 0.0,
+              "matched_support_ids": [],
+              "unique_support_coverage": 0.0
+            }
+          ],
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "reciprocal_rank": 0.0,
+          "ndcg_at_5": 0.0,
+          "matched_support_ids": [],
+          "unique_support_coverage": 0.0
+        },
+        "citation_geometry": {
+          "required_support_count": 2,
+          "unique_citation_count": 0,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 0,
+          "matching_citation_count": 0,
+          "matching_temporal_only_count": 0,
+          "precision_at_0_3": null,
+          "temporal_only_precision_at_0_3": null,
+          "support_recall_at_0_3": 0.0,
+          "all_supports_hit_at_0_3": 0.0,
+          "matched_support_ids": []
+        },
+        "cost": {
+          "latency_seconds": 1.7157,
+          "model_calls": 1,
+          "input_tokens": 255,
+          "output_tokens": 44,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0012
+            }
+          ],
+          "decision_repair_attempt_count": 0,
+          "format_repair_attempt_count": 0,
+          "format_rejection_count": 0,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    },
+    {
+      "question_id": "v7_timestamp_range_constraints",
+      "task": "timestamp_search",
+      "split": "test",
+      "modality": "transcript",
+      "answerable": true,
+      "status": "answered",
+      "support_coverage": {
+        "required_support_count": 1,
+        "matched_support_ids": [
+          "limits"
+        ],
+        "support_recall_at_0_3": 1.0,
+        "all_supports_hit_at_0_3": 1.0,
+        "citation_count": 1,
+        "invalid_citation_count": 0,
+        "citation_unknown_modality_count": 1
+      },
+      "semantic": {
+        "reviewer": null,
+        "method": null,
+        "atom_count": 2,
+        "reviewed_atom_count": 0,
+        "atom_judgments": [
+          {
+            "atom_id": "sources",
+            "correct": null,
+            "supported": null
+          },
+          {
+            "atom_id": "words",
+            "correct": null,
+            "supported": null
+          }
+        ],
+        "semantic_success": null,
+        "supported_semantic_success": null,
+        "abstention_correct": null
+      },
+      "review_coverage": {
+        "named_review_present": false,
+        "complete_semantic_review": false
+      },
+      "timestamp_search": {
+        "kind": "range",
+        "requested_points": [],
+        "requested_scope": [
+          1910,
+          1940
+        ],
+        "point_tolerance_seconds": null,
+        "actual_frame_timestamps_observed": [],
+        "observed_frame_count": 0,
+        "cited_compatible_source_count": 7,
+        "cited_actual_frame_count": 0,
+        "citation_count": 1,
+        "invalid_citation_count": 0,
+        "invalid_source_count": 0,
+        "citation_scope_precision": 1.0,
+        "source_scope_compliance": 1.0,
+        "frame_scope_compliance": null,
+        "point_hits": [],
+        "target_coverage": 1.0,
+        "temporal_success": 1.0,
+        "required_observation_count": 1,
+        "observed_support_ids": [
+          "limits"
+        ],
+        "mean_point_distance_seconds_conditional": null,
+        "max_citation_width_seconds": 9.259999999999991
+      },
+      "diagnostics": {
+        "retrieval": {
+          "required_support_count": 1,
+          "trace_available": true,
+          "search_call_count": 1,
+          "unique_candidate_count": 1,
+          "invalid_candidate_count": 0,
+          "unknown_modality_candidate_count": 0,
+          "duplicate_candidate_count": 0,
+          "per_search": [
+            {
+              "search_number": 1,
+              "query": "distinctive search terms",
+              "unique_candidate_count": 1,
+              "recall_at_1": 1.0,
+              "recall_at_3": 1.0,
+              "recall_at_5": 1.0,
+              "reciprocal_rank": 1.0,
+              "ndcg_at_5": 1.0,
+              "matched_support_ids": [
+                "limits"
+              ],
+              "unique_support_coverage": 1.0
+            }
+          ],
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_5": 1.0,
+          "matched_support_ids": [
+            "limits"
+          ],
+          "unique_support_coverage": 1.0
+        },
+        "citation_geometry": {
+          "required_support_count": 1,
+          "unique_citation_count": 1,
+          "invalid_citation_count": 0,
+          "duplicate_citation_count": 0,
+          "unknown_modality_citation_count": 0,
+          "precision_denominator": 1,
+          "matching_citation_count": 1,
+          "matching_temporal_only_count": 1,
+          "precision_at_0_3": 1.0,
+          "temporal_only_precision_at_0_3": 1.0,
+          "support_recall_at_0_3": 1.0,
+          "all_supports_hit_at_0_3": 1.0,
+          "matched_support_ids": [
+            "limits"
+          ]
+        },
+        "cost": {
+          "latency_seconds": 6.9285,
+          "model_calls": 4,
+          "input_tokens": 1449,
+          "output_tokens": 188,
+          "tool_calls": 1,
+          "reported_tool_calls": 1,
+          "traced_tool_calls": 1,
+          "decoded_frames": 0,
+          "inspection_frames": 0,
+          "raw_decoder_frames_decoded": null,
+          "unique_frames": 0,
+          "duplicate_frames": 0,
+          "duplicate_frame_fraction": 0.0,
+          "tools": [
+            {
+              "tool": "search",
+              "failed": false,
+              "latency_seconds": 0.0006
+            }
+          ],
+          "decision_repair_attempt_count": 1,
+          "format_repair_attempt_count": 1,
+          "format_rejection_count": 1,
+          "unclassified_decision_rejection_count": 0,
+          "tool_limit": 4,
+          "frame_limit": 16,
+          "tool_budget_violation": false,
+          "frame_budget_violation": false,
+          "hard_budget_violation": false,
+          "telemetry_inconsistencies": []
+        },
+        "joint_reviewed": {
+          "reasoning_and_support_success": null,
+          "timestamp_content_and_temporal_success": null,
+          "event_identity_and_timing_success_at_1s": null,
+          "event_identity_and_timing_success_at_2s": null,
+          "event_identity_and_timing_success_at_5s": null
+        }
+      }
+    }
+  ],
+  "diagnostic_definitions": {
+    "timestamp_search": "Explicit point requests require actual sampled visual timestamps within the predeclared tolerance, linked to final citations. Range requests require cited, modality-compatible source observations in every required reference support, and all cited/source intervals and observed frames inside the requested range. Transcript cases use cue intervals, not visual frames. Requested timestamps alone are never observations. Unknown telemetry remains null; known missing/error/abstention is failure. These are temporal compliance diagnostics, not semantic answer correctness or continuous range coverage.",
+    "semantic_review_coverage": "A named review is present only with reviewer and method. Complete atom reviews require boolean correct/supported for every required atom plus extra_claims_supported; event review completeness requires event_identity_correct; negative controls require abstention_correct. Operational failures can have known zero task scores without being reviewed. Review coverage and score known-count are therefore separate.",
+    "retrieval": "Candidates follow chronological search calls and returned rank; duplicate physical regions are removed. Recall@k is the maximum one-to-one fraction of required supports matched in the first k unique candidates. A hit requires compatible known modality and either an actual sampled timestamp in the reference interval or interval IoU>=0.3. These are localization diagnostics, not semantic correctness.",
+    "reciprocal_rank": "Inverse rank of the first candidate matching any required support; zero for a recorded search with no relevant hit. Questions without required supports or without a recorded search have null retrieval metrics.",
+    "ndcg_at_5": "Binary unique-support gain, discounted by log2(rank+1). At most one previously unmatched support earns gain for each candidate (highest geometric score breaks ambiguity); ideal DCG contains min(5, number of required supports) gains. Repeated evidence for the same support cannot increase gain.",
+    "citation_geometry": "Unique final citation intervals with known/inferred-from-ledger modality are matched to required supports at interval IoU>=0.3. Precision counts matching citations divided by unique valid citations plus invalid citations. Support recall uses one-to-one assignment. Unknown modality earns no modality-qualified credit; temporal-only precision is reported separately. Neither is entailment or event-onset accuracy.",
+    "cost": "Only observed finite nonnegative telemetry contributes. Missing fields remain null. Latency quantiles use linear interpolation at (n-1)*p; every distribution reports measured and missing counts. Counts include failed tool attempts where recorded. inspection_frames is selected model observations; decoded_frames is its retained legacy alias, not all codec work. raw_decoder_frames_decoded separately records codec decoding including seek preroll when available.",
+    "duplicate_frames": "(selected inspection frame count - unique sampled timestamp count) / selected inspection frame count, only when both counts are observed and consistent. Zero selected frames and zero unique samples yield zero. Unobserved timestamps do not imply all frames were unique. This metric excludes codec seek preroll.",
+    "rates": "Operational error and abstention rates use non-missing predictions as their denominator. Tool failure rates use attempts with known ok/error outcomes. Format repair requires an explicitly classified format/validation rejection followed by another decision; unclassified errors leave that rate unknown. Decision-repair counts are reported separately.",
+    "budget": "Hard limits are at most four attempted tools (or a stricter configured limit) and the configured selected-inspection-frame limit, default 16 model observations. Codec seek preroll can decode additional frames and is reported separately, not charged to this inspection budget. Reported counts are checked against trace counts; the larger tool count is used. Unknown telemetry cannot establish budget compliance.",
+    "joint_reviewed": "Reasoning joint success requires a complete named semantic review, supported correct required/extra claims, and all required geometric supports. Event joint success requires an explicit boolean event-identity review and an explicit within-scope, modality-compatible timing prediction. Unreviewed quality remains null; citation times are never substituted for event predictions."
+  },
+  "notes": [
+    "Reasoning correctness comes only from named reviewer annotations; unknown judgments remain unknown. Missing/error/abstained answers are task failures.",
+    "Timestamp-search content uses the same named atomic review; temporal compliance uses recorded actual frames and cited source intervals separately. Sampled range evidence is not continuous coverage.",
+    "Support scores measure one-to-one citation geometry at IoU>=0.3, not semantic entailment; missing citation modalities are explicitly counted.",
+    "Onset scores require an explicit event prediction; citation starts and numbers in prose are never substituted.",
+    "Onset success uses distance of both predicted bracket endpoints to the uncertain reference bracket; wide brackets cannot win by containing everything.",
+    "All onset questions remain in success denominators. Absolute-error means are conditional, include wrong-occurrence errors, and expose measured counts.",
+    "ASR cue references measure transcript-cue localization, not verified word-level audio timing. Visual bracket precision is limited by its annotation width.",
+    "Event timing metrics do not establish semantic event identity without an explicit identity review. Reference-bracket coverage must be read together with bracket width and tolerance success.",
+    "This evaluator does not confer independence, blindness, human validation, or held-out status on the supplied data or reviews."
+  ],
+  "review_provenance": {
+    "source_file": null,
+    "input_sha256": null,
+    "review_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_count": 0
+  }
+}

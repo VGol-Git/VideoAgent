@@ -1,0 +1,1453 @@
+{
+  "saved_at_utc": "2026-10-22T20:45:20.236366+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "retrieval-only",
+  "question_id": "v7_onset_token_later",
+  "prediction_sha256": "5a2849e2e8ecc8dc72639fa8ebe2d1367cde9b0f56ebd48c8f59f5516ee0187f",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Answered response must support every planned requirement",
+    "error": "Answered response must support every planned requirement",
+    "error_type": "invalid_model_response",
+    "fixed_schedule": [],
+    "question_contract": {
+      "basis": "question_text_only",
+      "task": "event",
+      "modality": "transcript",
+      "allowed_modalities": [
+        "transcript"
+      ],
+      "event_query_hint": "the estimate dropping from 45,000 to 18,000 tokens",
+      "overview": false
+    },
+    "schedule_policy": "retrieved_text_only",
+    "model_protocol_attempts": 0,
+    "model_protocol_failures": [],
+    "event": null,
+    "plan": {
+      "task": "event",
+      "modality": "transcript",
+      "queries": [
+        "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+        "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+        "time of first mention of estimate decreasing from 45,000 to 18,000 tokens"
+      ],
+      "requirements": {
+        "R1": "the transcript first reports the estimate dropping from 45,000 to 18,000 tokens at a specific time",
+        "R2": "the time must be within the given scope [1800.0, 2575.0057666666667]",
+        "R3": "the answer must return the matching cue time or cue span",
+        "R4": "the event is the estimation demonstration after 30 minutes",
+        "R5": "the estimate drops from 45,000 to 18,000 tokens is the key event",
+        "R6": "the answer must be precise and match the exact time or span in the transcript"
+      },
+      "event_query": [
+        "the estimate dropping from 45,000 to 18,000 tokens"
+      ]
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 1800.0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "question_id": "v7_onset_token_later",
+    "question": "During the later estimation demonstration after 30 minutes, when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens? Return the matching cue time or cue span.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 130.3767,
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 9215,
+      "output_tokens": 328
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+          "queries": [
+            "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+            "time of first mention of estimate decreasing from 45,000 to 18,000 tokens"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:64",
+              "start": 1920.39,
+              "end": 1952.25,
+              "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00653",
+                "T00654",
+                "T00655",
+                "T00656",
+                "T00657",
+                "T00658",
+                "T00659",
+                "T00660",
+                "T00661",
+                "T00662",
+                "T00663",
+                "T00664",
+                "T00665",
+                "T00666"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01639344262295082,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 1,
+                  "retrieval_score": 12.764930379122795,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                  "rank": 1,
+                  "retrieval_score": 12.764930379122795,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "time of first mention of estimate decreasing from 45,000 to 18,000 tokens",
+                  "rank": 1,
+                  "retrieval_score": 15.431118402716203,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                "time of first mention of estimate decreasing from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:64",
+                  "start": 1920.39,
+                  "end": 1952.25,
+                  "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00653",
+                    "T00654",
+                    "T00655",
+                    "T00656",
+                    "T00657",
+                    "T00658",
+                    "T00659",
+                    "T00660",
+                    "T00661",
+                    "T00662",
+                    "T00663",
+                    "T00664",
+                    "T00665",
+                    "T00666"
+                  ]
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:63",
+              "start": 1890.41,
+              "end": 1920.39,
+              "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00637",
+                "T00638",
+                "T00639",
+                "T00640",
+                "T00641",
+                "T00642",
+                "T00643",
+                "T00644",
+                "T00645",
+                "T00646",
+                "T00647",
+                "T00648",
+                "T00649",
+                "T00650",
+                "T00651",
+                "T00652"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.016129032258064516,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 2,
+                  "retrieval_score": 5.437861734936758,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                  "rank": 2,
+                  "retrieval_score": 5.437861734936758,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "time of first mention of estimate decreasing from 45,000 to 18,000 tokens",
+                  "rank": 2,
+                  "retrieval_score": 5.437861734936758,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                "time of first mention of estimate decreasing from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:63",
+                  "start": 1890.41,
+                  "end": 1920.39,
+                  "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00637",
+                    "T00638",
+                    "T00639",
+                    "T00640",
+                    "T00641",
+                    "T00642",
+                    "T00643",
+                    "T00644",
+                    "T00645",
+                    "T00646",
+                    "T00647",
+                    "T00648",
+                    "T00649",
+                    "T00650",
+                    "T00651",
+                    "T00652"
+                  ]
+                }
+              ],
+              "selection_score": 0.6395161290322581,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:68",
+              "start": 2040.21,
+              "end": 2070.57,
+              "text": "You can put them all in here, you can schedule them, you can let the agent know that some are waiting on others. There's a lot that you can do here and it just takes a lot of that sub-agent delegation that we were talking about in the first couple of examples and makes it a lot more transparent and controllable. And that's why it's called a control graph or a task graph, because we can actually see the graph of how this is operating, what needs to be done first before the next task can be accomplished. So this one is still running here, but we can see this one finished. We can go through and see the full activity. So we can see that it was created",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00704",
+                "T00705",
+                "T00706",
+                "T00707",
+                "T00708",
+                "T00709",
+                "T00710",
+                "T00711",
+                "T00712",
+                "T00713",
+                "T00714",
+                "T00715",
+                "T00716",
+                "T00717"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.015873015873015872,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 3,
+                  "retrieval_score": 3.3854430743843227,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005291005291005291,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                  "rank": 3,
+                  "retrieval_score": 3.3854430743843227,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005291005291005291,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "time of first mention of estimate decreasing from 45,000 to 18,000 tokens",
+                  "rank": 3,
+                  "retrieval_score": 3.3854430743843227,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005291005291005291,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                "time of first mention of estimate decreasing from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:68",
+                  "start": 2040.21,
+                  "end": 2070.57,
+                  "text": "You can put them all in here, you can schedule them, you can let the agent know that some are waiting on others. There's a lot that you can do here and it just takes a lot of that sub-agent delegation that we were talking about in the first couple of examples and makes it a lot more transparent and controllable. And that's why it's called a control graph or a task graph, because we can actually see the graph of how this is operating, what needs to be done first before the next task can be accomplished. So this one is still running here, but we can see this one finished. We can go through and see the full activity. So we can see that it was created",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00704",
+                    "T00705",
+                    "T00706",
+                    "T00707",
+                    "T00708",
+                    "T00709",
+                    "T00710",
+                    "T00711",
+                    "T00712",
+                    "T00713",
+                    "T00714",
+                    "T00715",
+                    "T00716",
+                    "T00717"
+                  ]
+                }
+              ],
+              "selection_score": 0.6293650793650793,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 3,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:60",
+              "start": 1802.54,
+              "end": 1833.83,
+              "text": "The first is the orchestrator profile. So right now it's defaulting to default. You can change which agent you want to operate as your orchestrator. This is the orchestrating agent that will decide which agent gets which task. And those tasks get assigned to the assignee, which you can set which one you want to be the default. Maybe I want to create an implementer profile whose sole job is to execute on things. In a similar way that the researcher is the one that researches things. And the librarian is the one that files things in my LLM wiki.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00593",
+                "T00594",
+                "T00595",
+                "T00596",
+                "T00597",
+                "T00598",
+                "T00599",
+                "T00600",
+                "T00601",
+                "T00602",
+                "T00603",
+                "T00604",
+                "T00605",
+                "T00606"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.015387043512043511,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 6,
+                  "retrieval_score": 2.585625011326263,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005050505050505051,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                  "rank": 5,
+                  "retrieval_score": 2.585625011326263,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "time of first mention of estimate decreasing from 45,000 to 18,000 tokens",
+                  "rank": 4,
+                  "retrieval_score": 2.585625011326263,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                "time of first mention of estimate decreasing from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:60",
+                  "start": 1802.54,
+                  "end": 1833.83,
+                  "text": "The first is the orchestrator profile. So right now it's defaulting to default. You can change which agent you want to operate as your orchestrator. This is the orchestrating agent that will decide which agent gets which task. And those tasks get assigned to the assignee, which you can set which one you want to be the default. Maybe I want to create an implementer profile whose sole job is to execute on things. In a similar way that the researcher is the one that researches things. And the librarian is the one that files things in my LLM wiki.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00593",
+                    "T00594",
+                    "T00595",
+                    "T00596",
+                    "T00597",
+                    "T00598",
+                    "T00599",
+                    "T00600",
+                    "T00601",
+                    "T00602",
+                    "T00603",
+                    "T00604",
+                    "T00605",
+                    "T00606"
+                  ]
+                }
+              ],
+              "selection_score": 0.6100962752525252,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 4,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:65",
+              "start": 1952.25,
+              "end": 1982.33,
+              "text": "OK, here we go. So it just started. So that triage using the auto decomposer, the dispatcher checked. Oh, it's been a minute. There's something here. Let's break it into two different tasks. So the task decomposer broke it up and assigned it to these particular subagents where each one is now running on its own. And we can click into this and we can see the specific prompt that was given to it created by the auto decomposer using the default model, we can estimate the effort of this particular task, like I was just showing you, and we can comment. So as these tasks are currently running, we can actually send messages to the worker. And if there's",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00667",
+                "T00668",
+                "T00669",
+                "T00670",
+                "T00671",
+                "T00672",
+                "T00673",
+                "T00674",
+                "T00675",
+                "T00676",
+                "T00677",
+                "T00678"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.015080670963023905,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 8,
+                  "retrieval_score": 1.9754423502175804,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004901960784313725,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                  "rank": 6,
+                  "retrieval_score": 1.9754423502175804,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005050505050505051,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "time of first mention of estimate decreasing from 45,000 to 18,000 tokens",
+                  "rank": 5,
+                  "retrieval_score": 1.9754423502175804,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                "time of first mention of estimate decreasing from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:65",
+                  "start": 1952.25,
+                  "end": 1982.33,
+                  "text": "OK, here we go. So it just started. So that triage using the auto decomposer, the dispatcher checked. Oh, it's been a minute. There's something here. Let's break it into two different tasks. So the task decomposer broke it up and assigned it to these particular subagents where each one is now running on its own. And we can click into this and we can see the specific prompt that was given to it created by the auto decomposer using the default model, we can estimate the effort of this particular task, like I was just showing you, and we can comment. So as these tasks are currently running, we can actually send messages to the worker. And if there's",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00667",
+                    "T00668",
+                    "T00669",
+                    "T00670",
+                    "T00671",
+                    "T00672",
+                    "T00673",
+                    "T00674",
+                    "T00675",
+                    "T00676",
+                    "T00677",
+                    "T00678"
+                  ]
+                }
+              ],
+              "selection_score": 0.5979486036838978,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 5,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:75",
+              "start": 2252.2,
+              "end": 2280.96,
+              "text": "to the orchestrator to write the article, which honestly, in the future, I would probably have an implementer agent or a writing agent who specialized with this, leaving the orchestrator to just deal with orchestration. So that's one change I'm going to make. And then it gave the summary here. So it accepted the deliverable. The final is 485 words. All the sources check out. And here's the simple recommendation. So honestly that worked pretty well. But maybe we didn't need two researcher agents. That's a little bit of overkill for a five source limitation. That probably used up more tokens than",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00788",
+                "T00789",
+                "T00790",
+                "T00791",
+                "T00792",
+                "T00793",
+                "T00794",
+                "T00795"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.014787534190519265,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 10,
+                  "retrieval_score": 1.7815127888539404,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0047619047619047615,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                  "rank": 7,
+                  "retrieval_score": 1.7815127888539404,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "time of first mention of estimate decreasing from 45,000 to 18,000 tokens",
+                  "rank": 6,
+                  "retrieval_score": 1.7815127888539404,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005050505050505051,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens",
+                "first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript",
+                "time of first mention of estimate decreasing from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:75",
+                  "start": 2252.2,
+                  "end": 2280.96,
+                  "text": "to the orchestrator to write the article, which honestly, in the future, I would probably have an implementer agent or a writing agent who specialized with this, leaving the orchestrator to just deal with orchestration. So that's one change I'm going to make. And then it gave the summary here. So it accepted the deliverable. The final is 485 words. All the sources check out. And here's the simple recommendation. So honestly that worked pretty well. But maybe we didn't need two researcher agents. That's a little bit of overkill for a five source limitation. That probably used up more tokens than",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00788",
+                    "T00789",
+                    "T00790",
+                    "T00791",
+                    "T00792",
+                    "T00793",
+                    "T00794",
+                    "T00795"
+                  ]
+                }
+              ],
+              "selection_score": 0.5863257306540889,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 6,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false,
+          "citable_evidence_ids": [
+            "E001",
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006"
+          ]
+        },
+        "latency_seconds": 0.012
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:64",
+        "start": 1920.39,
+        "end": 1952.25,
+        "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00653",
+          "T00654",
+          "T00655",
+          "T00656",
+          "T00657",
+          "T00658",
+          "T00659",
+          "T00660",
+          "T00661",
+          "T00662",
+          "T00663",
+          "T00664",
+          "T00665",
+          "T00666"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00653",
+            "start": 1920.39,
+            "end": 1923.05
+          },
+          {
+            "id": "T00654",
+            "start": 1923.05,
+            "end": 1925.25
+          },
+          {
+            "id": "T00655",
+            "start": 1925.25,
+            "end": 1926.69
+          },
+          {
+            "id": "T00656",
+            "start": 1926.69,
+            "end": 1928.49
+          },
+          {
+            "id": "T00657",
+            "start": 1928.49,
+            "end": 1931.81
+          },
+          {
+            "id": "T00658",
+            "start": 1931.81,
+            "end": 1933.93
+          },
+          {
+            "id": "T00659",
+            "start": 1933.93,
+            "end": 1935.21
+          },
+          {
+            "id": "T00660",
+            "start": 1935.21,
+            "end": 1936.57
+          },
+          {
+            "id": "T00661",
+            "start": 1936.57,
+            "end": 1938.21
+          },
+          {
+            "id": "T00662",
+            "start": 1938.21,
+            "end": 1940.77
+          },
+          {
+            "id": "T00663",
+            "start": 1941.97,
+            "end": 1944.13
+          },
+          {
+            "id": "T00664",
+            "start": 1944.13,
+            "end": 1946.37
+          },
+          {
+            "id": "T00665",
+            "start": 1946.37,
+            "end": 1949.65
+          },
+          {
+            "id": "T00666",
+            "start": 1949.65,
+            "end": 1952.25
+          }
+        ],
+        "transcript": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+        "event": {
+          "event_query": [
+            "the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 1800.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 14,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E001"
+      },
+      "E002": {
+        "id": "transcript:63",
+        "start": 1890.41,
+        "end": 1920.39,
+        "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00637",
+          "T00638",
+          "T00639",
+          "T00640",
+          "T00641",
+          "T00642",
+          "T00643",
+          "T00644",
+          "T00645",
+          "T00646",
+          "T00647",
+          "T00648",
+          "T00649",
+          "T00650",
+          "T00651",
+          "T00652"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00637",
+            "start": 1890.41,
+            "end": 1893.05
+          },
+          {
+            "id": "T00638",
+            "start": 1893.05,
+            "end": 1894.33
+          },
+          {
+            "id": "T00639",
+            "start": 1894.33,
+            "end": 1896.37
+          },
+          {
+            "id": "T00640",
+            "start": 1896.37,
+            "end": 1898.25
+          },
+          {
+            "id": "T00641",
+            "start": 1898.25,
+            "end": 1899.61
+          },
+          {
+            "id": "T00642",
+            "start": 1899.61,
+            "end": 1902.33
+          },
+          {
+            "id": "T00643",
+            "start": 1902.33,
+            "end": 1903.41
+          },
+          {
+            "id": "T00644",
+            "start": 1903.41,
+            "end": 1906.17
+          },
+          {
+            "id": "T00645",
+            "start": 1906.17,
+            "end": 1908.45
+          },
+          {
+            "id": "T00646",
+            "start": 1908.45,
+            "end": 1911.13
+          },
+          {
+            "id": "T00647",
+            "start": 1911.13,
+            "end": 1911.97
+          },
+          {
+            "id": "T00648",
+            "start": 1911.97,
+            "end": 1914.17
+          },
+          {
+            "id": "T00649",
+            "start": 1914.17,
+            "end": 1915.91
+          },
+          {
+            "id": "T00650",
+            "start": 1915.91,
+            "end": 1918.25
+          },
+          {
+            "id": "T00651",
+            "start": 1918.25,
+            "end": 1919.55
+          },
+          {
+            "id": "T00652",
+            "start": 1919.55,
+            "end": 1920.39
+          }
+        ],
+        "transcript": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+        "event": {
+          "event_query": [
+            "the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 1800.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 16,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E002"
+      },
+      "E003": {
+        "id": "transcript:68",
+        "start": 2040.21,
+        "end": 2070.57,
+        "text": "You can put them all in here, you can schedule them, you can let the agent know that some are waiting on others. There's a lot that you can do here and it just takes a lot of that sub-agent delegation that we were talking about in the first couple of examples and makes it a lot more transparent and controllable. And that's why it's called a control graph or a task graph, because we can actually see the graph of how this is operating, what needs to be done first before the next task can be accomplished. So this one is still running here, but we can see this one finished. We can go through and see the full activity. So we can see that it was created",
+        "source": "transcript",
+        "segment_ids": [
+          "T00704",
+          "T00705",
+          "T00706",
+          "T00707",
+          "T00708",
+          "T00709",
+          "T00710",
+          "T00711",
+          "T00712",
+          "T00713",
+          "T00714",
+          "T00715",
+          "T00716",
+          "T00717"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00704",
+            "start": 2040.21,
+            "end": 2042.49
+          },
+          {
+            "id": "T00705",
+            "start": 2042.49,
+            "end": 2045.29
+          },
+          {
+            "id": "T00706",
+            "start": 2045.29,
+            "end": 2046.89
+          },
+          {
+            "id": "T00707",
+            "start": 2046.89,
+            "end": 2049.53
+          },
+          {
+            "id": "T00708",
+            "start": 2049.53,
+            "end": 2052.41
+          },
+          {
+            "id": "T00709",
+            "start": 2052.41,
+            "end": 2054.81
+          },
+          {
+            "id": "T00710",
+            "start": 2054.81,
+            "end": 2056.37
+          },
+          {
+            "id": "T00711",
+            "start": 2056.37,
+            "end": 2059.21
+          },
+          {
+            "id": "T00712",
+            "start": 2059.21,
+            "end": 2061.89
+          },
+          {
+            "id": "T00713",
+            "start": 2061.89,
+            "end": 2064.33
+          },
+          {
+            "id": "T00714",
+            "start": 2064.33,
+            "end": 2065.49
+          },
+          {
+            "id": "T00715",
+            "start": 2065.49,
+            "end": 2066.85
+          },
+          {
+            "id": "T00716",
+            "start": 2066.85,
+            "end": 2069.13
+          },
+          {
+            "id": "T00717",
+            "start": 2069.13,
+            "end": 2070.57
+          }
+        ],
+        "transcript": "You can put them all in here, you can schedule them, you can let the agent know that some are waiting on others. There's a lot that you can do here and it just takes a lot of that sub-agent delegation that we were talking about in the first couple of examples and makes it a lot more transparent and controllable. And that's why it's called a control graph or a task graph, because we can actually see the graph of how this is operating, what needs to be done first before the next task can be accomplished. So this one is still running here, but we can see this one finished. We can go through and see the full activity. So we can see that it was created",
+        "event": {
+          "event_query": [
+            "the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 1800.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 14,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E003"
+      },
+      "E004": {
+        "id": "transcript:60",
+        "start": 1802.54,
+        "end": 1833.83,
+        "text": "The first is the orchestrator profile. So right now it's defaulting to default. You can change which agent you want to operate as your orchestrator. This is the orchestrating agent that will decide which agent gets which task. And those tasks get assigned to the assignee, which you can set which one you want to be the default. Maybe I want to create an implementer profile whose sole job is to execute on things. In a similar way that the researcher is the one that researches things. And the librarian is the one that files things in my LLM wiki.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00593",
+          "T00594",
+          "T00595",
+          "T00596",
+          "T00597",
+          "T00598",
+          "T00599",
+          "T00600",
+          "T00601",
+          "T00602",
+          "T00603",
+          "T00604",
+          "T00605",
+          "T00606"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00593",
+            "start": 1802.54,
+            "end": 1804.58
+          },
+          {
+            "id": "T00594",
+            "start": 1804.58,
+            "end": 1806.38
+          },
+          {
+            "id": "T00595",
+            "start": 1806.38,
+            "end": 1808.5
+          },
+          {
+            "id": "T00596",
+            "start": 1808.5,
+            "end": 1810.18
+          },
+          {
+            "id": "T00597",
+            "start": 1810.18,
+            "end": 1811.78
+          },
+          {
+            "id": "T00598",
+            "start": 1811.78,
+            "end": 1814.34
+          },
+          {
+            "id": "T00599",
+            "start": 1814.34,
+            "end": 1816.22
+          },
+          {
+            "id": "T00600",
+            "start": 1816.22,
+            "end": 1818.5
+          },
+          {
+            "id": "T00601",
+            "start": 1818.5,
+            "end": 1820.38
+          },
+          {
+            "id": "T00602",
+            "start": 1820.38,
+            "end": 1822.54
+          },
+          {
+            "id": "T00603",
+            "start": 1822.54,
+            "end": 1824.14
+          },
+          {
+            "id": "T00604",
+            "start": 1824.14,
+            "end": 1825.78
+          },
+          {
+            "id": "T00605",
+            "start": 1825.78,
+            "end": 1827.88
+          },
+          {
+            "id": "T00606",
+            "start": 1827.88,
+            "end": 1833.83
+          }
+        ],
+        "transcript": "The first is the orchestrator profile. So right now it's defaulting to default. You can change which agent you want to operate as your orchestrator. This is the orchestrating agent that will decide which agent gets which task. And those tasks get assigned to the assignee, which you can set which one you want to be the default. Maybe I want to create an implementer profile whose sole job is to execute on things. In a similar way that the researcher is the one that researches things. And the librarian is the one that files things in my LLM wiki.",
+        "event": {
+          "event_query": [
+            "the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 1800.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 14,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E004"
+      },
+      "E005": {
+        "id": "transcript:65",
+        "start": 1952.25,
+        "end": 1982.33,
+        "text": "OK, here we go. So it just started. So that triage using the auto decomposer, the dispatcher checked. Oh, it's been a minute. There's something here. Let's break it into two different tasks. So the task decomposer broke it up and assigned it to these particular subagents where each one is now running on its own. And we can click into this and we can see the specific prompt that was given to it created by the auto decomposer using the default model, we can estimate the effort of this particular task, like I was just showing you, and we can comment. So as these tasks are currently running, we can actually send messages to the worker. And if there's",
+        "source": "transcript",
+        "segment_ids": [
+          "T00667",
+          "T00668",
+          "T00669",
+          "T00670",
+          "T00671",
+          "T00672",
+          "T00673",
+          "T00674",
+          "T00675",
+          "T00676",
+          "T00677",
+          "T00678"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00667",
+            "start": 1952.25,
+            "end": 1952.85
+          },
+          {
+            "id": "T00668",
+            "start": 1952.85,
+            "end": 1953.69
+          },
+          {
+            "id": "T00669",
+            "start": 1953.69,
+            "end": 1957.33
+          },
+          {
+            "id": "T00670",
+            "start": 1957.33,
+            "end": 1958.37
+          },
+          {
+            "id": "T00671",
+            "start": 1958.37,
+            "end": 1959.33
+          },
+          {
+            "id": "T00672",
+            "start": 1959.33,
+            "end": 1961.05
+          },
+          {
+            "id": "T00673",
+            "start": 1961.05,
+            "end": 1963.69
+          },
+          {
+            "id": "T00674",
+            "start": 1963.69,
+            "end": 1967.57
+          },
+          {
+            "id": "T00675",
+            "start": 1967.57,
+            "end": 1970.21
+          },
+          {
+            "id": "T00676",
+            "start": 1970.21,
+            "end": 1974.89
+          },
+          {
+            "id": "T00677",
+            "start": 1974.89,
+            "end": 1978.37
+          },
+          {
+            "id": "T00678",
+            "start": 1978.37,
+            "end": 1982.33
+          }
+        ],
+        "transcript": "OK, here we go. So it just started. So that triage using the auto decomposer, the dispatcher checked. Oh, it's been a minute. There's something here. Let's break it into two different tasks. So the task decomposer broke it up and assigned it to these particular subagents where each one is now running on its own. And we can click into this and we can see the specific prompt that was given to it created by the auto decomposer using the default model, we can estimate the effort of this particular task, like I was just showing you, and we can comment. So as these tasks are currently running, we can actually send messages to the worker. And if there's",
+        "event": {
+          "event_query": [
+            "the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 1800.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 12,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E005"
+      },
+      "E006": {
+        "id": "transcript:75",
+        "start": 2252.2,
+        "end": 2280.96,
+        "text": "to the orchestrator to write the article, which honestly, in the future, I would probably have an implementer agent or a writing agent who specialized with this, leaving the orchestrator to just deal with orchestration. So that's one change I'm going to make. And then it gave the summary here. So it accepted the deliverable. The final is 485 words. All the sources check out. And here's the simple recommendation. So honestly that worked pretty well. But maybe we didn't need two researcher agents. That's a little bit of overkill for a five source limitation. That probably used up more tokens than",
+        "source": "transcript",
+        "segment_ids": [
+          "T00788",
+          "T00789",
+          "T00790",
+          "T00791",
+          "T00792",
+          "T00793",
+          "T00794",
+          "T00795"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00788",
+            "start": 2252.2,
+            "end": 2255.5
+          },
+          {
+            "id": "T00789",
+            "start": 2255.5,
+            "end": 2257.8
+          },
+          {
+            "id": "T00790",
+            "start": 2257.8,
+            "end": 2261.48
+          },
+          {
+            "id": "T00791",
+            "start": 2261.48,
+            "end": 2264.52
+          },
+          {
+            "id": "T00792",
+            "start": 2264.52,
+            "end": 2269.2
+          },
+          {
+            "id": "T00793",
+            "start": 2269.2,
+            "end": 2272.38
+          },
+          {
+            "id": "T00794",
+            "start": 2272.38,
+            "end": 2275.88
+          },
+          {
+            "id": "T00795",
+            "start": 2275.88,
+            "end": 2280.96
+          }
+        ],
+        "transcript": "to the orchestrator to write the article, which honestly, in the future, I would probably have an implementer agent or a writing agent who specialized with this, leaving the orchestrator to just deal with orchestration. So that's one change I'm going to make. And then it gave the summary here. So it accepted the deliverable. The final is 485 words. All the sources check out. And here's the simple recommendation. So honestly that worked pretty well. But maybe we didn't need two researcher agents. That's a little bit of overkill for a five source limitation. That probably used up more tokens than",
+        "event": {
+          "event_query": [
+            "the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 1800.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 8,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E006"
+      }
+    },
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"event\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens\",\n    \"first occurrence of estimate dropping from 45,000 to 18,000 tokens in the transcript\",\n    \"time of first mention of estimate decreasing from 45,000 to 18,000 tokens\"\n  ],\n  \"requirements\": [\n    \"the transcript first reports the estimate dropping from 45,000 to 18,000 tokens at a specific time\",\n    \"the time must be within the given scope [1800.0, 2575.0057666666667]\",\n    \"the answer must return the matching cue time or cue span\",\n    \"the event is the estimation demonstration after 30 minutes\",\n    \"the estimate drops from 45,000 to 18,000 tokens is the key event\",\n    \"the answer must be precise and match the exact time or span in the transcript\"\n  ],\n  \"event_query\": [\n    \"the estimate dropping from 45,000 to 18,000 tokens\"\n  ]\n}"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "retrieval-only",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

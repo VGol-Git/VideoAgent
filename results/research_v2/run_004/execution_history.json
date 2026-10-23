@@ -1,0 +1,42 @@
+[
+  {
+    "started_at_utc": "2026-10-22T19:07:50.002336+00:00",
+    "argv": [
+      "--prepare-assets",
+      "--download-models",
+      "--local-files-only",
+      "--output-root",
+      "results/research_v2",
+      "--split",
+      "test",
+      "--modes",
+      "adaptive",
+      "retrieval-only",
+      "static",
+      "uniform"
+    ],
+    "resume": false,
+    "prepare_only": false,
+    "launch_context": {
+      "stop_demo_requested": true,
+      "stopped_demo_pids": []
+    },
+    "warmup": {
+      "seconds": 9.171186699997634,
+      "frames": 4,
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 788,
+        "output_tokens": 2
+      }
+    },
+    "total_backend_usage": {
+      "model_calls": 257,
+      "input_tokens": 261266,
+      "output_tokens": 19584
+    },
+    "finished_at_utc": "2026-10-22T19:32:33.423579+00:00",
+    "status": "completed_with_errors",
+    "completed_predictions": 64
+  }
+]

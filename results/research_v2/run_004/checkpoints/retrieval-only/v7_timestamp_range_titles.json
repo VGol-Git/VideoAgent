@@ -1,0 +1,115 @@
+{
+  "saved_at_utc": "2026-10-22T19:31:53.629178+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "retrieval-only",
+  "question_id": "v7_timestamp_range_titles",
+  "prediction_sha256": "2971669a9d37975ca400580619d972f22369598eddb57f64b0122c72f03e3bdb",
+  "prediction": {
+    "status": "insufficient_evidence",
+    "answer": "The available observations do not establish the requested answer.",
+    "claims": [],
+    "citations": [],
+    "requirements_covered": [],
+    "requirements_missing": [
+      "R1"
+    ],
+    "fixed_schedule": [],
+    "schedule_policy": "retrieved_text_only",
+    "plan": {
+      "task": "lookup",
+      "modality": "visual",
+      "queries": [
+        "slide titles",
+        "time interval"
+      ],
+      "requirements": {
+        "R1": "slide titles visible between 20:00 and 21:00"
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "kind": "range",
+      "start": 1200.0,
+      "end": 1260.0,
+      "interpretation": "Requested video interval: 1200–1260 seconds. Minute/hour numbers, including ordinal wording, are timestamp boundaries."
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "coverage": {
+      "strategy": "retrieved_stored_observations",
+      "requested_start": 1200.0,
+      "requested_end": 1260.0,
+      "inspection_intervals": [],
+      "omitted_intervals": [
+        [
+          1200.0,
+          1260.0
+        ]
+      ],
+      "sampled_frame_count": 0,
+      "complete_visual_coverage": false,
+      "note": "Only retrieved stored text, OCR or caption observations inside the requested interval were used. No new frames were decoded or visually inspected; indexed sample timestamps do not establish continuous coverage.",
+      "newly_decoded_frame_count": 0
+    },
+    "question_id": "v7_timestamp_range_titles",
+    "question": "Between 20:00 and 21:00, which two slide titles are visible, and in which order? Use evidence only from that interval.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 1.7157,
+    "usage": {
+      "model_calls": 1,
+      "input_tokens": 255,
+      "output_tokens": 44
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "slide titles",
+          "queries": [
+            "time interval"
+          ],
+          "source": "visual",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "hits": [],
+          "empty": true,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false,
+          "citable_evidence_ids": []
+        },
+        "latency_seconds": 0.0012
+      }
+    ],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"lookup\",\"modality\":\"visual\",\"queries\":[\"slide titles\",\"time interval\"],\"requirements\":[\"slide titles visible between 20:00 and 21:00\"],\"event_query\":null}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "retrieval-only",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

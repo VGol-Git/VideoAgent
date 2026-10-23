@@ -1,0 +1,1372 @@
+{
+  "saved_at_utc": "2026-10-22T20:38:18.589337+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "retrieval-only",
+  "question_id": "v7_onset_token_first",
+  "prediction_sha256": "43c7f7554ff1c2734c0bb7bfff75e152dd3e7746f430f0487dfb55bcd2105bd2",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Answered response must support every planned requirement",
+    "error": "Answered response must support every planned requirement",
+    "error_type": "invalid_model_response",
+    "fixed_schedule": [],
+    "question_contract": {
+      "basis": "question_text_only",
+      "task": "event",
+      "modality": "transcript",
+      "allowed_modalities": [
+        "transcript"
+      ],
+      "event_query_hint": "the estimate dropped from 45,000 to 18,000 tokens",
+      "overview": false
+    },
+    "schedule_policy": "retrieved_text_only",
+    "model_protocol_attempts": 0,
+    "model_protocol_failures": [],
+    "event": null,
+    "plan": {
+      "task": "event",
+      "modality": "transcript",
+      "queries": [
+        "the estimate dropped from 45,000 to 18,000 tokens",
+        "when does the transcript first state this",
+        "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+      ],
+      "requirements": {
+        "R1": "The answer must identify the first time the transcript states that the estimate dropped from 45,000 to 18,000 tokens.",
+        "R2": "The response must include the opening preview when selecting the first occurrence.",
+        "R3": "The output must return the matching cue time or cue span.",
+        "R4": "The answer must be based solely on the transcript content, without external inference."
+      },
+      "event_query": [
+        "the estimate dropped from 45,000 to 18,000 tokens"
+      ]
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "question_id": "v7_onset_token_first",
+    "question": "When does the transcript first state that the estimate dropped from 45,000 to 18,000 tokens? Include the opening preview when selecting the first occurrence. Return the matching cue time or cue span.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 67.3924,
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 8874,
+      "output_tokens": 241
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "the estimate dropped from 45,000 to 18,000 tokens",
+          "queries": [
+            "when does the transcript first state this",
+            "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:12",
+              "start": 360.56,
+              "end": 391.16,
+              "text": "There was more context used, but that context that made it back into the main higher intelligence agent was significantly compressed relative to the agent that just did it all itself and had 102,000. If I ran this turn one more time, I might have to compress the context here and then you lose some quality. So that's the first comparison, just using a single agent versus using a single agent with multiple subagents. So the biggest difference is that one uses up a lot more context, but this was also a very basic example. And the results of both of these are basically the same. Build an accountable action steward",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00091",
+                "T00092",
+                "T00093",
+                "T00094",
+                "T00095",
+                "T00096",
+                "T00097",
+                "T00098",
+                "T00099",
+                "T00100",
+                "T00101",
+                "T00102",
+                "T00103",
+                "T00104",
+                "T00105",
+                "T00106"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.014655259058244132,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "the estimate dropped from 45,000 to 18,000 tokens",
+                  "rank": 7,
+                  "retrieval_score": 2.605227232403078,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "when does the transcript first state this",
+                  "rank": 12,
+                  "retrieval_score": 1.7579956814074937,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004629629629629629,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 6,
+                  "retrieval_score": 4.363222913810572,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005050505050505051,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "the estimate dropped from 45,000 to 18,000 tokens",
+                "when does the transcript first state this",
+                "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:12",
+                  "start": 360.56,
+                  "end": 391.16,
+                  "text": "There was more context used, but that context that made it back into the main higher intelligence agent was significantly compressed relative to the agent that just did it all itself and had 102,000. If I ran this turn one more time, I might have to compress the context here and then you lose some quality. So that's the first comparison, just using a single agent versus using a single agent with multiple subagents. So the biggest difference is that one uses up a lot more context, but this was also a very basic example. And the results of both of these are basically the same. Build an accountable action steward",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00091",
+                    "T00092",
+                    "T00093",
+                    "T00094",
+                    "T00095",
+                    "T00096",
+                    "T00097",
+                    "T00098",
+                    "T00099",
+                    "T00100",
+                    "T00101",
+                    "T00102",
+                    "T00103",
+                    "T00104",
+                    "T00105",
+                    "T00106"
+                  ]
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:64",
+              "start": 1920.39,
+              "end": 1952.25,
+              "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00653",
+                "T00654",
+                "T00655",
+                "T00656",
+                "T00657",
+                "T00658",
+                "T00659",
+                "T00660",
+                "T00661",
+                "T00662",
+                "T00663",
+                "T00664",
+                "T00665",
+                "T00666"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01092896174863388,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "the estimate dropped from 45,000 to 18,000 tokens",
+                  "rank": 1,
+                  "retrieval_score": 20.333201338609996,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 1,
+                  "retrieval_score": 15.516315190981501,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "the estimate dropped from 45,000 to 18,000 tokens",
+                "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:64",
+                  "start": 1920.39,
+                  "end": 1952.25,
+                  "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00653",
+                    "T00654",
+                    "T00655",
+                    "T00656",
+                    "T00657",
+                    "T00658",
+                    "T00659",
+                    "T00660",
+                    "T00661",
+                    "T00662",
+                    "T00663",
+                    "T00664",
+                    "T00665",
+                    "T00666"
+                  ]
+                }
+              ],
+              "selection_score": 0.4847287317391947,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:0",
+              "start": 0.0,
+              "end": 33.04,
+              "text": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00001",
+                "T00002",
+                "T00003",
+                "T00004",
+                "T00005",
+                "T00006",
+                "T00007",
+                "T00008"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01075268817204301,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "the estimate dropped from 45,000 to 18,000 tokens",
+                  "rank": 2,
+                  "retrieval_score": 15.829655862592354,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 2,
+                  "retrieval_score": 12.524065163329261,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "the estimate dropped from 45,000 to 18,000 tokens",
+                "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:0",
+                  "start": 0.0,
+                  "end": 33.04,
+                  "text": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00001",
+                    "T00002",
+                    "T00003",
+                    "T00004",
+                    "T00005",
+                    "T00006",
+                    "T00007",
+                    "T00008"
+                  ]
+                }
+              ],
+              "selection_score": 0.4769105263885624,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 3,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:63",
+              "start": 1890.41,
+              "end": 1920.39,
+              "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00637",
+                "T00638",
+                "T00639",
+                "T00640",
+                "T00641",
+                "T00642",
+                "T00643",
+                "T00644",
+                "T00645",
+                "T00646",
+                "T00647",
+                "T00648",
+                "T00649",
+                "T00650",
+                "T00651",
+                "T00652"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.010582010582010581,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "the estimate dropped from 45,000 to 18,000 tokens",
+                  "rank": 3,
+                  "retrieval_score": 8.11373098523433,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005291005291005291,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 3,
+                  "retrieval_score": 8.11373098523433,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005291005291005291,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "the estimate dropped from 45,000 to 18,000 tokens",
+                "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:63",
+                  "start": 1890.41,
+                  "end": 1920.39,
+                  "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00637",
+                    "T00638",
+                    "T00639",
+                    "T00640",
+                    "T00641",
+                    "T00642",
+                    "T00643",
+                    "T00644",
+                    "T00645",
+                    "T00646",
+                    "T00647",
+                    "T00648",
+                    "T00649",
+                    "T00650",
+                    "T00651",
+                    "T00652"
+                  ]
+                }
+              ],
+              "selection_score": 0.46934051803318844,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 4,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:11",
+              "start": 331.6,
+              "end": 360.56,
+              "text": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00077",
+                "T00078",
+                "T00079",
+                "T00080",
+                "T00081",
+                "T00082",
+                "T00083",
+                "T00084",
+                "T00085",
+                "T00086",
+                "T00087",
+                "T00088",
+                "T00089",
+                "T00090"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.010416666666666666,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "the estimate dropped from 45,000 to 18,000 tokens",
+                  "rank": 4,
+                  "retrieval_score": 7.665459810915287,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 4,
+                  "retrieval_score": 7.665459810915287,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "the estimate dropped from 45,000 to 18,000 tokens",
+                "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:11",
+                  "start": 331.6,
+                  "end": 360.56,
+                  "text": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00077",
+                    "T00078",
+                    "T00079",
+                    "T00080",
+                    "T00081",
+                    "T00082",
+                    "T00083",
+                    "T00084",
+                    "T00085",
+                    "T00086",
+                    "T00087",
+                    "T00088",
+                    "T00089",
+                    "T00090"
+                  ]
+                }
+              ],
+              "selection_score": 0.46200707243891986,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 5,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:10",
+              "start": 300.44,
+              "end": 331.6,
+              "text": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00070",
+                "T00071",
+                "T00072",
+                "T00073",
+                "T00074",
+                "T00075",
+                "T00076"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.010256410256410256,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "the estimate dropped from 45,000 to 18,000 tokens",
+                  "rank": 5,
+                  "retrieval_score": 4.863824335430594,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "first occurrence of the estimate dropping from 45,000 to 18,000 tokens",
+                  "rank": 5,
+                  "retrieval_score": 4.863824335430594,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "the estimate dropped from 45,000 to 18,000 tokens",
+                "first occurrence of the estimate dropping from 45,000 to 18,000 tokens"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:10",
+                  "start": 300.44,
+                  "end": 331.6,
+                  "text": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00070",
+                    "T00071",
+                    "T00072",
+                    "T00073",
+                    "T00074",
+                    "T00075",
+                    "T00076"
+                  ]
+                }
+              ],
+              "selection_score": 0.454899271324475,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 6,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false,
+          "citable_evidence_ids": [
+            "E001",
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006"
+          ]
+        },
+        "latency_seconds": 0.0133
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:12",
+        "start": 360.56,
+        "end": 391.16,
+        "text": "There was more context used, but that context that made it back into the main higher intelligence agent was significantly compressed relative to the agent that just did it all itself and had 102,000. If I ran this turn one more time, I might have to compress the context here and then you lose some quality. So that's the first comparison, just using a single agent versus using a single agent with multiple subagents. So the biggest difference is that one uses up a lot more context, but this was also a very basic example. And the results of both of these are basically the same. Build an accountable action steward",
+        "source": "transcript",
+        "segment_ids": [
+          "T00091",
+          "T00092",
+          "T00093",
+          "T00094",
+          "T00095",
+          "T00096",
+          "T00097",
+          "T00098",
+          "T00099",
+          "T00100",
+          "T00101",
+          "T00102",
+          "T00103",
+          "T00104",
+          "T00105",
+          "T00106"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00091",
+            "start": 360.56,
+            "end": 362.32
+          },
+          {
+            "id": "T00092",
+            "start": 362.32,
+            "end": 364.24
+          },
+          {
+            "id": "T00093",
+            "start": 364.24,
+            "end": 366.4
+          },
+          {
+            "id": "T00094",
+            "start": 366.4,
+            "end": 369.36
+          },
+          {
+            "id": "T00095",
+            "start": 369.36,
+            "end": 371.66
+          },
+          {
+            "id": "T00096",
+            "start": 371.66,
+            "end": 373.08
+          },
+          {
+            "id": "T00097",
+            "start": 373.08,
+            "end": 374.76
+          },
+          {
+            "id": "T00098",
+            "start": 374.76,
+            "end": 376.0
+          },
+          {
+            "id": "T00099",
+            "start": 376.0,
+            "end": 377.24
+          },
+          {
+            "id": "T00100",
+            "start": 377.24,
+            "end": 379.88
+          },
+          {
+            "id": "T00101",
+            "start": 379.88,
+            "end": 381.32
+          },
+          {
+            "id": "T00102",
+            "start": 381.32,
+            "end": 383.16
+          },
+          {
+            "id": "T00103",
+            "start": 383.16,
+            "end": 384.64
+          },
+          {
+            "id": "T00104",
+            "start": 384.64,
+            "end": 387.04
+          },
+          {
+            "id": "T00105",
+            "start": 387.04,
+            "end": 389.56
+          },
+          {
+            "id": "T00106",
+            "start": 389.56,
+            "end": 391.16
+          }
+        ],
+        "transcript": "There was more context used, but that context that made it back into the main higher intelligence agent was significantly compressed relative to the agent that just did it all itself and had 102,000. If I ran this turn one more time, I might have to compress the context here and then you lose some quality. So that's the first comparison, just using a single agent versus using a single agent with multiple subagents. So the biggest difference is that one uses up a lot more context, but this was also a very basic example. And the results of both of these are basically the same. Build an accountable action steward",
+        "event": {
+          "event_query": [
+            "the estimate dropped from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 0.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 16,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E001"
+      },
+      "E002": {
+        "id": "transcript:64",
+        "start": 1920.39,
+        "end": 1952.25,
+        "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00653",
+          "T00654",
+          "T00655",
+          "T00656",
+          "T00657",
+          "T00658",
+          "T00659",
+          "T00660",
+          "T00661",
+          "T00662",
+          "T00663",
+          "T00664",
+          "T00665",
+          "T00666"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00653",
+            "start": 1920.39,
+            "end": 1923.05
+          },
+          {
+            "id": "T00654",
+            "start": 1923.05,
+            "end": 1925.25
+          },
+          {
+            "id": "T00655",
+            "start": 1925.25,
+            "end": 1926.69
+          },
+          {
+            "id": "T00656",
+            "start": 1926.69,
+            "end": 1928.49
+          },
+          {
+            "id": "T00657",
+            "start": 1928.49,
+            "end": 1931.81
+          },
+          {
+            "id": "T00658",
+            "start": 1931.81,
+            "end": 1933.93
+          },
+          {
+            "id": "T00659",
+            "start": 1933.93,
+            "end": 1935.21
+          },
+          {
+            "id": "T00660",
+            "start": 1935.21,
+            "end": 1936.57
+          },
+          {
+            "id": "T00661",
+            "start": 1936.57,
+            "end": 1938.21
+          },
+          {
+            "id": "T00662",
+            "start": 1938.21,
+            "end": 1940.77
+          },
+          {
+            "id": "T00663",
+            "start": 1941.97,
+            "end": 1944.13
+          },
+          {
+            "id": "T00664",
+            "start": 1944.13,
+            "end": 1946.37
+          },
+          {
+            "id": "T00665",
+            "start": 1946.37,
+            "end": 1949.65
+          },
+          {
+            "id": "T00666",
+            "start": 1949.65,
+            "end": 1952.25
+          }
+        ],
+        "transcript": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+        "event": {
+          "event_query": [
+            "the estimate dropped from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 0.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 14,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E002"
+      },
+      "E003": {
+        "id": "transcript:0",
+        "start": 0.0,
+        "end": 33.04,
+        "text": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+        "source": "transcript",
+        "segment_ids": [
+          "T00001",
+          "T00002",
+          "T00003",
+          "T00004",
+          "T00005",
+          "T00006",
+          "T00007",
+          "T00008"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00001",
+            "start": 0.0,
+            "end": 4.08
+          },
+          {
+            "id": "T00002",
+            "start": 4.08,
+            "end": 7.68
+          },
+          {
+            "id": "T00003",
+            "start": 7.68,
+            "end": 12.8
+          },
+          {
+            "id": "T00004",
+            "start": 12.8,
+            "end": 16.24
+          },
+          {
+            "id": "T00005",
+            "start": 16.24,
+            "end": 19.84
+          },
+          {
+            "id": "T00006",
+            "start": 19.84,
+            "end": 24.64
+          },
+          {
+            "id": "T00007",
+            "start": 24.64,
+            "end": 28.56
+          },
+          {
+            "id": "T00008",
+            "start": 28.56,
+            "end": 33.04
+          }
+        ],
+        "transcript": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+        "event": {
+          "event_query": [
+            "the estimate dropped from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 0.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 8,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E003"
+      },
+      "E004": {
+        "id": "transcript:63",
+        "start": 1890.41,
+        "end": 1920.39,
+        "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00637",
+          "T00638",
+          "T00639",
+          "T00640",
+          "T00641",
+          "T00642",
+          "T00643",
+          "T00644",
+          "T00645",
+          "T00646",
+          "T00647",
+          "T00648",
+          "T00649",
+          "T00650",
+          "T00651",
+          "T00652"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00637",
+            "start": 1890.41,
+            "end": 1893.05
+          },
+          {
+            "id": "T00638",
+            "start": 1893.05,
+            "end": 1894.33
+          },
+          {
+            "id": "T00639",
+            "start": 1894.33,
+            "end": 1896.37
+          },
+          {
+            "id": "T00640",
+            "start": 1896.37,
+            "end": 1898.25
+          },
+          {
+            "id": "T00641",
+            "start": 1898.25,
+            "end": 1899.61
+          },
+          {
+            "id": "T00642",
+            "start": 1899.61,
+            "end": 1902.33
+          },
+          {
+            "id": "T00643",
+            "start": 1902.33,
+            "end": 1903.41
+          },
+          {
+            "id": "T00644",
+            "start": 1903.41,
+            "end": 1906.17
+          },
+          {
+            "id": "T00645",
+            "start": 1906.17,
+            "end": 1908.45
+          },
+          {
+            "id": "T00646",
+            "start": 1908.45,
+            "end": 1911.13
+          },
+          {
+            "id": "T00647",
+            "start": 1911.13,
+            "end": 1911.97
+          },
+          {
+            "id": "T00648",
+            "start": 1911.97,
+            "end": 1914.17
+          },
+          {
+            "id": "T00649",
+            "start": 1914.17,
+            "end": 1915.91
+          },
+          {
+            "id": "T00650",
+            "start": 1915.91,
+            "end": 1918.25
+          },
+          {
+            "id": "T00651",
+            "start": 1918.25,
+            "end": 1919.55
+          },
+          {
+            "id": "T00652",
+            "start": 1919.55,
+            "end": 1920.39
+          }
+        ],
+        "transcript": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+        "event": {
+          "event_query": [
+            "the estimate dropped from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 0.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 16,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E004"
+      },
+      "E005": {
+        "id": "transcript:11",
+        "start": 331.6,
+        "end": 360.56,
+        "text": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00077",
+          "T00078",
+          "T00079",
+          "T00080",
+          "T00081",
+          "T00082",
+          "T00083",
+          "T00084",
+          "T00085",
+          "T00086",
+          "T00087",
+          "T00088",
+          "T00089",
+          "T00090"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00077",
+            "start": 331.6,
+            "end": 335.4
+          },
+          {
+            "id": "T00078",
+            "start": 335.4,
+            "end": 336.52
+          },
+          {
+            "id": "T00079",
+            "start": 336.52,
+            "end": 337.72
+          },
+          {
+            "id": "T00080",
+            "start": 337.72,
+            "end": 339.2
+          },
+          {
+            "id": "T00081",
+            "start": 339.2,
+            "end": 340.36
+          },
+          {
+            "id": "T00082",
+            "start": 340.36,
+            "end": 341.92
+          },
+          {
+            "id": "T00083",
+            "start": 343.52,
+            "end": 345.32
+          },
+          {
+            "id": "T00084",
+            "start": 345.32,
+            "end": 347.32
+          },
+          {
+            "id": "T00085",
+            "start": 347.32,
+            "end": 349.56
+          },
+          {
+            "id": "T00086",
+            "start": 349.56,
+            "end": 351.68
+          },
+          {
+            "id": "T00087",
+            "start": 351.68,
+            "end": 353.76
+          },
+          {
+            "id": "T00088",
+            "start": 353.76,
+            "end": 356.4
+          },
+          {
+            "id": "T00089",
+            "start": 356.4,
+            "end": 357.88
+          },
+          {
+            "id": "T00090",
+            "start": 357.88,
+            "end": 360.56
+          }
+        ],
+        "transcript": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+        "event": {
+          "event_query": [
+            "the estimate dropped from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 0.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 14,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E005"
+      },
+      "E006": {
+        "id": "transcript:10",
+        "start": 300.44,
+        "end": 331.6,
+        "text": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+        "source": "transcript",
+        "segment_ids": [
+          "T00070",
+          "T00071",
+          "T00072",
+          "T00073",
+          "T00074",
+          "T00075",
+          "T00076"
+        ],
+        "modality": "transcript",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [
+          {
+            "id": "T00070",
+            "start": 300.44,
+            "end": 303.24
+          },
+          {
+            "id": "T00071",
+            "start": 303.24,
+            "end": 307.44
+          },
+          {
+            "id": "T00072",
+            "start": 307.44,
+            "end": 312.84
+          },
+          {
+            "id": "T00073",
+            "start": 312.84,
+            "end": 317.48
+          },
+          {
+            "id": "T00074",
+            "start": 317.48,
+            "end": 321.96
+          },
+          {
+            "id": "T00075",
+            "start": 321.96,
+            "end": 326.92
+          },
+          {
+            "id": "T00076",
+            "start": 326.92,
+            "end": 331.6
+          }
+        ],
+        "transcript": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+        "event": {
+          "event_query": [
+            "the estimate dropped from 45,000 to 18,000 tokens"
+          ],
+          "scope": {
+            "start": 0.0,
+            "end": 2575.0057666666667
+          },
+          "modality": "transcript",
+          "claim": "first_matching_observed_transcript_cue",
+          "match": "phrase",
+          "first_matching_cue": null,
+          "first_matching_cue_start": null,
+          "first_observed_timestamp": null,
+          "onset_bracket": null,
+          "global_first_verified": false,
+          "earliest_match_in_index": false,
+          "audio_onset_verified": false,
+          "cue_onset_uncertainty": null,
+          "source_ids": [],
+          "matches": [],
+          "matching_cue_count": 0,
+          "history_truncated": false,
+          "neighbors": [],
+          "examined_cue_count": 7,
+          "excluded_boundary_cues": 0,
+          "coverage_note": "Earliest lexical match among the retrieved or inspected transcript cues only. Unretrieved or uninspected cues may contain earlier mentions. Cue bounds do not verify exact audio onset.",
+          "selector": "first_matching_observed_cue",
+          "search_coverage": "retrieved_or_inspected_cues_only"
+        },
+        "evidence_id": "E006"
+      }
+    },
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"event\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"the estimate dropped from 45,000 to 18,000 tokens\",\n    \"when does the transcript first state this\",\n    \"first occurrence of the estimate dropping from 45,000 to 18,000 tokens\"\n  ],\n  \"requirements\": [\n    \"The answer must identify the first time the transcript states that the estimate dropped from 45,000 to 18,000 tokens.\",\n    \"The response must include the opening preview when selecting the first occurrence.\",\n    \"The output must return the matching cue time or cue span.\",\n    \"The answer must be based solely on the transcript content, without external inference.\"\n  ],\n  \"event_query\": [\n    \"the estimate dropped from 45,000 to 18,000 tokens\"\n  ]\n}"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "retrieval-only",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

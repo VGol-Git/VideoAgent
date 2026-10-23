@@ -1,0 +1,70 @@
+{
+  "saved_at_utc": "2026-10-22T20:57:36.371359+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "static",
+  "question_id": "v7_onset_article",
+  "prediction_sha256": "b54202a95b5e8e5470a12d195fa29a8e60968a50734483ff89a8a44dd8cf2a41",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Plan needs 1–6 requirements; preserve all requested facts",
+    "error": "Plan needs 1–6 requirements; preserve all requested facts",
+    "error_type": "planning_error",
+    "question_contract": {
+      "basis": "question_text_only",
+      "task": "event",
+      "modality": "visual",
+      "allowed_modalities": [
+        "visual"
+      ],
+      "event_query_hint": "Article to Curated Knowledge",
+      "overview": false
+    },
+    "question_id": "v7_onset_article",
+    "question": "Within the sequence from 19:00 to 21:00, when does the complete title Article to Curated Knowledge become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.",
+    "mode": "static",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 0,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 207.2273,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 2338,
+      "output_tokens": 1200
+    },
+    "trace": [],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"event\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"when does the complete title Article to Curated Knowledge become clearly readable on the full-screen slide\",\n    \"locate the local title-appearance transition of Article to Curated Knowledge\",\n    \"when does the title become clearly readable on the full-screen slide within 19:00 to 21:00\",\n    \"find the onset of the title 'Article to Curated Knowledge' appearing on the full-screen slide\",\n    \"determine the time when the title is fully visible on the full-screen slide\",\n    \"when does the title 'Article to Curated Knowledge' first appear on the full-screen slide\",\n    \"what is the onset time of the title 'Article to Curated Knowledge' becoming readable\",\n    \"when does the title 'Article to Curated Knowledge' become clearly visible on the screen\"\n  ],\n  \"requirements\": [\n    \"The complete title 'Article to Curated Knowledge' becomes clearly readable on the full-screen slide within the time frame from 19:00 to 21:00.\",\n    \"The transition is identified as a local title-appearance event.\",\n    \"The onset estimate or bracket is provided, either as a time point or a range (e.g., 'last-absent/first-present').\",\n    \"The answer must specify the exact time when the title becomes clearly readable, or a bracket if the transition is not precisely known.\",\n    \"The answer must include the time range 19:00 to 21:00 as the context.\",\n    \"The answer must confirm that the artwork may still be animating, but the title's readability is the focus.\",\n    \"The answer must preserve the four-part question structure if present.\"\n  ],\n  \"event_query\": [\n    \"the complete title Article to Curated Knowledge becomes clearly readable on the full-screen slide\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"event\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"when does the complete title Article to Curated Knowledge become clearly readable on the full-screen slide\",\n    \"locate the local title-appearance transition of Article to Curated Knowledge\",\n    \"when does the title become clearly readable on the full-screen slide within 19:00 to 21:00\",\n    \"find the onset of the title 'Article to Curated Knowledge' appearing on the full-screen slide\",\n    \"determine the time when the title is fully visible on the full-screen slide\",\n    \"when does the title 'Article to Curated Knowledge' first appear on the full-screen slide\",\n    \"what is the onset time of the title 'Article to Curated Knowledge' becoming readable\",\n    \"when does the title 'Article to Curated Knowledge' become clearly visible on the screen\"\n  ],\n  \"requirements\": [\n    \"The complete title 'Article to Curated Knowledge' becomes clearly readable on the full-screen slide within the time frame from 19:00 to 21:00.\",\n    \"The transition is identified as a local title-appearance event.\",\n    \"The onset estimate or bracket is provided, either as a time point or a range (e.g., 'last-absent/first-present').\",\n    \"The answer must specify the exact time when the title becomes clearly readable, or a bracket if the transition is not precisely known.\",\n    \"The answer must include the time range 19:00 to 21:00 as the context.\",\n    \"The answer must confirm that the artwork may still be animating, but the title's readability is the focus.\",\n    \"The answer must preserve the four-part question structure if present.\"\n  ],\n  \"event_query\": [\n    \"the complete title Article to Curated Knowledge becomes clearly readable on the full-screen slide\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"event\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"when does the complete title Article to Curated Knowledge become clearly readable on the full-screen slide\",\n    \"locate the local title-appearance transition of Article to Curated Knowledge\",\n    \"when does the title become clearly readable on the full-screen slide within 19:00 to 21:00\",\n    \"find the onset of the title 'Article to Curated Knowledge' appearing on the full-screen slide\",\n    \"determine the time when the title is fully visible on the full-screen slide\",\n    \"when does the title 'Article to Curated Knowledge' first appear on the full-screen slide\",\n    \"what is the onset time of the title 'Article to Curated Knowledge' becoming readable\",\n    \"when does the title 'Article to Curated Knowledge' become clearly visible on the screen\"\n  ],\n  \"requirements\": [\n    \"The complete title 'Article to Curated Knowledge' becomes clearly readable on the full-screen slide within the time frame from 19:00 to 21:00.\",\n    \"The transition is identified as a local title-appearance event.\",\n    \"The onset estimate or bracket is provided, either as a time point or a range (e.g., 'last-absent/first-present').\",\n    \"The answer must specify the exact time when the title becomes clearly readable, or a bracket if the transition is not precisely known.\",\n    \"The answer must include the time range 19:00 to 21:00 as the context.\",\n    \"The answer must confirm that the artwork may still be animating, but the title's readability is the focus.\",\n    \"The answer must preserve the four-part question structure if present.\"\n  ],\n  \"event_query\": [\n    \"the complete title Article to Curated Knowledge becomes clearly readable on the full-screen slide\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "static",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

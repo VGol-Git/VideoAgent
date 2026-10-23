@@ -1,0 +1,105 @@
+{
+  "saved_at_utc": "2026-10-22T19:27:51.589512+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "retrieval-only",
+  "question_id": "v7_timestamp_610",
+  "prediction_sha256": "dec1eae03a26fd0849629e636b276f8e8bcc3f17a2e423c5888248f772009134",
+  "prediction": {
+    "status": "insufficient_evidence",
+    "answer": "The available observations do not establish the requested answer.",
+    "claims": [],
+    "citations": [],
+    "requirements_covered": [],
+    "requirements_missing": [
+      "R1"
+    ],
+    "fixed_schedule": [],
+    "schedule_policy": "retrieved_text_only",
+    "requested_timestamps": [
+      610.0
+    ],
+    "stored_point_tolerance_seconds": 0.1,
+    "plan": {
+      "task": "lookup",
+      "modality": "visual",
+      "queries": [
+        "what was on the slide at 10 minutes 10 seconds",
+        "title of the slide",
+        "numbered steps and outcome branches on the slide"
+      ],
+      "requirements": {
+        "R1": "the slide content at 10 minutes 10 seconds"
+      }
+    },
+    "routing": "research_fixed_policy",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "question_id": "v7_timestamp_610",
+    "question": "Describe what was on the slide at 10 minutes 10 seconds. Give the title and explain the numbered steps and outcome branches.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 2.2924,
+    "usage": {
+      "model_calls": 1,
+      "input_tokens": 256,
+      "output_tokens": 63
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "what was on the slide at 10 minutes 10 seconds",
+          "queries": [
+            "title of the slide",
+            "numbered steps and outcome branches on the slide"
+          ],
+          "source": "visual",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "hits": [],
+          "empty": true,
+          "citable": false,
+          "requested_timestamps": [
+            610.0
+          ],
+          "stored_point_tolerance_seconds": 0.1,
+          "dense_visual_enabled": false,
+          "citable_evidence_ids": []
+        },
+        "latency_seconds": 0.0004
+      }
+    ],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"lookup\",\"modality\":\"visual\",\"queries\":[\"what was on the slide at 10 minutes 10 seconds\",\"title of the slide\",\"numbered steps and outcome branches on the slide\"],\"requirements\":[\"the slide content at 10 minutes 10 seconds\"],\"event_query\":null}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "retrieval-only",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

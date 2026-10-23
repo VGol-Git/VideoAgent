@@ -1,0 +1,307 @@
+{
+  "created_at_utc": "2026-10-22T18:28:16.588797+00:00",
+  "configuration_sha256": "f05c71ab6575b48b1630b064becb7fa856ec76919f8859eb8281691ebd7e81f8",
+  "configuration": {
+    "schema_version": "research-run-v2.1",
+    "split": "test",
+    "policies": [
+      "legacy",
+      "research",
+      "no-refinement"
+    ],
+    "question_ids": [
+      "r2_reason_fresh_context",
+      "r2_reason_model_roles",
+      "r2_reason_changed_criteria",
+      "r2_reason_two_gates",
+      "r2_reason_context_durability",
+      "r2_reason_dispatch_delay",
+      "r2_onset_token_first",
+      "r2_onset_token_later",
+      "r2_onset_article",
+      "r2_onset_task_graph",
+      "r2_negative_total_tokens",
+      "r2_negative_dispatch_cost"
+    ],
+    "schedule": [
+      {
+        "policy": "legacy",
+        "question_id": "r2_reason_fresh_context"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_reason_fresh_context"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_reason_fresh_context"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_reason_model_roles"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_reason_model_roles"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_reason_model_roles"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_reason_changed_criteria"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_reason_changed_criteria"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_reason_changed_criteria"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_reason_two_gates"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_reason_two_gates"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_reason_two_gates"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_reason_context_durability"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_reason_context_durability"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_reason_context_durability"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_reason_dispatch_delay"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_reason_dispatch_delay"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_reason_dispatch_delay"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_onset_token_first"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_onset_token_first"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_onset_token_first"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_onset_token_later"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_onset_token_later"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_onset_token_later"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_onset_article"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_onset_article"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_onset_article"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_onset_task_graph"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_onset_task_graph"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_onset_task_graph"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_negative_total_tokens"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_negative_total_tokens"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_negative_total_tokens"
+      },
+      {
+        "policy": "no-refinement",
+        "question_id": "r2_negative_dispatch_cost"
+      },
+      {
+        "policy": "legacy",
+        "question_id": "r2_negative_dispatch_cost"
+      },
+      {
+        "policy": "research",
+        "question_id": "r2_negative_dispatch_cost"
+      }
+    ],
+    "files": {
+      "questions": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\research_v2\\questions.json",
+        "sha256": "f8b02e6a4d13d793145454d6ab221cb2b8f0edc1a76288c4d09b5e7ea5350555"
+      },
+      "protocol": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\research_v2\\protocol.json",
+        "sha256": "b00a46ac451e175b9bd828b7e15cced7f9f932d8b17057fc39831c6f20bb5d84"
+      },
+      "index": {
+        "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\indexes\\user_video.json",
+        "sha256": "a09bbc3b33b596a9f714bd2cc42540fd86b082ff26a33f9d41670733c448ff0b"
+      }
+    },
+    "visual_annotations": {
+      "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\research_v2\\visual_annotations.json",
+      "sha256": "a90a09ae3bd334953b5348274ff82f9867797fecb3439bec49ff5c099d68b046"
+    },
+    "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+    "video": {
+      "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\Subagents vs Agent Teams 🧠 Hermes Bots Goal Loops Kanban Graphs.mp4",
+      "sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "duration": 2575.0057666666667
+    },
+    "model": {
+      "name": "Qwen/Qwen3-VL-2B-Instruct",
+      "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+      "device": "cuda",
+      "local_files_only": true,
+      "max_new_tokens": 768,
+      "max_context_tokens": 8192,
+      "image_pixel_cap": 313600
+    },
+    "agent_config": {
+      "max_tool_calls": 4,
+      "frames_per_clip": 4,
+      "max_frames": 16,
+      "image_size": 560,
+      "max_clip_seconds": 120.0,
+      "use_vision": true,
+      "max_format_retries": 2
+    },
+    "inspection_cache_enabled": false,
+    "visual_preparation": {
+      "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\indexes\\user_video_visual",
+      "clip_model": "openai/clip-vit-base-patch32",
+      "clip_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "cadence_seconds": 5.0,
+      "device": "cpu",
+      "ocr": true
+    },
+    "warmup_enabled": true,
+    "source_sha256": {
+      "clipscout/__init__.py": "0fea446cab00641a910e7be4f11c790955039a633ae4f1303aac1c8fe0d61c8a",
+      "clipscout/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+      "clipscout/agent.py": "2ed6f15467d38e2210a4b613f1c8b6355a744520f3192ad8906c9d4e93ab60a7",
+      "clipscout/backends.py": "41d278c1318ed7094b4a8e0ea29f54dd15d1e1f5f0c1802a067c45b46a2fa8a2",
+      "clipscout/cli.py": "2e7c3b52f29c35c825c6f36e402cca3543dc3556b5244435ae3033edd05d5f1d",
+      "clipscout/evaluation.py": "73c27877e4ee42c3b935c03e831804c1eb015927b40f3d3222fbcff7894ad2eb",
+      "clipscout/events.py": "6ef445b433aeddacf7ad66f60aa18ec3cb141ea070d58976b219d8a09af07471",
+      "clipscout/index.py": "955220c04d1c332806111cb7a07c81e1d53a0c1ca3d61ae285289be3df449e58",
+      "clipscout/media.py": "6daa7a748555afa3e8cd4367d96787de823f01b5dcadf8ebd80bba26281e7e9f",
+      "clipscout/ocr.py": "a7c2f040630ed3a9df177a30e9d914f588b682e657a905065a90fe93d5b6129c",
+      "clipscout/research_agent.py": "31a3c6d08488779b35e841381edede3cddd6e6acdd052ae04a08b8d9da613f48",
+      "clipscout/research_evaluation.py": "cef9c96d4bd38391f55025d88b26daa70432eff6086406b6ba4824e9001a464a",
+      "clipscout/retrieval.py": "00968d418e2585daf8ad27beb7964c101efe6e5bf7c338bc78fd328fcf1b386a",
+      "clipscout/server.py": "960f4199b9bebe2a00a18b6d3663d09b9a63d744514ef22301a15440343ebe7b",
+      "clipscout/temporal.py": "308e8ee71ee877f2c9ffc861cb45933ec625f7c50d65b4c519817a20fad65a3c",
+      "clipscout/transcribe.py": "4fc5de271f44a00d7eaef32cdd398022dae250bb59979fd516db66a3fc41172e",
+      "clipscout/visual_index.py": "6cd7baac9b0ac8d867cfec62c33f7b53d4d58a8523e946b7db7b3c5ee9dd872c",
+      "pyproject.toml": "3a3a8494cbbe01abf6f354d5a9d358d662ed29daaf65f0f45764cccdd8dde2ef",
+      "requirements-research.txt": "94db184eff0301cd65406ad79388bfeb46601f2ca769fd785eb6a63c0a992b33",
+      "run_experiment.ps1": "78e8dab2e4cad0310a47d06c678fcd0da4e5e6ac5b317ba5088f7332e9e7ab35",
+      "scripts/download_model.py": "3dc11ab71d9b885a9bdc14a5d3f6173a9fffed257fe4c27e70aebc84c4b39e8f",
+      "scripts/prepare_research_assets.py": "0f78a3e89190be4ddf952d3c63f1cd87af87736ed5418c946487206b3f31d0a1",
+      "scripts/run_research_study.py": "6c3e4477e7b9242676a21d8b9d4f2f7f00edb704c953783922f8a18590abbe9e",
+      "THIRD_PARTY_NOTICES.txt": "9f4f197cdbd4e59cd9ff511e88dd4a8d61d7301ade808dea2d67ab70686dc9c2"
+    },
+    "runtime": {
+      "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\.venv\\Scripts\\python.exe",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "packages": {
+        "torch": "2.6.0+cu124",
+        "torchvision": "0.21.0+cu124",
+        "transformers": "4.57.6",
+        "numpy": "2.2.6",
+        "Pillow": "12.3.0",
+        "opencv-python-headless": "4.11.0.86",
+        "faster-whisper": "1.2.1",
+        "ctranslate2": "4.6.0",
+        "av": "19.0.2",
+        "rapidocr": "3.9.2",
+        "onnxruntime": "1.22.0",
+        "tokenizers": "0.22.2",
+        "safetensors": "0.8.0"
+      }
+    },
+    "legacy_prompt_version": "clipscout-v6-temporal-scopes"
+  },
+  "notes": [
+    "References and rubric are used by the evaluator/reviewer only; agents receive question text and ID.",
+    "Model weights and source video remain shared; exact references and checksums are recorded."
+  ],
+  "snapshot_sha256": {
+    "source/pyproject.toml": "3a3a8494cbbe01abf6f354d5a9d358d662ed29daaf65f0f45764cccdd8dde2ef",
+    "source/requirements-research.txt": "94db184eff0301cd65406ad79388bfeb46601f2ca769fd785eb6a63c0a992b33",
+    "source/run_experiment.ps1": "78e8dab2e4cad0310a47d06c678fcd0da4e5e6ac5b317ba5088f7332e9e7ab35",
+    "source/THIRD_PARTY_NOTICES.txt": "9f4f197cdbd4e59cd9ff511e88dd4a8d61d7301ade808dea2d67ab70686dc9c2",
+    "source/clipscout/agent.py": "2ed6f15467d38e2210a4b613f1c8b6355a744520f3192ad8906c9d4e93ab60a7",
+    "source/clipscout/backends.py": "41d278c1318ed7094b4a8e0ea29f54dd15d1e1f5f0c1802a067c45b46a2fa8a2",
+    "source/clipscout/cli.py": "2e7c3b52f29c35c825c6f36e402cca3543dc3556b5244435ae3033edd05d5f1d",
+    "source/clipscout/evaluation.py": "73c27877e4ee42c3b935c03e831804c1eb015927b40f3d3222fbcff7894ad2eb",
+    "source/clipscout/events.py": "6ef445b433aeddacf7ad66f60aa18ec3cb141ea070d58976b219d8a09af07471",
+    "source/clipscout/index.py": "955220c04d1c332806111cb7a07c81e1d53a0c1ca3d61ae285289be3df449e58",
+    "source/clipscout/media.py": "6daa7a748555afa3e8cd4367d96787de823f01b5dcadf8ebd80bba26281e7e9f",
+    "source/clipscout/ocr.py": "a7c2f040630ed3a9df177a30e9d914f588b682e657a905065a90fe93d5b6129c",
+    "source/clipscout/research_agent.py": "31a3c6d08488779b35e841381edede3cddd6e6acdd052ae04a08b8d9da613f48",
+    "source/clipscout/research_evaluation.py": "cef9c96d4bd38391f55025d88b26daa70432eff6086406b6ba4824e9001a464a",
+    "source/clipscout/retrieval.py": "00968d418e2585daf8ad27beb7964c101efe6e5bf7c338bc78fd328fcf1b386a",
+    "source/clipscout/server.py": "960f4199b9bebe2a00a18b6d3663d09b9a63d744514ef22301a15440343ebe7b",
+    "source/clipscout/temporal.py": "308e8ee71ee877f2c9ffc861cb45933ec625f7c50d65b4c519817a20fad65a3c",
+    "source/clipscout/transcribe.py": "4fc5de271f44a00d7eaef32cdd398022dae250bb59979fd516db66a3fc41172e",
+    "source/clipscout/visual_index.py": "6cd7baac9b0ac8d867cfec62c33f7b53d4d58a8523e946b7db7b3c5ee9dd872c",
+    "source/clipscout/__init__.py": "0fea446cab00641a910e7be4f11c790955039a633ae4f1303aac1c8fe0d61c8a",
+    "source/clipscout/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+    "source/scripts/download_model.py": "3dc11ab71d9b885a9bdc14a5d3f6173a9fffed257fe4c27e70aebc84c4b39e8f",
+    "source/scripts/prepare_research_assets.py": "0f78a3e89190be4ddf952d3c63f1cd87af87736ed5418c946487206b3f31d0a1",
+    "source/scripts/run_research_study.py": "6c3e4477e7b9242676a21d8b9d4f2f7f00edb704c953783922f8a18590abbe9e",
+    "protocol.json": "a6bfa6a71cf471dd542336a8fb59f1dd33043b786f106cdb2ee40a184eab93d3",
+    "questions.all.json": "b09cb1fec2220225bfb5116bb50798754be779fda8fd3ab34726124bc3b6f3fa",
+    "questions.selected.json": "e14ccf1d5de7cd006b033ce440ba2cacc0db9b57652e3bad7ca5f5624d4b112f",
+    "visual_annotations.json": "a90a09ae3bd334953b5348274ff82f9867797fecb3439bec49ff5c099d68b046",
+    "assets/index.json": "350ad12c0d5eae355f8013f761ea1eb30e1ddbbd7350cac3eda71a72240b575c"
+  }
+}

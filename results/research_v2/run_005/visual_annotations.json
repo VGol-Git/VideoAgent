@@ -1,0 +1,128 @@
+{
+  "video": {
+    "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\Subagents vs Agent Teams 🧠 Hermes Bots Goal Loops Kanban Graphs.mp4",
+    "sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "sha256_verified_against_index": true,
+    "duration": 2575.0057666666667,
+    "fps": 29.97002997002997,
+    "width": 1920,
+    "height": 1080,
+    "frame_count": 77173
+  },
+  "annotation_method": "assistant visual review (not independent human)",
+  "blindness_note": "The reviewer used pre-existing approximate boundary windows to select frames; these are refined local labels, not an independent blind benchmark.",
+  "image_processing": "Original decoded frames saved as PNG at maximum side 1280 pixels. Contact sheets use resized full frames; context sheets crop the upper region to inspect titles. Full-frame PNGs remain available.",
+  "timing_method": "clipscout.media.extract_frames with target_timestamp; actual decoder timestamps, not requested timestamps, define gold brackets.",
+  "model_inference_used": false,
+  "schema_version": "clipscout-assignment-v7-visual-event-annotations",
+  "source_archive": {
+    "path": "data/research_v2/visual_annotations.json",
+    "sha256": "a90a09ae3bd334953b5348274ff82f9867797fecb3439bec49ff5c099d68b046"
+  },
+  "annotations": [
+    {
+      "id": "article_title_onset",
+      "event_query": "Article to Curated Knowledge",
+      "event_definition": "The complete slide title is clearly readable in the full-screen slide. Artwork may still be animating.",
+      "question_scope": [
+        1140.0,
+        1260.0
+      ],
+      "claim_scope": "local title appearance within the reviewed context; global first occurrence unverified",
+      "last_absent": {
+        "requested_timestamp": 1196.5,
+        "actual_decoder_timestamp": 1196.4953,
+        "title_status": "absent",
+        "review_phase": "fine",
+        "image_path": "data/assignment_v7/reference_frames/article_title_onset_last_absent.png",
+        "image_sha256": "6c1ccc39a95457d89d5da85d8e6c9dabf546686ef0b157a2e77cf05c805a844a",
+        "inside_question_scope": true,
+        "source_archive_path": "results/research_v2/annotations/article_fine/01196.500.png"
+      },
+      "first_present": {
+        "requested_timestamp": 1196.75,
+        "actual_decoder_timestamp": 1196.7622333333334,
+        "title_status": "present",
+        "review_phase": "fine",
+        "image_path": "data/assignment_v7/reference_frames/article_title_onset_first_present.png",
+        "image_sha256": "8922af1aab4ad4dfd0c6921d25d9b6742768468e526fd85ccc45858a4a22747c",
+        "inside_question_scope": true,
+        "source_archive_path": "results/research_v2/annotations/article_fine/01196.750.png"
+      },
+      "onset_bracket_seconds": [
+        1196.4953,
+        1196.7622333333334
+      ],
+      "uncertainty_width_seconds": 0.266933333333327,
+      "interval_semantics": "The local transition occurred after the last absent sample and no later than the first present sample; not a frame-exact annotation.",
+      "notes": "At 1196.495300s the previous Email to Decision Brief title is still visible. At 1196.762233s Article to Curated Knowledge is clearly readable while its illustrations are faint during a fade-in. The target is title legibility, not completion of the animation. Context samples show One Workflow, Two Views, then Email to Decision Brief, then the Article slide, then Two Loops, One Knowledge Workflow.",
+      "global_first_verified": false,
+      "context_occurrences": {
+        "observed_positive_runs": 1,
+        "sampling_seconds": 5,
+        "unique_continuous_episode_verified": false,
+        "note": "One positive run was observed in the sampled context. Five-second context gaps were not inspected continuously; brief repeated appearances cannot be ruled out. Scope-edge nearest-frame samples outside the requested interval are explicitly marked and are context only."
+      },
+      "annotation_method": "assistant visual review (not independent human)",
+      "model_inference_used": false,
+      "context_review_archive": {
+        "path": "data/research_v2/visual_annotations.json",
+        "sha256": "a90a09ae3bd334953b5348274ff82f9867797fecb3439bec49ff5c099d68b046",
+        "reviewed_frame_count": 39,
+        "note": "Full coarse/fine/context records remain in unchanged archive; endpoint labels are reused, not newly independently annotated."
+      }
+    },
+    {
+      "id": "taskgraphs_title_onset",
+      "event_query": "How Task Graphs Actually Run",
+      "event_definition": "The complete slide title is clearly readable in the full-screen slide. Artwork may still be animating.",
+      "question_scope": [
+        1500.0,
+        1680.0
+      ],
+      "claim_scope": "local title appearance within the reviewed context; global first occurrence unverified",
+      "last_absent": {
+        "requested_timestamp": 1613.5,
+        "actual_decoder_timestamp": 1613.5119,
+        "title_status": "absent",
+        "review_phase": "fine",
+        "image_path": "data/assignment_v7/reference_frames/taskgraphs_title_onset_last_absent.png",
+        "image_sha256": "72f914bea358880357a568cf1eec66c7a1a95ffc9b08663255f7a5e5e26b4750",
+        "inside_question_scope": true,
+        "source_archive_path": "results/research_v2/annotations/taskgraphs_fine/01613.500.png"
+      },
+      "first_present": {
+        "requested_timestamp": 1613.75,
+        "actual_decoder_timestamp": 1613.7454666666667,
+        "title_status": "present",
+        "review_phase": "fine",
+        "image_path": "data/assignment_v7/reference_frames/taskgraphs_title_onset_first_present.png",
+        "image_sha256": "a9da7b64bd11a80d89b9fd873830db99c3f2d382f111cfdcfa43b30feed0a5b0",
+        "inside_question_scope": true,
+        "source_archive_path": "results/research_v2/annotations/taskgraphs_fine/01613.750.png"
+      },
+      "onset_bracket_seconds": [
+        1613.5119,
+        1613.7454666666667
+      ],
+      "uncertainty_width_seconds": 0.23356666666677484,
+      "interval_semantics": "The local transition occurred after the last absent sample and no later than the first present sample; not a frame-exact annotation.",
+      "notes": "At 1613.511900s the Hermes documentation page is visible with Gateway-embedded dispatcher (default). At 1613.745467s the full-screen How Task Graphs Actually Run slide and its complete title are clearly visible. No ambiguous title crossfade is evident in the chosen boundary samples. Context samples show Kanban UI/documentation before the slide and Kanban/UI settings after it.",
+      "global_first_verified": false,
+      "context_occurrences": {
+        "observed_positive_runs": 1,
+        "sampling_seconds": 5,
+        "unique_continuous_episode_verified": false,
+        "note": "One positive run was observed in the sampled context. Five-second context gaps were not inspected continuously; brief repeated appearances cannot be ruled out. Scope-edge nearest-frame samples outside the requested interval are explicitly marked and are context only."
+      },
+      "annotation_method": "assistant visual review (not independent human)",
+      "model_inference_used": false,
+      "context_review_archive": {
+        "path": "data/research_v2/visual_annotations.json",
+        "sha256": "a90a09ae3bd334953b5348274ff82f9867797fecb3439bec49ff5c099d68b046",
+        "reviewed_frame_count": 54,
+        "note": "Full coarse/fine/context records remain in unchanged archive; endpoint labels are reused, not newly independently annotated."
+      }
+    }
+  ]
+}

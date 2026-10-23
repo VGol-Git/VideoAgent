@@ -1,0 +1,505 @@
+{
+  "saved_at_utc": "2026-10-22T19:24:02.629090+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "adaptive",
+  "question_id": "v7_negative_total_tokens",
+  "prediction_sha256": "94b71743f66c6fe7fed989ea3e33e482609c24929cd04f891ce4210c601164e6",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Expecting ',' delimiter: line 1 column 132 (char 131)",
+    "error": "Expecting ',' delimiter: line 1 column 132 (char 131)",
+    "error_type": "invalid_model_response",
+    "plan": {
+      "task": "lookup",
+      "modality": "transcript",
+      "queries": [
+        "distinctive search terms"
+      ],
+      "requirements": {
+        "R1": "one fact that must be established"
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": true
+    },
+    "question_id": "v7_negative_total_tokens",
+    "question": "In the first 102,000-versus-37,000 comparison, what exact total number of tokens did the delegated workflow consume after including every subagent? Give a number only if this explanation provides it.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 8.4287,
+    "usage": {
+      "model_calls": 5,
+      "input_tokens": 6503,
+      "output_tokens": 165
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "delegated workflow",
+          "queries": [
+            "token consumption",
+            "subagent"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:11",
+              "start": 331.6,
+              "end": 360.56,
+              "text": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00077",
+                "T00078",
+                "T00079",
+                "T00080",
+                "T00081",
+                "T00082",
+                "T00083",
+                "T00084",
+                "T00085",
+                "T00086",
+                "T00087",
+                "T00088",
+                "T00089",
+                "T00090"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01020726196041764,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow",
+                  "rank": 9,
+                  "retrieval_score": 2.253904924671374,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004830917874396135,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "transcript",
+                  "query": "token consumption",
+                  "rank": 2,
+                  "retrieval_score": 3.4398296457847546,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "delegated workflow",
+                "token consumption"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:11",
+                  "start": 331.6,
+                  "end": 360.56,
+                  "text": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00077",
+                    "T00078",
+                    "T00079",
+                    "T00080",
+                    "T00081",
+                    "T00082",
+                    "T00083",
+                    "T00084",
+                    "T00085",
+                    "T00086",
+                    "T00087",
+                    "T00088",
+                    "T00089",
+                    "T00090"
+                  ]
+                }
+              ],
+              "selection_score": 0.8833333333333333,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:16",
+              "start": 481.04,
+              "end": 510.69,
+              "text": "the warning of the subagent system, which is that the context comes from the goal. So what is a goal? So to bring up goal, we can type in slash and goal. And this brings up the goal command, which is a way that we can set a standing goal that Hermes works across all turns until it's achieved. And basically what that means is before we get into the complexity of setting up all of these specialist agents and figuring out how to coordinate them, there's one more step that you should try first, which is to enable a goal.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00153",
+                "T00154",
+                "T00155",
+                "T00156",
+                "T00157",
+                "T00158",
+                "T00159",
+                "T00160",
+                "T00161",
+                "T00162",
+                "T00163",
+                "T00164"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.00546448087431694,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "subagent",
+                  "rank": 1,
+                  "retrieval_score": 3.8575760132879013,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "subagent"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:16",
+                  "start": 481.04,
+                  "end": 510.69,
+                  "text": "the warning of the subagent system, which is that the context comes from the goal. So what is a goal? So to bring up goal, we can type in slash and goal. And this brings up the goal command, which is a way that we can set a standing goal that Hermes works across all turns until it's achieved. And basically what that means is before we get into the complexity of setting up all of these specialist agents and figuring out how to coordinate them, there's one more step that you should try first, which is to enable a goal.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00153",
+                    "T00154",
+                    "T00155",
+                    "T00156",
+                    "T00157",
+                    "T00158",
+                    "T00159",
+                    "T00160",
+                    "T00161",
+                    "T00162",
+                    "T00163",
+                    "T00164"
+                  ]
+                }
+              ],
+              "selection_score": 0.4646456430150586,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:82",
+              "start": 2461.79,
+              "end": 2493.9,
+              "text": "of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00856",
+                "T00857",
+                "T00858",
+                "T00859",
+                "T00860",
+                "T00861"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.00546448087431694,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "token consumption",
+                  "rank": 1,
+                  "retrieval_score": 3.610907010372843,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "token consumption"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:82",
+                  "start": 2461.79,
+                  "end": 2493.9,
+                  "text": "of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00856",
+                    "T00857",
+                    "T00858",
+                    "T00859",
+                    "T00860",
+                    "T00861"
+                  ]
+                }
+              ],
+              "selection_score": 0.347978976348392,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 3,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:85",
+              "start": 2551.42,
+              "end": 2568.18,
+              "text": "What workflow would be the most helpful for you? Please let me know in the comments and I'm happy to explore these topics more in future videos. If you found this video helpful, please like and subscribe as I really appreciate it. And please consider joining my memberships. My members enabled me to continue making free videos like this one. Thanks again for watching and I will see you in in the next video.",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00874",
+                "T00875",
+                "T00876",
+                "T00877",
+                "T00878"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.00546448087431694,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow",
+                  "rank": 1,
+                  "retrieval_score": 3.2740747721186687,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "delegated workflow"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:85",
+                  "start": 2551.42,
+                  "end": 2568.18,
+                  "text": "What workflow would be the most helpful for you? Please let me know in the comments and I'm happy to explore these topics more in future videos. If you found this video helpful, please like and subscribe as I really appreciate it. And please consider joining my memberships. My members enabled me to continue making free videos like this one. Thanks again for watching and I will see you in in the next video.",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00874",
+                    "T00875",
+                    "T00876",
+                    "T00877",
+                    "T00878"
+                  ]
+                }
+              ],
+              "selection_score": 0.347978976348392,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 4,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:7",
+              "start": 213.84,
+              "end": 244.96,
+              "text": "that's able to meet my standards, that's a complete solution on its own. So right now we can see that the agent was able to create all of these subagents that are now running in parallel. We have three of them. We can see on the bottom here that we have three different workers active at the moment And what's cool, this is a new update. If we click on the three subagents here and click on a specific agent, we're able to give instructions to this subagent and steer it. So I could get feedback saying, make sure to please include citations. And I would be able to now steer this agent. And that",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00050",
+                "T00051",
+                "T00052",
+                "T00053",
+                "T00054",
+                "T00055"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.005376344086021505,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "subagent",
+                  "rank": 2,
+                  "retrieval_score": 3.610907010372843,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "subagent"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:7",
+                  "start": 213.84,
+                  "end": 244.96,
+                  "text": "that's able to meet my standards, that's a complete solution on its own. So right now we can see that the agent was able to create all of these subagents that are now running in parallel. We have three of them. We can see on the bottom here that we have three different workers active at the moment And what's cool, this is a new update. If we click on the three subagents here and click on a specific agent, we're able to give instructions to this subagent and steer it. So I could get feedback saying, make sure to please include citations. And I would be able to now steer this agent. And that",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00050",
+                    "T00051",
+                    "T00052",
+                    "T00053",
+                    "T00054",
+                    "T00055"
+                  ]
+                }
+              ],
+              "selection_score": 0.3423664122137404,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 5,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:28",
+              "start": 840.47,
+              "end": 871.99,
+              "text": "And honestly, this did a really good job. It was able to specifically limit the report to just a couple hundred words instead of the original thousands and thousands of words that gave me off of the first one. So it wasn't just about adding that limitation at the beginning, it was framing the goal that I wanted it to go in a particular order for cross-referencing and corroborating the report, and then make sure that it was 500 words. But honestly, this example here is kind of disconnected from my actual workflow. This might be the generic best answer of when delegation beats a specialist team,",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00309",
+                "T00310",
+                "T00311",
+                "T00312",
+                "T00313",
+                "T00314",
+                "T00315",
+                "T00316",
+                "T00317",
+                "T00318",
+                "T00319",
+                "T00320",
+                "T00321",
+                "T00322"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.005376344086021505,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "delegated workflow",
+                  "rank": 2,
+                  "retrieval_score": 2.87000904290534,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "delegated workflow"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:28",
+                  "start": 840.47,
+                  "end": 871.99,
+                  "text": "And honestly, this did a really good job. It was able to specifically limit the report to just a couple hundred words instead of the original thousands and thousands of words that gave me off of the first one. So it wasn't just about adding that limitation at the beginning, it was framing the goal that I wanted it to go in a particular order for cross-referencing and corroborating the report, and then make sure that it was 500 words. But honestly, this example here is kind of disconnected from my actual workflow. This might be the generic best answer of when delegation beats a specialist team,",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00309",
+                    "T00310",
+                    "T00311",
+                    "T00312",
+                    "T00313",
+                    "T00314",
+                    "T00315",
+                    "T00316",
+                    "T00317",
+                    "T00318",
+                    "T00319",
+                    "T00320",
+                    "T00321",
+                    "T00322"
+                  ]
+                }
+              ],
+              "selection_score": 0.3423664122137404,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 6,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false
+        },
+        "latency_seconds": 0.0126
+      }
+    ],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"lookup\",\"modality\":\"transcript\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":null}"
+      },
+      {
+        "role": "controller",
+        "step": 0,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"delegated workflow\",\"queries\":[\"token consumption\",\"subagent\"],\"source\":\"transcript\",\"top_k\":6}}"
+      },
+      {
+        "role": "controller",
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"delegated workflow\",\"queries\":[\"token consumption\",\"subagent\"],\"source\":\"transcript\",\"top_k\":6}",
+        "error": "Expecting ',' delimiter: line 1 column 132 (char 131)",
+        "error_type": "format_error"
+      },
+      {
+        "role": "controller",
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"delegated workflow\",\"queries\":[\"token consumption\",\"subagent\"],\"source\":\"transcript\",\"top_k\":6}\"}",
+        "error": "Expecting ',' delimiter: line 1 column 132 (char 131)",
+        "error_type": "format_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

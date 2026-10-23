@@ -1,0 +1,54 @@
+{
+  "repo": "openai/clip-vit-base-patch32",
+  "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "files": [
+    {
+      "filename": "config.json",
+      "size": 4186,
+      "algorithm": "sha1",
+      "digest": "a2a88b96561196777ca173b15309ea859f4d2ce0"
+    },
+    {
+      "filename": "merges.txt",
+      "size": 524657,
+      "algorithm": "sha1",
+      "digest": "bbfec752c9a675946c6dce106def6f35c882dcc2"
+    },
+    {
+      "filename": "preprocessor_config.json",
+      "size": 316,
+      "algorithm": "sha1",
+      "digest": "5a12a1eb250987a4eee0e3e7d7338c4b22724be1"
+    },
+    {
+      "filename": "pytorch_model.bin",
+      "size": 605247071,
+      "algorithm": "sha256",
+      "digest": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f"
+    },
+    {
+      "filename": "special_tokens_map.json",
+      "size": 389,
+      "algorithm": "sha1",
+      "digest": "9bfb42aa97dcd61e89f279ccaee988bccb4fabae"
+    },
+    {
+      "filename": "tokenizer.json",
+      "size": 2224041,
+      "algorithm": "sha1",
+      "digest": "564c0ebd5ce29c4ee4864004aee693deadd3128c"
+    },
+    {
+      "filename": "tokenizer_config.json",
+      "size": 592,
+      "algorithm": "sha1",
+      "digest": "4fdaf6842dd5a725b940c92b6b692490ce59d548"
+    },
+    {
+      "filename": "vocab.json",
+      "size": 862328,
+      "algorithm": "sha1",
+      "digest": "182766ce89b439768edadda342519f33802f5364"
+    }
+  ]
+}

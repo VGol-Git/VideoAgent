@@ -1,0 +1,967 @@
+{
+  "schema_version": "clipscout-visual-event-gold-v1",
+  "created_at_utc": "2026-10-22T14:43:16.938961+00:00",
+  "video": {
+    "path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\Subagents vs Agent Teams 🧠 Hermes Bots Goal Loops Kanban Graphs.mp4",
+    "sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "sha256_verified_against_index": true,
+    "duration": 2575.0057666666667,
+    "fps": 29.97002997002997,
+    "width": 1920,
+    "height": 1080,
+    "frame_count": 77173
+  },
+  "annotation_method": "assistant visual review (not independent human)",
+  "blindness_note": "The reviewer used pre-existing approximate boundary windows to select frames; these are refined local labels, not an independent blind benchmark.",
+  "image_processing": "Original decoded frames saved as PNG at maximum side 1280 pixels. Contact sheets use resized full frames; context sheets crop the upper region to inspect titles. Full-frame PNGs remain available.",
+  "timing_method": "clipscout.media.extract_frames with target_timestamp; actual decoder timestamps, not requested timestamps, define gold brackets.",
+  "model_inference_used": false,
+  "annotations": [
+    {
+      "id": "article_title_onset",
+      "event_query": "Article to Curated Knowledge",
+      "event_definition": "The complete slide title is clearly readable in the full-screen slide. Artwork may still be animating.",
+      "question_scope": [
+        1140.0,
+        1260.0
+      ],
+      "claim_scope": "local title appearance within the reviewed context; global first occurrence unverified",
+      "last_absent": {
+        "requested_timestamp": 1196.5,
+        "actual_decoder_timestamp": 1196.4953,
+        "title_status": "absent",
+        "review_phase": "fine",
+        "image_path": "results/research_v2/annotations/article_fine/01196.500.png",
+        "image_sha256": "6c1ccc39a95457d89d5da85d8e6c9dabf546686ef0b157a2e77cf05c805a844a",
+        "inside_question_scope": true
+      },
+      "first_present": {
+        "requested_timestamp": 1196.75,
+        "actual_decoder_timestamp": 1196.7622333333334,
+        "title_status": "present",
+        "review_phase": "fine",
+        "image_path": "results/research_v2/annotations/article_fine/01196.750.png",
+        "image_sha256": "8922af1aab4ad4dfd0c6921d25d9b6742768468e526fd85ccc45858a4a22747c",
+        "inside_question_scope": true
+      },
+      "onset_bracket_seconds": [
+        1196.4953,
+        1196.7622333333334
+      ],
+      "uncertainty_width_seconds": 0.266933333333327,
+      "interval_semantics": "The local transition occurred after the last absent sample and no later than the first present sample; not a frame-exact annotation.",
+      "notes": "At 1196.495300s the previous Email to Decision Brief title is still visible. At 1196.762233s Article to Curated Knowledge is clearly readable while its illustrations are faint during a fade-in. The target is title legibility, not completion of the animation. Context samples show One Workflow, Two Views, then Email to Decision Brief, then the Article slide, then Two Loops, One Knowledge Workflow.",
+      "global_first_verified": false,
+      "context_occurrences": {
+        "observed_positive_runs": 1,
+        "sampling_seconds": 5,
+        "unique_continuous_episode_verified": false,
+        "note": "One positive run was observed in the sampled context. Five-second context gaps were not inspected continuously; brief repeated appearances cannot be ruled out. Scope-edge nearest-frame samples outside the requested interval are explicitly marked and are context only."
+      },
+      "annotation_method": "assistant visual review (not independent human)",
+      "model_inference_used": false,
+      "reviewed_frames": [
+        {
+          "requested_timestamp": 1194,
+          "actual_decoder_timestamp": 1193.9928,
+          "title_status": "absent",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/article_coarse/01194.000.png",
+          "image_sha256": "88a3c919b00d00a53175649bedfd845145696065f9b4540472dcb8dae0c94e0d",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1195,
+          "actual_decoder_timestamp": 1194.9938,
+          "title_status": "absent",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/article_coarse/01195.000.png",
+          "image_sha256": "141721910ff2f0e000f68ad38dc31e910ebeb18775d62e4489dffaba02244c05",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1196,
+          "actual_decoder_timestamp": 1195.9948000000002,
+          "title_status": "absent",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/article_coarse/01196.000.png",
+          "image_sha256": "c7ba26c1b1d9d4edf95f1ac88743ff2c340116abee9ea2235d573834e0c93b25",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1197,
+          "actual_decoder_timestamp": 1196.9958000000001,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/article_coarse/01197.000.png",
+          "image_sha256": "df00bb7592bcb22e6c34a4baa8dba556ed5d0393cf34f09f0fed21084ec9b6cd",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1198,
+          "actual_decoder_timestamp": 1197.9968000000001,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/article_coarse/01198.000.png",
+          "image_sha256": "2d45dc587ac0c629fe987945b6c0a2ee3135f7b8a855b75b5424222a4b0b0d87",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1199,
+          "actual_decoder_timestamp": 1198.9978,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/article_coarse/01199.000.png",
+          "image_sha256": "75e06bf287ea231fa9bab12dd47d553f56e9032772878110450ec3664808fdea",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1200,
+          "actual_decoder_timestamp": 1199.9988,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/article_coarse/01200.000.png",
+          "image_sha256": "62dad318b049bb774cc8aa981b89bbad2a53b27576ffa27f47267cc01db9778e",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1201,
+          "actual_decoder_timestamp": 1200.9998,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/article_coarse/01201.000.png",
+          "image_sha256": "6b8a9e94edbf896d519c66f78003409f96145376ec5eda2179bbcd0a96d90b9a",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1202,
+          "actual_decoder_timestamp": 1202.0008,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/article_coarse/01202.000.png",
+          "image_sha256": "b168bc6e4cd150e17268f34b4ef910d1dc343997f68459c63efab7d21b090e71",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1196.0,
+          "actual_decoder_timestamp": 1195.9948000000002,
+          "title_status": "absent",
+          "review_phase": "fine",
+          "image_path": "results/research_v2/annotations/article_fine/01196.000.png",
+          "image_sha256": "c7ba26c1b1d9d4edf95f1ac88743ff2c340116abee9ea2235d573834e0c93b25",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1196.25,
+          "actual_decoder_timestamp": 1196.2617333333335,
+          "title_status": "absent",
+          "review_phase": "fine",
+          "image_path": "results/research_v2/annotations/article_fine/01196.250.png",
+          "image_sha256": "f22d7134537b2a5c93c4b4aad47672ae79bdf377c0f09e68f6f415fa1149a2f5",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1196.5,
+          "actual_decoder_timestamp": 1196.4953,
+          "title_status": "absent",
+          "review_phase": "fine",
+          "image_path": "results/research_v2/annotations/article_fine/01196.500.png",
+          "image_sha256": "6c1ccc39a95457d89d5da85d8e6c9dabf546686ef0b157a2e77cf05c805a844a",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1196.75,
+          "actual_decoder_timestamp": 1196.7622333333334,
+          "title_status": "present",
+          "review_phase": "fine",
+          "image_path": "results/research_v2/annotations/article_fine/01196.750.png",
+          "image_sha256": "8922af1aab4ad4dfd0c6921d25d9b6742768468e526fd85ccc45858a4a22747c",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1197.0,
+          "actual_decoder_timestamp": 1196.9958000000001,
+          "title_status": "present",
+          "review_phase": "fine",
+          "image_path": "results/research_v2/annotations/article_fine/01197.000.png",
+          "image_sha256": "df00bb7592bcb22e6c34a4baa8dba556ed5d0393cf34f09f0fed21084ec9b6cd",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1140,
+          "actual_decoder_timestamp": 1140.0055333333335,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01140.000.png",
+          "image_sha256": "6b394c5f8cdd5701a8c1dbc60e9e027821395fe3b98850e9d443e20f08d59e8e",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1145,
+          "actual_decoder_timestamp": 1145.0105333333333,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01145.000.png",
+          "image_sha256": "e582534058f25e7cedd6b12bc66974cc63d901a89b160fb69898aca8a29b9d7d",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1150,
+          "actual_decoder_timestamp": 1150.0155333333335,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01150.000.png",
+          "image_sha256": "e8791a1d50ee816bcbea7e2653f1d2c37876ee7a2b8e9e2ce495e58663d30177",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1155,
+          "actual_decoder_timestamp": 1154.9871666666668,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01155.000.png",
+          "image_sha256": "b3b8e81b453b9dad0469f0af95276756e51549724c90de90449cf7e71348ba8f",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1160,
+          "actual_decoder_timestamp": 1159.9921666666667,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01160.000.png",
+          "image_sha256": "af177832e82210b4370d28c12870bcf5596d65ea883b8d15a4a8ca48e8ed6d70",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1165,
+          "actual_decoder_timestamp": 1164.9971666666668,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01165.000.png",
+          "image_sha256": "0aa1124f0b2fd66668bebe2a43f4608f9d0fe38a7a29eb8d5179789e7ee54ea3",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1170,
+          "actual_decoder_timestamp": 1170.0021666666667,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01170.000.png",
+          "image_sha256": "e46fc711204d0731b614135ccfea664c2474b6db5af82851802e6b3c6ad10597",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1175,
+          "actual_decoder_timestamp": 1175.0071666666668,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01175.000.png",
+          "image_sha256": "50f17d690bc8cfb33c46db7fff15179637ebc7a7832dfe2ffb4adda758a2eb24",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1180,
+          "actual_decoder_timestamp": 1180.0121666666666,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01180.000.png",
+          "image_sha256": "b148990b0dd453d31d9119cb0ed3f1ad65abded774546ca93f3562f879741bcb",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1185,
+          "actual_decoder_timestamp": 1184.9838,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01185.000.png",
+          "image_sha256": "bf6ad690ad58a68c256cacb0c6f8ddfaf52f407d1863732c32b94664c8b746dc",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1190,
+          "actual_decoder_timestamp": 1189.9888,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01190.000.png",
+          "image_sha256": "15b3e2a126bb32a45d47dc9293a05d5a3f7005d38aaf2ca0f2c5cb689d73f679",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1195,
+          "actual_decoder_timestamp": 1194.9938,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01195.000.png",
+          "image_sha256": "141721910ff2f0e000f68ad38dc31e910ebeb18775d62e4489dffaba02244c05",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1200,
+          "actual_decoder_timestamp": 1199.9988,
+          "title_status": "present",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01200.000.png",
+          "image_sha256": "62dad318b049bb774cc8aa981b89bbad2a53b27576ffa27f47267cc01db9778e",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1205,
+          "actual_decoder_timestamp": 1205.0038,
+          "title_status": "present",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01205.000.png",
+          "image_sha256": "6e8cd4eeec4abe469dc126fc6d98bf53b2a5e0e215f10d9ed727b7903ee111bc",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1210,
+          "actual_decoder_timestamp": 1210.0088,
+          "title_status": "present",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01210.000.png",
+          "image_sha256": "842907d1a906d828ab7c0c2edc899a61d7e1c32001bbab953ec26b46fd615e99",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1215,
+          "actual_decoder_timestamp": 1215.0138,
+          "title_status": "present",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01215.000.png",
+          "image_sha256": "cd4621ea03a1e2d7a642812474dc141ae56dd1662c9224dc0ba87dbc8e0df5ef",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1220,
+          "actual_decoder_timestamp": 1219.9854333333335,
+          "title_status": "present",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01220.000.png",
+          "image_sha256": "b023dcb51284ed667baba306854f47471c7e12218a7f07178740bdb9765b1e9c",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1225,
+          "actual_decoder_timestamp": 1224.9904333333334,
+          "title_status": "present",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01225.000.png",
+          "image_sha256": "f4bf2756889cea371c712a96e62e032e03ab6363d165c9ee40a83bba8cebe9db",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1230,
+          "actual_decoder_timestamp": 1229.9954333333335,
+          "title_status": "present",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01230.000.png",
+          "image_sha256": "91ace6b810e45400d27e4f46fc57a45a98d3be5a8769d60b016ce8fe9c67d1f9",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1235,
+          "actual_decoder_timestamp": 1235.0004333333334,
+          "title_status": "present",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01235.000.png",
+          "image_sha256": "71c17d7b90229eb1c96bd3523d6dffdedb9300b2fe6f7343aaa86ace5b5410d8",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1240,
+          "actual_decoder_timestamp": 1240.0054333333335,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01240.000.png",
+          "image_sha256": "14a1f12f0b6a47ee020ac6b0cc01fcb07a3e7686de9d525b8609ce62e1e07da1",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1245,
+          "actual_decoder_timestamp": 1245.0104333333334,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01245.000.png",
+          "image_sha256": "6b839d2eecf656d5e85a2aea063f75734c038b2fe89584c85a5432fa4a55fcae",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1250,
+          "actual_decoder_timestamp": 1250.0154333333335,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01250.000.png",
+          "image_sha256": "385dc13aedd718c76f0d4cbc4eb48c9505c0786381f7b2f8a20dac962e3e1441",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1255,
+          "actual_decoder_timestamp": 1254.9870666666668,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01255.000.png",
+          "image_sha256": "1b539881b15c9d571c0db6f6225b864346b6c982cb75bbc62f2668c0bd8b1024",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1260,
+          "actual_decoder_timestamp": 1259.9920666666667,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/article_context/01260.000.png",
+          "image_sha256": "a90fd7598b7874798211ced79c0982b82e8aefe3053aecbcec97a648bce5badc",
+          "inside_question_scope": true
+        }
+      ],
+      "contact_sheets": [
+        "results/research_v2/annotations/article_coarse/contactsheet.png",
+        "results/research_v2/annotations/article_fine/contactsheet.png",
+        "results/research_v2/annotations/article_context/contactsheet.png"
+      ]
+    },
+    {
+      "id": "taskgraphs_title_onset",
+      "event_query": "How Task Graphs Actually Run",
+      "event_definition": "The complete slide title is clearly readable in the full-screen slide. Artwork may still be animating.",
+      "question_scope": [
+        1500.0,
+        1680.0
+      ],
+      "claim_scope": "local title appearance within the reviewed context; global first occurrence unverified",
+      "last_absent": {
+        "requested_timestamp": 1613.5,
+        "actual_decoder_timestamp": 1613.5119,
+        "title_status": "absent",
+        "review_phase": "fine",
+        "image_path": "results/research_v2/annotations/taskgraphs_fine/01613.500.png",
+        "image_sha256": "72f914bea358880357a568cf1eec66c7a1a95ffc9b08663255f7a5e5e26b4750",
+        "inside_question_scope": true
+      },
+      "first_present": {
+        "requested_timestamp": 1613.75,
+        "actual_decoder_timestamp": 1613.7454666666667,
+        "title_status": "present",
+        "review_phase": "fine",
+        "image_path": "results/research_v2/annotations/taskgraphs_fine/01613.750.png",
+        "image_sha256": "a9da7b64bd11a80d89b9fd873830db99c3f2d382f111cfdcfa43b30feed0a5b0",
+        "inside_question_scope": true
+      },
+      "onset_bracket_seconds": [
+        1613.5119,
+        1613.7454666666667
+      ],
+      "uncertainty_width_seconds": 0.23356666666677484,
+      "interval_semantics": "The local transition occurred after the last absent sample and no later than the first present sample; not a frame-exact annotation.",
+      "notes": "At 1613.511900s the Hermes documentation page is visible with Gateway-embedded dispatcher (default). At 1613.745467s the full-screen How Task Graphs Actually Run slide and its complete title are clearly visible. No ambiguous title crossfade is evident in the chosen boundary samples. Context samples show Kanban UI/documentation before the slide and Kanban/UI settings after it.",
+      "global_first_verified": false,
+      "context_occurrences": {
+        "observed_positive_runs": 1,
+        "sampling_seconds": 5,
+        "unique_continuous_episode_verified": false,
+        "note": "One positive run was observed in the sampled context. Five-second context gaps were not inspected continuously; brief repeated appearances cannot be ruled out. Scope-edge nearest-frame samples outside the requested interval are explicitly marked and are context only."
+      },
+      "annotation_method": "assistant visual review (not independent human)",
+      "model_inference_used": false,
+      "reviewed_frames": [
+        {
+          "requested_timestamp": 1607,
+          "actual_decoder_timestamp": 1607.0054,
+          "title_status": "absent",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01607.000.png",
+          "image_sha256": "83b9df11c46fce249f82a39e6790f4ed3fea5f4b3c0ebf9662a4e845cc9d9f82",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1608,
+          "actual_decoder_timestamp": 1608.0064,
+          "title_status": "absent",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01608.000.png",
+          "image_sha256": "cf7b09c7c872d13a1e1c381bcba9ad4190b7768d4ecc033f10e65f6966706911",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1609,
+          "actual_decoder_timestamp": 1609.0074000000002,
+          "title_status": "absent",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01609.000.png",
+          "image_sha256": "431e3de83c6cf5a5d9c9cb7aed38df0cabe8e6fcfb1e88ce3009a7839873e2e2",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1610,
+          "actual_decoder_timestamp": 1610.0084000000002,
+          "title_status": "absent",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01610.000.png",
+          "image_sha256": "a7ebb103d3be9c8c6f74671142f06181b87187f73f85b7718e172a24239297e1",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1611,
+          "actual_decoder_timestamp": 1611.0094000000001,
+          "title_status": "absent",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01611.000.png",
+          "image_sha256": "85ac495821a4524e864a43c38e496aa73cfe8fb09518feb150447adc70760206",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1612,
+          "actual_decoder_timestamp": 1612.0104000000001,
+          "title_status": "absent",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01612.000.png",
+          "image_sha256": "23be13ffce4543f88db7b118aa24152f4e0902b844cbb9280c5212fa1b37b9c6",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1613,
+          "actual_decoder_timestamp": 1613.0114,
+          "title_status": "absent",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01613.000.png",
+          "image_sha256": "057b1231956027f2e5c43427e03db688f82aac93786a11d738e6d5f113f3ebe3",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1614,
+          "actual_decoder_timestamp": 1614.0124,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01614.000.png",
+          "image_sha256": "3f0ca1e5bea4fb9ef0ecf7c20a8a0cfd594ac2164c0879cae7a168bb65eeaf8d",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1615,
+          "actual_decoder_timestamp": 1615.0134,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01615.000.png",
+          "image_sha256": "ad4e18e671a9dbac5a2e4517f62ba14d9e3e4f39fb547251ec49087a6acb9709",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1616,
+          "actual_decoder_timestamp": 1616.0143999999998,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01616.000.png",
+          "image_sha256": "7b75ad65cb7564e34e1f5b6eadfdccc7b0021c0c78ea5bbcd475ac365f04fc55",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1617,
+          "actual_decoder_timestamp": 1617.0154,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01617.000.png",
+          "image_sha256": "e0b2fa0e278e160cb63b351bb6b8fe222af45616a5979ef781da662d2bed8fcc",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1618,
+          "actual_decoder_timestamp": 1618.0164,
+          "title_status": "present",
+          "review_phase": "coarse",
+          "image_path": "results/research_v2/annotations/taskgraphs_coarse/01618.000.png",
+          "image_sha256": "5b23765e1e1331a642f0e5cfe4e2db4ff997098d0abe13af938875646ec8dbdb",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1613.0,
+          "actual_decoder_timestamp": 1613.0114,
+          "title_status": "absent",
+          "review_phase": "fine",
+          "image_path": "results/research_v2/annotations/taskgraphs_fine/01613.000.png",
+          "image_sha256": "057b1231956027f2e5c43427e03db688f82aac93786a11d738e6d5f113f3ebe3",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1613.25,
+          "actual_decoder_timestamp": 1613.2449666666666,
+          "title_status": "absent",
+          "review_phase": "fine",
+          "image_path": "results/research_v2/annotations/taskgraphs_fine/01613.250.png",
+          "image_sha256": "623b7d33dab15867b55ea6a86a9a990db988d2c9e8e176d5e36ad7d05e21fe7c",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1613.5,
+          "actual_decoder_timestamp": 1613.5119,
+          "title_status": "absent",
+          "review_phase": "fine",
+          "image_path": "results/research_v2/annotations/taskgraphs_fine/01613.500.png",
+          "image_sha256": "72f914bea358880357a568cf1eec66c7a1a95ffc9b08663255f7a5e5e26b4750",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1613.75,
+          "actual_decoder_timestamp": 1613.7454666666667,
+          "title_status": "present",
+          "review_phase": "fine",
+          "image_path": "results/research_v2/annotations/taskgraphs_fine/01613.750.png",
+          "image_sha256": "a9da7b64bd11a80d89b9fd873830db99c3f2d382f111cfdcfa43b30feed0a5b0",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1614.0,
+          "actual_decoder_timestamp": 1614.0124,
+          "title_status": "present",
+          "review_phase": "fine",
+          "image_path": "results/research_v2/annotations/taskgraphs_fine/01614.000.png",
+          "image_sha256": "3f0ca1e5bea4fb9ef0ecf7c20a8a0cfd594ac2164c0879cae7a168bb65eeaf8d",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1500,
+          "actual_decoder_timestamp": 1499.9985000000001,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01500.000.png",
+          "image_sha256": "024bcae68a05f2a039052ee389a29ee140df005c19cdc5f00b60856494c0ec90",
+          "inside_question_scope": false
+        },
+        {
+          "requested_timestamp": 1505,
+          "actual_decoder_timestamp": 1505.0035,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01505.000.png",
+          "image_sha256": "676a9c798d03be4196c500b38ca0484ed5c4d19361ebabe028d64c39fef43c46",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1510,
+          "actual_decoder_timestamp": 1510.0085000000001,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01510.000.png",
+          "image_sha256": "0c56389299ed58b07b64a883ed79235fd436b8a04b745c89760e08f4e59a0f73",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1515,
+          "actual_decoder_timestamp": 1515.0135,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01515.000.png",
+          "image_sha256": "fd03db60a9236b90cabcd84a347ac14531605c923539097230103b744b1e5ad1",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1520,
+          "actual_decoder_timestamp": 1519.9851333333334,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01520.000.png",
+          "image_sha256": "6c6961b87e97882fe8fafdd18b05a9a0d064916c2518a5fd5a2c7bc641043517",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1525,
+          "actual_decoder_timestamp": 1524.9901333333335,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01525.000.png",
+          "image_sha256": "128b48b59809d0af7e665a19af1a28b27531b3854f9770cd002392f005f6f35c",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1530,
+          "actual_decoder_timestamp": 1529.9951333333333,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01530.000.png",
+          "image_sha256": "bf1d48e8db7ecf94ffa6bc074bf6dc12f9df18e790e445e994ec57414f645dc1",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1535,
+          "actual_decoder_timestamp": 1535.0001333333335,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01535.000.png",
+          "image_sha256": "4abed4a92cd58ff730a189d2b2590dd06257326e3cbf806560534eaed82462d6",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1540,
+          "actual_decoder_timestamp": 1540.0051333333333,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01540.000.png",
+          "image_sha256": "557faddd389c50b110493df53f13248f9f39a3a79c7af3d1e56466d8254f7d23",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1545,
+          "actual_decoder_timestamp": 1545.0101333333334,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01545.000.png",
+          "image_sha256": "e81133cfce2fe0ba1029559ce3fb715301a194df5691297435065e4a97d8ad22",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1550,
+          "actual_decoder_timestamp": 1550.0151333333333,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01550.000.png",
+          "image_sha256": "3100e691c7ad3ad7578a2d921f24953e2a108fe04ec66620340feef78ecac498",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1555,
+          "actual_decoder_timestamp": 1554.9867666666667,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01555.000.png",
+          "image_sha256": "b6c3c71b21e427843d094dd634853405457608d1aab14b81a9fe7bdb4027d453",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1560,
+          "actual_decoder_timestamp": 1559.9917666666668,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01560.000.png",
+          "image_sha256": "149d5896745f1c589719d3deb66367c145345705e9872307918f7ab29d1b4f2d",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1565,
+          "actual_decoder_timestamp": 1564.9967666666666,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01565.000.png",
+          "image_sha256": "3b010bac02389411407808f7abc206a7ed6fe1a662d1028209ced98705623b24",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1570,
+          "actual_decoder_timestamp": 1570.0017666666668,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01570.000.png",
+          "image_sha256": "fa3214152753ec02f5a6da6d46d11974ee736ed6a34b721bb7026185b0b9c6d3",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1575,
+          "actual_decoder_timestamp": 1575.0067666666666,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01575.000.png",
+          "image_sha256": "f021fe9e7521fe057dd07129a66cd09d2e03230dbc0632af7cf0628dc39c140c",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1580,
+          "actual_decoder_timestamp": 1580.0117666666667,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01580.000.png",
+          "image_sha256": "8495292c6ff3dcec6b4a47450761cefe488f4dc67799af93e165343b1543367d",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1585,
+          "actual_decoder_timestamp": 1584.9834,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01585.000.png",
+          "image_sha256": "cbe336b7181ea2276973609e833bba1bb3e6e0dcf93dc84c9a9bbec0c21ab20a",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1590,
+          "actual_decoder_timestamp": 1589.9884000000002,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01590.000.png",
+          "image_sha256": "94101bfe6db3103ec143d54d54c238d5593c8e7b86c892fce2455341336c6127",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1595,
+          "actual_decoder_timestamp": 1594.9934,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01595.000.png",
+          "image_sha256": "78dca1b5249b218cd52420ed5821a0a977a7cdc93dd5037a42e483c3626b95d0",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1600,
+          "actual_decoder_timestamp": 1599.9984000000002,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01600.000.png",
+          "image_sha256": "38d11c1831af188e5c87a6eff37a51b043ac9f59461d3c0aa4368d3ddd116a83",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1605,
+          "actual_decoder_timestamp": 1605.0034,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01605.000.png",
+          "image_sha256": "058d199ba67fd8b74e7a489c48c7da9b1ac01e8b21590f3d98a05ebe3af37002",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1610,
+          "actual_decoder_timestamp": 1610.0084000000002,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01610.000.png",
+          "image_sha256": "a7ebb103d3be9c8c6f74671142f06181b87187f73f85b7718e172a24239297e1",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1615,
+          "actual_decoder_timestamp": 1615.0134,
+          "title_status": "present",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01615.000.png",
+          "image_sha256": "ad4e18e671a9dbac5a2e4517f62ba14d9e3e4f39fb547251ec49087a6acb9709",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1620,
+          "actual_decoder_timestamp": 1619.9850333333334,
+          "title_status": "present",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01620.000.png",
+          "image_sha256": "b19ec815c1d4b14f11b21f8c8177d2d46fa94bda2586d152be131bdf223b57b6",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1625,
+          "actual_decoder_timestamp": 1624.9900333333335,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01625.000.png",
+          "image_sha256": "f8a4397c7d0148149f8a7077e1db56a81a904841233e4d4299759ac88498294d",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1630,
+          "actual_decoder_timestamp": 1629.9950333333334,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01630.000.png",
+          "image_sha256": "029a32f7f01cac1028d90b431cd41ec01706f32ccdfea1a1b853c588268325c3",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1635,
+          "actual_decoder_timestamp": 1635.0000333333335,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01635.000.png",
+          "image_sha256": "0087b0fd91ed9c087cce6454cd3309d3fbd940e01609aa2c1bc3e6cce88c3034",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1640,
+          "actual_decoder_timestamp": 1640.0050333333334,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01640.000.png",
+          "image_sha256": "fd188da130ff3d2d5a330aa8feb1cce81d601075638b4b4fb54fbe98f3394a5e",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1645,
+          "actual_decoder_timestamp": 1645.0100333333335,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01645.000.png",
+          "image_sha256": "f5d87f982a4492d274845a422924b0438d0d93004cf90178c1f9c9840e8f0d3b",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1650,
+          "actual_decoder_timestamp": 1650.0150333333333,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01650.000.png",
+          "image_sha256": "acfd39380cdc183207ea953d9df22b0bca231bd4c1098e628da370bd9b20d92a",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1655,
+          "actual_decoder_timestamp": 1654.9866666666667,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01655.000.png",
+          "image_sha256": "4c1233bb66050304ee6b7f37ed68ee74acfa9f72d7d48b1daee0270b5af8a668",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1660,
+          "actual_decoder_timestamp": 1659.9916666666668,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01660.000.png",
+          "image_sha256": "1d3bf5bb1eb8e98b635008aa70e85216f61e076630088b3d5f097942ec822b35",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1665,
+          "actual_decoder_timestamp": 1664.9966666666667,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01665.000.png",
+          "image_sha256": "bd2818b78f425ce6306b5e85b3cae2194f89563becf88207b391d6bb53f39223",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1670,
+          "actual_decoder_timestamp": 1670.0016666666668,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01670.000.png",
+          "image_sha256": "3e15ad93a7440d2c2f6e41f3c5b828fa1a6fd60b398fcc8217bb6522738abd92",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1675,
+          "actual_decoder_timestamp": 1675.0066666666667,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01675.000.png",
+          "image_sha256": "1385a7eb5b7b2e177a1326dab7b737b977ee74c24b6dd4d02e5275c6c079445e",
+          "inside_question_scope": true
+        },
+        {
+          "requested_timestamp": 1680,
+          "actual_decoder_timestamp": 1680.0116666666668,
+          "title_status": "absent",
+          "review_phase": "context",
+          "image_path": "results/research_v2/annotations/taskgraphs_context/01680.000.png",
+          "image_sha256": "c22503d30b412b266990bde5f58aea628f8e44e34e1a3ee2bdac40c9810314af",
+          "inside_question_scope": false
+        }
+      ],
+      "contact_sheets": [
+        "results/research_v2/annotations/taskgraphs_coarse/contactsheet.png",
+        "results/research_v2/annotations/taskgraphs_fine/contactsheet.png",
+        "results/research_v2/annotations/taskgraphs_context/contactsheet.png"
+      ]
+    }
+  ],
+  "annotation_cost": {
+    "decoded_frames": 186,
+    "saved_frame_files": 93,
+    "unique_requested_timestamps": 85,
+    "model_calls": 0,
+    "note": "Initial frame extraction and a second decoder pass to record exact timing metadata; annotation costs are separate from query-time budgets."
+  }
+}

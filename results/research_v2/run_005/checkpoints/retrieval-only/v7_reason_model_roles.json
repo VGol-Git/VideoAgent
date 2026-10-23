@@ -1,0 +1,64 @@
+{
+  "saved_at_utc": "2026-10-22T20:07:43.944207+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "retrieval-only",
+  "question_id": "v7_reason_model_roles",
+  "prediction_sha256": "f6887663a6bdfd1e0a57378b2d12aa42fc6915211966282c8cc7e8d4ca2cbae2",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Plan needs 1–6 requirements; preserve all requested facts",
+    "error": "Plan needs 1–6 requirements; preserve all requested facts",
+    "error_type": "planning_error",
+    "question_contract": {
+      "basis": "question_text_only",
+      "overview": false
+    },
+    "question_id": "v7_reason_model_roles",
+    "question": "Why does the presenter suggest a powerful Kanban decomposer but a less powerful worker for a well-scoped card? Explain the connection to cost.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 0,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 31.9746,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 1840,
+      "output_tokens": 827
+    },
+    "trace": [],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"why does the presenter suggest a powerful Kanban decomposer but a less powerful worker for a well-scoped card\",\n    \"what is the connection between the Kanban decomposer and cost\",\n    \"how does the presenter explain the cost-effectiveness of a less powerful worker for a well-scoped card\"\n  ],\n  \"requirements\": [\n    \"the presenter suggests a powerful Kanban decomposer for a well-scoped card\",\n    \"a less powerful worker is recommended for the same card\",\n    \"the connection to cost is explained\",\n    \"the reasoning behind the recommendation is tied to cost efficiency\",\n    \"the decision is based on the scope of the card\",\n    \"the decomposer is powerful but the worker is less powerful\",\n    \"the cost is a key factor in the recommendation\"\n  ],\n  \"event_query\": [\n    \"the presenter explains the rationale for using a powerful decomposer and a less powerful worker\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"why does the presenter suggest a powerful Kanban decomposer but a less powerful worker for a well-scoped card\",\n    \"what is the connection between the Kanban decomposer and cost\",\n    \"how does the presenter explain the cost-effectiveness of a less powerful worker for a well-scoped card\",\n    \"what is the rationale behind using a powerful decomposer and a less powerful worker for a well-scoped card\",\n    \"how does the presenter link the decomposer's power to cost efficiency\",\n    \"what is the reasoning behind recommending a less powerful worker for a well-scoped card\",\n    \"how does the presenter justify the cost advantage of a less powerful worker\",\n    \"what is the connection between the scope of the card and the recommendation\"\n  ],\n  \"requirements\": [\n    \"the presenter suggests a powerful Kanban decomposer for a well-scoped card\",\n    \"a less powerful worker is recommended for the same card\",\n    \"the connection to cost is explained\",\n    \"the reasoning behind the recommendation is tied to cost efficiency\",\n    \"the decision is based on the scope of the card\",\n    \"the decomposer is powerful but the worker is less powerful\",\n    \"the cost is a key factor in the recommendation\"\n  ],\n  \"event_query\": [\n    \"the presenter explains the rationale for using a powerful decomposer and a less powerful worker\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"why does the presenter suggest a powerful Kanban decomposer but a less powerful worker for a well-scoped card\",\n    \"what is the connection between the Kanban decomposer and cost\",\n    \"how does the presenter explain the cost-effectiveness of a less powerful worker for a well-scoped card\",\n    \"what is the rationale behind using a powerful decomposer and a less powerful worker for a well-scoped card\",\n    \"how does the presenter link the decomposer's power to cost efficiency\",\n    \"what is the reasoning behind recommending a less powerful worker for a well-scoped card\",\n    \"how does the presenter justify the cost advantage of a less powerful worker\",\n    \"what is the connection between the scope of the card and the recommendation\"\n  ],\n  \"requirements\": [\n    \"the presenter suggests a powerful Kanban decomposer for a well-scoped card\",\n    \"a less powerful worker is recommended for the same card\",\n    \"the connection to cost is explained\",\n    \"the reasoning behind the recommendation is tied to cost efficiency\",\n    \"the decision is based on the scope of the card\",\n    \"the decomposer is powerful but the worker is less powerful\",\n    \"the cost is a key factor in the recommendation\"\n  ],\n  \"event_query\": [\n    \"the presenter explains the rationale for using a powerful decomposer and a less powerful worker\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "retrieval-only",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

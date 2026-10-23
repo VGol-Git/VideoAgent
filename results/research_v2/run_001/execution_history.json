@@ -1,0 +1,29 @@
+[
+  {
+    "started_at_utc": "2026-10-22T15:53:59.094158+00:00",
+    "argv": [
+      "--prepare-assets",
+      "--download-models",
+      "--local-files-only",
+      "--output-root",
+      "results/research_v2",
+      "--split",
+      "test",
+      "--policies",
+      "legacy",
+      "research",
+      "no-refinement"
+    ],
+    "resume": false,
+    "prepare_only": false,
+    "launch_context": {
+      "stop_demo_requested": true,
+      "stopped_demo_pids": [
+        58280
+      ]
+    },
+    "finished_at_utc": "2026-10-22T18:12:14.907264+00:00",
+    "status": "failed",
+    "completed_predictions": 0
+  }
+]

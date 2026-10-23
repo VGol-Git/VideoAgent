@@ -1,0 +1,64 @@
+{
+  "saved_at_utc": "2026-10-22T20:07:11.770985+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "uniform",
+  "question_id": "v7_reason_fresh_context",
+  "prediction_sha256": "ab219cead214e6b8da8e910de9723085d786a4bfc71e94c36629983f98398d24",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Plan needs 1–6 requirements; preserve all requested facts",
+    "error": "Plan needs 1–6 requirements; preserve all requested facts",
+    "error_type": "planning_error",
+    "question_contract": {
+      "basis": "question_text_only",
+      "overview": false
+    },
+    "question_id": "v7_reason_fresh_context",
+    "question": "According to the explanation of fresh subagent conversations, why must the parent put sufficient information in the goal and context fields of delegate_task? Cite the statements supporting the explanation.",
+    "mode": "uniform",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 0,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 44.0304,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 2138,
+      "output_tokens": 1119
+    },
+    "trace": [],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"What is the purpose of the goal and context fields in delegate_task?\",\n    \"Why must sufficient information be provided in the goal and context fields?\",\n    \"How does the parent ensure the subagent receives complete information?\",\n    \"What is the reasoning behind the requirement for the parent to include sufficient information?\",\n    \"According to the explanation, what is the role of the goal and context fields in the subagent's task?\",\n    \"What are the consequences of insufficient information in the goal and context fields?\",\n    \"How does the parent's input affect the subagent's understanding of the task?\",\n    \"What is the specific requirement for the parent to include sufficient information in the goal and context fields?\"\n  ],\n  \"requirements\": [\n    \"The parent must provide sufficient information in the goal and context fields of delegate_task to ensure the subagent understands the task.\",\n    \"The goal and context fields are essential for the subagent to perform the task correctly.\",\n    \"The explanation of fresh subagent conversations emphasizes the importance of complete information in these fields.\",\n    \"The parent's input directly influences the subagent's understanding and execution of the task.\",\n    \"The goal and context fields must contain enough information for the subagent to perform the task effectively.\",\n    \"The parent's role is to ensure the subagent has all necessary details to carry out the task.\",\n    \"The explanation of fresh subagent conversations supports the necessity of sufficient information in the goal and context fields.\",\n    \"The parent's input must be sufficient to enable the subagent to complete the task without ambiguity.\"\n  ],\n  \"event_query\": [\n    \"The parent provides sufficient information in the goal and context fields to ensure the subagent understands the task.\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"What is the purpose of the goal and context fields in delegate_task?\",\n    \"Why must sufficient information be provided in the goal and context fields?\",\n    \"How does the parent ensure the subagent receives complete information?\",\n    \"What is the reasoning behind the requirement for the parent to include sufficient information?\",\n    \"According to the explanation, what is the role of the goal and context fields in the subagent's task?\",\n    \"What are the consequences of insufficient information in the goal and context fields?\",\n    \"How does the parent's input affect the subagent's understanding of the task?\",\n    \"What is the specific requirement for the parent to include sufficient information in the goal and context fields?\"\n  ],\n  \"requirements\": [\n    \"The parent must provide sufficient information in the goal and context fields of delegate_task to ensure the subagent understands the task.\",\n    \"The goal and context fields are essential for the subagent to perform the task correctly.\",\n    \"The explanation of fresh subagent conversations emphasizes the importance of complete information in these fields.\",\n    \"The parent's input directly influences the subagent's understanding and execution of the task.\",\n    \"The goal and context fields must contain enough information for the subagent to perform the task effectively.\",\n    \"The parent's role is to ensure the subagent has all necessary details to carry out the task.\",\n    \"The explanation of fresh subagent conversations supports the necessity of sufficient information in the goal and context fields.\",\n    \"The parent's input must be sufficient to enable the subagent to complete the task without ambiguity.\"\n  ],\n  \"event_query\": [\n    \"The parent provides sufficient information in the goal and context fields to ensure the subagent understands the task.\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"transcript\",\n  \"queries\": [\n    \"What is the purpose of the goal and context fields in delegate_task?\",\n    \"Why must sufficient information be provided in the goal and context fields?\",\n    \"How does the parent ensure the subagent receives complete information?\",\n    \"What is the reasoning behind the requirement for the parent to include sufficient information?\",\n    \"According to the explanation, what is the role of the goal and context fields in the subagent's task?\",\n    \"What are the consequences of insufficient information in the goal and context fields?\",\n    \"How does the parent's input affect the subagent's understanding of the task?\",\n    \"What is the specific requirement for the parent to include sufficient information in the goal and context fields?\"\n  ],\n  \"requirements\": [\n    \"The parent must provide sufficient information in the goal and context fields of delegate_task to ensure the subagent understands the task.\",\n    \"The goal and context fields are essential for the subagent to perform the task correctly.\",\n    \"The explanation of fresh subagent conversations emphasizes the importance of complete information in these fields.\",\n    \"The parent's input directly influences the subagent's understanding and execution of the task.\",\n    \"The goal and context fields must contain enough information for the subagent to perform the task effectively.\",\n    \"The parent's role is to ensure the subagent has all necessary details to carry out the task.\",\n    \"The explanation of fresh subagent conversations supports the necessity of sufficient information in the goal and context fields.\",\n    \"The parent's input must be sufficient to enable the subagent to complete the task without ambiguity.\"\n  ],\n  \"event_query\": [\n    \"The parent provides sufficient information in the goal and context fields to ensure the subagent understands the task.\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "uniform",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

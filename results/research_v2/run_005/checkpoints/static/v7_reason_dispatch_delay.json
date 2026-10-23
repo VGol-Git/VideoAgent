@@ -1,0 +1,71 @@
+{
+  "saved_at_utc": "2026-10-22T20:32:59.426708+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "static",
+  "question_id": "v7_reason_dispatch_delay",
+  "prediction_sha256": "15c154a5ee09ffc8ea4e0820d554d1a044f873d548376ced45fc3dcdced7f63b",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Plan needs 1–6 requirements; preserve all requested facts",
+    "error": "Plan needs 1–6 requirements; preserve all requested facts",
+    "error_type": "planning_error",
+    "question_contract": {
+      "basis": "question_text_only",
+      "required_modalities": [
+        "visual"
+      ],
+      "allowed_modalities": [
+        "visual",
+        "audiovisual"
+      ],
+      "overview": false
+    },
+    "question_id": "v7_reason_dispatch_delay",
+    "question": "Connect the How Task Graphs Actually Run diagram to the later Kanban research demonstration: why do completed researcher tasks unblock report delivery without implying that it starts running at exactly the same instant? Cite the diagram and the demonstration.",
+    "mode": "static",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 0,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 98.6127,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 1911,
+      "output_tokens": 672
+    },
+    "trace": [],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"How Task Graphs Actually Run diagram\",\n    \"Kanban research demonstration\",\n    \"completed researcher tasks unblock report delivery\",\n    \"report delivery starts at same instant\",\n    \"diagram shows task completion timing\",\n    \"demonstration shows task completion timing\",\n    \"why completed tasks unblock report delivery\",\n    \"does report delivery start at same instant as task completion\"\n  ],\n  \"requirements\": [\n    \"The diagram shows how task completion affects report delivery.\",\n    \"The demonstration shows the timing of report delivery.\",\n    \"Completed tasks unblock report delivery without starting at the same instant.\",\n    \"The diagram and demonstration are connected.\",\n    \"The diagram and demonstration are both visual.\",\n    \"The diagram and demonstration are from the same context.\",\n    \"The diagram and demonstration are not identical.\"\n  ],\n  \"event_query\": [\n    \"How Task Graphs Actually Run diagram shows task completion timing\",\n    \"Kanban research demonstration shows report delivery timing\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"How Task Graphs Actually Run diagram\",\n    \"Kanban research demonstration\",\n    \"completed researcher tasks unblock report delivery\",\n    \"report delivery starts at same instant\",\n    \"diagram shows task completion timing\",\n    \"demonstration shows task completion timing\",\n    \"why completed tasks unblock report delivery\",\n    \"does report delivery start at same instant as task completion\"\n  ],\n  \"requirements\": [\n    \"The diagram shows how task completion affects report delivery.\",\n    \"The demonstration shows the timing of report delivery.\",\n    \"Completed tasks unblock report delivery without starting at the same instant.\",\n    \"The diagram and demonstration are connected.\",\n    \"The diagram and demonstration are both visual.\",\n    \"The diagram and demonstration are from the same context.\",\n    \"The diagram and demonstration are not identical.\"\n  ],\n  \"event_query\": [\n    \"How Task Graphs Actually Run diagram shows task completion timing\",\n    \"Kanban research demonstration shows report delivery timing\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"How Task Graphs Actually Run diagram\",\n    \"Kanban research demonstration\",\n    \"completed researcher tasks unblock report delivery\",\n    \"report delivery starts at same instant\",\n    \"diagram shows task completion timing\",\n    \"demonstration shows task completion timing\",\n    \"why completed tasks unblock report delivery\",\n    \"does report delivery start at same instant as task completion\"\n  ],\n  \"requirements\": [\n    \"The diagram shows how task completion affects report delivery.\",\n    \"The demonstration shows the timing of report delivery.\",\n    \"Completed tasks unblock report delivery without starting at the same instant.\",\n    \"The diagram and demonstration are connected.\",\n    \"The diagram and demonstration are both visual.\",\n    \"The diagram and demonstration are from the same context.\",\n    \"The diagram and demonstration are not identical.\"\n  ],\n  \"event_query\": [\n    \"How Task Graphs Actually Run diagram shows task completion timing\",\n    \"Kanban research demonstration shows report delivery timing\"\n  ]\n}",
+        "error": "Plan needs 1–6 requirements; preserve all requested facts",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "static",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

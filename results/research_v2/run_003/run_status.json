@@ -1,0 +1,24 @@
+{
+  "status": "failed",
+  "started_at_utc": "2026-10-22T18:28:15.925180+00:00",
+  "run_directory": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\results\\research_v2\\run_003",
+  "phase": "asset_preparation",
+  "completed_predictions": 0,
+  "argv": [
+    "--prepare-assets",
+    "--download-models",
+    "--local-files-only",
+    "--output-root",
+    "results/research_v2",
+    "--split",
+    "test",
+    "--policies",
+    "legacy",
+    "research",
+    "no-refinement"
+  ],
+  "dry_run": false,
+  "total_predictions": 36,
+  "finished_at_utc": "2026-10-22T18:28:23.130604+00:00",
+  "error": "MediaError: Decoder could not read frame 77172."
+}

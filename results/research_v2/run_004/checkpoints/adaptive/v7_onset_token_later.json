@@ -1,0 +1,218 @@
+{
+  "saved_at_utc": "2026-10-22T19:22:05.562312+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "adaptive",
+  "question_id": "v7_onset_token_later",
+  "prediction_sha256": "fbbf5a33b8b3a7d7144e4af66808daa12853c736390b682945cc125e25544888",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "No tools remain; answer or abstain",
+    "error": "No tools remain; answer or abstain",
+    "error_type": "invalid_model_response",
+    "plan": {
+      "task": "reasoning",
+      "modality": "transcript",
+      "queries": [
+        "distinctive search terms"
+      ],
+      "requirements": {
+        "R1": "one fact that must be established"
+      }
+    },
+    "routing": "temporal_scope",
+    "temporal_scope": {
+      "kind": "after",
+      "start": 1800.0,
+      "end": 2575.0057666666667,
+      "interpretation": "Requested video interval: 1800–2575.01 seconds. After means through the end of the video."
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": true
+    },
+    "coverage": {
+      "strategy": "distributed_windows",
+      "requested_start": 1800.0,
+      "requested_end": 2575.0057666666667,
+      "inspection_intervals": [],
+      "omitted_intervals": [
+        [
+          1800.0,
+          2575.0057666666667
+        ]
+      ],
+      "sampled_frame_count": 0,
+      "complete_visual_coverage": false,
+      "note": "Requested interval: 30:00–42:55. Selected text evidence only; no visual coverage was verified. Some portions of the requested interval were not inspected."
+    },
+    "question_id": "v7_onset_token_later",
+    "question": "During the later estimation demonstration after 30 minutes, when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens? Return the matching cue time or cue span.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 4,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 21.6666,
+    "usage": {
+      "model_calls": 8,
+      "input_tokens": 7527,
+      "output_tokens": 554
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "estimate dropping from 45,000 to 18,000 tokens",
+          "queries": [
+            "estimate",
+            "45,000",
+            "18,000",
+            "tokens",
+            "dropping",
+            "after 30 minutes"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: At most three auxiliary queries",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "latency_seconds": 0.0
+      },
+      {
+        "call": 2,
+        "tool": "search",
+        "args": {
+          "query": "estimate dropping from 45,000 to 18,000 tokens",
+          "queries": [
+            "estimate",
+            "45,000",
+            "18,000",
+            "tokens",
+            "dropping",
+            "after 30 minutes"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Duplicate call; change query or interval",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "latency_seconds": 0.0
+      },
+      {
+        "call": 3,
+        "tool": "search",
+        "args": {
+          "query": "estimate dropping from 45,000 to 18,000 tokens",
+          "queries": [
+            "estimate",
+            "45,000",
+            "18,000",
+            "tokens",
+            "dropping",
+            "after 30 minutes"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Duplicate call; change query or interval",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "latency_seconds": 0.0
+      },
+      {
+        "call": 4,
+        "tool": "search",
+        "args": {
+          "query": "estimate dropping from 45,000 to 18,000 tokens",
+          "queries": [
+            "estimate",
+            "45,000",
+            "18,000",
+            "tokens",
+            "dropping",
+            "after 30 minutes"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Duplicate call; change query or interval",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "latency_seconds": 0.0
+      }
+    ],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"reasoning\",\"modality\":\"transcript\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":\"the transcript first reports the estimate dropping from 45,000 to 18,000 tokens\"}"
+      },
+      {
+        "role": "controller",
+        "step": 0,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"estimate dropping from 45,000 to 18,000 tokens\",\"queries\":[\"estimate\",\"45,000\",\"18,000\",\"tokens\",\"dropping\",\"after 30 minutes\"],\"source\":\"transcript\",\"top_k\":6}}"
+      },
+      {
+        "role": "controller",
+        "step": 1,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"estimate dropping from 45,000 to 18,000 tokens\",\"queries\":[\"estimate\",\"45,000\",\"18,000\",\"tokens\",\"dropping\",\"after 30 minutes\"],\"source\":\"transcript\",\"top_k\":6}}"
+      },
+      {
+        "role": "controller",
+        "step": 2,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"estimate dropping from 45,000 to 18,000 tokens\",\"queries\":[\"estimate\",\"45,000\",\"18,000\",\"tokens\",\"dropping\",\"after 30 minutes\"],\"source\":\"transcript\",\"top_k\":6}}"
+      },
+      {
+        "role": "controller",
+        "step": 3,
+        "raw": "{\n  \"action\": \"search\",\n  \"args\": {\n    \"query\": \"estimate dropping from 45,000 to 18,000 tokens\",\n    \"queries\": [\"estimate\", \"45,000\", \"18,000\", \"tokens\", \"dropping\", \"after 30 minutes\"],\n    \"source\": \"transcript\",\n    \"top_k\": 6\n  }\n}"
+      },
+      {
+        "role": "controller",
+        "step": 4,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"estimate dropping from 45,000 to 18,000 tokens\",\"queries\":[\"estimate\",\"45,000\",\"18,000\",\"tokens\",\"dropping\",\"after 30 minutes\"],\"source\":\"transcript\",\"top_k\":6}}",
+        "error": "No tools remain; answer or abstain",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "controller",
+        "step": 5,
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[{\"text\":\"The transcript first reports the estimate dropping from 45,000 to 18,000 tokens at 2200.0 seconds.\",\"evidence_ids\":[\"E001\"],\"requirement_ids\":[\"R1\"]}]}",
+        "error": "Each claim needs observed evidence IDs",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "controller",
+        "step": 6,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"estimate dropping from 45,000 to 18,000 tokens\",\"queries\":[\"estimate\",\"45,000\",\"18,000\",\"tokens\",\"dropping\",\"after 30 minutes\"],\"source\":\"transcript\",\"top_k\":6}}",
+        "error": "No tools remain; answer or abstain",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

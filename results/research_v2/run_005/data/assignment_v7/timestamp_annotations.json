@@ -1,0 +1,97 @@
+{
+  "schema_version": "clipscout-assignment-v7-timestamp-annotations",
+  "created_at_utc": "2026-10-22T18:51:08.526812+00:00",
+  "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+  "annotation_method": "Assistant visual review of actual decoded frames; not independent human or blind validation. Existing examples were seen during development.",
+  "new_model_inference_used": false,
+  "frames": [
+    {
+      "id": "point_610",
+      "source_path": "results/moment_fix/verified/frame_610.png",
+      "image_path": "data/assignment_v7/reference_frames/point_610.png",
+      "image_sha256": "bb0b453b4da758892952211e8d2025a49237bfa08a0d84a66dddfd07686d6f22",
+      "actual_decoder_timestamp": 610.0094,
+      "requested_timestamp": 610,
+      "observation": "GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL; three numbered steps, with fail/retry and pass/exit branches."
+    },
+    {
+      "id": "point_800",
+      "source_path": "results/moment_fix/verified/frame_800.png",
+      "image_path": "data/assignment_v7/reference_frames/point_800.png",
+      "image_sha256": "ee6febcfa8ae507f6e9ad819646ff9e0fe0427a0fe144794a40acb0dda9eb7cc",
+      "actual_decoder_timestamp": 799.9992000000001,
+      "requested_timestamp": 800,
+      "observation": "wanderloots-tutorials SOUL.md editor; opening line identifies Hermes Agent, built by Nous Research; Save SOUL.md button."
+    },
+    {
+      "id": "range_article_1231.897",
+      "source_path": "results/temporal_ranges/live/20_to_21/frame_08_1231.897.png",
+      "image_path": "data/assignment_v7/reference_frames/range_article_1231.897.png",
+      "image_sha256": "4037f29f839480f7eeced1dcd4ec86e02b1ffbf580df4f2acfdcbffbc4f97810",
+      "actual_decoder_timestamp": 1231.8973333333333,
+      "requested_timestamp": null,
+      "observation": "Article to Curated Knowledge title, before Two Loops title."
+    },
+    {
+      "id": "range_two_loops_1235.634",
+      "source_path": "results/temporal_ranges/live/20_to_21/frame_09_1235.634.png",
+      "image_path": "data/assignment_v7/reference_frames/range_two_loops_1235.634.png",
+      "image_sha256": "3cc56581e0171a7873ae5a7ed6612d539bed3e0c690893a2725363c83f2561e5",
+      "actual_decoder_timestamp": 1235.6344000000001,
+      "requested_timestamp": null,
+      "observation": "Two Loops, One Knowledge Workflow title, after Article title."
+    },
+    {
+      "id": "dev_1220",
+      "source_path": "data/assignment_v7/reference_frames/dev_1220.png",
+      "image_path": "data/assignment_v7/reference_frames/dev_1220.png",
+      "image_sha256": "3bca9af40813e8ef38b10965e2c59ec463e517fe6f33fdf685f60a3c1c91bad9",
+      "actual_decoder_timestamp": 1219.9854333333333,
+      "requested_timestamp": 1220,
+      "observation": "Article to Curated Knowledge: five labeled main stages; Human review precedes Connected library."
+    }
+  ],
+  "transcript": {
+    "path": "data/transcripts/user_video.json",
+    "sha256": "ec42515131e685e5bde1600f501afe63c8bc1a248962fafe7e89c5023b42e130",
+    "reference_status": "ASR-derived silver cue intervals, not independently audio-aligned word boundaries.",
+    "cues": [
+      {
+        "ids": [
+          "T00649",
+          "T00650"
+        ],
+        "scope": [
+          1910,
+          1940
+        ],
+        "interval": [
+          1914.17,
+          1918.25
+        ],
+        "text": "Please limit your search to five sources and the output document to 500 words or less."
+      },
+      {
+        "ids": [
+          "T00157",
+          "T00158",
+          "T00159"
+        ],
+        "scope": [
+          490,
+          501
+        ],
+        "interval": [
+          493.25,
+          500.61
+        ],
+        "text": "The /goal command sets a standing goal for Hermes across turns until achieved."
+      }
+    ]
+  },
+  "limits": [
+    "Point tolerance 0.1 s accommodates decoder frame spacing; it does not make the semantic description correct.",
+    "Range references establish two observed titles in order, not a continuous sweep or an exact transition boundary.",
+    "These are diagnostic reuse cases, not an untouched held-out benchmark."
+  ]
+}

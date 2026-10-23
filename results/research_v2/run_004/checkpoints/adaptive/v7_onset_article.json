@@ -1,0 +1,432 @@
+{
+  "saved_at_utc": "2026-10-22T19:22:55.839346+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "adaptive",
+  "question_id": "v7_onset_article",
+  "prediction_sha256": "c28a658c8831cb5bd3c8214e786ae789b79e0ccf5cf0d54a75983bf6df8c72bf",
+  "prediction": {
+    "status": "answered",
+    "answer": "Selected observations for 19:00–21:00 (partial coverage):\nThe complete title 'Article to Curated Knowledge' becomes clearly readable on the full-screen slide at timestamp 1200.57, which is the onset of the subtitle cue that begins with 'YouTube video or some other resource and you've taken some notes on it. You can drop in the raw source and your notes and you can send it off to the librarian. The librarian agent can try and find the fit. How does this fit into your existing knowledge base? It'll check the context, connections, and draft an entry for you for your review to see is this good enough for it to make it into your knowledge base, into your curated library. If it's not good enough, you can suggest revisions and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+    "claims": [
+      {
+        "text": "The complete title 'Article to Curated Knowledge' becomes clearly readable on the full-screen slide at timestamp 1200.57, which is the onset of the subtitle cue that begins with 'YouTube video or some other resource and you've taken some notes on it. You can drop in the raw source and your notes and you can send it off to the librarian. The librarian agent can try and find the fit. How does this fit into your existing knowledge base? It'll check the context, connections, and draft an entry for you for your review to see is this good enough for it to make it into your knowledge base, into your curated library. If it's not good enough, you can suggest revisions and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+        "evidence_ids": [
+          "E001"
+        ],
+        "requirement_ids": [
+          "R1"
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "evidence_id": "E001",
+        "start": 1200.57,
+        "end": 1230.73
+      }
+    ],
+    "requirements_covered": [
+      "R1"
+    ],
+    "requirements_missing": [],
+    "model_audit": {
+      "claims": [
+        {
+          "index": 1,
+          "supported": true,
+          "reason": "The evidence transcript shows that the subtitle cue 'YouTube video or some other resource...' begins at 1200.57, and the full-screen slide with the title 'Article to Curated Knowledge' becomes clearly readable at this timestamp, as the title appears in the full-screen slide at the same time the subtitle cue starts. The evidence supports the claim that the title becomes clearly readable at 1200.57, which is the onset of the subtitle cue."
+        }
+      ],
+      "independent": false,
+      "ground_truth_verification": false
+    },
+    "plan": {
+      "task": "reasoning",
+      "modality": "transcript",
+      "queries": [
+        "distinctive search terms"
+      ],
+      "requirements": {
+        "R1": "one fact that must be established"
+      }
+    },
+    "routing": "temporal_scope",
+    "temporal_scope": {
+      "kind": "range",
+      "start": 1140.0,
+      "end": 1260.0,
+      "interpretation": "Requested video interval: 1140–1260 seconds. Minute/hour numbers, including ordinal wording, are timestamp boundaries."
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": true
+    },
+    "coverage": {
+      "strategy": "distributed_windows",
+      "requested_start": 1140.0,
+      "requested_end": 1260.0,
+      "inspection_intervals": [
+        [
+          1200.57,
+          1230.73
+        ]
+      ],
+      "omitted_intervals": [
+        [
+          1140.0,
+          1200.57
+        ],
+        [
+          1230.73,
+          1260.0
+        ]
+      ],
+      "sampled_frame_count": 0,
+      "complete_visual_coverage": false,
+      "note": "Requested interval: 19:00–21:00. Selected text evidence only; no visual coverage was verified. Some portions of the requested interval were not inspected."
+    },
+    "question_id": "v7_onset_article",
+    "question": "Within the sequence from 19:00 to 21:00, when does the complete title Article to Curated Knowledge become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 4,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 31.8218,
+    "usage": {
+      "model_calls": 8,
+      "input_tokens": 10004,
+      "output_tokens": 718
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "Article to Curated Knowledge",
+          "queries": [
+            "Article to Curated Knowledge"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:40",
+              "start": 1200.57,
+              "end": 1230.73,
+              "text": "YouTube video or some other resource and you've taken some notes on it. You can drop in the raw source and your notes and you can send it off to the librarian. The librarian agent can try and find the fit. How does this fit into your existing knowledge base? It'll check the context, connections, and draft an entry for you for your review to see is this good enough for it to make it into your knowledge base, into your curated library. If it's not good enough, you can suggest revisions and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00413",
+                "T00414",
+                "T00415",
+                "T00416",
+                "T00417",
+                "T00418"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01639344262295082,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "Article to Curated Knowledge",
+                  "rank": 1,
+                  "retrieval_score": 2.9621880307866704,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.01639344262295082,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "Article to Curated Knowledge"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:40",
+                  "start": 1200.57,
+                  "end": 1230.73,
+                  "text": "YouTube video or some other resource and you've taken some notes on it. You can drop in the raw source and your notes and you can send it off to the librarian. The librarian agent can try and find the fit. How does this fit into your existing knowledge base? It'll check the context, connections, and draft an entry for you for your review to see is this good enough for it to make it into your knowledge base, into your curated library. If it's not good enough, you can suggest revisions and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00413",
+                    "T00414",
+                    "T00415",
+                    "T00416",
+                    "T00417",
+                    "T00418"
+                  ]
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "transcript:39",
+              "start": 1174.17,
+              "end": 1200.57,
+              "text": "If you don't think it's good enough quality or you think it's missing something, you can provide some more context, some more commentary, or steer it, and you can have it go back and loop again. So this brings in a loop, but it's a human in the loop. Then if it meets your approval, you can have it create the draft or even potentially send it right away if you've already reviewed the final result. It's up to you if you want to have the send capability given to the agent or if you want to click the button. As another example, let's say you've come across a great article or a",
+              "source": "transcript",
+              "modalities": [
+                "transcript"
+              ],
+              "segment_ids": [
+                "T00407",
+                "T00408",
+                "T00409",
+                "T00410",
+                "T00411",
+                "T00412"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.016129032258064516,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "transcript",
+                  "query": "Article to Curated Knowledge",
+                  "rank": 2,
+                  "retrieval_score": 1.1815638350406816,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.016129032258064516,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "Article to Curated Knowledge"
+              ],
+              "evidence": [
+                {
+                  "id": "transcript:39",
+                  "start": 1174.17,
+                  "end": 1200.57,
+                  "text": "If you don't think it's good enough quality or you think it's missing something, you can provide some more context, some more commentary, or steer it, and you can have it go back and loop again. So this brings in a loop, but it's a human in the loop. Then if it meets your approval, you can have it create the draft or even potentially send it right away if you've already reviewed the final result. It's up to you if you want to have the send capability given to the agent or if you want to click the button. As another example, let's say you've come across a great article or a",
+                  "source": "transcript",
+                  "segment_ids": [
+                    "T00407",
+                    "T00408",
+                    "T00409",
+                    "T00410",
+                    "T00411",
+                    "T00412"
+                  ]
+                }
+              ],
+              "selection_score": 0.6395161290322581,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false
+        },
+        "latency_seconds": 0.0007
+      },
+      {
+        "call": 2,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1200.57,
+          "end": 1230.73,
+          "question": "When does the complete title 'Article to Curated Knowledge' become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating."
+        },
+        "ok": true,
+        "selected_by": "model",
+        "result": {
+          "start": 1200.57,
+          "end": 1230.73,
+          "transcript": "[1200.57–1205.77] YouTube video or some other resource and you've taken some notes on it. You can drop in the raw\n[1205.77–1210.33] source and your notes and you can send it off to the librarian. The librarian agent can try and find\n[1210.33–1215.45] the fit. How does this fit into your existing knowledge base? It'll check the context, connections,\n[1215.45–1221.29] and draft an entry for you for your review to see is this good enough for it to make it into your\n[1221.29–1226.25] knowledge base, into your curated library. If it's not good enough, you can suggest revisions\n[1226.25–1230.73] and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00413",
+              "start": 1200.57,
+              "end": 1205.77
+            },
+            {
+              "id": "T00414",
+              "start": 1205.77,
+              "end": 1210.33
+            },
+            {
+              "id": "T00415",
+              "start": 1210.33,
+              "end": 1215.45
+            },
+            {
+              "id": "T00416",
+              "start": 1215.45,
+              "end": 1221.29
+            },
+            {
+              "id": "T00417",
+              "start": 1221.29,
+              "end": 1226.25
+            },
+            {
+              "id": "T00418",
+              "start": 1226.25,
+              "end": 1230.73
+            }
+          ],
+          "visual_observation": null,
+          "sampled_timestamps": [],
+          "modality": "transcript",
+          "coverage": "subtitle_cues_only",
+          "cache_hit": false,
+          "decoded_image_max_side": 560,
+          "backend_image_pixel_limit": 313600,
+          "evidence_id": "E001"
+        },
+        "latency_seconds": 0.0025
+      },
+      {
+        "call": 3,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1200.57,
+          "end": 1230.73,
+          "question": "When does the complete title 'Article to Curated Knowledge' become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating."
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Duplicate call; change query or interval",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "latency_seconds": 0.0
+      },
+      {
+        "call": 4,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1200.57,
+          "end": 1230.73,
+          "question": "When does the complete title 'Article to Curated Knowledge' become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating."
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Duplicate call; change query or interval",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "latency_seconds": 0.0
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "start": 1200.57,
+        "end": 1230.73,
+        "transcript": "[1200.57–1205.77] YouTube video or some other resource and you've taken some notes on it. You can drop in the raw\n[1205.77–1210.33] source and your notes and you can send it off to the librarian. The librarian agent can try and find\n[1210.33–1215.45] the fit. How does this fit into your existing knowledge base? It'll check the context, connections,\n[1215.45–1221.29] and draft an entry for you for your review to see is this good enough for it to make it into your\n[1221.29–1226.25] knowledge base, into your curated library. If it's not good enough, you can suggest revisions\n[1226.25–1230.73] and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00413",
+            "start": 1200.57,
+            "end": 1205.77
+          },
+          {
+            "id": "T00414",
+            "start": 1205.77,
+            "end": 1210.33
+          },
+          {
+            "id": "T00415",
+            "start": 1210.33,
+            "end": 1215.45
+          },
+          {
+            "id": "T00416",
+            "start": 1215.45,
+            "end": 1221.29
+          },
+          {
+            "id": "T00417",
+            "start": 1221.29,
+            "end": 1226.25
+          },
+          {
+            "id": "T00418",
+            "start": 1226.25,
+            "end": 1230.73
+          }
+        ],
+        "visual_observation": null,
+        "sampled_timestamps": [],
+        "modality": "transcript",
+        "coverage": "subtitle_cues_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E001"
+      }
+    },
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"reasoning\",\"modality\":\"transcript\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":\"the complete title Article to Curated Knowledge becomes clearly readable on the full-screen slide\"}"
+      },
+      {
+        "role": "controller",
+        "step": 0,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"Article to Curated Knowledge\",\"queries\":[\"Article to Curated Knowledge\"],\"source\":\"transcript\",\"top_k\":6}}"
+      },
+      {
+        "role": "controller",
+        "step": 1,
+        "raw": "{\"action\":\"inspect_clip\",\"args\":{\"start\":1200.57,\"end\":1230.73,\"question\":\"When does the complete title 'Article to Curated Knowledge' become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.\"}}"
+      },
+      {
+        "role": "controller",
+        "step": 2,
+        "raw": "{\"action\":\"inspect_clip\",\"args\":{\"start\":1200.57,\"end\":1230.73,\"question\":\"When does the complete title 'Article to Curated Knowledge' become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.\"}}"
+      },
+      {
+        "role": "controller",
+        "step": 3,
+        "raw": "{\"action\":\"inspect_clip\",\"args\":{\"start\":1200.57,\"end\":1230.73,\"question\":\"When does the complete title 'Article to Curated Knowledge' become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.\"}}"
+      },
+      {
+        "role": "controller",
+        "step": 4,
+        "raw": "{\"action\":\"inspect_clip\",\"args\":{\"start\":1200.57,\"end\":1230.73,\"question\":\"When does the complete title 'Article to Curated Knowledge' become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.\"}}",
+        "error": "No tools remain; answer or abstain",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "controller",
+        "step": 5,
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[{\"text\":\"The complete title 'Article to Curated Knowledge' becomes clearly readable on the full-screen slide at timestamp 1200.57, which is the onset of the subtitle cue that begins with 'YouTube video or some other resource and you've taken some notes on it. You can drop in the raw source and your notes and you can send it off to the librarian. The librarian agent can try and find the fit. How does this fit into your existing knowledge base? It'll check the context, connections, and draft an entry for you for your review to see is this good enough for it to make it into your knowledge base, into your curated library. If it's not good enough, you can suggest revisions and the librarian will update the draft entry and then pass it back to you for a review. Once you\",\"evidence_ids\":[\"E001\"],\"requirement_ids\":[\"R1\"]}]}"
+      },
+      {
+        "role": "verifier",
+        "raw": "{\"claims\":[{\"index\":1,\"supported\":true,\"reason\":\"The evidence transcript shows that the subtitle cue 'YouTube video or some other resource...' begins at 1200.57, and the full-screen slide with the title 'Article to Curated Knowledge' becomes clearly readable at this timestamp, as the title appears in the full-screen slide at the same time the subtitle cue starts. The evidence supports the claim that the title becomes clearly readable at 1200.57, which is the onset of the subtitle cue.\"}]}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

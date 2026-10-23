@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\Asus Zephyrus 16\Documents\GenAI\Tool-using video agent for search and inspection\ClipScout\scripts\run_research_study.py", line 580, in execute
+    sidecar, ocr = prepare_assets(args, index, run_dir, configuration, models=models)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus Zephyrus 16\Documents\GenAI\Tool-using video agent for search and inspection\ClipScout\scripts\run_research_study.py", line 419, in prepare_assets
+    prepare_visual_index(index, manifest_path.parent, clip_model=args.clip_model, cadence=args.visual_cadence,
+  File "C:\Users\Asus Zephyrus 16\Documents\GenAI\Tool-using video agent for search and inspection\ClipScout\clipscout\visual_index.py", line 359, in prepare_visual_index
+    at, image = extract_frames(index.video_path, 0., index.duration, count=1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus Zephyrus 16\Documents\GenAI\Tool-using video agent for search and inspection\ClipScout\clipscout\media.py", line 117, in extract_frames
+    raise ValueError(f"end exceeds video duration ({info['duration']:.6f}s).")
+ValueError: end exceeds video duration (496.462633s).

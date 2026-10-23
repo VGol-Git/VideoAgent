@@ -1,0 +1,60 @@
+{
+  "saved_at_utc": "2026-10-22T19:29:17.118457+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "adaptive",
+  "question_id": "v7_timestamp_800",
+  "prediction_sha256": "8a340db114b46b195798207fed9daa3038f96d398cfd91418480fbdf34b7595c",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Plan needs 1-3 queries",
+    "error": "Plan needs 1-3 queries",
+    "error_type": "planning_error",
+    "question_id": "v7_timestamp_800",
+    "question": "Describe what is on screen at 800 seconds. Identify the open editor or slide, the file name, the visible agent identity, and the save control.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 0,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 6.3667,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 797,
+      "output_tokens": 175
+    },
+    "trace": [],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"lookup\",\"modality\":\"visual\",\"queries\":[\"what is on screen at 800 seconds\",\"open editor or slide\",\"file name\",\"visible agent identity\",\"save control\"],\"requirements\":[\"identify the open editor or slide\",\"identify the file name\",\"identify the visible agent identity\",\"identify the save control\"],\"event_query\":null}",
+        "error": "Plan needs 1-3 queries",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"lookup\",\"modality\":\"visual\",\"queries\":[\"what is on screen at 800 seconds\",\"open editor or slide\",\"file name\",\"visible agent identity\",\"save control\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":null}",
+        "error": "Plan needs 1-3 queries",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"lookup\",\"modality\":\"visual\",\"queries\":[\"what is on screen at 800 seconds\",\"open editor or slide\",\"file name\",\"visible agent identity\",\"save control\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":null}",
+        "error": "Plan needs 1-3 queries",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "started_at_utc": "2026-10-22T19:07:51.128080+00:00",
+  "status": "ready",
+  "models": {
+    "qwen": {
+      "ready": true,
+      "snapshot": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.cache\\huggingface\\models--Qwen--Qwen3-VL-2B-Instruct\\snapshots\\89644892e4d85e24eaac8bacfd4f463576704203",
+      "repo": "Qwen/Qwen3-VL-2B-Instruct",
+      "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+      "download_manifest_sha256": "ab817d490cdf3f4aa0bfc7c226f2089b58fe8e9b5753422db15bc3ad9dfdfc0d",
+      "files": [
+        {
+          "filename": "chat_template.json",
+          "size": 5502,
+          "algorithm": "sha1",
+          "digest": "e49e75bdda104c8de941eb20e0b3765184fb27bc"
+        },
+        {
+          "filename": "config.json",
+          "size": 1505,
+          "algorithm": "sha1",
+          "digest": "0cd8c646eb55794594b14fefcd1d3acea5cc000f"
+        },
+        {
+          "filename": "generation_config.json",
+          "size": 269,
+          "algorithm": "sha1",
+          "digest": "7bb37933d2d86e4ceaabcc6540be989658f238e9"
+        },
+        {
+          "filename": "merges.txt",
+          "size": 1671839,
+          "algorithm": "sha1",
+          "digest": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0"
+        },
+        {
+          "filename": "model.safetensors",
+          "size": 4255140312,
+          "algorithm": "sha256",
+          "digest": "7de1838c87a5349b016c26a1c3f7d2bc400a3d485f95ef39a7059ffd734977a0"
+        },
+        {
+          "filename": "preprocessor_config.json",
+          "size": 390,
+          "algorithm": "sha1",
+          "digest": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64"
+        },
+        {
+          "filename": "tokenizer.json",
+          "size": 7032403,
+          "algorithm": "sha1",
+          "digest": "c6cc1014128b19d1fc46b1d30a23e3b1d35db421"
+        },
+        {
+          "filename": "tokenizer_config.json",
+          "size": 10868,
+          "algorithm": "sha1",
+          "digest": "d3d3763207692c78780f4bf42d4dadf49a5c8012"
+        },
+        {
+          "filename": "video_preprocessor_config.json",
+          "size": 385,
+          "algorithm": "sha1",
+          "digest": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe"
+        },
+        {
+          "filename": "vocab.json",
+          "size": 2776833,
+          "algorithm": "sha1",
+          "digest": "4783fe10ac3adce15ac8f358ef5462739852c569"
+        }
+      ],
+      "readiness_check": "Pinned manifest identity, safe paths, file existence and exact sizes; content hashes verified at download time.",
+      "downloaded_this_invocation": false
+    },
+    "clip": {
+      "ready": true,
+      "snapshot": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\.cache\\huggingface\\models--openai--clip-vit-base-patch32\\snapshots\\3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "repo": "openai/clip-vit-base-patch32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "download_manifest_sha256": "a84e904cf5a5f955fde77719de425ad8957b4ffff1cdbe186ffcee1f74786b12",
+      "files": [
+        {
+          "filename": "config.json",
+          "size": 4186,
+          "algorithm": "sha1",
+          "digest": "a2a88b96561196777ca173b15309ea859f4d2ce0"
+        },
+        {
+          "filename": "merges.txt",
+          "size": 524657,
+          "algorithm": "sha1",
+          "digest": "bbfec752c9a675946c6dce106def6f35c882dcc2"
+        },
+        {
+          "filename": "preprocessor_config.json",
+          "size": 316,
+          "algorithm": "sha1",
+          "digest": "5a12a1eb250987a4eee0e3e7d7338c4b22724be1"
+        },
+        {
+          "filename": "pytorch_model.bin",
+          "size": 605247071,
+          "algorithm": "sha256",
+          "digest": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f"
+        },
+        {
+          "filename": "special_tokens_map.json",
+          "size": 389,
+          "algorithm": "sha1",
+          "digest": "9bfb42aa97dcd61e89f279ccaee988bccb4fabae"
+        },
+        {
+          "filename": "tokenizer.json",
+          "size": 2224041,
+          "algorithm": "sha1",
+          "digest": "564c0ebd5ce29c4ee4864004aee693deadd3128c"
+        },
+        {
+          "filename": "tokenizer_config.json",
+          "size": 592,
+          "algorithm": "sha1",
+          "digest": "4fdaf6842dd5a725b940c92b6b692490ce59d548"
+        },
+        {
+          "filename": "vocab.json",
+          "size": 862328,
+          "algorithm": "sha1",
+          "digest": "182766ce89b439768edadda342519f33802f5364"
+        }
+      ],
+      "readiness_check": "Pinned manifest identity, safe paths, file existence and exact sizes; content hashes verified at download time.",
+      "downloaded_this_invocation": false
+    }
+  },
+  "download_enabled": true,
+  "finished_at_utc": "2026-10-22T19:07:51.140086+00:00",
+  "seconds_this_invocation": 0.012637499981792644
+}

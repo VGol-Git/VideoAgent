@@ -1,0 +1,192 @@
+{
+  "saved_at_utc": "2026-10-22T19:12:10.982403+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "adaptive",
+  "question_id": "v7_reason_model_roles",
+  "prediction_sha256": "ccb14d8dc26728ae8a4e7bc23206f7d1bb3ac1bc9a5d90276d72ee03de360505",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "No tools remain; answer or abstain",
+    "error": "No tools remain; answer or abstain",
+    "error_type": "invalid_model_response",
+    "plan": {
+      "task": "reasoning",
+      "modality": "transcript",
+      "queries": [
+        "distinctive search terms"
+      ],
+      "requirements": {
+        "R1": "one fact that must be established"
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": true
+    },
+    "question_id": "v7_reason_model_roles",
+    "question": "Why does the presenter suggest a powerful Kanban decomposer but a less powerful worker for a well-scoped card? Explain the connection to cost.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 4,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 19.8505,
+    "usage": {
+      "model_calls": 8,
+      "input_tokens": 6832,
+      "output_tokens": 443
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "Kanban decomposer",
+          "queries": [
+            "powerful",
+            "less powerful worker",
+            "well-scoped card",
+            "cost"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: At most three auxiliary queries",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "latency_seconds": 0.0
+      },
+      {
+        "call": 2,
+        "tool": "search",
+        "args": {
+          "query": "Kanban decomposer",
+          "queries": [
+            "powerful",
+            "less powerful worker",
+            "well-scoped card",
+            "cost"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Duplicate call; change query or interval",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "latency_seconds": 0.0
+      },
+      {
+        "call": 3,
+        "tool": "search",
+        "args": {
+          "query": "Kanban decomposer",
+          "queries": [
+            "powerful",
+            "less powerful worker",
+            "well-scoped card",
+            "cost"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Duplicate call; change query or interval",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "latency_seconds": 0.0
+      },
+      {
+        "call": 4,
+        "tool": "search",
+        "args": {
+          "query": "Kanban decomposer",
+          "queries": [
+            "powerful",
+            "less powerful worker",
+            "well-scoped card",
+            "cost"
+          ],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": false,
+        "selected_by": "model",
+        "error": "ValueError: Duplicate call; change query or interval",
+        "failed_sampled_timestamps": [],
+        "decoder_frames_decoded": null,
+        "latency_seconds": 0.0
+      }
+    ],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"reasoning\",\"modality\":\"transcript\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":null}"
+      },
+      {
+        "role": "controller",
+        "step": 0,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"Kanban decomposer\",\"queries\":[\"powerful\",\"less powerful worker\",\"well-scoped card\",\"cost\"],\"source\":\"transcript\",\"top_k\":6}}"
+      },
+      {
+        "role": "controller",
+        "step": 1,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"Kanban decomposer\",\"queries\":[\"powerful\",\"less powerful worker\",\"well-scoped card\",\"cost\"],\"source\":\"transcript\",\"top_k\":6}}"
+      },
+      {
+        "role": "controller",
+        "step": 2,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"Kanban decomposer\",\"queries\":[\"powerful\",\"less powerful worker\",\"well-scoped card\",\"cost\"],\"source\":\"transcript\",\"top_k\":6}}"
+      },
+      {
+        "role": "controller",
+        "step": 3,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"Kanban decomposer\",\"queries\":[\"powerful\",\"less powerful worker\",\"well-scoped card\",\"cost\"],\"source\":\"transcript\",\"top_k\":6}}"
+      },
+      {
+        "role": "controller",
+        "step": 4,
+        "raw": "{\n  \"action\": \"search\",\n  \"args\": {\n    \"query\": \"Kanban decomposer\",\n    \"queries\": [\"powerful\", \"less powerful worker\", \"well-scoped card\", \"cost\"],\n    \"source\": \"transcript\",\n    \"top_k\": 6\n  }\n}",
+        "error": "No tools remain; answer or abstain",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "controller",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[{\"text\":\"The presenter suggests a powerful Kanban decomposer for well-scoped cards to ensure efficient handling of complex work, while using a less powerful worker for simpler tasks to reduce overhead and improve scalability. This approach is justified by the cost-benefit analysis, where the decomposer's efficiency in managing complex work outweighs the cost of a less powerful worker, especially when the card is well-scoped and the workload is manageable. The cost of a less powerful worker is minimized by the high efficiency of the decomposer, making the overall system more cost-effective.\",\"evidence_ids\":[\"E001\"],\"requirement_ids\":[\"R1\"]}]}\"",
+        "error": "Extra data: line 1 column 699 (char 698)",
+        "error_type": "format_error"
+      },
+      {
+        "role": "controller",
+        "step": 6,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"Kanban decomposer\",\"queries\":[\"powerful\",\"less powerful worker\",\"well-scoped card\",\"cost\"],\"source\":\"transcript\",\"top_k\":6}}",
+        "error": "No tools remain; answer or abstain",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "adaptive",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

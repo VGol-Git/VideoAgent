@@ -1,0 +1,112 @@
+{
+  "saved_at_utc": "2026-10-22T19:23:13.076465+00:00",
+  "configuration_sha256": "b0f580a5b8dd48a333939c63bdf2146d568ebdddd720c718428a97a395ca5f1a",
+  "mode": "retrieval-only",
+  "question_id": "v7_onset_task_graph",
+  "prediction_sha256": "a5bf1c34cebfb2c5e010ce7f52276dd3d4c0c8f098554b5cad36d48057390629",
+  "prediction": {
+    "status": "insufficient_evidence",
+    "answer": "The available observations do not establish the requested answer.",
+    "claims": [],
+    "citations": [],
+    "requirements_covered": [],
+    "requirements_missing": [
+      "R1"
+    ],
+    "fixed_schedule": [],
+    "schedule_policy": "retrieved_text_only",
+    "plan": {
+      "task": "reasoning",
+      "modality": "transcript",
+      "queries": [
+        "distinctive search terms"
+      ],
+      "requirements": {
+        "R1": "one fact that must be established"
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "kind": "range",
+      "start": 1500.0,
+      "end": 1680.0,
+      "interpretation": "Requested video interval: 1500–1680 seconds. Minute/hour numbers, including ordinal wording, are timestamp boundaries."
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "coverage": {
+      "strategy": "retrieved_stored_observations",
+      "requested_start": 1500.0,
+      "requested_end": 1680.0,
+      "inspection_intervals": [],
+      "omitted_intervals": [
+        [
+          1500.0,
+          1680.0
+        ]
+      ],
+      "sampled_frame_count": 0,
+      "complete_visual_coverage": false,
+      "note": "Only retrieved stored text, OCR or caption observations inside the requested interval were used. No new frames were decoded or visually inspected; indexed sample timestamps do not establish continuous coverage.",
+      "newly_decoded_frame_count": 0
+    },
+    "question_id": "v7_onset_task_graph",
+    "question": "Within the sequence from 25:00 to 28:00, when does the complete title How Task Graphs Actually Run become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 2.0436,
+    "usage": {
+      "model_calls": 1,
+      "input_tokens": 289,
+      "output_tokens": 49
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "distinctive search terms",
+          "queries": [],
+          "source": "transcript",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "hits": [],
+          "empty": true,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false,
+          "citable_evidence_ids": []
+        },
+        "latency_seconds": 0.0009
+      }
+    ],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\"task\":\"reasoning\",\"modality\":\"transcript\",\"queries\":[\"distinctive search terms\"],\"requirements\":[\"one fact that must be established\"],\"event_query\":\"the complete title How Task Graphs Actually Run becomes clearly readable on the full-screen slide\"}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "retrieval-only",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

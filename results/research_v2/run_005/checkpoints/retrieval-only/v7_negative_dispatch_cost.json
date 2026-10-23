@@ -1,0 +1,654 @@
+{
+  "saved_at_utc": "2026-10-22T21:16:27.666589+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "retrieval-only",
+  "question_id": "v7_negative_dispatch_cost",
+  "prediction_sha256": "7cd70d6b94b757f468680766c35bd5a4e94726593979830513eaee98c5f7631b",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Answered response must support every planned requirement",
+    "error": "Answered response must support every planned requirement",
+    "error_type": "invalid_model_response",
+    "fixed_schedule": [],
+    "question_contract": {
+      "basis": "question_text_only",
+      "modality": "visual",
+      "allowed_modalities": [
+        "visual"
+      ],
+      "overview": false
+    },
+    "schedule_policy": "retrieved_text_only",
+    "model_protocol_attempts": 0,
+    "model_protocol_failures": [],
+    "plan": {
+      "task": "lookup",
+      "modality": "visual",
+      "queries": [
+        "How Task Graphs Actually Run diagram",
+        "exact dollar cost assigned to each dispatcher cycle",
+        "price only if it appears on that diagram"
+      ],
+      "requirements": {
+        "R1": "The diagram must be used to determine the exact dollar cost assigned to each dispatcher cycle.",
+        "R2": "The answer must provide a price only if it appears on the diagram.",
+        "R3": "The response must be based solely on the visible content of the diagram.",
+        "R4": "The answer must not invent any information not present in the diagram.",
+        "R5": "The answer must preserve the four-part question structure if present.",
+        "R6": "The answer must not include any external data or assumptions."
+      }
+    },
+    "routing": "research_agent",
+    "temporal_scope": {
+      "start": 0,
+      "end": 2575.0057666666667
+    },
+    "research_features": {
+      "hybrid_retrieval": true,
+      "visual_index": true,
+      "ocr": true,
+      "event_refinement": false
+    },
+    "question_id": "v7_negative_dispatch_cost",
+    "question": "Using only the visible How Task Graphs Actually Run diagram, what exact dollar cost is assigned to each dispatcher cycle? Give a price only if it appears on that diagram.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 20.4539,
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 7105,
+      "output_tokens": 217
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "How Task Graphs Actually Run diagram",
+          "queries": [
+            "exact dollar cost assigned to each dispatcher cycle",
+            "price only if it appears on that diagram"
+          ],
+          "source": "visual",
+          "top_k": 6
+        },
+        "ok": true,
+        "selected_by": "fixed_policy",
+        "result": {
+          "hits": [
+            {
+              "id": "caption:52",
+              "start": 1560.0,
+              "end": 1620.0,
+              "text": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+              "source": "caption",
+              "modalities": [
+                "caption"
+              ],
+              "segment_ids": [
+                "caption_00026"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.015801019335855402,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 1,
+                  "retrieval_score": 12.423730413282287,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 4,
+                  "retrieval_score": 3.1958370819844304,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 5,
+                  "retrieval_score": 2.5345173910418626,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:52",
+                  "start": 1560.0,
+                  "end": 1620.0,
+                  "text": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00026"
+                  ]
+                }
+              ],
+              "selection_score": 1.0,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 1,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "caption:54",
+              "start": 1620.0,
+              "end": 1680.0,
+              "text": "- **Frame 1620.018**: A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flowchart with \"Raw Idea\" leading to \"The Decomposer,\" which then processes \"Task Cards\" through \"The Dispatcher\" to \"Ready\" worker nodes. The diagram includes text describing the roles of \"Intelligence\" and \"The Decomposer\" in breaking down tasks.\n- **Frame 1679.978**: A screenshot of a software interface, likely a development environment, shows a section titled \"Cost strategy: frontier orchestrator, inexpensive workers.\" The interface includes a code editor with a highlighted line of code and a sidebar with navigation options such as \"User,\" \"Features,\" \"Overview,\" and \"Automation.\" The text in the code editor is related to a task graph configuration.",
+              "source": "caption",
+              "modalities": [
+                "caption"
+              ],
+              "segment_ids": [
+                "caption_00027"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.01567174283473458,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 2,
+                  "retrieval_score": 11.002783993428611,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005376344086021505,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 1,
+                  "retrieval_score": 5.695436443465232,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.00546448087431694,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 9,
+                  "retrieval_score": 2.3369186429053475,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004830917874396135,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:54",
+                  "start": 1620.0,
+                  "end": 1680.0,
+                  "text": "- **Frame 1620.018**: A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flowchart with \"Raw Idea\" leading to \"The Decomposer,\" which then processes \"Task Cards\" through \"The Dispatcher\" to \"Ready\" worker nodes. The diagram includes text describing the roles of \"Intelligence\" and \"The Decomposer\" in breaking down tasks.\n- **Frame 1679.978**: A screenshot of a software interface, likely a development environment, shows a section titled \"Cost strategy: frontier orchestrator, inexpensive workers.\" The interface includes a code editor with a highlighted line of code and a sidebar with navigation options such as \"User,\" \"Features,\" \"Overview,\" and \"Automation.\" The text in the code editor is related to a task graph configuration.",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00027"
+                  ]
+                }
+              ],
+              "selection_score": 0.6446820060185703,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 2,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "caption:20",
+              "start": 600.0,
+              "end": 660.0,
+              "text": "- **Frame 600.033:** The screen shows a research task in a software interface. The main content area displays a text box with a research plan. A diagram titled \"Loop\" is visible on the left, illustrating a cycle of Idea, Plan, Check, and Execute. The user is in a \"New session\" state, with the \"Build an actionable information system\" project selected. The interface includes a \"Shift-click a chat to pin\" option and a \"Manual\" button at the bottom right.\n\n- **Frame 659.993:** The interface has shifted to a \"Projects\" tab. The user is now working on the \"Build an actionable information system\" project. The main content area shows a text box with a research plan. The user has added a new criterion: \"We must have at least 5 peer-reviewed sources.\" The interface includes a \"View details\" button and a \"",
+              "source": "caption",
+              "modalities": [
+                "caption"
+              ],
+              "segment_ids": [
+                "caption_00010"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.014394614394614393,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 10,
+                  "retrieval_score": 1.993287942271777,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0047619047619047615,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 5,
+                  "retrieval_score": 3.075750948160578,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 14,
+                  "retrieval_score": 1.4966932889656137,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0045045045045045045,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:20",
+                  "start": 600.0,
+                  "end": 660.0,
+                  "text": "- **Frame 600.033:** The screen shows a research task in a software interface. The main content area displays a text box with a research plan. A diagram titled \"Loop\" is visible on the left, illustrating a cycle of Idea, Plan, Check, and Execute. The user is in a \"New session\" state, with the \"Build an actionable information system\" project selected. The interface includes a \"Shift-click a chat to pin\" option and a \"Manual\" button at the bottom right.\n\n- **Frame 659.993:** The interface has shifted to a \"Projects\" tab. The user is now working on the \"Build an actionable information system\" project. The main content area shows a text box with a research plan. The user has added a new criterion: \"We must have at least 5 peer-reviewed sources.\" The interface includes a \"View details\" button and a \"",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00010"
+                  ]
+                }
+              ],
+              "selection_score": 0.5921453013646878,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 3,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "caption:38",
+              "start": 1140.0,
+              "end": 1200.0,
+              "text": "- **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library",
+              "source": "caption",
+              "modalities": [
+                "caption"
+              ],
+              "segment_ids": [
+                "caption_00019"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.014299088704371962,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 9,
+                  "retrieval_score": 2.061925176295995,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004830917874396135,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 8,
+                  "retrieval_score": 2.3837823210350084,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004901960784313725,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 13,
+                  "retrieval_score": 1.5482306937522636,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0045662100456621,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:38",
+                  "start": 1140.0,
+                  "end": 1200.0,
+                  "text": "- **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00019"
+                  ]
+                }
+              ],
+              "selection_score": 0.588215700537184,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 4,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "caption:14",
+              "start": 420.0,
+              "end": 480.0,
+              "text": "- The screen displays a dark-themed interface for a software application, likely a tool for building actionable knowledge systems.\n- The main content area is titled \"Delegate only bounded specialist work\" and lists various roles such as \"Intake/Extraction worker,\" \"Research worker,\" and \"Librarian worker.\"\n- Each role has a corresponding action that must be done, a task that must not be done, and a description of the work.\n- The interface includes a \"Add more context\" button and a \"1 message\" button.\n- The user is in a \"New session\" state, and the sidebar shows \"Home,\" \"Build an actionable information system,\" and \"Wanderlots Tutorials.\"\n- The text \"GPT-5.6-terra\" is visible in the bottom right corner.",
+              "source": "caption",
+              "modalities": [
+                "caption"
+              ],
+              "segment_ids": [
+                "caption_00007"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.013781666380739977,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 27,
+                  "retrieval_score": 0.5351949824079387,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.0038314176245210726,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "exact dollar cost assigned to each dispatcher cycle",
+                  "rank": 7,
+                  "retrieval_score": 2.4835546822562526,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 7,
+                  "retrieval_score": 2.4835546822562526,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.004975124378109453,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "exact dollar cost assigned to each dispatcher cycle",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:14",
+                  "start": 420.0,
+                  "end": 480.0,
+                  "text": "- The screen displays a dark-themed interface for a software application, likely a tool for building actionable knowledge systems.\n- The main content area is titled \"Delegate only bounded specialist work\" and lists various roles such as \"Intake/Extraction worker,\" \"Research worker,\" and \"Librarian worker.\"\n- Each role has a corresponding action that must be done, a task that must not be done, and a description of the work.\n- The interface includes a \"Add more context\" button and a \"1 message\" button.\n- The user is in a \"New session\" state, and the sidebar shows \"Home,\" \"Build an actionable information system,\" and \"Wanderlots Tutorials.\"\n- The text \"GPT-5.6-terra\" is visible in the bottom right corner.",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00007"
+                  ]
+                }
+              ],
+              "selection_score": 0.566930712321417,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 5,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            },
+            {
+              "id": "caption:36",
+              "start": 1080.0,
+              "end": 1140.0,
+              "text": "- The screen displays a slide titled \"One Workflow, Two Views\" with a workflow diagram.\n- The diagram shows a sequence of tasks, including \"Build & check export,\" \"Review,\" and \"Approve,\" with a dependency graph.\n- The tasks are represented by icons of people, and the workflow is shown with arrows indicating the flow of work.\n- The slide includes a \"Done\" section on the right and a \"Waiting\" section on the left.\n- The text \"One Workflow, Two Views\" is visible at the top of the slide.",
+              "source": "caption",
+              "modalities": [
+                "caption"
+              ],
+              "segment_ids": [
+                "caption_00018"
+              ],
+              "sampled_timestamps": [],
+              "score": 0.010336538461538461,
+              "score_type": "weighted_rrf",
+              "ranking_provenance": [
+                {
+                  "channel": "caption",
+                  "query": "How Task Graphs Actually Run diagram",
+                  "rank": 5,
+                  "retrieval_score": 2.646400942238917,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005128205128205128,
+                  "rrf_k": 60.0
+                },
+                {
+                  "channel": "caption",
+                  "query": "price only if it appears on that diagram",
+                  "rank": 4,
+                  "retrieval_score": 2.646400942238917,
+                  "channel_score_type": "bm25",
+                  "weight": 1.0,
+                  "rrf_contribution": 0.005208333333333333,
+                  "rrf_k": 60.0
+                }
+              ],
+              "matched_queries": [
+                "How Task Graphs Actually Run diagram",
+                "price only if it appears on that diagram"
+              ],
+              "evidence": [
+                {
+                  "id": "caption:36",
+                  "start": 1080.0,
+                  "end": 1140.0,
+                  "text": "- The screen displays a slide titled \"One Workflow, Two Views\" with a workflow diagram.\n- The diagram shows a sequence of tasks, including \"Build & check export,\" \"Review,\" and \"Approve,\" with a dependency graph.\n- The tasks are represented by icons of people, and the workflow is shown with arrows indicating the flow of work.\n- The slide includes a \"Done\" section on the right and a \"Waiting\" section on the left.\n- The text \"One Workflow, Two Views\" is visible at the top of the slide.",
+                  "source": "caption",
+                  "segment_ids": [
+                    "caption_00018"
+                  ]
+                }
+              ],
+              "selection_score": 0.42520990938565134,
+              "temporal_overlap_penalty": 0.0,
+              "rank": 6,
+              "retrieval_method": "per_modality_bm25+optional_dense_visual+weighted_rrf+temporal_diversity"
+            }
+          ],
+          "empty": false,
+          "citable": false,
+          "requested_timestamps": [],
+          "stored_point_tolerance_seconds": null,
+          "dense_visual_enabled": false,
+          "citable_evidence_ids": [
+            "E001",
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006"
+          ]
+        },
+        "latency_seconds": 0.3279
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "caption:52",
+        "start": 1560.0,
+        "end": 1620.0,
+        "text": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00026"
+        ],
+        "modality": "visual",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [],
+        "visual_observation": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+        "evidence_id": "E001"
+      },
+      "E002": {
+        "id": "caption:54",
+        "start": 1620.0,
+        "end": 1680.0,
+        "text": "- **Frame 1620.018**: A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flowchart with \"Raw Idea\" leading to \"The Decomposer,\" which then processes \"Task Cards\" through \"The Dispatcher\" to \"Ready\" worker nodes. The diagram includes text describing the roles of \"Intelligence\" and \"The Decomposer\" in breaking down tasks.\n- **Frame 1679.978**: A screenshot of a software interface, likely a development environment, shows a section titled \"Cost strategy: frontier orchestrator, inexpensive workers.\" The interface includes a code editor with a highlighted line of code and a sidebar with navigation options such as \"User,\" \"Features,\" \"Overview,\" and \"Automation.\" The text in the code editor is related to a task graph configuration.",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00027"
+        ],
+        "modality": "visual",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [],
+        "visual_observation": "- **Frame 1620.018**: A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flowchart with \"Raw Idea\" leading to \"The Decomposer,\" which then processes \"Task Cards\" through \"The Dispatcher\" to \"Ready\" worker nodes. The diagram includes text describing the roles of \"Intelligence\" and \"The Decomposer\" in breaking down tasks.\n- **Frame 1679.978**: A screenshot of a software interface, likely a development environment, shows a section titled \"Cost strategy: frontier orchestrator, inexpensive workers.\" The interface includes a code editor with a highlighted line of code and a sidebar with navigation options such as \"User,\" \"Features,\" \"Overview,\" and \"Automation.\" The text in the code editor is related to a task graph configuration.",
+        "evidence_id": "E002"
+      },
+      "E003": {
+        "id": "caption:20",
+        "start": 600.0,
+        "end": 660.0,
+        "text": "- **Frame 600.033:** The screen shows a research task in a software interface. The main content area displays a text box with a research plan. A diagram titled \"Loop\" is visible on the left, illustrating a cycle of Idea, Plan, Check, and Execute. The user is in a \"New session\" state, with the \"Build an actionable information system\" project selected. The interface includes a \"Shift-click a chat to pin\" option and a \"Manual\" button at the bottom right.\n\n- **Frame 659.993:** The interface has shifted to a \"Projects\" tab. The user is now working on the \"Build an actionable information system\" project. The main content area shows a text box with a research plan. The user has added a new criterion: \"We must have at least 5 peer-reviewed sources.\" The interface includes a \"View details\" button and a \"",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00010"
+        ],
+        "modality": "visual",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [],
+        "visual_observation": "- **Frame 600.033:** The screen shows a research task in a software interface. The main content area displays a text box with a research plan. A diagram titled \"Loop\" is visible on the left, illustrating a cycle of Idea, Plan, Check, and Execute. The user is in a \"New session\" state, with the \"Build an actionable information system\" project selected. The interface includes a \"Shift-click a chat to pin\" option and a \"Manual\" button at the bottom right.\n\n- **Frame 659.993:** The interface has shifted to a \"Projects\" tab. The user is now working on the \"Build an actionable information system\" project. The main content area shows a text box with a research plan. The user has added a new criterion: \"We must have at least 5 peer-reviewed sources.\" The interface includes a \"View details\" button and a \"",
+        "evidence_id": "E003"
+      },
+      "E004": {
+        "id": "caption:38",
+        "start": 1140.0,
+        "end": 1200.0,
+        "text": "- **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00019"
+        ],
+        "modality": "visual",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [],
+        "visual_observation": "- **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library",
+        "evidence_id": "E004"
+      },
+      "E005": {
+        "id": "caption:14",
+        "start": 420.0,
+        "end": 480.0,
+        "text": "- The screen displays a dark-themed interface for a software application, likely a tool for building actionable knowledge systems.\n- The main content area is titled \"Delegate only bounded specialist work\" and lists various roles such as \"Intake/Extraction worker,\" \"Research worker,\" and \"Librarian worker.\"\n- Each role has a corresponding action that must be done, a task that must not be done, and a description of the work.\n- The interface includes a \"Add more context\" button and a \"1 message\" button.\n- The user is in a \"New session\" state, and the sidebar shows \"Home,\" \"Build an actionable information system,\" and \"Wanderlots Tutorials.\"\n- The text \"GPT-5.6-terra\" is visible in the bottom right corner.",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00007"
+        ],
+        "modality": "visual",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [],
+        "visual_observation": "- The screen displays a dark-themed interface for a software application, likely a tool for building actionable knowledge systems.\n- The main content area is titled \"Delegate only bounded specialist work\" and lists various roles such as \"Intake/Extraction worker,\" \"Research worker,\" and \"Librarian worker.\"\n- Each role has a corresponding action that must be done, a task that must not be done, and a description of the work.\n- The interface includes a \"Add more context\" button and a \"1 message\" button.\n- The user is in a \"New session\" state, and the sidebar shows \"Home,\" \"Build an actionable information system,\" and \"Wanderlots Tutorials.\"\n- The text \"GPT-5.6-terra\" is visible in the bottom right corner.",
+        "evidence_id": "E005"
+      },
+      "E006": {
+        "id": "caption:36",
+        "start": 1080.0,
+        "end": 1140.0,
+        "text": "- The screen displays a slide titled \"One Workflow, Two Views\" with a workflow diagram.\n- The diagram shows a sequence of tasks, including \"Build & check export,\" \"Review,\" and \"Approve,\" with a dependency graph.\n- The tasks are represented by icons of people, and the workflow is shown with arrows indicating the flow of work.\n- The slide includes a \"Done\" section on the right and a \"Waiting\" section on the left.\n- The text \"One Workflow, Two Views\" is visible at the top of the slide.",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00018"
+        ],
+        "modality": "visual",
+        "retrieval_only": true,
+        "frame_origin": "precomputed_index",
+        "coverage": "retrieved_stored_observations_only",
+        "transcript_segments": [],
+        "visual_observation": "- The screen displays a slide titled \"One Workflow, Two Views\" with a workflow diagram.\n- The diagram shows a sequence of tasks, including \"Build & check export,\" \"Review,\" and \"Approve,\" with a dependency graph.\n- The tasks are represented by icons of people, and the workflow is shown with arrows indicating the flow of work.\n- The slide includes a \"Done\" section on the right and a \"Waiting\" section on the left.\n- The text \"One Workflow, Two Views\" is visible at the top of the slide.",
+        "evidence_id": "E006"
+      }
+    },
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"lookup\",\n  \"modality\": \"visual\",\n  \"queries\": [\n    \"How Task Graphs Actually Run diagram\",\n    \"exact dollar cost assigned to each dispatcher cycle\",\n    \"price only if it appears on that diagram\"\n  ],\n  \"requirements\": [\n    \"The diagram must be used to determine the exact dollar cost assigned to each dispatcher cycle.\",\n    \"The answer must provide a price only if it appears on the diagram.\",\n    \"The response must be based solely on the visible content of the diagram.\",\n    \"The answer must not invent any information not present in the diagram.\",\n    \"The answer must preserve the four-part question structure if present.\",\n    \"The answer must not include any external data or assumptions.\"\n  ],\n  \"event_query\": [\n    \"dispatcher cycle cost on How Task Graphs Actually Run diagram\"\n  ]\n}"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}\"",
+        "syntax_repair": {
+          "kind": "remove_trailing_quote",
+          "framed_json": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+          "removed_suffix": "\""
+        },
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "finalizer",
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}\"",
+        "syntax_repair": {
+          "kind": "remove_trailing_quote",
+          "framed_json": "{\"action\":\"answer\",\"status\":\"answered\",\"claims\":[]}",
+          "removed_suffix": "\""
+        },
+        "error": "Answered response must support every planned requirement",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "retrieval-only",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "source_path": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\data\\indexes\\user_video_visual\\manifest.json",
+  "files_sha256": {
+    "manifest.json": "483f0a39c8e230bd06bcd6b3de92e46a35cd7465c93a58a5b54aa34f3fc26a32",
+    "embeddings.npz": "33ced165a20276f769d188e9d9eb69ba765f632fdc68fa0c025dcef29d5e56d7"
+  },
+  "reused_existing_complete_sidecar": true,
+  "preparation_seconds_this_invocation": 0.6937601999961771,
+  "lifetime_preparation_usage": {
+    "committed_decoded_frames": 515,
+    "decoded_frames": 515,
+    "clip_image_calls": 515,
+    "ocr_calls": 515,
+    "processing_seconds": 1928.938432200055,
+    "failed_attempts": 3,
+    "failed_processing_seconds": 5846.104986499966,
+    "preparation_sessions": 4
+  },
+  "metadata_snapshot": "assets/visual_index/manifest.json"
+}

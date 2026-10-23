@@ -1,0 +1,64 @@
+{
+  "saved_at_utc": "2026-10-22T20:29:41.743171+00:00",
+  "configuration_sha256": "ce28acb5ff661103b62ea3377d168f270118f274afdd3ef34b0f5cb03d081c74",
+  "mode": "uniform",
+  "question_id": "v7_reason_context_durability",
+  "prediction_sha256": "15e0fb6e2f62a4ca7bc21a22350227ed68a65c484fbc45489c521e0b8389c13f",
+  "prediction": {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Unknown planned modality",
+    "error": "Unknown planned modality",
+    "error_type": "planning_error",
+    "question_contract": {
+      "basis": "question_text_only",
+      "overview": false
+    },
+    "question_id": "v7_reason_context_durability",
+    "question": "Contrast a fresh subagent's lack of inherited history with the later explanation of durable Kanban handoffs. What different context problems do the parent-supplied fields and the database-backed queue address? Cite both explanations.",
+    "mode": "uniform",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 0,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 142.935,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 2089,
+      "output_tokens": 1029
+    },
+    "trace": [],
+    "evidence": {},
+    "decisions": [
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"text\",\n  \"queries\": [\n    \"What is the difference between a fresh subagent and a subagent with inherited history?\",\n    \"How does the Kanban handoff process differ between the initial explanation and the later explanation?\",\n    \"What are the key contexts that the parent-supplied fields address?\",\n    \"What are the key contexts that the database-backed queue addresses?\",\n    \"What are the distinct problems associated with parent-supplied fields?\",\n    \"What are the distinct problems associated with the database-backed queue?\",\n    \"How do the two explanations differ in their approach to handling context problems?\",\n    \"What are the specific differences in the context problems addressed by the two systems?\"\n  ],\n  \"requirements\": [\n    \"The answer must contrast the lack of inherited history in a fresh subagent with the later explanation of durable Kanban handoffs.\",\n    \"The answer must identify and describe the different context problems addressed by parent-supplied fields and the database-backed queue.\",\n    \"The answer must cite both explanations provided in the question.\",\n    \"The answer must preserve the distinction between the two explanations and their respective contexts.\",\n    \"The answer must not invent facts or details not present in the question.\",\n    \"The answer must be concise and focused on the requested contrast and comparison.\"\n  ],\n  \"event_query\": [\n    \"The explanation of durable Kanban handoffs is later in the context than the initial explanation of subagent history.\",\n    \"The parent-supplied fields are used in the initial explanation of subagent history.\",\n    \"The database-backed queue is used in the later explanation of durable Kanban handoffs.\"\n  ]\n}",
+        "error": "Unknown planned modality",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"text\",\n  \"queries\": [\n    \"What is the difference between a fresh subagent and a subagent with inherited history?\",\n    \"How does the Kanban handoff process differ between the initial explanation and the later explanation?\",\n    \"What are the key contexts that the parent-supplied fields address?\",\n    \"What are the key contexts that the database-backed queue addresses?\",\n    \"What are the distinct problems associated with parent-supplied fields?\",\n    \"What are the distinct problems associated with the database-backed queue?\",\n    \"How do the two explanations differ in their approach to handling context problems?\",\n    \"What are the specific differences in the context problems addressed by the two systems?\"\n  ],\n  \"requirements\": [\n    \"The answer must contrast the lack of inherited history in a fresh subagent with the later explanation of durable Kanban handoffs.\",\n    \"The answer must identify and describe the different context problems addressed by parent-supplied fields and the database-backed queue.\",\n    \"The answer must cite both explanations provided in the question.\",\n    \"The answer must preserve the distinction between the two explanations and their respective contexts.\",\n    \"The answer must not invent facts or details not present in the question.\",\n    \"The answer must be concise and focused on the requested contrast and comparison.\"\n  ],\n  \"event_query\": [\n    \"The explanation of durable Kanban handoffs is later in the context than the initial explanation of subagent history.\",\n    \"The parent-supplied fields are used in the initial explanation of subagent history.\",\n    \"The database-backed queue is used in the later explanation of durable Kanban handoffs.\"\n  ]\n}",
+        "error": "Unknown planned modality",
+        "error_type": "validation_error"
+      },
+      {
+        "role": "planner",
+        "raw": "{\n  \"task\": \"reasoning\",\n  \"modality\": \"text\",\n  \"queries\": [\n    \"What is the difference between a fresh subagent and a subagent with inherited history?\",\n    \"How does the Kanban handoff process differ between the initial explanation and the later explanation?\",\n    \"What are the key contexts that the parent-supplied fields address?\",\n    \"What are the key contexts that the database-backed queue addresses?\",\n    \"What are the distinct problems associated with parent-supplied fields?\",\n    \"What are the distinct problems associated with the database-backed queue?\",\n    \"How do the two explanations differ in their approach to handling context problems?\",\n    \"What are the specific differences in the context problems addressed by the two systems?\"\n  ],\n  \"requirements\": [\n    \"The answer must contrast the lack of inherited history in a fresh subagent with the later explanation of durable Kanban handoffs.\",\n    \"The answer must identify and describe the different context problems addressed by parent-supplied fields and the database-backed queue.\",\n    \"The answer must cite both explanations provided in the question.\",\n    \"The answer must preserve the distinction between the two explanations and their respective contexts.\",\n    \"The answer must not invent facts or details not present in the question.\",\n    \"The answer must be concise and focused on the requested contrast and comparison.\"\n  ],\n  \"event_query\": [\n    \"The explanation of durable Kanban handoffs is later in the context than the initial explanation of subagent history.\",\n    \"The parent-supplied fields are used in the initial explanation of subagent history.\",\n    \"The database-backed queue is used in the later explanation of durable Kanban handoffs.\"\n  ]\n}",
+        "error": "Unknown planned modality",
+        "error_type": "validation_error"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v7-evidence-research"
+    },
+    "verification": "Tool arguments, evidence IDs, scope and event timestamps checked. Semantic truth is not independently verified. When present, model_audit uses the answering model.",
+    "decoder_frames_decoded": 0,
+    "frame_budget_unit": "selected_inspection_frames",
+    "study_mode": "uniform",
+    "study_agent_version": "clipscout-v7-evidence-research"
+  }
+}
