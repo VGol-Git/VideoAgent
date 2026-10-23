@@ -1,0 +1,924 @@
+[
+  {
+    "id": "simple24_time_01",
+    "split": "test",
+    "task": "timestamp_search",
+    "category": "localization",
+    "question": "What is the slide title at 19:30?",
+    "answerable": true,
+    "reference_answers": [
+      "Email to Decision Brief.",
+      "The slide is titled Email to Decision Brief."
+    ],
+    "required_terms": [
+      [
+        "email to decision brief"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1169.5,
+        1170.5
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "visual",
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1170.jpg"
+      ],
+      "requested_timestamp": 1170,
+      "interval_kind": "One-second scoring window centered on the requested point; not a scene boundary."
+    }
+  },
+  {
+    "id": "simple24_time_02",
+    "split": "test",
+    "task": "timestamp_search",
+    "category": "localization",
+    "question": "What is the final workflow stage shown at 20:20?",
+    "answerable": true,
+    "reference_answers": [
+      "Connected library.",
+      "The final stage is Connected library."
+    ],
+    "required_terms": [
+      [
+        "connected library"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1219.5,
+        1220.5
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "visual",
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1220.jpg"
+      ],
+      "requested_timestamp": 1220,
+      "interval_kind": "One-second scoring window centered on the requested point; not a scene boundary."
+    }
+  },
+  {
+    "id": "simple24_time_03",
+    "split": "test",
+    "task": "timestamp_search",
+    "category": "localization",
+    "question": "At 26:55, how often does the dispatcher check the queue?",
+    "answerable": true,
+    "reference_answers": [
+      "Every 60 seconds.",
+      "Once a minute."
+    ],
+    "required_terms": [
+      [
+        "60 seconds",
+        "sixty seconds",
+        "60s",
+        "a minute",
+        "one minute",
+        "every minute"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1614.5,
+        1615.5
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "visual",
+      "frame_files": [
+        "data/simple24/reference_frames/boundary_1615.jpg"
+      ],
+      "requested_timestamp": 1615,
+      "interval_kind": "One-second scoring window centered on the requested point; not a scene boundary."
+    }
+  },
+  {
+    "id": "simple24_time_04",
+    "split": "test",
+    "task": "timestamp_search",
+    "category": "localization",
+    "question": "Which three bot roles are named between 17:15 and 17:25?",
+    "answerable": true,
+    "reference_answers": [
+      "The librarian, the orchestrator, and the researcher."
+    ],
+    "required_terms": [
+      [
+        "librarian"
+      ],
+      [
+        "orchestrator"
+      ],
+      [
+        "researcher"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1035.65,
+        1042.81
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "automatic_speech_recognition",
+      "transcript_path": "data/transcripts/user_video.json",
+      "cue_ids": [
+        "T00371",
+        "T00372"
+      ],
+      "requested_scope": [
+        1035,
+        1045
+      ],
+      "audio_listened_to": false
+    }
+  },
+  {
+    "id": "simple24_time_05",
+    "split": "test",
+    "task": "timestamp_search",
+    "category": "localization",
+    "question": "What name is given to the new board between 28:55 and 29:10?",
+    "answerable": true,
+    "reference_answers": [
+      "test",
+      "The new board is named test."
+    ],
+    "required_terms": [
+      [
+        "test"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1735.58,
+        1744.54
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "automatic_speech_recognition",
+      "transcript_path": "data/transcripts/user_video.json",
+      "cue_ids": [
+        "T00574",
+        "T00575"
+      ],
+      "requested_scope": [
+        1735,
+        1750
+      ],
+      "audio_listened_to": false
+    }
+  },
+  {
+    "id": "simple24_time_06",
+    "split": "test",
+    "task": "timestamp_search",
+    "category": "localization",
+    "question": "What word limit is set between 31:50 and 32:20?",
+    "answerable": true,
+    "reference_answers": [
+      "500 words or less.",
+      "At most 500 words."
+    ],
+    "required_terms": [
+      [
+        "500 words",
+        "five hundred words"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1915.91,
+        1918.25
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "automatic_speech_recognition",
+      "transcript_path": "data/transcripts/user_video.json",
+      "cue_ids": [
+        "T00650"
+      ],
+      "requested_scope": [
+        1910,
+        1940
+      ],
+      "audio_listened_to": false
+    }
+  },
+  {
+    "id": "simple24_reason_01",
+    "split": "test",
+    "task": "reasoning",
+    "category": "reasoning",
+    "answerable": true,
+    "question": "In \"Email to Decision Brief,\" what happens if changes are requested?",
+    "reference_answers": [
+      "The process returns from Human review to Brief + draft reply for revision.",
+      "The brief and draft reply are revised, then reviewed again before sending and saving."
+    ],
+    "required_terms": [
+      [
+        "revise",
+        "revised",
+        "revision",
+        "changes"
+      ],
+      [
+        "brief",
+        "draft"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1155,
+        1195
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored reference from a cached frame; not independently human validated.",
+      "audio_used": false,
+      "observed": "The curved Revise arrow goes from Human review back to Brief + draft reply. The Approved arrow alone leads to Send & save.",
+      "inspected_frame_timestamps": [
+        1170
+      ],
+      "uncertainty_note": "Supporting episode interval is approximate and reused from previously inspected frames; not a frame-exact event boundary. Lexical metrics do not establish reasoning correctness.",
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1170.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_reason_02",
+    "split": "test",
+    "task": "reasoning",
+    "category": "reasoning",
+    "answerable": true,
+    "question": "In \"Article to Curated Knowledge,\" can an entry reach the library without approval?",
+    "reference_answers": [
+      "No. Human review must approve the entry before it is added to the Connected library.",
+      "The library receives only an approved entry after human review."
+    ],
+    "required_terms": [
+      [
+        "approval",
+        "approved",
+        "approve"
+      ],
+      [
+        "human",
+        "review"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1197.5,
+        1232.1
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored reference from a cached frame; not independently human validated.",
+      "audio_used": false,
+      "observed": "Human review precedes the Connected library. Its outgoing arrow is labelled Approved; the library caption says Add the approved entry. A Revise arrow returns to Draft an entry.",
+      "inspected_frame_timestamps": [
+        1220
+      ],
+      "uncertainty_note": "Conservative approximate supporting episode reused from existing annotations; not a frame-exact transition label. A lexical hit on approval cannot verify the answer's polarity.",
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1220.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_reason_03",
+    "split": "test",
+    "task": "reasoning",
+    "category": "reasoning",
+    "answerable": true,
+    "question": "In \"Two Loops,\" what happens when evidence is missing?",
+    "reference_answers": [
+      "Source checks return the work to the Researcher for bounded repair to find missing evidence.",
+      "Missing evidence triggers a bounded repair loop back to the Researcher."
+    ],
+    "required_terms": [
+      [
+        "repair"
+      ],
+      [
+        "researcher",
+        "research"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1240,
+        1260
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored reference from cached frames; not independently human validated.",
+      "audio_used": false,
+      "observed": "The blue return arrow leads from Source checks back to Researcher, with the caption Missing evidence -> bounded repair.",
+      "inspected_frame_timestamps": [
+        1240,
+        1250,
+        1260
+      ],
+      "uncertainty_note": "Interval covers inspected supporting samples only; full slide episode boundaries are not claimed. Lexical metrics are proxies.",
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1240.jpg",
+        "data/simple24/reference_frames/refine_1250.jpg",
+        "data/simple24/reference_frames/refine_1260.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_reason_04",
+    "split": "test",
+    "task": "reasoning",
+    "category": "reasoning",
+    "answerable": true,
+    "question": "In \"Two Loops,\" where does a draft go for revision?",
+    "reference_answers": [
+      "The draft goes back from the human reviewer to the Librarian for revision.",
+      "It returns to the Librarian."
+    ],
+    "required_terms": [
+      [
+        "librarian"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1240,
+        1260
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored reference from cached frames; not independently human validated.",
+      "audio_used": false,
+      "observed": "In the green curation loop, the return arrow goes from You / Review entry back to Librarian. Its caption says Revise -> back to the Librarian.",
+      "inspected_frame_timestamps": [
+        1240,
+        1250,
+        1260
+      ],
+      "uncertainty_note": "Interval covers inspected supporting samples only; no frame-exact transition is claimed. Lexical metrics are proxies.",
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1240.jpg",
+        "data/simple24/reference_frames/refine_1250.jpg",
+        "data/simple24/reference_frames/refine_1260.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_reason_05",
+    "split": "test",
+    "task": "reasoning",
+    "category": "reasoning",
+    "answerable": true,
+    "question": "In \"A Goal Within a Larger Graph,\" what happens when checks fail?",
+    "reference_answers": [
+      "Failed checks send the work back to the Implementer for repair within budget. If blocked or the budget is reached, it returns to the Orchestrator.",
+      "The Implementer repairs the problem within the budget and checks it again; blocked work or an exhausted budget is escalated to the Orchestrator."
+    ],
+    "required_terms": [
+      [
+        "repair",
+        "fix"
+      ],
+      [
+        "implementer"
+      ],
+      [
+        "budget"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1280,
+        1290
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored reference from cached frames; not independently human validated.",
+      "audio_used": false,
+      "observed": "The orange failure arrow returns from Checks to Implementer, captioned Fail -> repair within budget. A dashed path says Blocked / budget reached -> Orchestrator. At 1290 the subtitle states Check fails: a link is missing.",
+      "inspected_frame_timestamps": [
+        1280,
+        1290
+      ],
+      "uncertainty_note": "Interval covers inspected supporting samples only; full episode boundaries are not claimed. Lexical metrics are proxies.",
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1280.jpg",
+        "data/simple24/reference_frames/refine_1290.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_reason_06",
+    "split": "test",
+    "task": "reasoning",
+    "category": "reasoning",
+    "answerable": true,
+    "question": "In \"How Task Graphs Actually Run,\" why does a blocked task wait?",
+    "reference_answers": [
+      "Its dependencies are not yet satisfied. The dispatcher checks dependencies and sends only unblocked tasks to the workers.",
+      "A blocked task must wait for prerequisite work before the dispatcher can mark it ready for a worker."
+    ],
+    "required_terms": [
+      [
+        "dependencies",
+        "dependency",
+        "prerequisite",
+        "prerequisites"
+      ],
+      [
+        "unblocked",
+        "ready",
+        "satisfied"
+      ]
+    ],
+    "evidence_intervals": [
+      [
+        1612.5,
+        1622.5
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored reference from a cached frame; not independently human validated.",
+      "audio_used": false,
+      "observed": "The dispatcher caption says it checks the queue every 60 seconds, verifies dependencies, and surfaces unblocked tasks to the active workforce. A Ready column appears before Worker Nodes.",
+      "inspected_frame_timestamps": [
+        1615
+      ],
+      "uncertainty_note": "Conservative approximate support interval reused from existing annotations; not a frame-exact transition label. Dependency waiting is inferred directly from the dispatch rule.",
+      "frame_files": [
+        "data/simple24/reference_frames/boundary_1615.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_onset_01",
+    "split": "test",
+    "task": "onset",
+    "category": "temporal",
+    "question": "When is Kanban first mentioned?",
+    "answerable": true,
+    "reference_answers": [
+      "Around 00:47-00:52.",
+      "Around 47 to 52 seconds.",
+      "About 00:50."
+    ],
+    "required_terms": [],
+    "evidence_intervals": [
+      [
+        47.28,
+        52.48
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "automatic_speech_recognition",
+      "transcript_path": "data/transcripts/user_video.json",
+      "cue_ids": [
+        "T00012"
+      ],
+      "reference_bracket": [
+        47.28,
+        52.48
+      ],
+      "reference_kind": "first_matching_ASR_cue",
+      "annotation_resolution_seconds": 5.2,
+      "audio_listened_to": false,
+      "timing_note": "First matching cue in the available ASR; not a verified word-exact audio onset."
+    }
+  },
+  {
+    "id": "simple24_onset_02",
+    "split": "test",
+    "task": "onset",
+    "category": "temporal",
+    "question": "When is SQLite first mentioned?",
+    "answerable": true,
+    "reference_answers": [
+      "Around 23:49-23:52.",
+      "Around 1429 to 1432 seconds.",
+      "About 23:50."
+    ],
+    "required_terms": [],
+    "evidence_intervals": [
+      [
+        1429.28,
+        1432.24
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "automatic_speech_recognition",
+      "transcript_path": "data/transcripts/user_video.json",
+      "cue_ids": [
+        "T00472"
+      ],
+      "reference_bracket": [
+        1429.28,
+        1432.24
+      ],
+      "reference_kind": "first_matching_ASR_cue",
+      "annotation_resolution_seconds": 2.96,
+      "audio_listened_to": false,
+      "timing_note": "First matching cue in the available ASR; not a verified word-exact audio onset."
+    }
+  },
+  {
+    "id": "simple24_onset_03",
+    "split": "test",
+    "task": "onset",
+    "category": "temporal",
+    "question": "When does the presenter first require five peer-reviewed sources?",
+    "answerable": true,
+    "reference_answers": [
+      "Around 10:12-10:17.",
+      "Around 613 to 617 seconds.",
+      "About 10:13."
+    ],
+    "required_terms": [],
+    "evidence_intervals": [
+      [
+        612.71,
+        617.19
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "automatic_speech_recognition",
+      "transcript_path": "data/transcripts/user_video.json",
+      "cue_ids": [
+        "T00204"
+      ],
+      "reference_bracket": [
+        612.71,
+        617.19
+      ],
+      "reference_kind": "first_requirement_ASR_cue",
+      "annotation_resolution_seconds": 4.48,
+      "audio_listened_to": false,
+      "timing_note": "First requirement statement identified in the available ASR; cue timing, not word alignment."
+    }
+  },
+  {
+    "id": "simple24_onset_04",
+    "split": "test",
+    "task": "onset",
+    "category": "temporal",
+    "question": "After 19:00, when does the “Email to Decision Brief” slide appear?",
+    "answerable": true,
+    "reference_answers": [
+      "Around 19:10-19:15.",
+      "Around 1150 to 1155 seconds.",
+      "About 19:13."
+    ],
+    "required_terms": [],
+    "evidence_intervals": [
+      [
+        1150.0489,
+        1155.0539
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "visual",
+      "frame_files": [
+        "data/simple24/reference_frames/boundary_1150.jpg",
+        "data/simple24/reference_frames/boundary_1155.jpg"
+      ],
+      "reference_bracket": [
+        1150.0489,
+        1155.0539
+      ],
+      "reference_kind": "sampled_last_absent_first_present",
+      "annotation_resolution_seconds": 5.005,
+      "requested_scope": [
+        1140,
+        2575.0057666666667
+      ],
+      "timing_note": "One Workflow, Two Views at the earlier sample; Email at the later sample. Local approximate transition; intervening frames not continuously reviewed."
+    }
+  },
+  {
+    "id": "simple24_onset_05",
+    "split": "test",
+    "task": "onset",
+    "category": "temporal",
+    "question": "After 20:00, when does the “Two Loops” slide appear?",
+    "answerable": true,
+    "reference_answers": [
+      "Around 20:35-20:40.",
+      "Around 1235 to 1240 seconds.",
+      "About 20:38."
+    ],
+    "required_terms": [],
+    "evidence_intervals": [
+      [
+        1235.0338,
+        1240.0388
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "visual",
+      "frame_files": [
+        "data/simple24/reference_frames/boundary_1235.jpg",
+        "data/simple24/reference_frames/boundary_1240.jpg"
+      ],
+      "reference_bracket": [
+        1235.0338,
+        1240.0388
+      ],
+      "reference_kind": "sampled_last_absent_first_present",
+      "annotation_resolution_seconds": 5.005,
+      "requested_scope": [
+        1200,
+        2575.0057666666667
+      ],
+      "timing_note": "Article slide is fading at the earlier sample; Two Loops is readable at the later sample. Local approximate transition, not frame-exact onset."
+    }
+  },
+  {
+    "id": "simple24_onset_06",
+    "split": "test",
+    "task": "onset",
+    "category": "temporal",
+    "question": "After 25:00, when does “How Task Graphs Actually Run” appear?",
+    "answerable": true,
+    "reference_answers": [
+      "Around 26:50-26:55.",
+      "Around 1610 to 1615 seconds.",
+      "About 26:53."
+    ],
+    "required_terms": [],
+    "evidence_intervals": [
+      [
+        1610.0417666666667,
+        1615.0467666666668
+      ]
+    ],
+    "annotation_notes": {
+      "reviewer": "assistant_source_review",
+      "reference_status": "Diagnostic reference; not independently human validated.",
+      "semantic_scoring_note": "Lexical and interval scores are proxies, not semantic correctness.",
+      "source": "visual",
+      "frame_files": [
+        "data/simple24/reference_frames/boundary_1610.jpg",
+        "data/simple24/reference_frames/boundary_1615.jpg"
+      ],
+      "reference_bracket": [
+        1610.0417666666667,
+        1615.0467666666668
+      ],
+      "reference_kind": "sampled_last_absent_first_present",
+      "annotation_resolution_seconds": 5.005,
+      "requested_scope": [
+        1500,
+        2575.0057666666667
+      ],
+      "timing_note": "Documentation at the earlier sample; named diagram at the later sample. Local approximate transition, not frame-exact onset."
+    }
+  },
+  {
+    "id": "simple24_negative_01",
+    "split": "test",
+    "task": "unanswerable",
+    "category": "unanswerable",
+    "answerable": false,
+    "question": "On the diagram at 19:30, what is the recipient's email address?",
+    "reference_answers": [],
+    "required_terms": [],
+    "evidence_intervals": [],
+    "context_intervals": [
+      [
+        1169,
+        1171
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored scoped negative reference; not independently human validated.",
+      "audio_used": false,
+      "scope": "Visible Email to Decision Brief diagram at approximately 1170 seconds only; not a claim about absence from the entire video.",
+      "observed": "The slide shows workflow stages, captions and envelope icons, but no recipient email address.",
+      "expected_behavior": "State that the diagram does not provide the recipient's email address; do not invent one.",
+      "inspected_frame_timestamps": [
+        1170
+      ],
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1170.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_negative_02",
+    "split": "test",
+    "task": "unanswerable",
+    "category": "unanswerable",
+    "answerable": false,
+    "question": "On the diagram at 20:20, which journal published the article?",
+    "reference_answers": [],
+    "required_terms": [],
+    "evidence_intervals": [],
+    "context_intervals": [
+      [
+        1219,
+        1221
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored scoped negative reference; not independently human validated.",
+      "audio_used": false,
+      "scope": "Visible Article to Curated Knowledge diagram at approximately 1220 seconds only; not a claim about absence from the entire video.",
+      "observed": "The Article + notes icon has no journal name or identifiable publication metadata.",
+      "expected_behavior": "State that the diagram does not name the journal; do not infer it from the generic article icon.",
+      "inspected_frame_timestamps": [
+        1220
+      ],
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1220.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_negative_03",
+    "split": "test",
+    "task": "unanswerable",
+    "category": "unanswerable",
+    "answerable": false,
+    "question": "On the diagram at 20:20, how many minutes does human review take?",
+    "reference_answers": [],
+    "required_terms": [],
+    "evidence_intervals": [],
+    "context_intervals": [
+      [
+        1219,
+        1221
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored scoped negative reference; not independently human validated.",
+      "audio_used": false,
+      "scope": "Visible Article to Curated Knowledge diagram at approximately 1220 seconds only; not a claim about absence from the entire video.",
+      "observed": "Human review is labelled Review placement + claims. No elapsed time, deadline, or duration in minutes is given.",
+      "expected_behavior": "State that no review duration is specified on the diagram.",
+      "inspected_frame_timestamps": [
+        1220
+      ],
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1220.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_negative_04",
+    "split": "test",
+    "task": "unanswerable",
+    "category": "unanswerable",
+    "answerable": false,
+    "question": "On the diagram at 20:50, what is the library's total document count?",
+    "reference_answers": [],
+    "required_terms": [],
+    "evidence_intervals": [],
+    "context_intervals": [
+      [
+        1249,
+        1251
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored scoped negative reference; not independently human validated.",
+      "audio_used": false,
+      "scope": "Visible Two Loops, One Knowledge Workflow diagram at approximately 1250 seconds only; not a claim about absence from the entire video.",
+      "observed": "The Library is represented by an illustrative bookshelf and network nodes. No numeric document total is displayed.",
+      "expected_behavior": "State that the total document count is not given; illustrated books are not a document-count measurement.",
+      "inspected_frame_timestamps": [
+        1250
+      ],
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1250.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_negative_05",
+    "split": "test",
+    "task": "unanswerable",
+    "category": "unanswerable",
+    "answerable": false,
+    "question": "On the diagram at 21:20, what exact token budget is set for repairs?",
+    "reference_answers": [],
+    "required_terms": [],
+    "evidence_intervals": [],
+    "context_intervals": [
+      [
+        1279,
+        1281
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored scoped negative reference; not independently human validated.",
+      "audio_used": false,
+      "scope": "Visible A Goal Within a Larger Graph diagram at approximately 1280 seconds only; not a claim about absence from the entire video.",
+      "observed": "The slide says repair within budget and budget reached, but states neither a numeric budget nor token units.",
+      "expected_behavior": "State that the diagram does not specify an exact token budget.",
+      "inspected_frame_timestamps": [
+        1280
+      ],
+      "frame_files": [
+        "data/simple24/reference_frames/refine_1280.jpg"
+      ]
+    }
+  },
+  {
+    "id": "simple24_negative_06",
+    "split": "test",
+    "task": "unanswerable",
+    "category": "unanswerable",
+    "answerable": false,
+    "question": "On the diagram at 26:55, which exact LLM model powers the decomposer?",
+    "reference_answers": [],
+    "required_terms": [],
+    "evidence_intervals": [],
+    "context_intervals": [
+      [
+        1614,
+        1616
+      ]
+    ],
+    "annotation_notes": {
+      "source": "visual",
+      "reviewer": "assistant_visual_review",
+      "review_status": "Assistant-authored scoped negative reference; not independently human validated.",
+      "audio_used": false,
+      "scope": "Visible How Task Graphs Actually Run diagram at approximately 1615 seconds only; not a claim about absence from the entire video.",
+      "observed": "The decomposer is labelled Intelligence / The Decomposer and described as employing frontier-level judgment. No exact LLM model name is shown.",
+      "expected_behavior": "State that the diagram does not identify the exact model; frontier-level is a capability description, not a model name.",
+      "inspected_frame_timestamps": [
+        1615
+      ],
+      "frame_files": [
+        "data/simple24/reference_frames/boundary_1615.jpg"
+      ]
+    }
+  }
+]

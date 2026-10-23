@@ -1,0 +1,417 @@
+{
+  "status": "answered",
+  "answer": "Selected observations for 20:00–21:00 (partial coverage):\nFrom 20:00 to 20:15, the screen displays a diagram titled 'Article to Curated Knowledge,' showing a four-step process: 'Article + notes,' 'Find the fit,' 'Draft an entry,' and 'Connected library,' with a 'Revise' step after 'Human review.' The text 'wanderloots' is visible at the bottom left. From 20:15 to 20:30, the same diagram is shown with an additional 'Revise' step, and the 'Human review' stage is highlighted. From 20:30 to 20:45, the slide changes to 'Two Loops, One Knowledge Workflow,' illustrating a research loop and a curation loop with the 'Evidence gap returns to the Researcher' at 20:45. From 20:45 to 21:00, the slide continues to show the 'Two Loops, One Knowledge Workflow' with three stages: Research Loop, Human Handoff, and Curation Loop, depicting a workflow with cartoon characters and arrows.",
+  "citations": [
+    {
+      "evidence_id": "E001",
+      "start": 1200.0,
+      "end": 1215.0
+    },
+    {
+      "evidence_id": "E002",
+      "start": 1215.0,
+      "end": 1230.0
+    },
+    {
+      "evidence_id": "E003",
+      "start": 1230.0,
+      "end": 1245.0
+    },
+    {
+      "evidence_id": "E004",
+      "start": 1245.0,
+      "end": 1260.0
+    }
+  ],
+  "routing": "temporal_scope",
+  "temporal_scope": {
+    "kind": "range",
+    "start": 1200.0,
+    "end": 1260.0,
+    "interpretation": "Requested video interval: 1200–1260 seconds. Minute/hour numbers, including ordinal wording, are timestamp boundaries."
+  },
+  "coverage": {
+    "strategy": "distributed_windows",
+    "requested_start": 1200.0,
+    "requested_end": 1260.0,
+    "inspection_intervals": [
+      [
+        1200.0,
+        1215.0
+      ],
+      [
+        1215.0,
+        1230.0
+      ],
+      [
+        1230.0,
+        1245.0
+      ],
+      [
+        1245.0,
+        1260.0
+      ]
+    ],
+    "omitted_intervals": [],
+    "sampled_frame_count": 16,
+    "complete_visual_coverage": false,
+    "note": "Requested interval: 20:00–21:00. Selected observations from 4 inspected windows and 16 sampled frames; this is not continuous viewing or an exhaustive summary."
+  },
+  "question_id": "",
+  "question": "What is displayed on the screen from the 20th to the 21st minute",
+  "mode": "adaptive",
+  "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+  "tool_calls": 4,
+  "frames_used": 16,
+  "unique_sampled_timestamps": [
+    1201.9007000000001,
+    1205.6377666666665,
+    1209.3748333333333,
+    1213.1119,
+    1216.8823333333335,
+    1220.6194,
+    1224.3898333333334,
+    1228.1269,
+    1231.8973333333333,
+    1235.6344000000001,
+    1239.3714666666667,
+    1243.1085333333333,
+    1246.8789666666667,
+    1250.6160333333335,
+    1254.3864666666668,
+    1258.1235333333334
+  ],
+  "latency_seconds": 87.3561,
+  "usage": {
+    "model_calls": 6,
+    "input_tokens": 8573,
+    "output_tokens": 981
+  },
+  "trace": [
+    {
+      "call": 1,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 1200.0,
+        "end": 1215.0,
+        "question": "What is displayed on the screen from the 20th to the 21st minute"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 1200.0,
+        "end": 1215.0,
+        "transcript": "[1200.57–1205.77] YouTube video or some other resource and you've taken some notes on it. You can drop in the raw\n[1205.77–1210.33] source and your notes and you can send it off to the librarian. The librarian agent can try and find",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00413",
+            "start": 1200.57,
+            "end": 1205.77
+          },
+          {
+            "id": "T00414",
+            "start": 1205.77,
+            "end": 1210.33
+          }
+        ],
+        "visual_observation": "The screen displays a diagram titled \"Article to Curated Knowledge,\" illustrating a four-step process. The process begins with \"Article + notes\" and progresses through \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and ends with \"Connected library.\" The diagram shows a flow from left to right, with an arrow indicating a \"Revise\" step after the \"Human review\" stage. The text \"wanderloots\" is visible at the bottom left.",
+        "sampled_timestamps": [
+          1201.9007000000001,
+          1205.6377666666665,
+          1209.3748333333333,
+          1213.1119
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E001"
+      },
+      "latency_seconds": 26.7891
+    },
+    {
+      "call": 2,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 1215.0,
+        "end": 1230.0,
+        "question": "What is displayed on the screen from the 20th to the 21st minute"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 1215.0,
+        "end": 1230.0,
+        "transcript": "[1215.45–1221.29] and draft an entry for you for your review to see is this good enough for it to make it into your\n[1221.29–1226.25] knowledge base, into your curated library. If it's not good enough, you can suggest revisions",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00416",
+            "start": 1215.45,
+            "end": 1221.29
+          },
+          {
+            "id": "T00417",
+            "start": 1221.29,
+            "end": 1226.25
+          }
+        ],
+        "visual_observation": "The screen displays a flowchart titled \"Article to Curated Knowledge.\" It shows a process with five stages: \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\" The process is illustrated with icons and arrows, and the text \"Revise\" is shown below the \"Human review\" stage. The logo \"wanderloots\" is visible at the bottom left.",
+        "sampled_timestamps": [
+          1216.8823333333335,
+          1220.6194,
+          1224.3898333333334,
+          1228.1269
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E002"
+      },
+      "latency_seconds": 6.0732
+    },
+    {
+      "call": 3,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 1230.0,
+        "end": 1245.0,
+        "question": "What is displayed on the screen from the 20th to the 21st minute"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 1230.0,
+        "end": 1245.0,
+        "transcript": "[1230.73–1235.13] approve it, the librarian can then file it into the library and connect it to the rest of your research.\n[1235.13–1239.21] And as a more complex system, we can actually start linking these loops together. For example,\n[1239.21–1243.77] you can propose a question or a topic to the researcher. The researcher can go through a research",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00419",
+            "start": 1230.73,
+            "end": 1235.13
+          },
+          {
+            "id": "T00420",
+            "start": 1235.13,
+            "end": 1239.21
+          },
+          {
+            "id": "T00421",
+            "start": 1239.21,
+            "end": 1243.77
+          }
+        ],
+        "visual_observation": "At 1231.897 seconds, the screen displays a slide titled \"Article to Curated Knowledge\" with a flowchart illustrating the process of transforming an article into curated knowledge. The process includes steps like \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\" At 1235.634 seconds, the slide changes to \"Two Loops, One Knowledge Workflow,\" showing a diagram of a research loop and a curation loop. At 1239.371 seconds, the diagram shows the \"Research Loop\" and \"Curation Loop\" with the \"Evidence gap returns to the Researcher\" at 1243.109 seconds.",
+        "sampled_timestamps": [
+          1231.8973333333333,
+          1235.6344000000001,
+          1239.3714666666667,
+          1243.1085333333333
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E003"
+      },
+      "latency_seconds": 9.5942
+    },
+    {
+      "call": 4,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 1245.0,
+        "end": 1260.0,
+        "question": "What is displayed on the screen from the 20th to the 21st minute"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 1245.0,
+        "end": 1260.0,
+        "transcript": "[1248.49–1253.53] and then when it's done all of its research, it can pass it off to you as the human to validate\n[1253.53–1258.25] that the information is good enough. You can add your own notes, connect it to that site of source,",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00423",
+            "start": 1248.49,
+            "end": 1253.53
+          },
+          {
+            "id": "T00424",
+            "start": 1253.53,
+            "end": 1258.25
+          }
+        ],
+        "visual_observation": "From 1245.00 to 1260.00 seconds, the screen displays a slide titled \"Two Loops, One Knowledge Workflow.\" The slide illustrates a process with three main stages: the Research Loop, the Human Handoff, and the Curation Loop. The Research Loop shows a researcher finding sources and checking them. The Human Handoff involves a librarian verifying sources and finding the fit. The Curation Loop shows a librarian reviewing a draft and approving it. The slide is a diagram with cartoon characters and arrows showing the workflow.",
+        "sampled_timestamps": [
+          1246.8789666666667,
+          1250.6160333333335,
+          1254.3864666666668,
+          1258.1235333333334
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E004"
+      },
+      "latency_seconds": 7.8713
+    }
+  ],
+  "evidence": {
+    "E001": {
+      "start": 1200.0,
+      "end": 1215.0,
+      "transcript": "[1200.57–1205.77] YouTube video or some other resource and you've taken some notes on it. You can drop in the raw\n[1205.77–1210.33] source and your notes and you can send it off to the librarian. The librarian agent can try and find",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00413",
+          "start": 1200.57,
+          "end": 1205.77
+        },
+        {
+          "id": "T00414",
+          "start": 1205.77,
+          "end": 1210.33
+        }
+      ],
+      "visual_observation": "The screen displays a diagram titled \"Article to Curated Knowledge,\" illustrating a four-step process. The process begins with \"Article + notes\" and progresses through \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and ends with \"Connected library.\" The diagram shows a flow from left to right, with an arrow indicating a \"Revise\" step after the \"Human review\" stage. The text \"wanderloots\" is visible at the bottom left.",
+      "sampled_timestamps": [
+        1201.9007000000001,
+        1205.6377666666665,
+        1209.3748333333333,
+        1213.1119
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E001"
+    },
+    "E002": {
+      "start": 1215.0,
+      "end": 1230.0,
+      "transcript": "[1215.45–1221.29] and draft an entry for you for your review to see is this good enough for it to make it into your\n[1221.29–1226.25] knowledge base, into your curated library. If it's not good enough, you can suggest revisions",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00416",
+          "start": 1215.45,
+          "end": 1221.29
+        },
+        {
+          "id": "T00417",
+          "start": 1221.29,
+          "end": 1226.25
+        }
+      ],
+      "visual_observation": "The screen displays a flowchart titled \"Article to Curated Knowledge.\" It shows a process with five stages: \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\" The process is illustrated with icons and arrows, and the text \"Revise\" is shown below the \"Human review\" stage. The logo \"wanderloots\" is visible at the bottom left.",
+      "sampled_timestamps": [
+        1216.8823333333335,
+        1220.6194,
+        1224.3898333333334,
+        1228.1269
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E002"
+    },
+    "E003": {
+      "start": 1230.0,
+      "end": 1245.0,
+      "transcript": "[1230.73–1235.13] approve it, the librarian can then file it into the library and connect it to the rest of your research.\n[1235.13–1239.21] And as a more complex system, we can actually start linking these loops together. For example,\n[1239.21–1243.77] you can propose a question or a topic to the researcher. The researcher can go through a research",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00419",
+          "start": 1230.73,
+          "end": 1235.13
+        },
+        {
+          "id": "T00420",
+          "start": 1235.13,
+          "end": 1239.21
+        },
+        {
+          "id": "T00421",
+          "start": 1239.21,
+          "end": 1243.77
+        }
+      ],
+      "visual_observation": "At 1231.897 seconds, the screen displays a slide titled \"Article to Curated Knowledge\" with a flowchart illustrating the process of transforming an article into curated knowledge. The process includes steps like \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\" At 1235.634 seconds, the slide changes to \"Two Loops, One Knowledge Workflow,\" showing a diagram of a research loop and a curation loop. At 1239.371 seconds, the diagram shows the \"Research Loop\" and \"Curation Loop\" with the \"Evidence gap returns to the Researcher\" at 1243.109 seconds.",
+      "sampled_timestamps": [
+        1231.8973333333333,
+        1235.6344000000001,
+        1239.3714666666667,
+        1243.1085333333333
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E003"
+    },
+    "E004": {
+      "start": 1245.0,
+      "end": 1260.0,
+      "transcript": "[1248.49–1253.53] and then when it's done all of its research, it can pass it off to you as the human to validate\n[1253.53–1258.25] that the information is good enough. You can add your own notes, connect it to that site of source,",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00423",
+          "start": 1248.49,
+          "end": 1253.53
+        },
+        {
+          "id": "T00424",
+          "start": 1253.53,
+          "end": 1258.25
+        }
+      ],
+      "visual_observation": "From 1245.00 to 1260.00 seconds, the screen displays a slide titled \"Two Loops, One Knowledge Workflow.\" The slide illustrates a process with three main stages: the Research Loop, the Human Handoff, and the Curation Loop. The Research Loop shows a researcher finding sources and checking them. The Human Handoff involves a librarian verifying sources and finding the fit. The Curation Loop shows a librarian reviewing a draft and approving it. The slide is a diagram with cartoon characters and arrows showing the workflow.",
+      "sampled_timestamps": [
+        1246.8789666666667,
+        1250.6160333333335,
+        1254.3864666666668,
+        1258.1235333333334
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E004"
+    }
+  },
+  "decisions": [
+    {
+      "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"From 20:00 to 20:15, the screen displays a diagram titled 'Article to Curated Knowledge,' showing a four-step process: 'Article + notes,' 'Find the fit,' 'Draft an entry,' and 'Connected library,' with a 'Revise' step after 'Human review.' The text 'wanderloots' is visible at the bottom left. From 20:15 to 20:30, the same diagram is shown with an additional 'Revise' step, and the 'Human review' stage is highlighted. From 20:30 to 20:45, the slide changes to 'Two Loops, One Knowledge Workflow,' illustrating a research loop and a curation loop with the 'Evidence gap returns to the Researcher' at 20:45. From 20:45 to 21:00, the slide continues to show the 'Two Loops, One Knowledge Workflow' with three stages: Research Loop, Human Handoff, and Curation Loop, depicting a workflow with cartoon characters and arrows.\"}",
+      "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+      "error_type": "invalid_model_response"
+    },
+    {
+      "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"From 20:00 to 20:15, the screen displays a diagram titled 'Article to Curated Knowledge,' showing a four-step process: 'Article + notes,' 'Find the fit,' 'Draft an entry,' and 'Connected library,' with a 'Revise' step after 'Human review.' The text 'wanderloots' is visible at the bottom left. From 20:15 to 20:30, the same diagram is shown with an additional 'Revise' step, and the 'Human review' stage is highlighted. From 20:30 to 20:45, the slide changes to 'Two Loops, One Knowledge Workflow,' illustrating a research loop and a curation loop with the 'Evidence gap returns to the Researcher' at 20:45. From 20:45 to 21:00, the slide continues to show the 'Two Loops, One Knowledge Workflow' with three stages: Research Loop, Human Handoff, and Curation Loop, depicting a workflow with cartoon characters and arrows.\",\"citations\":[{\"evidence_id\":\"E001\"},{\"evidence_id\":\"E002\"},{\"evidence_id\":\"E003\"},{\"evidence_id\":\"E004\"}]}"
+    }
+  ],
+  "provenance": {
+    "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+    "prompt_version": "clipscout-v6-temporal-scopes"
+  },
+  "verification": "citation IDs, evidence bounds and requested temporal constraints checked; explicit moments require target frames; semantic entailment NOT automatically verified",
+  "run_id": "20261022T060835Z_4c6e5cc7c010"
+}

@@ -1,0 +1,47 @@
+{
+  "checked_utc": "2026-10-22T06:14:56.017762+00:00",
+  "cases": [
+    {
+      "case": "20_to_21",
+      "question": "What is displayed on the screen from the 20th to the 21st minute",
+      "run_id": "20261022T060835Z_4c6e5cc7c010",
+      "status": "answered",
+      "response_sha256": "56a2fbb72cbc9c901a79dc8cc5dd8aa773d76a2cba8986d701a39b87b34efa92",
+      "automated_checks_passed": true,
+      "errors": []
+    },
+    {
+      "case": "after_15",
+      "question": "What happens in the video after 15 minutes?",
+      "run_id": "20261022T061146Z_37eda741a6e3",
+      "status": "answered",
+      "response_sha256": "4a3a73b69c140c0223718a360e5ead25d4aeee014f3fe5f726fc1adb5f647221",
+      "automated_checks_passed": true,
+      "errors": []
+    },
+    {
+      "case": "15_to_20",
+      "question": "What happens in the video from the 15th to the 20th minute?",
+      "run_id": "20261022T061451Z_83ef7a4af8ee",
+      "status": "answered",
+      "response_sha256": "59fe5b97029194dab12af7a25d6068999e95470fa891155d32ec53e632093ce6",
+      "automated_checks_passed": true,
+      "errors": []
+    }
+  ],
+  "source_sha256": {
+    "agent.py": "2ed6f15467d38e2210a4b613f1c8b6355a744520f3192ad8906c9d4e93ab60a7",
+    "backends.py": "f1129ccb04733318400bc0dee100a767914d0e743aa0c0110d12f0899f0329b1",
+    "cli.py": "5e644fbe57e4f5e8ef5d713d655406f511e930f985112f8dd14b1deae314ee6d",
+    "evaluation.py": "73c27877e4ee42c3b935c03e831804c1eb015927b40f3d3222fbcff7894ad2eb",
+    "index.py": "955220c04d1c332806111cb7a07c81e1d53a0c1ca3d61ae285289be3df449e58",
+    "media.py": "6daa7a748555afa3e8cd4367d96787de823f01b5dcadf8ebd80bba26281e7e9f",
+    "server.py": "35044c984f47f7eece9f494d7e4c559192a43564c08e238e5ae1d14b93f151a0",
+    "temporal.py": "308e8ee71ee877f2c9ffc861cb45933ec625f7c50d65b4c519817a20fad65a3c",
+    "transcribe.py": "4fc5de271f44a00d7eaef32cdd398022dae250bb59979fd516db66a3fc41172e",
+    "__init__.py": "0fea446cab00641a910e7be4f11c790955039a633ae4f1303aac1c8fe0d61c8a",
+    "__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a"
+  },
+  "scope": "Only three user questions; no benchmark rerun.",
+  "semantic_check": "Compare answers with saved actual sampled frames; structural checks do not grade factual accuracy."
+}

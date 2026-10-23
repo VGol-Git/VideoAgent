@@ -1,0 +1,526 @@
+{
+  "schema_version": "1.0",
+  "audit_type": "assistant_semantic_review_not_human_not_blind",
+  "status": "protocol_aborted_partial_pilot",
+  "updated_utc": "2026-10-21T19:54:25.318944+00:00",
+  "expected_modes": [
+    "adaptive",
+    "retrieval-only",
+    "static",
+    "uniform"
+  ],
+  "expected_question_ids": [
+    "visual_01",
+    "visual_02",
+    "visual_04",
+    "visual_06",
+    "visual_08"
+  ],
+  "expected_review_count": 20,
+  "reviewed_count": 11,
+  "rubric": {
+    "semantic_correctness": {
+      "0": "Incorrect, unsupported specific answer, execution error, or abstention on an answerable question.",
+      "1": "Partly correct but materially incomplete, imprecisely localized, or missing a requested component.",
+      "2": "Substantively correct answer to all requested components; for scoped unanswerable visual_08, correct refusal to invent a dollar amount."
+    },
+    "evidence_support": {
+      "0": "No supporting supplied evidence, wrong scene, or absent final answer.",
+      "1": "Partial/indirect support in supplied observations or text; required visual scene or one of multiple evidence components not established.",
+      "2": "Required claims directly supported by the supplied inspected evidence, with necessary scene/time associations; for scoped abstention, relevant diagram actually inspected."
+    },
+    "error_categories": [
+      "retrieval",
+      "recognition",
+      "reasoning",
+      "localization",
+      "abstention",
+      "schema"
+    ],
+    "unanswerable_rule": "Correct refusal can score semantic_correctness=2 while evidence_support=0 when the relevant diagram was never inspected. Backend/schema failures are not successful abstentions.",
+    "localization_policy": "For a locate question without an explicit full-duration requirement, a correct point inside the intended scene earns semantic2. A coarse or overlong citation range is separately flagged as localization error and remains subject to the automated IoU metric."
+  },
+  "reference_review": {
+    "source_video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "frame_files_viewed": [
+      ".cache/annotation/boundary_0010.jpg",
+      ".cache/annotation/board_2160.jpg",
+      ".cache/annotation/refine_1380.jpg",
+      ".cache/annotation/boundary_1615.jpg"
+    ],
+    "findings": "Black microphone is visible at introduction; Kanban board shows Ready/Done; comparison table is visible near1380s; How Task Graphs Actually Run near1615s labels a60s dispatcher loop and shows no dollar price.",
+    "limits": "Reviewer saw question references and mode identities; this is assistant diagnostic review, not independent human or blinded evaluation. Sparse source frames do not prove full temporal coverage. Reference-source frames do not retroactively become evidence available to the answering agent."
+  },
+  "reviews": [
+    {
+      "mode": "adaptive",
+      "question_id": "visual_01",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema",
+        "retrieval",
+        "localization",
+        "recognition"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "Final answer is an execution/response-validation error: controller repeatedly omitted required citations. The actual inspection was1470-1500s, not the7.5-42.5s introduction. The discarded draft says monitor/screen instead of microphone. Re-decoded sampled frames show only an application UI, so the VLM observation about a desk/background monitor is not supported.",
+      "evidence_assessment": "No delivered answer or citations. Supplied E001 belongs to a wrong scene. Source frames matching the sampled inspection do not show a physical desk object.",
+      "inspected_ranges": [
+        [
+          1470,
+          1500
+        ]
+      ],
+      "citation_intervals": [],
+      "reference_intervals": [
+        [
+          7.5,
+          42.5
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/annotation/boundary_0010.jpg",
+        ".cache/visual-audit/adaptive_visual01_1473.739.png",
+        ".cache/visual-audit/adaptive_visual01_1496.261.png"
+      ],
+      "diagnostic_rejected_draft": "A black computer monitor or screen is visible on the desk at the left side of the image during the first on-camera introduction, before the full-screen goals outline.",
+      "scoring_note": "Rejected drafts are diagnostic only; delivered status=error scores0 and is not recoded as an answered result.",
+      "prediction_file": "results/test/adaptive.predictions.json",
+      "answer_summary": ""
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "visual_02",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema",
+        "recognition"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "Final output fails validation after three uncited answer drafts. Rejected drafts say Scheduled/Done instead of Ready/Done. The sampled2145.010s frame visibly places Multi-agent research in Ready and three cards in Done; the inspector incorrectly attributes Scheduled to2115.013s, where the visible active card is instead Deliver a cited recommendation in Running.",
+      "evidence_assessment": "The run had a relevant frame and transcript, but its recognition was wrong and no answer/citations were delivered.",
+      "inspected_ranges": [
+        [
+          2100,
+          2220
+        ]
+      ],
+      "citation_intervals": [],
+      "reference_intervals": [
+        [
+          2145,
+          2175
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/annotation/board_2160.jpg",
+        ".cache/visual-audit/adaptive_visual02_2115.013.png",
+        ".cache/visual-audit/adaptive_visual02_2145.010.png",
+        ".cache/visual-audit/adaptive_visual02_2175.006.png"
+      ],
+      "diagnostic_rejected_draft": "The Multi-agent research card is in Scheduled, and the three completed cards are in Done.",
+      "scoring_note": "Delivered error scores0; the partially correct rejected draft is not substituted for it. At2175s the card has transitioned to Running, illustrating state changes within the wide inspection window.",
+      "prediction_file": "results/test/adaptive.predictions.json",
+      "answer_summary": ""
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "visual_04",
+      "prediction_status": "answered",
+      "semantic_correctness": 2,
+      "evidence_support": 2,
+      "error_categories": [
+        "localization"
+      ],
+      "primary_error": null,
+      "answer": "The main full-table comparison of Kanban and delegate_task is visible in the frame at 1357.489 seconds. The table, titled \"Kanban vs. delegate_task,\" is displayed with two columns: \"delegate_task\" and \"Kanban.\" The table compares attributes such as Shape, Parent, Child identity, Resumability, Human in the loop, Agents per task, and Audit trail. The table is fully visible and does not require scrolling to be seen.",
+      "rationale": "The explicit1357.489s point is inside the intended full-table scene and the actual sampled560px frame shows the complete table with the stated title and rows. Substantively correct localization by point.",
+      "evidence_assessment": "Directly supported by E001 and the matching decoded frame. Citation1320-1380s is a coarse inspection window containing substantial earlier context and omitting the later portion of the scene; it is not an accurate full event interval.",
+      "inspected_ranges": [
+        [
+          1320,
+          1380
+        ]
+      ],
+      "citation_intervals": [
+        [
+          1320,
+          1380
+        ]
+      ],
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ]
+      ],
+      "pointing_timestamp": 1357.489,
+      "point_inside_reference": true,
+      "source_frames_viewed": [
+        ".cache/annotation/refine_1380.jpg",
+        ".cache/visual-audit/adaptive_visual04_1357.489.png"
+      ],
+      "scoring_note": "Semantic score2 evaluates the correct locate-by-point answer; separate localization flag records coarse citation geometry. Automated interval IoU is27.5/115≈0.239 and remains below0.3.",
+      "prediction_file": "results/test/adaptive.predictions.json",
+      "answer_summary": "The main full-table comparison of Kanban and delegate_task is visible in the frame at1357.489seconds; the table title, columns and listed comparison rows are described."
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "visual_06",
+      "prediction_status": "answered",
+      "semantic_correctness": 1,
+      "evidence_support": 1,
+      "error_categories": [
+        "recognition",
+        "reasoning",
+        "localization"
+      ],
+      "primary_error": "recognition",
+      "answer": "The full Kanban vs. delegate_task comparison table is shown earlier than the diagram titled \"How Task Graphs Actually Run\". The comparison table appears at 1357.489 seconds, while the diagram appears later at 1372.504 seconds. This is supported by the visual evidence in the video, where the table is clearly visible and fully rendered before the diagram is displayed.",
+      "rationale": "The relative ordering happens to agree with the reference, but the graph time is fabricated: the actual1372.504s sampled frame still shows the comparison table. The graph appears near1615s. The question explicitly asks evidence for both; only one scene was inspected and cited.",
+      "evidence_assessment": "E001 supports the table only. The VLM observation invents seeing the graph at1372.504s, and the controller accepts it despite search returning later graph candidates. One correct component earns partial support.",
+      "inspected_ranges": [
+        [
+          1320,
+          1380
+        ]
+      ],
+      "citation_intervals": [
+        [
+          1320,
+          1380
+        ]
+      ],
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ],
+        [
+          1612.5,
+          1622.5
+        ]
+      ],
+      "temporal_order": {
+        "relative_order_correct": true,
+        "table_timestamp_supported": true,
+        "graph_timestamp_supported": false,
+        "both_scenes_cited": false
+      },
+      "source_frames_viewed": [
+        ".cache/visual-audit/adaptive_visual04_1357.489.png",
+        ".cache/visual-audit/adaptive_visual04_1372.504.png",
+        ".cache/annotation/boundary_1615.jpg"
+      ],
+      "scoring_note": "Keyword agreement with earlier/Kanban/graphs would conceal the unsupported second timestamp. This is partial correctness, not successful grounded temporal reasoning.",
+      "prediction_file": "results/test/adaptive.predictions.json",
+      "answer_summary": "The comparison table is earlier at1357.489s; How Task Graphs Actually Run is later at1372.504s."
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "visual_08",
+      "prediction_status": "insufficient_evidence",
+      "semantic_correctness": 2,
+      "evidence_support": 0,
+      "error_categories": [
+        "localization"
+      ],
+      "primary_error": null,
+      "answer": "the exact dollar cost assigned to each dispatcher cycle cannot be determined from the visible content of the video, as the cost is not explicitly stated in the diagram or text.",
+      "rationale": "Correctly refuses to invent a price for the scoped diagram question. However, its sampled times begin1627.493s, after the short diagram scene. They show a task dialog/settings/cost-strategy documentation, not the requested diagram.",
+      "evidence_assessment": "No final citations. The observation that cost-strategy prose gives no price is not verification that the requested diagram lacks a price. Safe abstention is distinguished from successful diagram inspection.",
+      "inspected_ranges": [
+        [
+          1620,
+          1680
+        ]
+      ],
+      "citation_intervals": [],
+      "reference_intervals": [],
+      "scoped_reference_context": [
+        [
+          1612.5,
+          1622.5
+        ]
+      ],
+      "scoped_abstention": {
+        "refuses_price": true,
+        "target_diagram_inspected": false,
+        "absence_verified_from_target": false
+      },
+      "source_frames_viewed": [
+        ".cache/annotation/boundary_1615.jpg",
+        ".cache/visual-audit/adaptive_visual08_1627.493.png",
+        ".cache/visual-audit/adaptive_visual08_1672.504.png"
+      ],
+      "scoring_note": "Semantic2 for correct refusal; support0 because the target diagram was missed by sparse sampling. No global absence claim is validated.",
+      "prediction_file": "results/test/adaptive.predictions.json",
+      "answer_summary": "The exact dollar cost assigned to each dispatcher cycle cannot be determined, because it is not explicitly stated."
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "visual_01",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema",
+        "retrieval"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "Baseline finalization returns a search action instead of the required answer, so runtime rejects it. Top3 retrieved transcript windows are2040.21-2070.57,1470.24-1502.24,91.2-120.88s and do not establish the introduction microphone. No new frames were supplied.",
+      "evidence_assessment": "No delivered answer/citations; retrieved text misses the target visual object.",
+      "inspected_ranges": [],
+      "citation_intervals": [],
+      "reference_intervals": [
+        [
+          7.5,
+          42.5
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/annotation/boundary_0010.jpg"
+      ],
+      "diagnostic_rejected_draft": "action=search instead of final answer",
+      "prediction_file": "results/test/retrieval-only.predictions.json"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "visual_02",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema",
+        "recognition"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "Baseline finalization requests another search instead of answering. Retrieved captions include the relevant board period but contain conflicting/inaccurate column descriptions: caption2100-2160 labels Multi-agent research Scheduled; caption2160-2220 assigns it to both Ready and Done. The original2160s reference frame shows Ready with the three completed cards in Done.",
+      "evidence_assessment": "No final answer/citations. The supplied text contains some correct tokens alongside caption hallucinations; retrieval-only did not inspect new frames to resolve them.",
+      "inspected_ranges": [],
+      "citation_intervals": [],
+      "reference_intervals": [
+        [
+          2145,
+          2175
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/annotation/board_2160.jpg"
+      ],
+      "diagnostic_rejected_draft": "action=search instead of final answer",
+      "prediction_file": "results/test/retrieval-only.predictions.json"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "visual_04",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "The relevant full-table caption was the top retrieved hit (1380-1440 s), but the model emitted another search action where a final answer was required. The delivered output was an error, not a localization answer.",
+      "evidence_assessment": "Scores evaluate the delivered response. Retrieved or inspected context cannot rescue a final schema error.",
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [],
+      "source_frames_viewed": [],
+      "diagnostic_rejected_draft": [
+        "{\"action\":\"search\",\"args\":{\"query\":\"main full-table comparison of Kanban and delegate_task, before scrolling hides its upper rows\",\"top_k\":5,\"source\":\"all\"}}"
+      ]
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "visual_06",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "The retrieved captions included both the comparison table and the later task-graph diagram (1619.985 s), but the model emitted a search action instead of the required final answer. No temporal-order answer was delivered.",
+      "evidence_assessment": "Scores evaluate the delivered response. Retrieved or inspected context cannot rescue a final schema error.",
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ],
+        [
+          1612.5,
+          1622.5
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [],
+      "source_frames_viewed": [],
+      "diagnostic_rejected_draft": [
+        "{\"action\":\"search\",\"args\":{\"query\":\"full Kanban vs. delegate_task comparison table or diagram titled How Task Graphs Actually Run\",\"top_k\":5,\"source\":\"all\"}}"
+      ]
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "visual_08",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "Both diagram captions were retrieved and contained no exact price. The model emitted a search action rather than a final abstention; a schema error does not count as successful scoped abstention.",
+      "evidence_assessment": "Scores evaluate the delivered response. Retrieved or inspected context cannot rescue a final schema error.",
+      "reference_intervals": [],
+      "citation_intervals": [],
+      "inspected_ranges": [],
+      "source_frames_viewed": [],
+      "diagnostic_rejected_draft": [
+        "{\"action\":\"search\",\"args\":{\"query\":\"exact dollar cost assigned to each dispatcher cycle\",\"top_k\":5,\"source\":\"all\"}}"
+      ]
+    },
+    {
+      "mode": "static",
+      "question_id": "visual_01",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema",
+        "retrieval",
+        "localization",
+        "recognition"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "The forced top-three retrieval plan inspected three regions outside the first-introduction reference interval. Two visual observations invented a desk object in application screens; the third named a laptop/monitor instead of the reference microphone. Finalization emitted an inspect action and failed its required answer schema. No answer was delivered.",
+      "evidence_assessment": "Scores evaluate the delivered response. Retrieved or inspected context cannot rescue a final schema error.",
+      "reference_intervals": [
+        [
+          7.5,
+          42.5
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [
+        [
+          2040.21,
+          2070.57
+        ],
+        [
+          1470.24,
+          1502.24
+        ],
+        [
+          91.2,
+          120.88
+        ]
+      ],
+      "source_frames_viewed": [],
+      "diagnostic_rejected_draft": [
+        "{\"action\":\"inspect_clip\",\"args\":{\"start\":2040.21,\"end\":2070.57}}"
+      ]
+    }
+  ],
+  "summary": {
+    "adaptive": {
+      "reviewed": 5,
+      "expected": 5,
+      "complete": true,
+      "mean_semantic_correctness_0_to_2": 1.0,
+      "mean_evidence_support_0_to_2": 0.6,
+      "semantic_score_counts": {
+        "0": 2,
+        "2": 2,
+        "1": 1
+      },
+      "prediction_status_counts": {
+        "error": 2,
+        "answered": 2,
+        "insufficient_evidence": 1
+      },
+      "error_category_counts": {
+        "schema": 2,
+        "retrieval": 1,
+        "localization": 4,
+        "recognition": 3,
+        "reasoning": 1
+      }
+    },
+    "retrieval-only": {
+      "reviewed": 5,
+      "expected": 5,
+      "complete": true,
+      "mean_semantic_correctness_0_to_2": 0.0,
+      "mean_evidence_support_0_to_2": 0.0,
+      "semantic_score_counts": {
+        "0": 5
+      },
+      "prediction_status_counts": {
+        "error": 5
+      },
+      "error_category_counts": {
+        "schema": 5,
+        "retrieval": 1,
+        "recognition": 1
+      }
+    },
+    "static": {
+      "reviewed": 1,
+      "expected": 5,
+      "complete": false,
+      "mean_semantic_correctness_0_to_2": 0.0,
+      "mean_evidence_support_0_to_2": 0.0,
+      "semantic_score_counts": {
+        "0": 1
+      },
+      "prediction_status_counts": {
+        "error": 1
+      },
+      "error_category_counts": {
+        "schema": 1,
+        "retrieval": 1,
+        "localization": 1,
+        "recognition": 1
+      }
+    },
+    "uniform": {
+      "reviewed": 0,
+      "expected": 5,
+      "complete": false,
+      "mean_semantic_correctness_0_to_2": null,
+      "mean_evidence_support_0_to_2": null,
+      "semantic_score_counts": {},
+      "prediction_status_counts": {},
+      "error_category_counts": {}
+    }
+  },
+  "figures": [
+    {
+      "png": "results/test/figures/visual01_failure.png",
+      "svg": "results/test/figures/visual01_failure.svg",
+      "script": "results/test/figures/visual01_failure_plot.py",
+      "caption": "Adaptive visual_01 failure: reference-context frame20.053s shows a black microphone; actual chosen inspection frame1481.246s shows an application UI. Failure chain: retrieval -> wrong scene -> VLM hallucination about a desk monitor -> final answer rejected because citations were missing. Decoded source imagery is unchanged; reference frame was not agent evidence.",
+      "frame_pixels": "Reference1280x720; actual agent sample560x315; displayed side-by-side without cropping or generative alterations."
+    }
+  ],
+  "study_status": "Initial prompt-v3 pilot stopped after adaptive 13, retrieval-only 13, and static 1 predictions. Retrieval-only finalization instructions conflicted with the shared tool-use system prompt; 12/13 retrieval-only outputs failed the schema. This partial pilot is retained without replacement.",
+  "available_visual_predictions_reviewed": true
+}

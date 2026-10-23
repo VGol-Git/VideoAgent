@@ -1,0 +1,417 @@
+{
+  "schema_version": "1.0",
+  "k": 5,
+  "summary": {
+    "example_count": 16,
+    "grounding_example_count": 14,
+    "multi_hop_example_count": 5,
+    "retrieval_error_count": 0,
+    "temporal_iou": 0.19658982287140087,
+    "hit_at_5_iou_0_3": 0.42857142857142855,
+    "evidence_recall_at_5_iou_0_3": 0.32142857142857145,
+    "all_evidence_hit_at_5_iou_0_3": 0.21428571428571427,
+    "multi_hop_success_at_5_iou_0_3": 0.2,
+    "hit_at_5_iou_0_5": 0.14285714285714285,
+    "evidence_recall_at_5_iou_0_5": 0.07142857142857142,
+    "all_evidence_hit_at_5_iou_0_5": 0.0,
+    "multi_hop_success_at_5_iou_0_5": 0.0
+  },
+  "per_question": [
+    {
+      "question_id": "v7_reason_fresh_context",
+      "category": "reasoning",
+      "answerable": true,
+      "query": "According to the explanation of fresh subagent conversations, why must the parent put sufficient information in the goal and context fields of delegate_task? Cite the statements supporting the explanation.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.4113333333333325,
+      "citation_iou_precision": 0.0822666666666665,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 3,
+          "iou": 0.4113333333333325
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 18.600000000000023,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "v7_reason_model_roles",
+      "category": "reasoning",
+      "answerable": true,
+      "query": "Why does the presenter suggest a powerful Kanban decomposer but a less powerful worker for a well-scoped card? Explain the connection to cost.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.4224224224224248,
+      "citation_iou_precision": 0.08448448448448495,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 0,
+          "iou": 0.4224224224224248
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 11.639999999999873,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "v7_reason_changed_criteria",
+      "category": "reasoning",
+      "answerable": true,
+      "query": "In the goal-loop demonstration, how did the added requirement for peer-reviewed sources lead to another research step? Explain the order and why the earlier output was not sufficient, citing both stages.",
+      "retrieval_error": null,
+      "reference_interval_count": 2,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.36870223978919636,
+      "citation_iou_precision": 0.14748089591567853,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 2,
+          "iou": 0.2433333333333337
+        },
+        {
+          "reference_index": 1,
+          "citation_index": 0,
+          "iou": 0.49407114624505905
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 0.5,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 6.595000000000027,
+      "onset_matched_interval_count": 2
+    },
+    {
+      "question_id": "v7_reason_two_gates",
+      "category": "reasoning",
+      "answerable": true,
+      "query": "Compare the gates shown in Article to Curated Knowledge and How Task Graphs Actually Run. Why does creating a draft entry or a task card not by itself guarantee that it reaches the library or a worker? Cite both diagrams.",
+      "retrieval_error": null,
+      "reference_interval_count": 2,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.4358381502890197,
+      "citation_iou_precision": 0.17433526011560788,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 2,
+          "iou": 0.8716763005780394
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 0.5,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 1.0,
+      "temporal_recall_at_0_5": 0.5,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 3.0699999999999363,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "v7_reason_context_durability",
+      "category": "reasoning",
+      "answerable": true,
+      "query": "Contrast a fresh subagent's lack of inherited history with the later explanation of durable Kanban handoffs. What different context problems do the parent-supplied fields and the database-backed queue address? Cite both explanations.",
+      "retrieval_error": null,
+      "reference_interval_count": 2,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.5500310794011153,
+      "citation_iou_precision": 0.2200124317604461,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 3,
+          "iou": 0.3452380952380952
+        },
+        {
+          "reference_index": 1,
+          "citation_index": 1,
+          "iou": 0.7548240635641353
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 1.0,
+      "temporal_recall_at_0_5": 0.5,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 10.97999999999999,
+      "onset_matched_interval_count": 2
+    },
+    {
+      "question_id": "v7_reason_dispatch_delay",
+      "category": "reasoning",
+      "answerable": true,
+      "query": "Connect the How Task Graphs Actually Run diagram to the later Kanban research demonstration: why do completed researcher tasks unblock report delivery without implying that it starts running at exactly the same instant? Cite the diagram and the demonstration.",
+      "retrieval_error": null,
+      "reference_interval_count": 2,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.23539046010975107,
+      "citation_iou_precision": 0.09415618404390043,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 2,
+          "iou": 0.12
+        },
+        {
+          "reference_index": 1,
+          "citation_index": 4,
+          "iou": 0.35078092021950213
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 0.5,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 33.50999999999999,
+      "onset_matched_interval_count": 2
+    },
+    {
+      "question_id": "v7_onset_token_first",
+      "category": "temporal",
+      "answerable": true,
+      "query": "When does the transcript first state that the estimate dropped from 45,000 to 18,000 tokens? Include the opening preview when selecting the first occurrence. Return the matching cue time or cue span.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.10895883777239708,
+      "citation_iou_precision": 0.021791767554479417,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 1,
+          "iou": 0.10895883777239708
+        }
+      ],
+      "temporal_hit_at_0_3": 0.0,
+      "temporal_recall_at_0_3": 0.0,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 4.08,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "v7_onset_token_later",
+      "category": "temporal",
+      "answerable": true,
+      "query": "During the later estimation demonstration after 30 minutes, when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens? Return the matching cue time or cue span.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.08349026993094359,
+      "citation_iou_precision": 0.01669805398618872,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 0,
+          "iou": 0.08349026993094359
+        }
+      ],
+      "temporal_hit_at_0_3": 0.0,
+      "temporal_recall_at_0_3": 0.0,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 0.0,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "v7_onset_article",
+      "category": "temporal",
+      "answerable": true,
+      "query": "Within the sequence from 19:00 to 21:00, when does the complete title Article to Curated Knowledge become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.0,
+      "citation_iou_precision": 0.0,
+      "matched_intervals": [],
+      "temporal_hit_at_0_3": 0.0,
+      "temporal_recall_at_0_3": 0.0,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": null,
+      "onset_matched_interval_count": 0
+    },
+    {
+      "question_id": "v7_onset_task_graph",
+      "category": "temporal",
+      "answerable": true,
+      "query": "Within the sequence from 25:00 to 28:00, when does the complete title How Task Graphs Actually Run become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.0,
+      "citation_iou_precision": 0.0,
+      "matched_intervals": [],
+      "temporal_hit_at_0_3": 0.0,
+      "temporal_recall_at_0_3": 0.0,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": null,
+      "onset_matched_interval_count": 0
+    },
+    {
+      "question_id": "v7_negative_total_tokens",
+      "category": "unanswerable",
+      "answerable": false,
+      "query": "In the first 102,000-versus-37,000 comparison, what exact total number of tokens did the delegated workflow consume after including every subagent? Give a number only if this explanation provides it.",
+      "retrieval_error": null,
+      "reference_interval_count": 0,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": null,
+      "citation_iou_precision": null,
+      "matched_intervals": [],
+      "temporal_hit_at_0_3": null,
+      "temporal_recall_at_0_3": null,
+      "all_evidence_hit_at_0_3": null,
+      "temporal_hit_at_0_5": null,
+      "temporal_recall_at_0_5": null,
+      "all_evidence_hit_at_0_5": null,
+      "onset_error_seconds": null,
+      "onset_matched_interval_count": 0
+    },
+    {
+      "question_id": "v7_negative_dispatch_cost",
+      "category": "unanswerable",
+      "answerable": false,
+      "query": "Using only the visible How Task Graphs Actually Run diagram, what exact dollar cost is assigned to each dispatcher cycle? Give a price only if it appears on that diagram.",
+      "retrieval_error": null,
+      "reference_interval_count": 0,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": null,
+      "citation_iou_precision": null,
+      "matched_intervals": [],
+      "temporal_hit_at_0_3": null,
+      "temporal_recall_at_0_3": null,
+      "all_evidence_hit_at_0_3": null,
+      "temporal_hit_at_0_5": null,
+      "temporal_recall_at_0_5": null,
+      "all_evidence_hit_at_0_5": null,
+      "onset_error_seconds": null,
+      "onset_matched_interval_count": 0
+    },
+    {
+      "question_id": "v7_timestamp_610",
+      "category": "localization",
+      "answerable": true,
+      "query": "Describe what was on the slide at 10 minutes 10 seconds. Give the title and explain the numbered steps and outcome branches.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.0,
+      "citation_iou_precision": 0.0,
+      "matched_intervals": [],
+      "temporal_hit_at_0_3": 0.0,
+      "temporal_recall_at_0_3": 0.0,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": null,
+      "onset_matched_interval_count": 0
+    },
+    {
+      "question_id": "v7_timestamp_800",
+      "category": "localization",
+      "answerable": true,
+      "query": "Describe what is on screen at 800 seconds. Identify the open editor or slide, the file name, the visible agent identity, and the save control.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.0,
+      "citation_iou_precision": 0.0,
+      "matched_intervals": [],
+      "temporal_hit_at_0_3": 0.0,
+      "temporal_recall_at_0_3": 0.0,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": null,
+      "onset_matched_interval_count": 0
+    },
+    {
+      "question_id": "v7_timestamp_range_titles",
+      "category": "localization",
+      "answerable": true,
+      "query": "Between 20:00 and 21:00, which two slide titles are visible, and in which order? Use evidence only from that interval.",
+      "retrieval_error": null,
+      "reference_interval_count": 2,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.0,
+      "citation_iou_precision": 0.0,
+      "matched_intervals": [],
+      "temporal_hit_at_0_3": 0.0,
+      "temporal_recall_at_0_3": 0.0,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": null,
+      "onset_matched_interval_count": 0
+    },
+    {
+      "question_id": "v7_timestamp_range_constraints",
+      "category": "localization",
+      "answerable": true,
+      "query": "Within 31:50–32:20, what search limit and output limit does the presenter add before re-estimating the task? Answer from the speech in that time interval.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.13609072715143178,
+      "citation_iou_precision": 0.027218145430286354,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 0,
+          "iou": 0.13609072715143178
+        }
+      ],
+      "temporal_hit_at_0_3": 0.0,
+      "temporal_recall_at_0_3": 0.0,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 23.75999999999999,
+      "onset_matched_interval_count": 1
+    }
+  ],
+  "notes": [
+    "Independent original-question retrieval; reference evidence is used only for scoring.",
+    "Temporal scores assess citation geometry only. Evidence IDs are not checked against a source ledger, and semantic claim support is not verified.",
+    "Missing, abstained, and error predictions score zero on answerable-question metrics; errors do not count as correct abstentions.",
+    "Citation intervals are deduplicated by geometry. One citation can match at most one reference interval, including for multi-hop recall.",
+    "Bootstrap intervals describe resampling uncertainty for the supplied examples, not model-training uncertainty or benchmark representativeness."
+  ]
+}

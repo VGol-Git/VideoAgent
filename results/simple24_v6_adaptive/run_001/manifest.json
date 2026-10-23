@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-10-23T05:11:46.002248+00:00",
+  "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+  "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+  "question_ids": [
+    "simple24_time_01",
+    "simple24_time_02",
+    "simple24_time_03",
+    "simple24_time_04",
+    "simple24_time_05",
+    "simple24_time_06",
+    "simple24_reason_01",
+    "simple24_reason_02",
+    "simple24_reason_03",
+    "simple24_reason_04",
+    "simple24_reason_05",
+    "simple24_reason_06",
+    "simple24_onset_01",
+    "simple24_onset_02",
+    "simple24_onset_03",
+    "simple24_onset_04",
+    "simple24_onset_05",
+    "simple24_onset_06",
+    "simple24_negative_01",
+    "simple24_negative_02",
+    "simple24_negative_03",
+    "simple24_negative_04",
+    "simple24_negative_05",
+    "simple24_negative_06"
+  ],
+  "modes": [
+    "adaptive"
+  ],
+  "vision": true,
+  "frames_per_clip": 4,
+  "max_frames": 16,
+  "image_size": 560,
+  "max_new_tokens": 768,
+  "max_tool_calls": 4,
+  "cache_enabled": false,
+  "prompt_version": "clipscout-v6-temporal-scopes",
+  "split": "test",
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "question_file_sha256": "b463905f7ec2cd93358fdf1a78091593d4f039343720456631e19140954fda72",
+  "provenance": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.6.0+cu124",
+      "torchvision": "0.21.0+cu124",
+      "transformers": "4.57.6",
+      "numpy": "2.2.6",
+      "Pillow": "12.3.0",
+      "opencv-python-headless": "4.11.0.86",
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.6.0",
+      "av": "19.0.2"
+    },
+    "source_sha256": {
+      "__init__.py": "0fea446cab00641a910e7be4f11c790955039a633ae4f1303aac1c8fe0d61c8a",
+      "__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+      "agent.py": "2ed6f15467d38e2210a4b613f1c8b6355a744520f3192ad8906c9d4e93ab60a7",
+      "backends.py": "f1129ccb04733318400bc0dee100a767914d0e743aa0c0110d12f0899f0329b1",
+      "cli.py": "5e644fbe57e4f5e8ef5d713d655406f511e930f985112f8dd14b1deae314ee6d",
+      "evaluation.py": "73c27877e4ee42c3b935c03e831804c1eb015927b40f3d3222fbcff7894ad2eb",
+      "index.py": "955220c04d1c332806111cb7a07c81e1d53a0c1ca3d61ae285289be3df449e58",
+      "media.py": "6daa7a748555afa3e8cd4367d96787de823f01b5dcadf8ebd80bba26281e7e9f",
+      "server.py": "35044c984f47f7eece9f494d7e4c559192a43564c08e238e5ae1d14b93f151a0",
+      "temporal.py": "308e8ee71ee877f2c9ffc861cb45933ec625f7c50d65b4c519817a20fad65a3c",
+      "transcribe.py": "4fc5de271f44a00d7eaef32cdd398022dae250bb59979fd516db66a3fc41172e"
+    }
+  },
+  "warmup_seconds": 15.260798300005263,
+  "warmup_frames": 4,
+  "warmup_usage": {
+    "model_calls": 1,
+    "input_tokens": 790,
+    "output_tokens": 2
+  }
+}

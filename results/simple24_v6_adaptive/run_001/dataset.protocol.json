@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "dataset": "simple24-v1",
+  "created_at_utc": "2026-10-23T05:10:09.434500+00:00",
+  "questions_sha256": "ef6a08b94d31b0ba1c15839f96ae94c1dd2be596a5c6438dbfd1fb94fcf3a03a",
+  "question_count": 24,
+  "split": "test",
+  "task_counts": {
+    "timestamp_search": 6,
+    "reasoning": 6,
+    "onset": 6,
+    "unanswerable": 6
+  },
+  "modes": [
+    "adaptive"
+  ],
+  "agent": "v6",
+  "question_order": [
+    "simple24_time_01",
+    "simple24_time_02",
+    "simple24_time_03",
+    "simple24_time_04",
+    "simple24_time_05",
+    "simple24_time_06",
+    "simple24_reason_01",
+    "simple24_reason_02",
+    "simple24_reason_03",
+    "simple24_reason_04",
+    "simple24_reason_05",
+    "simple24_reason_06",
+    "simple24_onset_01",
+    "simple24_onset_02",
+    "simple24_onset_03",
+    "simple24_onset_04",
+    "simple24_onset_05",
+    "simple24_onset_06",
+    "simple24_negative_01",
+    "simple24_negative_02",
+    "simple24_negative_03",
+    "simple24_negative_04",
+    "simple24_negative_05",
+    "simple24_negative_06"
+  ],
+  "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+  "transcript_sha256": "ec42515131e685e5bde1600f501afe63c8bc1a248962fafe7e89c5023b42e130",
+  "reference_frame_sha256": {
+    "data/simple24/reference_frames/refine_1170.jpg": "6a42ab719b79a4ce512602180597b0c386a1a30ddb1f37b368c71422d2062467",
+    "data/simple24/reference_frames/refine_1220.jpg": "b139b00adc631f20f5b5b7e8b4e350abd3d60b4ef5a6e2124e71740cd7a1c745",
+    "data/simple24/reference_frames/refine_1240.jpg": "fb69885bbe75645b870cd8e75b8b0bfeef5292ad63fe65418ccd643ea8d1a6f6",
+    "data/simple24/reference_frames/refine_1250.jpg": "338afc1cde0bc1b1cd45e005aed2549339af7a0a98eea15298b6985659b79f7e",
+    "data/simple24/reference_frames/refine_1260.jpg": "9342d205f0ff44fe6785b0a978090b05dce567564987d25a093504bd84e646e4",
+    "data/simple24/reference_frames/refine_1280.jpg": "1bd4dee8db9881e2b2a9fb5b3df54a8f715f05ce0dfc9e7a96e1a53d03025a44",
+    "data/simple24/reference_frames/refine_1290.jpg": "73a1c02d861e902eded69255f37adc53b34c85934ca04ebad76295582a89839d",
+    "data/simple24/reference_frames/boundary_1150.jpg": "53a5735ba40b705afa7c1cb0a6de3798730416a7f9e52c8421e3040563c4644e",
+    "data/simple24/reference_frames/boundary_1155.jpg": "cb130e2191fad110637f0c1884dd60d63ac573297f1485b0d5d8cfc76f721983",
+    "data/simple24/reference_frames/boundary_1235.jpg": "228547c4065d3e51a87eeedc0287f453f3ea5659965f452a1b3be414a2f1cc0a",
+    "data/simple24/reference_frames/boundary_1240.jpg": "fb69885bbe75645b870cd8e75b8b0bfeef5292ad63fe65418ccd643ea8d1a6f6",
+    "data/simple24/reference_frames/boundary_1610.jpg": "606891985a8108611a307559503cd7c7fd7b7743ee5c797baf53405c422b14ef",
+    "data/simple24/reference_frames/boundary_1615.jpg": "fb9eb317cc911106f3feafbcea781eb208133464dc4bde04d5cc61423814cb41"
+  },
+  "reference_status": "Assistant-authored diagnostic set with reused video evidence; not independent human annotation, a held-out benchmark, or an independent generalization evaluation.",
+  "metric_notes": [
+    "v6 evaluates lexical answers and citation geometry. Required terms do not validate negation, arrow direction, causality or semantic support.",
+    "Point questions use canonical one-second windows centered on the requested timestamp; these are evaluation windows, not measured scene boundaries.",
+    "Speech onset references are complete ASR cues, not word-aligned audio. Visual onset references are approximately five-second sampled absence/presence brackets.",
+    "v6 onset_error_seconds measures starts of cited intervals. It does not grade an onset number in the answer or a last-absent/first-present bracket as v7 would.",
+    "Unanswerable questions are restricted to the named diagram at a particular time; no global video absence is claimed.",
+    "Manual semantic review is required to decide how many answers are factually correct."
+  ]
+}

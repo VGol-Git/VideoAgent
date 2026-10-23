@@ -1,0 +1,1087 @@
+{
+  "status": "answered",
+  "answer": "Selected observations for 15:00–20:00 (partial coverage):\nFrom 900 to 975 seconds, the video shows a text-based interface with a list of research tasks and roles, including researcher, librarian, and orchestrator. From 975 to 1050 seconds, the screen transitions to a chat interface where a bot named Hermes is used to discuss research topics, with profiles for different agents. From 1050 to 1125 seconds, the video shows a Slack interface with a chat thread about a research project, including messages from the Orchestrator bot. From 1125 to 1200 seconds, the video displays a flowchart illustrating an email-to-decision-brief process with agents communicating in a group chat, showing a loop for review and feedback. The video does not show any specific events or actions in the 15th to 20th minute beyond these descriptions.",
+  "citations": [
+    {
+      "evidence_id": "E001",
+      "start": 900.0,
+      "end": 975.0
+    },
+    {
+      "evidence_id": "E002",
+      "start": 975.0,
+      "end": 1050.0
+    },
+    {
+      "evidence_id": "E003",
+      "start": 1050.0,
+      "end": 1125.0
+    },
+    {
+      "evidence_id": "E004",
+      "start": 1125.0,
+      "end": 1200.0
+    }
+  ],
+  "routing": "temporal_scope",
+  "temporal_scope": {
+    "kind": "range",
+    "start": 900.0,
+    "end": 1200.0,
+    "interpretation": "Requested video interval: 900–1200 seconds. Minute/hour numbers, including ordinal wording, are timestamp boundaries."
+  },
+  "coverage": {
+    "strategy": "distributed_windows",
+    "requested_start": 900.0,
+    "requested_end": 1200.0,
+    "inspection_intervals": [
+      [
+        900.0,
+        975.0
+      ],
+      [
+        975.0,
+        1050.0
+      ],
+      [
+        1050.0,
+        1125.0
+      ],
+      [
+        1125.0,
+        1200.0
+      ]
+    ],
+    "omitted_intervals": [],
+    "sampled_frame_count": 16,
+    "complete_visual_coverage": false,
+    "note": "Requested interval: 15:00–20:00. Selected observations from 4 inspected windows and 16 sampled frames; this is not continuous viewing or an exhaustive summary."
+  },
+  "question_id": "",
+  "question": "What happens in the video from the 15th to the 20th minute?",
+  "mode": "adaptive",
+  "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+  "tool_calls": 4,
+  "frames_used": 16,
+  "unique_sampled_timestamps": [
+    909.3751333333333,
+    928.1272,
+    946.8792666666667,
+    965.6313333333334,
+    984.3834,
+    1003.1354666666667,
+    1021.8875333333334,
+    1040.6396,
+    1059.3916666666667,
+    1078.1437333333333,
+    1096.8958,
+    1115.6478666666667,
+    1134.3999333333334,
+    1153.152,
+    1171.9040666666667,
+    1190.6561333333334
+  ],
+  "latency_seconds": 178.9687,
+  "usage": {
+    "model_calls": 6,
+    "input_tokens": 13254,
+    "output_tokens": 1138
+  },
+  "trace": [
+    {
+      "call": 1,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 900.0,
+        "end": 975.0,
+        "question": "What happens in the video from the 15th to the 20th minute?"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 900.0,
+        "end": 975.0,
+        "transcript": "[901.57–906.65] So it fits bounded research review and repair work, but it doesn't necessarily make sense\n[906.65–911.25] for other types of situations that require more specialization and more context and more\n[911.25–912.25] knowledge.\n[912.25–916.07] I mentioned, sub-agents have zero knowledge from the parent's conversation history.\n[916.07–920.09] They only have what comes from the goal and the context that the parent gives them.\n[920.09–922.85] But what if we start getting into more specific contexts or\n[922.85–926.89] more custom situations that involve other types of contexts outside of what\n[926.89–928.13] the parent even knows?\n[928.13–931.69] We can see here the decision test that the answer says is add a specialist.\n[931.69–935.25] If it is independent, needs different context tools and policy and\n[935.25–939.61] beats a single agent baseline on quality coverage, latency, and total review cost.\n[939.61–942.49] So in other words, the answer is that we should add specialists\n[942.49–944.63] if we want it to keep its own working knowledge\n[944.63–947.97] and have access to different context tools and policies,\n[947.97–949.73] perhaps have a different memory system\n[949.73–952.09] rather than being spawned as a brand new agent\n[952.09–953.07] every single time.\n[953.07–955.37] And I note that the Hermes corroboration here\n[955.37–957.61] mentions Kanban or Kanban,\n[957.61–959.05] depending on how you wanna pronounce it.\n[959.05–960.57] But before we get into Kanban,\n[960.57–962.05] I thought that we could take a quick look\n[962.05–965.01] at Hermes Bot Mode actually sets you up for success\n[965.01–966.29] when you start using Kanban\n[966.29–969.13] because it helps you prepare the specialist profiles\n[969.13–973.53] we can see down here I have orchestrator, researcher, and librarian. So let's take a quick look at",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00333",
+            "start": 901.57,
+            "end": 906.65
+          },
+          {
+            "id": "T00334",
+            "start": 906.65,
+            "end": 911.25
+          },
+          {
+            "id": "T00335",
+            "start": 911.25,
+            "end": 912.25
+          },
+          {
+            "id": "T00336",
+            "start": 912.25,
+            "end": 916.07
+          },
+          {
+            "id": "T00337",
+            "start": 916.07,
+            "end": 920.09
+          },
+          {
+            "id": "T00338",
+            "start": 920.09,
+            "end": 922.85
+          },
+          {
+            "id": "T00339",
+            "start": 922.85,
+            "end": 926.89
+          },
+          {
+            "id": "T00340",
+            "start": 926.89,
+            "end": 928.13
+          },
+          {
+            "id": "T00341",
+            "start": 928.13,
+            "end": 931.69
+          },
+          {
+            "id": "T00342",
+            "start": 931.69,
+            "end": 935.25
+          },
+          {
+            "id": "T00343",
+            "start": 935.25,
+            "end": 939.61
+          },
+          {
+            "id": "T00344",
+            "start": 939.61,
+            "end": 942.49
+          },
+          {
+            "id": "T00345",
+            "start": 942.49,
+            "end": 944.63
+          },
+          {
+            "id": "T00346",
+            "start": 944.63,
+            "end": 947.97
+          },
+          {
+            "id": "T00347",
+            "start": 947.97,
+            "end": 949.73
+          },
+          {
+            "id": "T00348",
+            "start": 949.73,
+            "end": 952.09
+          },
+          {
+            "id": "T00349",
+            "start": 952.09,
+            "end": 953.07
+          },
+          {
+            "id": "T00350",
+            "start": 953.07,
+            "end": 955.37
+          },
+          {
+            "id": "T00351",
+            "start": 955.37,
+            "end": 957.61
+          },
+          {
+            "id": "T00352",
+            "start": 957.61,
+            "end": 959.05
+          },
+          {
+            "id": "T00353",
+            "start": 959.05,
+            "end": 960.57
+          },
+          {
+            "id": "T00354",
+            "start": 960.57,
+            "end": 962.05
+          },
+          {
+            "id": "T00355",
+            "start": 962.05,
+            "end": 965.01
+          },
+          {
+            "id": "T00356",
+            "start": 965.01,
+            "end": 966.29
+          },
+          {
+            "id": "T00357",
+            "start": 966.29,
+            "end": 969.13
+          },
+          {
+            "id": "T00358",
+            "start": 969.13,
+            "end": 973.53
+          }
+        ],
+        "visual_observation": "From 900.00 to 975.00 seconds, the video shows a screen with a text-based interface. The text is in a dark theme with white and light blue text. The text is a list of topics and tasks that can be done by a research assistant. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue",
+        "sampled_timestamps": [
+          909.3751333333333,
+          928.1272,
+          946.8792666666667,
+          965.6313333333334
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E001"
+      },
+      "latency_seconds": 34.1118
+    },
+    {
+      "call": 2,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 975.0,
+        "end": 1050.0,
+        "question": "What happens in the video from the 15th to the 20th minute?"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 975.0,
+        "end": 1050.0,
+        "transcript": "[983.11–988.47] a graph. That's where profiles come in. Okay, so this is bot mode. So we can see here a bot is just\n[988.47–993.99] a profile is the same list of profiles that I have along the bottom here. A bot or a profile can\n[993.99–999.03] retain its own skills, memory, and working context with a model suited to its role. Each of these\n[999.03–1003.99] different bots here can have a default model that's different. For example, maybe my orchestrator\n[1003.99–1008.15] has one of the most powerful models available, a frontier model. But maybe the researcher\n[1008.15–1012.87] needs a much less powerful model. And then I can use a feature like the group chat to coordinate\n[1012.87–1017.51] how they work together. So rather than a sub-agent starting with zero knowledge, we can configure\n[1017.51–1021.83] what type of knowledge and skills and memory we want available for each specialist, and\n[1021.83–1026.95] that knowledge and all of that context and capabilities survives the chat conversation.\n[1026.95–1031.45] it maintains it over time. And since Hermes is a self-learning system, it can also learn\n[1031.45–1035.65] more skills as well, getting better at its particular specialized task. And we can take\n[1035.65–1039.13] a quick look at a group chat here, where we can see, for example, I had the librarian,\n[1039.13–1042.81] the orchestrator, and the researcher, and they're all working together to solve the original\n[1042.81–1046.89] task that I put out. So you can think of this as a communication graph, where we've set",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00360",
+            "start": 983.11,
+            "end": 988.47
+          },
+          {
+            "id": "T00361",
+            "start": 988.47,
+            "end": 993.99
+          },
+          {
+            "id": "T00362",
+            "start": 993.99,
+            "end": 999.03
+          },
+          {
+            "id": "T00363",
+            "start": 999.03,
+            "end": 1003.99
+          },
+          {
+            "id": "T00364",
+            "start": 1003.99,
+            "end": 1008.15
+          },
+          {
+            "id": "T00365",
+            "start": 1008.15,
+            "end": 1012.87
+          },
+          {
+            "id": "T00366",
+            "start": 1012.87,
+            "end": 1017.51
+          },
+          {
+            "id": "T00367",
+            "start": 1017.51,
+            "end": 1021.83
+          },
+          {
+            "id": "T00368",
+            "start": 1021.83,
+            "end": 1026.95
+          },
+          {
+            "id": "T00369",
+            "start": 1026.95,
+            "end": 1031.45
+          },
+          {
+            "id": "T00370",
+            "start": 1031.45,
+            "end": 1035.65
+          },
+          {
+            "id": "T00371",
+            "start": 1035.65,
+            "end": 1039.13
+          },
+          {
+            "id": "T00372",
+            "start": 1039.13,
+            "end": 1042.81
+          },
+          {
+            "id": "T00373",
+            "start": 1042.81,
+            "end": 1046.89
+          }
+        ],
+        "visual_observation": "From 975.00 to 1050.00 seconds, the video shows a presentation of three roles: Researcher, Librarian, and Orchestrator. The screen then transitions to a chat interface with bots, where the user interacts with a chatbot named \"Hermes\" to discuss research topics. The user receives a response from the bot, which is then followed by a message from the Orchestrator bot.",
+        "sampled_timestamps": [
+          984.3834,
+          1003.1354666666667,
+          1021.8875333333334,
+          1040.6396
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E002"
+      },
+      "latency_seconds": 8.4887
+    },
+    {
+      "call": 3,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 1050.0,
+        "end": 1125.0,
+        "question": "What happens in the video from the 15th to the 20th minute?"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 1050.0,
+        "end": 1125.0,
+        "transcript": "[1050.85–1054.97] communicating back and forth with one another to solve a particular problem. So this is where\n[1054.97–1059.25] we go from not just having a loop but going from a loop to a graph. Now I've\n[1059.25–1062.45] already talked a lot about this in the last two videos. In the first video I\n[1062.45–1065.77] gave an overview on what bot mode is, how to get it set up and how to customize\n[1065.77–1069.81] each of these individual profiles. So I'm not gonna touch on that today. And then\n[1069.81–1073.09] in the second video we did a specific research upgrade where I updated the\n[1073.09–1076.57] capabilities of the researcher to be a much more powerful tool. The main skill\n[1076.57–1079.17] that I gave the researcher as an upgrade allowed it to check both\n[1079.17–1082.97] academic sources and state-of-the-art sources and then corroborate the two of\n[1082.97–1086.65] them. I just wanted to quickly show you this because it is a form of graph in the sense that\n[1086.65–1091.37] the orchestrator is able to communicate and message back and forth with the different sub-agents,\n[1091.37–1096.17] but it's not the same as a full task graph like we can get into with Kanban. All you need to know\n[1096.17–1100.73] at this point is that the orchestrator is the one that I message. It's my human proxy, the one that\n[1100.73–1105.21] controls the other agents. The researcher is able to investigate. So in the example of information\n[1105.21–1110.17] coming in, the orchestrator would create the task and then give it to the researcher to go\n[1110.17–1114.21] investigate and then the librarian works with my existing LLM wiki to take the\n[1114.21–1118.73] output research that I've approved as a human and file it into my LLM wiki or\n[1118.73–1123.13] my knowledge base in obsidian. So in a graph each node can be a single agent or",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00375",
+            "start": 1050.85,
+            "end": 1054.97
+          },
+          {
+            "id": "T00376",
+            "start": 1054.97,
+            "end": 1059.25
+          },
+          {
+            "id": "T00377",
+            "start": 1059.25,
+            "end": 1062.45
+          },
+          {
+            "id": "T00378",
+            "start": 1062.45,
+            "end": 1065.77
+          },
+          {
+            "id": "T00379",
+            "start": 1065.77,
+            "end": 1069.81
+          },
+          {
+            "id": "T00380",
+            "start": 1069.81,
+            "end": 1073.09
+          },
+          {
+            "id": "T00381",
+            "start": 1073.09,
+            "end": 1076.57
+          },
+          {
+            "id": "T00382",
+            "start": 1076.57,
+            "end": 1079.17
+          },
+          {
+            "id": "T00383",
+            "start": 1079.17,
+            "end": 1082.97
+          },
+          {
+            "id": "T00384",
+            "start": 1082.97,
+            "end": 1086.65
+          },
+          {
+            "id": "T00385",
+            "start": 1086.65,
+            "end": 1091.37
+          },
+          {
+            "id": "T00386",
+            "start": 1091.37,
+            "end": 1096.17
+          },
+          {
+            "id": "T00387",
+            "start": 1096.17,
+            "end": 1100.73
+          },
+          {
+            "id": "T00388",
+            "start": 1100.73,
+            "end": 1105.21
+          },
+          {
+            "id": "T00389",
+            "start": 1105.21,
+            "end": 1110.17
+          },
+          {
+            "id": "T00390",
+            "start": 1110.17,
+            "end": 1114.21
+          },
+          {
+            "id": "T00391",
+            "start": 1114.21,
+            "end": 1118.73
+          },
+          {
+            "id": "T00392",
+            "start": 1118.73,
+            "end": 1123.13
+          }
+        ],
+        "visual_observation": "At 1059.392 seconds, the screen shows a Slack interface with a chat thread about a research project. At 1078.144 seconds, the chat thread is updated with a message from 'Orchestrator' about a 'poisoning' issue. At 1096.896 seconds, the interface shows a new message from 'Orchestrator' asking for clarification on a task. At 1115.648 seconds, the screen displays a diagram of a 'Governed Quality Loop' with various stages and arrows indicating the flow of the process.",
+        "sampled_timestamps": [
+          1059.3916666666667,
+          1078.1437333333333,
+          1096.8958,
+          1115.6478666666667
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E003"
+      },
+      "latency_seconds": 10.1892
+    },
+    {
+      "call": 4,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 1125.0,
+        "end": 1200.0,
+        "question": "What happens in the video from the 15th to the 20th minute?"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 1125.0,
+        "end": 1200.0,
+        "transcript": "[1128.01–1132.57] as part of a bigger macro loop. So in group chats one of the key limitations is\n[1132.57–1135.73] that they only have the ability to go back and forth three times before they\n[1135.73–1139.85] have to stop and check what you actually want.\n[1139.85–1142.89] So before we actually get into running these full control graphs, I just wanted to quickly\n[1142.89–1147.53] talk about a couple examples on how this fits together so that you can see what the graph\n[1147.53–1151.29] might look like before we get into how to set it up, just so it makes a little bit more\n[1151.29–1152.53] practical sense.\n[1152.53–1156.61] So imagine you have an email come in and you want to have a decision.\n[1156.61–1160.09] Maybe you want to have a draft created, maybe you want to have some research done, maybe\n[1160.09–1161.09] both.\n[1161.09–1164.89] So the email can come in and it can trigger an agent, like the researcher agent, to pull\n[1164.89–1169.13] in the relevant context and the evidence by doing some research. Once it's done, it can\n[1169.13–1174.17] then create a brief, like a research brief and draft a reply and then hand it off to you for review.\n[1174.17–1177.45] If you don't think it's good enough quality or you think it's missing something, you can provide\n[1177.45–1182.25] some more context, some more commentary, or steer it, and you can have it go back and loop again.\n[1182.25–1186.17] So this brings in a loop, but it's a human in the loop. Then if it meets your approval,\n[1186.17–1190.65] you can have it create the draft or even potentially send it right away if you've already reviewed\n[1190.65–1195.61] the final result. It's up to you if you want to have the send capability given to the agent or if",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00394",
+            "start": 1128.01,
+            "end": 1132.57
+          },
+          {
+            "id": "T00395",
+            "start": 1132.57,
+            "end": 1135.73
+          },
+          {
+            "id": "T00396",
+            "start": 1135.73,
+            "end": 1139.85
+          },
+          {
+            "id": "T00397",
+            "start": 1139.85,
+            "end": 1142.89
+          },
+          {
+            "id": "T00398",
+            "start": 1142.89,
+            "end": 1147.53
+          },
+          {
+            "id": "T00399",
+            "start": 1147.53,
+            "end": 1151.29
+          },
+          {
+            "id": "T00400",
+            "start": 1151.29,
+            "end": 1152.53
+          },
+          {
+            "id": "T00401",
+            "start": 1152.53,
+            "end": 1156.61
+          },
+          {
+            "id": "T00402",
+            "start": 1156.61,
+            "end": 1160.09
+          },
+          {
+            "id": "T00403",
+            "start": 1160.09,
+            "end": 1161.09
+          },
+          {
+            "id": "T00404",
+            "start": 1161.09,
+            "end": 1164.89
+          },
+          {
+            "id": "T00405",
+            "start": 1164.89,
+            "end": 1169.13
+          },
+          {
+            "id": "T00406",
+            "start": 1169.13,
+            "end": 1174.17
+          },
+          {
+            "id": "T00407",
+            "start": 1174.17,
+            "end": 1177.45
+          },
+          {
+            "id": "T00408",
+            "start": 1177.45,
+            "end": 1182.25
+          },
+          {
+            "id": "T00409",
+            "start": 1182.25,
+            "end": 1186.17
+          },
+          {
+            "id": "T00410",
+            "start": 1186.17,
+            "end": 1190.65
+          },
+          {
+            "id": "T00411",
+            "start": 1190.65,
+            "end": 1195.61
+          }
+        ],
+        "visual_observation": "At 1134.400 seconds, a flowchart displays a chatbot interaction in a group chat, with users 'You', 'Bot A', 'Bot B', and 'Bot C' communicating. At 1153.152 seconds, the screen transitions to an 'Email to Decision Brief' process, showing a sequence of steps from 'Important email' to 'Send & save'. The process is illustrated with cartoon characters and icons.",
+        "sampled_timestamps": [
+          1134.3999333333334,
+          1153.152,
+          1171.9040666666667,
+          1190.6561333333334
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E004"
+      },
+      "latency_seconds": 7.0554
+    }
+  ],
+  "evidence": {
+    "E001": {
+      "start": 900.0,
+      "end": 975.0,
+      "transcript": "[901.57–906.65] So it fits bounded research review and repair work, but it doesn't necessarily make sense\n[906.65–911.25] for other types of situations that require more specialization and more context and more\n[911.25–912.25] knowledge.\n[912.25–916.07] I mentioned, sub-agents have zero knowledge from the parent's conversation history.\n[916.07–920.09] They only have what comes from the goal and the context that the parent gives them.\n[920.09–922.85] But what if we start getting into more specific contexts or\n[922.85–926.89] more custom situations that involve other types of contexts outside of what\n[926.89–928.13] the parent even knows?\n[928.13–931.69] We can see here the decision test that the answer says is add a specialist.\n[931.69–935.25] If it is independent, needs different context tools and policy and\n[935.25–939.61] beats a single agent baseline on quality coverage, latency, and total review cost.\n[939.61–942.49] So in other words, the answer is that we should add specialists\n[942.49–944.63] if we want it to keep its own working knowledge\n[944.63–947.97] and have access to different context tools and policies,\n[947.97–949.73] perhaps have a different memory system\n[949.73–952.09] rather than being spawned as a brand new agent\n[952.09–953.07] every single time.\n[953.07–955.37] And I note that the Hermes corroboration here\n[955.37–957.61] mentions Kanban or Kanban,\n[957.61–959.05] depending on how you wanna pronounce it.\n[959.05–960.57] But before we get into Kanban,\n[960.57–962.05] I thought that we could take a quick look\n[962.05–965.01] at Hermes Bot Mode actually sets you up for success\n[965.01–966.29] when you start using Kanban\n[966.29–969.13] because it helps you prepare the specialist profiles\n[969.13–973.53] we can see down here I have orchestrator, researcher, and librarian. So let's take a quick look at",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00333",
+          "start": 901.57,
+          "end": 906.65
+        },
+        {
+          "id": "T00334",
+          "start": 906.65,
+          "end": 911.25
+        },
+        {
+          "id": "T00335",
+          "start": 911.25,
+          "end": 912.25
+        },
+        {
+          "id": "T00336",
+          "start": 912.25,
+          "end": 916.07
+        },
+        {
+          "id": "T00337",
+          "start": 916.07,
+          "end": 920.09
+        },
+        {
+          "id": "T00338",
+          "start": 920.09,
+          "end": 922.85
+        },
+        {
+          "id": "T00339",
+          "start": 922.85,
+          "end": 926.89
+        },
+        {
+          "id": "T00340",
+          "start": 926.89,
+          "end": 928.13
+        },
+        {
+          "id": "T00341",
+          "start": 928.13,
+          "end": 931.69
+        },
+        {
+          "id": "T00342",
+          "start": 931.69,
+          "end": 935.25
+        },
+        {
+          "id": "T00343",
+          "start": 935.25,
+          "end": 939.61
+        },
+        {
+          "id": "T00344",
+          "start": 939.61,
+          "end": 942.49
+        },
+        {
+          "id": "T00345",
+          "start": 942.49,
+          "end": 944.63
+        },
+        {
+          "id": "T00346",
+          "start": 944.63,
+          "end": 947.97
+        },
+        {
+          "id": "T00347",
+          "start": 947.97,
+          "end": 949.73
+        },
+        {
+          "id": "T00348",
+          "start": 949.73,
+          "end": 952.09
+        },
+        {
+          "id": "T00349",
+          "start": 952.09,
+          "end": 953.07
+        },
+        {
+          "id": "T00350",
+          "start": 953.07,
+          "end": 955.37
+        },
+        {
+          "id": "T00351",
+          "start": 955.37,
+          "end": 957.61
+        },
+        {
+          "id": "T00352",
+          "start": 957.61,
+          "end": 959.05
+        },
+        {
+          "id": "T00353",
+          "start": 959.05,
+          "end": 960.57
+        },
+        {
+          "id": "T00354",
+          "start": 960.57,
+          "end": 962.05
+        },
+        {
+          "id": "T00355",
+          "start": 962.05,
+          "end": 965.01
+        },
+        {
+          "id": "T00356",
+          "start": 965.01,
+          "end": 966.29
+        },
+        {
+          "id": "T00357",
+          "start": 966.29,
+          "end": 969.13
+        },
+        {
+          "id": "T00358",
+          "start": 969.13,
+          "end": 973.53
+        }
+      ],
+      "visual_observation": "From 900.00 to 975.00 seconds, the video shows a screen with a text-based interface. The text is in a dark theme with white and light blue text. The text is a list of topics and tasks that can be done by a research assistant. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue text. The text is in a list format with bullet points. The text is in a dark theme with white and light blue",
+      "sampled_timestamps": [
+        909.3751333333333,
+        928.1272,
+        946.8792666666667,
+        965.6313333333334
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E001"
+    },
+    "E002": {
+      "start": 975.0,
+      "end": 1050.0,
+      "transcript": "[983.11–988.47] a graph. That's where profiles come in. Okay, so this is bot mode. So we can see here a bot is just\n[988.47–993.99] a profile is the same list of profiles that I have along the bottom here. A bot or a profile can\n[993.99–999.03] retain its own skills, memory, and working context with a model suited to its role. Each of these\n[999.03–1003.99] different bots here can have a default model that's different. For example, maybe my orchestrator\n[1003.99–1008.15] has one of the most powerful models available, a frontier model. But maybe the researcher\n[1008.15–1012.87] needs a much less powerful model. And then I can use a feature like the group chat to coordinate\n[1012.87–1017.51] how they work together. So rather than a sub-agent starting with zero knowledge, we can configure\n[1017.51–1021.83] what type of knowledge and skills and memory we want available for each specialist, and\n[1021.83–1026.95] that knowledge and all of that context and capabilities survives the chat conversation.\n[1026.95–1031.45] it maintains it over time. And since Hermes is a self-learning system, it can also learn\n[1031.45–1035.65] more skills as well, getting better at its particular specialized task. And we can take\n[1035.65–1039.13] a quick look at a group chat here, where we can see, for example, I had the librarian,\n[1039.13–1042.81] the orchestrator, and the researcher, and they're all working together to solve the original\n[1042.81–1046.89] task that I put out. So you can think of this as a communication graph, where we've set",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00360",
+          "start": 983.11,
+          "end": 988.47
+        },
+        {
+          "id": "T00361",
+          "start": 988.47,
+          "end": 993.99
+        },
+        {
+          "id": "T00362",
+          "start": 993.99,
+          "end": 999.03
+        },
+        {
+          "id": "T00363",
+          "start": 999.03,
+          "end": 1003.99
+        },
+        {
+          "id": "T00364",
+          "start": 1003.99,
+          "end": 1008.15
+        },
+        {
+          "id": "T00365",
+          "start": 1008.15,
+          "end": 1012.87
+        },
+        {
+          "id": "T00366",
+          "start": 1012.87,
+          "end": 1017.51
+        },
+        {
+          "id": "T00367",
+          "start": 1017.51,
+          "end": 1021.83
+        },
+        {
+          "id": "T00368",
+          "start": 1021.83,
+          "end": 1026.95
+        },
+        {
+          "id": "T00369",
+          "start": 1026.95,
+          "end": 1031.45
+        },
+        {
+          "id": "T00370",
+          "start": 1031.45,
+          "end": 1035.65
+        },
+        {
+          "id": "T00371",
+          "start": 1035.65,
+          "end": 1039.13
+        },
+        {
+          "id": "T00372",
+          "start": 1039.13,
+          "end": 1042.81
+        },
+        {
+          "id": "T00373",
+          "start": 1042.81,
+          "end": 1046.89
+        }
+      ],
+      "visual_observation": "From 975.00 to 1050.00 seconds, the video shows a presentation of three roles: Researcher, Librarian, and Orchestrator. The screen then transitions to a chat interface with bots, where the user interacts with a chatbot named \"Hermes\" to discuss research topics. The user receives a response from the bot, which is then followed by a message from the Orchestrator bot.",
+      "sampled_timestamps": [
+        984.3834,
+        1003.1354666666667,
+        1021.8875333333334,
+        1040.6396
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E002"
+    },
+    "E003": {
+      "start": 1050.0,
+      "end": 1125.0,
+      "transcript": "[1050.85–1054.97] communicating back and forth with one another to solve a particular problem. So this is where\n[1054.97–1059.25] we go from not just having a loop but going from a loop to a graph. Now I've\n[1059.25–1062.45] already talked a lot about this in the last two videos. In the first video I\n[1062.45–1065.77] gave an overview on what bot mode is, how to get it set up and how to customize\n[1065.77–1069.81] each of these individual profiles. So I'm not gonna touch on that today. And then\n[1069.81–1073.09] in the second video we did a specific research upgrade where I updated the\n[1073.09–1076.57] capabilities of the researcher to be a much more powerful tool. The main skill\n[1076.57–1079.17] that I gave the researcher as an upgrade allowed it to check both\n[1079.17–1082.97] academic sources and state-of-the-art sources and then corroborate the two of\n[1082.97–1086.65] them. I just wanted to quickly show you this because it is a form of graph in the sense that\n[1086.65–1091.37] the orchestrator is able to communicate and message back and forth with the different sub-agents,\n[1091.37–1096.17] but it's not the same as a full task graph like we can get into with Kanban. All you need to know\n[1096.17–1100.73] at this point is that the orchestrator is the one that I message. It's my human proxy, the one that\n[1100.73–1105.21] controls the other agents. The researcher is able to investigate. So in the example of information\n[1105.21–1110.17] coming in, the orchestrator would create the task and then give it to the researcher to go\n[1110.17–1114.21] investigate and then the librarian works with my existing LLM wiki to take the\n[1114.21–1118.73] output research that I've approved as a human and file it into my LLM wiki or\n[1118.73–1123.13] my knowledge base in obsidian. So in a graph each node can be a single agent or",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00375",
+          "start": 1050.85,
+          "end": 1054.97
+        },
+        {
+          "id": "T00376",
+          "start": 1054.97,
+          "end": 1059.25
+        },
+        {
+          "id": "T00377",
+          "start": 1059.25,
+          "end": 1062.45
+        },
+        {
+          "id": "T00378",
+          "start": 1062.45,
+          "end": 1065.77
+        },
+        {
+          "id": "T00379",
+          "start": 1065.77,
+          "end": 1069.81
+        },
+        {
+          "id": "T00380",
+          "start": 1069.81,
+          "end": 1073.09
+        },
+        {
+          "id": "T00381",
+          "start": 1073.09,
+          "end": 1076.57
+        },
+        {
+          "id": "T00382",
+          "start": 1076.57,
+          "end": 1079.17
+        },
+        {
+          "id": "T00383",
+          "start": 1079.17,
+          "end": 1082.97
+        },
+        {
+          "id": "T00384",
+          "start": 1082.97,
+          "end": 1086.65
+        },
+        {
+          "id": "T00385",
+          "start": 1086.65,
+          "end": 1091.37
+        },
+        {
+          "id": "T00386",
+          "start": 1091.37,
+          "end": 1096.17
+        },
+        {
+          "id": "T00387",
+          "start": 1096.17,
+          "end": 1100.73
+        },
+        {
+          "id": "T00388",
+          "start": 1100.73,
+          "end": 1105.21
+        },
+        {
+          "id": "T00389",
+          "start": 1105.21,
+          "end": 1110.17
+        },
+        {
+          "id": "T00390",
+          "start": 1110.17,
+          "end": 1114.21
+        },
+        {
+          "id": "T00391",
+          "start": 1114.21,
+          "end": 1118.73
+        },
+        {
+          "id": "T00392",
+          "start": 1118.73,
+          "end": 1123.13
+        }
+      ],
+      "visual_observation": "At 1059.392 seconds, the screen shows a Slack interface with a chat thread about a research project. At 1078.144 seconds, the chat thread is updated with a message from 'Orchestrator' about a 'poisoning' issue. At 1096.896 seconds, the interface shows a new message from 'Orchestrator' asking for clarification on a task. At 1115.648 seconds, the screen displays a diagram of a 'Governed Quality Loop' with various stages and arrows indicating the flow of the process.",
+      "sampled_timestamps": [
+        1059.3916666666667,
+        1078.1437333333333,
+        1096.8958,
+        1115.6478666666667
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E003"
+    },
+    "E004": {
+      "start": 1125.0,
+      "end": 1200.0,
+      "transcript": "[1128.01–1132.57] as part of a bigger macro loop. So in group chats one of the key limitations is\n[1132.57–1135.73] that they only have the ability to go back and forth three times before they\n[1135.73–1139.85] have to stop and check what you actually want.\n[1139.85–1142.89] So before we actually get into running these full control graphs, I just wanted to quickly\n[1142.89–1147.53] talk about a couple examples on how this fits together so that you can see what the graph\n[1147.53–1151.29] might look like before we get into how to set it up, just so it makes a little bit more\n[1151.29–1152.53] practical sense.\n[1152.53–1156.61] So imagine you have an email come in and you want to have a decision.\n[1156.61–1160.09] Maybe you want to have a draft created, maybe you want to have some research done, maybe\n[1160.09–1161.09] both.\n[1161.09–1164.89] So the email can come in and it can trigger an agent, like the researcher agent, to pull\n[1164.89–1169.13] in the relevant context and the evidence by doing some research. Once it's done, it can\n[1169.13–1174.17] then create a brief, like a research brief and draft a reply and then hand it off to you for review.\n[1174.17–1177.45] If you don't think it's good enough quality or you think it's missing something, you can provide\n[1177.45–1182.25] some more context, some more commentary, or steer it, and you can have it go back and loop again.\n[1182.25–1186.17] So this brings in a loop, but it's a human in the loop. Then if it meets your approval,\n[1186.17–1190.65] you can have it create the draft or even potentially send it right away if you've already reviewed\n[1190.65–1195.61] the final result. It's up to you if you want to have the send capability given to the agent or if",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00394",
+          "start": 1128.01,
+          "end": 1132.57
+        },
+        {
+          "id": "T00395",
+          "start": 1132.57,
+          "end": 1135.73
+        },
+        {
+          "id": "T00396",
+          "start": 1135.73,
+          "end": 1139.85
+        },
+        {
+          "id": "T00397",
+          "start": 1139.85,
+          "end": 1142.89
+        },
+        {
+          "id": "T00398",
+          "start": 1142.89,
+          "end": 1147.53
+        },
+        {
+          "id": "T00399",
+          "start": 1147.53,
+          "end": 1151.29
+        },
+        {
+          "id": "T00400",
+          "start": 1151.29,
+          "end": 1152.53
+        },
+        {
+          "id": "T00401",
+          "start": 1152.53,
+          "end": 1156.61
+        },
+        {
+          "id": "T00402",
+          "start": 1156.61,
+          "end": 1160.09
+        },
+        {
+          "id": "T00403",
+          "start": 1160.09,
+          "end": 1161.09
+        },
+        {
+          "id": "T00404",
+          "start": 1161.09,
+          "end": 1164.89
+        },
+        {
+          "id": "T00405",
+          "start": 1164.89,
+          "end": 1169.13
+        },
+        {
+          "id": "T00406",
+          "start": 1169.13,
+          "end": 1174.17
+        },
+        {
+          "id": "T00407",
+          "start": 1174.17,
+          "end": 1177.45
+        },
+        {
+          "id": "T00408",
+          "start": 1177.45,
+          "end": 1182.25
+        },
+        {
+          "id": "T00409",
+          "start": 1182.25,
+          "end": 1186.17
+        },
+        {
+          "id": "T00410",
+          "start": 1186.17,
+          "end": 1190.65
+        },
+        {
+          "id": "T00411",
+          "start": 1190.65,
+          "end": 1195.61
+        }
+      ],
+      "visual_observation": "At 1134.400 seconds, a flowchart displays a chatbot interaction in a group chat, with users 'You', 'Bot A', 'Bot B', and 'Bot C' communicating. At 1153.152 seconds, the screen transitions to an 'Email to Decision Brief' process, showing a sequence of steps from 'Important email' to 'Send & save'. The process is illustrated with cartoon characters and icons.",
+      "sampled_timestamps": [
+        1134.3999333333334,
+        1153.152,
+        1171.9040666666667,
+        1190.6561333333334
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E004"
+    }
+  },
+  "decisions": [
+    {
+      "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"From 900 to 975 seconds, the video shows a text-based interface with a list of research tasks and roles, including researcher, librarian, and orchestrator. From 975 to 1050 seconds, the screen transitions to a chat interface where a bot named Hermes is used to discuss research topics, with profiles for different agents. From 1050 to 1125 seconds, the video shows a Slack interface with a chat thread about a research project, including messages from the Orchestrator bot. From 1125 to 1200 seconds, the video displays a flowchart illustrating an email-to-decision-brief process with agents communicating in a group chat, showing a loop for review and feedback. The video does not show any specific events or actions in the 15th to 20th minute beyond these descriptions.\"}",
+      "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+      "error_type": "invalid_model_response"
+    },
+    {
+      "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"From 900 to 975 seconds, the video shows a text-based interface with a list of research tasks and roles, including researcher, librarian, and orchestrator. From 975 to 1050 seconds, the screen transitions to a chat interface where a bot named Hermes is used to discuss research topics, with profiles for different agents. From 1050 to 1125 seconds, the video shows a Slack interface with a chat thread about a research project, including messages from the Orchestrator bot. From 1125 to 1200 seconds, the video displays a flowchart illustrating an email-to-decision-brief process with agents communicating in a group chat, showing a loop for review and feedback. The video does not show any specific events or actions in the 15th to 20th minute beyond these descriptions.\",\"citations\":[{\"evidence_id\":\"E001\"},{\"evidence_id\":\"E002\"},{\"evidence_id\":\"E003\"},{\"evidence_id\":\"E004\"}]}"
+    }
+  ],
+  "provenance": {
+    "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+    "prompt_version": "clipscout-v6-temporal-scopes"
+  },
+  "verification": "citation IDs, evidence bounds and requested temporal constraints checked; explicit moments require target frames; semantic entailment NOT automatically verified",
+  "run_id": "20261022T061451Z_83ef7a4af8ee"
+}

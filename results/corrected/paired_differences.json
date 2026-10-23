@@ -1,0 +1,156 @@
+{
+  "direction": "adaptive minus named baseline",
+  "comparisons": {
+    "retrieval-only": {
+      "task_success_proxy": {
+        "mean": 0.07692307692307693,
+        "low": -0.23076923076923078,
+        "high": 0.38461538461538464,
+        "n": 13,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "token_f1": {
+        "mean": 0.15844471915952532,
+        "low": 0.05989031615332495,
+        "high": 0.2657778973545426,
+        "n": 11,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "temporal_iou": {
+        "mean": 0.18021739860283156,
+        "low": 0.06918159520425293,
+        "high": 0.30022278122151025,
+        "n": 11,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "temporal_recall_at_0_3": {
+        "mean": 0.18181818181818182,
+        "low": 0.0,
+        "high": 0.45454545454545453,
+        "n": 11,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "frames_used": {
+        "mean": 4.0,
+        "low": 4.0,
+        "high": 4.0,
+        "n": 13,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "latency_seconds": {
+        "mean": 11.807753846153846,
+        "low": 5.594714807692309,
+        "high": 19.52412096153846,
+        "n": 13,
+        "samples": 1000,
+        "confidence": 0.95
+      }
+    },
+    "static": {
+      "task_success_proxy": {
+        "mean": 0.23076923076923078,
+        "low": 0.0,
+        "high": 0.46153846153846156,
+        "n": 13,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "token_f1": {
+        "mean": 0.14877000220089964,
+        "low": -0.013923364255208754,
+        "high": 0.2970885519180227,
+        "n": 11,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "temporal_iou": {
+        "mean": 0.07638691237893891,
+        "low": -0.11033390019968274,
+        "high": 0.2628908644610464,
+        "n": 11,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "temporal_recall_at_0_3": {
+        "mean": 0.0,
+        "low": -0.3193181818181808,
+        "high": 0.3181818181818182,
+        "n": 11,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "frames_used": {
+        "mean": -8.0,
+        "low": -8.0,
+        "high": -8.0,
+        "n": 13,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "latency_seconds": {
+        "mean": -150.83412307692308,
+        "low": -217.3739771153846,
+        "high": -97.28214288461541,
+        "n": 13,
+        "samples": 1000,
+        "confidence": 0.95
+      }
+    },
+    "uniform": {
+      "task_success_proxy": {
+        "mean": 0.07692307692307693,
+        "low": -0.23269230769230595,
+        "high": 0.38461538461538464,
+        "n": 13,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "token_f1": {
+        "mean": 0.16081647184005096,
+        "low": 0.03178366105925055,
+        "high": 0.28917564213512825,
+        "n": 11,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "temporal_iou": {
+        "mean": 0.24557031558895218,
+        "low": 0.09113286089857323,
+        "high": 0.4074896118475399,
+        "n": 11,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "temporal_recall_at_0_3": {
+        "mean": 0.22727272727272727,
+        "low": -0.045454545454545456,
+        "high": 0.5454545454545454,
+        "n": 11,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "frames_used": {
+        "mean": -12.0,
+        "low": -12.0,
+        "high": -12.0,
+        "n": 13,
+        "samples": 1000,
+        "confidence": 0.95
+      },
+      "latency_seconds": {
+        "mean": -151.11578461538463,
+        "low": -201.47352288461533,
+        "high": -102.50035923076923,
+        "n": 13,
+        "samples": 1000,
+        "confidence": 0.95
+      }
+    }
+  },
+  "note": "Exploratory paired percentile bootstrap over questions from one video. Questions are dependent; intervals are not evidence of cross-video generalization. No correction for multiple comparisons; latency has one run per question."
+}

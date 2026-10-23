@@ -1,0 +1,17 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "reported_total_memory_mib": 8188,
+  "driver_version": "581.08",
+  "source": "nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader",
+  "runtime": "Python/package/OS versions are recorded in manifest.json",
+  "latency_note": "Single sequential run on a user laptop, no control of background load or power profile. Development memory occupancy snapshots are not profiler-measured peak allocation.",
+  "concurrent_gpu_observation": {
+    "observed_utc": "2026-10-21T20:10:59.179924+00:00",
+    "other_compute_process": "llama-server",
+    "project_process": "python",
+    "gpu_utilization_percent": 100,
+    "note": "Observed during static mode alongside desktop processes. User then explicitly authorized stopping the unrelated server; process identity was checked before stopping. Per-process GPU utilization was not measured."
+  },
+  "background_server_stopped_utc": "2026-10-21T20:12:07.8333361Z",
+  "latency_conditions": "Mixed and uncontrolled: adaptive/retrieval-only/static visual_01 completed before the observed competing server was stopped; its presence/load at the start was not instrumented. static visual_02 straddled the stop; subsequent questions ran without that process. No controlled speed comparison is possible."
+}

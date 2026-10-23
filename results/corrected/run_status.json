@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "checked_utc": "2026-10-21T21:24:42.714800+00:00",
+  "completion": "Evaluator resumed to completion and exited with code 0; all 52 final predictions retained, including errors and abstentions.",
+  "prediction_counts": {
+    "adaptive": 13,
+    "retrieval-only": 13,
+    "static": 13,
+    "uniform": 13
+  },
+  "total_predictions": 52,
+  "audited_predictions": 52,
+  "protocol": "posthoc protocol-corrected repeat; not independent heldout evaluation",
+  "prompt_version": "clipscout-v4-finalizer",
+  "process_count": 2,
+  "preserved_pre_resume_predictions": 40,
+  "interrupted_partial_cost_known": false,
+  "source_and_data_verification": "artifact_verification.json",
+  "experiment_source_package": "clipscout/*.py hashes in manifest; unchanged throughout corrected series",
+  "ui_translation": "Only static/index.html changed to English; no extra model queries for UI verification",
+  "artifact_sha256": {
+    "manifest.json": "2d7fc8db632d92fb9b3fc3593ea3219b3e837bb788ef852087bdf1a577c444c7",
+    "manifest.initial_process.json": "ed63887ee1af89e056b0f55954be4c17de5cdcb7e268b56a53c3175c2ba882ab",
+    "resume_history.json": "be2a85e481eb534da487bcce133c27d529140873547e2b180626907032b33c1d",
+    "artifact_verification.json": "8b55f3dfef5aae4590efa6fb74e7782967215a8c466da4320f1ffda76edcf234",
+    "comparison.json": "cb3280ee34d6336534cce0e654f2a25dcc78daca755471d6c4c8bdb240d5a6c6",
+    "paired_differences.json": "a5ce4f14fb55927de64c8b211ba901a3056e3f0441f62bac24b602099dfbdd47",
+    "modality_metrics.json": "bbbb46a5f565ea76d234cf37805bc4915be4b88667ac64d09c0e561c8cc7de79",
+    "speech_audit.json": "46c74eb7cb459fbecc523e91be3360ae0d4e228763d9e8853c728bfd9d19647a",
+    "visual_audit.json": "3e0cae230275e1ba99f9cfaacbb64d64022195a4b621e736aa9252b90bf04478"
+  }
+}

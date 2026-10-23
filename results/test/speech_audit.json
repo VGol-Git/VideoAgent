@@ -1,0 +1,939 @@
+{
+  "schema_version": 1,
+  "status": "partial_pilot_audit_stopped_after_protocol_confound",
+  "reviewer": "assistant",
+  "independent_human_evaluation": false,
+  "blind_review": false,
+  "audio_independently_listened_to": false,
+  "reference_status": "ASR-supported silver references; conclusions conditional on transcript correctness",
+  "created_at_utc": "2026-10-21T19:40:48.447150+00:00",
+  "dataset_sha256": "69e053f8a6c5d2dec5d4cca8242ec3280be8bcc73ac77d18ca1fbd5056bcc772",
+  "experiment_manifest_sha256": "0c38c3084f5cc8e79b61602f98644b17ba58f39b086c6cfb9ddd43952fc0b154",
+  "scope": {
+    "split": "test",
+    "question_ids": [
+      "speech_05",
+      "speech_06",
+      "speech_07",
+      "speech_08",
+      "speech_09",
+      "speech_10",
+      "speech_11",
+      "speech_12"
+    ],
+    "modes": [
+      "adaptive",
+      "retrieval-only",
+      "static",
+      "uniform"
+    ],
+    "expected_rows": 32,
+    "temporal_question_ids": [
+      "speech_07",
+      "speech_11"
+    ]
+  },
+  "rubric": {
+    "semantic_correctness": {
+      "0": "Incorrect, unsupported requested answer, execution error, or abstention on an answerable question.",
+      "1": "Partially correct; a material required fact or qualification is missing.",
+      "2": "All required facts and qualifications are correct relative to the source transcript."
+    },
+    "evidence_support": {
+      "0": "Key claims lack supporting cited evidence, or no supported answer is produced.",
+      "1": "Cited evidence supports only some material claims.",
+      "2": "Cited available evidence supports all material claims; for a correct negative, uncertainty is appropriately scoped without an invented value."
+    },
+    "temporal_order": "0 incorrect or unanswered; 1 incomplete/ambiguous; 2 required order correct; null for other question categories.",
+    "negative_question": "A scoped sufficient-evidence refusal can score correctness=2 and abstention_correct=1. Execution errors never earn abstention credit.",
+    "strict_success": "Answerable: correctness and support both2, temporal order2 if applicable. Unanswerable: correct scoped abstention with no invented numerical answer.",
+    "failure_types": [
+      "retrieval",
+      "recognition",
+      "reasoning",
+      "format",
+      "abstention"
+    ],
+    "failure_attribution": "Diagnostic interpretation of visible trace, not causal proof. Retrieval includes wrong selection/window; recognition includes incorrect VLM observation. Explicit backend errors remain separately recorded."
+  },
+  "limitations": [
+    "Reviewer knows the questions, silver references and mode names; this is not blind independent human evaluation.",
+    "The reviewer compares answers, citations and ledger text against the complete ASR transcript; audio truth has not been independently verified.",
+    "The dataset and retrieval share an ASR source, so high agreement may reflect shared recognition errors.",
+    "Assistant-assigned semantic grades are diagnostic and must not replace independent human evaluation."
+  ],
+  "prediction_sources": {
+    "adaptive": {
+      "path": "results/test/adaptive.predictions.json",
+      "sha256_at_last_read": "a849f8955c90579060bd49e9e3157b2ebe436b93610d935443383f0b3ab5f623",
+      "prediction_count_at_last_read": 13
+    },
+    "retrieval-only": {
+      "path": "results/test/retrieval-only.predictions.json",
+      "sha256_at_last_read": "ace84f0ff4580524519defe89dcb437c97ed2d6791d7d079ec1ac60eb34bc601",
+      "prediction_count_at_last_read": 13
+    }
+  },
+  "rows": [
+    {
+      "question_id": "speech_05",
+      "mode": "adaptive",
+      "category": "reasoning",
+      "reference_answerable": true,
+      "status": "answered",
+      "answer": "The parent must put sufficient information in the goal and context fields of delegate_task because subagents start with completely fresh conversations and have zero knowledge of the parent's conversation history, tool calls, or previous discussions. This ensures that the subagent has the necessary context to perform its task effectively, especially when dealing with complex or specialized situations that require more than just the initial goal.",
+      "citations": [
+        {
+          "evidence_id": "E001",
+          "start": 420.68,
+          "end": 451.36
+        }
+      ],
+      "semantic_correctness": 2,
+      "evidence_support": 2,
+      "temporal_order": null,
+      "abstention_correct": null,
+      "strict_semantic_success": true,
+      "failure_types": [],
+      "notes": "Correct core explanation: fresh child conversations do not inherit parent history/tools, so the parent must supply task context. Cited E001 contains the fresh-context premise; its visual observation also states the goal/context handoff. The added specialization wording is a general extrapolation, not needed for the answer.",
+      "source_cue_ids_reviewed": [
+        "T00131",
+        "T00132",
+        "T00133",
+        "T00134",
+        "T00135",
+        "T00136",
+        "T00137",
+        "T00138",
+        "T00139",
+        "T00140"
+      ],
+      "ledger_ids_reviewed": [
+        "E001"
+      ],
+      "tool_calls": 2,
+      "frames_used": 4,
+      "latency_seconds": 21.6617,
+      "error": null,
+      "error_type": null,
+      "stop_reason": null,
+      "prediction_sha256": "b0b8daa62110a010c2e59b45b0f52ef1f79675d2295c039e5e5e9223ce70f393",
+      "reviewed_at_utc": "2026-10-21T19:45:50.529596+00:00"
+    },
+    {
+      "question_id": "speech_06",
+      "mode": "adaptive",
+      "category": "localization",
+      "reference_answerable": true,
+      "status": "answered",
+      "answer": "The presenter first introduces the /goal command at 481.04 seconds. The command allows the session to set a goal for the agent, which is then used to track progress and check the bounded outcomes of the task.",
+      "citations": [
+        {
+          "evidence_id": "E001",
+          "start": 481.04,
+          "end": 510.69
+        }
+      ],
+      "semantic_correctness": 1,
+      "evidence_support": 1,
+      "temporal_order": null,
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "failure_types": [
+        "reasoning",
+        "retrieval"
+      ],
+      "notes": "Partially correct function, but the answer gives the retrieved chunk start481.04s as the first introduction instead of the actual /goal cue490.49s. It omits continuation across turns and the budget qualification. The inspected chunk ends510.69s, before the bounded-outcome/progress/budget explanation519.25-531.25s; those statements were only in another retrieved hit. It stops after2 of4 calls despite this gap.",
+      "source_cue_ids_reviewed": [
+        "T00156",
+        "T00157",
+        "T00158",
+        "T00159",
+        "T00167",
+        "T00168",
+        "T00169",
+        "T00170"
+      ],
+      "ledger_ids_reviewed": [
+        "E001"
+      ],
+      "tool_calls": 2,
+      "frames_used": 4,
+      "latency_seconds": 13.8774,
+      "error": null,
+      "error_type": null,
+      "stop_reason": null,
+      "prediction_sha256": "7c0f077220567d84caded22f62a0699ed7508776590958020d64f9f64da98402",
+      "reviewed_at_utc": "2026-10-21T19:45:50.529596+00:00"
+    },
+    {
+      "question_id": "speech_07",
+      "mode": "adaptive",
+      "category": "temporal",
+      "reference_answerable": true,
+      "status": "error",
+      "answer": "",
+      "citations": [],
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "temporal_order": 0,
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "failure_types": [
+        "format",
+        "retrieval",
+        "reasoning"
+      ],
+      "notes": "Final result is an execution/schema error after3 citation-free finalization attempts, not a valid answer or abstention. Only the criterion-addition interval602.73-630.79s was inspected; delegation is in633.11-648.11s. Rejected raw answers infer the correct order, but later retries falsely place academic delegation/awaiting peer review at620.17-624.21s. No credit is assigned to rejected raw text.",
+      "source_cue_ids_reviewed": [
+        "T00203",
+        "T00204",
+        "T00205",
+        "T00206",
+        "T00207",
+        "T00208",
+        "T00216",
+        "T00217",
+        "T00218",
+        "T00219",
+        "T00220"
+      ],
+      "ledger_ids_reviewed": [
+        "E001"
+      ],
+      "tool_calls": 2,
+      "frames_used": 4,
+      "latency_seconds": 28.418,
+      "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+      "error_type": "invalid_model_response",
+      "stop_reason": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+      "prediction_sha256": "717512980b53bf3af94387218b5a00fc75e0fc53b8da2b79a57348f9050b1e29",
+      "reviewed_at_utc": "2026-10-21T19:45:50.529596+00:00"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "speech_08",
+      "semantic_correctness": 2,
+      "evidence_support": 2,
+      "temporal_order": null,
+      "failure_types": [],
+      "notes": "Correct durability mechanism: conversation compression can lose delegated context, while SQLite preserves an auditable work queue. E001 contains the spoken contrast and the table observation. The answer phrases context loss more categorically than the speaker's 'can'; the core requested contrast remains supported.",
+      "source_cue_ids_reviewed": [
+        "T00464",
+        "T00465",
+        "T00466",
+        "T00469",
+        "T00470",
+        "T00471",
+        "T00472",
+        "T00473",
+        "T00474",
+        "T00475",
+        "T00476",
+        "T00477",
+        "T00478"
+      ],
+      "category": "reasoning",
+      "reference_answerable": true,
+      "status": "answered",
+      "answer": "The database-backed work queue in Kanban is more durable for reviewing handoffs because it maintains a persistent audit trail in a SQLite database, allowing access to the context even after the system compresses. In contrast, delegated tasks (tool calls) lose context when the system compresses, as the context is not stored persistently. This ensures that the state of the work queue can be recovered and reviewed, making it more reliable for handoffs.",
+      "citations": [
+        {
+          "evidence_id": "E001",
+          "start": 1410.56,
+          "end": 1441.2
+        }
+      ],
+      "abstention_correct": null,
+      "strict_semantic_success": true,
+      "ledger_ids_reviewed": [
+        "E001"
+      ],
+      "tool_calls": 2,
+      "frames_used": 4,
+      "latency_seconds": 15.3777,
+      "error": null,
+      "error_type": null,
+      "stop_reason": null,
+      "prediction_sha256": "784cf146ef6e4d728a98467ab4fbd8540bc93c6a16d5314a0534dcc39c2743d3",
+      "reviewed_at_utc": "2026-10-21T19:46:45.024061+00:00"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "speech_09",
+      "semantic_correctness": 1,
+      "evidence_support": 1,
+      "temporal_order": null,
+      "failure_types": [
+        "recognition",
+        "reasoning"
+      ],
+      "notes": "The central planning-versus-execution and worker-token-cost explanation is correct, but the answer adds an unsupported claim that this is a common practice in Kanban systems and recasts planner judgment as assigning complex versus simple tasks to capable team members. That generalization originates in a long repetitive visual observation, not the cited speech. The cited transcript itself contains a cleaner, sufficient explanation; this is observation contamination despite relevant retrieval.",
+      "source_cue_ids_reviewed": [
+        "T00556",
+        "T00557",
+        "T00559",
+        "T00560",
+        "T00561",
+        "T00562",
+        "T00563",
+        "T00564",
+        "T00565",
+        "T00566",
+        "T00567",
+        "T00568",
+        "T00569"
+      ],
+      "category": "reasoning",
+      "reference_answerable": true,
+      "status": "answered",
+      "answer": "The presenter suggests using a powerful Kanban decomposer and a less powerful worker for a well-scoped card because the decomposer is used to break down complex tasks into smaller, manageable components, while the worker handles the simpler, more straightforward parts. This approach ensures that the most complex tasks are handled by the most capable team members, while the simpler tasks are handled by less capable workers. This is a common practice in Kanban systems to optimize resource allocation and reduce costs, as workers are where the vast majority of tokens are spent.",
+      "citations": [
+        {
+          "evidence_id": "E001",
+          "start": 1651.7,
+          "end": 1712.78
+        }
+      ],
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001"
+      ],
+      "tool_calls": 2,
+      "frames_used": 4,
+      "latency_seconds": 136.1058,
+      "error": null,
+      "error_type": null,
+      "stop_reason": null,
+      "prediction_sha256": "f10b487513d7ce07540faeeb9693f06caf4bfe206cc3dd50e1f0d03b20fa78f1",
+      "reviewed_at_utc": "2026-10-21T19:48:43.942893+00:00"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "speech_10",
+      "semantic_correctness": 1,
+      "evidence_support": 1,
+      "temporal_order": null,
+      "failure_types": [
+        "retrieval",
+        "recognition",
+        "reasoning"
+      ],
+      "notes": "Both requested limits are correctly recovered from the transcript: five sources and <=500 words, and the answer preserves estimate rather than measured consumption. However, its claimed drop interval1890.41-1920.39s ends exactly where the spoken45000-to18000 result begins (T00653 at1920.39-1923.05s). The inspected visual observation also incorrectly calls45000tokens a limit. The final answer resists that incorrect limit but copies an unsupported event interval; it omits the next retrieved/inspectable result passage.",
+      "source_cue_ids_reviewed": [
+        "T00648",
+        "T00649",
+        "T00650",
+        "T00651",
+        "T00652",
+        "T00653",
+        "T00654",
+        "T00655",
+        "T00656",
+        "T00657"
+      ],
+      "category": "localization",
+      "reference_answerable": true,
+      "status": "answered",
+      "answer": "The later Kanban task-estimation demonstration where the estimate drops from 45,000 to 18,000 tokens occurs between 1890.41 and 1920.39 seconds. The two limits added before re-estimating are: 'Please limit your search to five sources' and 'the output document to 500 words or less.'",
+      "citations": [
+        {
+          "evidence_id": "E001",
+          "start": 1890.41,
+          "end": 1920.39
+        }
+      ],
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001"
+      ],
+      "tool_calls": 2,
+      "frames_used": 4,
+      "latency_seconds": 20.2019,
+      "error": null,
+      "error_type": null,
+      "stop_reason": null,
+      "prediction_sha256": "e215ef7e2e27606e77689c54aa88be0ff42341fe5be6746633c249d293b8acb2",
+      "reviewed_at_utc": "2026-10-21T19:48:43.944889+00:00"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "speech_11",
+      "semantic_correctness": 2,
+      "evidence_support": 0,
+      "temporal_order": 2,
+      "failure_types": [
+        "retrieval",
+        "recognition",
+        "reasoning"
+      ],
+      "notes": "The one-word answer 'before' matches the required order, but its sole citation1230-1262s is the earlier Article/Two Loops conceptual sequence, not the demonstrated Kanban workflow around2085-2118s. The visual observation asserts the requested order while also admitting report delivery is not shown; its static diagram descriptions do not establish completion of the two later researcher cards. This is a correct ungrounded answer with formally valid evidence ID/bounds, illustrating why citation validity is not entailment.",
+      "source_cue_ids_reviewed": [
+        "T00418",
+        "T00419",
+        "T00420",
+        "T00421",
+        "T00422",
+        "T00423",
+        "T00424",
+        "T00425",
+        "T00726",
+        "T00727",
+        "T00728",
+        "T00733",
+        "T00734",
+        "T00735",
+        "T00736",
+        "T00737",
+        "T00738",
+        "T00739",
+        "T00740",
+        "T00741"
+      ],
+      "category": "temporal",
+      "reference_answerable": true,
+      "status": "answered",
+      "answer": "before",
+      "citations": [
+        {
+          "evidence_id": "E001",
+          "start": 1230.0,
+          "end": 1262.0
+        }
+      ],
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001"
+      ],
+      "tool_calls": 2,
+      "frames_used": 4,
+      "latency_seconds": 16.1256,
+      "error": null,
+      "error_type": null,
+      "stop_reason": null,
+      "prediction_sha256": "00d0824e6e8d78727557ee111e813366fcd48df660a36f811f5f68f6654a5a8c",
+      "reviewed_at_utc": "2026-10-21T19:48:43.947090+00:00"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "speech_12",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "temporal_order": null,
+      "failure_types": [
+        "retrieval",
+        "recognition",
+        "reasoning"
+      ],
+      "notes": "False positive on the unanswerable question. The answer invents a95% confidence interval equal to the inspected clip's timestamps331.60-360.56seconds, conflating temporal location with a statistical interval. E001 is the earlier102k/37k token comparison, not the closing comparison. Its transcript gives no CI; the visual observation fabricates the same sentence and the finalizer repeats it. Formally valid citation bounds do not support this numerical claim.",
+      "source_cue_ids_reviewed": [
+        "T00078",
+        "T00083",
+        "T00084",
+        "T00085",
+        "T00086",
+        "T00087",
+        "T00088",
+        "T00089",
+        "T00090",
+        "T00856",
+        "T00857",
+        "T00858",
+        "T00859",
+        "T00860",
+        "T00861",
+        "T00862",
+        "T00863",
+        "T00864",
+        "T00865"
+      ],
+      "category": "unanswerable",
+      "reference_answerable": false,
+      "status": "answered",
+      "answer": "The 95% confidence interval for the token-usage difference between delegated single-agent and orchestrator-only workflows is reported as 331.60–360.56 seconds. This interval is visible in the text of the screen at 335.235 seconds, which shows the \"Build an actionable information system\" project, and is confirmed in the text at 349.683 seconds, which discusses the comparison of delegation to non-delegation.",
+      "citations": [
+        {
+          "evidence_id": "E001",
+          "start": 331.6,
+          "end": 360.56
+        }
+      ],
+      "abstention_correct": 0,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001"
+      ],
+      "tool_calls": 2,
+      "frames_used": 4,
+      "latency_seconds": 21.7957,
+      "error": null,
+      "error_type": null,
+      "stop_reason": null,
+      "prediction_sha256": "9f67c1310eae313e843433bc3d2fabc817997150adab98ba89b9f38ac9bede2a",
+      "reviewed_at_utc": "2026-10-21T19:49:30.860273+00:00"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "speech_05",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "temporal_order": null,
+      "failure_types": [
+        "format"
+      ],
+      "notes": "Execution/schema error: finalization-only response requests action=search instead of answer. Retrieved E001 and E002 jointly contain sufficient goal/context and fresh-conversation evidence. This outcome is a finalization failure, not evidence of failed retrieval or an appropriate abstention.",
+      "source_cue_ids_reviewed": [
+        "T00131",
+        "T00132",
+        "T00133",
+        "T00134",
+        "T00135",
+        "T00136",
+        "T00137",
+        "T00138",
+        "T00139",
+        "T00140"
+      ],
+      "category": "reasoning",
+      "reference_answerable": true,
+      "status": "error",
+      "answer": "",
+      "citations": [],
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001",
+        "E002",
+        "E003"
+      ],
+      "tool_calls": 1,
+      "frames_used": 0,
+      "latency_seconds": 2.0948,
+      "error": "Invalid model response: ValueError: Final response must have action='answer'",
+      "error_type": "invalid_model_response",
+      "stop_reason": "Invalid model response: ValueError: Final response must have action='answer'",
+      "prediction_sha256": "f716f6b8a03193d170e3eae0bf59117277f0a9a08305412e6d3756d4ee159843",
+      "reviewed_at_utc": "2026-10-21T19:49:30.861273+00:00"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "speech_06",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "temporal_order": null,
+      "failure_types": [
+        "format"
+      ],
+      "notes": "Execution/schema error: the model requests search during finalization-only mode. E001 and E002 cover the introduction and bounded-outcome/progress/budget explanation, so relevant evidence was already available. No accepted answer or abstention is produced.",
+      "source_cue_ids_reviewed": [
+        "T00156",
+        "T00157",
+        "T00158",
+        "T00159",
+        "T00165",
+        "T00166",
+        "T00167",
+        "T00168",
+        "T00169",
+        "T00170"
+      ],
+      "category": "localization",
+      "reference_answerable": true,
+      "status": "error",
+      "answer": "",
+      "citations": [],
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001",
+        "E002",
+        "E003"
+      ],
+      "tool_calls": 1,
+      "frames_used": 0,
+      "latency_seconds": 1.7421,
+      "error": "Invalid model response: ValueError: Final response must have action='answer'",
+      "error_type": "invalid_model_response",
+      "stop_reason": "Invalid model response: ValueError: Final response must have action='answer'",
+      "prediction_sha256": "b99f1ce8f79ec5456c1a9d324316833ca5fb5b69b27529051ecc9ba2769334c2",
+      "reviewed_at_utc": "2026-10-21T19:49:30.862785+00:00"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "speech_07",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "temporal_order": 0,
+      "failure_types": [
+        "format"
+      ],
+      "notes": "Execution/schema error because the answer omits citations. The rejected raw response gives the correct before/after order and retrieved E001/E002 contain both events. Correct rejected prose is diagnostic only and receives no final-answer credit; the result is not a successful abstention.",
+      "source_cue_ids_reviewed": [
+        "T00203",
+        "T00204",
+        "T00205",
+        "T00206",
+        "T00207",
+        "T00208",
+        "T00214",
+        "T00215",
+        "T00216",
+        "T00217",
+        "T00218",
+        "T00219",
+        "T00220"
+      ],
+      "category": "temporal",
+      "reference_answerable": true,
+      "status": "error",
+      "answer": "",
+      "citations": [],
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001",
+        "E002",
+        "E003"
+      ],
+      "tool_calls": 1,
+      "frames_used": 0,
+      "latency_seconds": 5.2855,
+      "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+      "error_type": "invalid_model_response",
+      "stop_reason": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+      "prediction_sha256": "dd9b17be7cca7b6499d52a07194e9815bcc76ac4da0fc4bbef8f451a9cafe5ef",
+      "reviewed_at_utc": "2026-10-21T19:49:30.863797+00:00"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "speech_08",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "temporal_order": null,
+      "failure_types": [
+        "format",
+        "retrieval"
+      ],
+      "notes": "Execution/schema error: action=search instead of final answer. The three original-query hits do not include the explicit1414.6-1445.8s SQLite/compression explanation; two are earlier context discussions and one is a partly inaccurate/truncated comparison caption. Retrieval is a secondary evidence gap, but the observed terminal failure is output protocol.",
+      "source_cue_ids_reviewed": [
+        "T00464",
+        "T00465",
+        "T00466",
+        "T00469",
+        "T00470",
+        "T00471",
+        "T00472",
+        "T00473",
+        "T00474",
+        "T00475",
+        "T00476",
+        "T00477",
+        "T00478"
+      ],
+      "category": "reasoning",
+      "reference_answerable": true,
+      "status": "error",
+      "answer": "",
+      "citations": [],
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001",
+        "E002",
+        "E003"
+      ],
+      "tool_calls": 1,
+      "frames_used": 0,
+      "latency_seconds": 2.1723,
+      "error": "Invalid model response: ValueError: Final response must have action='answer'",
+      "error_type": "invalid_model_response",
+      "stop_reason": "Invalid model response: ValueError: Final response must have action='answer'",
+      "prediction_sha256": "a5aff77724ef530450f7eb17b7ba0b2988f0c5d8acca0e37462c4826c797a663",
+      "reviewed_at_utc": "2026-10-21T19:49:30.865796+00:00"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "speech_09",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "temporal_order": null,
+      "failure_types": [
+        "format"
+      ],
+      "notes": "Citation-free finalization is rejected. E001-E003 contain the full planning judgment, worker token-cost and cheaper-execution explanation; the rejected prose is mostly correct. The accepted system outcome is an error, so no answer or abstention credit is awarded.",
+      "source_cue_ids_reviewed": [
+        "T00556",
+        "T00557",
+        "T00559",
+        "T00560",
+        "T00561",
+        "T00562",
+        "T00563",
+        "T00564",
+        "T00565",
+        "T00570",
+        "T00571",
+        "T00572"
+      ],
+      "category": "reasoning",
+      "reference_answerable": true,
+      "status": "error",
+      "answer": "",
+      "citations": [],
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001",
+        "E002",
+        "E003"
+      ],
+      "tool_calls": 1,
+      "frames_used": 0,
+      "latency_seconds": 6.5153,
+      "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+      "error_type": "invalid_model_response",
+      "stop_reason": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+      "prediction_sha256": "ca70e916d911915b8b27803d733fd3f03d570d4a6a3b7a4536e9032aaa32e02d",
+      "reviewed_at_utc": "2026-10-21T19:50:07.011511+00:00"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "speech_10",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "temporal_order": null,
+      "failure_types": [
+        "format"
+      ],
+      "notes": "The finalizer emits search instead of answer. E001 contains the45000-to18000 result and both limits, and E003 contains their addition and re-estimation. The terminal error is output protocol despite sufficient retrieved speech.",
+      "source_cue_ids_reviewed": [
+        "T00648",
+        "T00649",
+        "T00650",
+        "T00651",
+        "T00652",
+        "T00653",
+        "T00654",
+        "T00655",
+        "T00656",
+        "T00657"
+      ],
+      "category": "localization",
+      "reference_answerable": true,
+      "status": "error",
+      "answer": "",
+      "citations": [],
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001",
+        "E002",
+        "E003"
+      ],
+      "tool_calls": 1,
+      "frames_used": 0,
+      "latency_seconds": 3.2468,
+      "error": "Invalid model response: ValueError: Final response must have action='answer'",
+      "error_type": "invalid_model_response",
+      "stop_reason": "Invalid model response: ValueError: Final response must have action='answer'",
+      "prediction_sha256": "282b1cd9d44a57ae8f8e9e4accfc9a989a5d557b0d323cad4f51c89ae69138dd",
+      "reviewed_at_utc": "2026-10-21T19:50:07.013431+00:00"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "speech_11",
+      "semantic_correctness": 2,
+      "evidence_support": 1,
+      "temporal_order": 2,
+      "failure_types": [
+        "reasoning"
+      ],
+      "notes": "The answer 'before' is correct. However, the sole cited E003 at2220.08-2252.2s is a later recap that lists two research subtasks and a writing task, describes the root waking after children, and cuts off at 'sent it back'. It only partially establishes the specific report-delivery unblock/Ready/Running sequence. Uncited E001 at2101.71-2131.77s directly supports that sequence, so this is poor citation selection despite available evidence; the later recap is not treated as wholly irrelevant.",
+      "source_cue_ids_reviewed": [
+        "T00734",
+        "T00735",
+        "T00736",
+        "T00737",
+        "T00738",
+        "T00739",
+        "T00740",
+        "T00741",
+        "T00776",
+        "T00777",
+        "T00778",
+        "T00779",
+        "T00780",
+        "T00781",
+        "T00782",
+        "T00783",
+        "T00784",
+        "T00785",
+        "T00786",
+        "T00787"
+      ],
+      "category": "temporal",
+      "reference_answerable": true,
+      "status": "answered",
+      "answer": "before",
+      "citations": [
+        {
+          "evidence_id": "E003",
+          "start": 2220.08,
+          "end": 2252.2
+        }
+      ],
+      "abstention_correct": null,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001",
+        "E002",
+        "E003"
+      ],
+      "tool_calls": 1,
+      "frames_used": 0,
+      "latency_seconds": 2.6124,
+      "error": null,
+      "error_type": null,
+      "stop_reason": null,
+      "prediction_sha256": "bac24f801442b0d79297eb3c7c79c89c6f3d62f8aecb209c0868085bf139826a",
+      "reviewed_at_utc": "2026-10-21T19:50:07.016430+00:00"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "speech_12",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "temporal_order": null,
+      "failure_types": [
+        "format"
+      ],
+      "notes": "Finalization emits a search action and is rejected. The top retrieved E001 is the correct closing comparison and explicitly calls it not a proper benchmark, giving no CI. The run neither fabricates an accepted value nor produces a valid scoped refusal; an execution error is not correct abstention.",
+      "source_cue_ids_reviewed": [
+        "T00856",
+        "T00857",
+        "T00858",
+        "T00859",
+        "T00860",
+        "T00861"
+      ],
+      "category": "unanswerable",
+      "reference_answerable": false,
+      "status": "error",
+      "answer": "",
+      "citations": [],
+      "abstention_correct": 0,
+      "strict_semantic_success": false,
+      "ledger_ids_reviewed": [
+        "E001",
+        "E002",
+        "E003"
+      ],
+      "tool_calls": 1,
+      "frames_used": 0,
+      "latency_seconds": 2.2326,
+      "error": "Invalid model response: ValueError: Final response must have action='answer'",
+      "error_type": "invalid_model_response",
+      "stop_reason": "Invalid model response: ValueError: Final response must have action='answer'",
+      "prediction_sha256": "9ca06ca01641c558adbd6c22b3de15e48312e9a0416dbb7b38e9905ee316d76d",
+      "reviewed_at_utc": "2026-10-21T19:50:07.016430+00:00"
+    }
+  ],
+  "pending_by_mode": {
+    "adaptive": [],
+    "retrieval-only": [],
+    "static": [
+      "speech_05",
+      "speech_06",
+      "speech_07",
+      "speech_08",
+      "speech_09",
+      "speech_10",
+      "speech_11",
+      "speech_12"
+    ],
+    "uniform": [
+      "speech_05",
+      "speech_06",
+      "speech_07",
+      "speech_08",
+      "speech_09",
+      "speech_10",
+      "speech_11",
+      "speech_12"
+    ]
+  },
+  "summary_by_mode": {
+    "adaptive": {
+      "audited_rows": 8,
+      "expected_rows": 8,
+      "complete": true,
+      "status_counts": {
+        "answered": 7,
+        "error": 1
+      },
+      "semantic_correctness_mean": 1.125,
+      "evidence_support_mean": 0.875,
+      "strict_semantic_success_count": 2,
+      "strict_semantic_success_rate": 0.25,
+      "failure_type_counts": {
+        "reasoning": 6,
+        "retrieval": 5,
+        "format": 1,
+        "recognition": 4
+      }
+    },
+    "retrieval-only": {
+      "audited_rows": 8,
+      "expected_rows": 8,
+      "complete": true,
+      "status_counts": {
+        "error": 7,
+        "answered": 1
+      },
+      "semantic_correctness_mean": 0.25,
+      "evidence_support_mean": 0.125,
+      "strict_semantic_success_count": 0,
+      "strict_semantic_success_rate": 0.0,
+      "failure_type_counts": {
+        "format": 7,
+        "retrieval": 1,
+        "reasoning": 1
+      }
+    }
+  },
+  "updated_at_utc": "2026-10-21T19:50:45.398270+00:00",
+  "stopped_reason": "Original v3 experiment stopped after adaptive and retrieval-only completed and static began. A contradictory finalization prompt caused unavailable tool actions and missing-citation errors. A post-hoc corrected-protocol repeat is planned in results/corrected.",
+  "no_further_audit_planned_for_original_run": true,
+  "pilot_findings": [
+    {
+      "finding": "Finalization protocol confound",
+      "evidence": "All7 retrieval-only speech errors are invalid_model_response;5 request search instead of a final answer,2 omit citations. Multiple cases already have sufficient retrieved transcript evidence.",
+      "implication": "Do not interpret the original retrieval-only scores as a clean policy-quality comparison."
+    },
+    {
+      "finding": "Formal citation validity does not establish semantic support",
+      "evidence": "Adaptive speech11 answers before but cites1230-1262s from an earlier conceptual workflow instead of the35-minute Kanban dependency demonstration.",
+      "implication": "Keep semantic support separate from answer match and interval validation."
+    },
+    {
+      "finding": "VLM observation contamination",
+      "evidence": "Adaptive speech12 copies a fabricated95% confidence interval equal to clip timestamps331.60-360.56seconds. Speech09 copies unsupported common-practice language from a repetitive observation.",
+      "implication": "Tool observations remain fallible model outputs; valid ledger IDs do not certify them."
+    },
+    {
+      "finding": "Chunk boundary substitution",
+      "evidence": "Adaptive speech06 uses481.04s chunk start as /goal onset; speech10 cites a range ending before the spoken token-estimate reduction.",
+      "implication": "Localization requires event-level evidence rather than selecting a relevant chunk boundary."
+    }
+  ],
+  "corrected_repeat": {
+    "path": "results/corrected",
+    "status": "planned",
+    "post_hoc": true,
+    "test_set_already_observed": true,
+    "independent_holdout_claim_permitted": false
+  }
+}

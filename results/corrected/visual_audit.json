@@ -1,0 +1,1125 @@
+{
+  "schema_version": "1.0",
+  "audit_type": "assistant_semantic_review_not_human_not_blind",
+  "status": "complete_visual_subset_corrected_repeat",
+  "updated_utc": "2026-10-21T20:57:30.369715+00:00",
+  "expected_modes": [
+    "adaptive",
+    "retrieval-only",
+    "static",
+    "uniform"
+  ],
+  "expected_question_ids": [
+    "visual_01",
+    "visual_02",
+    "visual_04",
+    "visual_06",
+    "visual_08"
+  ],
+  "expected_review_count": 20,
+  "reviewed_count": 20,
+  "rubric": {
+    "semantic_correctness": {
+      "0": "Incorrect, unsupported specific answer, execution error, or abstention on an answerable question.",
+      "1": "Partly correct but materially incomplete, imprecisely localized, or missing a requested component.",
+      "2": "Substantively correct answer to all requested components; for scoped unanswerable visual_08, correct refusal to invent a dollar amount."
+    },
+    "evidence_support": {
+      "0": "No supporting supplied evidence, wrong scene, or absent final answer.",
+      "1": "Partial/indirect support in supplied observations or text; required visual scene or one of multiple evidence components not established.",
+      "2": "Required claims directly supported by the supplied inspected evidence, with necessary scene/time associations; for scoped abstention, relevant diagram actually inspected."
+    },
+    "error_categories": [
+      "retrieval",
+      "recognition",
+      "reasoning",
+      "localization",
+      "abstention",
+      "schema"
+    ],
+    "unanswerable_rule": "Correct refusal can score semantic_correctness=2 while evidence_support=0 when the relevant diagram was never inspected. Backend/schema failures are not successful abstentions.",
+    "localization_policy": "For a locate question without an explicit full-duration requirement, a correct point inside the intended scene earns semantic2. A coarse or overlong citation range is separately flagged as localization error and remains subject to the automated IoU metric.",
+    "status_text_policy": "Semantic review assesses delivered prose as well as status. An insufficient_evidence label attached to a confident factual answer is recorded as inconsistent, not treated as an actual refusal. Automated operational metrics still use the saved status without changing predictions."
+  },
+  "reference_review": {
+    "source_video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "frame_files_viewed": [
+      ".cache/annotation/boundary_0010.jpg",
+      ".cache/annotation/board_2160.jpg",
+      ".cache/annotation/refine_1380.jpg",
+      ".cache/annotation/boundary_1615.jpg"
+    ],
+    "findings": "Black microphone is visible at introduction; Kanban board shows Ready/Done; comparison table is visible near1380s; How Task Graphs Actually Run near1615s labels a60s dispatcher loop and shows no dollar price.",
+    "limits": "Reviewer saw question references and mode identities; this is assistant diagnostic review, not independent human or blinded evaluation. Sparse source frames do not prove full temporal coverage. Reference-source frames do not retroactively become evidence available to the answering agent."
+  },
+  "study_status": "Posthoc corrected repeat on the unchanged 13-question test split after the initial pilot exposed a finalizer protocol defect. This repeat is not an independent heldout test. The audit is an assistant review, not human or blind validation.",
+  "reviews": [
+    {
+      "mode": "adaptive",
+      "question_id": "visual_01",
+      "prediction_status": "insufficient_evidence",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "retrieval",
+        "localization",
+        "recognition",
+        "abstention"
+      ],
+      "primary_error": "retrieval",
+      "answer": "A black object on the desk at the left side of the image during the first on-camera introduction, before the full-screen goals outline, is not clearly identifiable from the provided evidence. The visual observation in the evidence is sparse and does not confirm the presence of a specific object. The transcript mentions the Kanban application, but no direct visual confirmation of a black object is provided in the evidence.",
+      "rationale": "The answerable microphone question received an abstention. Retrieval missed the first introduction and inspection chose 1470-1500 s, an application screen. The inspector invented a desk monitor; after its uncited draft was rejected, the controller abstained. This is safer than delivering the hallucination but does not answer the question.",
+      "evidence_assessment": "No supplied inspection frame showed the requested first introduction. The final response appropriately says the supplied evidence is insufficient, but there is no support for a factual answer to the question.",
+      "inspected_ranges": [
+        [
+          1470,
+          1500
+        ]
+      ],
+      "citation_intervals": [],
+      "reference_intervals": [
+        [
+          7.5,
+          42.5
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/annotation/boundary_0010.jpg",
+        ".cache/visual-audit/adaptive_visual01_1473.739.png",
+        ".cache/visual-audit/adaptive_visual01_1496.261.png"
+      ],
+      "diagnostic_rejected_draft": "A black computer monitor or screen is visible on the desk... (missing citation; rejected before final abstention).",
+      "scoring_note": "The repaired final response is a valid abstention on an answerable question and scores0 for task correctness. Rejected monitor text is diagnostic only.",
+      "prediction_file": "results/corrected/adaptive.predictions.json",
+      "prompt_version": "clipscout-v4-finalizer",
+      "source_frame_reuse_note": "The corrected run used the same decoded inspection timestamps as the initial pilot; the previously reviewed source images remain applicable.",
+      "format_repair_outcome": "Recovered to valid insufficient_evidence; not counted as final schema failure.",
+      "prediction_record_sha256": "a969e88cafe9f5b00312de929e93307b662b7f6a2b50cea1db5b425d6a8a3e78"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "visual_02",
+      "prediction_status": "answered",
+      "semantic_correctness": 1,
+      "evidence_support": 1,
+      "error_categories": [
+        "recognition",
+        "localization"
+      ],
+      "primary_error": "recognition",
+      "answer": "In the Kanban view around 36 minutes, the Multi-agent research card is in the 'SCHEDULED' column, and the three stacked completed research cards are in the 'DONE' column.",
+      "rationale": "The completed cards are correctly placed in DONE, but the Multi-agent research card is incorrectly placed in SCHEDULED. At the relevant inspected 2145.010 s frame and source 2160 s frame it is in READY; the 2115.013 s frame instead shows a different card running. The citation is structurally valid but does not make the incorrect column claim true.",
+      "evidence_assessment": "Partial support only: DONE is visible. The claimed SCHEDULED location of Multi-agent research conflicts with the actual source frame. The broad 2100-2220 s citation also spans changing board states.",
+      "inspected_ranges": [
+        [
+          2100,
+          2220
+        ]
+      ],
+      "citation_intervals": [
+        {
+          "evidence_id": "E001",
+          "start": 2100.0,
+          "end": 2220.0
+        }
+      ],
+      "reference_intervals": [
+        [
+          2145,
+          2175
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/annotation/board_2160.jpg",
+        ".cache/visual-audit/adaptive_visual02_2115.013.png",
+        ".cache/visual-audit/adaptive_visual02_2145.010.png",
+        ".cache/visual-audit/adaptive_visual02_2175.006.png"
+      ],
+      "diagnostic_rejected_draft": "The Multi-agent research card is in Scheduled, and the three completed cards are in Done.",
+      "scoring_note": "The corrected run delivers an answer after citation repair: DONE is correct, SCHEDULED is incorrect, yielding partial semantic/support scores1. At2175s the card transitions to RUNNING, illustrating state changes inside the broad inspection window.",
+      "prediction_file": "results/corrected/adaptive.predictions.json",
+      "prompt_version": "clipscout-v4-finalizer",
+      "source_frame_reuse_note": "The corrected run used the same decoded inspection timestamps as the initial pilot; the previously reviewed source images remain applicable.",
+      "format_repair_outcome": "Missing citation was repaired to a valid E001 reference; incorrect visual content remained.",
+      "prediction_record_sha256": "a617e0d8563f9576b3cf23228ccf350d55b6b958d839100d764ead089450e26a"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "visual_04",
+      "prediction_status": "answered",
+      "semantic_correctness": 2,
+      "evidence_support": 2,
+      "error_categories": [
+        "localization"
+      ],
+      "primary_error": null,
+      "answer": "The main full-table comparison of Kanban and delegate_task is visible in the frame at 1357.489 seconds. The table, titled \"Kanban vs. delegate_task,\" is displayed with two columns: \"delegate_task\" and \"Kanban.\" The table compares attributes such as Shape, Parent, Child identity, Resumability, Human in the loop, Agents per task, and Audit trail. The table is fully visible and does not require scrolling to be seen.",
+      "rationale": "The explicit1357.489s point is inside the intended full-table scene and the actual sampled560px frame shows the complete table with the stated title and rows. Substantively correct localization by point.",
+      "evidence_assessment": "Directly supported by E001 and the matching decoded frame. Citation1320-1380s is a coarse inspection window containing substantial earlier context and omitting the later portion of the scene; it is not an accurate full event interval.",
+      "inspected_ranges": [
+        [
+          1320,
+          1380
+        ]
+      ],
+      "citation_intervals": [
+        {
+          "evidence_id": "E001",
+          "start": 1320.0,
+          "end": 1380.0
+        }
+      ],
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ]
+      ],
+      "pointing_timestamp": 1357.489,
+      "point_inside_reference": true,
+      "source_frames_viewed": [
+        ".cache/annotation/refine_1380.jpg",
+        ".cache/visual-audit/adaptive_visual04_1357.489.png"
+      ],
+      "scoring_note": "Semantic score2 evaluates the correct locate-by-point answer; separate localization flag records coarse citation geometry. Automated interval IoU is27.5/115≈0.239 and remains below0.3.",
+      "prediction_file": "results/corrected/adaptive.predictions.json",
+      "prompt_version": "clipscout-v4-finalizer",
+      "source_frame_reuse_note": "The corrected run used the same decoded inspection timestamps as the initial pilot; the previously reviewed source images remain applicable.",
+      "prediction_record_sha256": "43afc4bbf5185be6324f68f6381b68c110241108a1c29cb7c9f0b5e52d11f684"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "visual_06",
+      "prediction_status": "answered",
+      "semantic_correctness": 1,
+      "evidence_support": 1,
+      "error_categories": [
+        "recognition",
+        "reasoning",
+        "localization"
+      ],
+      "primary_error": "recognition",
+      "answer": "The full Kanban vs. delegate_task comparison table is shown earlier than the diagram titled \"How Task Graphs Actually Run\". The comparison table appears at 1357.489 seconds, while the diagram appears later at 1372.504 seconds. This is supported by the visual evidence in the video, where the table is clearly visible and fully rendered before the diagram is displayed.",
+      "rationale": "The relative ordering happens to agree with the reference, but the graph time is fabricated: the actual1372.504s sampled frame still shows the comparison table. The graph appears near1615s. The question explicitly asks evidence for both; only one scene was inspected and cited.",
+      "evidence_assessment": "E001 supports the table only. The VLM observation invents seeing the graph at1372.504s, and the controller accepts it despite search returning later graph candidates. One correct component earns partial support.",
+      "inspected_ranges": [
+        [
+          1320,
+          1380
+        ]
+      ],
+      "citation_intervals": [
+        {
+          "evidence_id": "E001",
+          "start": 1320.0,
+          "end": 1380.0
+        }
+      ],
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ],
+        [
+          1612.5,
+          1622.5
+        ]
+      ],
+      "temporal_order": {
+        "relative_order_correct": true,
+        "table_timestamp_supported": true,
+        "graph_timestamp_supported": false,
+        "both_scenes_cited": false
+      },
+      "source_frames_viewed": [
+        ".cache/visual-audit/adaptive_visual04_1357.489.png",
+        ".cache/visual-audit/adaptive_visual04_1372.504.png",
+        ".cache/annotation/boundary_1615.jpg"
+      ],
+      "scoring_note": "Keyword agreement with earlier/Kanban/graphs would conceal the unsupported second timestamp. This is partial correctness, not successful grounded temporal reasoning.",
+      "prediction_file": "results/corrected/adaptive.predictions.json",
+      "prompt_version": "clipscout-v4-finalizer",
+      "source_frame_reuse_note": "The corrected run used the same decoded inspection timestamps as the initial pilot; the previously reviewed source images remain applicable.",
+      "prediction_record_sha256": "369822b9630056b93b96eeaa6e4fb9a6ed1e8eecefdc828fbf99d7ff4607c768"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "visual_08",
+      "prediction_status": "insufficient_evidence",
+      "semantic_correctness": 2,
+      "evidence_support": 0,
+      "error_categories": [
+        "localization"
+      ],
+      "primary_error": null,
+      "answer": "the exact dollar cost assigned to each dispatcher cycle cannot be determined from the visible How Task Graphs Actually Run diagram, as the cost is not explicitly stated in the visual or transcript evidence.",
+      "rationale": "Correctly refuses to invent a price for the scoped diagram question. However, its sampled times begin1627.493s, after the short diagram scene. They show a task dialog/settings/cost-strategy documentation, not the requested diagram.",
+      "evidence_assessment": "No final citations. The observation that cost-strategy prose gives no price is not verification that the requested diagram lacks a price. Safe abstention is distinguished from successful diagram inspection.",
+      "inspected_ranges": [
+        [
+          1620,
+          1680
+        ]
+      ],
+      "citation_intervals": [],
+      "reference_intervals": [],
+      "scoped_reference_context": [
+        [
+          1612.5,
+          1622.5
+        ]
+      ],
+      "scoped_abstention": {
+        "refuses_price": true,
+        "target_diagram_inspected": false,
+        "absence_verified_from_target": false
+      },
+      "source_frames_viewed": [
+        ".cache/annotation/boundary_1615.jpg",
+        ".cache/visual-audit/adaptive_visual08_1627.493.png",
+        ".cache/visual-audit/adaptive_visual08_1672.504.png"
+      ],
+      "scoring_note": "Semantic2 for correct refusal; support0 because the target diagram was missed by sparse sampling. No global absence claim is validated.",
+      "prediction_file": "results/corrected/adaptive.predictions.json",
+      "prompt_version": "clipscout-v4-finalizer",
+      "source_frame_reuse_note": "The corrected run used the same decoded inspection timestamps as the initial pilot; the previously reviewed source images remain applicable.",
+      "prediction_record_sha256": "35598850ce7069efb0e14ab110915ce8ff3dc4cc060f668c532477c68087f975"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "visual_01",
+      "prediction_status": "insufficient_evidence",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "retrieval",
+        "abstention"
+      ],
+      "primary_error": "retrieval",
+      "answer": "the video transcript does not provide information about the visual appearance or identity of the black object on the desk at the left side of the image, making it impossible to determine what it is based on the given evidence.",
+      "rationale": "The model ultimately abstains on an answerable microphone question. The retrieved transcript hits do not identify the opening desk object; there are no new frames. Its rejected draft guessed a monitor from generic workspace context, then format repair produced a valid refusal.",
+      "evidence_assessment": "No supplied text establishes the microphone identity; refusal is appropriate for this poor context but does not solve the question.",
+      "reference_intervals": [
+        [
+          7.5,
+          42.5
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [],
+      "source_frames_viewed": [
+        ".cache/annotation/refine_0020.jpg"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "status_text_consistent": true,
+      "prediction_file": "results/corrected/retrieval-only.predictions.json",
+      "prediction_record_sha256": "9e5da4e24deaecec22e260077375881da51135fbf6b12ba751eaf088dc0bf0d0"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "visual_02",
+      "prediction_status": "answered",
+      "semantic_correctness": 2,
+      "evidence_support": 1,
+      "error_categories": [
+        "localization"
+      ],
+      "primary_error": "localization",
+      "answer": "At 36 minutes, the Kanban view shows the 'Multi-agent research card' in the 'READY' column and the three stacked completed research cards in the 'DONE' column.",
+      "rationale": "The delivered READY / DONE answer is substantively correct against the actual board. The cited E003 caption however calls the Multi-agent card SCHEDULED with ready status; a different supplied caption E002 does explicitly place it in READY, while containing other contradictory details.",
+      "evidence_assessment": "Partial support from the supplied caption ledger: DONE is supported by the cited E003 and READY by uncited E002. The cited caption alone does not establish the correct READY column claim. No new visual inspection was performed.",
+      "reference_intervals": [
+        [
+          2145,
+          2175
+        ]
+      ],
+      "citation_intervals": [
+        {
+          "evidence_id": "E003",
+          "start": 2100.0,
+          "end": 2160.0
+        }
+      ],
+      "inspected_ranges": [],
+      "source_frames_viewed": [
+        ".cache/annotation/board_2160.jpg"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "status_text_consistent": true,
+      "prediction_file": "results/corrected/retrieval-only.predictions.json",
+      "prediction_record_sha256": "8f28a7444444de7cff527f3b309cd1e17bc929f7969d49d7c2a014d3c980e1bc"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "visual_04",
+      "prediction_status": "insufficient_evidence",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "reasoning",
+        "localization",
+        "abstention"
+      ],
+      "primary_error": "localization",
+      "answer": "The main full-table comparison of Kanban and delegate_task is located in frame 1320.019, where a comparison table titled 'Kanban vs. delegate_task' is displayed. The table compares attributes such as Shape, Parent, Child identity, Resumability, Human in the loop, and Agents per task. This table is visible before scrolling hides its upper rows. The comparison is detailed in the caption at E002, which confirms the table's presence and content in the video frame at 1320.019.",
+      "rationale": "The final status is insufficient_evidence but the prose confidently claims the full table occurs at 1320.019 s. That is outside the reference full-table scene; the source frame at 1320 s shows the smaller in-app document and prose, not the requested main full table. The answer conflates E002 first frame (1320.019) with its second frame (1379.979) and supplies no citation.",
+      "evidence_assessment": "A usable full-table caption at 1380.012 s was available as E001, but the delivered point is misattributed. The abstention status conflicts with affirmative prose; this is not a clean calibrated refusal.",
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [],
+      "source_frames_viewed": [
+        ".cache/annotation/frame_1320.jpg"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "status_text_consistent": false,
+      "prediction_file": "results/corrected/retrieval-only.predictions.json",
+      "prediction_record_sha256": "035dc98b6525e4b6f00ef7ce170cfa34851249016cc5e1401f1c3a69d3a1d21d"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "visual_06",
+      "prediction_status": "insufficient_evidence",
+      "answer": "The full Kanban vs. delegate_task comparison table is shown earlier, appearing at frame 1320.019, while the diagram titled 'How Task Graphs Actually Run' appears later at frame 1560.025. The table is displayed before the diagram, as confirmed by the timestamps in the evidence.",
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ],
+        [
+          1612.5,
+          1622.5
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [],
+      "prompt_version": "clipscout-v4-finalizer",
+      "semantic_correctness": 1,
+      "evidence_support": 1,
+      "error_categories": [
+        "reasoning",
+        "localization",
+        "abstention"
+      ],
+      "primary_error": "localization",
+      "rationale": "The prose gets the event order right but misattributes both exact timestamps: 1320.019 s is the application document, not the full table, and 1560.025 s is a New task dialog, not the diagram. It selects the first timestamps in two multi-frame captions instead of the second-frame table/diagram timestamps 1379.979 and 1619.985 s. No requested citations are delivered. The insufficient_evidence label conflicts with affirmative prose.",
+      "evidence_assessment": "Relevant captions supply both events and their correct order, so there is partial indirect support. The claimed timestamps are not supported by those captions and no citations are delivered.",
+      "status_text_consistent": false,
+      "temporal_order_correct": true,
+      "both_scenes_cited": false,
+      "claimed_second_event_timestamp_correct": false,
+      "source_frames_viewed": [
+        ".cache/annotation/frame_1320.jpg",
+        ".cache/annotation/boundary_1615.jpg"
+      ],
+      "prediction_file": "results/corrected/retrieval-only.predictions.json",
+      "prediction_record_sha256": "3a8b87d60d36feaad4d01e0ba6256e5a7937c75849a97dbcb4bae9203e55bafe"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "visual_08",
+      "prediction_status": "insufficient_evidence",
+      "answer": "the dollar cost assigned to each dispatcher cycle cannot be determined from the provided evidence.",
+      "reference_intervals": [],
+      "citation_intervals": [],
+      "inspected_ranges": [],
+      "prompt_version": "clipscout-v4-finalizer",
+      "semantic_correctness": 2,
+      "evidence_support": 1,
+      "error_categories": [],
+      "primary_error": null,
+      "rationale": "The final response safely refuses to assign an exact dispatcher dollar amount. The supplied captions describe the requested diagram but no exact price.",
+      "evidence_assessment": "Indirect support only: captions for the actual diagram were retrieved, but no new diagram pixels were inspected. Omission of a price from a summary is not proof that every field was checked. The response correctly scopes the refusal to the provided evidence.",
+      "status_text_consistent": true,
+      "scoped_unanswerable_refusal": true,
+      "target_diagram_inspected": false,
+      "absence_visually_verified": false,
+      "source_frames_viewed": [
+        ".cache/annotation/boundary_1615.jpg"
+      ],
+      "prediction_file": "results/corrected/retrieval-only.predictions.json",
+      "prediction_record_sha256": "8647094955d182dc694d724e17d97577afc523644e35fdaad87d92409d8fff02"
+    },
+    {
+      "mode": "static",
+      "question_id": "visual_01",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema",
+        "retrieval",
+        "localization",
+        "recognition"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "All three retrieved regions were outside the first-introduction reference interval. Actual E001/E002 samples show application UI, while the inspector invented a physical desk mouse. E003 includes the presenter later in the video and the inspector instead named a laptop/monitor. The finalizer repeated the incorrect mouse answer three times without structured citations, producing a final schema error. No answer was delivered.",
+      "evidence_assessment": "Scores evaluate the delivered response. Retrieved or inspected context cannot rescue a final schema error.",
+      "reference_intervals": [
+        [
+          7.5,
+          42.5
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [
+        [
+          2040.21,
+          2070.57
+        ],
+        [
+          1470.24,
+          1502.24
+        ],
+        [
+          91.2,
+          120.88
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/visual-audit/static_visual01a_2044.009.png",
+        ".cache/visual-audit/static_visual01b_1482.247.png",
+        ".cache/visual-audit/static_visual01c_117.150.png"
+      ],
+      "diagnostic_rejected_draft": [
+        "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"A black computer mouse is visible on the desk at the left side of the image during the first on-camera introduction, before the full-screen goals outline. This is supported by visual observations in evidence E001 and E002, which both show the object as a black, rectangular device consistent with a computer mouse, positioned on the desk near the left side of the screen. The transcript confirms the object is present during the relevant time frame, and the visual evidence aligns with the description of a mouse.\"}",
+        "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"A black computer mouse is visible on the desk at the left side of the image during the first on-camera introduction, before the full-screen goals outline. This is supported by visual observations in evidence E001 and E002, which both show the object as a black, rectangular device consistent with a computer mouse, positioned on the desk near the left side of the screen. The transcript confirms the object is present during the relevant time frame, and the visual evidence aligns with the description of a mouse.\"}",
+        "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"A black computer mouse is visible on the desk at the left side of the image during the first on-camera introduction, before the full-screen goals outline. This is supported by visual observations in evidence E001 and E002, which both show the object as a black, rectangular device consistent with a computer mouse, positioned on the desk near the left side of the screen. The transcript confirms the object is present during the relevant time frame, and the visual evidence aligns with the description of a mouse.\"}"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "prediction_file": "results/corrected/static.predictions.json",
+      "prediction_record_sha256": "c233ab6de2dc807756a42e476a7d2fdc9cbec9b4b263f5a8a2841925a0f9fe13"
+    },
+    {
+      "mode": "static",
+      "question_id": "visual_02",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema",
+        "recognition",
+        "reasoning"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "The finalizer repeats a long contradictory answer until the 384-token limit truncates its JSON string in all three attempts. It first claims RUNNING, then READY, and fails to deliver an answer. Relevant READY/DONE evidence was inspected at2167.499 s, so the final failure is not lack of a useful scene.",
+      "evidence_assessment": "Delivered output is an error. Diagnostic observations mix useful E002 READY/DONE with misidentified card identities in other earlier board states. E0012047.479 s actually shows a differently named running card, not Multi-agent research.",
+      "reference_intervals": [
+        [
+          2145,
+          2175
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [
+        [
+          2040.0,
+          2100.0
+        ],
+        [
+          2160.0,
+          2220.0
+        ],
+        [
+          2100.0,
+          2160.0
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/visual-audit/static_visual02a_2047.479.png",
+        ".cache/visual-audit/static_visual02b_2167.499.png",
+        ".cache/visual-audit/static_visual02c_2107.505.png"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "format_repair_outcome": "Three identical truncated JSON strings; final schema error.",
+      "prediction_file": "results/corrected/static.predictions.json",
+      "prediction_record_sha256": "0b9f21f0f6ec8d41faa00664b7a2bbb2e97c129e9c8a7b2e05871a2be183ea83"
+    },
+    {
+      "mode": "static",
+      "question_id": "visual_04",
+      "prediction_status": "answered",
+      "semantic_correctness": 2,
+      "evidence_support": 2,
+      "error_categories": [
+        "localization"
+      ],
+      "primary_error": null,
+      "answer": "The main full-table comparison of Kanban and delegate_task is visible in the frame at 1387.486 seconds (E001), and it is also visible at 1357.489 seconds (E002) and 1414.380 seconds (E003). The table compares attributes such as Shape, Parent, Child identity, Resumability, Human in the loop, Agents per task, Audit trail, and Coordination. The upper rows of the table are not hidden, and the comparison is fully visible in all three instances. Therefore, the table is located before scrolling hides its upper rows, and the comparison is clearly visible in the video frame at 1387.486 seconds.",
+      "rationale": "The answer gives a correct point at1387.486 s in the full-table scene, plus correct additional points1357.489 and1414.380 s. Direct source samples show the table with its upper rows still visible. This satisfies a locate question without requiring full-event onset/offset recovery.",
+      "evidence_assessment": "Directly supported by inspected E001, with corroborating inspected E002/E003. The E001 citation1380-1440 is coarser than the reference scene and extends about5 s beyond its annotated end; this geometry is separately assessed by IoU.",
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ]
+      ],
+      "citation_intervals": [
+        {
+          "evidence_id": "E001",
+          "start": 1380.0,
+          "end": 1440.0
+        }
+      ],
+      "inspected_ranges": [
+        [
+          1380.0,
+          1440.0
+        ],
+        [
+          1320.0,
+          1380.0
+        ],
+        [
+          1410.56,
+          1441.2
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/visual-audit/static_visual04a_1387.486.png",
+        ".cache/visual-audit/adaptive_visual04_1357.489.png",
+        ".cache/visual-audit/static_visual04c_1414.380.png"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "correct_point_inside_reference": true,
+      "format_repair_outcome": "First uncited answer repaired by adding valid E001 citation.",
+      "prediction_file": "results/corrected/static.predictions.json",
+      "prediction_record_sha256": "93fb5afdf22f1e814e442ab50b8373d8af2df3a218c2e7862e82c5cd06fde3a8"
+    },
+    {
+      "mode": "static",
+      "question_id": "visual_06",
+      "prediction_status": "answered",
+      "semantic_correctness": 1,
+      "evidence_support": 1,
+      "error_categories": [
+        "recognition",
+        "reasoning",
+        "localization"
+      ],
+      "primary_error": "recognition",
+      "answer": "The full Kanban vs. delegate_task comparison table is shown earlier than the diagram titled \"How Task Graphs Actually Run\".\n\nEvidence for the comparison table: The table is visible from 1380.00 to 1432.498 seconds, while the diagram is only visible from 1432.498 seconds onwards. The table is displayed first.\n\nEvidence for the diagram: The diagram is shown at 1612.511 seconds, which is after the table has been displayed. Therefore, the comparison table is shown earlier.",
+      "rationale": "The event order is correct, but both claimed diagram times are wrong. At1432.498 s the frame still shows the lower table; at1612.511 s the actual final E003 sample shows browser documentation, before the diagram. The answer incorrectly combines these observations into a supported two-event account.",
+      "evidence_assessment": "The table is directly observed, but the task-graph diagram is not in the sampled images. E0031560-1620 geometrically overlaps the diagram reference yet its last actual sample misses the diagram, demonstrating why window overlap is not semantic support. The reference onset1612.5 is approximate: the actual1612.511 sample precedes the transition, while source1615.047 shows the diagram.",
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ],
+        [
+          1612.5,
+          1622.5
+        ]
+      ],
+      "citation_intervals": [
+        {
+          "evidence_id": "E001",
+          "start": 1320.0,
+          "end": 1380.0
+        },
+        {
+          "evidence_id": "E002",
+          "start": 1380.0,
+          "end": 1440.0
+        },
+        {
+          "evidence_id": "E003",
+          "start": 1560.0,
+          "end": 1620.0
+        }
+      ],
+      "inspected_ranges": [
+        [
+          1320.0,
+          1380.0
+        ],
+        [
+          1380.0,
+          1440.0
+        ],
+        [
+          1560.0,
+          1620.0
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/visual-audit/adaptive_visual04_1357.489.png",
+        ".cache/visual-audit/static_visual04a_1432.498.png",
+        ".cache/visual-audit/static_visual06c_1612.511.png",
+        ".cache/annotation/boundary_1615.jpg"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "temporal_order_correct": true,
+      "both_scenes_cited_geometrically": true,
+      "both_scenes_actually_inspected": false,
+      "claimed_second_event_timestamp_correct": false,
+      "prediction_file": "results/corrected/static.predictions.json",
+      "prediction_record_sha256": "37dbd5bc93d960e468fdc646bc5b022f37421e577fd6ba9524773bdfd28dd99b"
+    },
+    {
+      "mode": "static",
+      "question_id": "visual_08",
+      "prediction_status": "insufficient_evidence",
+      "semantic_correctness": 2,
+      "evidence_support": 0,
+      "error_categories": [
+        "localization"
+      ],
+      "primary_error": null,
+      "answer": "the exact dollar cost assigned to each dispatcher cycle cannot be determined from the provided visual information, as no financial data or cost metrics are visible in the task management interface or transcript.",
+      "rationale": "The agent correctly refuses to invent an exact dollar cost. However, none of the twelve actual inspection samples shows the scoped task-graph diagram: the first window starts sampling after it, the second ends sampling just before it, and the third covers a task board much later.",
+      "evidence_assessment": "This is a safe refusal on missing evidence, not visual verification that the requested diagram lacks a cost. Geometric inspection windows touch the diagram but their sampled pixels do not.",
+      "reference_intervals": [],
+      "citation_intervals": [],
+      "inspected_ranges": [
+        [
+          1620.0,
+          1680.0
+        ],
+        [
+          1560.0,
+          1620.0
+        ],
+        [
+          1952.25,
+          1982.33
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/visual-audit/adaptive_visual08_1627.493.png",
+        ".cache/visual-audit/static_visual06c_1612.511.png",
+        ".cache/annotation/boundary_1615.jpg"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "scoped_unanswerable_refusal": true,
+      "target_diagram_inspected": false,
+      "absence_visually_verified": false,
+      "prediction_file": "results/corrected/static.predictions.json",
+      "prediction_record_sha256": "8f4583b5981b33851a74c9d566c72debcbe113dfc5610aad9ffda39843fe42e8"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "visual_01",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema",
+        "localization",
+        "recognition"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "Fixed windows never sample the opening introduction. All inspected images show software screens, a title card or the diagram. The inspector nevertheless invents desk monitors, a hand and a mouse. The finalizer repeats one hallucinated observation until the JSON string is truncated, identically on all three attempts, and delivers an error.",
+      "evidence_assessment": "No supplied sample supports the opening microphone answer. More sampled frames do not compensate for missing the target scene, and repeated formatting attempts do not correct the underlying observation.",
+      "reference_intervals": [
+        [
+          7.5,
+          42.5
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [
+        [
+          306.87572083333333,
+          336.87572083333333
+        ],
+        [
+          950.6271624999999,
+          980.6271624999999
+        ],
+        [
+          1594.3786041666667,
+          1624.3786041666667
+        ],
+        [
+          2238.1300458333335,
+          2268.1300458333335
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/visual-audit/uniform_E001_310.644.png",
+        ".cache/visual-audit/uniform_E001_333.133.png",
+        ".cache/visual-audit/uniform_E002_954.387.png",
+        ".cache/visual-audit/uniform_E002_976.876.png",
+        ".cache/visual-audit/uniform_E003_1613.111.png",
+        ".cache/visual-audit/uniform_E003_1620.619.png",
+        ".cache/visual-audit/uniform_E004_2241.873.png",
+        ".cache/visual-audit/uniform_E004_2264.362.png"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "prediction_file": "results/corrected/uniform.predictions.json",
+      "format_repair_outcome": "Three identical truncated JSON strings; final schema error.",
+      "prediction_record_sha256": "72077240296211d8fef4e092b3d9ef1d2500812ff61b905f2164fb5b9626a1e8"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "visual_02",
+      "prediction_status": "error",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "schema",
+        "localization",
+        "recognition",
+        "reasoning"
+      ],
+      "primary_error": "schema",
+      "answer": "",
+      "rationale": "The fixed windows miss the requested around36-minute READY state. E001 maps requested cards onto WORKER1/WORKER2 labels from a different orchestrator diagram; E002/E003 misidentify card states in application prose, a title card and another diagram. E004 correctly sees a later board in which Multi-agent research and three other cards are all DONE. The finalizer chooses the incorrect WORKER1/WORKER2 locations and repeats the answer without structured citations on all three attempts, producing an error.",
+      "evidence_assessment": "No delivered answer. The late board is real but shows a different state than requested. Earlier observations confuse diagram labels with board columns and requested card identities. A mention of E001 in prose is not a structured citation.",
+      "reference_intervals": [
+        [
+          2145,
+          2175
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [
+        [
+          306.87572083333333,
+          336.87572083333333
+        ],
+        [
+          950.6271624999999,
+          980.6271624999999
+        ],
+        [
+          1594.3786041666667,
+          1624.3786041666667
+        ],
+        [
+          2238.1300458333335,
+          2268.1300458333335
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/visual-audit/uniform_E001_310.644.png",
+        ".cache/visual-audit/uniform_E002_954.387.png",
+        ".cache/visual-audit/uniform_E002_976.876.png",
+        ".cache/visual-audit/uniform_E003_1620.619.png",
+        ".cache/visual-audit/uniform_E004_2241.873.png",
+        ".cache/visual-audit/uniform_E004_2264.362.png"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "prediction_file": "results/corrected/uniform.predictions.json",
+      "format_repair_outcome": "Three uncited WORKER1/WORKER2 drafts; final schema error.",
+      "process_note": "Completed after same-configuration resume; incomplete prior attempt cost is separately unknown.",
+      "prediction_record_sha256": "e822d398d634bf0d078991e30bc2b8e7d1ff1b7f0b690192e7dfd6368c129b08"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "visual_04",
+      "prediction_status": "insufficient_evidence",
+      "semantic_correctness": 0,
+      "evidence_support": 0,
+      "error_categories": [
+        "localization",
+        "recognition",
+        "abstention"
+      ],
+      "primary_error": "localization",
+      "answer": "The main full-table comparison of Kanban and delegate_task is not visible in any of the provided frames. The table is only partially visible in one frame (310.644 seconds) and is obscured by a dropdown menu, but the table is not fully visible. Additionally, the table is not present in the visual observation at other timestamps, such as 954.3867666666667 and 1598.1298666666667. Therefore, the requested information cannot be located.",
+      "rationale": "The answerable localization question receives a refusal because fixed windows never cover the actual full table. This refusal is appropriate for the available samples, but the accompanying claim of a partially obscured comparison table at310.644 s is false: the frame shows application prose and a context-usage popup.",
+      "evidence_assessment": "No sampled frame supports the requested table location. E001 invents a table behind a popup; E004 invents a DELEGATE_TASK board column. Correct refusal to locate from these samples is not successful localization of the video event.",
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ]
+      ],
+      "citation_intervals": [],
+      "inspected_ranges": [
+        [
+          306.87572083333333,
+          336.87572083333333
+        ],
+        [
+          950.6271624999999,
+          980.6271624999999
+        ],
+        [
+          1594.3786041666667,
+          1624.3786041666667
+        ],
+        [
+          2238.1300458333335,
+          2268.1300458333335
+        ]
+      ],
+      "source_frames_viewed": [
+        ".cache/visual-audit/uniform_E001_310.644.png",
+        ".cache/visual-audit/uniform_E002_954.387.png",
+        ".cache/visual-audit/uniform_E003_1620.619.png",
+        ".cache/visual-audit/uniform_E004_2264.362.png"
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "prediction_file": "results/corrected/uniform.predictions.json",
+      "prediction_record_sha256": "f3e191705a1b2a9129a25a75ebf7807d587a2be7d8a2aa645918cc775adaa3d2"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "visual_06",
+      "prediction_status": "answered",
+      "answer": "The diagram titled \"How Task Graphs Actually Run\" is shown earlier than the full Kanban vs. delegate_task comparison table. This is supported by evidence: the diagram appears at 325.625 seconds (E001), while the comparison table is visible at 333.133 seconds (E001). In E002, the diagram is shown earlier than the comparison table, and in E003, the diagram is shown earlier than the comparison table. In E004, the comparison table is visible from 2238.13 seconds, but the diagram is not visible in any of the frames. Therefore, the diagram is shown earlier than the comparison table in all evidence provided.",
+      "reference_intervals": [
+        [
+          1352.5,
+          1435
+        ],
+        [
+          1612.5,
+          1622.5
+        ]
+      ],
+      "citation_intervals": [
+        {
+          "evidence_id": "E001",
+          "start": 306.87572083333333,
+          "end": 336.87572083333333
+        },
+        {
+          "evidence_id": "E002",
+          "start": 950.6271624999999,
+          "end": 980.6271624999999
+        },
+        {
+          "evidence_id": "E003",
+          "start": 1594.3786041666667,
+          "end": 1624.3786041666667
+        },
+        {
+          "evidence_id": "E004",
+          "start": 2238.1300458333335,
+          "end": 2268.1300458333335
+        }
+      ],
+      "inspected_ranges": [
+        [
+          306.87572083333333,
+          336.87572083333333
+        ],
+        [
+          950.6271624999999,
+          980.6271624999999
+        ],
+        [
+          1594.3786041666667,
+          1624.3786041666667
+        ],
+        [
+          2238.1300458333335,
+          2268.1300458333335
+        ]
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "prediction_file": "results/corrected/uniform.predictions.json",
+      "semantic_correctness": 0,
+      "evidence_support": 1,
+      "error_categories": [
+        "recognition",
+        "reasoning",
+        "localization"
+      ],
+      "primary_error": "reasoning",
+      "rationale": "The answer reverses the actual event order, placing the task-graph diagram before the table. At325.625 s there is a different orchestrator-to-workers diagram, not How Task Graphs Actually Run; at333.133 s there is application prose, not the comparison table. It also mistakes a later Kanban board for the comparison table. E003 correctly observes the requested diagram at1620.619 s but never sees the table, so cannot establish the requested two-event order.",
+      "evidence_assessment": "Partial evidence component only: the requested diagram is truly inspected in E003. The table and claimed325/333 s scene identities are unsupported. A real but different worker diagram at325.625 s is misidentified, rather than absent. Structurally valid citations to all four windows do not validate the reversed order.",
+      "source_frames_viewed": [
+        ".cache/visual-audit/uniform_E001_325.625.png",
+        ".cache/visual-audit/uniform_E001_333.133.png",
+        ".cache/visual-audit/uniform_E002_976.876.png",
+        ".cache/visual-audit/uniform_E003_1620.619.png",
+        ".cache/visual-audit/uniform_E004_2241.873.png"
+      ],
+      "temporal_order_correct": false,
+      "both_scenes_actually_inspected": false,
+      "graph_actually_inspected": true,
+      "claimed_second_event_timestamp_correct": false,
+      "format_repair_outcome": "Citation repair permits the incorrect answer with four formally valid window citations.",
+      "prediction_record_sha256": "8357b7af7b944628ba16fa4032b9c3fb4dd7a27f2fb56238efd8e4ea2e38bbbc"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "visual_08",
+      "prediction_status": "insufficient_evidence",
+      "answer": "the exact dollar cost assigned to each dispatcher cycle cannot be determined from the provided visual information, as no monetary values or cost metrics are shown in the task graph diagrams or transcript.",
+      "reference_intervals": [],
+      "citation_intervals": [],
+      "inspected_ranges": [
+        [
+          306.87572083333333,
+          336.87572083333333
+        ],
+        [
+          950.6271624999999,
+          980.6271624999999
+        ],
+        [
+          1594.3786041666667,
+          1624.3786041666667
+        ],
+        [
+          2238.1300458333335,
+          2268.1300458333335
+        ]
+      ],
+      "prompt_version": "clipscout-v4-finalizer",
+      "prediction_file": "results/corrected/uniform.predictions.json",
+      "semantic_correctness": 2,
+      "evidence_support": 2,
+      "error_categories": [],
+      "primary_error": null,
+      "rationale": "The final response correctly refuses to invent an exact dollar cost. Unlike adaptive/static, uniform actually samples the requested diagram at1620.619 s; its E003 observation identifies the dispatcher60-second loop and correctly says the diagram gives no dollar cost.",
+      "evidence_assessment": "Direct support for the scoped refusal from E003 diagram pixels. This establishes only the absence of an assigned cost in that diagram, not anywhere in the video. E001 describes a real but different orchestrator-to-workers diagram at325.625 s; it is not the requested dispatcher diagram and is unnecessary to the supported refusal.",
+      "source_frames_viewed": [
+        ".cache/visual-audit/uniform_E001_325.625.png",
+        ".cache/visual-audit/uniform_E003_1620.619.png"
+      ],
+      "scoped_unanswerable_refusal": true,
+      "target_diagram_inspected": true,
+      "absence_visually_verified": true,
+      "scope_of_absence_verification": "The visible diagram at1620.619 s only, not the whole video.",
+      "prediction_record_sha256": "4b5dc1a969a06f1df157445e47dafb147813bea73437ba3b3cf4366be8774177"
+    }
+  ],
+  "summary": {
+    "adaptive": {
+      "reviewed": 5,
+      "expected": 5,
+      "complete": true,
+      "mean_semantic_correctness_0_to_2": 1.2,
+      "mean_evidence_support_0_to_2": 0.8,
+      "semantic_score_counts": {
+        "0": 1,
+        "1": 2,
+        "2": 2
+      },
+      "prediction_status_counts": {
+        "insufficient_evidence": 2,
+        "answered": 3
+      },
+      "error_category_counts": {
+        "retrieval": 1,
+        "localization": 5,
+        "recognition": 3,
+        "abstention": 1,
+        "reasoning": 1
+      }
+    },
+    "retrieval-only": {
+      "reviewed": 5,
+      "expected": 5,
+      "complete": true,
+      "mean_semantic_correctness_0_to_2": 1.0,
+      "mean_evidence_support_0_to_2": 0.6,
+      "semantic_score_counts": {
+        "0": 2,
+        "2": 2,
+        "1": 1
+      },
+      "prediction_status_counts": {
+        "insufficient_evidence": 4,
+        "answered": 1
+      },
+      "error_category_counts": {
+        "retrieval": 1,
+        "abstention": 3,
+        "localization": 3,
+        "reasoning": 2
+      }
+    },
+    "static": {
+      "reviewed": 5,
+      "expected": 5,
+      "complete": true,
+      "mean_semantic_correctness_0_to_2": 1.0,
+      "mean_evidence_support_0_to_2": 0.6,
+      "semantic_score_counts": {
+        "0": 2,
+        "2": 2,
+        "1": 1
+      },
+      "prediction_status_counts": {
+        "error": 2,
+        "answered": 2,
+        "insufficient_evidence": 1
+      },
+      "error_category_counts": {
+        "schema": 2,
+        "retrieval": 1,
+        "localization": 4,
+        "recognition": 3,
+        "reasoning": 2
+      }
+    },
+    "uniform": {
+      "reviewed": 5,
+      "expected": 5,
+      "complete": true,
+      "mean_semantic_correctness_0_to_2": 0.4,
+      "mean_evidence_support_0_to_2": 0.6,
+      "semantic_score_counts": {
+        "0": 4,
+        "2": 1
+      },
+      "prediction_status_counts": {
+        "error": 2,
+        "insufficient_evidence": 2,
+        "answered": 1
+      },
+      "error_category_counts": {
+        "schema": 2,
+        "localization": 4,
+        "recognition": 4,
+        "reasoning": 2,
+        "abstention": 1
+      }
+    }
+  },
+  "initial_pilot_audit": "../test/visual_audit.json",
+  "initial_pilot_figure": "../test/figures/visual01_failure.png",
+  "figures": [
+    {
+      "id": "temporal_misattribution",
+      "question_id": "visual_06",
+      "mode": "adaptive",
+      "png": "figures/temporal_misattribution.png",
+      "svg": "figures/temporal_misattribution.svg",
+      "reproduction_script": "figures/temporal_misattribution_plot.py",
+      "caption": "The corrected adaptive run gives the correct event order but invents the second timestamp: its actual 1372.504 s sample still shows the comparison table. The task-graph diagram is visible at 1615.047 s in a reference frame not supplied to the agent. E001 [1320,1380] passes structural ID/bounds checks despite containing no inspected graph.",
+      "frames": [
+        {
+          "path": ".cache/visual-audit/adaptive_visual04_1372.504.png",
+          "timestamp_seconds": 1372.5044666666668,
+          "role": "Actual agent inspection sample reused by visual_06; original pixels unchanged.",
+          "sha256": "5facf8d6482e0c109973e702e990c1b346592037998e2f12dd29ce8ee7e5ccac"
+        },
+        {
+          "path": ".cache/annotation/boundary_1615.jpg",
+          "timestamp_seconds": 1615.0467666666666,
+          "role": "Reference context added by auditor; not supplied to agent.",
+          "sha256": "fb9eb317cc911106f3feafbcea781eb208133464dc4bde04d5cc61423814cb41"
+        }
+      ],
+      "review_limitation": "Assistant review, not human/blind validation; posthoc protocol-corrected repeat."
+    }
+  ],
+  "completion_scope": "All20 visual-source predictions reviewed (5questions x4modes). This does not assert completion of all52 study predictions; speech questions are outside this file.",
+  "verification": {
+    "review_rows": 20,
+    "unique_mode_question_pairs": 20,
+    "saved_answers_statuses_match_predictions": true,
+    "referenced_local_frames_exist": true,
+    "note": "These are audit integrity checks, not an independent semantic evaluation.",
+    "prediction_record_hash_algorithm": "SHA256 of UTF-8 canonical JSON per selected prediction (sort_keys=True, ensure_ascii=False, separators=(comma,colon)); append-only completion of other questions does not alter these hashes."
+  },
+  "source_frame_review_note": "All16 uniform source samples were viewed for the completed audit. The325.625 s frame contains a real orchestrator-to-workers diagram, distinct from the requested later How Task Graphs Actually Run diagram.",
+  "summary_note": "Each mode mean uses all5 visual test-split questions, including errors and one scoped unanswerable. Scores are an unblinded assistant diagnostic rubric, not human accuracy or independent benchmark validation. Error categories are nonexclusive and may describe coarse citation geometry or intermediate observations even when final content is correct. Status-text inconsistencies are evaluated in prose without altering saved predictions."
+}

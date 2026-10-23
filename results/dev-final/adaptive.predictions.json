@@ -1,0 +1,326 @@
+[
+  {
+    "status": "answered",
+    "answer": "The full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library is visible from 1200.00 to 1260.00 seconds. The approximate time interval is 1200.00–1260.00 seconds.",
+    "citations": [
+      {
+        "evidence_id": "E001",
+        "start": 1200.0,
+        "end": 1260.0
+      }
+    ],
+    "question_id": "visual_03",
+    "question": "Locate the full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library. Give its approximate time interval.",
+    "mode": "adaptive",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 2,
+    "frames_used": 4,
+    "unique_sampled_timestamps": [
+      1207.5063,
+      1222.5213,
+      1237.5029333333334,
+      1252.5179333333333
+    ],
+    "latency_seconds": 19.3847,
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 6010,
+      "output_tokens": 269
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library",
+          "top_k": 5,
+          "source": "all"
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "caption:40",
+              "start": 1200.0,
+              "end": 1260.0,
+              "text": "- The first frame (1200.032 seconds) displays a flowchart titled \"Article to Curated Knowledge.\"\n- It shows a process with five stages: \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\"\n- The second frame (1259.992 seconds) shows a diagram titled \"Two Loops, One Knowledge Workflow.\"\n- It illustrates two loops: \"RESEARCH LOOP\" and \"CURATION LOOP,\" with a \"Library\" as the central point of interaction.\n- The diagram includes characters representing a researcher, a librarian, and a user, with arrows showing the flow of information and actions.",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00020"
+              ],
+              "score": 46.07375
+            },
+            {
+              "id": "caption:38",
+              "start": 1140.0,
+              "end": 1200.0,
+              "text": "- **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00019"
+              ],
+              "score": 43.33121
+            },
+            {
+              "id": "transcript:40",
+              "start": 1200.57,
+              "end": 1230.73,
+              "text": "YouTube video or some other resource and you've taken some notes on it. You can drop in the raw source and your notes and you can send it off to the librarian. The librarian agent can try and find the fit. How does this fit into your existing knowledge base? It'll check the context, connections, and draft an entry for you for your review to see is this good enough for it to make it into your knowledge base, into your curated library. If it's not good enough, you can suggest revisions and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+              "source": "transcript",
+              "segment_ids": [
+                "T00413",
+                "T00414",
+                "T00415",
+                "T00416",
+                "T00417",
+                "T00418"
+              ],
+              "score": 33.46153
+            },
+            {
+              "id": "caption:42",
+              "start": 1260.0,
+              "end": 1320.0,
+              "text": "- The first frame shows a diagram titled \"Two Loops, One Knowledge Workflow\" illustrating a research process with three main stages: Research Loop, Human Handoff, and Curation Loop. The diagram includes icons of a researcher, a librarian, and a library, with arrows showing the flow of information and tasks.\n- The second frame shows a software interface, likely a knowledge management tool, with a dark theme. The interface displays a text box with a paragraph about a \"multi-agent system\" and a \"knowledge graph.\" The text is highlighted, and the interface includes a sidebar with options like \"Projects,\" \"Home,\" and \"Wanderlots Tutorials.\" The text in the main box is about the use of a \"knowledge graph\" in a research context.",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00021"
+              ],
+              "score": 13.6921
+            },
+            {
+              "id": "transcript:42",
+              "start": 1262.57,
+              "end": 1293.05,
+              "text": "your existing knowledge base and prepare a draft for your review on whether or not it should make it into the library. Again, you can go through a curation loop, but this one has a human in the loop as part of the core loop itself. Once you've approved it, the librarian can then go and file this into the library. And then as a coding example, let's say you're building an app, and you want to add the ability to export to Markdown. You can hand this off to your orchestrator and explain what you're looking for, and the orchestrator can understand it and then delegate it to the implementer. The implementer can then go through a goal loop where it builds it, checks to see if",
+              "source": "transcript",
+              "segment_ids": [
+                "T00426",
+                "T00427",
+                "T00428",
+                "T00429",
+                "T00430",
+                "T00431",
+                "T00432"
+              ],
+              "score": 12.5624
+            }
+          ],
+          "empty": false,
+          "hint": "Inspect a promising range"
+        },
+        "latency_seconds": 0.0007
+      },
+      {
+        "call": 2,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1200,
+          "end": 1260
+        },
+        "ok": true,
+        "result": {
+          "start": 1200.0,
+          "end": 1260.0,
+          "transcript": "[1195.61–1200.57] you want to click the button. As another example, let's say you've come across a great article or a\n[1200.57–1205.77] YouTube video or some other resource and you've taken some notes on it. You can drop in the raw\n[1205.77–1210.33] source and your notes and you can send it off to the librarian. The librarian agent can try and find\n[1210.33–1215.45] the fit. How does this fit into your existing knowledge base? It'll check the context, connections,\n[1215.45–1221.29] and draft an entry for you for your review to see is this good enough for it to make it into your\n[1221.29–1226.25] knowledge base, into your curated library. If it's not good enough, you can suggest revisions\n[1226.25–1230.73] and the librarian will update the draft entry and then pass it back to you for a review. Once you\n[1230.73–1235.13] approve it, the librarian can then file it into the library and connect it to the rest of your research.\n[1235.13–1239.21] And as a more complex system, we can actually start linking these loops together. For example,\n[1239.21–1243.77] you can propose a question or a topic to the researcher. The researcher can go through a research\n[1243.77–1248.49] loop, checking sources, checking it against the quality that you've given, this could be a goal loop,\n[1248.49–1253.53] and then when it's done all of its research, it can pass it off to you as the human to validate\n[1253.53–1258.25] that the information is good enough. You can add your own notes, connect it to that site of source,\n[1258.25–1262.57] and report, and then hand it off to the librarian. The librarian can then see how that fits into",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00412",
+              "start": 1195.61,
+              "end": 1200.57
+            },
+            {
+              "id": "T00413",
+              "start": 1200.57,
+              "end": 1205.77
+            },
+            {
+              "id": "T00414",
+              "start": 1205.77,
+              "end": 1210.33
+            },
+            {
+              "id": "T00415",
+              "start": 1210.33,
+              "end": 1215.45
+            },
+            {
+              "id": "T00416",
+              "start": 1215.45,
+              "end": 1221.29
+            },
+            {
+              "id": "T00417",
+              "start": 1221.29,
+              "end": 1226.25
+            },
+            {
+              "id": "T00418",
+              "start": 1226.25,
+              "end": 1230.73
+            },
+            {
+              "id": "T00419",
+              "start": 1230.73,
+              "end": 1235.13
+            },
+            {
+              "id": "T00420",
+              "start": 1235.13,
+              "end": 1239.21
+            },
+            {
+              "id": "T00421",
+              "start": 1239.21,
+              "end": 1243.77
+            },
+            {
+              "id": "T00422",
+              "start": 1243.77,
+              "end": 1248.49
+            },
+            {
+              "id": "T00423",
+              "start": 1248.49,
+              "end": 1253.53
+            },
+            {
+              "id": "T00424",
+              "start": 1253.53,
+              "end": 1258.25
+            },
+            {
+              "id": "T00425",
+              "start": 1258.25,
+              "end": 1262.57
+            }
+          ],
+          "visual_observation": "The full-screen Article to Curated Knowledge diagram is visible in the frame at 1207.506 seconds. The diagram shows a workflow with five stages: \"Article + notes\", \"Find the fit\", \"Draft an entry\", \"Human review\", and \"Connected library\". The approximate time interval for this diagram is 1200.00–1260.00 seconds.",
+          "sampled_timestamps": [
+            1207.5063,
+            1222.5213,
+            1237.5029333333334,
+            1252.5179333333333
+          ],
+          "modality": "visual+transcript",
+          "coverage": "sparse_samples_only",
+          "cache_hit": false,
+          "evidence_id": "E001"
+        },
+        "latency_seconds": 7.1096
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "start": 1200.0,
+        "end": 1260.0,
+        "transcript": "[1195.61–1200.57] you want to click the button. As another example, let's say you've come across a great article or a\n[1200.57–1205.77] YouTube video or some other resource and you've taken some notes on it. You can drop in the raw\n[1205.77–1210.33] source and your notes and you can send it off to the librarian. The librarian agent can try and find\n[1210.33–1215.45] the fit. How does this fit into your existing knowledge base? It'll check the context, connections,\n[1215.45–1221.29] and draft an entry for you for your review to see is this good enough for it to make it into your\n[1221.29–1226.25] knowledge base, into your curated library. If it's not good enough, you can suggest revisions\n[1226.25–1230.73] and the librarian will update the draft entry and then pass it back to you for a review. Once you\n[1230.73–1235.13] approve it, the librarian can then file it into the library and connect it to the rest of your research.\n[1235.13–1239.21] And as a more complex system, we can actually start linking these loops together. For example,\n[1239.21–1243.77] you can propose a question or a topic to the researcher. The researcher can go through a research\n[1243.77–1248.49] loop, checking sources, checking it against the quality that you've given, this could be a goal loop,\n[1248.49–1253.53] and then when it's done all of its research, it can pass it off to you as the human to validate\n[1253.53–1258.25] that the information is good enough. You can add your own notes, connect it to that site of source,\n[1258.25–1262.57] and report, and then hand it off to the librarian. The librarian can then see how that fits into",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00412",
+            "start": 1195.61,
+            "end": 1200.57
+          },
+          {
+            "id": "T00413",
+            "start": 1200.57,
+            "end": 1205.77
+          },
+          {
+            "id": "T00414",
+            "start": 1205.77,
+            "end": 1210.33
+          },
+          {
+            "id": "T00415",
+            "start": 1210.33,
+            "end": 1215.45
+          },
+          {
+            "id": "T00416",
+            "start": 1215.45,
+            "end": 1221.29
+          },
+          {
+            "id": "T00417",
+            "start": 1221.29,
+            "end": 1226.25
+          },
+          {
+            "id": "T00418",
+            "start": 1226.25,
+            "end": 1230.73
+          },
+          {
+            "id": "T00419",
+            "start": 1230.73,
+            "end": 1235.13
+          },
+          {
+            "id": "T00420",
+            "start": 1235.13,
+            "end": 1239.21
+          },
+          {
+            "id": "T00421",
+            "start": 1239.21,
+            "end": 1243.77
+          },
+          {
+            "id": "T00422",
+            "start": 1243.77,
+            "end": 1248.49
+          },
+          {
+            "id": "T00423",
+            "start": 1248.49,
+            "end": 1253.53
+          },
+          {
+            "id": "T00424",
+            "start": 1253.53,
+            "end": 1258.25
+          },
+          {
+            "id": "T00425",
+            "start": 1258.25,
+            "end": 1262.57
+          }
+        ],
+        "visual_observation": "The full-screen Article to Curated Knowledge diagram is visible in the frame at 1207.506 seconds. The diagram shows a workflow with five stages: \"Article + notes\", \"Find the fit\", \"Draft an entry\", \"Human review\", and \"Connected library\". The approximate time interval for this diagram is 1200.00–1260.00 seconds.",
+        "sampled_timestamps": [
+          1207.5063,
+          1222.5213,
+          1237.5029333333334,
+          1252.5179333333333
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "evidence_id": "E001"
+      }
+    },
+    "decisions": [
+      {
+        "step": 0,
+        "raw": "{\"action\":\"search\",\"args\":{\"query\":\"full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library\",\"top_k\":5,\"source\":\"all\"}}"
+      },
+      {
+        "step": 1,
+        "raw": "{\"action\":\"inspect_clip\",\"args\":{\"start\":1200,\"end\":1260}}"
+      },
+      {
+        "step": 2,
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library is visible from 1200.00 to 1260.00 seconds. The approximate time interval is 1200.00–1260.00 seconds.\",\"citations\":[{\"evidence_id\":\"E001\",\"start\":1200.0,\"end\":1260.0}]}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v3-single-action"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  }
+]

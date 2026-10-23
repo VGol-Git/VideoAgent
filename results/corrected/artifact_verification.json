@@ -1,0 +1,41 @@
+{
+  "verified": true,
+  "prediction_counts": {
+    "adaptive": 13,
+    "retrieval-only": 13,
+    "static": 13,
+    "uniform": 13
+  },
+  "total_predictions": 52,
+  "statuses": {
+    "adaptive": {
+      "insufficient_evidence": 2,
+      "answered": 10,
+      "error": 1
+    },
+    "retrieval-only": {
+      "insufficient_evidence": 8,
+      "answered": 3,
+      "error": 2
+    },
+    "static": {
+      "error": 6,
+      "answered": 6,
+      "insufficient_evidence": 1
+    },
+    "uniform": {
+      "error": 4,
+      "insufficient_evidence": 4,
+      "answered": 5
+    }
+  },
+  "source_code_unchanged": true,
+  "question_file_unchanged": true,
+  "index_and_video_unchanged": true,
+  "metrics_recomputed": true,
+  "budget_violations": 0,
+  "citation_contracts_valid": true,
+  "resumed_completed_predictions_unchanged": true,
+  "process_count": 2,
+  "note": "Structural/provenance validation only; does not establish factual correctness or semantic evidence support."
+}

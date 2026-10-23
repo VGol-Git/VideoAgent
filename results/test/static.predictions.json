@@ -1,0 +1,667 @@
+[
+  {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Invalid model response: ValueError: Final response must have action='answer'",
+    "error": "Invalid model response: ValueError: Final response must have action='answer'",
+    "error_type": "invalid_model_response",
+    "question_id": "visual_01",
+    "question": "During the first on-camera introduction, before the full-screen goals outline, what black object stands on the desk at the left side of the image?",
+    "mode": "static",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 4,
+    "frames_used": 12,
+    "unique_sampled_timestamps": [
+      94.92816666666667,
+      102.33556666666667,
+      109.74296666666667,
+      117.15036666666667,
+      1474.2394333333334,
+      1482.2474333333334,
+      1490.2554333333335,
+      1498.2634333333333,
+      2044.0086333333334,
+      2051.6162333333336,
+      2059.190466666667,
+      2066.7980666666667
+    ],
+    "latency_seconds": 35.5683,
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 6415,
+      "output_tokens": 201
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "During the first on-camera introduction, before the full-screen goals outline, what black object stands on the desk at the left side of the image?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:68",
+              "start": 2040.21,
+              "end": 2070.57,
+              "text": "You can put them all in here, you can schedule them, you can let the agent know that some are waiting on others. There's a lot that you can do here and it just takes a lot of that sub-agent delegation that we were talking about in the first couple of examples and makes it a lot more transparent and controllable. And that's why it's called a control graph or a task graph, because we can actually see the graph of how this is operating, what needs to be done first before the next task can be accomplished. So this one is still running here, but we can see this one finished. We can go through and see the full activity. So we can see that it was created",
+              "source": "transcript",
+              "segment_ids": [
+                "T00704",
+                "T00705",
+                "T00706",
+                "T00707",
+                "T00708",
+                "T00709",
+                "T00710",
+                "T00711",
+                "T00712",
+                "T00713",
+                "T00714",
+                "T00715",
+                "T00716",
+                "T00717"
+              ],
+              "score": 8.69173
+            },
+            {
+              "id": "transcript:49",
+              "start": 1470.24,
+              "end": 1502.24,
+              "text": "and the second is the Kanban. So make sure this is turned on here, and then you should see this appear on the left-hand side. So if we go over to Kanban here, we are not gonna be the ones running things the agent is. All we need to do is put a card into the ready section, assign it to a particular agent, and the agent will pick it up in a minute. And there's even a triage section. So this is where if you're not quite sure exactly what the task is, you can have an agent rewrite the idea into a proper task first. So that's actually a really important part of it, and I'll show you how we can change the settings for that in a moment. So triage is for raw ideas where that the specifier",
+              "source": "transcript",
+              "segment_ids": [
+                "T00492",
+                "T00493",
+                "T00494",
+                "T00495",
+                "T00496",
+                "T00497",
+                "T00498",
+                "T00499",
+                "T00500",
+                "T00501",
+                "T00502",
+                "T00503",
+                "T00504",
+                "T00505",
+                "T00506",
+                "T00507",
+                "T00508"
+              ],
+              "score": 7.72181
+            },
+            {
+              "id": "transcript:3",
+              "start": 91.2,
+              "end": 120.88,
+              "text": "notes on a new article and I want to add it to my LLM wiki. How does the agent process that information in a consistent repeatable way? So that it actually meets the satisfaction that I want for that particular task. But first, before we get into automations triggers, task graphs, and Kanban, let's start with just a single agent to see how it works and orchestrates with subagents. We'll build up in complexity until we get to a full graph system that lets you orchestrate your tasks. If you find this video helpful, please like, hype, and subscribe as I really appreciate your support a lot. If you're looking for more ways to support me, please consider joining my",
+              "source": "transcript",
+              "segment_ids": [
+                "T00022",
+                "T00023",
+                "T00024",
+                "T00025",
+                "T00026",
+                "T00027",
+                "T00028",
+                "T00029"
+              ],
+              "score": 7.26148
+            }
+          ],
+          "empty": false
+        }
+      },
+      {
+        "call": 2,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 2040.21,
+          "end": 2070.57,
+          "question": "During the first on-camera introduction, before the full-screen goals outline, what black object stands on the desk at the left side of the image?"
+        },
+        "ok": true,
+        "result": {
+          "start": 2040.21,
+          "end": 2070.57,
+          "transcript": "[2040.21–2042.49] You can put them all in here, you can schedule them,\n[2042.49–2045.29] you can let the agent know that some are waiting on others.\n[2045.29–2046.89] There's a lot that you can do here\n[2046.89–2049.53] and it just takes a lot of that sub-agent delegation\n[2049.53–2052.41] that we were talking about in the first couple of examples\n[2052.41–2054.81] and makes it a lot more transparent and controllable.\n[2054.81–2056.37] And that's why it's called a control graph\n[2056.37–2059.21] or a task graph, because we can actually see the graph\n[2059.21–2061.89] of how this is operating, what needs to be done first\n[2061.89–2064.33] before the next task can be accomplished.\n[2064.33–2065.49] So this one is still running here,\n[2065.49–2066.85] but we can see this one finished.\n[2066.85–2069.13] We can go through and see the full activity.\n[2069.13–2070.57] So we can see that it was created",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00704",
+              "start": 2040.21,
+              "end": 2042.49
+            },
+            {
+              "id": "T00705",
+              "start": 2042.49,
+              "end": 2045.29
+            },
+            {
+              "id": "T00706",
+              "start": 2045.29,
+              "end": 2046.89
+            },
+            {
+              "id": "T00707",
+              "start": 2046.89,
+              "end": 2049.53
+            },
+            {
+              "id": "T00708",
+              "start": 2049.53,
+              "end": 2052.41
+            },
+            {
+              "id": "T00709",
+              "start": 2052.41,
+              "end": 2054.81
+            },
+            {
+              "id": "T00710",
+              "start": 2054.81,
+              "end": 2056.37
+            },
+            {
+              "id": "T00711",
+              "start": 2056.37,
+              "end": 2059.21
+            },
+            {
+              "id": "T00712",
+              "start": 2059.21,
+              "end": 2061.89
+            },
+            {
+              "id": "T00713",
+              "start": 2061.89,
+              "end": 2064.33
+            },
+            {
+              "id": "T00714",
+              "start": 2064.33,
+              "end": 2065.49
+            },
+            {
+              "id": "T00715",
+              "start": 2065.49,
+              "end": 2066.85
+            },
+            {
+              "id": "T00716",
+              "start": 2066.85,
+              "end": 2069.13
+            },
+            {
+              "id": "T00717",
+              "start": 2069.13,
+              "end": 2070.57
+            }
+          ],
+          "visual_observation": "At 2044.009 seconds, a black object is visible on the left side of the screen, standing on the desk. It is a small, rectangular, black object, likely a computer mouse or a small device. The object is positioned on the left side of the screen, near the top of the interface.",
+          "sampled_timestamps": [
+            2044.0086333333334,
+            2051.6162333333336,
+            2059.190466666667,
+            2066.7980666666667
+          ],
+          "modality": "visual+transcript",
+          "coverage": "sparse_samples_only",
+          "cache_hit": false
+        }
+      },
+      {
+        "call": 3,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1470.24,
+          "end": 1502.24,
+          "question": "During the first on-camera introduction, before the full-screen goals outline, what black object stands on the desk at the left side of the image?"
+        },
+        "ok": true,
+        "result": {
+          "start": 1470.24,
+          "end": 1502.24,
+          "transcript": "[1470.24–1471.68] and the second is the Kanban.\n[1471.68–1472.96] So make sure this is turned on here,\n[1472.96–1475.84] and then you should see this appear on the left-hand side.\n[1475.84–1477.24] So if we go over to Kanban here,\n[1477.24–1480.12] we are not gonna be the ones running things the agent is.\n[1480.12–1482.60] All we need to do is put a card into the ready section,\n[1482.60–1484.36] assign it to a particular agent,\n[1484.36–1486.28] and the agent will pick it up in a minute.\n[1486.28–1488.04] And there's even a triage section.\n[1488.04–1489.76] So this is where if you're not quite sure\n[1489.76–1491.34] exactly what the task is,\n[1491.34–1493.20] you can have an agent rewrite the idea\n[1493.20–1494.92] into a proper task first.\n[1494.92–1496.74] So that's actually a really important part of it,\n[1496.74–1498.24] and I'll show you how we can change the settings\n[1498.24–1499.20] for that in a moment.\n[1499.20–1502.24] So triage is for raw ideas where that the specifier",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00492",
+              "start": 1470.24,
+              "end": 1471.68
+            },
+            {
+              "id": "T00493",
+              "start": 1471.68,
+              "end": 1472.96
+            },
+            {
+              "id": "T00494",
+              "start": 1472.96,
+              "end": 1475.84
+            },
+            {
+              "id": "T00495",
+              "start": 1475.84,
+              "end": 1477.24
+            },
+            {
+              "id": "T00496",
+              "start": 1477.24,
+              "end": 1480.12
+            },
+            {
+              "id": "T00497",
+              "start": 1480.12,
+              "end": 1482.6
+            },
+            {
+              "id": "T00498",
+              "start": 1482.6,
+              "end": 1484.36
+            },
+            {
+              "id": "T00499",
+              "start": 1484.36,
+              "end": 1486.28
+            },
+            {
+              "id": "T00500",
+              "start": 1486.28,
+              "end": 1488.04
+            },
+            {
+              "id": "T00501",
+              "start": 1488.04,
+              "end": 1489.76
+            },
+            {
+              "id": "T00502",
+              "start": 1489.76,
+              "end": 1491.34
+            },
+            {
+              "id": "T00503",
+              "start": 1491.34,
+              "end": 1493.2
+            },
+            {
+              "id": "T00504",
+              "start": 1493.2,
+              "end": 1494.92
+            },
+            {
+              "id": "T00505",
+              "start": 1494.92,
+              "end": 1496.74
+            },
+            {
+              "id": "T00506",
+              "start": 1496.74,
+              "end": 1498.24
+            },
+            {
+              "id": "T00507",
+              "start": 1498.24,
+              "end": 1499.2
+            },
+            {
+              "id": "T00508",
+              "start": 1499.2,
+              "end": 1502.24
+            }
+          ],
+          "visual_observation": "A black, rectangular object, which appears to be a computer mouse, is visible on the desk at the left side of the image. It is positioned in front of the screen, and its shape and size are consistent with a standard computer mouse. The object is not a keyboard or a monitor.",
+          "sampled_timestamps": [
+            1474.2394333333334,
+            1482.2474333333334,
+            1490.2554333333335,
+            1498.2634333333333
+          ],
+          "modality": "visual+transcript",
+          "coverage": "sparse_samples_only",
+          "cache_hit": false
+        }
+      },
+      {
+        "call": 4,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 91.2,
+          "end": 120.88,
+          "question": "During the first on-camera introduction, before the full-screen goals outline, what black object stands on the desk at the left side of the image?"
+        },
+        "ok": true,
+        "result": {
+          "start": 91.2,
+          "end": 120.88,
+          "transcript": "[91.20–95.44] notes on a new article and I want to add it to my LLM wiki. How does the agent process that\n[95.44–100.88] information in a consistent repeatable way? So that it actually meets the satisfaction that I want\n[100.88–105.20] for that particular task. But first, before we get into automations triggers, task graphs, and\n[105.20–109.20] Kanban, let's start with just a single agent to see how it works and orchestrates with subagents.\n[109.20–113.36] We'll build up in complexity until we get to a full graph system that lets you orchestrate your\n[113.36–115.60] tasks. If you find this video helpful, please like,\n[115.60–118.56] hype, and subscribe as I really appreciate your support a lot.\n[118.56–120.88] If you're looking for more ways to support me, please consider joining my",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00022",
+              "start": 91.2,
+              "end": 95.44
+            },
+            {
+              "id": "T00023",
+              "start": 95.44,
+              "end": 100.88
+            },
+            {
+              "id": "T00024",
+              "start": 100.88,
+              "end": 105.2
+            },
+            {
+              "id": "T00025",
+              "start": 105.2,
+              "end": 109.2
+            },
+            {
+              "id": "T00026",
+              "start": 109.2,
+              "end": 113.36
+            },
+            {
+              "id": "T00027",
+              "start": 113.36,
+              "end": 115.6
+            },
+            {
+              "id": "T00028",
+              "start": 115.6,
+              "end": 118.56
+            },
+            {
+              "id": "T00029",
+              "start": 118.56,
+              "end": 120.88
+            }
+          ],
+          "visual_observation": "A black object, which appears to be a laptop or a monitor, is visible on the desk at the left side of the image. It is positioned in front of the speaker and is partially obscured by the microphone.",
+          "sampled_timestamps": [
+            94.92816666666667,
+            102.33556666666667,
+            109.74296666666667,
+            117.15036666666667
+          ],
+          "modality": "visual+transcript",
+          "coverage": "sparse_samples_only",
+          "cache_hit": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "start": 2040.21,
+        "end": 2070.57,
+        "transcript": "[2040.21–2042.49] You can put them all in here, you can schedule them,\n[2042.49–2045.29] you can let the agent know that some are waiting on others.\n[2045.29–2046.89] There's a lot that you can do here\n[2046.89–2049.53] and it just takes a lot of that sub-agent delegation\n[2049.53–2052.41] that we were talking about in the first couple of examples\n[2052.41–2054.81] and makes it a lot more transparent and controllable.\n[2054.81–2056.37] And that's why it's called a control graph\n[2056.37–2059.21] or a task graph, because we can actually see the graph\n[2059.21–2061.89] of how this is operating, what needs to be done first\n[2061.89–2064.33] before the next task can be accomplished.\n[2064.33–2065.49] So this one is still running here,\n[2065.49–2066.85] but we can see this one finished.\n[2066.85–2069.13] We can go through and see the full activity.\n[2069.13–2070.57] So we can see that it was created",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00704",
+            "start": 2040.21,
+            "end": 2042.49
+          },
+          {
+            "id": "T00705",
+            "start": 2042.49,
+            "end": 2045.29
+          },
+          {
+            "id": "T00706",
+            "start": 2045.29,
+            "end": 2046.89
+          },
+          {
+            "id": "T00707",
+            "start": 2046.89,
+            "end": 2049.53
+          },
+          {
+            "id": "T00708",
+            "start": 2049.53,
+            "end": 2052.41
+          },
+          {
+            "id": "T00709",
+            "start": 2052.41,
+            "end": 2054.81
+          },
+          {
+            "id": "T00710",
+            "start": 2054.81,
+            "end": 2056.37
+          },
+          {
+            "id": "T00711",
+            "start": 2056.37,
+            "end": 2059.21
+          },
+          {
+            "id": "T00712",
+            "start": 2059.21,
+            "end": 2061.89
+          },
+          {
+            "id": "T00713",
+            "start": 2061.89,
+            "end": 2064.33
+          },
+          {
+            "id": "T00714",
+            "start": 2064.33,
+            "end": 2065.49
+          },
+          {
+            "id": "T00715",
+            "start": 2065.49,
+            "end": 2066.85
+          },
+          {
+            "id": "T00716",
+            "start": 2066.85,
+            "end": 2069.13
+          },
+          {
+            "id": "T00717",
+            "start": 2069.13,
+            "end": 2070.57
+          }
+        ],
+        "visual_observation": "At 2044.009 seconds, a black object is visible on the left side of the screen, standing on the desk. It is a small, rectangular, black object, likely a computer mouse or a small device. The object is positioned on the left side of the screen, near the top of the interface.",
+        "sampled_timestamps": [
+          2044.0086333333334,
+          2051.6162333333336,
+          2059.190466666667,
+          2066.7980666666667
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "evidence_id": "E001"
+      },
+      "E002": {
+        "start": 1470.24,
+        "end": 1502.24,
+        "transcript": "[1470.24–1471.68] and the second is the Kanban.\n[1471.68–1472.96] So make sure this is turned on here,\n[1472.96–1475.84] and then you should see this appear on the left-hand side.\n[1475.84–1477.24] So if we go over to Kanban here,\n[1477.24–1480.12] we are not gonna be the ones running things the agent is.\n[1480.12–1482.60] All we need to do is put a card into the ready section,\n[1482.60–1484.36] assign it to a particular agent,\n[1484.36–1486.28] and the agent will pick it up in a minute.\n[1486.28–1488.04] And there's even a triage section.\n[1488.04–1489.76] So this is where if you're not quite sure\n[1489.76–1491.34] exactly what the task is,\n[1491.34–1493.20] you can have an agent rewrite the idea\n[1493.20–1494.92] into a proper task first.\n[1494.92–1496.74] So that's actually a really important part of it,\n[1496.74–1498.24] and I'll show you how we can change the settings\n[1498.24–1499.20] for that in a moment.\n[1499.20–1502.24] So triage is for raw ideas where that the specifier",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00492",
+            "start": 1470.24,
+            "end": 1471.68
+          },
+          {
+            "id": "T00493",
+            "start": 1471.68,
+            "end": 1472.96
+          },
+          {
+            "id": "T00494",
+            "start": 1472.96,
+            "end": 1475.84
+          },
+          {
+            "id": "T00495",
+            "start": 1475.84,
+            "end": 1477.24
+          },
+          {
+            "id": "T00496",
+            "start": 1477.24,
+            "end": 1480.12
+          },
+          {
+            "id": "T00497",
+            "start": 1480.12,
+            "end": 1482.6
+          },
+          {
+            "id": "T00498",
+            "start": 1482.6,
+            "end": 1484.36
+          },
+          {
+            "id": "T00499",
+            "start": 1484.36,
+            "end": 1486.28
+          },
+          {
+            "id": "T00500",
+            "start": 1486.28,
+            "end": 1488.04
+          },
+          {
+            "id": "T00501",
+            "start": 1488.04,
+            "end": 1489.76
+          },
+          {
+            "id": "T00502",
+            "start": 1489.76,
+            "end": 1491.34
+          },
+          {
+            "id": "T00503",
+            "start": 1491.34,
+            "end": 1493.2
+          },
+          {
+            "id": "T00504",
+            "start": 1493.2,
+            "end": 1494.92
+          },
+          {
+            "id": "T00505",
+            "start": 1494.92,
+            "end": 1496.74
+          },
+          {
+            "id": "T00506",
+            "start": 1496.74,
+            "end": 1498.24
+          },
+          {
+            "id": "T00507",
+            "start": 1498.24,
+            "end": 1499.2
+          },
+          {
+            "id": "T00508",
+            "start": 1499.2,
+            "end": 1502.24
+          }
+        ],
+        "visual_observation": "A black, rectangular object, which appears to be a computer mouse, is visible on the desk at the left side of the image. It is positioned in front of the screen, and its shape and size are consistent with a standard computer mouse. The object is not a keyboard or a monitor.",
+        "sampled_timestamps": [
+          1474.2394333333334,
+          1482.2474333333334,
+          1490.2554333333335,
+          1498.2634333333333
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "evidence_id": "E002"
+      },
+      "E003": {
+        "start": 91.2,
+        "end": 120.88,
+        "transcript": "[91.20–95.44] notes on a new article and I want to add it to my LLM wiki. How does the agent process that\n[95.44–100.88] information in a consistent repeatable way? So that it actually meets the satisfaction that I want\n[100.88–105.20] for that particular task. But first, before we get into automations triggers, task graphs, and\n[105.20–109.20] Kanban, let's start with just a single agent to see how it works and orchestrates with subagents.\n[109.20–113.36] We'll build up in complexity until we get to a full graph system that lets you orchestrate your\n[113.36–115.60] tasks. If you find this video helpful, please like,\n[115.60–118.56] hype, and subscribe as I really appreciate your support a lot.\n[118.56–120.88] If you're looking for more ways to support me, please consider joining my",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00022",
+            "start": 91.2,
+            "end": 95.44
+          },
+          {
+            "id": "T00023",
+            "start": 95.44,
+            "end": 100.88
+          },
+          {
+            "id": "T00024",
+            "start": 100.88,
+            "end": 105.2
+          },
+          {
+            "id": "T00025",
+            "start": 105.2,
+            "end": 109.2
+          },
+          {
+            "id": "T00026",
+            "start": 109.2,
+            "end": 113.36
+          },
+          {
+            "id": "T00027",
+            "start": 113.36,
+            "end": 115.6
+          },
+          {
+            "id": "T00028",
+            "start": 115.6,
+            "end": 118.56
+          },
+          {
+            "id": "T00029",
+            "start": 118.56,
+            "end": 120.88
+          }
+        ],
+        "visual_observation": "A black object, which appears to be a laptop or a monitor, is visible on the desk at the left side of the image. It is positioned in front of the speaker and is partially obscured by the microphone.",
+        "sampled_timestamps": [
+          94.92816666666667,
+          102.33556666666667,
+          109.74296666666667,
+          117.15036666666667
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "evidence_id": "E003"
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"inspect_clip\",\"args\":{\"start\":2040.21,\"end\":2070.57}}",
+        "error": "Invalid model response: ValueError: Final response must have action='answer'",
+        "error_type": "invalid_model_response"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v3-single-action"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  }
+]

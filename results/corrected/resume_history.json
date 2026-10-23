@@ -1,0 +1,129 @@
+{
+  "reason": "Restart inference process to release accumulated GPU allocations; no source, model, prompt, question, or sampling changes.",
+  "stopped_utc": "2026-10-21T20:46:29.5547895Z",
+  "completed_predictions_preserved": {
+    "adaptive": 13,
+    "retrieval-only": 13,
+    "static": 13,
+    "uniform": 1
+  },
+  "interrupted_question": {
+    "mode": "uniform",
+    "question_id": "visual_02",
+    "discarded_partial_result": true,
+    "partial_model_calls": null,
+    "partial_tokens": null,
+    "note": "No completed result existed. Partial inference cost was not logged and is not included in completed-question latency or token totals."
+  },
+  "original_manifest": "manifest.initial_process.json",
+  "resume_arguments": "same original evaluate arguments plus --resume",
+  "comparison_limit": "Mixed process/warm-up and shared-GPU conditions; no controlled speed claim.",
+  "preserved_prediction_sha256": {
+    "adaptive": {
+      "visual_01": "cfb3115cfc0205cb39bc3eeb37eb4dea04a5f391914c1020ca72753340adda61",
+      "visual_02": "2b6d851258cd951eafd9d982099898c0f44958d14dc9548e1e9b5fb5fa934a04",
+      "visual_04": "44dd8f75dae01b07024d45e1b6f5abd644a6151cf21b896c952cef5e9421519a",
+      "visual_06": "7b33958ab643777c3c457fc16b860dcc52066d99d8130e87d608468204a112f4",
+      "visual_08": "d171b9e0de91ef60d49f24459aad463d5b2a5e5c4ea889b914fa03276b86bf4b",
+      "speech_05": "fe0c7bc784a59c8002cf47f78901e1d13d02e544012a3018aa89daa091dc4350",
+      "speech_06": "a78ff653514d8b9aa9317f76b2498e3f6a1f4d839ee5c76ac63cba58d1a83e82",
+      "speech_07": "114aec75dcf5acb543de63eb12aafbbb47ce25366f048f4ae952f53cc336060e",
+      "speech_08": "2782943ec75b6090bf629e6dd5ef5c1fedc367a712dd97f336819dec478e2cae",
+      "speech_09": "cb230f9327d59ef3497e67e0ecef0c9be824f1c7ba40108b39b0507a71fafdf7",
+      "speech_10": "13896467df94f5d74371f2fb3708190de36d48022cbd8adb3f86c0d3bb30c449",
+      "speech_11": "5a979de68434783943cab4ad440fe08832841e222ad5d5508e89e54961a6b2bb",
+      "speech_12": "644149b0293005689aeae8b3992e0aa347414cc4f379c87bd4958380c9643402"
+    },
+    "retrieval-only": {
+      "visual_01": "9e5da4e24deaecec22e260077375881da51135fbf6b12ba751eaf088dc0bf0d0",
+      "visual_02": "8f28a7444444de7cff527f3b309cd1e17bc929f7969d49d7c2a014d3c980e1bc",
+      "visual_04": "f217bc55fcb2b19f7e62d0f9c5c531b28ffa376bd15fcc2acb7694faa96e8db9",
+      "visual_06": "3459bbb6122666a3542db4bba680665089d56073c8c6479b10f8c7821e09430a",
+      "visual_08": "8647094955d182dc694d724e17d97577afc523644e35fdaad87d92409d8fff02",
+      "speech_05": "5c2480a3716d85d31688e117f3d318e64f1faac41c7ff0a79fd66edde476ee7f",
+      "speech_06": "fa6d5f70268a01adc5e5873b79f0445aec480cd4100a02da639507a6d1f505dd",
+      "speech_07": "4e5df052f70d3b8294b85ed07581a884a1e4a1db26cd43ad8c6f0eb016d8fd38",
+      "speech_08": "de04fdb7efa92167b26b59790f240568f40cb3920fee2f84ee7316b7d22bc603",
+      "speech_09": "6b0f97dd794cf0b4aa472fcf434eaafa0966b58f5b474a569346723e0b2439c3",
+      "speech_10": "c890e8f35522fca7b2dfe262d752e3316acdfd7044c190eb28fd176b3e5f510b",
+      "speech_11": "d481100fa68b4b1cc9a310e0f835505183ddfec921d545d6895780e3c98c6693",
+      "speech_12": "4816ded38ed991bd58f8e14315102fcc3a1fe68324e9e12eda61db7b30de2628"
+    },
+    "static": {
+      "visual_01": "805e59381b8a42f32ad44d497c49eaeeb4b24e928fc89004db8653a244736729",
+      "visual_02": "5419a5a1db638160f3b1581aeba9a989a8ac028586c4fb76f1ae7c1e6f1caf2d",
+      "visual_04": "d1fe81bee79ce127025a52d19e72442b36b7cc9fef3c5d497fcabe9378e35ea8",
+      "visual_06": "3b9b0b7e2ba5130aba293d689dedde35fdcff26d644dbe0fc7bbb7490464be85",
+      "visual_08": "443578764682f73931bba3c7db1b5d8778ddb4c32934d93c2c52e86157cb52a2",
+      "speech_05": "c2b7e3ae7456dbaa65c60de897f83cc8a817cf798e80da3570bc7a0bd2768be4",
+      "speech_06": "1a8dd4db245e17f25fa9b130c287519b0e7334f0e35dd26cca3cb8ea32d6551c",
+      "speech_07": "ed961eb81a9cd2076d4c787490f039f2cd809515f4ed58b3398918a7fcb3bbd8",
+      "speech_08": "9f95c241f8c3ec26a466ca686ce23066935196c68f51a3ef25e9ce0686bba25e",
+      "speech_09": "99f142fa822f3e298accfcdddd124a4a338b9f57c62e3e0619f9d705271a51cd",
+      "speech_10": "eede5c9d0c8141c91d94c58e60884f860e8ffa3f3d61ac289225df6b6e217048",
+      "speech_11": "448914fb71c68ca8ed2fa07e16aa9d10df2bf5195d1ee836bf0dfe3d55da37f9",
+      "speech_12": "6b85b8f44d4f7a907c1fb53a97c9003f9fabc48416f2974ac5810f83b7de621c"
+    },
+    "uniform": {
+      "visual_01": "a1a878192c8d0dbf8f557be3be62779fa1c78aa5ef39f49cb99f7af1ec236834"
+    }
+  },
+  "prediction_hash_format": "Original helper decoded the UTF-8 source file as Windows cp1252, then serialized JSON with sort_keys=True, ensure_ascii=False, separators comma/colon, encoded UTF-8. Original hashes retained unchanged.",
+  "preserved_prediction_input_encoding": "cp1252",
+  "preserved_prediction_utf8_sha256": {
+    "adaptive": {
+      "visual_01": "a969e88cafe9f5b00312de929e93307b662b7f6a2b50cea1db5b425d6a8a3e78",
+      "visual_02": "a617e0d8563f9576b3cf23228ccf350d55b6b958d839100d764ead089450e26a",
+      "visual_04": "43afc4bbf5185be6324f68f6381b68c110241108a1c29cb7c9f0b5e52d11f684",
+      "visual_06": "369822b9630056b93b96eeaa6e4fb9a6ed1e8eecefdc828fbf99d7ff4607c768",
+      "visual_08": "35598850ce7069efb0e14ab110915ce8ff3dc4cc060f668c532477c68087f975",
+      "speech_05": "a597ac509cd9a55566563620509614fc894a3cbe16c73cdc348c9e699ad1aa6e",
+      "speech_06": "167bbfbb437a20f4ed32d7ad48535fc7d7c8824774b300047d9b1fd92ff7d036",
+      "speech_07": "75df22bba428f3482e2076c63b85dbe61214afdf9c882bc1196c9badfbec7a39",
+      "speech_08": "ce37d323a7b8c06687febe0f2e892cb58e31eb8665e8b1fccf9903fee7fd5b3c",
+      "speech_09": "a0e961315f4b1181e32f703fa2daba96ac21a65f3d6fc014d89a1db3626a2807",
+      "speech_10": "7d9184314a15b1feab6c9e5c83a26296cb462f614118c2956dde4a472d023a02",
+      "speech_11": "d810030926b843d6cec000607422aa20b4246cd04e9b64eb40cad0d24b485137",
+      "speech_12": "b075629d8b5631c2c5d9502dcde5d79c0ae5edd0e05c7d0f354a48d5928f8c32"
+    },
+    "retrieval-only": {
+      "visual_01": "9e5da4e24deaecec22e260077375881da51135fbf6b12ba751eaf088dc0bf0d0",
+      "visual_02": "8f28a7444444de7cff527f3b309cd1e17bc929f7969d49d7c2a014d3c980e1bc",
+      "visual_04": "035dc98b6525e4b6f00ef7ce170cfa34851249016cc5e1401f1c3a69d3a1d21d",
+      "visual_06": "3a8b87d60d36feaad4d01e0ba6256e5a7937c75849a97dbcb4bae9203e55bafe",
+      "visual_08": "8647094955d182dc694d724e17d97577afc523644e35fdaad87d92409d8fff02",
+      "speech_05": "5c2480a3716d85d31688e117f3d318e64f1faac41c7ff0a79fd66edde476ee7f",
+      "speech_06": "fa6d5f70268a01adc5e5873b79f0445aec480cd4100a02da639507a6d1f505dd",
+      "speech_07": "4e5df052f70d3b8294b85ed07581a884a1e4a1db26cd43ad8c6f0eb016d8fd38",
+      "speech_08": "fab2b4bd7745eb1d6b353e0501ff7495ab341ce7453b1ed0874ada15f58096d0",
+      "speech_09": "6b0f97dd794cf0b4aa472fcf434eaafa0966b58f5b474a569346723e0b2439c3",
+      "speech_10": "730810d867eefe1a085def69c730b4f84307b10a170af16752c6a2efce669ab4",
+      "speech_11": "d481100fa68b4b1cc9a310e0f835505183ddfec921d545d6895780e3c98c6693",
+      "speech_12": "4816ded38ed991bd58f8e14315102fcc3a1fe68324e9e12eda61db7b30de2628"
+    },
+    "static": {
+      "visual_01": "c233ab6de2dc807756a42e476a7d2fdc9cbec9b4b263f5a8a2841925a0f9fe13",
+      "visual_02": "0b9f21f0f6ec8d41faa00664b7a2bbb2e97c129e9c8a7b2e05871a2be183ea83",
+      "visual_04": "93fb5afdf22f1e814e442ab50b8373d8af2df3a218c2e7862e82c5cd06fde3a8",
+      "visual_06": "37dbd5bc93d960e468fdc646bc5b022f37421e577fd6ba9524773bdfd28dd99b",
+      "visual_08": "8f4583b5981b33851a74c9d566c72debcbe113dfc5610aad9ffda39843fe42e8",
+      "speech_05": "8333ea69036c1312208dc8ef94ad4afde0cd02dc7c6d5277552182c2a2206367",
+      "speech_06": "de1adc37484640cafca873adb229c977d4410e31518271e63604324275407c63",
+      "speech_07": "2aa034a6ef176b987a37b1462cd461a94c2c18ccbc0023ccf5f584cd65ef0667",
+      "speech_08": "40c3ce643e92c9ff35e461a443a7b0c41aba0c2d8f14cdd0df8fbccc5dec7f86",
+      "speech_09": "f8647bd4d89851d93fef66160490a4c953b033087109bb8c85fe9c7cb7b41f4b",
+      "speech_10": "7b32f084ec0274887db02e83b0557342d7069b14077ce6ec30578b91d9dc9b32",
+      "speech_11": "0434178edf7552baa9a4962f6e5869dfd01ded1a5e171741e3fe6fe18efb2556",
+      "speech_12": "bbeb98af460d3209a545e8c71acb65133ba08648e574fc0c75aa68fe4845949c"
+    },
+    "uniform": {
+      "visual_01": "72077240296211d8fef4e092b3d9ef1d2500812ff61b905f2164fb5b9626a1e8"
+    }
+  },
+  "hash_encoding_correction": {
+    "reason": "An independent audit detected differing canonical hashes. The original helper omitted read_text encoding and ran with Windows locale cp1252. Raw prediction files were not changed.",
+    "legacy_hashes_verified": 40,
+    "corrected_format": "Read source as UTF-8; serialize JSON sort_keys=True, ensure_ascii=False, separators comma/colon; encode UTF-8.",
+    "validation": "All original cp1252-decoded hashes matched before adding explicit UTF-8 hashes. Verifier checks both sets."
+  }
+}

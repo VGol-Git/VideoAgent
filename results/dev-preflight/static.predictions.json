@@ -1,0 +1,607 @@
+[
+  {
+    "status": "answered",
+    "answer": "The full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library is visible from 1200.57 to 1230.73 seconds. The approximate time interval is 1200.57–1230.73s.",
+    "citations": [
+      {
+        "evidence_id": "E003",
+        "start": 1200.57,
+        "end": 1230.73
+      }
+    ],
+    "question_id": "visual_03",
+    "question": "Locate the full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library. Give its approximate time interval.",
+    "mode": "static",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 4,
+    "frames_used": 12,
+    "unique_sampled_timestamps": [
+      1147.4796666666666,
+      1162.4946666666667,
+      1177.5096666666668,
+      1192.5246666666667,
+      1204.3698333333334,
+      1207.5063,
+      1211.9107000000001,
+      1219.4515666666666,
+      1222.5213,
+      1226.9924333333333,
+      1237.5029333333334,
+      1252.5179333333333
+    ],
+    "latency_seconds": 92.416,
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 9309,
+      "output_tokens": 482
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "Locate the full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library. Give its approximate time interval.",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "caption:40",
+              "start": 1200.0,
+              "end": 1260.0,
+              "text": "- The first frame (1200.032 seconds) displays a flowchart titled \"Article to Curated Knowledge.\"\n- It shows a process with five stages: \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\"\n- The second frame (1259.992 seconds) shows a diagram titled \"Two Loops, One Knowledge Workflow.\"\n- It illustrates two loops: \"RESEARCH LOOP\" and \"CURATION LOOP,\" with a \"Library\" as the central point of interaction.\n- The diagram includes characters representing a researcher, a librarian, and a user, with arrows showing the flow of information and actions.",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00020"
+              ],
+              "score": 46.07375
+            },
+            {
+              "id": "caption:38",
+              "start": 1140.0,
+              "end": 1200.0,
+              "text": "- **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00019"
+              ],
+              "score": 43.33121
+            },
+            {
+              "id": "transcript:40",
+              "start": 1200.57,
+              "end": 1230.73,
+              "text": "YouTube video or some other resource and you've taken some notes on it. You can drop in the raw source and your notes and you can send it off to the librarian. The librarian agent can try and find the fit. How does this fit into your existing knowledge base? It'll check the context, connections, and draft an entry for you for your review to see is this good enough for it to make it into your knowledge base, into your curated library. If it's not good enough, you can suggest revisions and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+              "source": "transcript",
+              "segment_ids": [
+                "T00413",
+                "T00414",
+                "T00415",
+                "T00416",
+                "T00417",
+                "T00418"
+              ],
+              "score": 33.46153
+            }
+          ],
+          "empty": false
+        }
+      },
+      {
+        "call": 2,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1200.0,
+          "end": 1260.0,
+          "question": "Locate the full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library. Give its approximate time interval."
+        },
+        "ok": true,
+        "result": {
+          "start": 1200.0,
+          "end": 1260.0,
+          "transcript": "[1195.61–1200.57] you want to click the button. As another example, let's say you've come across a great article or a\n[1200.57–1205.77] YouTube video or some other resource and you've taken some notes on it. You can drop in the raw\n[1205.77–1210.33] source and your notes and you can send it off to the librarian. The librarian agent can try and find\n[1210.33–1215.45] the fit. How does this fit into your existing knowledge base? It'll check the context, connections,\n[1215.45–1221.29] and draft an entry for you for your review to see is this good enough for it to make it into your\n[1221.29–1226.25] knowledge base, into your curated library. If it's not good enough, you can suggest revisions\n[1226.25–1230.73] and the librarian will update the draft entry and then pass it back to you for a review. Once you\n[1230.73–1235.13] approve it, the librarian can then file it into the library and connect it to the rest of your research.\n[1235.13–1239.21] And as a more complex system, we can actually start linking these loops together. For example,\n[1239.21–1243.77] you can propose a question or a topic to the researcher. The researcher can go through a research\n[1243.77–1248.49] loop, checking sources, checking it against the quality that you've given, this could be a goal loop,\n[1248.49–1253.53] and then when it's done all of its research, it can pass it off to you as the human to validate\n[1253.53–1258.25] that the information is good enough. You can add your own notes, connect it to that site of source,\n[1258.25–1262.57] and report, and then hand it off to the librarian. The librarian can then see how that fits into",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00412",
+              "start": 1195.61,
+              "end": 1200.57
+            },
+            {
+              "id": "T00413",
+              "start": 1200.57,
+              "end": 1205.77
+            },
+            {
+              "id": "T00414",
+              "start": 1205.77,
+              "end": 1210.33
+            },
+            {
+              "id": "T00415",
+              "start": 1210.33,
+              "end": 1215.45
+            },
+            {
+              "id": "T00416",
+              "start": 1215.45,
+              "end": 1221.29
+            },
+            {
+              "id": "T00417",
+              "start": 1221.29,
+              "end": 1226.25
+            },
+            {
+              "id": "T00418",
+              "start": 1226.25,
+              "end": 1230.73
+            },
+            {
+              "id": "T00419",
+              "start": 1230.73,
+              "end": 1235.13
+            },
+            {
+              "id": "T00420",
+              "start": 1235.13,
+              "end": 1239.21
+            },
+            {
+              "id": "T00421",
+              "start": 1239.21,
+              "end": 1243.77
+            },
+            {
+              "id": "T00422",
+              "start": 1243.77,
+              "end": 1248.49
+            },
+            {
+              "id": "T00423",
+              "start": 1248.49,
+              "end": 1253.53
+            },
+            {
+              "id": "T00424",
+              "start": 1253.53,
+              "end": 1258.25
+            },
+            {
+              "id": "T00425",
+              "start": 1258.25,
+              "end": 1262.57
+            }
+          ],
+          "visual_observation": "The full-screen Article to Curated Knowledge diagram, showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library, is visible in the frame at 1207.506 seconds. The approximate time interval for this specific visual observation is 1200.00–1260.00s.",
+          "sampled_timestamps": [
+            1207.5063,
+            1222.5213,
+            1237.5029333333334,
+            1252.5179333333333
+          ],
+          "modality": "visual+transcript",
+          "coverage": "sparse_samples_only",
+          "cache_hit": false
+        }
+      },
+      {
+        "call": 3,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1140.0,
+          "end": 1200.0,
+          "question": "Locate the full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library. Give its approximate time interval."
+        },
+        "ok": true,
+        "result": {
+          "start": 1140.0,
+          "end": 1200.0,
+          "transcript": "[1139.85–1142.89] So before we actually get into running these full control graphs, I just wanted to quickly\n[1142.89–1147.53] talk about a couple examples on how this fits together so that you can see what the graph\n[1147.53–1151.29] might look like before we get into how to set it up, just so it makes a little bit more\n[1151.29–1152.53] practical sense.\n[1152.53–1156.61] So imagine you have an email come in and you want to have a decision.\n[1156.61–1160.09] Maybe you want to have a draft created, maybe you want to have some research done, maybe\n[1160.09–1161.09] both.\n[1161.09–1164.89] So the email can come in and it can trigger an agent, like the researcher agent, to pull\n[1164.89–1169.13] in the relevant context and the evidence by doing some research. Once it's done, it can\n[1169.13–1174.17] then create a brief, like a research brief and draft a reply and then hand it off to you for review.\n[1174.17–1177.45] If you don't think it's good enough quality or you think it's missing something, you can provide\n[1177.45–1182.25] some more context, some more commentary, or steer it, and you can have it go back and loop again.\n[1182.25–1186.17] So this brings in a loop, but it's a human in the loop. Then if it meets your approval,\n[1186.17–1190.65] you can have it create the draft or even potentially send it right away if you've already reviewed\n[1190.65–1195.61] the final result. It's up to you if you want to have the send capability given to the agent or if\n[1195.61–1200.57] you want to click the button. As another example, let's say you've come across a great article or a",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00397",
+              "start": 1139.85,
+              "end": 1142.89
+            },
+            {
+              "id": "T00398",
+              "start": 1142.89,
+              "end": 1147.53
+            },
+            {
+              "id": "T00399",
+              "start": 1147.53,
+              "end": 1151.29
+            },
+            {
+              "id": "T00400",
+              "start": 1151.29,
+              "end": 1152.53
+            },
+            {
+              "id": "T00401",
+              "start": 1152.53,
+              "end": 1156.61
+            },
+            {
+              "id": "T00402",
+              "start": 1156.61,
+              "end": 1160.09
+            },
+            {
+              "id": "T00403",
+              "start": 1160.09,
+              "end": 1161.09
+            },
+            {
+              "id": "T00404",
+              "start": 1161.09,
+              "end": 1164.89
+            },
+            {
+              "id": "T00405",
+              "start": 1164.89,
+              "end": 1169.13
+            },
+            {
+              "id": "T00406",
+              "start": 1169.13,
+              "end": 1174.17
+            },
+            {
+              "id": "T00407",
+              "start": 1174.17,
+              "end": 1177.45
+            },
+            {
+              "id": "T00408",
+              "start": 1177.45,
+              "end": 1182.25
+            },
+            {
+              "id": "T00409",
+              "start": 1182.25,
+              "end": 1186.17
+            },
+            {
+              "id": "T00410",
+              "start": 1186.17,
+              "end": 1190.65
+            },
+            {
+              "id": "T00411",
+              "start": 1190.65,
+              "end": 1195.61
+            },
+            {
+              "id": "T00412",
+              "start": 1195.61,
+              "end": 1200.57
+            }
+          ],
+          "visual_observation": "The full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library is not visible in the provided frames. The frames show two different diagrams: \"One Workflow, Two Views\" and \"Email to Decision Brief\". The \"One Workflow, Two Views\" diagram is visible at 1147.480 seconds, but the \"Email to Decision Brief\" diagram is visible at 1162.495 seconds, 1177.510 seconds, and 1192.525 seconds. There is no visual evidence of the \"Article to Curated Knowledge\" diagram in the provided frames.",
+          "sampled_timestamps": [
+            1147.4796666666666,
+            1162.4946666666667,
+            1177.5096666666668,
+            1192.5246666666667
+          ],
+          "modality": "visual+transcript",
+          "coverage": "sparse_samples_only",
+          "cache_hit": false
+        }
+      },
+      {
+        "call": 4,
+        "tool": "inspect_clip",
+        "args": {
+          "start": 1200.57,
+          "end": 1230.73,
+          "question": "Locate the full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library. Give its approximate time interval."
+        },
+        "ok": true,
+        "result": {
+          "start": 1200.57,
+          "end": 1230.73,
+          "transcript": "[1200.57–1205.77] YouTube video or some other resource and you've taken some notes on it. You can drop in the raw\n[1205.77–1210.33] source and your notes and you can send it off to the librarian. The librarian agent can try and find\n[1210.33–1215.45] the fit. How does this fit into your existing knowledge base? It'll check the context, connections,\n[1215.45–1221.29] and draft an entry for you for your review to see is this good enough for it to make it into your\n[1221.29–1226.25] knowledge base, into your curated library. If it's not good enough, you can suggest revisions\n[1226.25–1230.73] and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+          "transcript_truncated": false,
+          "transcript_segments": [
+            {
+              "id": "T00413",
+              "start": 1200.57,
+              "end": 1205.77
+            },
+            {
+              "id": "T00414",
+              "start": 1205.77,
+              "end": 1210.33
+            },
+            {
+              "id": "T00415",
+              "start": 1210.33,
+              "end": 1215.45
+            },
+            {
+              "id": "T00416",
+              "start": 1215.45,
+              "end": 1221.29
+            },
+            {
+              "id": "T00417",
+              "start": 1221.29,
+              "end": 1226.25
+            },
+            {
+              "id": "T00418",
+              "start": 1226.25,
+              "end": 1230.73
+            }
+          ],
+          "visual_observation": "The full-screen diagram titled \"Article to Curated Knowledge\" is visible from 1200.57 to 1230.73 seconds. The diagram shows a process with five stages: \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\" The \"Find the fit\" stage is illustrated with a character using a magnifying glass to examine books, and the \"Draft an entry\" stage shows a document with a diagram. The \"Human review\" stage features a character reviewing a document, and the \"Connected library\" stage shows books with a \"Connected\" icon. The diagram is consistent across the sampled interval.",
+          "sampled_timestamps": [
+            1204.3698333333334,
+            1211.9107000000001,
+            1219.4515666666666,
+            1226.9924333333333
+          ],
+          "modality": "visual+transcript",
+          "coverage": "sparse_samples_only",
+          "cache_hit": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "start": 1200.0,
+        "end": 1260.0,
+        "transcript": "[1195.61–1200.57] you want to click the button. As another example, let's say you've come across a great article or a\n[1200.57–1205.77] YouTube video or some other resource and you've taken some notes on it. You can drop in the raw\n[1205.77–1210.33] source and your notes and you can send it off to the librarian. The librarian agent can try and find\n[1210.33–1215.45] the fit. How does this fit into your existing knowledge base? It'll check the context, connections,\n[1215.45–1221.29] and draft an entry for you for your review to see is this good enough for it to make it into your\n[1221.29–1226.25] knowledge base, into your curated library. If it's not good enough, you can suggest revisions\n[1226.25–1230.73] and the librarian will update the draft entry and then pass it back to you for a review. Once you\n[1230.73–1235.13] approve it, the librarian can then file it into the library and connect it to the rest of your research.\n[1235.13–1239.21] And as a more complex system, we can actually start linking these loops together. For example,\n[1239.21–1243.77] you can propose a question or a topic to the researcher. The researcher can go through a research\n[1243.77–1248.49] loop, checking sources, checking it against the quality that you've given, this could be a goal loop,\n[1248.49–1253.53] and then when it's done all of its research, it can pass it off to you as the human to validate\n[1253.53–1258.25] that the information is good enough. You can add your own notes, connect it to that site of source,\n[1258.25–1262.57] and report, and then hand it off to the librarian. The librarian can then see how that fits into",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00412",
+            "start": 1195.61,
+            "end": 1200.57
+          },
+          {
+            "id": "T00413",
+            "start": 1200.57,
+            "end": 1205.77
+          },
+          {
+            "id": "T00414",
+            "start": 1205.77,
+            "end": 1210.33
+          },
+          {
+            "id": "T00415",
+            "start": 1210.33,
+            "end": 1215.45
+          },
+          {
+            "id": "T00416",
+            "start": 1215.45,
+            "end": 1221.29
+          },
+          {
+            "id": "T00417",
+            "start": 1221.29,
+            "end": 1226.25
+          },
+          {
+            "id": "T00418",
+            "start": 1226.25,
+            "end": 1230.73
+          },
+          {
+            "id": "T00419",
+            "start": 1230.73,
+            "end": 1235.13
+          },
+          {
+            "id": "T00420",
+            "start": 1235.13,
+            "end": 1239.21
+          },
+          {
+            "id": "T00421",
+            "start": 1239.21,
+            "end": 1243.77
+          },
+          {
+            "id": "T00422",
+            "start": 1243.77,
+            "end": 1248.49
+          },
+          {
+            "id": "T00423",
+            "start": 1248.49,
+            "end": 1253.53
+          },
+          {
+            "id": "T00424",
+            "start": 1253.53,
+            "end": 1258.25
+          },
+          {
+            "id": "T00425",
+            "start": 1258.25,
+            "end": 1262.57
+          }
+        ],
+        "visual_observation": "The full-screen Article to Curated Knowledge diagram, showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library, is visible in the frame at 1207.506 seconds. The approximate time interval for this specific visual observation is 1200.00–1260.00s.",
+        "sampled_timestamps": [
+          1207.5063,
+          1222.5213,
+          1237.5029333333334,
+          1252.5179333333333
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "evidence_id": "E001"
+      },
+      "E002": {
+        "start": 1140.0,
+        "end": 1200.0,
+        "transcript": "[1139.85–1142.89] So before we actually get into running these full control graphs, I just wanted to quickly\n[1142.89–1147.53] talk about a couple examples on how this fits together so that you can see what the graph\n[1147.53–1151.29] might look like before we get into how to set it up, just so it makes a little bit more\n[1151.29–1152.53] practical sense.\n[1152.53–1156.61] So imagine you have an email come in and you want to have a decision.\n[1156.61–1160.09] Maybe you want to have a draft created, maybe you want to have some research done, maybe\n[1160.09–1161.09] both.\n[1161.09–1164.89] So the email can come in and it can trigger an agent, like the researcher agent, to pull\n[1164.89–1169.13] in the relevant context and the evidence by doing some research. Once it's done, it can\n[1169.13–1174.17] then create a brief, like a research brief and draft a reply and then hand it off to you for review.\n[1174.17–1177.45] If you don't think it's good enough quality or you think it's missing something, you can provide\n[1177.45–1182.25] some more context, some more commentary, or steer it, and you can have it go back and loop again.\n[1182.25–1186.17] So this brings in a loop, but it's a human in the loop. Then if it meets your approval,\n[1186.17–1190.65] you can have it create the draft or even potentially send it right away if you've already reviewed\n[1190.65–1195.61] the final result. It's up to you if you want to have the send capability given to the agent or if\n[1195.61–1200.57] you want to click the button. As another example, let's say you've come across a great article or a",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00397",
+            "start": 1139.85,
+            "end": 1142.89
+          },
+          {
+            "id": "T00398",
+            "start": 1142.89,
+            "end": 1147.53
+          },
+          {
+            "id": "T00399",
+            "start": 1147.53,
+            "end": 1151.29
+          },
+          {
+            "id": "T00400",
+            "start": 1151.29,
+            "end": 1152.53
+          },
+          {
+            "id": "T00401",
+            "start": 1152.53,
+            "end": 1156.61
+          },
+          {
+            "id": "T00402",
+            "start": 1156.61,
+            "end": 1160.09
+          },
+          {
+            "id": "T00403",
+            "start": 1160.09,
+            "end": 1161.09
+          },
+          {
+            "id": "T00404",
+            "start": 1161.09,
+            "end": 1164.89
+          },
+          {
+            "id": "T00405",
+            "start": 1164.89,
+            "end": 1169.13
+          },
+          {
+            "id": "T00406",
+            "start": 1169.13,
+            "end": 1174.17
+          },
+          {
+            "id": "T00407",
+            "start": 1174.17,
+            "end": 1177.45
+          },
+          {
+            "id": "T00408",
+            "start": 1177.45,
+            "end": 1182.25
+          },
+          {
+            "id": "T00409",
+            "start": 1182.25,
+            "end": 1186.17
+          },
+          {
+            "id": "T00410",
+            "start": 1186.17,
+            "end": 1190.65
+          },
+          {
+            "id": "T00411",
+            "start": 1190.65,
+            "end": 1195.61
+          },
+          {
+            "id": "T00412",
+            "start": 1195.61,
+            "end": 1200.57
+          }
+        ],
+        "visual_observation": "The full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library is not visible in the provided frames. The frames show two different diagrams: \"One Workflow, Two Views\" and \"Email to Decision Brief\". The \"One Workflow, Two Views\" diagram is visible at 1147.480 seconds, but the \"Email to Decision Brief\" diagram is visible at 1162.495 seconds, 1177.510 seconds, and 1192.525 seconds. There is no visual evidence of the \"Article to Curated Knowledge\" diagram in the provided frames.",
+        "sampled_timestamps": [
+          1147.4796666666666,
+          1162.4946666666667,
+          1177.5096666666668,
+          1192.5246666666667
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "evidence_id": "E002"
+      },
+      "E003": {
+        "start": 1200.57,
+        "end": 1230.73,
+        "transcript": "[1200.57–1205.77] YouTube video or some other resource and you've taken some notes on it. You can drop in the raw\n[1205.77–1210.33] source and your notes and you can send it off to the librarian. The librarian agent can try and find\n[1210.33–1215.45] the fit. How does this fit into your existing knowledge base? It'll check the context, connections,\n[1215.45–1221.29] and draft an entry for you for your review to see is this good enough for it to make it into your\n[1221.29–1226.25] knowledge base, into your curated library. If it's not good enough, you can suggest revisions\n[1226.25–1230.73] and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00413",
+            "start": 1200.57,
+            "end": 1205.77
+          },
+          {
+            "id": "T00414",
+            "start": 1205.77,
+            "end": 1210.33
+          },
+          {
+            "id": "T00415",
+            "start": 1210.33,
+            "end": 1215.45
+          },
+          {
+            "id": "T00416",
+            "start": 1215.45,
+            "end": 1221.29
+          },
+          {
+            "id": "T00417",
+            "start": 1221.29,
+            "end": 1226.25
+          },
+          {
+            "id": "T00418",
+            "start": 1226.25,
+            "end": 1230.73
+          }
+        ],
+        "visual_observation": "The full-screen diagram titled \"Article to Curated Knowledge\" is visible from 1200.57 to 1230.73 seconds. The diagram shows a process with five stages: \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\" The \"Find the fit\" stage is illustrated with a character using a magnifying glass to examine books, and the \"Draft an entry\" stage shows a document with a diagram. The \"Human review\" stage features a character reviewing a document, and the \"Connected library\" stage shows books with a \"Connected\" icon. The diagram is consistent across the sampled interval.",
+        "sampled_timestamps": [
+          1204.3698333333334,
+          1211.9107000000001,
+          1219.4515666666666,
+          1226.9924333333333
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "evidence_id": "E003"
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library is visible from 1200.57 to 1230.73 seconds. The approximate time interval is 1200.57–1230.73s.\",\"citations\":[{\"evidence_id\":\"E003\",\"start\":1200.57,\"end\":1230.73}]}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v2-single-action"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "status": "error",
+  "answer": "",
+  "citations": [],
+  "stop_reason": "Invalid model response: JSONDecodeError: Extra data: line 2 column 1 (char 99)",
+  "error": "Invalid model response: JSONDecodeError: Extra data: line 2 column 1 (char 99)",
+  "error_type": "invalid_model_response",
+  "question_id": "",
+  "question": "At what time is the Article to Curated Knowledge diagram shown?",
+  "mode": "adaptive",
+  "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+  "tool_calls": 0,
+  "frames_used": 0,
+  "unique_sampled_timestamps": [],
+  "latency_seconds": 18.8803,
+  "usage": {
+    "model_calls": 3,
+    "input_tokens": 1450,
+    "output_tokens": 162
+  },
+  "trace": [],
+  "evidence": {},
+  "decisions": [
+    {
+      "step": 0,
+      "raw": "{\"tool\":\"search\",\"args\":{\"query\":\"Article to Curated Knowledge diagram\",\"top_k\":5,\"source\":\"all\"}}\n{\"tool\":\"inspect_clip\",\"args\":{\"start\":120,\"end\":150,\"question\":\"what should be checked?\"}}",
+      "error": "Invalid model response: JSONDecodeError: Extra data: line 2 column 1 (char 99)",
+      "error_type": "invalid_model_response"
+    },
+    {
+      "step": 1,
+      "raw": "{\"tool\":\"search\",\"args\":{\"query\":\"Article to Curated Knowledge diagram\",\"top_k\":5,\"source\":\"all\"}}\n{\"tool\":\"inspect_clip\",\"args\":{\"start\":120,\"end\":150,\"question\":\"what should be checked?\"}}",
+      "error": "Invalid model response: JSONDecodeError: Extra data: line 2 column 1 (char 99)",
+      "error_type": "invalid_model_response"
+    },
+    {
+      "step": 2,
+      "raw": "{\"tool\":\"search\",\"args\":{\"query\":\"Article to Curated Knowledge diagram\",\"top_k\":5,\"source\":\"all\"}}\n{\"tool\":\"inspect_clip\",\"args\":{\"start\":120,\"end\":150,\"question\":\"what should be checked?\"}}",
+      "error": "Invalid model response: JSONDecodeError: Extra data: line 2 column 1 (char 99)",
+      "error_type": "invalid_model_response"
+    }
+  ],
+  "provenance": {
+    "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+    "prompt_version": "clipscout-v1"
+  },
+  "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+}

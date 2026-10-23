@@ -1,0 +1,1929 @@
+{
+  "status": "answered",
+  "answer": "Selected observations for 15:00–42:55 (partial coverage):\nThe video begins at 900 seconds with a GitHub page on subagent context, then transitions to a dashboard showing a workflow diagram and a chat with Hermes. From 1418 seconds, the video explains Kanban as a work queue with a database, showing a table comparing delegate_task and Kanban. At 1936 seconds, the video demonstrates Kanban's triage and task decomposition, showing a Kanban board with tasks in 'TRIAGE' and 'RUNNING' columns. Finally, at 2455 seconds, the video discusses testing results and future exploration of complex Kanban systems, concluding with a man speaking and a 'SUBSCRIBED' button appearing.",
+  "citations": [
+    {
+      "evidence_id": "E001",
+      "start": 900.0,
+      "end": 1020.0
+    },
+    {
+      "evidence_id": "E002",
+      "start": 1418.336,
+      "end": 1538.335
+    },
+    {
+      "evidence_id": "E003",
+      "start": 1936.671,
+      "end": 2056.67
+    },
+    {
+      "evidence_id": "E004",
+      "start": 2455.006,
+      "end": 2575.005
+    }
+  ],
+  "routing": "temporal_scope",
+  "temporal_scope": {
+    "kind": "after",
+    "start": 900.0,
+    "end": 2575.0057666666667,
+    "interpretation": "Requested video interval: 900–2575.01 seconds. After means through the end of the video."
+  },
+  "coverage": {
+    "strategy": "distributed_windows",
+    "requested_start": 900.0,
+    "requested_end": 2575.0057666666667,
+    "inspection_intervals": [
+      [
+        900.0,
+        1020.0
+      ],
+      [
+        1418.336,
+        1538.335
+      ],
+      [
+        1936.671,
+        2056.67
+      ],
+      [
+        2455.006,
+        2575.005
+      ]
+    ],
+    "omitted_intervals": [
+      [
+        1020.0,
+        1418.336
+      ],
+      [
+        1538.335,
+        1936.671
+      ],
+      [
+        2056.67,
+        2455.006
+      ],
+      [
+        2575.005,
+        2575.0057666666667
+      ]
+    ],
+    "sampled_frame_count": 16,
+    "complete_visual_coverage": false,
+    "note": "Requested interval: 15:00–42:55. Selected observations from 4 inspected windows and 16 sampled frames; this is not continuous viewing or an exhaustive summary. Some portions of the requested interval were not inspected."
+  },
+  "question_id": "",
+  "question": "What happens in the video after 15 minutes?",
+  "mode": "adaptive",
+  "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+  "tool_calls": 4,
+  "frames_used": 16,
+  "unique_sampled_timestamps": [
+    915.0141000000001,
+    945.0107333333334,
+    975.0073666666667,
+    1005.004,
+    1433.3319000000001,
+    1463.328533333333,
+    1493.3251666666667,
+    1523.3218000000002,
+    1951.6830666666667,
+    1981.6797000000001,
+    2011.6763333333333,
+    2041.6729666666668,
+    2470.0008666666668,
+    2499.9975,
+    2529.9941333333336,
+    2559.990766666667
+  ],
+  "latency_seconds": 184.9861,
+  "usage": {
+    "model_calls": 5,
+    "input_tokens": 10340,
+    "output_tokens": 828
+  },
+  "trace": [
+    {
+      "call": 1,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 900.0,
+        "end": 1020.0,
+        "question": "What happens in the video after 15 minutes?"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 900.0,
+        "end": 1020.0,
+        "transcript": "[901.57–906.65] So it fits bounded research review and repair work, but it doesn't necessarily make sense\n[906.65–911.25] for other types of situations that require more specialization and more context and more\n[911.25–912.25] knowledge.\n[912.25–916.07] I mentioned, sub-agents have zero knowledge from the parent's conversation history.\n[916.07–920.09] They only have what comes from the goal and the context that the parent gives them.\n[920.09–922.85] But what if we start getting into more specific contexts or\n[922.85–926.89] more custom situations that involve other types of contexts outside of what\n[926.89–928.13] the parent even knows?\n[928.13–931.69] We can see here the decision test that the answer says is add a specialist.\n[931.69–935.25] If it is independent, needs different context tools and policy and\n[935.25–939.61] beats a single agent baseline on quality coverage, latency, and total review cost.\n[939.61–942.49] So in other words, the answer is that we should add specialists\n[942.49–944.63] if we want it to keep its own working knowledge\n[944.63–947.97] and have access to different context tools and policies,\n[947.97–949.73] perhaps have a different memory system\n[949.73–952.09] rather than being spawned as a brand new agent\n[952.09–953.07] every single time.\n[953.07–955.37] And I note that the Hermes corroboration here\n[955.37–957.61] mentions Kanban or Kanban,\n[957.61–959.05] depending on how you wanna pronounce it.\n[959.05–960.57] But before we get into Kanban,\n[960.57–962.05] I thought that we could take a quick look\n[962.05–965.01] at Hermes Bot Mode actually sets you up for success\n[965.01–966.29] when you start using Kanban\n[966.29–969.13] because it helps you prepare the specialist profiles\n[969.13–973.53] we can see down here I have orchestrator, researcher, and librarian. So let's take a quick look at\n[973.53–983.11] bot mode. So now we can go from a single agent operating in a loop with delegated subagents to\n[983.11–988.47] a graph. That's where profiles come in. Okay, so this is bot mode. So we can see here a bot is just\n[988.47–993.99] a profile is the same list of profiles that I have along the bottom here. A bot or a profile can\n[993.99–999.03] retain its own skills, memory, and working context with a model suited to its role. Each of these\n[999.03–1003.99] different bots here can have a default model that's different. For example, maybe my orchestrator\n[1003.99–1008.15] has one of the most powerful models available, a frontier model. But maybe the researcher\n[1008.15–1012.87] needs a much less powerful model. And then I can use a feature like the group chat to coordinate\n[1012.87–1017.51] how they work together. So rather than a sub-agent starting with zero knowledge, we can configure",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00333",
+            "start": 901.57,
+            "end": 906.65
+          },
+          {
+            "id": "T00334",
+            "start": 906.65,
+            "end": 911.25
+          },
+          {
+            "id": "T00335",
+            "start": 911.25,
+            "end": 912.25
+          },
+          {
+            "id": "T00336",
+            "start": 912.25,
+            "end": 916.07
+          },
+          {
+            "id": "T00337",
+            "start": 916.07,
+            "end": 920.09
+          },
+          {
+            "id": "T00338",
+            "start": 920.09,
+            "end": 922.85
+          },
+          {
+            "id": "T00339",
+            "start": 922.85,
+            "end": 926.89
+          },
+          {
+            "id": "T00340",
+            "start": 926.89,
+            "end": 928.13
+          },
+          {
+            "id": "T00341",
+            "start": 928.13,
+            "end": 931.69
+          },
+          {
+            "id": "T00342",
+            "start": 931.69,
+            "end": 935.25
+          },
+          {
+            "id": "T00343",
+            "start": 935.25,
+            "end": 939.61
+          },
+          {
+            "id": "T00344",
+            "start": 939.61,
+            "end": 942.49
+          },
+          {
+            "id": "T00345",
+            "start": 942.49,
+            "end": 944.63
+          },
+          {
+            "id": "T00346",
+            "start": 944.63,
+            "end": 947.97
+          },
+          {
+            "id": "T00347",
+            "start": 947.97,
+            "end": 949.73
+          },
+          {
+            "id": "T00348",
+            "start": 949.73,
+            "end": 952.09
+          },
+          {
+            "id": "T00349",
+            "start": 952.09,
+            "end": 953.07
+          },
+          {
+            "id": "T00350",
+            "start": 953.07,
+            "end": 955.37
+          },
+          {
+            "id": "T00351",
+            "start": 955.37,
+            "end": 957.61
+          },
+          {
+            "id": "T00352",
+            "start": 957.61,
+            "end": 959.05
+          },
+          {
+            "id": "T00353",
+            "start": 959.05,
+            "end": 960.57
+          },
+          {
+            "id": "T00354",
+            "start": 960.57,
+            "end": 962.05
+          },
+          {
+            "id": "T00355",
+            "start": 962.05,
+            "end": 965.01
+          },
+          {
+            "id": "T00356",
+            "start": 965.01,
+            "end": 966.29
+          },
+          {
+            "id": "T00357",
+            "start": 966.29,
+            "end": 969.13
+          },
+          {
+            "id": "T00358",
+            "start": 969.13,
+            "end": 973.53
+          },
+          {
+            "id": "T00359",
+            "start": 973.53,
+            "end": 983.11
+          },
+          {
+            "id": "T00360",
+            "start": 983.11,
+            "end": 988.47
+          },
+          {
+            "id": "T00361",
+            "start": 988.47,
+            "end": 993.99
+          },
+          {
+            "id": "T00362",
+            "start": 993.99,
+            "end": 999.03
+          },
+          {
+            "id": "T00363",
+            "start": 999.03,
+            "end": 1003.99
+          },
+          {
+            "id": "T00364",
+            "start": 1003.99,
+            "end": 1008.15
+          },
+          {
+            "id": "T00365",
+            "start": 1008.15,
+            "end": 1012.87
+          },
+          {
+            "id": "T00366",
+            "start": 1012.87,
+            "end": 1017.51
+          }
+        ],
+        "visual_observation": "At 915.014 seconds, the screen shows a GitHub page titled \"How Subagent Context Works\" with a highlighted warning about subagents lacking knowledge. At 945.011 seconds, the interface shifts to a \"Build Actionable Information System\" project dashboard. At 975.007 seconds, a scenic workflow diagram appears, illustrating a path from \"Delegate\" to \"Run the Workflow.\" At 1005.004 seconds, the interface displays a chat with a bot named \"Hermes\" in a \"SCHEDULED JOBS\" section.",
+        "sampled_timestamps": [
+          915.0141000000001,
+          945.0107333333334,
+          975.0073666666667,
+          1005.004
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E001"
+      },
+      "latency_seconds": 10.8068
+    },
+    {
+      "call": 2,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 1418.336,
+        "end": 1538.335,
+        "question": "What happens in the video after 15 minutes?"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 1418.336,
+        "end": 1538.335,
+        "transcript": "[1418.76–1420.88] when the system actually compresses.\n[1420.88–1421.72] This is what I was talking about\n[1421.72–1423.32] with the context window on the bottom here.\n[1423.32–1424.56] If this gets compressed,\n[1424.56–1426.92] then if there was a sub-agent within that compression,\n[1426.92–1429.28] you can lose the context associated with it.\n[1429.28–1432.24] Whereas in Kanban, it's stored in a SQLite database.\n[1432.24–1433.72] So you get access to that forever.\n[1433.72–1435.04] You can go back and take a look.\n[1435.04–1438.32] So a good summary here is that delegate task is a tool call.\n[1438.32–1441.20] It's just one function, whereas Kanban is a work queue\n[1441.20–1443.36] where every handoff is a row in a database\n[1443.36–1445.80] that any profile or human can see in edit.\n[1445.80–1447.92] So there's a lot more transparency that happens here,\n[1447.92–1449.84] which is why it starts to get into being\n[1449.84–1451.96] a proper control graph or task graph.\n[1451.96–1454.40] Thankfully, Hermes has a built-in feature called Kanban.\n[1454.40–1455.80] So let's take a look at that.\n[1457.28–1458.88] So the first thing we need to do for Kanban\n[1458.88–1461.04] is you may not have this appearing on the side here,\n[1461.04–1462.68] so we can go up to capabilities\n[1462.68–1464.04] and then go over to plugins.\n[1464.04–1466.20] And we can see that we have three built-in plugins\n[1466.20–1467.20] that come with Hermes.\n[1467.20–1469.20] The first is bot mode that comes turned on\n[1469.20–1470.24] like we've already looked at,\n[1470.24–1471.68] and the second is the Kanban.\n[1471.68–1472.96] So make sure this is turned on here,\n[1472.96–1475.84] and then you should see this appear on the left-hand side.\n[1475.84–1477.24] So if we go over to Kanban here,\n[1477.24–1480.12] we are not gonna be the ones running things the agent is.\n[1480.12–1482.60] All we need to do is put a card into the ready section,\n[1482.60–1484.36] assign it to a particular agent,\n[1484.36–1486.28] and the agent will pick it up in a minute.\n[1486.28–1488.04] And there's even a triage section.\n[1488.04–1489.76] So this is where if you're not quite sure\n[1489.76–1491.34] exactly what the task is,\n[1491.34–1493.20] you can have an agent rewrite the idea\n[1493.20–1494.92] into a proper task first.\n[1494.92–1496.74] So that's actually a really important part of it,\n[1496.74–1498.24] and I'll show you how we can change the settings\n[1498.24–1499.20] for that in a moment.\n[1499.20–1502.24] So triage is for raw ideas where that the specifier\n[1502.24–1506.10] going to flesh out the spec and then it will move it through the system. To do\n[1506.10–1510.64] means it's waiting on dependencies or unassigned so we can create task and not\n[1510.64–1514.48] assign it and that means the dispatcher won't send it off to go run. We can\n[1514.48–1518.76] schedule which is we want a task to run at a particular time so it could be for\n[1518.76–1523.24] example check the latest series of emails and",
+        "transcript_truncated": true,
+        "transcript_segments": [
+          {
+            "id": "T00466",
+            "start": 1418.76,
+            "end": 1420.88
+          },
+          {
+            "id": "T00467",
+            "start": 1420.88,
+            "end": 1421.72
+          },
+          {
+            "id": "T00468",
+            "start": 1421.72,
+            "end": 1423.32
+          },
+          {
+            "id": "T00469",
+            "start": 1423.32,
+            "end": 1424.56
+          },
+          {
+            "id": "T00470",
+            "start": 1424.56,
+            "end": 1426.92
+          },
+          {
+            "id": "T00471",
+            "start": 1426.92,
+            "end": 1429.28
+          },
+          {
+            "id": "T00472",
+            "start": 1429.28,
+            "end": 1432.24
+          },
+          {
+            "id": "T00473",
+            "start": 1432.24,
+            "end": 1433.72
+          },
+          {
+            "id": "T00474",
+            "start": 1433.72,
+            "end": 1435.04
+          },
+          {
+            "id": "T00475",
+            "start": 1435.04,
+            "end": 1438.32
+          },
+          {
+            "id": "T00476",
+            "start": 1438.32,
+            "end": 1441.2
+          },
+          {
+            "id": "T00477",
+            "start": 1441.2,
+            "end": 1443.36
+          },
+          {
+            "id": "T00478",
+            "start": 1443.36,
+            "end": 1445.8
+          },
+          {
+            "id": "T00479",
+            "start": 1445.8,
+            "end": 1447.92
+          },
+          {
+            "id": "T00480",
+            "start": 1447.92,
+            "end": 1449.84
+          },
+          {
+            "id": "T00481",
+            "start": 1449.84,
+            "end": 1451.96
+          },
+          {
+            "id": "T00482",
+            "start": 1451.96,
+            "end": 1454.4
+          },
+          {
+            "id": "T00483",
+            "start": 1454.4,
+            "end": 1455.8
+          },
+          {
+            "id": "T00484",
+            "start": 1457.28,
+            "end": 1458.88
+          },
+          {
+            "id": "T00485",
+            "start": 1458.88,
+            "end": 1461.04
+          },
+          {
+            "id": "T00486",
+            "start": 1461.04,
+            "end": 1462.68
+          },
+          {
+            "id": "T00487",
+            "start": 1462.68,
+            "end": 1464.04
+          },
+          {
+            "id": "T00488",
+            "start": 1464.04,
+            "end": 1466.2
+          },
+          {
+            "id": "T00489",
+            "start": 1466.2,
+            "end": 1467.2
+          },
+          {
+            "id": "T00490",
+            "start": 1467.2,
+            "end": 1469.2
+          },
+          {
+            "id": "T00491",
+            "start": 1469.2,
+            "end": 1470.24
+          },
+          {
+            "id": "T00492",
+            "start": 1470.24,
+            "end": 1471.68
+          },
+          {
+            "id": "T00493",
+            "start": 1471.68,
+            "end": 1472.96
+          },
+          {
+            "id": "T00494",
+            "start": 1472.96,
+            "end": 1475.84
+          },
+          {
+            "id": "T00495",
+            "start": 1475.84,
+            "end": 1477.24
+          },
+          {
+            "id": "T00496",
+            "start": 1477.24,
+            "end": 1480.12
+          },
+          {
+            "id": "T00497",
+            "start": 1480.12,
+            "end": 1482.6
+          },
+          {
+            "id": "T00498",
+            "start": 1482.6,
+            "end": 1484.36
+          },
+          {
+            "id": "T00499",
+            "start": 1484.36,
+            "end": 1486.28
+          },
+          {
+            "id": "T00500",
+            "start": 1486.28,
+            "end": 1488.04
+          },
+          {
+            "id": "T00501",
+            "start": 1488.04,
+            "end": 1489.76
+          },
+          {
+            "id": "T00502",
+            "start": 1489.76,
+            "end": 1491.34
+          },
+          {
+            "id": "T00503",
+            "start": 1491.34,
+            "end": 1493.2
+          },
+          {
+            "id": "T00504",
+            "start": 1493.2,
+            "end": 1494.92
+          },
+          {
+            "id": "T00505",
+            "start": 1494.92,
+            "end": 1496.74
+          },
+          {
+            "id": "T00506",
+            "start": 1496.74,
+            "end": 1498.24
+          },
+          {
+            "id": "T00507",
+            "start": 1498.24,
+            "end": 1499.2
+          },
+          {
+            "id": "T00508",
+            "start": 1499.2,
+            "end": 1502.24
+          },
+          {
+            "id": "T00509",
+            "start": 1502.24,
+            "end": 1506.1
+          },
+          {
+            "id": "T00510",
+            "start": 1506.1,
+            "end": 1510.64
+          },
+          {
+            "id": "T00511",
+            "start": 1510.64,
+            "end": 1514.48
+          },
+          {
+            "id": "T00512",
+            "start": 1514.48,
+            "end": 1518.76
+          },
+          {
+            "id": "T00513",
+            "start": 1518.76,
+            "end": 1523.24
+          },
+          {
+            "id": "T00514",
+            "start": 1523.24,
+            "end": 1527.24
+          },
+          {
+            "id": "T00515",
+            "start": 1527.24,
+            "end": 1530.2
+          },
+          {
+            "id": "T00516",
+            "start": 1530.2,
+            "end": 1533.06
+          },
+          {
+            "id": "T00517",
+            "start": 1533.06,
+            "end": 1536.28
+          }
+        ],
+        "visual_observation": "At 1433.332 seconds, a table compares 'delegate_task' and 'Kanban' with attributes like shape, parent, and resumability. At 1463.329 seconds, the screen shows the 'Sessions' tab in a tool, with 'ai-daily-intel' and 'wanderer' enabled. At 1493.325 seconds, the 'Kanban' interface displays a message: 'You don't run the agents - agents do. Put a card in Ready with an assignee and an agent picks it up within a minute. No assignee. no run. Trigg: in a moment, the agents' lanes, hands off. Blocked. Results come back on the card. Got it.' At 1523.322 seconds, an infographic titled 'Email to Decision Brief' illustrates a workflow: Important email → Understand & research → Brief + draft reply → Human review → Send & save.",
+        "sampled_timestamps": [
+          1433.3319000000001,
+          1463.328533333333,
+          1493.3251666666667,
+          1523.3218000000002
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E002"
+      },
+      "latency_seconds": 16.0742
+    },
+    {
+      "call": 3,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 1936.671,
+        "end": 2056.67,
+        "question": "What happens in the video after 15 minutes?"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 1936.671,
+        "end": 2056.67,
+        "transcript": "[1938.21–1940.77] And this brings up the board that I was talking about.\n[1941.97–1944.13] The triage section is where raw ideas.\n[1944.13–1946.37] We have a specifier that's going to flesh out the spec.\n[1946.37–1949.65] So it's going to be converted from this into a different card.\n[1949.65–1952.25] And this is using that auxiliary model that I was talking about.\n[1952.25–1952.85] OK, here we go.\n[1952.85–1953.69] So it just started.\n[1953.69–1957.33] So that triage using the auto decomposer, the dispatcher checked.\n[1957.33–1958.37] Oh, it's been a minute.\n[1958.37–1959.33] There's something here.\n[1959.33–1961.05] Let's break it into two different tasks.\n[1961.05–1963.69] So the task decomposer broke it up and assigned it\n[1963.69–1967.57] to these particular subagents where each one is now running on its own.\n[1967.57–1970.21] And we can click into this and we can see the specific prompt that\n[1970.21–1974.89] was given to it created by the auto decomposer using the default model, we can estimate the\n[1974.89–1978.37] effort of this particular task, like I was just showing you, and we can comment. So as\n[1978.37–1982.33] these tasks are currently running, we can actually send messages to the worker. And if there's\n[1982.33–1986.93] a big enough change, we can even send a message and then recue it and have it start that task\n[1986.93–1990.61] over again. So we get a chance to go through and see how all of this is working, what it's\n[1990.61–1994.81] actually doing, how it's analyzing it. And we can see this for each card that's running\n[1994.81–1999.53] here. So you get a lot of flexibility for controlling these cards here. And what's cool too is,\n[1999.53–2001.65] For example, I can go back to the to-do section,\n[2001.65–2003.33] which are the currently blocked tasks.\n[2003.33–2006.33] So these ones are waiting for the researcher to finish\n[2006.33–2007.41] before they run.\n[2007.41–2009.77] And we can see this one was actually assigned to default\n[2009.77–2010.77] instead of orchestrator.\n[2010.77–2012.81] So I'm going to change the assignee from default here\n[2012.81–2014.21] back to orchestrator.\n[2014.21–2016.69] And now we can see that change the card over here as well.\n[2016.69–2018.29] So I think it's just such a cool way\n[2018.29–2021.09] for us to be able to take a look at how all of the tasks\n[2021.09–2023.25] are broken up into their individual actions\n[2023.25–2025.49] and see how they move through the Kanban.\n[2025.49–2027.21] And you can kind of just get a sense\n[2027.21–2029.97] on how all of the project is working together.\n[2029.97–2031.53] And that's just for one card.\n[2031.53–2034.21] I can now add a second card and it can start running itself\n[2034.21–2035.45] and keep going from here.\n[2035.45–2036.89] So you can really start to plan out.\n[2036.89–2039.21] Maybe you have five or six or 10 or 20 tasks\n[2039.21–2040.21] that you want to run.\n[2040.21–2042.49] You can put them all in here, you can schedule them,\n[2042.49–2",
+        "transcript_truncated": true,
+        "transcript_segments": [
+          {
+            "id": "T00662",
+            "start": 1938.21,
+            "end": 1940.77
+          },
+          {
+            "id": "T00663",
+            "start": 1941.97,
+            "end": 1944.13
+          },
+          {
+            "id": "T00664",
+            "start": 1944.13,
+            "end": 1946.37
+          },
+          {
+            "id": "T00665",
+            "start": 1946.37,
+            "end": 1949.65
+          },
+          {
+            "id": "T00666",
+            "start": 1949.65,
+            "end": 1952.25
+          },
+          {
+            "id": "T00667",
+            "start": 1952.25,
+            "end": 1952.85
+          },
+          {
+            "id": "T00668",
+            "start": 1952.85,
+            "end": 1953.69
+          },
+          {
+            "id": "T00669",
+            "start": 1953.69,
+            "end": 1957.33
+          },
+          {
+            "id": "T00670",
+            "start": 1957.33,
+            "end": 1958.37
+          },
+          {
+            "id": "T00671",
+            "start": 1958.37,
+            "end": 1959.33
+          },
+          {
+            "id": "T00672",
+            "start": 1959.33,
+            "end": 1961.05
+          },
+          {
+            "id": "T00673",
+            "start": 1961.05,
+            "end": 1963.69
+          },
+          {
+            "id": "T00674",
+            "start": 1963.69,
+            "end": 1967.57
+          },
+          {
+            "id": "T00675",
+            "start": 1967.57,
+            "end": 1970.21
+          },
+          {
+            "id": "T00676",
+            "start": 1970.21,
+            "end": 1974.89
+          },
+          {
+            "id": "T00677",
+            "start": 1974.89,
+            "end": 1978.37
+          },
+          {
+            "id": "T00678",
+            "start": 1978.37,
+            "end": 1982.33
+          },
+          {
+            "id": "T00679",
+            "start": 1982.33,
+            "end": 1986.93
+          },
+          {
+            "id": "T00680",
+            "start": 1986.93,
+            "end": 1990.61
+          },
+          {
+            "id": "T00681",
+            "start": 1990.61,
+            "end": 1994.81
+          },
+          {
+            "id": "T00682",
+            "start": 1994.81,
+            "end": 1999.53
+          },
+          {
+            "id": "T00683",
+            "start": 1999.53,
+            "end": 2001.65
+          },
+          {
+            "id": "T00684",
+            "start": 2001.65,
+            "end": 2003.33
+          },
+          {
+            "id": "T00685",
+            "start": 2003.33,
+            "end": 2006.33
+          },
+          {
+            "id": "T00686",
+            "start": 2006.33,
+            "end": 2007.41
+          },
+          {
+            "id": "T00687",
+            "start": 2007.41,
+            "end": 2009.77
+          },
+          {
+            "id": "T00688",
+            "start": 2009.77,
+            "end": 2010.77
+          },
+          {
+            "id": "T00689",
+            "start": 2010.77,
+            "end": 2012.81
+          },
+          {
+            "id": "T00690",
+            "start": 2012.81,
+            "end": 2014.21
+          },
+          {
+            "id": "T00691",
+            "start": 2014.21,
+            "end": 2016.69
+          },
+          {
+            "id": "T00692",
+            "start": 2016.69,
+            "end": 2018.29
+          },
+          {
+            "id": "T00693",
+            "start": 2018.29,
+            "end": 2021.09
+          },
+          {
+            "id": "T00694",
+            "start": 2021.09,
+            "end": 2023.25
+          },
+          {
+            "id": "T00695",
+            "start": 2023.25,
+            "end": 2025.49
+          },
+          {
+            "id": "T00696",
+            "start": 2025.49,
+            "end": 2027.21
+          },
+          {
+            "id": "T00697",
+            "start": 2027.21,
+            "end": 2029.97
+          },
+          {
+            "id": "T00698",
+            "start": 2029.97,
+            "end": 2031.53
+          },
+          {
+            "id": "T00699",
+            "start": 2031.53,
+            "end": 2034.21
+          },
+          {
+            "id": "T00700",
+            "start": 2034.21,
+            "end": 2035.45
+          },
+          {
+            "id": "T00701",
+            "start": 2035.45,
+            "end": 2036.89
+          },
+          {
+            "id": "T00702",
+            "start": 2036.89,
+            "end": 2039.21
+          },
+          {
+            "id": "T00703",
+            "start": 2039.21,
+            "end": 2040.21
+          },
+          {
+            "id": "T00704",
+            "start": 2040.21,
+            "end": 2042.49
+          },
+          {
+            "id": "T00705",
+            "start": 2042.49,
+            "end": 2045.29
+          },
+          {
+            "id": "T00706",
+            "start": 2045.29,
+            "end": 2046.89
+          },
+          {
+            "id": "T00707",
+            "start": 2046.89,
+            "end": 2049.53
+          },
+          {
+            "id": "T00708",
+            "start": 2049.53,
+            "end": 2052.41
+          },
+          {
+            "id": "T00709",
+            "start": 2052.41,
+            "end": 2054.81
+          },
+          {
+            "id": "T00710",
+            "start": 2054.81,
+            "end": 2056.37
+          }
+        ],
+        "visual_observation": "At 1951.683 seconds, the screen shows a Kanban board with a task titled \"Multi-agent research\" in the \"TRIAGE\" column. At 1981.680 seconds, the \"RUNNING\" column is visible with a task titled \"Research a practical information-to-action and knowledge workflow.\" At 2011.676 seconds, the \"TODO\" column is shown with a task titled \"Compare delegated single-agent and specialized multi-agent...\" in the \"RUNNING\" column. At 2041.673 seconds, the \"TODO\" column is empty.",
+        "sampled_timestamps": [
+          1951.6830666666667,
+          1981.6797000000001,
+          2011.6763333333333,
+          2041.6729666666668
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E003"
+      },
+      "latency_seconds": 11.4941
+    },
+    {
+      "call": 4,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 2455.006,
+        "end": 2575.005,
+        "question": "What happens in the video after 15 minutes?"
+      },
+      "selected_by": "temporal_scope_router",
+      "ok": true,
+      "result": {
+        "start": 2455.006,
+        "end": 2575.005,
+        "transcript": "[2457.39–2461.79] the different scenarios to see which works best. So why don't we take a quick look at the results\n[2461.79–2470.06] of my testing. So my thought was there's a lot of different coordination methods here,\n[2470.06–2474.62] which one actually makes the most sense. The results showed that a single agent with task\n[2474.62–2479.90] delegation for a simple task at least and running the orchestrator without the auto decomposer\n[2479.90–2484.78] actually had pretty similar token usage and pretty similar quality, but using the auto\n[2484.78–2489.42] decomposer and adding the goal loop actually added more overhead for this particular task.\n[2489.42–2493.90] So this is obviously a very simple example. It's not by any means a proper benchmark.\n[2493.90–2497.42] I just wanted to see how this worked for a particular research task for me.\n[2497.42–2502.06] And one thing to keep in mind is that even if the workflow in the Kanban takes more tokens,\n[2502.06–2505.74] it might be worth it because you can go through and take a look at what was actually done.\n[2505.74–2511.10] So it gives you more transparency. The actual right choice just depends on what your work really needs.\n[2511.10–2515.42] So I'm going to keep exploring this more. I'm going to try and do some more complex Kanban\n[2515.42–2520.62] systems with coding so I can actually see what makes sense for my own workflows, how we can leverage\n[2520.62–2524.62] the orchestration and control graphs that Hermes has built into it.\n[2526.46–2532.30] So do you need an agent team? Not necessarily. Start with the simplest level that actually meets\n[2532.30–2537.82] your needs and then add coordination and complexity as you find yourself actually needing more.\n[2537.82–2542.86] You want to find a specific problem that that extra coordination and effort is going to actually\n[2542.86–2547.58] solve. Now today's example was a very simple one. Next, we'll get more into how\n[2547.58–2551.42] subagents, loops, and graphs can fit together to solve more complex workflows.\n[2551.42–2554.86] What workflow would be the most helpful for you? Please let me know in the comments and I'm happy\n[2554.86–2558.94] to explore these topics more in future videos. If you found this video helpful, please like and\n[2558.94–2563.34] subscribe as I really appreciate it. And please consider joining my memberships. My members enabled\n[2563.34–2567.18] me to continue making free videos like this one. Thanks again for watching and I will see you in\n[2567.18–2568.18] in the next video.",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00855",
+            "start": 2457.39,
+            "end": 2461.79
+          },
+          {
+            "id": "T00856",
+            "start": 2461.79,
+            "end": 2470.06
+          },
+          {
+            "id": "T00857",
+            "start": 2470.06,
+            "end": 2474.62
+          },
+          {
+            "id": "T00858",
+            "start": 2474.62,
+            "end": 2479.9
+          },
+          {
+            "id": "T00859",
+            "start": 2479.9,
+            "end": 2484.78
+          },
+          {
+            "id": "T00860",
+            "start": 2484.78,
+            "end": 2489.42
+          },
+          {
+            "id": "T00861",
+            "start": 2489.42,
+            "end": 2493.9
+          },
+          {
+            "id": "T00862",
+            "start": 2493.9,
+            "end": 2497.42
+          },
+          {
+            "id": "T00863",
+            "start": 2497.42,
+            "end": 2502.06
+          },
+          {
+            "id": "T00864",
+            "start": 2502.06,
+            "end": 2505.74
+          },
+          {
+            "id": "T00865",
+            "start": 2505.74,
+            "end": 2511.1
+          },
+          {
+            "id": "T00866",
+            "start": 2511.1,
+            "end": 2515.42
+          },
+          {
+            "id": "T00867",
+            "start": 2515.42,
+            "end": 2520.62
+          },
+          {
+            "id": "T00868",
+            "start": 2520.62,
+            "end": 2524.62
+          },
+          {
+            "id": "T00869",
+            "start": 2526.46,
+            "end": 2532.3
+          },
+          {
+            "id": "T00870",
+            "start": 2532.3,
+            "end": 2537.82
+          },
+          {
+            "id": "T00871",
+            "start": 2537.82,
+            "end": 2542.86
+          },
+          {
+            "id": "T00872",
+            "start": 2542.86,
+            "end": 2547.58
+          },
+          {
+            "id": "T00873",
+            "start": 2547.58,
+            "end": 2551.42
+          },
+          {
+            "id": "T00874",
+            "start": 2551.42,
+            "end": 2554.86
+          },
+          {
+            "id": "T00875",
+            "start": 2554.86,
+            "end": 2558.94
+          },
+          {
+            "id": "T00876",
+            "start": 2558.94,
+            "end": 2563.34
+          },
+          {
+            "id": "T00877",
+            "start": 2563.34,
+            "end": 2567.18
+          },
+          {
+            "id": "T00878",
+            "start": 2567.18,
+            "end": 2568.18
+          }
+        ],
+        "visual_observation": "At 2470.001 seconds, a slide titled \"Four ways to coordinate\" is displayed, comparing different workflow approaches. At 2499.997 seconds, the screen shows a Kanban board with tasks labeled \"RUNNING\" and \"DONE.\" At 2529.994 seconds, a man appears on screen, speaking into a microphone. At 2559.991 seconds, the man is still speaking, and a \"SUBSCRIBED\" button appears at the bottom right of the screen.",
+        "sampled_timestamps": [
+          2470.0008666666668,
+          2499.9975,
+          2529.9941333333336,
+          2559.990766666667
+        ],
+        "modality": "visual+transcript",
+        "coverage": "sparse_samples_only",
+        "cache_hit": false,
+        "decoded_image_max_side": 560,
+        "backend_image_pixel_limit": 313600,
+        "evidence_id": "E004"
+      },
+      "latency_seconds": 10.301
+    }
+  ],
+  "evidence": {
+    "E001": {
+      "start": 900.0,
+      "end": 1020.0,
+      "transcript": "[901.57–906.65] So it fits bounded research review and repair work, but it doesn't necessarily make sense\n[906.65–911.25] for other types of situations that require more specialization and more context and more\n[911.25–912.25] knowledge.\n[912.25–916.07] I mentioned, sub-agents have zero knowledge from the parent's conversation history.\n[916.07–920.09] They only have what comes from the goal and the context that the parent gives them.\n[920.09–922.85] But what if we start getting into more specific contexts or\n[922.85–926.89] more custom situations that involve other types of contexts outside of what\n[926.89–928.13] the parent even knows?\n[928.13–931.69] We can see here the decision test that the answer says is add a specialist.\n[931.69–935.25] If it is independent, needs different context tools and policy and\n[935.25–939.61] beats a single agent baseline on quality coverage, latency, and total review cost.\n[939.61–942.49] So in other words, the answer is that we should add specialists\n[942.49–944.63] if we want it to keep its own working knowledge\n[944.63–947.97] and have access to different context tools and policies,\n[947.97–949.73] perhaps have a different memory system\n[949.73–952.09] rather than being spawned as a brand new agent\n[952.09–953.07] every single time.\n[953.07–955.37] And I note that the Hermes corroboration here\n[955.37–957.61] mentions Kanban or Kanban,\n[957.61–959.05] depending on how you wanna pronounce it.\n[959.05–960.57] But before we get into Kanban,\n[960.57–962.05] I thought that we could take a quick look\n[962.05–965.01] at Hermes Bot Mode actually sets you up for success\n[965.01–966.29] when you start using Kanban\n[966.29–969.13] because it helps you prepare the specialist profiles\n[969.13–973.53] we can see down here I have orchestrator, researcher, and librarian. So let's take a quick look at\n[973.53–983.11] bot mode. So now we can go from a single agent operating in a loop with delegated subagents to\n[983.11–988.47] a graph. That's where profiles come in. Okay, so this is bot mode. So we can see here a bot is just\n[988.47–993.99] a profile is the same list of profiles that I have along the bottom here. A bot or a profile can\n[993.99–999.03] retain its own skills, memory, and working context with a model suited to its role. Each of these\n[999.03–1003.99] different bots here can have a default model that's different. For example, maybe my orchestrator\n[1003.99–1008.15] has one of the most powerful models available, a frontier model. But maybe the researcher\n[1008.15–1012.87] needs a much less powerful model. And then I can use a feature like the group chat to coordinate\n[1012.87–1017.51] how they work together. So rather than a sub-agent starting with zero knowledge, we can configure",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00333",
+          "start": 901.57,
+          "end": 906.65
+        },
+        {
+          "id": "T00334",
+          "start": 906.65,
+          "end": 911.25
+        },
+        {
+          "id": "T00335",
+          "start": 911.25,
+          "end": 912.25
+        },
+        {
+          "id": "T00336",
+          "start": 912.25,
+          "end": 916.07
+        },
+        {
+          "id": "T00337",
+          "start": 916.07,
+          "end": 920.09
+        },
+        {
+          "id": "T00338",
+          "start": 920.09,
+          "end": 922.85
+        },
+        {
+          "id": "T00339",
+          "start": 922.85,
+          "end": 926.89
+        },
+        {
+          "id": "T00340",
+          "start": 926.89,
+          "end": 928.13
+        },
+        {
+          "id": "T00341",
+          "start": 928.13,
+          "end": 931.69
+        },
+        {
+          "id": "T00342",
+          "start": 931.69,
+          "end": 935.25
+        },
+        {
+          "id": "T00343",
+          "start": 935.25,
+          "end": 939.61
+        },
+        {
+          "id": "T00344",
+          "start": 939.61,
+          "end": 942.49
+        },
+        {
+          "id": "T00345",
+          "start": 942.49,
+          "end": 944.63
+        },
+        {
+          "id": "T00346",
+          "start": 944.63,
+          "end": 947.97
+        },
+        {
+          "id": "T00347",
+          "start": 947.97,
+          "end": 949.73
+        },
+        {
+          "id": "T00348",
+          "start": 949.73,
+          "end": 952.09
+        },
+        {
+          "id": "T00349",
+          "start": 952.09,
+          "end": 953.07
+        },
+        {
+          "id": "T00350",
+          "start": 953.07,
+          "end": 955.37
+        },
+        {
+          "id": "T00351",
+          "start": 955.37,
+          "end": 957.61
+        },
+        {
+          "id": "T00352",
+          "start": 957.61,
+          "end": 959.05
+        },
+        {
+          "id": "T00353",
+          "start": 959.05,
+          "end": 960.57
+        },
+        {
+          "id": "T00354",
+          "start": 960.57,
+          "end": 962.05
+        },
+        {
+          "id": "T00355",
+          "start": 962.05,
+          "end": 965.01
+        },
+        {
+          "id": "T00356",
+          "start": 965.01,
+          "end": 966.29
+        },
+        {
+          "id": "T00357",
+          "start": 966.29,
+          "end": 969.13
+        },
+        {
+          "id": "T00358",
+          "start": 969.13,
+          "end": 973.53
+        },
+        {
+          "id": "T00359",
+          "start": 973.53,
+          "end": 983.11
+        },
+        {
+          "id": "T00360",
+          "start": 983.11,
+          "end": 988.47
+        },
+        {
+          "id": "T00361",
+          "start": 988.47,
+          "end": 993.99
+        },
+        {
+          "id": "T00362",
+          "start": 993.99,
+          "end": 999.03
+        },
+        {
+          "id": "T00363",
+          "start": 999.03,
+          "end": 1003.99
+        },
+        {
+          "id": "T00364",
+          "start": 1003.99,
+          "end": 1008.15
+        },
+        {
+          "id": "T00365",
+          "start": 1008.15,
+          "end": 1012.87
+        },
+        {
+          "id": "T00366",
+          "start": 1012.87,
+          "end": 1017.51
+        }
+      ],
+      "visual_observation": "At 915.014 seconds, the screen shows a GitHub page titled \"How Subagent Context Works\" with a highlighted warning about subagents lacking knowledge. At 945.011 seconds, the interface shifts to a \"Build Actionable Information System\" project dashboard. At 975.007 seconds, a scenic workflow diagram appears, illustrating a path from \"Delegate\" to \"Run the Workflow.\" At 1005.004 seconds, the interface displays a chat with a bot named \"Hermes\" in a \"SCHEDULED JOBS\" section.",
+      "sampled_timestamps": [
+        915.0141000000001,
+        945.0107333333334,
+        975.0073666666667,
+        1005.004
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E001"
+    },
+    "E002": {
+      "start": 1418.336,
+      "end": 1538.335,
+      "transcript": "[1418.76–1420.88] when the system actually compresses.\n[1420.88–1421.72] This is what I was talking about\n[1421.72–1423.32] with the context window on the bottom here.\n[1423.32–1424.56] If this gets compressed,\n[1424.56–1426.92] then if there was a sub-agent within that compression,\n[1426.92–1429.28] you can lose the context associated with it.\n[1429.28–1432.24] Whereas in Kanban, it's stored in a SQLite database.\n[1432.24–1433.72] So you get access to that forever.\n[1433.72–1435.04] You can go back and take a look.\n[1435.04–1438.32] So a good summary here is that delegate task is a tool call.\n[1438.32–1441.20] It's just one function, whereas Kanban is a work queue\n[1441.20–1443.36] where every handoff is a row in a database\n[1443.36–1445.80] that any profile or human can see in edit.\n[1445.80–1447.92] So there's a lot more transparency that happens here,\n[1447.92–1449.84] which is why it starts to get into being\n[1449.84–1451.96] a proper control graph or task graph.\n[1451.96–1454.40] Thankfully, Hermes has a built-in feature called Kanban.\n[1454.40–1455.80] So let's take a look at that.\n[1457.28–1458.88] So the first thing we need to do for Kanban\n[1458.88–1461.04] is you may not have this appearing on the side here,\n[1461.04–1462.68] so we can go up to capabilities\n[1462.68–1464.04] and then go over to plugins.\n[1464.04–1466.20] And we can see that we have three built-in plugins\n[1466.20–1467.20] that come with Hermes.\n[1467.20–1469.20] The first is bot mode that comes turned on\n[1469.20–1470.24] like we've already looked at,\n[1470.24–1471.68] and the second is the Kanban.\n[1471.68–1472.96] So make sure this is turned on here,\n[1472.96–1475.84] and then you should see this appear on the left-hand side.\n[1475.84–1477.24] So if we go over to Kanban here,\n[1477.24–1480.12] we are not gonna be the ones running things the agent is.\n[1480.12–1482.60] All we need to do is put a card into the ready section,\n[1482.60–1484.36] assign it to a particular agent,\n[1484.36–1486.28] and the agent will pick it up in a minute.\n[1486.28–1488.04] And there's even a triage section.\n[1488.04–1489.76] So this is where if you're not quite sure\n[1489.76–1491.34] exactly what the task is,\n[1491.34–1493.20] you can have an agent rewrite the idea\n[1493.20–1494.92] into a proper task first.\n[1494.92–1496.74] So that's actually a really important part of it,\n[1496.74–1498.24] and I'll show you how we can change the settings\n[1498.24–1499.20] for that in a moment.\n[1499.20–1502.24] So triage is for raw ideas where that the specifier\n[1502.24–1506.10] going to flesh out the spec and then it will move it through the system. To do\n[1506.10–1510.64] means it's waiting on dependencies or unassigned so we can create task and not\n[1510.64–1514.48] assign it and that means the dispatcher won't send it off to go run. We can\n[1514.48–1518.76] schedule which is we want a task to run at a particular time so it could be for\n[1518.76–1523.24] example check the latest series of emails and",
+      "transcript_truncated": true,
+      "transcript_segments": [
+        {
+          "id": "T00466",
+          "start": 1418.76,
+          "end": 1420.88
+        },
+        {
+          "id": "T00467",
+          "start": 1420.88,
+          "end": 1421.72
+        },
+        {
+          "id": "T00468",
+          "start": 1421.72,
+          "end": 1423.32
+        },
+        {
+          "id": "T00469",
+          "start": 1423.32,
+          "end": 1424.56
+        },
+        {
+          "id": "T00470",
+          "start": 1424.56,
+          "end": 1426.92
+        },
+        {
+          "id": "T00471",
+          "start": 1426.92,
+          "end": 1429.28
+        },
+        {
+          "id": "T00472",
+          "start": 1429.28,
+          "end": 1432.24
+        },
+        {
+          "id": "T00473",
+          "start": 1432.24,
+          "end": 1433.72
+        },
+        {
+          "id": "T00474",
+          "start": 1433.72,
+          "end": 1435.04
+        },
+        {
+          "id": "T00475",
+          "start": 1435.04,
+          "end": 1438.32
+        },
+        {
+          "id": "T00476",
+          "start": 1438.32,
+          "end": 1441.2
+        },
+        {
+          "id": "T00477",
+          "start": 1441.2,
+          "end": 1443.36
+        },
+        {
+          "id": "T00478",
+          "start": 1443.36,
+          "end": 1445.8
+        },
+        {
+          "id": "T00479",
+          "start": 1445.8,
+          "end": 1447.92
+        },
+        {
+          "id": "T00480",
+          "start": 1447.92,
+          "end": 1449.84
+        },
+        {
+          "id": "T00481",
+          "start": 1449.84,
+          "end": 1451.96
+        },
+        {
+          "id": "T00482",
+          "start": 1451.96,
+          "end": 1454.4
+        },
+        {
+          "id": "T00483",
+          "start": 1454.4,
+          "end": 1455.8
+        },
+        {
+          "id": "T00484",
+          "start": 1457.28,
+          "end": 1458.88
+        },
+        {
+          "id": "T00485",
+          "start": 1458.88,
+          "end": 1461.04
+        },
+        {
+          "id": "T00486",
+          "start": 1461.04,
+          "end": 1462.68
+        },
+        {
+          "id": "T00487",
+          "start": 1462.68,
+          "end": 1464.04
+        },
+        {
+          "id": "T00488",
+          "start": 1464.04,
+          "end": 1466.2
+        },
+        {
+          "id": "T00489",
+          "start": 1466.2,
+          "end": 1467.2
+        },
+        {
+          "id": "T00490",
+          "start": 1467.2,
+          "end": 1469.2
+        },
+        {
+          "id": "T00491",
+          "start": 1469.2,
+          "end": 1470.24
+        },
+        {
+          "id": "T00492",
+          "start": 1470.24,
+          "end": 1471.68
+        },
+        {
+          "id": "T00493",
+          "start": 1471.68,
+          "end": 1472.96
+        },
+        {
+          "id": "T00494",
+          "start": 1472.96,
+          "end": 1475.84
+        },
+        {
+          "id": "T00495",
+          "start": 1475.84,
+          "end": 1477.24
+        },
+        {
+          "id": "T00496",
+          "start": 1477.24,
+          "end": 1480.12
+        },
+        {
+          "id": "T00497",
+          "start": 1480.12,
+          "end": 1482.6
+        },
+        {
+          "id": "T00498",
+          "start": 1482.6,
+          "end": 1484.36
+        },
+        {
+          "id": "T00499",
+          "start": 1484.36,
+          "end": 1486.28
+        },
+        {
+          "id": "T00500",
+          "start": 1486.28,
+          "end": 1488.04
+        },
+        {
+          "id": "T00501",
+          "start": 1488.04,
+          "end": 1489.76
+        },
+        {
+          "id": "T00502",
+          "start": 1489.76,
+          "end": 1491.34
+        },
+        {
+          "id": "T00503",
+          "start": 1491.34,
+          "end": 1493.2
+        },
+        {
+          "id": "T00504",
+          "start": 1493.2,
+          "end": 1494.92
+        },
+        {
+          "id": "T00505",
+          "start": 1494.92,
+          "end": 1496.74
+        },
+        {
+          "id": "T00506",
+          "start": 1496.74,
+          "end": 1498.24
+        },
+        {
+          "id": "T00507",
+          "start": 1498.24,
+          "end": 1499.2
+        },
+        {
+          "id": "T00508",
+          "start": 1499.2,
+          "end": 1502.24
+        },
+        {
+          "id": "T00509",
+          "start": 1502.24,
+          "end": 1506.1
+        },
+        {
+          "id": "T00510",
+          "start": 1506.1,
+          "end": 1510.64
+        },
+        {
+          "id": "T00511",
+          "start": 1510.64,
+          "end": 1514.48
+        },
+        {
+          "id": "T00512",
+          "start": 1514.48,
+          "end": 1518.76
+        },
+        {
+          "id": "T00513",
+          "start": 1518.76,
+          "end": 1523.24
+        },
+        {
+          "id": "T00514",
+          "start": 1523.24,
+          "end": 1527.24
+        },
+        {
+          "id": "T00515",
+          "start": 1527.24,
+          "end": 1530.2
+        },
+        {
+          "id": "T00516",
+          "start": 1530.2,
+          "end": 1533.06
+        },
+        {
+          "id": "T00517",
+          "start": 1533.06,
+          "end": 1536.28
+        }
+      ],
+      "visual_observation": "At 1433.332 seconds, a table compares 'delegate_task' and 'Kanban' with attributes like shape, parent, and resumability. At 1463.329 seconds, the screen shows the 'Sessions' tab in a tool, with 'ai-daily-intel' and 'wanderer' enabled. At 1493.325 seconds, the 'Kanban' interface displays a message: 'You don't run the agents - agents do. Put a card in Ready with an assignee and an agent picks it up within a minute. No assignee. no run. Trigg: in a moment, the agents' lanes, hands off. Blocked. Results come back on the card. Got it.' At 1523.322 seconds, an infographic titled 'Email to Decision Brief' illustrates a workflow: Important email → Understand & research → Brief + draft reply → Human review → Send & save.",
+      "sampled_timestamps": [
+        1433.3319000000001,
+        1463.328533333333,
+        1493.3251666666667,
+        1523.3218000000002
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E002"
+    },
+    "E003": {
+      "start": 1936.671,
+      "end": 2056.67,
+      "transcript": "[1938.21–1940.77] And this brings up the board that I was talking about.\n[1941.97–1944.13] The triage section is where raw ideas.\n[1944.13–1946.37] We have a specifier that's going to flesh out the spec.\n[1946.37–1949.65] So it's going to be converted from this into a different card.\n[1949.65–1952.25] And this is using that auxiliary model that I was talking about.\n[1952.25–1952.85] OK, here we go.\n[1952.85–1953.69] So it just started.\n[1953.69–1957.33] So that triage using the auto decomposer, the dispatcher checked.\n[1957.33–1958.37] Oh, it's been a minute.\n[1958.37–1959.33] There's something here.\n[1959.33–1961.05] Let's break it into two different tasks.\n[1961.05–1963.69] So the task decomposer broke it up and assigned it\n[1963.69–1967.57] to these particular subagents where each one is now running on its own.\n[1967.57–1970.21] And we can click into this and we can see the specific prompt that\n[1970.21–1974.89] was given to it created by the auto decomposer using the default model, we can estimate the\n[1974.89–1978.37] effort of this particular task, like I was just showing you, and we can comment. So as\n[1978.37–1982.33] these tasks are currently running, we can actually send messages to the worker. And if there's\n[1982.33–1986.93] a big enough change, we can even send a message and then recue it and have it start that task\n[1986.93–1990.61] over again. So we get a chance to go through and see how all of this is working, what it's\n[1990.61–1994.81] actually doing, how it's analyzing it. And we can see this for each card that's running\n[1994.81–1999.53] here. So you get a lot of flexibility for controlling these cards here. And what's cool too is,\n[1999.53–2001.65] For example, I can go back to the to-do section,\n[2001.65–2003.33] which are the currently blocked tasks.\n[2003.33–2006.33] So these ones are waiting for the researcher to finish\n[2006.33–2007.41] before they run.\n[2007.41–2009.77] And we can see this one was actually assigned to default\n[2009.77–2010.77] instead of orchestrator.\n[2010.77–2012.81] So I'm going to change the assignee from default here\n[2012.81–2014.21] back to orchestrator.\n[2014.21–2016.69] And now we can see that change the card over here as well.\n[2016.69–2018.29] So I think it's just such a cool way\n[2018.29–2021.09] for us to be able to take a look at how all of the tasks\n[2021.09–2023.25] are broken up into their individual actions\n[2023.25–2025.49] and see how they move through the Kanban.\n[2025.49–2027.21] And you can kind of just get a sense\n[2027.21–2029.97] on how all of the project is working together.\n[2029.97–2031.53] And that's just for one card.\n[2031.53–2034.21] I can now add a second card and it can start running itself\n[2034.21–2035.45] and keep going from here.\n[2035.45–2036.89] So you can really start to plan out.\n[2036.89–2039.21] Maybe you have five or six or 10 or 20 tasks\n[2039.21–2040.21] that you want to run.\n[2040.21–2042.49] You can put them all in here, you can schedule them,\n[2042.49–2",
+      "transcript_truncated": true,
+      "transcript_segments": [
+        {
+          "id": "T00662",
+          "start": 1938.21,
+          "end": 1940.77
+        },
+        {
+          "id": "T00663",
+          "start": 1941.97,
+          "end": 1944.13
+        },
+        {
+          "id": "T00664",
+          "start": 1944.13,
+          "end": 1946.37
+        },
+        {
+          "id": "T00665",
+          "start": 1946.37,
+          "end": 1949.65
+        },
+        {
+          "id": "T00666",
+          "start": 1949.65,
+          "end": 1952.25
+        },
+        {
+          "id": "T00667",
+          "start": 1952.25,
+          "end": 1952.85
+        },
+        {
+          "id": "T00668",
+          "start": 1952.85,
+          "end": 1953.69
+        },
+        {
+          "id": "T00669",
+          "start": 1953.69,
+          "end": 1957.33
+        },
+        {
+          "id": "T00670",
+          "start": 1957.33,
+          "end": 1958.37
+        },
+        {
+          "id": "T00671",
+          "start": 1958.37,
+          "end": 1959.33
+        },
+        {
+          "id": "T00672",
+          "start": 1959.33,
+          "end": 1961.05
+        },
+        {
+          "id": "T00673",
+          "start": 1961.05,
+          "end": 1963.69
+        },
+        {
+          "id": "T00674",
+          "start": 1963.69,
+          "end": 1967.57
+        },
+        {
+          "id": "T00675",
+          "start": 1967.57,
+          "end": 1970.21
+        },
+        {
+          "id": "T00676",
+          "start": 1970.21,
+          "end": 1974.89
+        },
+        {
+          "id": "T00677",
+          "start": 1974.89,
+          "end": 1978.37
+        },
+        {
+          "id": "T00678",
+          "start": 1978.37,
+          "end": 1982.33
+        },
+        {
+          "id": "T00679",
+          "start": 1982.33,
+          "end": 1986.93
+        },
+        {
+          "id": "T00680",
+          "start": 1986.93,
+          "end": 1990.61
+        },
+        {
+          "id": "T00681",
+          "start": 1990.61,
+          "end": 1994.81
+        },
+        {
+          "id": "T00682",
+          "start": 1994.81,
+          "end": 1999.53
+        },
+        {
+          "id": "T00683",
+          "start": 1999.53,
+          "end": 2001.65
+        },
+        {
+          "id": "T00684",
+          "start": 2001.65,
+          "end": 2003.33
+        },
+        {
+          "id": "T00685",
+          "start": 2003.33,
+          "end": 2006.33
+        },
+        {
+          "id": "T00686",
+          "start": 2006.33,
+          "end": 2007.41
+        },
+        {
+          "id": "T00687",
+          "start": 2007.41,
+          "end": 2009.77
+        },
+        {
+          "id": "T00688",
+          "start": 2009.77,
+          "end": 2010.77
+        },
+        {
+          "id": "T00689",
+          "start": 2010.77,
+          "end": 2012.81
+        },
+        {
+          "id": "T00690",
+          "start": 2012.81,
+          "end": 2014.21
+        },
+        {
+          "id": "T00691",
+          "start": 2014.21,
+          "end": 2016.69
+        },
+        {
+          "id": "T00692",
+          "start": 2016.69,
+          "end": 2018.29
+        },
+        {
+          "id": "T00693",
+          "start": 2018.29,
+          "end": 2021.09
+        },
+        {
+          "id": "T00694",
+          "start": 2021.09,
+          "end": 2023.25
+        },
+        {
+          "id": "T00695",
+          "start": 2023.25,
+          "end": 2025.49
+        },
+        {
+          "id": "T00696",
+          "start": 2025.49,
+          "end": 2027.21
+        },
+        {
+          "id": "T00697",
+          "start": 2027.21,
+          "end": 2029.97
+        },
+        {
+          "id": "T00698",
+          "start": 2029.97,
+          "end": 2031.53
+        },
+        {
+          "id": "T00699",
+          "start": 2031.53,
+          "end": 2034.21
+        },
+        {
+          "id": "T00700",
+          "start": 2034.21,
+          "end": 2035.45
+        },
+        {
+          "id": "T00701",
+          "start": 2035.45,
+          "end": 2036.89
+        },
+        {
+          "id": "T00702",
+          "start": 2036.89,
+          "end": 2039.21
+        },
+        {
+          "id": "T00703",
+          "start": 2039.21,
+          "end": 2040.21
+        },
+        {
+          "id": "T00704",
+          "start": 2040.21,
+          "end": 2042.49
+        },
+        {
+          "id": "T00705",
+          "start": 2042.49,
+          "end": 2045.29
+        },
+        {
+          "id": "T00706",
+          "start": 2045.29,
+          "end": 2046.89
+        },
+        {
+          "id": "T00707",
+          "start": 2046.89,
+          "end": 2049.53
+        },
+        {
+          "id": "T00708",
+          "start": 2049.53,
+          "end": 2052.41
+        },
+        {
+          "id": "T00709",
+          "start": 2052.41,
+          "end": 2054.81
+        },
+        {
+          "id": "T00710",
+          "start": 2054.81,
+          "end": 2056.37
+        }
+      ],
+      "visual_observation": "At 1951.683 seconds, the screen shows a Kanban board with a task titled \"Multi-agent research\" in the \"TRIAGE\" column. At 1981.680 seconds, the \"RUNNING\" column is visible with a task titled \"Research a practical information-to-action and knowledge workflow.\" At 2011.676 seconds, the \"TODO\" column is shown with a task titled \"Compare delegated single-agent and specialized multi-agent...\" in the \"RUNNING\" column. At 2041.673 seconds, the \"TODO\" column is empty.",
+      "sampled_timestamps": [
+        1951.6830666666667,
+        1981.6797000000001,
+        2011.6763333333333,
+        2041.6729666666668
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E003"
+    },
+    "E004": {
+      "start": 2455.006,
+      "end": 2575.005,
+      "transcript": "[2457.39–2461.79] the different scenarios to see which works best. So why don't we take a quick look at the results\n[2461.79–2470.06] of my testing. So my thought was there's a lot of different coordination methods here,\n[2470.06–2474.62] which one actually makes the most sense. The results showed that a single agent with task\n[2474.62–2479.90] delegation for a simple task at least and running the orchestrator without the auto decomposer\n[2479.90–2484.78] actually had pretty similar token usage and pretty similar quality, but using the auto\n[2484.78–2489.42] decomposer and adding the goal loop actually added more overhead for this particular task.\n[2489.42–2493.90] So this is obviously a very simple example. It's not by any means a proper benchmark.\n[2493.90–2497.42] I just wanted to see how this worked for a particular research task for me.\n[2497.42–2502.06] And one thing to keep in mind is that even if the workflow in the Kanban takes more tokens,\n[2502.06–2505.74] it might be worth it because you can go through and take a look at what was actually done.\n[2505.74–2511.10] So it gives you more transparency. The actual right choice just depends on what your work really needs.\n[2511.10–2515.42] So I'm going to keep exploring this more. I'm going to try and do some more complex Kanban\n[2515.42–2520.62] systems with coding so I can actually see what makes sense for my own workflows, how we can leverage\n[2520.62–2524.62] the orchestration and control graphs that Hermes has built into it.\n[2526.46–2532.30] So do you need an agent team? Not necessarily. Start with the simplest level that actually meets\n[2532.30–2537.82] your needs and then add coordination and complexity as you find yourself actually needing more.\n[2537.82–2542.86] You want to find a specific problem that that extra coordination and effort is going to actually\n[2542.86–2547.58] solve. Now today's example was a very simple one. Next, we'll get more into how\n[2547.58–2551.42] subagents, loops, and graphs can fit together to solve more complex workflows.\n[2551.42–2554.86] What workflow would be the most helpful for you? Please let me know in the comments and I'm happy\n[2554.86–2558.94] to explore these topics more in future videos. If you found this video helpful, please like and\n[2558.94–2563.34] subscribe as I really appreciate it. And please consider joining my memberships. My members enabled\n[2563.34–2567.18] me to continue making free videos like this one. Thanks again for watching and I will see you in\n[2567.18–2568.18] in the next video.",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00855",
+          "start": 2457.39,
+          "end": 2461.79
+        },
+        {
+          "id": "T00856",
+          "start": 2461.79,
+          "end": 2470.06
+        },
+        {
+          "id": "T00857",
+          "start": 2470.06,
+          "end": 2474.62
+        },
+        {
+          "id": "T00858",
+          "start": 2474.62,
+          "end": 2479.9
+        },
+        {
+          "id": "T00859",
+          "start": 2479.9,
+          "end": 2484.78
+        },
+        {
+          "id": "T00860",
+          "start": 2484.78,
+          "end": 2489.42
+        },
+        {
+          "id": "T00861",
+          "start": 2489.42,
+          "end": 2493.9
+        },
+        {
+          "id": "T00862",
+          "start": 2493.9,
+          "end": 2497.42
+        },
+        {
+          "id": "T00863",
+          "start": 2497.42,
+          "end": 2502.06
+        },
+        {
+          "id": "T00864",
+          "start": 2502.06,
+          "end": 2505.74
+        },
+        {
+          "id": "T00865",
+          "start": 2505.74,
+          "end": 2511.1
+        },
+        {
+          "id": "T00866",
+          "start": 2511.1,
+          "end": 2515.42
+        },
+        {
+          "id": "T00867",
+          "start": 2515.42,
+          "end": 2520.62
+        },
+        {
+          "id": "T00868",
+          "start": 2520.62,
+          "end": 2524.62
+        },
+        {
+          "id": "T00869",
+          "start": 2526.46,
+          "end": 2532.3
+        },
+        {
+          "id": "T00870",
+          "start": 2532.3,
+          "end": 2537.82
+        },
+        {
+          "id": "T00871",
+          "start": 2537.82,
+          "end": 2542.86
+        },
+        {
+          "id": "T00872",
+          "start": 2542.86,
+          "end": 2547.58
+        },
+        {
+          "id": "T00873",
+          "start": 2547.58,
+          "end": 2551.42
+        },
+        {
+          "id": "T00874",
+          "start": 2551.42,
+          "end": 2554.86
+        },
+        {
+          "id": "T00875",
+          "start": 2554.86,
+          "end": 2558.94
+        },
+        {
+          "id": "T00876",
+          "start": 2558.94,
+          "end": 2563.34
+        },
+        {
+          "id": "T00877",
+          "start": 2563.34,
+          "end": 2567.18
+        },
+        {
+          "id": "T00878",
+          "start": 2567.18,
+          "end": 2568.18
+        }
+      ],
+      "visual_observation": "At 2470.001 seconds, a slide titled \"Four ways to coordinate\" is displayed, comparing different workflow approaches. At 2499.997 seconds, the screen shows a Kanban board with tasks labeled \"RUNNING\" and \"DONE.\" At 2529.994 seconds, a man appears on screen, speaking into a microphone. At 2559.991 seconds, the man is still speaking, and a \"SUBSCRIBED\" button appears at the bottom right of the screen.",
+      "sampled_timestamps": [
+        2470.0008666666668,
+        2499.9975,
+        2529.9941333333336,
+        2559.990766666667
+      ],
+      "modality": "visual+transcript",
+      "coverage": "sparse_samples_only",
+      "cache_hit": false,
+      "decoded_image_max_side": 560,
+      "backend_image_pixel_limit": 313600,
+      "evidence_id": "E004"
+    }
+  },
+  "decisions": [
+    {
+      "raw": "{\n  \"action\": \"answer\",\n  \"status\": \"answered\",\n  \"answer\": \"The video begins at 900 seconds with a GitHub page on subagent context, then transitions to a dashboard showing a workflow diagram and a chat with Hermes. From 1418 seconds, the video explains Kanban as a work queue with a database, showing a table comparing delegate_task and Kanban. At 1936 seconds, the video demonstrates Kanban's triage and task decomposition, showing a Kanban board with tasks in 'TRIAGE' and 'RUNNING' columns. Finally, at 2455 seconds, the video discusses testing results and future exploration of complex Kanban systems, concluding with a man speaking and a 'SUBSCRIBED' button appearing.\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"E001\"\n    },\n    {\n      \"evidence_id\": \"E002\"\n    },\n    {\n      \"evidence_id\": \"E003\"\n    },\n    {\n      \"evidence_id\": \"E004\"\n    }\n  ]\n}"
+    }
+  ],
+  "provenance": {
+    "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+    "prompt_version": "clipscout-v6-temporal-scopes"
+  },
+  "verification": "citation IDs, evidence bounds and requested temporal constraints checked; explicit moments require target frames; semantic entailment NOT automatically verified",
+  "run_id": "20261022T061146Z_37eda741a6e3"
+}

@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-10-22T05:28:46.895628+00:00",
+  "checks": [
+    {
+      "target": 610,
+      "question": "Describe what was on the slide at 10 minutes 10 seconds",
+      "run_id": "20261022T052830Z_40fc6f209c88",
+      "result": "610.json",
+      "sha256": "a6d9c8c882b28462ad995c87e33bff98c1c80997f7eed4dd8f827ab94e390c0c",
+      "actual_timestamps": [
+        610.0094
+      ],
+      "status": "answered"
+    },
+    {
+      "target": 800,
+      "question": "Describe what was on the slide at 800 seconds",
+      "run_id": "20261022T052846Z_23f8624357b1",
+      "result": "800.json",
+      "sha256": "950f21432164a0060e63e7f186fae0d5585b542073b6ef5499ac2fd8f605dff6",
+      "actual_timestamps": [
+        799.9992000000001
+      ],
+      "status": "answered"
+    }
+  ],
+  "scope": "Two targeted service regressions only; no research experiment rerun.",
+  "temporal_checks_passed": true,
+  "semantic_correctness": "Requires inspection of saved reference frames and answer text."
+}

@@ -1,0 +1,46 @@
+{
+  "review_type": "Non-blind assistant diagnostic review of the saved answers, actual sampled-frame contact sheets and available ASR evidence",
+  "scope": "Three requested questions only; no full-video review or independent human accuracy score",
+  "temporal_contract_result": "All three live responses passed the structural checks in checks.json. This does not establish factual correctness.",
+  "cases": [
+    {
+      "case": "20_to_21",
+      "response": "20_to_21/response.json",
+      "frames": "20_to_21/sampled_frames.png",
+      "supported_main_content": "Article to Curated Knowledge appears in the earlier samples; Two Loops, One Knowledge Workflow appears in later samples.",
+      "residual_errors": [
+        "The first diagram has five labeled main stages, but the answer calls it a four-step process.",
+        "The Revise loop is already visible in earlier samples; an additional Revise step appearing in the next window is not supported.",
+        "The answer uses exactly 20:45 for a detail although that exact instant was not sampled. Window boundaries do not establish event onset."
+      ],
+      "notes": "The latest sampled Article frame is 1231.897 seconds; the first sampled Two Loops frame is 1235.634 seconds. This brackets a change in the sampled content, not its exact onset."
+    },
+    {
+      "case": "after_15",
+      "response": "after_15/response.json",
+      "frames": "after_15/sampled_frames.png",
+      "supported_main_content": "Samples show subagent documentation and bot/workflow material, a delegate_task versus Kanban table and setup, task cards moving through Kanban, and a final comparison and presenter outro. The ASR supports discussion of coordination tradeoffs and further exploration.",
+      "residual_errors": [
+        "The first sampled page is Hermes documentation, not a GitHub page as described.",
+        "Statements beginning at 900, 1418, 1936 and 2455 seconds use inspection boundaries, not verified event onset times.",
+        "Large gaps between the four inspected windows prevent a complete account of everything after 15 minutes."
+      ],
+      "notes": "Partial coverage is disclosed in the executor-authored answer prefix and coverage metadata; the broad sequence is supported, but details and exact onset claims are not all correct."
+    },
+    {
+      "case": "15_to_20",
+      "response": "15_to_20/response.json",
+      "frames": "15_to_20/sampled_frames.png",
+      "supported_main_content": "Samples show research/context text, Researcher/Librarian/Orchestrator roles, Hermes bot/team chats, a Governed Quality Loop diagram, a separate group-chat diagram and an Email to Decision Brief slide.",
+      "residual_errors": [
+        "The interface is Hermes; the answer incorrectly calls it Slack.",
+        "The group-chat diagram and Email to Decision Brief slide are distinct visuals, but the final answer conflates them.",
+        "The assertion that there are no other specific events or actions in the interval is not supported by sixteen sparse frames.",
+        "The first visual observation repeats generic descriptions until its generation limit; the final answer is more specific partly through the attached ASR."
+      ],
+      "notes": "All four inspection windows and citations stay inside 900–1200 seconds. That fixes the previous answer citing the video ending, but is not a semantic verifier."
+    }
+  ],
+  "raw_responses_modified": false,
+  "model_rerun_for_review": false
+}

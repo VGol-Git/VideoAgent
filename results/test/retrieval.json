@@ -1,0 +1,358 @@
+{
+  "schema_version": "1.0",
+  "k": 5,
+  "summary": {
+    "example_count": 13,
+    "grounding_example_count": 11,
+    "multi_hop_example_count": 2,
+    "retrieval_error_count": 0,
+    "temporal_iou": 0.410180021221713,
+    "hit_at_5_iou_0_3": 0.8181818181818182,
+    "evidence_recall_at_5_iou_0_3": 0.7727272727272727,
+    "all_evidence_hit_at_5_iou_0_3": 0.7272727272727273,
+    "multi_hop_success_at_5_iou_0_3": 0.5,
+    "hit_at_5_iou_0_5": 0.36363636363636365,
+    "evidence_recall_at_5_iou_0_5": 0.2727272727272727,
+    "all_evidence_hit_at_5_iou_0_5": 0.18181818181818182,
+    "multi_hop_success_at_5_iou_0_5": 0.0
+  },
+  "per_question": [
+    {
+      "question_id": "visual_01",
+      "category": "visual",
+      "answerable": true,
+      "query": "During the first on-camera introduction, before the full-screen goals outline, what black object stands on the desk at the left side of the image?",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.0,
+      "citation_iou_precision": 0.0,
+      "matched_intervals": [],
+      "temporal_hit_at_0_3": 0.0,
+      "temporal_recall_at_0_3": 0.0,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": null,
+      "onset_matched_interval_count": 0
+    },
+    {
+      "question_id": "visual_02",
+      "category": "visual",
+      "answerable": true,
+      "query": "In the Kanban view around 36 minutes, which column contains the Multi-agent research card, and which column contains the three stacked completed research cards?",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.2,
+      "citation_iou_precision": 0.04,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 1,
+          "iou": 0.2
+        }
+      ],
+      "temporal_hit_at_0_3": 0.0,
+      "temporal_recall_at_0_3": 0.0,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 15.0,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "visual_04",
+      "category": "localization",
+      "answerable": true,
+      "query": "Locate the main full-table comparison of Kanban and delegate_task, before scrolling hides its upper rows. The table compares parent behavior, child identity, resumability, human involvement, and audit trails.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.6285714285714286,
+      "citation_iou_precision": 0.12571428571428572,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 0,
+          "iou": 0.6285714285714286
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 1.0,
+      "temporal_recall_at_0_5": 1.0,
+      "all_evidence_hit_at_0_5": 1.0,
+      "onset_error_seconds": 27.5,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "visual_06",
+      "category": "temporal",
+      "answerable": true,
+      "query": "Which is shown earlier: the full Kanban vs. delegate_task comparison table or the diagram titled How Task Graphs Actually Run? Cite evidence for both.",
+      "retrieval_error": null,
+      "reference_interval_count": 2,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.3742857142857143,
+      "citation_iou_precision": 0.14971428571428572,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 1,
+          "iou": 0.6285714285714286
+        },
+        {
+          "reference_index": 1,
+          "citation_index": 2,
+          "iou": 0.12
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 0.5,
+      "all_evidence_hit_at_0_3": 0.0,
+      "temporal_hit_at_0_5": 1.0,
+      "temporal_recall_at_0_5": 0.5,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 40.0,
+      "onset_matched_interval_count": 2
+    },
+    {
+      "question_id": "visual_08",
+      "category": "unanswerable",
+      "answerable": false,
+      "query": "Using only the visible How Task Graphs Actually Run diagram, what exact dollar cost is assigned to each dispatcher cycle?",
+      "retrieval_error": null,
+      "reference_interval_count": 0,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": null,
+      "citation_iou_precision": null,
+      "matched_intervals": [],
+      "temporal_hit_at_0_3": null,
+      "temporal_recall_at_0_3": null,
+      "all_evidence_hit_at_0_3": null,
+      "temporal_hit_at_0_5": null,
+      "temporal_recall_at_0_5": null,
+      "all_evidence_hit_at_0_5": null,
+      "onset_error_seconds": null,
+      "onset_matched_interval_count": 0
+    },
+    {
+      "question_id": "speech_05",
+      "category": "reasoning",
+      "answerable": true,
+      "query": "According to the explanation of fresh subagent conversations, why must the parent put sufficient information in the goal and context fields of delegate_task?",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.4113333333333325,
+      "citation_iou_precision": 0.0822666666666665,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 3,
+          "iou": 0.4113333333333325
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 18.600000000000023,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "speech_06",
+      "category": "localization",
+      "answerable": true,
+      "query": "Locate where the presenter first introduces the /goal command and explains bounded outcomes and progress checks. What does the command allow the session to do?",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.4050433412135541,
+      "citation_iou_precision": 0.08100866824271083,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 0,
+          "iou": 0.4050433412135541
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 20.19999999999999,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "speech_07",
+      "category": "temporal",
+      "answerable": true,
+      "query": "In the goal-loop demonstration, what happens first: adding a requirement for at least five peer-reviewed sources, or delegating new research to cross-reference the output against academic sources?",
+      "retrieval_error": null,
+      "reference_interval_count": 2,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.5071923799650109,
+      "citation_iou_precision": 0.20287695198600436,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 1,
+          "iou": 0.5203136136849627
+        },
+        {
+          "reference_index": 1,
+          "citation_index": 0,
+          "iou": 0.49407114624505905
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 1.0,
+      "temporal_recall_at_0_5": 0.5,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 5.230000000000018,
+      "onset_matched_interval_count": 2
+    },
+    {
+      "question_id": "speech_08",
+      "category": "reasoning",
+      "answerable": true,
+      "query": "According to the Kanban comparison, why is a database-backed work queue more durable for reviewing handoffs than keeping delegated work only in the parent conversation?",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.7548240635641353,
+      "citation_iou_precision": 0.15096481271282708,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 3,
+          "iou": 0.7548240635641353
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 1.0,
+      "temporal_recall_at_0_5": 1.0,
+      "all_evidence_hit_at_0_5": 1.0,
+      "onset_error_seconds": 4.039999999999964,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "speech_09",
+      "category": "reasoning",
+      "answerable": true,
+      "query": "Why does the presenter suggest using a powerful Kanban decomposer but a less powerful worker for a well-scoped card?",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.4782608695652155,
+      "citation_iou_precision": 0.0956521739130431,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 1,
+          "iou": 0.4782608695652155
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 16.88000000000011,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "speech_10",
+      "category": "localization",
+      "answerable": true,
+      "query": "Locate the later Kanban task-estimation demonstration where the estimate drops from 45,000 to 18,000 tokens. What two limits does the presenter add before re-estimating?",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.4016881827209495,
+      "citation_iou_precision": 0.0803376365441899,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 0,
+          "iou": 0.4016881827209495
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 8.420000000000073,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "speech_11",
+      "category": "temporal",
+      "answerable": true,
+      "query": "In the demonstrated Kanban research workflow around 35 minutes, do the two researcher tasks finish before or after the report-delivery task becomes unblocked and starts running?",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.35078092021950213,
+      "citation_iou_precision": 0.07015618404390042,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 3,
+          "iou": 0.35078092021950213
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 0.0,
+      "temporal_recall_at_0_5": 0.0,
+      "all_evidence_hit_at_0_5": 0.0,
+      "onset_error_seconds": 14.519999999999982,
+      "onset_matched_interval_count": 1
+    },
+    {
+      "question_id": "speech_12",
+      "category": "unanswerable",
+      "answerable": false,
+      "query": "In the closing comparison of coordination methods, what 95% confidence interval is reported for the token-usage difference between delegated single-agent and orchestrator-only workflows?",
+      "retrieval_error": null,
+      "reference_interval_count": 0,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": null,
+      "citation_iou_precision": null,
+      "matched_intervals": [],
+      "temporal_hit_at_0_3": null,
+      "temporal_recall_at_0_3": null,
+      "all_evidence_hit_at_0_3": null,
+      "temporal_hit_at_0_5": null,
+      "temporal_recall_at_0_5": null,
+      "all_evidence_hit_at_0_5": null,
+      "onset_error_seconds": null,
+      "onset_matched_interval_count": 0
+    }
+  ],
+  "notes": [
+    "Independent original-question retrieval; reference evidence is used only for scoring.",
+    "Temporal scores assess citation geometry only. Evidence IDs are not checked against a source ledger, and semantic claim support is not verified.",
+    "Missing, abstained, and error predictions score zero on answerable-question metrics; errors do not count as correct abstentions.",
+    "Citation intervals are deduplicated by geometry. One citation can match at most one reference interval, including for multi-hop recall.",
+    "Bootstrap intervals describe resampling uncertainty for the supplied examples, not model-training uncertainty or benchmark representativeness."
+  ]
+}

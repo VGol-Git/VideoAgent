@@ -1,0 +1,336 @@
+[
+    {
+        "id":  "v7_reason_fresh_context",
+        "split":  "test",
+        "question":  "According to the explanation of fresh subagent conversations, why must the parent put sufficient information in the goal and context fields of delegate_task? Cite the statements supporting the explanation.",
+        "category":  "reasoning",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "The child starts a fresh conversation. The child does not inherit prior parent conversation or tool calls. The parent\u0027s supplied goal/context must contain what the child needs."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       438.6,
+                                       463.28
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "reasoning"
+    },
+    {
+        "id":  "v7_reason_model_roles",
+        "split":  "test",
+        "question":  "Why does the presenter suggest a powerful Kanban decomposer but a less powerful worker for a well-scoped card? Explain the connection to cost.",
+        "category":  "reasoning",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "Breaking broad work into well-scoped cards requires high-level judgment. Executing a card with clear goal, context and handoff needs less judgment. Workers consume most tokens, so cheaper worker execution can lower cost."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       1663.34,
+                                       1691.66
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "reasoning"
+    },
+    {
+        "id":  "v7_reason_changed_criteria",
+        "split":  "test",
+        "question":  "In the goal-loop demonstration, how did the added requirement for peer-reviewed sources lead to another research step? Explain the order and why the earlier output was not sufficient, citing both stages.",
+        "category":  "reasoning",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "At least five peer-reviewed sources were added as a new completion criterion. The earlier sources did not appear peer-reviewed according to the presenter. The criterion change preceded additional delegated cross-referencing against academic sources."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       610.87,
+                                       625.47
+                                   ],
+                                   [
+                                       633.11,
+                                       648.11
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "reasoning"
+    },
+    {
+        "id":  "v7_reason_two_gates",
+        "split":  "test",
+        "question":  "Compare the gates shown in Article to Curated Knowledge and How Task Graphs Actually Run. Why does creating a draft entry or a task card not by itself guarantee that it reaches the library or a worker? Cite both diagrams.",
+        "category":  "reasoning",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "An entry passes Human review and the Approved transition before the Connected library; a requested revision returns to the draft. The dispatcher verifies dependencies and surfaces unblocked tasks to Ready/worker nodes. Both workflows have a gate between creating the item and passing it onward; creation alone is insufficient."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       1197.5,
+                                       1232.1
+                                   ],
+                                   [
+                                       1612.5,
+                                       1622.5
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "reasoning"
+    },
+    {
+        "id":  "v7_reason_context_durability",
+        "split":  "test",
+        "question":  "Contrast a fresh subagent\u0027s lack of inherited history with the later explanation of durable Kanban handoffs. What different context problems do the parent-supplied fields and the database-backed queue address? Cite both explanations.",
+        "category":  "reasoning",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "Parent-provided goal/context initializes a fresh child that did not inherit the parent\u0027s history. Conversation compression can lose delegated context or its audit trail. Kanban stores handoffs as database rows that can be revisited or inspected. Supplying a new child with task context and preserving handoff records across conversation changes address different stages of the context problem."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       438.6,
+                                       457.64
+                                   ],
+                                   [
+                                       1414.6,
+                                       1445.8
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "reasoning"
+    },
+    {
+        "id":  "v7_reason_dispatch_delay",
+        "split":  "test",
+        "question":  "Connect the How Task Graphs Actually Run diagram to the later Kanban research demonstration: why do completed researcher tasks unblock report delivery without implying that it starts running at exactly the same instant? Cite the diagram and the demonstration.",
+        "category":  "reasoning",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "Finishing the two researcher tasks satisfies report-delivery dependencies and unblocks it. The diagram and explanation describe a background dispatcher checking dependencies/queue periodically, approximately every 60s. Unblocked/Ready and Running are distinct states; dispatch processes the ready work, so no exact simultaneous start or measured 60-second wait follows."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       1612.5,
+                                       1622.5
+                                   ],
+                                   [
+                                       2085.09,
+                                       2117.95
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "reasoning"
+    },
+    {
+        "id":  "v7_onset_token_first",
+        "split":  "test",
+        "question":  "When does the transcript first state that the estimate dropped from 45,000 to 18,000 tokens? Include the opening preview when selecting the first occurrence. Return the matching cue time or cue span.",
+        "category":  "temporal",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "Statement that estimate dropped from45,000 to18,000 tokens Onset bracket: 4.08 to 7.68 seconds."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       4.08,
+                                       7.68
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "onset"
+    },
+    {
+        "id":  "v7_onset_token_later",
+        "split":  "test",
+        "question":  "During the later estimation demonstration after 30 minutes, when does the transcript first report the estimate dropping from 45,000 to 18,000 tokens? Return the matching cue time or cue span.",
+        "category":  "temporal",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "Statement that estimate dropped from45,000 to18,000 tokens Onset bracket: 1920.39 to 1923.05 seconds."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       1920.39,
+                                       1923.05
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "onset"
+    },
+    {
+        "id":  "v7_onset_article",
+        "split":  "test",
+        "question":  "Within the sequence from 19:00 to 21:00, when does the complete title Article to Curated Knowledge become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.",
+        "category":  "temporal",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "The complete slide title is clearly readable in the full-screen slide. Artwork may still be animating. Onset bracket: 1196.4953 to 1196.7622333333334 seconds."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       1196.4953,
+                                       1196.7622333333334
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "onset"
+    },
+    {
+        "id":  "v7_onset_task_graph",
+        "split":  "test",
+        "question":  "Within the sequence from 25:00 to 28:00, when does the complete title How Task Graphs Actually Run become clearly readable on the full-screen slide? Locate this local title-appearance transition and return an onset estimate or a last-absent/first-present bracket. Artwork may still be animating.",
+        "category":  "temporal",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "The complete slide title is clearly readable in the full-screen slide. Artwork may still be animating. Onset bracket: 1613.5119 to 1613.7454666666667 seconds."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       1613.5119,
+                                       1613.7454666666667
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "onset"
+    },
+    {
+        "id":  "v7_negative_total_tokens",
+        "split":  "test",
+        "question":  "In the first 102,000-versus-37,000 comparison, what exact total number of tokens did the delegated workflow consume after including every subagent? Give a number only if this explanation provides it.",
+        "category":  "unanswerable",
+        "answerable":  false,
+        "reference_answers":  [
+
+                              ],
+        "evidence_intervals":  [
+
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "unanswerable"
+    },
+    {
+        "id":  "v7_negative_dispatch_cost",
+        "split":  "test",
+        "question":  "Using only the visible How Task Graphs Actually Run diagram, what exact dollar cost is assigned to each dispatcher cycle? Give a price only if it appears on that diagram.",
+        "category":  "unanswerable",
+        "answerable":  false,
+        "reference_answers":  [
+
+                              ],
+        "evidence_intervals":  [
+
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "unanswerable"
+    },
+    {
+        "id":  "v7_timestamp_610",
+        "split":  "test",
+        "question":  "Describe what was on the slide at 10 minutes 10 seconds. Give the title and explain the numbered steps and outcome branches.",
+        "category":  "localization",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "The slide is titled GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL. There are three numbered main steps: Trigger /GOAL, Spawn sub-agents, Evaluate vs. criteria. Fail -\u003e Retry is an outcome branch, not a fourth numbered stage. Failure leads to retry; passing leads to exit the loop."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       609.5,
+                                       610.5
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "timestamp_search"
+    },
+    {
+        "id":  "v7_timestamp_800",
+        "split":  "test",
+        "question":  "Describe what is on screen at 800 seconds. Identify the open editor or slide, the file name, the visible agent identity, and the save control.",
+        "category":  "localization",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "The screen shows the SOUL.md editor/dialog in wanderloots-tutorials, rather than a presentation slide. The visible text identifies Hermes Agent, built by Nous Research. A Save SOUL.md button is visible."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       799.5,
+                                       800.5
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "timestamp_search"
+    },
+    {
+        "id":  "v7_timestamp_range_titles",
+        "split":  "test",
+        "question":  "Between 20:00 and 21:00, which two slide titles are visible, and in which order? Use evidence only from that interval.",
+        "category":  "localization",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "Article to Curated Knowledge is visible earlier in the interval. Two Loops, One Knowledge Workflow is visible later. The Article to Curated Knowledge slide precedes Two Loops, One Knowledge Workflow; no exact transition time is required."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       1200,
+                                       1232.1
+                                   ],
+                                   [
+                                       1235.5,
+                                       1260
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "timestamp_search"
+    },
+    {
+        "id":  "v7_timestamp_range_constraints",
+        "split":  "test",
+        "question":  "Within 31:50–32:20, what search limit and output limit does the presenter add before re-estimating the task? Answer from the speech in that time interval.",
+        "category":  "localization",
+        "answerable":  true,
+        "reference_answers":  [
+                                  "Limit the search to five sources. Limit the output document to 500 words or less."
+                              ],
+        "evidence_intervals":  [
+                                   [
+                                       1914.17,
+                                       1918.25
+                                   ]
+                               ],
+        "required_terms":  [
+
+                           ],
+        "source_task":  "timestamp_search"
+    }
+]

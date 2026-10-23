@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-21T21:05:39.353349+00:00",
+  "base_url": "http://127.0.0.1:7871",
+  "info": {
+    "title": "Subagents vs Agent Teams 🧠 Hermes Bots Goal Loops Kanban Graphs",
+    "duration": 2575.0057666666667,
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "mode": "visual",
+    "video_available": true,
+    "limits": {
+      "tool_calls": 4,
+      "frames": 16,
+      "frames_per_clip": 4,
+      "clip_seconds": 120.0
+    },
+    "modes": [
+      "adaptive",
+      "retrieval-only",
+      "static",
+      "uniform"
+    ]
+  },
+  "example_count": 20,
+  "examples_exclude_reference_labels": true,
+  "video_head_bytes": 143018102,
+  "video_range_206_verified": true,
+  "note": "HTTP delivery checks only; browser interaction and real model answer are checked separately."
+}

@@ -1,0 +1,2196 @@
+{
+  "diagnostic_version": "clipscout-saved-run-audit-v1",
+  "created_at_utc": "2026-10-22T19:39:43.604996+00:00",
+  "source_run": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\results\\research_v2\\run_004",
+  "source_run_status": {
+    "status": "completed_with_errors",
+    "started_at_utc": "2026-10-22T19:07:50.002336+00:00",
+    "run_directory": "C:\\Users\\Asus Zephyrus 16\\Documents\\GenAI\\Tool-using video agent for search and inspection\\ClipScout\\results\\research_v2\\run_004",
+    "phase": "complete",
+    "completed_predictions": 64,
+    "argv": [
+      "--prepare-assets",
+      "--download-models",
+      "--local-files-only",
+      "--output-root",
+      "results/research_v2",
+      "--split",
+      "test",
+      "--modes",
+      "adaptive",
+      "retrieval-only",
+      "static",
+      "uniform"
+    ],
+    "dry_run": false,
+    "total_predictions": 64,
+    "finished_at_utc": "2026-10-22T19:32:33.422228+00:00",
+    "error_prediction_count": 23
+  },
+  "method": "Read-only inspection of frozen questions, saved predictions and saved metric review counts. No agent/model execution and no archived metric recalculation.",
+  "input_files": [
+    {
+      "path": "questions.selected.json",
+      "sha256": "7895d228681d140d61555dc30cacad49ff47911f206ee6ce535065805b4267ae"
+    },
+    {
+      "path": "adaptive.predictions.json",
+      "sha256": "8979084422a0591558a7021484967df61c40ac7f35436c1a6e5880a5ea16d6fa"
+    },
+    {
+      "path": "adaptive.metrics.json",
+      "sha256": "4049b65317dbdc64a9c26bc07d6a49ccf7540199460b32de12509b9249a94a04"
+    },
+    {
+      "path": "retrieval-only.predictions.json",
+      "sha256": "fb4a199530b27a77d5f7141765fd60fe69c596246c07eb9ecee76bf4a5035db8"
+    },
+    {
+      "path": "retrieval-only.metrics.json",
+      "sha256": "66f7b5247b32bb5790caf65cbc15330a535a80fd54d10d929e609d45fac4717a"
+    },
+    {
+      "path": "static.predictions.json",
+      "sha256": "1a86468781501357da3116601ff391d219da5956711ce1ebb3c2c8f7584ee802"
+    },
+    {
+      "path": "static.metrics.json",
+      "sha256": "3cf29b22646b680a487f9cf943a26252b8e8f8c5f1cd794fa42ca66109012d10"
+    },
+    {
+      "path": "uniform.predictions.json",
+      "sha256": "c72f86f7246425c063b5581f1b4716ad524ddc08ad3039f5090620658ffdde86"
+    },
+    {
+      "path": "uniform.metrics.json",
+      "sha256": "3cd8abb2c2bb67976fba47dd12bba91e50fe788603aeedf9a5b706f0fd377544"
+    },
+    {
+      "path": "run_status.json",
+      "sha256": "8b44e68585cb1780a21b4f8727fb663475aae6729650c1d825dd7d0dcaf5a621"
+    }
+  ],
+  "summary": {
+    "prediction_count": 64,
+    "status_counts": {
+      "answered": 34,
+      "insufficient_evidence": 7,
+      "error": 23,
+      "missing": 0
+    },
+    "terminal_error_categories": {
+      "planner": 8,
+      "format": 3,
+      "evidence": 1,
+      "time_policy": 8,
+      "budget": 3,
+      "model_protocol": 0,
+      "backend": 0,
+      "infrastructure": 0,
+      "unknown": 0
+    },
+    "error_types": {
+      "invalid_model_response": 15,
+      "planning_error": 8
+    },
+    "error_messages": {
+      "No tools remain; answer or abstain": 3,
+      "Extra data: line 1 column 646 (char 645)": 1,
+      "Unknown planned task": 4,
+      "Each claim needs observed evidence IDs": 1,
+      "Expecting ',' delimiter: line 1 column 142 (char 141)": 1,
+      "Expecting ',' delimiter: line 1 column 132 (char 131)": 1,
+      "Plan needs 1-3 queries": 4,
+      "A temporal overview must cite every supplied observation window": 8
+    },
+    "model_protocol_error_count": 23,
+    "runtime_error_count": 0,
+    "unknown_error_count": 0
+  },
+  "by_mode": {
+    "adaptive": {
+      "prediction_count": 16,
+      "status_counts": {
+        "answered": 5,
+        "insufficient_evidence": 0,
+        "error": 11,
+        "missing": 0
+      },
+      "terminal_error_categories": {
+        "planner": 2,
+        "format": 3,
+        "evidence": 1,
+        "time_policy": 2,
+        "budget": 3,
+        "model_protocol": 0,
+        "backend": 0,
+        "infrastructure": 0,
+        "unknown": 0
+      },
+      "error_types": {
+        "invalid_model_response": 9,
+        "planning_error": 2
+      },
+      "error_messages": {
+        "No tools remain; answer or abstain": 3,
+        "Extra data: line 1 column 646 (char 645)": 1,
+        "Unknown planned task": 1,
+        "Each claim needs observed evidence IDs": 1,
+        "Expecting ',' delimiter: line 1 column 142 (char 141)": 1,
+        "Expecting ',' delimiter: line 1 column 132 (char 131)": 1,
+        "Plan needs 1-3 queries": 1,
+        "A temporal overview must cite every supplied observation window": 2
+      },
+      "model_protocol_error_count": 11,
+      "runtime_error_count": 0,
+      "unknown_error_count": 0,
+      "by_task": {
+        "timestamp_search": {
+          "prediction_count": 4,
+          "status_counts": {
+            "answered": 1,
+            "insufficient_evidence": 0,
+            "error": 3,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 1,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 2,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "planning_error": 1,
+            "invalid_model_response": 2
+          },
+          "error_messages": {
+            "Plan needs 1-3 queries": 1,
+            "A temporal overview must cite every supplied observation window": 2
+          },
+          "model_protocol_error_count": 3,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "reasoning": {
+          "prediction_count": 6,
+          "status_counts": {
+            "answered": 2,
+            "insufficient_evidence": 0,
+            "error": 4,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 1,
+            "format": 1,
+            "evidence": 1,
+            "time_policy": 0,
+            "budget": 1,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "invalid_model_response": 3,
+            "planning_error": 1
+          },
+          "error_messages": {
+            "No tools remain; answer or abstain": 1,
+            "Extra data: line 1 column 646 (char 645)": 1,
+            "Unknown planned task": 1,
+            "Each claim needs observed evidence IDs": 1
+          },
+          "model_protocol_error_count": 4,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "onset": {
+          "prediction_count": 4,
+          "status_counts": {
+            "answered": 2,
+            "insufficient_evidence": 0,
+            "error": 2,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 0,
+            "format": 1,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 1,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "invalid_model_response": 2
+          },
+          "error_messages": {
+            "No tools remain; answer or abstain": 1,
+            "Expecting ',' delimiter: line 1 column 142 (char 141)": 1
+          },
+          "model_protocol_error_count": 2,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "unanswerable": {
+          "prediction_count": 2,
+          "status_counts": {
+            "answered": 0,
+            "insufficient_evidence": 0,
+            "error": 2,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 0,
+            "format": 1,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 1,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "invalid_model_response": 2
+          },
+          "error_messages": {
+            "Expecting ',' delimiter: line 1 column 132 (char 131)": 1,
+            "No tools remain; answer or abstain": 1
+          },
+          "model_protocol_error_count": 2,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        }
+      }
+    },
+    "retrieval-only": {
+      "prediction_count": 16,
+      "status_counts": {
+        "answered": 9,
+        "insufficient_evidence": 5,
+        "error": 2,
+        "missing": 0
+      },
+      "terminal_error_categories": {
+        "planner": 2,
+        "format": 0,
+        "evidence": 0,
+        "time_policy": 0,
+        "budget": 0,
+        "model_protocol": 0,
+        "backend": 0,
+        "infrastructure": 0,
+        "unknown": 0
+      },
+      "error_types": {
+        "planning_error": 2
+      },
+      "error_messages": {
+        "Unknown planned task": 1,
+        "Plan needs 1-3 queries": 1
+      },
+      "model_protocol_error_count": 2,
+      "runtime_error_count": 0,
+      "unknown_error_count": 0,
+      "by_task": {
+        "timestamp_search": {
+          "prediction_count": 4,
+          "status_counts": {
+            "answered": 1,
+            "insufficient_evidence": 2,
+            "error": 1,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 1,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "planning_error": 1
+          },
+          "error_messages": {
+            "Plan needs 1-3 queries": 1
+          },
+          "model_protocol_error_count": 1,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "reasoning": {
+          "prediction_count": 6,
+          "status_counts": {
+            "answered": 5,
+            "insufficient_evidence": 0,
+            "error": 1,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 1,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "planning_error": 1
+          },
+          "error_messages": {
+            "Unknown planned task": 1
+          },
+          "model_protocol_error_count": 1,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "onset": {
+          "prediction_count": 4,
+          "status_counts": {
+            "answered": 2,
+            "insufficient_evidence": 2,
+            "error": 0,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 0,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {},
+          "error_messages": {},
+          "model_protocol_error_count": 0,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "unanswerable": {
+          "prediction_count": 2,
+          "status_counts": {
+            "answered": 1,
+            "insufficient_evidence": 1,
+            "error": 0,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 0,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {},
+          "error_messages": {},
+          "model_protocol_error_count": 0,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        }
+      }
+    },
+    "static": {
+      "prediction_count": 16,
+      "status_counts": {
+        "answered": 11,
+        "insufficient_evidence": 2,
+        "error": 3,
+        "missing": 0
+      },
+      "terminal_error_categories": {
+        "planner": 2,
+        "format": 0,
+        "evidence": 0,
+        "time_policy": 1,
+        "budget": 0,
+        "model_protocol": 0,
+        "backend": 0,
+        "infrastructure": 0,
+        "unknown": 0
+      },
+      "error_types": {
+        "planning_error": 2,
+        "invalid_model_response": 1
+      },
+      "error_messages": {
+        "Unknown planned task": 1,
+        "Plan needs 1-3 queries": 1,
+        "A temporal overview must cite every supplied observation window": 1
+      },
+      "model_protocol_error_count": 3,
+      "runtime_error_count": 0,
+      "unknown_error_count": 0,
+      "by_task": {
+        "timestamp_search": {
+          "prediction_count": 4,
+          "status_counts": {
+            "answered": 2,
+            "insufficient_evidence": 0,
+            "error": 2,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 1,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 1,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "planning_error": 1,
+            "invalid_model_response": 1
+          },
+          "error_messages": {
+            "Plan needs 1-3 queries": 1,
+            "A temporal overview must cite every supplied observation window": 1
+          },
+          "model_protocol_error_count": 2,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "reasoning": {
+          "prediction_count": 6,
+          "status_counts": {
+            "answered": 5,
+            "insufficient_evidence": 0,
+            "error": 1,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 1,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "planning_error": 1
+          },
+          "error_messages": {
+            "Unknown planned task": 1
+          },
+          "model_protocol_error_count": 1,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "onset": {
+          "prediction_count": 4,
+          "status_counts": {
+            "answered": 2,
+            "insufficient_evidence": 2,
+            "error": 0,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 0,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {},
+          "error_messages": {},
+          "model_protocol_error_count": 0,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "unanswerable": {
+          "prediction_count": 2,
+          "status_counts": {
+            "answered": 2,
+            "insufficient_evidence": 0,
+            "error": 0,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 0,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {},
+          "error_messages": {},
+          "model_protocol_error_count": 0,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        }
+      }
+    },
+    "uniform": {
+      "prediction_count": 16,
+      "status_counts": {
+        "answered": 9,
+        "insufficient_evidence": 0,
+        "error": 7,
+        "missing": 0
+      },
+      "terminal_error_categories": {
+        "planner": 2,
+        "format": 0,
+        "evidence": 0,
+        "time_policy": 5,
+        "budget": 0,
+        "model_protocol": 0,
+        "backend": 0,
+        "infrastructure": 0,
+        "unknown": 0
+      },
+      "error_types": {
+        "planning_error": 2,
+        "invalid_model_response": 5
+      },
+      "error_messages": {
+        "Unknown planned task": 1,
+        "A temporal overview must cite every supplied observation window": 5,
+        "Plan needs 1-3 queries": 1
+      },
+      "model_protocol_error_count": 7,
+      "runtime_error_count": 0,
+      "unknown_error_count": 0,
+      "by_task": {
+        "timestamp_search": {
+          "prediction_count": 4,
+          "status_counts": {
+            "answered": 1,
+            "insufficient_evidence": 0,
+            "error": 3,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 1,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 2,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "planning_error": 1,
+            "invalid_model_response": 2
+          },
+          "error_messages": {
+            "Plan needs 1-3 queries": 1,
+            "A temporal overview must cite every supplied observation window": 2
+          },
+          "model_protocol_error_count": 3,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "reasoning": {
+          "prediction_count": 6,
+          "status_counts": {
+            "answered": 5,
+            "insufficient_evidence": 0,
+            "error": 1,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 1,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "planning_error": 1
+          },
+          "error_messages": {
+            "Unknown planned task": 1
+          },
+          "model_protocol_error_count": 1,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "onset": {
+          "prediction_count": 4,
+          "status_counts": {
+            "answered": 1,
+            "insufficient_evidence": 0,
+            "error": 3,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 0,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 3,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {
+            "invalid_model_response": 3
+          },
+          "error_messages": {
+            "A temporal overview must cite every supplied observation window": 3
+          },
+          "model_protocol_error_count": 3,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        },
+        "unanswerable": {
+          "prediction_count": 2,
+          "status_counts": {
+            "answered": 2,
+            "insufficient_evidence": 0,
+            "error": 0,
+            "missing": 0
+          },
+          "terminal_error_categories": {
+            "planner": 0,
+            "format": 0,
+            "evidence": 0,
+            "time_policy": 0,
+            "budget": 0,
+            "model_protocol": 0,
+            "backend": 0,
+            "infrastructure": 0,
+            "unknown": 0
+          },
+          "error_types": {},
+          "error_messages": {},
+          "model_protocol_error_count": 0,
+          "runtime_error_count": 0,
+          "unknown_error_count": 0
+        }
+      }
+    }
+  },
+  "by_task": {
+    "timestamp_search": {
+      "prediction_count": 16,
+      "status_counts": {
+        "answered": 5,
+        "insufficient_evidence": 2,
+        "error": 9,
+        "missing": 0
+      },
+      "terminal_error_categories": {
+        "planner": 4,
+        "format": 0,
+        "evidence": 0,
+        "time_policy": 5,
+        "budget": 0,
+        "model_protocol": 0,
+        "backend": 0,
+        "infrastructure": 0,
+        "unknown": 0
+      },
+      "error_types": {
+        "planning_error": 4,
+        "invalid_model_response": 5
+      },
+      "error_messages": {
+        "Plan needs 1-3 queries": 4,
+        "A temporal overview must cite every supplied observation window": 5
+      },
+      "model_protocol_error_count": 9,
+      "runtime_error_count": 0,
+      "unknown_error_count": 0
+    },
+    "reasoning": {
+      "prediction_count": 24,
+      "status_counts": {
+        "answered": 17,
+        "insufficient_evidence": 0,
+        "error": 7,
+        "missing": 0
+      },
+      "terminal_error_categories": {
+        "planner": 4,
+        "format": 1,
+        "evidence": 1,
+        "time_policy": 0,
+        "budget": 1,
+        "model_protocol": 0,
+        "backend": 0,
+        "infrastructure": 0,
+        "unknown": 0
+      },
+      "error_types": {
+        "invalid_model_response": 3,
+        "planning_error": 4
+      },
+      "error_messages": {
+        "No tools remain; answer or abstain": 1,
+        "Extra data: line 1 column 646 (char 645)": 1,
+        "Unknown planned task": 4,
+        "Each claim needs observed evidence IDs": 1
+      },
+      "model_protocol_error_count": 7,
+      "runtime_error_count": 0,
+      "unknown_error_count": 0
+    },
+    "onset": {
+      "prediction_count": 16,
+      "status_counts": {
+        "answered": 7,
+        "insufficient_evidence": 4,
+        "error": 5,
+        "missing": 0
+      },
+      "terminal_error_categories": {
+        "planner": 0,
+        "format": 1,
+        "evidence": 0,
+        "time_policy": 3,
+        "budget": 1,
+        "model_protocol": 0,
+        "backend": 0,
+        "infrastructure": 0,
+        "unknown": 0
+      },
+      "error_types": {
+        "invalid_model_response": 5
+      },
+      "error_messages": {
+        "No tools remain; answer or abstain": 1,
+        "Expecting ',' delimiter: line 1 column 142 (char 141)": 1,
+        "A temporal overview must cite every supplied observation window": 3
+      },
+      "model_protocol_error_count": 5,
+      "runtime_error_count": 0,
+      "unknown_error_count": 0
+    },
+    "unanswerable": {
+      "prediction_count": 8,
+      "status_counts": {
+        "answered": 5,
+        "insufficient_evidence": 1,
+        "error": 2,
+        "missing": 0
+      },
+      "terminal_error_categories": {
+        "planner": 0,
+        "format": 1,
+        "evidence": 0,
+        "time_policy": 0,
+        "budget": 1,
+        "model_protocol": 0,
+        "backend": 0,
+        "infrastructure": 0,
+        "unknown": 0
+      },
+      "error_types": {
+        "invalid_model_response": 2
+      },
+      "error_messages": {
+        "Expecting ',' delimiter: line 1 column 132 (char 131)": 1,
+        "No tools remain; answer or abstain": 1
+      },
+      "model_protocol_error_count": 2,
+      "runtime_error_count": 0,
+      "unknown_error_count": 0
+    }
+  },
+  "terminal_errors": [
+    {
+      "mode": "adaptive",
+      "question_id": "v7_reason_model_roles",
+      "task": "reasoning",
+      "category": "budget",
+      "error_type": "invalid_model_response",
+      "error": "No tools remain; answer or abstain"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "v7_reason_changed_criteria",
+      "task": "reasoning",
+      "category": "format",
+      "error_type": "invalid_model_response",
+      "error": "Extra data: line 1 column 646 (char 645)"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "v7_reason_two_gates",
+      "task": "reasoning",
+      "category": "planner",
+      "error_type": "planning_error",
+      "error": "Unknown planned task"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "v7_reason_context_durability",
+      "task": "reasoning",
+      "category": "evidence",
+      "error_type": "invalid_model_response",
+      "error": "Each claim needs observed evidence IDs"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "v7_onset_token_later",
+      "task": "onset",
+      "category": "budget",
+      "error_type": "invalid_model_response",
+      "error": "No tools remain; answer or abstain"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "v7_onset_task_graph",
+      "task": "onset",
+      "category": "format",
+      "error_type": "invalid_model_response",
+      "error": "Expecting ',' delimiter: line 1 column 142 (char 141)"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "v7_negative_total_tokens",
+      "task": "unanswerable",
+      "category": "format",
+      "error_type": "invalid_model_response",
+      "error": "Expecting ',' delimiter: line 1 column 132 (char 131)"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "v7_negative_dispatch_cost",
+      "task": "unanswerable",
+      "category": "budget",
+      "error_type": "invalid_model_response",
+      "error": "No tools remain; answer or abstain"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "v7_timestamp_800",
+      "task": "timestamp_search",
+      "category": "planner",
+      "error_type": "planning_error",
+      "error": "Plan needs 1-3 queries"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "v7_timestamp_range_titles",
+      "task": "timestamp_search",
+      "category": "time_policy",
+      "error_type": "invalid_model_response",
+      "error": "A temporal overview must cite every supplied observation window"
+    },
+    {
+      "mode": "adaptive",
+      "question_id": "v7_timestamp_range_constraints",
+      "task": "timestamp_search",
+      "category": "time_policy",
+      "error_type": "invalid_model_response",
+      "error": "A temporal overview must cite every supplied observation window"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "v7_reason_two_gates",
+      "task": "reasoning",
+      "category": "planner",
+      "error_type": "planning_error",
+      "error": "Unknown planned task"
+    },
+    {
+      "mode": "retrieval-only",
+      "question_id": "v7_timestamp_800",
+      "task": "timestamp_search",
+      "category": "planner",
+      "error_type": "planning_error",
+      "error": "Plan needs 1-3 queries"
+    },
+    {
+      "mode": "static",
+      "question_id": "v7_reason_two_gates",
+      "task": "reasoning",
+      "category": "planner",
+      "error_type": "planning_error",
+      "error": "Unknown planned task"
+    },
+    {
+      "mode": "static",
+      "question_id": "v7_timestamp_800",
+      "task": "timestamp_search",
+      "category": "planner",
+      "error_type": "planning_error",
+      "error": "Plan needs 1-3 queries"
+    },
+    {
+      "mode": "static",
+      "question_id": "v7_timestamp_range_titles",
+      "task": "timestamp_search",
+      "category": "time_policy",
+      "error_type": "invalid_model_response",
+      "error": "A temporal overview must cite every supplied observation window"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "v7_reason_two_gates",
+      "task": "reasoning",
+      "category": "planner",
+      "error_type": "planning_error",
+      "error": "Unknown planned task"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "v7_onset_token_later",
+      "task": "onset",
+      "category": "time_policy",
+      "error_type": "invalid_model_response",
+      "error": "A temporal overview must cite every supplied observation window"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "v7_onset_article",
+      "task": "onset",
+      "category": "time_policy",
+      "error_type": "invalid_model_response",
+      "error": "A temporal overview must cite every supplied observation window"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "v7_onset_task_graph",
+      "task": "onset",
+      "category": "time_policy",
+      "error_type": "invalid_model_response",
+      "error": "A temporal overview must cite every supplied observation window"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "v7_timestamp_800",
+      "task": "timestamp_search",
+      "category": "planner",
+      "error_type": "planning_error",
+      "error": "Plan needs 1-3 queries"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "v7_timestamp_range_titles",
+      "task": "timestamp_search",
+      "category": "time_policy",
+      "error_type": "invalid_model_response",
+      "error": "A temporal overview must cite every supplied observation window"
+    },
+    {
+      "mode": "uniform",
+      "question_id": "v7_timestamp_range_constraints",
+      "task": "timestamp_search",
+      "category": "time_policy",
+      "error_type": "invalid_model_response",
+      "error": "A temporal overview must cite every supplied observation window"
+    }
+  ],
+  "onset": {
+    "case_count": 16,
+    "planned_event_count": 0,
+    "explicit_event_count": 0,
+    "missing_event_output_count": 16,
+    "cases": [
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_token_first",
+        "status": "answered",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "transcript",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_token_later",
+        "status": "error",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "transcript",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": false
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_article",
+        "status": "answered",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "visual",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_task_graph",
+        "status": "error",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "visual",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": false
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_token_first",
+        "status": "answered",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "transcript",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_token_later",
+        "status": "answered",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "transcript",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_article",
+        "status": "insufficient_evidence",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "visual",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_task_graph",
+        "status": "insufficient_evidence",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "visual",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_token_first",
+        "status": "answered",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "transcript",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_token_later",
+        "status": "answered",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "transcript",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_article",
+        "status": "insufficient_evidence",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "visual",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_task_graph",
+        "status": "insufficient_evidence",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "visual",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_token_first",
+        "status": "answered",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "transcript",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": true
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_token_later",
+        "status": "error",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "transcript",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": false
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_article",
+        "status": "error",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "visual",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": false
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_task_graph",
+        "status": "error",
+        "planned_task": "reasoning",
+        "planned_modality": "transcript",
+        "reference_modality": "visual",
+        "event_task_mismatch": true,
+        "explicit_event_present": false,
+        "answer_present": false
+      }
+    ]
+  },
+  "gold_modality_vs_planned": {
+    "counts": {
+      "transcript -> transcript": 32,
+      "visual -> missing": 8,
+      "audiovisual -> transcript": 4,
+      "visual -> transcript": 8,
+      "visual -> visual": 12
+    },
+    "cases": [
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_fresh_context",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_model_roles",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "error"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_changed_criteria",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "error"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_two_gates",
+        "reference_modality": "visual",
+        "planned_modality": null,
+        "status": "error"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_context_durability",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "error"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_dispatch_delay",
+        "reference_modality": "audiovisual",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_token_first",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_token_later",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "error"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_article",
+        "reference_modality": "visual",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_task_graph",
+        "reference_modality": "visual",
+        "planned_modality": "transcript",
+        "status": "error"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_negative_total_tokens",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "error"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_negative_dispatch_cost",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "error"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_timestamp_610",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "answered"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_timestamp_800",
+        "reference_modality": "visual",
+        "planned_modality": null,
+        "status": "error"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_timestamp_range_titles",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "error"
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_timestamp_range_constraints",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "error"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_fresh_context",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_model_roles",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_changed_criteria",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_two_gates",
+        "reference_modality": "visual",
+        "planned_modality": null,
+        "status": "error"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_context_durability",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_dispatch_delay",
+        "reference_modality": "audiovisual",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_token_first",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_token_later",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_article",
+        "reference_modality": "visual",
+        "planned_modality": "transcript",
+        "status": "insufficient_evidence"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_task_graph",
+        "reference_modality": "visual",
+        "planned_modality": "transcript",
+        "status": "insufficient_evidence"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_negative_total_tokens",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_negative_dispatch_cost",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "insufficient_evidence"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_timestamp_610",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "insufficient_evidence"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_timestamp_800",
+        "reference_modality": "visual",
+        "planned_modality": null,
+        "status": "error"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_timestamp_range_titles",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "insufficient_evidence"
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_timestamp_range_constraints",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_fresh_context",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_model_roles",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_changed_criteria",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_two_gates",
+        "reference_modality": "visual",
+        "planned_modality": null,
+        "status": "error"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_context_durability",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_dispatch_delay",
+        "reference_modality": "audiovisual",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_token_first",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_token_later",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_article",
+        "reference_modality": "visual",
+        "planned_modality": "transcript",
+        "status": "insufficient_evidence"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_task_graph",
+        "reference_modality": "visual",
+        "planned_modality": "transcript",
+        "status": "insufficient_evidence"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_negative_total_tokens",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_negative_dispatch_cost",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_timestamp_610",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "answered"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_timestamp_800",
+        "reference_modality": "visual",
+        "planned_modality": null,
+        "status": "error"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_timestamp_range_titles",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "error"
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_timestamp_range_constraints",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_fresh_context",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_model_roles",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_changed_criteria",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_two_gates",
+        "reference_modality": "visual",
+        "planned_modality": null,
+        "status": "error"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_context_durability",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_dispatch_delay",
+        "reference_modality": "audiovisual",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_token_first",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_token_later",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "error"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_article",
+        "reference_modality": "visual",
+        "planned_modality": "transcript",
+        "status": "error"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_task_graph",
+        "reference_modality": "visual",
+        "planned_modality": "transcript",
+        "status": "error"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_negative_total_tokens",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "answered"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_negative_dispatch_cost",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "answered"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_timestamp_610",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "answered"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_timestamp_800",
+        "reference_modality": "visual",
+        "planned_modality": null,
+        "status": "error"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_timestamp_range_titles",
+        "reference_modality": "visual",
+        "planned_modality": "visual",
+        "status": "error"
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_timestamp_range_constraints",
+        "reference_modality": "transcript",
+        "planned_modality": "transcript",
+        "status": "error"
+      }
+    ],
+    "interpretation": "Routing diagnostic, not automatic correctness. A transcript plan cannot establish a visual-only occurrence; missing plans include planner failures."
+  },
+  "placeholder_plans": {
+    "case_count": 44,
+    "cases": [
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_fresh_context",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_model_roles",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_changed_criteria",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_context_durability",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_reason_dispatch_delay",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_token_first",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_token_later",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_article",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_onset_task_graph",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_negative_total_tokens",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "adaptive",
+        "question_id": "v7_timestamp_range_constraints",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_fresh_context",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_model_roles",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_changed_criteria",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_context_durability",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_reason_dispatch_delay",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_token_first",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_token_later",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_article",
+        "status": "insufficient_evidence",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_onset_task_graph",
+        "status": "insufficient_evidence",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_negative_total_tokens",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "retrieval-only",
+        "question_id": "v7_timestamp_range_constraints",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_fresh_context",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_model_roles",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_changed_criteria",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_context_durability",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_reason_dispatch_delay",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_token_first",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_token_later",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_article",
+        "status": "insufficient_evidence",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_onset_task_graph",
+        "status": "insufficient_evidence",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_negative_total_tokens",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "static",
+        "question_id": "v7_timestamp_range_constraints",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_fresh_context",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_model_roles",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_changed_criteria",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_context_durability",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_reason_dispatch_delay",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_token_first",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_token_later",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_article",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_onset_task_graph",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_negative_total_tokens",
+        "status": "answered",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      },
+      {
+        "mode": "uniform",
+        "question_id": "v7_timestamp_range_constraints",
+        "status": "error",
+        "queries": [
+          "distinctive search terms"
+        ],
+        "requirements": {
+          "R1": "one fact that must be established"
+        }
+      }
+    ]
+  },
+  "saved_semantic_review_coverage": {
+    "adaptive": {
+      "question_count": 16,
+      "named_review_count": 0,
+      "complete_semantic_review_count": 0,
+      "complete_semantic_review_fraction": 0.0,
+      "required_atom_count": 30,
+      "reviewed_atom_count": 0
+    },
+    "retrieval-only": {
+      "question_count": 16,
+      "named_review_count": 0,
+      "complete_semantic_review_count": 0,
+      "complete_semantic_review_fraction": 0.0,
+      "required_atom_count": 30,
+      "reviewed_atom_count": 0
+    },
+    "static": {
+      "question_count": 16,
+      "named_review_count": 0,
+      "complete_semantic_review_count": 0,
+      "complete_semantic_review_fraction": 0.0,
+      "required_atom_count": 30,
+      "reviewed_atom_count": 0
+    },
+    "uniform": {
+      "question_count": 16,
+      "named_review_count": 0,
+      "complete_semantic_review_count": 0,
+      "complete_semantic_review_fraction": 0.0,
+      "required_atom_count": 30,
+      "reviewed_atom_count": 0
+    }
+  },
+  "limitations": [
+    "status=answered establishes delivery, not semantic correctness. Abstention is a distinct outcome, not a runtime exception.",
+    "No semantic scores or successes are assigned by this diagnosis, including apparently correct drafts rejected by validation.",
+    "operational_error_rate in archived metrics counts all status=error outputs; model/protocol failures are not infrastructure outages.",
+    "Legacy accuracy_known may be zero solely from automatic failure scores with zero reviewed answers. Unreviewed answer quality remains unknown.",
+    "Missing explicit event outputs are end-to-end failures and cannot measure the accuracy of an event-refinement stage that was not reached.",
+    "Point/range temporal compliance is distinct from correct scene descriptions. Model self-audits are not independent reference checks.",
+    "Do not remove failed questions from denominators, convert rejected drafts into successes, or mix repaired reruns into this archived run."
+  ]
+}

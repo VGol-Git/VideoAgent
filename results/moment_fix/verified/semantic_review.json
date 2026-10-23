@@ -1,0 +1,24 @@
+{
+  "reviewer": "assistant",
+  "method": "Compared unedited service answers with original-video frames extracted independently at the requested times; not blind human grading.",
+  "temporal_routing_passed": true,
+  "cases": [
+    {
+      "requested_seconds": 610,
+      "frame": "frame_610.png",
+      "response": "610.json",
+      "main_content_supported": true,
+      "observed_content": "GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL: trigger/goal, spawn sub-agents, evaluate vs criteria, fail/retry and pass/exit paths.",
+      "remaining_imprecision": "Response calls FAIL -> RETRY a fourth stage; the slide numbers only three main steps."
+    },
+    {
+      "requested_seconds": 800,
+      "frame": "frame_800.png",
+      "response": "800.json",
+      "main_content_supported": true,
+      "observed_content": "wanderloots-tutorials · SOUL.md editor dialog with Hermes Agent / Nous Research instructions and Save SOUL.md at bottom right.",
+      "remaining_imprecision": "Response follows the question's generic word slide although the actual screen is an editor. Its prose summarizes instructions rather than transcribing them exactly."
+    }
+  ],
+  "limitation": "Temporal correctness is checked programmatically; this diagnostic does not establish general visual/OCR accuracy."
+}

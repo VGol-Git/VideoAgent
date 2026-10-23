@@ -1,0 +1,10 @@
+{
+  "status": "aborted_partial_pilot_v3",
+  "reason": "Shared planner prompt required inspection and advertised tool actions while deterministic baselines were in a final-answer-only stage. Retrieval-only produced 12 format errors out of 13. Comparing its quality to adaptive under this conflicting contract would be misleading.",
+  "completed_modes": ["adaptive", "retrieval-only"],
+  "remaining_modes": "Static was interrupted after its first saved result; uniform was not started.",
+  "preservation": "Original predictions, completed metrics, partial audits and byte-exact Python package sources are retained here.",
+  "source_archive": "source/clipscout",
+  "replacement_run": "../corrected",
+  "replacement_scope": "All four modes rerun with a tool-free finalizer and bounded format repairs. This is a post-hoc protocol-corrected repeat on already seen questions, not an independent held-out evaluation. Questions and reference answers are unchanged."
+}

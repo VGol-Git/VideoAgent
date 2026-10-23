@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "k": 5,
+  "summary": {
+    "example_count": 1,
+    "grounding_example_count": 1,
+    "multi_hop_example_count": 0,
+    "retrieval_error_count": 0,
+    "temporal_iou": 0.754000000000002,
+    "hit_at_5_iou_0_3": 1.0,
+    "evidence_recall_at_5_iou_0_3": 1.0,
+    "all_evidence_hit_at_5_iou_0_3": 1.0,
+    "multi_hop_success_at_5_iou_0_3": null,
+    "hit_at_5_iou_0_5": 1.0,
+    "evidence_recall_at_5_iou_0_5": 1.0,
+    "all_evidence_hit_at_5_iou_0_5": 1.0,
+    "multi_hop_success_at_5_iou_0_5": null
+  },
+  "per_question": [
+    {
+      "question_id": "visual_03",
+      "category": "localization",
+      "answerable": true,
+      "query": "Locate the full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library. Give its approximate time interval.",
+      "retrieval_error": null,
+      "reference_interval_count": 1,
+      "unique_citation_interval_count": 5,
+      "temporal_iou": 0.754000000000002,
+      "citation_iou_precision": 0.1508000000000004,
+      "matched_intervals": [
+        {
+          "reference_index": 0,
+          "citation_index": 2,
+          "iou": 0.754000000000002
+        }
+      ],
+      "temporal_hit_at_0_3": 1.0,
+      "temporal_recall_at_0_3": 1.0,
+      "all_evidence_hit_at_0_3": 1.0,
+      "temporal_hit_at_0_5": 1.0,
+      "temporal_recall_at_0_5": 1.0,
+      "all_evidence_hit_at_0_5": 1.0,
+      "onset_error_seconds": 3.0699999999999363,
+      "onset_matched_interval_count": 1
+    }
+  ],
+  "notes": [
+    "Independent original-question retrieval; reference evidence is used only for scoring.",
+    "Temporal scores assess citation geometry only. Evidence IDs are not checked against a source ledger, and semantic claim support is not verified.",
+    "Missing, abstained, and error predictions score zero on answerable-question metrics; errors do not count as correct abstentions.",
+    "Citation intervals are deduplicated by geometry. One citation can match at most one reference interval, including for multi-hop recall.",
+    "Bootstrap intervals describe resampling uncertainty for the supplied examples, not model-training uncertainty or benchmark representativeness."
+  ]
+}

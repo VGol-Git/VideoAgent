@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ClipScout · Explore video</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f5f7;--paper:#fff;--ink:#17283c;--muted:#617087;--line:#e1e6ed;--blue:#295fd4;--blue-soft:#edf3ff;--green:#147365;--orange:#95631a;--red:#a6313d;--radius:18px}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Segoe UI",system-ui,sans-serif;font-size:15px;line-height:1.55}button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{cursor:wait;opacity:.6}button:focus-visible,a:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #a1bfff;outline-offset:3px}a{color:var(--blue)}.shell{max-width:1440px;margin:auto;padding:0 38px 46px}.topbar{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;gap:12px;align-items:center;font-weight:750;font-size:22px;letter-spacing:-.6px}.mark{width:36px;height:36px;border-radius:11px;background:var(--ink);color:white;display:grid;place-items:center;font-size:19px}.local{font-size:12px;letter-spacing:.05em;color:var(--muted);display:flex;align-items:center;gap:8px}.dot{width:7px;height:7px;border-radius:50%;background:#27a28a}.hero{padding:30px 0 24px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:800;color:var(--blue);margin:0 0 10px}h1{font-size:clamp(25px,3vw,38px);line-height:1.18;letter-spacing:-1.3px;margin:0 0 11px;font-weight:650}.subtitle{color:var(--muted);max-width:790px;margin:0}.grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(340px,.85fr);gap:24px;align-items:start}.panel{border:1px solid var(--line);background:var(--paper);border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 18px #17283c03}.panel-head{padding:19px 22px;display:flex;justify-content:space-between;gap:12px;align-items:center}h2{font-size:17px;margin:0;font-weight:650;letter-spacing:-.25px}.badge{padding:4px 9px;background:var(--blue-soft);color:var(--blue);font-size:11px;border-radius:6px;white-space:nowrap}.media{background:#111b28;min-height:220px;position:relative}video{display:block;width:100%;max-height:470px;aspect-ratio:16/9;background:#111b28}.video-unavailable{padding:50px 28px;color:#d3ddeb;text-align:center;min-height:220px;display:grid;place-content:center}.video-unavailable strong{display:block;color:white;margin-bottom:8px}.meta{padding:18px 22px 21px}.video-title{font-size:16px;font-weight:650;margin:0 0 9px;overflow-wrap:anywhere}.meta-line{display:flex;gap:8px 18px;flex-wrap:wrap;color:var(--muted);font-size:12px}.note{font-size:12px;color:var(--muted);margin:14px 0 0;line-height:1.6}.question-panel{padding:23px}label{font-size:12px;font-weight:650;display:block;margin-bottom:8px}textarea{display:block;resize:vertical;width:100%;min-height:126px;max-height:300px;border:1px solid #d6dfeb;border-radius:11px;padding:14px;background:#fbfcfe;color:var(--ink);line-height:1.5}textarea::placeholder{color:#8b98aa}.counter{font-size:10px;text-align:right;color:var(--muted);margin:5px 1px 16px}.mode-row{display:flex;gap:12px;align-items:end}.mode-control{flex:1;min-width:0}select{width:100%;height:43px;border:1px solid #d6dfeb;border-radius:9px;padding:0 10px;background:white;color:var(--ink);font-size:13px}.primary{background:var(--blue);color:white;border:none;border-radius:10px;height:43px;padding:0 20px;font-weight:650;white-space:nowrap}.mode-desc{color:var(--muted);font-size:12px;margin:12px 0 0;min-height:38px}.examples{padding-top:16px;border-top:1px solid var(--line);margin-top:16px}.examples-title{font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--muted);margin-bottom:9px}.example-button{display:block;background:#f6f8fc;border:1px solid transparent;text-align:left;font-size:12px;color:#3d526c;padding:9px 11px;border-radius:8px;margin-top:6px;width:100%;line-height:1.45}.example-button:hover{border-color:#b5c9ed;background:var(--blue-soft)}.status-line{display:flex;align-items:center;gap:9px;color:var(--blue);font-size:12px;margin-top:16px}.spinner{width:14px;height:14px;border:2px solid #c9d8f6;border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.error{padding:12px 14px;border-radius:9px;background:#fff0f1;color:var(--red);font-size:13px;margin-top:14px}.result{margin-top:24px}.answer-wrap{padding:0 23px 23px}.answer{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;line-height:1.75}.answer-status{font-size:11px;font-weight:650;letter-spacing:.03em;padding:4px 9px;border-radius:6px;background:#eaf6f2;color:var(--green)}.answer-status.abstain{background:#fff3df;color:var(--orange)}.citation-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}.seek{border:1px solid #c9d9f5;color:var(--blue);border-radius:7px;background:#f5f8ff;font-size:11px;padding:6px 9px}.seek:hover{background:#e5eeff}.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);background:#fafbfd}.metric{padding:14px 18px;border-right:1px solid var(--line)}.metric:last-child{border:0}.metric strong{font-size:20px;display:block;letter-spacing:-.6px;font-weight:650}.metric span{font-size:10px;color:var(--muted)}.trace-section{margin-top:30px}.trace-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;gap:12px}.trace-heading p{color:var(--muted);font-size:12px;margin:3px 0 0}.download{background:white;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:7px 11px;font-size:12px;white-space:nowrap}.trace-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.trace-card{padding:18px 20px;background:white;border:1px solid var(--line);border-radius:13px;min-width:0}.trace-top{display:flex;align-items:center;gap:9px;margin-bottom:11px}.call-number{font-size:11px;font-weight:700;width:24px;height:24px;border-radius:7px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center}.tool-name{font-size:13px;font-weight:650}.call-status{margin-left:auto;font-size:10px;color:var(--green)}.call-status.failed{color:var(--red)}.trace-summary{font-size:12px;color:var(--muted);margin:0 0 10px;white-space:pre-wrap;overflow-wrap:anywhere}.trace-observation{font-size:12px;color:#354b63;white-space:pre-wrap;overflow-wrap:anywhere;margin:10px 0}.label-small{font-size:10px;font-weight:700;letter-spacing:.05em;color:var(--muted);text-transform:uppercase;margin:14px 0 5px}.hit{padding:9px 0;border-top:1px solid #eef1f6;font-size:12px}.hit p{margin:6px 0 0;color:#52667e;white-space:pre-wrap;overflow-wrap:anywhere}details{margin-top:11px;font-size:11px;color:var(--muted)}summary{cursor:pointer}pre{font-family:Consolas,monospace;font-size:10px;line-height:1.5;max-height:320px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7fa;padding:11px;border-radius:7px}.empty{padding:22px;color:var(--muted);font-size:13px;background:white;border:1px dashed #d5ddea;border-radius:13px}.footer{margin-top:28px;color:#7d8a9c;font-size:11px;display:flex;justify-content:space-between;gap:15px}.hidden,[hidden]{display:none!important}
+    @media(max-width:950px){.shell{padding:0 22px 30px}.grid{grid-template-columns:1fr}.hero{padding-top:25px}.question-panel{padding:20px}.trace-list{grid-template-columns:1fr}.topbar{height:72px}}@media(max-width:520px){.shell{padding:0 14px 24px}.local{font-size:10px}.metrics{grid-template-columns:repeat(2,1fr)}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.mode-row{display:block}.primary{width:100%;margin-top:13px}.trace-heading{align-items:start}.hero h1{font-size:28px}.footer{display:block}.panel-head,.meta{padding-left:17px;padding-right:17px}}
+    .answer-status.failed{background:#fff0f1;color:var(--red)}
+    @media(prefers-reduced-motion:reduce){.spinner{animation:none}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><div class="brand"><span class="mark" aria-hidden="true">⌁</span>ClipScout</div><div class="local"><span class="dot"></span>LOCAL DEMO</div></header>
+  <section class="hero"><p class="eyebrow">Video research workspace</p><h1>Find the moment. Check the evidence.</h1><p class="subtitle">Ask a question about a long video and follow the search to the visual evidence.</p></section>
+  <main>
+    <div class="grid">
+      <section class="panel" aria-label="Source video">
+        <div class="panel-head"><h2>Source video</h2><span class="badge" id="duration">Connecting…</span></div>
+        <div class="media"><video id="video" controls preload="metadata" hidden aria-label="Video player"></video><div class="video-unavailable" id="video-placeholder"><div><strong>Loading video details</strong>Connecting to the local agent.</div></div></div>
+        <div class="meta"><p class="video-title" id="video-title">ClipScout</p><div class="meta-line"><span id="backend">Model: …</span><span id="evidence-mode"></span></div><p class="note" id="sampling-note">Inspection uses sampled frames. The gaps between them remain unobserved.</p></div>
+      </section>
+      <div>
+        <section class="panel question-panel">
+          <form id="ask-form"><label for="question">Your question about the video</label><textarea id="question" maxlength="2000" placeholder="What is on screen when the presenter explains…?" required></textarea><div class="counter" id="counter">0 / 2000</div>
+          <div class="mode-row"><div class="mode-control"><label for="mode">Research mode</label><select id="mode"><option value="adaptive">Adaptive agent</option><option value="retrieval-only">Retrieval only</option><option value="static">Search + fixed inspection</option><option value="uniform">Uniform inspection</option></select></div><button class="primary" id="submit" type="submit">Explore →</button></div><p class="mode-desc" id="mode-desc"></p></form>
+          <div id="progress" class="status-line" role="status" hidden><span class="spinner" aria-hidden="true"></span><span id="progress-text">The agent is gathering evidence…</span></div><div id="error" class="error" role="alert" hidden></div>
+          <div class="examples" id="examples" hidden><div class="examples-title">Example questions</div><div id="example-list"></div></div>
+        </section>
+        <section class="panel result" id="result" aria-live="polite" hidden><div class="panel-head"><h2>Answer</h2><span class="answer-status" id="answer-status"></span></div><div class="answer-wrap"><p class="answer" id="answer"></p><p class="note" id="requested-scope" hidden></p><div class="citation-row" id="citations"></div><p class="note" id="answer-note"></p></div><div class="metrics"><div class="metric"><strong id="metric-time">—</strong><span>seconds to answer</span></div><div class="metric"><strong id="metric-calls">—</strong><span>tool calls</span></div><div class="metric"><strong id="metric-frames">—</strong><span>decoded frames</span></div><div class="metric"><strong id="metric-unique">—</strong><span>unique frame timestamps</span></div></div></section>
+      </div>
+    </div>
+    <section class="trace-section" id="trace-section" hidden><div class="trace-heading"><div><h2>Research trace</h2><p id="trace-subtitle">Actions, observations and evidence limits.</p></div><button class="download" id="download" type="button">Download JSON ↓</button></div><div class="trace-list" id="trace-list"></div><details><summary>Evidence and run details</summary><pre id="evidence-json"></pre></details></section>
+  </main>
+  <footer class="footer"><span id="budget">Up to 4 tool calls · up to 16 frames · up to 120 seconds per inspection</span><span>Model observations need human review.</span></footer>
+</div>
+<script>
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const descriptions = {
+    adaptive: 'Ask about a specific time (10:10 or 800 seconds), a range (15–20 minutes), or before/after a time. Inspection stays within the requested bounds and shows its sampling limits.',
+    'retrieval-only': 'Answer from retrieved text, without new visual inspection.',
+    static: 'One search, followed by fixed inspections of the retrieved clips using the same VLM.',
+    uniform: 'Inspect evenly spaced, predefined positions without adaptive search.'
+  };
+  let lastResult = null, videoAvailable = false, requestBusy = false;
+  const timestamp = seconds => {
+    const s = Math.max(0, Math.floor(Number(seconds) || 0));
+    const hours = Math.floor(s / 3600), minutes = Math.floor(s / 60) % 60;
+    return (hours ? String(hours) + ':' + String(minutes).padStart(2,'0') : String(minutes)) + ':' + String(s % 60).padStart(2,'0');
+  };
+  function element(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = String(text);
+    return node;
+  }
+  function showError(message) { $('error').textContent = message; $('error').hidden = false; }
+  const httpErrors = new Map([
+    ['Открывайте демо по его адресу 127.0.0.1.', 'Open the demo at its 127.0.0.1 address.'],
+    ['Запрос с другого сайта запрещён.', 'Requests from other sites are not allowed.'],
+    ['Страница не найдена.', 'Page not found.'],
+    ['К индексу не подключён доступный видеофайл.', 'No accessible video file is attached to this index.'],
+    ['Видео недоступно.', 'Video unavailable.'],
+    ['Недопустимый диапазон видео.', 'Invalid video byte range.'],
+    ['Ожидается application/json.', 'The request must use application/json.'],
+    ['Требуется Content-Length без Transfer-Encoding.', 'Content-Length is required; Transfer-Encoding is not supported.'],
+    ['Требуется корректный Content-Length.', 'A valid Content-Length is required.'],
+    ['Запрос слишком большой или пустой.', 'The request is too large or empty.'],
+    ['Укажите вопрос длиной 1–2000 символов и допустимый режим.', 'Enter a question of 1–2000 characters and select a valid mode.'],
+    ['Модель уже отвечает на вопрос. Дождитесь завершения.', 'The model is answering another question. Wait for it to finish.']
+  ]);
+  function localizeHttpError(message) {
+    if (httpErrors.has(message)) return httpErrors.get(message);
+    const failure = typeof message === 'string' && message.match(/^Не удалось завершить запрос \(([^)]+)\)\. Проверьте доступность модели и каталог результатов\.$/);
+    if (failure) return 'The request failed (' + failure[1] + '). Check model availability and the results directory.';
+    return message || 'The request could not be completed.';
+  }
+  async function readResponse(response) {
+    let data;
+    try { data = await response.json(); } catch (_) { throw new Error('The server returned an invalid response. Check the local server.'); }
+    if (!response.ok) throw new Error(localizeHttpError(data.error));
+    return data;
+  }
+  function seekButton(start, end, label) {
+    const button = element('button','seek',label || '▶ ' + timestamp(start) + (end != null ? '–' + timestamp(end) : ''));
+    button.type = 'button'; button.disabled = !videoAvailable;
+    button.title = videoAvailable ? 'Seek to this time in the source video' : 'Video file unavailable';
+    button.addEventListener('click', () => {
+      const player = $('video'); const time = Math.max(0, Number(start) || 0);
+      player.currentTime = Number.isFinite(player.duration) ? Math.min(time, player.duration) : time;
+      player.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'center'});
+      player.focus();
+    });
+    return button;
+  }
+  function renderTrace(trace) {
+    $('trace-list').replaceChildren();
+    if (!trace.length) { $('trace-list').append(element('div','empty','No tools were called in this run.')); return; }
+    for (const item of trace) {
+      const card = element('article','trace-card'), top = element('div','trace-top');
+      top.append(element('span','call-number',item.call), element('span','tool-name',item.tool || 'Unknown action'), element('span','call-status' + (item.ok ? '' : ' failed'),item.ok ? 'DONE' : 'FAILED'));
+      card.append(top);
+      const args = item.args || {}, output = item.result || {};
+      if (args.query) card.append(element('p','trace-summary','Query: ' + args.query));
+      if (typeof args.start === 'number') {
+        if (output.target_frame_verified) {
+          card.append(seekButton(output.target_frame_timestamp,null,'▶ Requested ' + timestamp(output.requested_timestamp)));
+          card.append(element('p','trace-summary','Decoded frame: ' + Number(output.target_frame_timestamp).toFixed(3) + ' s. Nearest frame to the requested moment.'));
+        } else card.append(seekButton(args.start,args.end));
+        if (args.question) card.append(element('p','trace-observation',args.question));
+      }
+      if (item.error) card.append(element('p','error',item.error));
+      if (output.empty) card.append(element('p','trace-summary',output.message || 'No matching evidence found.'));
+      if (Array.isArray(output.hits)) for (const hit of output.hits) {
+        const row = element('div','hit'); row.append(seekButton(hit.start,hit.end));
+        row.append(element('p','',hit.text || '')); card.append(row);
+      }
+      if (output.visual_observation) {
+        card.append(element('div','label-small','VLM observation'),element('p','trace-observation',output.visual_observation));
+      }
+      if (Array.isArray(output.sampled_timestamps) && output.sampled_timestamps.length) {
+        card.append(element('div','label-small','Sampled frames'));
+        const row = element('div','citation-row'); for (const time of output.sampled_timestamps) row.append(seekButton(time,null,'▶ ' + Number(time).toFixed(3) + ' s')); card.append(row);
+      }
+      if (output.transcript) {
+        const transcript = element('details'); transcript.append(element('summary','','Transcript text'),element('pre','',output.transcript)); card.append(transcript);
+      }
+      const raw = element('details'); raw.append(element('summary','','Arguments and full result'),element('pre','',JSON.stringify(item,null,2))); card.append(raw);
+      $('trace-list').append(card);
+    }
+  }
+  function renderResult(result) {
+    lastResult = result;
+    const answered = result.status === 'answered', failed = result.status === 'error';
+    $('answer').textContent = failed ? (result.error || result.stop_reason || 'The run could not be completed.') : (result.answer || 'Empty response.');
+    $('answer-status').textContent = failed ? 'RUN FAILED' : (answered ? 'ANSWER READY' : 'INSUFFICIENT EVIDENCE');
+    $('answer-status').className = 'answer-status' + (failed ? ' failed' : (answered ? '' : ' abstain'));
+    const scope = result.temporal_scope;
+    $('requested-scope').hidden = !scope;
+    $('requested-scope').textContent = scope ? 'Requested interval: ' + timestamp(scope.start) + '–' + timestamp(scope.end) + '.' + (scope.interpretation ? ' ' + scope.interpretation : '') : '';
+    $('citations').replaceChildren();
+    for (const cite of result.citations || []) {
+      const evidence = (result.evidence || {})[cite.evidence_id] || {};
+      $('citations').append(evidence.target_frame_verified
+        ? seekButton(evidence.target_frame_timestamp,null,(cite.evidence_id || '') + ' · ' + timestamp(evidence.requested_timestamp) + ' · target frame')
+        : seekButton(cite.start,cite.end,(cite.evidence_id || '') + ' · ' + timestamp(cite.start) + '–' + timestamp(cite.end)));
+    }
+    $('answer-note').textContent = failed ? 'The run failed. The event could not be verified. The trace and completed actions are shown below.' : (result.mode === 'retrieval-only' ? 'This answer uses retrieved text without visual inspection during this run. Each link opens the start of its interval.' : 'Citations stay within their evidence ranges. This does not verify the answer; inspection covers only the sampled frames.');
+    if (!failed && result.routing === 'explicit_timestamp') $('answer-note').textContent = 'Target-time answers require a citation to the nearest verified frame. Links open that frame; its exact timestamp is shown in the trace. The model may still misread visible content.';
+    if (result.coverage && result.coverage.note) $('answer-note').textContent += ' ' + result.coverage.note;
+    $('metric-time').textContent = Number(result.latency_seconds || 0).toFixed(1);
+    $('metric-calls').textContent = result.tool_calls ?? '—';
+    $('metric-frames').textContent = result.frames_used ?? '—';
+    $('metric-unique').textContent = (result.unique_sampled_timestamps || []).length;
+    $('trace-subtitle').textContent = 'Mode: ' + result.mode + (result.run_id ? ' · Run ' + result.run_id : '');
+    $('evidence-json').textContent = JSON.stringify({evidence:result.evidence,temporal_scope:result.temporal_scope,coverage:result.coverage,usage:result.usage,provenance:result.provenance,verification:result.verification,stop_reason:result.stop_reason,error:result.error,error_type:result.error_type},null,2);
+    renderTrace(result.trace || []); $('result').hidden = false; $('trace-section').hidden = false;
+  }
+  $('question').addEventListener('input', () => { $('counter').textContent = $('question').value.length + ' / 2000'; });
+  $('mode').addEventListener('change', () => { $('mode-desc').textContent = descriptions[$('mode').value]; });
+  $('mode-desc').textContent = descriptions[$('mode').value];
+  $('ask-form').addEventListener('submit', async event => {
+    event.preventDefault(); if (requestBusy) return;
+    const question = $('question').value.trim(); if (!question) { showError('Enter a question about the video.'); return; }
+    requestBusy = true; $('submit').disabled = true; $('mode').disabled = true; $('error').hidden = true; $('progress').hidden = false;
+    $('result').hidden = true; $('trace-section').hidden = true;
+    const began = Date.now();
+    const tick = () => { $('progress-text').textContent = 'The agent is gathering evidence… ' + Math.floor((Date.now()-began)/1000) + ' s'; };
+    tick(); const timer = setInterval(tick,1000);
+    try { const response = await fetch('/api/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question,mode:$('mode').value})}); renderResult(await readResponse(response)); }
+    catch (error) { showError(error.message || 'Cannot connect to the local server.'); }
+    finally { clearInterval(timer); requestBusy = false; $('submit').disabled = false; $('mode').disabled = false; $('progress').hidden = true; }
+  });
+  $('download').addEventListener('click', () => {
+    if (!lastResult) return;
+    const url = URL.createObjectURL(new Blob([JSON.stringify(lastResult,null,2)],{type:'application/json'}));
+    const link = element('a'); link.href = url; link.download = 'clipscout-' + (lastResult.run_id || 'result') + '.json'; link.click(); setTimeout(() => URL.revokeObjectURL(url),1000);
+  });
+  async function initialize() {
+    try {
+      const info = await readResponse(await fetch('/api/info'));
+      $('duration').textContent = timestamp(info.duration); $('video-title').textContent = info.title;
+      $('backend').textContent = 'Model: ' + info.backend; $('evidence-mode').textContent = info.mode === 'visual' ? 'Video + available text' : 'Text only';
+      $('budget').textContent = 'Up to ' + info.limits.tool_calls + ' tool calls · up to ' + info.limits.frames + ' frames · up to ' + info.limits.clip_seconds + ' seconds per inspection';
+      videoAvailable = Boolean(info.video_available);
+      if (videoAvailable) { $('video').src = '/video'; $('video').hidden = false; $('video-placeholder').hidden = true; }
+      else { $('video-placeholder').replaceChildren(element('div','','No video is attached. You can ask questions using the text index.')); }
+      const examples = await readResponse(await fetch('/api/examples'));
+      for (const example of (examples.questions || []).slice(0,5)) {
+        const button = element('button','example-button',example.question); button.type = 'button';
+        button.addEventListener('click', () => { $('question').value = example.question; $('question').dispatchEvent(new Event('input')); $('question').focus(); }); $('example-list').append(button);
+      }
+      $('examples').hidden = !$('example-list').children.length;
+    } catch (error) { showError(error.message || 'Server unavailable.'); $('duration').textContent = 'Disconnected'; }
+  }
+  $('video').addEventListener('error', () => { $('video').hidden = true; $('video-placeholder').hidden = false; $('video-placeholder').replaceChildren(element('div','','The browser cannot play this video format. Questions and the research trace are still available.')); });
+  initialize();
+</script>
+</body>
+</html>

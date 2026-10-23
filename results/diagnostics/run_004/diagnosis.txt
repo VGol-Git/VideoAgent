@@ -1,0 +1,43 @@
+Saved-run diagnosis: C:\Users\Asus Zephyrus 16\Documents\GenAI\Tool-using video agent for search and inspection\ClipScout\results\research_v2\run_004
+Read-only inspection of frozen questions, saved predictions and saved metric review counts. No agent/model execution and no archived metric recalculation.
+
+Mode | answered | insufficient_evidence | error | missing
+adaptive | 5 | 0 | 11 | 0
+retrieval-only | 9 | 5 | 2 | 0
+static | 11 | 2 | 3 | 0
+uniform | 9 | 0 | 7 | 0
+
+Task | answered | insufficient_evidence | error | missing
+timestamp_search | 5 | 2 | 9 | 0
+reasoning | 17 | 0 | 7 | 0
+onset | 7 | 4 | 5 | 0
+unanswerable | 5 | 1 | 2 | 0
+
+Terminal failure categories:
+  planner: 8
+  format: 3
+  evidence: 1
+  time_policy: 8
+  budget: 3
+  model_protocol: 0
+  backend: 0
+  infrastructure: 0
+  unknown: 0
+
+Onset: 16 cases, 0 event plans, 0 explicit event outputs.
+Plans containing copied schema placeholders: 44.
+
+Saved semantic review coverage:
+  adaptive: {"question_count": 16, "named_review_count": 0, "complete_semantic_review_count": 0, "complete_semantic_review_fraction": 0.0, "required_atom_count": 30, "reviewed_atom_count": 0}
+  retrieval-only: {"question_count": 16, "named_review_count": 0, "complete_semantic_review_count": 0, "complete_semantic_review_fraction": 0.0, "required_atom_count": 30, "reviewed_atom_count": 0}
+  static: {"question_count": 16, "named_review_count": 0, "complete_semantic_review_count": 0, "complete_semantic_review_fraction": 0.0, "required_atom_count": 30, "reviewed_atom_count": 0}
+  uniform: {"question_count": 16, "named_review_count": 0, "complete_semantic_review_count": 0, "complete_semantic_review_fraction": 0.0, "required_atom_count": 30, "reviewed_atom_count": 0}
+
+Interpretation limits:
+- status=answered establishes delivery, not semantic correctness. Abstention is a distinct outcome, not a runtime exception.
+- No semantic scores or successes are assigned by this diagnosis, including apparently correct drafts rejected by validation.
+- operational_error_rate in archived metrics counts all status=error outputs; model/protocol failures are not infrastructure outages.
+- Legacy accuracy_known may be zero solely from automatic failure scores with zero reviewed answers. Unreviewed answer quality remains unknown.
+- Missing explicit event outputs are end-to-end failures and cannot measure the accuracy of an event-refinement stage that was not reached.
+- Point/range temporal compliance is distinct from correct scene descriptions. Model self-audits are not independent reference checks.
+- Do not remove failed questions from denominators, convert rejected drafts into successes, or mix repaired reruns into this archived run.

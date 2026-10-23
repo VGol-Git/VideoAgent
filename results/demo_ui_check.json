@@ -1,0 +1,23 @@
+{
+  "checked_utc": "2026-10-21T21:14:48.959448+00:00",
+  "url": "http://127.0.0.1:7871/",
+  "html_sha256": "0cc4f652f38193ebe09a7a8a068f8e2d91a2fe6f69aa2b6765c182cf0f30d3bb",
+  "language": "en",
+  "visible_page_text_contains_cyrillic": false,
+  "javascript_console_errors": [],
+  "video_ready_state": 4,
+  "video_dimensions": [
+    1920,
+    1080
+  ],
+  "playback_verified": true,
+  "example_button_populates_question": true,
+  "mode_switch_description_verified": true,
+  "known_backend_error_translation": "frontend presentation only; Python source unchanged",
+  "new_model_queries_for_ui_check": 0,
+  "screenshot": "demo_english_ui.png",
+  "limits": [
+    "No additional real-model HTTP request was submitted, following user preference; agent inference is exercised by the existing experiment and HTTP inference flow by unit tests.",
+    "Windows browser range cancellation produced ConnectionAbortedError console traces; page rendering and playback remained available."
+  ]
+}

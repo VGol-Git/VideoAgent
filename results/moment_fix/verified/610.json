@@ -1,0 +1,113 @@
+{
+  "status": "answered",
+  "answer": "At 10 minutes 10 seconds, the slide displays a diagram titled \"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL.\" The diagram is a circular flowchart with four stages: \"1. TRIGGER /GOAL,\" \"2. SPAWN SUB-AGENTS,\" \"3. EVALUATE VS. CRITERIA,\" and \"FAIL -> RETRY.\" The \"TRIGGER /GOAL\" stage is connected to \"SPAWN SUB-AGENTS,\" which in turn leads to \"EVALUATE VS. CRITERIA,\" which then connects to \"PASS -> EXIT LOOP.\" The \"FAIL -> RETRY\" stage is connected to the \"TRIGGER /GOAL\" stage, forming a loop. The slide also includes text on the right side explaining the mechanism, example constraints, and execution strategy.",
+  "citations": [
+    {
+      "evidence_id": "E001",
+      "start": 609.5,
+      "end": 610.5
+    }
+  ],
+  "requested_timestamps": [
+    610.0
+  ],
+  "routing": "explicit_timestamp",
+  "question_id": "",
+  "question": "Describe what was on the slide at 10 minutes 10 seconds",
+  "mode": "adaptive",
+  "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+  "tool_calls": 1,
+  "frames_used": 1,
+  "unique_sampled_timestamps": [
+    610.0094
+  ],
+  "latency_seconds": 30.2687,
+  "usage": {
+    "model_calls": 2,
+    "input_tokens": 1581,
+    "output_tokens": 384
+  },
+  "trace": [
+    {
+      "call": 1,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 609.5,
+        "end": 610.5,
+        "timestamp": 610.0,
+        "question": "Describe what was on the slide at 10 minutes 10 seconds"
+      },
+      "selected_by": "explicit_timestamp_router",
+      "ok": true,
+      "result": {
+        "start": 609.5,
+        "end": 610.5,
+        "transcript": "[608.23–610.87] I honestly use this all the time, especially for coding.",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00202",
+            "start": 608.23,
+            "end": 610.87
+          }
+        ],
+        "visual_observation": "At 610.009 seconds, the slide displays a diagram titled \"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL.\" The diagram is a circular flowchart with four stages: \"1. TRIGGER /GOAL,\" \"2. SPAWN SUB-AGENTS,\" \"3. EVALUATE VS. CRITERIA,\" and \"FAIL -> RETRY.\" The \"TRIGGER /GOAL\" stage is connected to \"SPAWN SUB-AGENTS,\" which in turn leads to \"EVALUATE VS. CRITERIA,\" which then connects to \"PASS -> EXIT LOOP.\" The \"FAIL -> RETRY\" stage is connected to the \"TRIGGER /GOAL\" stage, forming a loop. The slide also includes text on the right side explaining the mechanism, example constraints, and execution strategy.",
+        "sampled_timestamps": [
+          610.0094
+        ],
+        "modality": "visual+transcript",
+        "coverage": "nearest_target_frame",
+        "cache_hit": false,
+        "decoded_image_max_side": 1120,
+        "backend_image_pixel_limit": 313600,
+        "requested_timestamp": 610.0,
+        "target_frame_timestamp": 610.0094,
+        "target_frame_verified": true,
+        "target_time_error_seconds": 0.00940000000002783,
+        "evidence_id": "E001"
+      },
+      "latency_seconds": 20.9563
+    }
+  ],
+  "evidence": {
+    "E001": {
+      "start": 609.5,
+      "end": 610.5,
+      "transcript": "[608.23–610.87] I honestly use this all the time, especially for coding.",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00202",
+          "start": 608.23,
+          "end": 610.87
+        }
+      ],
+      "visual_observation": "At 610.009 seconds, the slide displays a diagram titled \"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL.\" The diagram is a circular flowchart with four stages: \"1. TRIGGER /GOAL,\" \"2. SPAWN SUB-AGENTS,\" \"3. EVALUATE VS. CRITERIA,\" and \"FAIL -> RETRY.\" The \"TRIGGER /GOAL\" stage is connected to \"SPAWN SUB-AGENTS,\" which in turn leads to \"EVALUATE VS. CRITERIA,\" which then connects to \"PASS -> EXIT LOOP.\" The \"FAIL -> RETRY\" stage is connected to the \"TRIGGER /GOAL\" stage, forming a loop. The slide also includes text on the right side explaining the mechanism, example constraints, and execution strategy.",
+      "sampled_timestamps": [
+        610.0094
+      ],
+      "modality": "visual+transcript",
+      "coverage": "nearest_target_frame",
+      "cache_hit": false,
+      "decoded_image_max_side": 1120,
+      "backend_image_pixel_limit": 313600,
+      "requested_timestamp": 610.0,
+      "target_frame_timestamp": 610.0094,
+      "target_frame_verified": true,
+      "target_time_error_seconds": 0.00940000000002783,
+      "evidence_id": "E001"
+    }
+  },
+  "decisions": [
+    {
+      "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"At 10 minutes 10 seconds, the slide displays a diagram titled \\\"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL.\\\" The diagram is a circular flowchart with four stages: \\\"1. TRIGGER /GOAL,\\\" \\\"2. SPAWN SUB-AGENTS,\\\" \\\"3. EVALUATE VS. CRITERIA,\\\" and \\\"FAIL -> RETRY.\\\" The \\\"TRIGGER /GOAL\\\" stage is connected to \\\"SPAWN SUB-AGENTS,\\\" which in turn leads to \\\"EVALUATE VS. CRITERIA,\\\" which then connects to \\\"PASS -> EXIT LOOP.\\\" The \\\"FAIL -> RETRY\\\" stage is connected to the \\\"TRIGGER /GOAL\\\" stage, forming a loop. The slide also includes text on the right side explaining the mechanism, example constraints, and execution strategy.\",\"citations\":[{\"evidence_id\":\"E001\",\"start\":609.5,\"end\":610.5}]}"
+    }
+  ],
+  "provenance": {
+    "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+    "prompt_version": "clipscout-v5-explicit-moments"
+  },
+  "verification": "citation IDs and interval bounds checked; explicit-moment answers require cited target evidence; semantic entailment NOT automatically verified",
+  "run_id": "20261022T052830Z_40fc6f209c88"
+}

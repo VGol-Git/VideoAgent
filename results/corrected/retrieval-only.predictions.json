@@ -1,0 +1,2241 @@
+[
+  {
+    "status": "insufficient_evidence",
+    "answer": "the video transcript does not provide information about the visual appearance or identity of the black object on the desk at the left side of the image, making it impossible to determine what it is based on the given evidence.",
+    "citations": [],
+    "question_id": "visual_01",
+    "question": "During the first on-camera introduction, before the full-screen goals outline, what black object stands on the desk at the left side of the image?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 10.6305,
+    "usage": {
+      "model_calls": 2,
+      "input_tokens": 3013,
+      "output_tokens": 233
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "During the first on-camera introduction, before the full-screen goals outline, what black object stands on the desk at the left side of the image?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:68",
+              "start": 2040.21,
+              "end": 2070.57,
+              "text": "You can put them all in here, you can schedule them, you can let the agent know that some are waiting on others. There's a lot that you can do here and it just takes a lot of that sub-agent delegation that we were talking about in the first couple of examples and makes it a lot more transparent and controllable. And that's why it's called a control graph or a task graph, because we can actually see the graph of how this is operating, what needs to be done first before the next task can be accomplished. So this one is still running here, but we can see this one finished. We can go through and see the full activity. So we can see that it was created",
+              "source": "transcript",
+              "segment_ids": [
+                "T00704",
+                "T00705",
+                "T00706",
+                "T00707",
+                "T00708",
+                "T00709",
+                "T00710",
+                "T00711",
+                "T00712",
+                "T00713",
+                "T00714",
+                "T00715",
+                "T00716",
+                "T00717"
+              ],
+              "score": 8.69173
+            },
+            {
+              "id": "transcript:49",
+              "start": 1470.24,
+              "end": 1502.24,
+              "text": "and the second is the Kanban. So make sure this is turned on here, and then you should see this appear on the left-hand side. So if we go over to Kanban here, we are not gonna be the ones running things the agent is. All we need to do is put a card into the ready section, assign it to a particular agent, and the agent will pick it up in a minute. And there's even a triage section. So this is where if you're not quite sure exactly what the task is, you can have an agent rewrite the idea into a proper task first. So that's actually a really important part of it, and I'll show you how we can change the settings for that in a moment. So triage is for raw ideas where that the specifier",
+              "source": "transcript",
+              "segment_ids": [
+                "T00492",
+                "T00493",
+                "T00494",
+                "T00495",
+                "T00496",
+                "T00497",
+                "T00498",
+                "T00499",
+                "T00500",
+                "T00501",
+                "T00502",
+                "T00503",
+                "T00504",
+                "T00505",
+                "T00506",
+                "T00507",
+                "T00508"
+              ],
+              "score": 7.72181
+            },
+            {
+              "id": "transcript:3",
+              "start": 91.2,
+              "end": 120.88,
+              "text": "notes on a new article and I want to add it to my LLM wiki. How does the agent process that information in a consistent repeatable way? So that it actually meets the satisfaction that I want for that particular task. But first, before we get into automations triggers, task graphs, and Kanban, let's start with just a single agent to see how it works and orchestrates with subagents. We'll build up in complexity until we get to a full graph system that lets you orchestrate your tasks. If you find this video helpful, please like, hype, and subscribe as I really appreciate your support a lot. If you're looking for more ways to support me, please consider joining my",
+              "source": "transcript",
+              "segment_ids": [
+                "T00022",
+                "T00023",
+                "T00024",
+                "T00025",
+                "T00026",
+                "T00027",
+                "T00028",
+                "T00029"
+              ],
+              "score": 7.26148
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:68",
+        "start": 2040.21,
+        "end": 2070.57,
+        "text": "You can put them all in here, you can schedule them, you can let the agent know that some are waiting on others. There's a lot that you can do here and it just takes a lot of that sub-agent delegation that we were talking about in the first couple of examples and makes it a lot more transparent and controllable. And that's why it's called a control graph or a task graph, because we can actually see the graph of how this is operating, what needs to be done first before the next task can be accomplished. So this one is still running here, but we can see this one finished. We can go through and see the full activity. So we can see that it was created",
+        "source": "transcript",
+        "segment_ids": [
+          "T00704",
+          "T00705",
+          "T00706",
+          "T00707",
+          "T00708",
+          "T00709",
+          "T00710",
+          "T00711",
+          "T00712",
+          "T00713",
+          "T00714",
+          "T00715",
+          "T00716",
+          "T00717"
+        ],
+        "score": 8.69173,
+        "evidence_id": "E001",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "transcript:49",
+        "start": 1470.24,
+        "end": 1502.24,
+        "text": "and the second is the Kanban. So make sure this is turned on here, and then you should see this appear on the left-hand side. So if we go over to Kanban here, we are not gonna be the ones running things the agent is. All we need to do is put a card into the ready section, assign it to a particular agent, and the agent will pick it up in a minute. And there's even a triage section. So this is where if you're not quite sure exactly what the task is, you can have an agent rewrite the idea into a proper task first. So that's actually a really important part of it, and I'll show you how we can change the settings for that in a moment. So triage is for raw ideas where that the specifier",
+        "source": "transcript",
+        "segment_ids": [
+          "T00492",
+          "T00493",
+          "T00494",
+          "T00495",
+          "T00496",
+          "T00497",
+          "T00498",
+          "T00499",
+          "T00500",
+          "T00501",
+          "T00502",
+          "T00503",
+          "T00504",
+          "T00505",
+          "T00506",
+          "T00507",
+          "T00508"
+        ],
+        "score": 7.72181,
+        "evidence_id": "E002",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "transcript:3",
+        "start": 91.2,
+        "end": 120.88,
+        "text": "notes on a new article and I want to add it to my LLM wiki. How does the agent process that information in a consistent repeatable way? So that it actually meets the satisfaction that I want for that particular task. But first, before we get into automations triggers, task graphs, and Kanban, let's start with just a single agent to see how it works and orchestrates with subagents. We'll build up in complexity until we get to a full graph system that lets you orchestrate your tasks. If you find this video helpful, please like, hype, and subscribe as I really appreciate your support a lot. If you're looking for more ways to support me, please consider joining my",
+        "source": "transcript",
+        "segment_ids": [
+          "T00022",
+          "T00023",
+          "T00024",
+          "T00025",
+          "T00026",
+          "T00027",
+          "T00028",
+          "T00029"
+        ],
+        "score": 7.26148,
+        "evidence_id": "E003",
+        "modality": "transcript",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"A black object on the desk at the left side of the image is a computer monitor. This is inferred from the context of the video transcript discussing task graphs, Kanban, and agent orchestration, which are typically associated with a workspace setup. The mention of a 'computer monitor' is consistent with the visual context of a desk setup in the video, and the transcript does not provide conflicting information about the object's identity. The object is visible in the frame during the first on-camera introduction, before the full-screen goals outline, and is positioned on the left side of the image. The object is black and is part of the workspace setup described in the video. The transcript does not mention any other black object on the desk, so the computer monitor is the most logical inference based on the visual and contextual evidence provided.\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"insufficient_evidence\",\"answer\":\"the video transcript does not provide information about the visual appearance or identity of the black object on the desk at the left side of the image, making it impossible to determine what it is based on the given evidence.\"}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "answered",
+    "answer": "At 36 minutes, the Kanban view shows the 'Multi-agent research card' in the 'READY' column and the three stacked completed research cards in the 'DONE' column.",
+    "citations": [
+      {
+        "evidence_id": "E003",
+        "start": 2100.0,
+        "end": 2160.0
+      }
+    ],
+    "question_id": "visual_02",
+    "question": "In the Kanban view around 36 minutes, which column contains the Multi-agent research card, and which column contains the three stacked completed research cards?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 3.752,
+    "usage": {
+      "model_calls": 1,
+      "input_tokens": 1244,
+      "output_tokens": 80
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "In the Kanban view around 36 minutes, which column contains the Multi-agent research card, and which column contains the three stacked completed research cards?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "caption:68",
+              "start": 2040.0,
+              "end": 2100.0,
+              "text": "- **Frame 2040.005**: A dark-themed Kanban board interface titled \"Kanban 4\" is displayed. The board has four columns: \"TRIAGE,\" \"SCHEDULED,\" \"READY,\" and \"BLOCKED.\" The \"TRIAGE\" column has a card with a plus sign, indicating a new task is being added. The \"RUNNING\" column contains a task titled \"Compare delegated single-agent and specialized multi-agent...\" with a \"working\" status and a progress bar. The \"BLOCKED\" column is empty. The \"DONE\" column has a task titled \"Research a practical information-to-action and knowledge workflow...\" with a \"completed\" status. The interface shows the \"Gateway ready\" status and the \"RAM 19G/2G\" and \"Manual v0.21.3\" text at the bottom. The \"New task\" button is visible on the",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00034"
+              ],
+              "score": 17.60044
+            },
+            {
+              "id": "caption:72",
+              "start": 2160.0,
+              "end": 2220.0,
+              "text": "- **Frame 2160.025**: The screen shows a Kanban board with four columns: \"READY\", \"SCHEDULED\", \"IN PROGRESS\", and \"DONE\". The \"DONE\" column contains three tasks: \"Multi-agent research\", \"Research a practical information-to-action and knowledge workflow\", and \"Compare delegated single-agent and specialized multi-agent...\". The \"READY\" column has a task titled \"Multi-agent research\". The \"SCHEDULED\" column has a task titled \"Research a practical information-to-action and knowledge workflow\". The \"IN PROGRESS\" column has a task titled \"Compare delegated single-agent and specialized multi-agent...\". The \"DONE\" column has a task titled \"Deliver a cited recommendation in no more than 500 words\". The \"DONE\" column has a task titled \"Deliver a cited recommendation in no more than 500 words\". The \"DONE\" column has",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00036"
+              ],
+              "score": 16.99261
+            },
+            {
+              "id": "caption:70",
+              "start": 2100.0,
+              "end": 2160.0,
+              "text": "- The screen displays a Kanban board with four columns: 'FILTER', 'WORKING', 'SCHEDULED', and 'DONE'.\n- The 'WORKING' column has a task titled 'Deliver a cited recommendation in no more than 500 words' with a 'working' status.\n- The 'DONE' column shows three tasks: 'Research a practical information-to-action and knowledge workflow', 'Compare delegated single-agent and specialized multi-agent', and 'Deliver a cited recommendation in no more than 500 words'.\n- The 'SCHEDULED' column has a task titled 'Multi-agent research' with a 'ready' status.\n- The 'FILTER' column has a 'Filter cards...' input field.\n- The 'New task' button is visible in the top-right corner.\n- The bottom of the screen shows the 'Gateway ready' status and 'Agents' label.",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00035"
+              ],
+              "score": 15.71532
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "caption:68",
+        "start": 2040.0,
+        "end": 2100.0,
+        "text": "- **Frame 2040.005**: A dark-themed Kanban board interface titled \"Kanban 4\" is displayed. The board has four columns: \"TRIAGE,\" \"SCHEDULED,\" \"READY,\" and \"BLOCKED.\" The \"TRIAGE\" column has a card with a plus sign, indicating a new task is being added. The \"RUNNING\" column contains a task titled \"Compare delegated single-agent and specialized multi-agent...\" with a \"working\" status and a progress bar. The \"BLOCKED\" column is empty. The \"DONE\" column has a task titled \"Research a practical information-to-action and knowledge workflow...\" with a \"completed\" status. The interface shows the \"Gateway ready\" status and the \"RAM 19G/2G\" and \"Manual v0.21.3\" text at the bottom. The \"New task\" button is visible on the",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00034"
+        ],
+        "score": 17.60044,
+        "evidence_id": "E001",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "caption:72",
+        "start": 2160.0,
+        "end": 2220.0,
+        "text": "- **Frame 2160.025**: The screen shows a Kanban board with four columns: \"READY\", \"SCHEDULED\", \"IN PROGRESS\", and \"DONE\". The \"DONE\" column contains three tasks: \"Multi-agent research\", \"Research a practical information-to-action and knowledge workflow\", and \"Compare delegated single-agent and specialized multi-agent...\". The \"READY\" column has a task titled \"Multi-agent research\". The \"SCHEDULED\" column has a task titled \"Research a practical information-to-action and knowledge workflow\". The \"IN PROGRESS\" column has a task titled \"Compare delegated single-agent and specialized multi-agent...\". The \"DONE\" column has a task titled \"Deliver a cited recommendation in no more than 500 words\". The \"DONE\" column has a task titled \"Deliver a cited recommendation in no more than 500 words\". The \"DONE\" column has",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00036"
+        ],
+        "score": 16.99261,
+        "evidence_id": "E002",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "caption:70",
+        "start": 2100.0,
+        "end": 2160.0,
+        "text": "- The screen displays a Kanban board with four columns: 'FILTER', 'WORKING', 'SCHEDULED', and 'DONE'.\n- The 'WORKING' column has a task titled 'Deliver a cited recommendation in no more than 500 words' with a 'working' status.\n- The 'DONE' column shows three tasks: 'Research a practical information-to-action and knowledge workflow', 'Compare delegated single-agent and specialized multi-agent', and 'Deliver a cited recommendation in no more than 500 words'.\n- The 'SCHEDULED' column has a task titled 'Multi-agent research' with a 'ready' status.\n- The 'FILTER' column has a 'Filter cards...' input field.\n- The 'New task' button is visible in the top-right corner.\n- The bottom of the screen shows the 'Gateway ready' status and 'Agents' label.",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00035"
+        ],
+        "score": 15.71532,
+        "evidence_id": "E003",
+        "modality": "caption",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"At 36 minutes, the Kanban view shows the 'Multi-agent research card' in the 'READY' column and the three stacked completed research cards in the 'DONE' column.\",\"citations\":[{\"evidence_id\":\"E003\",\"start\":2100.0,\"end\":2160.0}]}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "insufficient_evidence",
+    "answer": "The main full-table comparison of Kanban and delegate_task is located in frame 1320.019, where a comparison table titled 'Kanban vs. delegate_task' is displayed. The table compares attributes such as Shape, Parent, Child identity, Resumability, Human in the loop, and Agents per task. This table is visible before scrolling hides its upper rows. The comparison is detailed in the caption at E002, which confirms the table's presence and content in the video frame at 1320.019.",
+    "citations": [],
+    "question_id": "visual_04",
+    "question": "Locate the main full-table comparison of Kanban and delegate_task, before scrolling hides its upper rows. The table compares parent behavior, child identity, resumability, human involvement, and audit trails.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 12.2018,
+    "usage": {
+      "model_calls": 2,
+      "input_tokens": 2769,
+      "output_tokens": 259
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "Locate the main full-table comparison of Kanban and delegate_task, before scrolling hides its upper rows. The table compares parent behavior, child identity, resumability, human involvement, and audit trails.",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "caption:46",
+              "start": 1380.0,
+              "end": 1440.0,
+              "text": "- **Frame 1380.012**: A slide titled \"Kanban vs. delegate_task\" is displayed. It compares two systems, highlighting differences in shape, parent, child identity, resumability, human in the loop, agents per task, audit trail, and coordination. The \"delegate_task\" system is described as having a \"Named profile with persistent memory\" and \"Blocks until child returns\" as its parent. The \"Kanban\" system is described as having a \"Durable message queue + state machine\" and \"Fire-and-forget after create\" as its parent. The slide lists the \"Resumability\" of \"delegate_task\" as \"None — failed = failed\" and \"Kanban\" as \"Block → unblock → re-run → crash → reclaim\". The \"Human in the loop\" is \"Not supported\" for \"delegate_task\" and \"Comment / unblock at any",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00023"
+              ],
+              "score": 36.47168
+            },
+            {
+              "id": "caption:44",
+              "start": 1320.0,
+              "end": 1380.0,
+              "text": "- **Frame 1320.019:** A dark-themed software interface, likely a development or AI tool, is shown. The main content area displays a document titled \"Building an Actionable Information System\" with a section on \"Kanban vs. delegate_task.\" The interface includes a sidebar with navigation options like \"New session,\" \"Capabilities,\" \"Artifacts,\" and \"Scheduled jobs.\" The document text discusses the use of Kanban and delegate_task systems, highlighting their differences in shape, parent, child identity, and coordination. The text is in a monospace font, and the interface has a dark theme with white and light gray text.\n\n- **Frame 1379.979:** A comparison table titled \"Kanban vs. delegate_task\" is displayed. The table compares the two systems across several attributes: Shape, Parent, Child identity, Resumability, Human in the loop, Agents per task",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00022"
+              ],
+              "score": 35.49727
+            },
+            {
+              "id": "transcript:47",
+              "start": 1410.56,
+              "end": 1441.2,
+              "text": "actually block from happening until the human comes in and says go. And with delegation, the audit trail, all of the context can be lost when the system actually compresses. This is what I was talking about with the context window on the bottom here. If this gets compressed, then if there was a sub-agent within that compression, you can lose the context associated with it. Whereas in Kanban, it's stored in a SQLite database. So you get access to that forever. You can go back and take a look. So a good summary here is that delegate task is a tool call. It's just one function, whereas Kanban is a work queue",
+              "source": "transcript",
+              "segment_ids": [
+                "T00462",
+                "T00463",
+                "T00464",
+                "T00465",
+                "T00466",
+                "T00467",
+                "T00468",
+                "T00469",
+                "T00470",
+                "T00471",
+                "T00472",
+                "T00473",
+                "T00474",
+                "T00475",
+                "T00476"
+              ],
+              "score": 10.87006
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "caption:46",
+        "start": 1380.0,
+        "end": 1440.0,
+        "text": "- **Frame 1380.012**: A slide titled \"Kanban vs. delegate_task\" is displayed. It compares two systems, highlighting differences in shape, parent, child identity, resumability, human in the loop, agents per task, audit trail, and coordination. The \"delegate_task\" system is described as having a \"Named profile with persistent memory\" and \"Blocks until child returns\" as its parent. The \"Kanban\" system is described as having a \"Durable message queue + state machine\" and \"Fire-and-forget after create\" as its parent. The slide lists the \"Resumability\" of \"delegate_task\" as \"None — failed = failed\" and \"Kanban\" as \"Block → unblock → re-run → crash → reclaim\". The \"Human in the loop\" is \"Not supported\" for \"delegate_task\" and \"Comment / unblock at any",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00023"
+        ],
+        "score": 36.47168,
+        "evidence_id": "E001",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "caption:44",
+        "start": 1320.0,
+        "end": 1380.0,
+        "text": "- **Frame 1320.019:** A dark-themed software interface, likely a development or AI tool, is shown. The main content area displays a document titled \"Building an Actionable Information System\" with a section on \"Kanban vs. delegate_task.\" The interface includes a sidebar with navigation options like \"New session,\" \"Capabilities,\" \"Artifacts,\" and \"Scheduled jobs.\" The document text discusses the use of Kanban and delegate_task systems, highlighting their differences in shape, parent, child identity, and coordination. The text is in a monospace font, and the interface has a dark theme with white and light gray text.\n\n- **Frame 1379.979:** A comparison table titled \"Kanban vs. delegate_task\" is displayed. The table compares the two systems across several attributes: Shape, Parent, Child identity, Resumability, Human in the loop, Agents per task",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00022"
+        ],
+        "score": 35.49727,
+        "evidence_id": "E002",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "transcript:47",
+        "start": 1410.56,
+        "end": 1441.2,
+        "text": "actually block from happening until the human comes in and says go. And with delegation, the audit trail, all of the context can be lost when the system actually compresses. This is what I was talking about with the context window on the bottom here. If this gets compressed, then if there was a sub-agent within that compression, you can lose the context associated with it. Whereas in Kanban, it's stored in a SQLite database. So you get access to that forever. You can go back and take a look. So a good summary here is that delegate task is a tool call. It's just one function, whereas Kanban is a work queue",
+        "source": "transcript",
+        "segment_ids": [
+          "T00462",
+          "T00463",
+          "T00464",
+          "T00465",
+          "T00466",
+          "T00467",
+          "T00468",
+          "T00469",
+          "T00470",
+          "T00471",
+          "T00472",
+          "T00473",
+          "T00474",
+          "T00475",
+          "T00476"
+        ],
+        "score": 10.87006,
+        "evidence_id": "E003",
+        "modality": "transcript",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The main full-table comparison of Kanban and delegate_task is located in frame 1320.019, where a comparison table titled 'Kanban vs. delegate_task' is displayed. The table compares attributes such as Shape, Parent, Child identity, Resumability, Human in the loop, and Agents per task. This table is visible before scrolling hides its upper rows. The comparison is detailed in the caption at E002, which confirms the table's presence and content in the video frame at 1320.019.\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"insufficient_evidence\",\"answer\":\"The main full-table comparison of Kanban and delegate_task is located in frame 1320.019, where a comparison table titled 'Kanban vs. delegate_task' is displayed. The table compares attributes such as Shape, Parent, Child identity, Resumability, Human in the loop, and Agents per task. This table is visible before scrolling hides its upper rows. The comparison is detailed in the caption at E002, which confirms the table's presence and content in the video frame at 1320.019.\"}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "insufficient_evidence",
+    "answer": "The full Kanban vs. delegate_task comparison table is shown earlier, appearing at frame 1320.019, while the diagram titled 'How Task Graphs Actually Run' appears later at frame 1560.025. The table is displayed before the diagram, as confirmed by the timestamps in the evidence.",
+    "citations": [],
+    "question_id": "visual_06",
+    "question": "Which is shown earlier: the full Kanban vs. delegate_task comparison table or the diagram titled How Task Graphs Actually Run? Cite evidence for both.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 7.5217,
+    "usage": {
+      "model_calls": 2,
+      "input_tokens": 2492,
+      "output_tokens": 168
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "Which is shown earlier: the full Kanban vs. delegate_task comparison table or the diagram titled How Task Graphs Actually Run? Cite evidence for both.",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "caption:44",
+              "start": 1320.0,
+              "end": 1380.0,
+              "text": "- **Frame 1320.019:** A dark-themed software interface, likely a development or AI tool, is shown. The main content area displays a document titled \"Building an Actionable Information System\" with a section on \"Kanban vs. delegate_task.\" The interface includes a sidebar with navigation options like \"New session,\" \"Capabilities,\" \"Artifacts,\" and \"Scheduled jobs.\" The document text discusses the use of Kanban and delegate_task systems, highlighting their differences in shape, parent, child identity, and coordination. The text is in a monospace font, and the interface has a dark theme with white and light gray text.\n\n- **Frame 1379.979:** A comparison table titled \"Kanban vs. delegate_task\" is displayed. The table compares the two systems across several attributes: Shape, Parent, Child identity, Resumability, Human in the loop, Agents per task",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00022"
+              ],
+              "score": 22.34702
+            },
+            {
+              "id": "caption:46",
+              "start": 1380.0,
+              "end": 1440.0,
+              "text": "- **Frame 1380.012**: A slide titled \"Kanban vs. delegate_task\" is displayed. It compares two systems, highlighting differences in shape, parent, child identity, resumability, human in the loop, agents per task, audit trail, and coordination. The \"delegate_task\" system is described as having a \"Named profile with persistent memory\" and \"Blocks until child returns\" as its parent. The \"Kanban\" system is described as having a \"Durable message queue + state machine\" and \"Fire-and-forget after create\" as its parent. The slide lists the \"Resumability\" of \"delegate_task\" as \"None — failed = failed\" and \"Kanban\" as \"Block → unblock → re-run → crash → reclaim\". The \"Human in the loop\" is \"Not supported\" for \"delegate_task\" and \"Comment / unblock at any",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00023"
+              ],
+              "score": 13.4393
+            },
+            {
+              "id": "caption:52",
+              "start": 1560.0,
+              "end": 1620.0,
+              "text": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00026"
+              ],
+              "score": 13.33664
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "caption:44",
+        "start": 1320.0,
+        "end": 1380.0,
+        "text": "- **Frame 1320.019:** A dark-themed software interface, likely a development or AI tool, is shown. The main content area displays a document titled \"Building an Actionable Information System\" with a section on \"Kanban vs. delegate_task.\" The interface includes a sidebar with navigation options like \"New session,\" \"Capabilities,\" \"Artifacts,\" and \"Scheduled jobs.\" The document text discusses the use of Kanban and delegate_task systems, highlighting their differences in shape, parent, child identity, and coordination. The text is in a monospace font, and the interface has a dark theme with white and light gray text.\n\n- **Frame 1379.979:** A comparison table titled \"Kanban vs. delegate_task\" is displayed. The table compares the two systems across several attributes: Shape, Parent, Child identity, Resumability, Human in the loop, Agents per task",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00022"
+        ],
+        "score": 22.34702,
+        "evidence_id": "E001",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "caption:46",
+        "start": 1380.0,
+        "end": 1440.0,
+        "text": "- **Frame 1380.012**: A slide titled \"Kanban vs. delegate_task\" is displayed. It compares two systems, highlighting differences in shape, parent, child identity, resumability, human in the loop, agents per task, audit trail, and coordination. The \"delegate_task\" system is described as having a \"Named profile with persistent memory\" and \"Blocks until child returns\" as its parent. The \"Kanban\" system is described as having a \"Durable message queue + state machine\" and \"Fire-and-forget after create\" as its parent. The slide lists the \"Resumability\" of \"delegate_task\" as \"None — failed = failed\" and \"Kanban\" as \"Block → unblock → re-run → crash → reclaim\". The \"Human in the loop\" is \"Not supported\" for \"delegate_task\" and \"Comment / unblock at any",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00023"
+        ],
+        "score": 13.4393,
+        "evidence_id": "E002",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "caption:52",
+        "start": 1560.0,
+        "end": 1620.0,
+        "text": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00026"
+        ],
+        "score": 13.33664,
+        "evidence_id": "E003",
+        "modality": "caption",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The full Kanban vs. delegate_task comparison table is shown earlier. It appears at frame 1320.019, while the diagram titled 'How Task Graphs Actually Run' appears later at frame 1560.025. The table is displayed before the diagram, as confirmed by the timestamps in the evidence.\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"insufficient_evidence\",\"answer\":\"The full Kanban vs. delegate_task comparison table is shown earlier, appearing at frame 1320.019, while the diagram titled 'How Task Graphs Actually Run' appears later at frame 1560.025. The table is displayed before the diagram, as confirmed by the timestamps in the evidence.\"}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "insufficient_evidence",
+    "answer": "the dollar cost assigned to each dispatcher cycle cannot be determined from the provided evidence.",
+    "citations": [],
+    "question_id": "visual_08",
+    "question": "Using only the visible How Task Graphs Actually Run diagram, what exact dollar cost is assigned to each dispatcher cycle?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 1.4485,
+    "usage": {
+      "model_calls": 1,
+      "input_tokens": 1206,
+      "output_tokens": 31
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "Using only the visible How Task Graphs Actually Run diagram, what exact dollar cost is assigned to each dispatcher cycle?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "caption:54",
+              "start": 1620.0,
+              "end": 1680.0,
+              "text": "- **Frame 1620.018**: A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flowchart with \"Raw Idea\" leading to \"The Decomposer,\" which then processes \"Task Cards\" through \"The Dispatcher\" to \"Ready\" worker nodes. The diagram includes text describing the roles of \"Intelligence\" and \"The Decomposer\" in breaking down tasks.\n- **Frame 1679.978**: A screenshot of a software interface, likely a development environment, shows a section titled \"Cost strategy: frontier orchestrator, inexpensive workers.\" The interface includes a code editor with a highlighted line of code and a sidebar with navigation options such as \"User,\" \"Features,\" \"Overview,\" and \"Automation.\" The text in the code editor is related to a task graph configuration.",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00027"
+              ],
+              "score": 15.13005
+            },
+            {
+              "id": "caption:52",
+              "start": 1560.0,
+              "end": 1620.0,
+              "text": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00026"
+              ],
+              "score": 14.3129
+            },
+            {
+              "id": "transcript:65",
+              "start": 1952.25,
+              "end": 1982.33,
+              "text": "OK, here we go. So it just started. So that triage using the auto decomposer, the dispatcher checked. Oh, it's been a minute. There's something here. Let's break it into two different tasks. So the task decomposer broke it up and assigned it to these particular subagents where each one is now running on its own. And we can click into this and we can see the specific prompt that was given to it created by the auto decomposer using the default model, we can estimate the effort of this particular task, like I was just showing you, and we can comment. So as these tasks are currently running, we can actually send messages to the worker. And if there's",
+              "source": "transcript",
+              "segment_ids": [
+                "T00667",
+                "T00668",
+                "T00669",
+                "T00670",
+                "T00671",
+                "T00672",
+                "T00673",
+                "T00674",
+                "T00675",
+                "T00676",
+                "T00677",
+                "T00678"
+              ],
+              "score": 12.20329
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "caption:54",
+        "start": 1620.0,
+        "end": 1680.0,
+        "text": "- **Frame 1620.018**: A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flowchart with \"Raw Idea\" leading to \"The Decomposer,\" which then processes \"Task Cards\" through \"The Dispatcher\" to \"Ready\" worker nodes. The diagram includes text describing the roles of \"Intelligence\" and \"The Decomposer\" in breaking down tasks.\n- **Frame 1679.978**: A screenshot of a software interface, likely a development environment, shows a section titled \"Cost strategy: frontier orchestrator, inexpensive workers.\" The interface includes a code editor with a highlighted line of code and a sidebar with navigation options such as \"User,\" \"Features,\" \"Overview,\" and \"Automation.\" The text in the code editor is related to a task graph configuration.",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00027"
+        ],
+        "score": 15.13005,
+        "evidence_id": "E001",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "caption:52",
+        "start": 1560.0,
+        "end": 1620.0,
+        "text": "- **Frame 1560.025:** A \"New task in Triage\" dialog box is open, with the task name \"test task\" entered. The \"Create task\" button is highlighted, indicating the user is about to create a new task.\n- **Frame 1619.985:** A diagram titled \"How Task Graphs Actually Run\" is displayed. It shows a flow from \"Raw Idea\" to \"The Decomposer,\" which then processes into \"Task Cards,\" which are then distributed to \"The Dispatcher\" and \"Worker Nodes.\" The diagram explains the task execution process, including the role of \"Intelligence\" and \"The Decomposer.\"",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00026"
+        ],
+        "score": 14.3129,
+        "evidence_id": "E002",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "transcript:65",
+        "start": 1952.25,
+        "end": 1982.33,
+        "text": "OK, here we go. So it just started. So that triage using the auto decomposer, the dispatcher checked. Oh, it's been a minute. There's something here. Let's break it into two different tasks. So the task decomposer broke it up and assigned it to these particular subagents where each one is now running on its own. And we can click into this and we can see the specific prompt that was given to it created by the auto decomposer using the default model, we can estimate the effort of this particular task, like I was just showing you, and we can comment. So as these tasks are currently running, we can actually send messages to the worker. And if there's",
+        "source": "transcript",
+        "segment_ids": [
+          "T00667",
+          "T00668",
+          "T00669",
+          "T00670",
+          "T00671",
+          "T00672",
+          "T00673",
+          "T00674",
+          "T00675",
+          "T00676",
+          "T00677",
+          "T00678"
+        ],
+        "score": 12.20329,
+        "evidence_id": "E003",
+        "modality": "transcript",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"insufficient_evidence\",\"answer\":\"the dollar cost assigned to each dispatcher cycle cannot be determined from the provided evidence.\"}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "answered",
+    "answer": "The parent must put sufficient information in the goal and context fields of delegate_task because the sub-agents start with a fresh conversation and have no knowledge of the parent's history, tool calls, or previous discussions. The context is derived from the goal, which is essential for the sub-agents to understand the task and provide relevant output. Without sufficient information in the context field, the sub-agents may not be able to properly interpret the task and deliver accurate results. This is particularly important when the system scales to complex workflows involving multiple agents.",
+    "citations": [
+      {
+        "evidence_id": "E002",
+        "start": 420.68,
+        "end": 451.36
+      }
+    ],
+    "question_id": "speech_05",
+    "question": "According to the explanation of fresh subagent conversations, why must the parent put sufficient information in the goal and context fields of delegate_task?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 6.241,
+    "usage": {
+      "model_calls": 1,
+      "input_tokens": 1361,
+      "output_tokens": 150
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "According to the explanation of fresh subagent conversations, why must the parent put sufficient information in the goal and context fields of delegate_task?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:15",
+              "start": 451.36,
+              "end": 481.04,
+              "text": "The sub-agents only context comes from the goal, and the context field that the parent agent populates when it calls delegate task. Delegate task is this tool that we enabled at the beginning here, and the context is how much information goes into all of this. But before we get into an actual situation where it makes sense to have multi-agent workflows, there's one more thing I want to quickly talk about, which is a way that we can enhance the quality of the output of the single agent, whether it's a parent agent with delegated sub-agents or all in one, and that actually brings me back to",
+              "source": "transcript",
+              "segment_ids": [
+                "T00138",
+                "T00139",
+                "T00140",
+                "T00141",
+                "T00142",
+                "T00143",
+                "T00144",
+                "T00145",
+                "T00146",
+                "T00147",
+                "T00148",
+                "T00149",
+                "T00150",
+                "T00151",
+                "T00152"
+              ],
+              "score": 13.88056
+            },
+            {
+              "id": "transcript:14",
+              "start": 420.68,
+              "end": 451.36,
+              "text": "when it actually makes sense to do so, when the complexity needs it. But all of this is relative. This is specifically for a one-off research task that we just did here. As the system starts to scale in complexity, we need to start thinking about other ways of orchestrating. For example, using all of the different bots like we've set up in previous videos. And one thing I wanna mention too is that when we're delegating to subagents, subagents know nothing. They start with completely fresh conversations. So they have zero knowledge of the parent's conversation history, tool calls, or anything discussed before they were created for the delegation.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00121",
+                "T00122",
+                "T00123",
+                "T00124",
+                "T00125",
+                "T00126",
+                "T00127",
+                "T00128",
+                "T00129",
+                "T00130",
+                "T00131",
+                "T00132",
+                "T00133",
+                "T00134",
+                "T00135",
+                "T00136",
+                "T00137"
+              ],
+              "score": 11.5711
+            },
+            {
+              "id": "transcript:16",
+              "start": 481.04,
+              "end": 510.69,
+              "text": "the warning of the subagent system, which is that the context comes from the goal. So what is a goal? So to bring up goal, we can type in slash and goal. And this brings up the goal command, which is a way that we can set a standing goal that Hermes works across all turns until it's achieved. And basically what that means is before we get into the complexity of setting up all of these specialist agents and figuring out how to coordinate them, there's one more step that you should try first, which is to enable a goal.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00153",
+                "T00154",
+                "T00155",
+                "T00156",
+                "T00157",
+                "T00158",
+                "T00159",
+                "T00160",
+                "T00161",
+                "T00162",
+                "T00163",
+                "T00164"
+              ],
+              "score": 10.23492
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:15",
+        "start": 451.36,
+        "end": 481.04,
+        "text": "The sub-agents only context comes from the goal, and the context field that the parent agent populates when it calls delegate task. Delegate task is this tool that we enabled at the beginning here, and the context is how much information goes into all of this. But before we get into an actual situation where it makes sense to have multi-agent workflows, there's one more thing I want to quickly talk about, which is a way that we can enhance the quality of the output of the single agent, whether it's a parent agent with delegated sub-agents or all in one, and that actually brings me back to",
+        "source": "transcript",
+        "segment_ids": [
+          "T00138",
+          "T00139",
+          "T00140",
+          "T00141",
+          "T00142",
+          "T00143",
+          "T00144",
+          "T00145",
+          "T00146",
+          "T00147",
+          "T00148",
+          "T00149",
+          "T00150",
+          "T00151",
+          "T00152"
+        ],
+        "score": 13.88056,
+        "evidence_id": "E001",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "transcript:14",
+        "start": 420.68,
+        "end": 451.36,
+        "text": "when it actually makes sense to do so, when the complexity needs it. But all of this is relative. This is specifically for a one-off research task that we just did here. As the system starts to scale in complexity, we need to start thinking about other ways of orchestrating. For example, using all of the different bots like we've set up in previous videos. And one thing I wanna mention too is that when we're delegating to subagents, subagents know nothing. They start with completely fresh conversations. So they have zero knowledge of the parent's conversation history, tool calls, or anything discussed before they were created for the delegation.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00121",
+          "T00122",
+          "T00123",
+          "T00124",
+          "T00125",
+          "T00126",
+          "T00127",
+          "T00128",
+          "T00129",
+          "T00130",
+          "T00131",
+          "T00132",
+          "T00133",
+          "T00134",
+          "T00135",
+          "T00136",
+          "T00137"
+        ],
+        "score": 11.5711,
+        "evidence_id": "E002",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "transcript:16",
+        "start": 481.04,
+        "end": 510.69,
+        "text": "the warning of the subagent system, which is that the context comes from the goal. So what is a goal? So to bring up goal, we can type in slash and goal. And this brings up the goal command, which is a way that we can set a standing goal that Hermes works across all turns until it's achieved. And basically what that means is before we get into the complexity of setting up all of these specialist agents and figuring out how to coordinate them, there's one more step that you should try first, which is to enable a goal.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00153",
+          "T00154",
+          "T00155",
+          "T00156",
+          "T00157",
+          "T00158",
+          "T00159",
+          "T00160",
+          "T00161",
+          "T00162",
+          "T00163",
+          "T00164"
+        ],
+        "score": 10.23492,
+        "evidence_id": "E003",
+        "modality": "transcript",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The parent must put sufficient information in the goal and context fields of delegate_task because the sub-agents start with a fresh conversation and have no knowledge of the parent's history, tool calls, or previous discussions. The context is derived from the goal, which is essential for the sub-agents to understand the task and provide relevant output. Without sufficient information in the context field, the sub-agents may not be able to properly interpret the task and deliver accurate results. This is particularly important when the system scales to complex workflows involving multiple agents.\",\"citations\":[{\"evidence_id\":\"E002\",\"start\":420.68,\"end\":451.36}]}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+    "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+    "error_type": "invalid_model_response",
+    "question_id": "speech_06",
+    "question": "Locate where the presenter first introduces the /goal command and explains bounded outcomes and progress checks. What does the command allow the session to do?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 19.3027,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 4100,
+      "output_tokens": 459
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "Locate where the presenter first introduces the /goal command and explains bounded outcomes and progress checks. What does the command allow the session to do?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:17",
+              "start": 510.69,
+              "end": 541.25,
+              "text": "A goal effectively allows you to link multiple prompts into a bigger picture, a broader task than just one specific research task, for example. Instead of managing every step, I hand over a bounded outcome. What success means, how to verify it and when to ask me. The main agent acts as a judge that checks the progress and the session can continue within its own budget. And the goal is an endless research, the evidence matters. So before we get into setting up a complex system to see if we can get more out of our agent, we can try using this goal command.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00165",
+                "T00166",
+                "T00167",
+                "T00168",
+                "T00169",
+                "T00170",
+                "T00171",
+                "T00172",
+                "T00173",
+                "T00174"
+              ],
+              "score": 18.12482
+            },
+            {
+              "id": "transcript:16",
+              "start": 481.04,
+              "end": 510.69,
+              "text": "the warning of the subagent system, which is that the context comes from the goal. So what is a goal? So to bring up goal, we can type in slash and goal. And this brings up the goal command, which is a way that we can set a standing goal that Hermes works across all turns until it's achieved. And basically what that means is before we get into the complexity of setting up all of these specialist agents and figuring out how to coordinate them, there's one more step that you should try first, which is to enable a goal.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00153",
+                "T00154",
+                "T00155",
+                "T00156",
+                "T00157",
+                "T00158",
+                "T00159",
+                "T00160",
+                "T00161",
+                "T00162",
+                "T00163",
+                "T00164"
+              ],
+              "score": 10.10268
+            },
+            {
+              "id": "caption:12",
+              "start": 360.0,
+              "end": 420.0,
+              "text": "- **Frame 360.026**: The screen displays a software interface with a dark theme. The main content is a slide titled \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system?\" The slide lists a series of bullet points under \"8. Measure the system by outcomes, not capture volume.\" A yellow text box with the text \"I would have to check the actual total, likely more than 102,000\" is visible. The left sidebar shows \"SESSIONS\" and \"PROJECTS\" with various options like \"New session,\" \"Capabilities,\" and \"Artifacts.\" The bottom of the screen shows a \"Send a follow-up\" button.\n\n- **Frame 419.986**: The screen shows a slide titled \"Delegate only bounded specialist work.\" The slide lists various roles",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00006"
+              ],
+              "score": 8.11346
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:17",
+        "start": 510.69,
+        "end": 541.25,
+        "text": "A goal effectively allows you to link multiple prompts into a bigger picture, a broader task than just one specific research task, for example. Instead of managing every step, I hand over a bounded outcome. What success means, how to verify it and when to ask me. The main agent acts as a judge that checks the progress and the session can continue within its own budget. And the goal is an endless research, the evidence matters. So before we get into setting up a complex system to see if we can get more out of our agent, we can try using this goal command.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00165",
+          "T00166",
+          "T00167",
+          "T00168",
+          "T00169",
+          "T00170",
+          "T00171",
+          "T00172",
+          "T00173",
+          "T00174"
+        ],
+        "score": 18.12482,
+        "evidence_id": "E001",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "transcript:16",
+        "start": 481.04,
+        "end": 510.69,
+        "text": "the warning of the subagent system, which is that the context comes from the goal. So what is a goal? So to bring up goal, we can type in slash and goal. And this brings up the goal command, which is a way that we can set a standing goal that Hermes works across all turns until it's achieved. And basically what that means is before we get into the complexity of setting up all of these specialist agents and figuring out how to coordinate them, there's one more step that you should try first, which is to enable a goal.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00153",
+          "T00154",
+          "T00155",
+          "T00156",
+          "T00157",
+          "T00158",
+          "T00159",
+          "T00160",
+          "T00161",
+          "T00162",
+          "T00163",
+          "T00164"
+        ],
+        "score": 10.10268,
+        "evidence_id": "E002",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "caption:12",
+        "start": 360.0,
+        "end": 420.0,
+        "text": "- **Frame 360.026**: The screen displays a software interface with a dark theme. The main content is a slide titled \"How do I turn incoming information into something useful, an action I can take, or knowledge I can reuse, and what is the best strategy for that action system?\" The slide lists a series of bullet points under \"8. Measure the system by outcomes, not capture volume.\" A yellow text box with the text \"I would have to check the actual total, likely more than 102,000\" is visible. The left sidebar shows \"SESSIONS\" and \"PROJECTS\" with various options like \"New session,\" \"Capabilities,\" and \"Artifacts.\" The bottom of the screen shows a \"Send a follow-up\" button.\n\n- **Frame 419.986**: The screen shows a slide titled \"Delegate only bounded specialist work.\" The slide lists various roles",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00006"
+        ],
+        "score": 8.11346,
+        "evidence_id": "E003",
+        "modality": "caption",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The presenter first introduces the /goal command at 510.69 in the transcript, where they explain that the command allows the session to link multiple prompts into a broader task, set a bounded outcome, define success criteria, and enable progress checks. The command enables the session to operate within a defined scope, with the main agent acting as a judge to verify progress and ensure the session stays within its budget. This is supported by the transcript at E001, which states: 'The goal is an endless research, the evidence matters. So before we get into setting up a complex system to see if we can get more out of our agent, we can try using this goal command.'\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The presenter first introduces the /goal command at 510.69 in the transcript, where they explain that the command allows the session to link multiple prompts into a broader task, set a bounded outcome, define success criteria, and enable progress checks. The command enables the session to operate within a defined scope, with the main agent acting as a judge to verify progress and ensure the session stays within its budget. This is supported by the transcript at E001, which states: 'The goal is an endless research, the evidence matters. So before we get into setting up a complex system to see if we can get more out of our agent, we can try using this goal command.'\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The presenter first introduces the /goal command at 510.69 in the transcript, where they explain that the command allows the session to link multiple prompts into a broader task, set a bounded outcome, define success criteria, and enable progress checks. The command enables the session to operate within a defined scope, with the main agent acting as a judge to verify progress and ensure the session stays within its budget. This is supported by the transcript at E001, which states: 'The goal is an endless research, the evidence matters. So before we get into setting up a complex system to see if we can get more out of our agent, we can try using this goal command.'\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "insufficient_evidence",
+    "answer": "The video evidence does not specify the exact order of events in the goal-loop demonstration. While the transcript indicates that the agent adds the requirement for at least five peer-reviewed sources before delegating to cross-reference, the caption does not confirm this sequence. Therefore, it cannot be determined from the provided evidence which action occurs first.",
+    "citations": [],
+    "question_id": "speech_07",
+    "question": "In the goal-loop demonstration, what happens first: adding a requirement for at least five peer-reviewed sources, or delegating new research to cross-reference the output against academic sources?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 7.3689,
+    "usage": {
+      "model_calls": 2,
+      "input_tokens": 2755,
+      "output_tokens": 173
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "In the goal-loop demonstration, what happens first: adding a requirement for at least five peer-reviewed sources, or delegating new research to cross-reference the output against academic sources?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:21",
+              "start": 630.79,
+              "end": 661.15,
+              "text": "at least five peer reviewed sources. And if we look here, it only produced eight sources and it doesn't look like they're peer reviewed. So now the agent has started up its next task on turn two and turn three and it's delegated to another series of subagents to now cross-reference the output against peer reviewed academic sources. So it says it's now added an independent organizational coordination and team cognition literature to the evidence set and it's awaiting the peer review before it will work again. As this is working, I can think of more criteria and I can add this here, and the agent will just keep looping.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00212",
+                "T00213",
+                "T00214",
+                "T00215",
+                "T00216",
+                "T00217",
+                "T00218",
+                "T00219",
+                "T00220",
+                "T00221",
+                "T00222",
+                "T00223",
+                "T00224",
+                "T00225",
+                "T00226",
+                "T00227",
+                "T00228"
+              ],
+              "score": 36.79314
+            },
+            {
+              "id": "transcript:20",
+              "start": 602.73,
+              "end": 630.79,
+              "text": "So this is a really great way for you to increase the quality of your work without necessarily introducing a lot of complexity. I honestly use this all the time, especially for coding. So I can also add criteria on here. For example, we must have at least five peer-reviewed sources. And I can add that information to the criteria as the agent continues running. And that now becomes a new definition of what done looks like. So what we can see here, it took my criteria into account because now the criteria is we must have",
+              "source": "transcript",
+              "segment_ids": [
+                "T00199",
+                "T00200",
+                "T00201",
+                "T00202",
+                "T00203",
+                "T00204",
+                "T00205",
+                "T00206",
+                "T00207",
+                "T00208",
+                "T00209",
+                "T00210",
+                "T00211"
+              ],
+              "score": 16.1194
+            },
+            {
+              "id": "caption:20",
+              "start": 600.0,
+              "end": 660.0,
+              "text": "- **Frame 600.033:** The screen shows a research task in a software interface. The main content area displays a text box with a research plan. A diagram titled \"Loop\" is visible on the left, illustrating a cycle of Idea, Plan, Check, and Execute. The user is in a \"New session\" state, with the \"Build an actionable information system\" project selected. The interface includes a \"Shift-click a chat to pin\" option and a \"Manual\" button at the bottom right.\n\n- **Frame 659.993:** The interface has shifted to a \"Projects\" tab. The user is now working on the \"Build an actionable information system\" project. The main content area shows a text box with a research plan. The user has added a new criterion: \"We must have at least 5 peer-reviewed sources.\" The interface includes a \"View details\" button and a \"",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00010"
+              ],
+              "score": 14.89573
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:21",
+        "start": 630.79,
+        "end": 661.15,
+        "text": "at least five peer reviewed sources. And if we look here, it only produced eight sources and it doesn't look like they're peer reviewed. So now the agent has started up its next task on turn two and turn three and it's delegated to another series of subagents to now cross-reference the output against peer reviewed academic sources. So it says it's now added an independent organizational coordination and team cognition literature to the evidence set and it's awaiting the peer review before it will work again. As this is working, I can think of more criteria and I can add this here, and the agent will just keep looping.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00212",
+          "T00213",
+          "T00214",
+          "T00215",
+          "T00216",
+          "T00217",
+          "T00218",
+          "T00219",
+          "T00220",
+          "T00221",
+          "T00222",
+          "T00223",
+          "T00224",
+          "T00225",
+          "T00226",
+          "T00227",
+          "T00228"
+        ],
+        "score": 36.79314,
+        "evidence_id": "E001",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "transcript:20",
+        "start": 602.73,
+        "end": 630.79,
+        "text": "So this is a really great way for you to increase the quality of your work without necessarily introducing a lot of complexity. I honestly use this all the time, especially for coding. So I can also add criteria on here. For example, we must have at least five peer-reviewed sources. And I can add that information to the criteria as the agent continues running. And that now becomes a new definition of what done looks like. So what we can see here, it took my criteria into account because now the criteria is we must have",
+        "source": "transcript",
+        "segment_ids": [
+          "T00199",
+          "T00200",
+          "T00201",
+          "T00202",
+          "T00203",
+          "T00204",
+          "T00205",
+          "T00206",
+          "T00207",
+          "T00208",
+          "T00209",
+          "T00210",
+          "T00211"
+        ],
+        "score": 16.1194,
+        "evidence_id": "E002",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "caption:20",
+        "start": 600.0,
+        "end": 660.0,
+        "text": "- **Frame 600.033:** The screen shows a research task in a software interface. The main content area displays a text box with a research plan. A diagram titled \"Loop\" is visible on the left, illustrating a cycle of Idea, Plan, Check, and Execute. The user is in a \"New session\" state, with the \"Build an actionable information system\" project selected. The interface includes a \"Shift-click a chat to pin\" option and a \"Manual\" button at the bottom right.\n\n- **Frame 659.993:** The interface has shifted to a \"Projects\" tab. The user is now working on the \"Build an actionable information system\" project. The main content area shows a text box with a research plan. The user has added a new criterion: \"We must have at least 5 peer-reviewed sources.\" The interface includes a \"View details\" button and a \"",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00010"
+        ],
+        "score": 14.89573,
+        "evidence_id": "E003",
+        "modality": "caption",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"Adding a requirement for at least five peer-reviewed sources happens first. The transcript states that the agent adds this criterion during the initial phase of the task, before delegating the next task. The caption confirms that the user adds the criterion in the 'Projects' tab, and the agent then proceeds to delegate the task to cross-reference the output against academic sources. This sequence indicates that adding the requirement occurs before delegation.\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"insufficient_evidence\",\"answer\":\"The video evidence does not specify the exact order of events in the goal-loop demonstration. While the transcript indicates that the agent adds the requirement for at least five peer-reviewed sources before delegating to cross-reference, the caption does not confirm this sequence. Therefore, it cannot be determined from the provided evidence which action occurs first.\"}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "answered",
+    "answer": "A database-backed work queue is more durable because it maintains persistent state and can be resumable, allowing for re-running and recovery after failure, unlike the delegate_task system which has no resumability and fails permanently. This durability supports more complex contexts and specialized work that require more knowledge and context, which is why it's better for reviewing handoffs.",
+    "citations": [
+      {
+        "evidence_id": "E002",
+        "start": 1380.0,
+        "end": 1440.0
+      }
+    ],
+    "question_id": "speech_08",
+    "question": "According to the Kanban comparison, why is a database-backed work queue more durable for reviewing handoffs than keeping delegated work only in the parent conversation?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 5.3194,
+    "usage": {
+      "model_calls": 1,
+      "input_tokens": 1210,
+      "output_tokens": 113
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "According to the Kanban comparison, why is a database-backed work queue more durable for reviewing handoffs than keeping delegated work only in the parent conversation?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:30",
+              "start": 901.57,
+              "end": 931.69,
+              "text": "So it fits bounded research review and repair work, but it doesn't necessarily make sense for other types of situations that require more specialization and more context and more knowledge. I mentioned, sub-agents have zero knowledge from the parent's conversation history. They only have what comes from the goal and the context that the parent gives them. But what if we start getting into more specific contexts or more custom situations that involve other types of contexts outside of what the parent even knows? We can see here the decision test that the answer says is add a specialist.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00333",
+                "T00334",
+                "T00335",
+                "T00336",
+                "T00337",
+                "T00338",
+                "T00339",
+                "T00340",
+                "T00341"
+              ],
+              "score": 13.45758
+            },
+            {
+              "id": "caption:46",
+              "start": 1380.0,
+              "end": 1440.0,
+              "text": "- **Frame 1380.012**: A slide titled \"Kanban vs. delegate_task\" is displayed. It compares two systems, highlighting differences in shape, parent, child identity, resumability, human in the loop, agents per task, audit trail, and coordination. The \"delegate_task\" system is described as having a \"Named profile with persistent memory\" and \"Blocks until child returns\" as its parent. The \"Kanban\" system is described as having a \"Durable message queue + state machine\" and \"Fire-and-forget after create\" as its parent. The slide lists the \"Resumability\" of \"delegate_task\" as \"None — failed = failed\" and \"Kanban\" as \"Block → unblock → re-run → crash → reclaim\". The \"Human in the loop\" is \"Not supported\" for \"delegate_task\" and \"Comment / unblock at any",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00023"
+              ],
+              "score": 12.66481
+            },
+            {
+              "id": "transcript:10",
+              "start": 300.44,
+              "end": 331.6,
+              "text": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+              "source": "transcript",
+              "segment_ids": [
+                "T00070",
+                "T00071",
+                "T00072",
+                "T00073",
+                "T00074",
+                "T00075",
+                "T00076"
+              ],
+              "score": 11.68113
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:30",
+        "start": 901.57,
+        "end": 931.69,
+        "text": "So it fits bounded research review and repair work, but it doesn't necessarily make sense for other types of situations that require more specialization and more context and more knowledge. I mentioned, sub-agents have zero knowledge from the parent's conversation history. They only have what comes from the goal and the context that the parent gives them. But what if we start getting into more specific contexts or more custom situations that involve other types of contexts outside of what the parent even knows? We can see here the decision test that the answer says is add a specialist.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00333",
+          "T00334",
+          "T00335",
+          "T00336",
+          "T00337",
+          "T00338",
+          "T00339",
+          "T00340",
+          "T00341"
+        ],
+        "score": 13.45758,
+        "evidence_id": "E001",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "caption:46",
+        "start": 1380.0,
+        "end": 1440.0,
+        "text": "- **Frame 1380.012**: A slide titled \"Kanban vs. delegate_task\" is displayed. It compares two systems, highlighting differences in shape, parent, child identity, resumability, human in the loop, agents per task, audit trail, and coordination. The \"delegate_task\" system is described as having a \"Named profile with persistent memory\" and \"Blocks until child returns\" as its parent. The \"Kanban\" system is described as having a \"Durable message queue + state machine\" and \"Fire-and-forget after create\" as its parent. The slide lists the \"Resumability\" of \"delegate_task\" as \"None — failed = failed\" and \"Kanban\" as \"Block → unblock → re-run → crash → reclaim\". The \"Human in the loop\" is \"Not supported\" for \"delegate_task\" and \"Comment / unblock at any",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00023"
+        ],
+        "score": 12.66481,
+        "evidence_id": "E002",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "transcript:10",
+        "start": 300.44,
+        "end": 331.6,
+        "text": "through that a little bit more in depth. And what's nice is if we take a look at the bottom here, this only used up 36,000 tokens. And the reason for that is because the parent agent delegated to subagents and only had to give definitions for them to go off and run. So the subagents themselves then used up their own amount of context. And that's one of the major benefits of using a delegation system like this is I didn't have to have this main parent agent blow through its context window. Instead, it could delegate to subagents of lower intelligence and then take the synthesized reports rather than reading",
+        "source": "transcript",
+        "segment_ids": [
+          "T00070",
+          "T00071",
+          "T00072",
+          "T00073",
+          "T00074",
+          "T00075",
+          "T00076"
+        ],
+        "score": 11.68113,
+        "evidence_id": "E003",
+        "modality": "transcript",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"A database-backed work queue is more durable because it maintains persistent state and can be resumable, allowing for re-running and recovery after failure, unlike the delegate_task system which has no resumability and fails permanently. This durability supports more complex contexts and specialized work that require more knowledge and context, which is why it's better for reviewing handoffs.\",\"citations\":[{\"evidence_id\":\"E002\",\"start\":1380.0,\"end\":1440.0}]}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "insufficient_evidence",
+    "answer": "The transcript does not provide enough information to confirm the specific reasoning behind the presenter's suggestion. It mentions that the decomposer needs a powerful model for task graphing and planning, while the worker is where most tokens are spent and thus where cost is concentrated. However, the evidence is limited to a single transcript segment, and no further details are provided about the presenter's reasoning or the specific context of the decision-making process.",
+    "citations": [],
+    "question_id": "speech_09",
+    "question": "Why does the presenter suggest using a powerful Kanban decomposer but a less powerful worker for a well-scoped card?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 10.7396,
+    "usage": {
+      "model_calls": 2,
+      "input_tokens": 2598,
+      "output_tokens": 238
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "Why does the presenter suggest using a powerful Kanban decomposer but a less powerful worker for a well-scoped card?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:55",
+              "start": 1651.7,
+              "end": 1680.22,
+              "text": "to break that task into a task graph. So you can control what you want these models to be here. Perhaps the specifier is a very lightweight model because you're basically just using text to explain text a little bit better, but for the decomposer, you probably want a much more powerful model. And Hermes Docs actually has a strategy for this where they say decomposing a project, breaking it into well scoped cards takes frontier level judgment, using the most intelligence that you have, but executing a card that has a clear goal,",
+              "source": "transcript",
+              "segment_ids": [
+                "T00551",
+                "T00552",
+                "T00553",
+                "T00554",
+                "T00555",
+                "T00556",
+                "T00557",
+                "T00558",
+                "T00559",
+                "T00560",
+                "T00561",
+                "T00562"
+              ],
+              "score": 19.55971
+            },
+            {
+              "id": "transcript:56",
+              "start": 1680.22,
+              "end": 1712.78,
+              "text": "context and handoff doesn't really need that same level of intelligence, especially if it's running in a loop. Workers are where the vast majority of tokens are spent, so that's typically where the cost is. So that's what I'm getting at when I talk about this decomposer here. We can set this model to whatever we want. I could set this, for example, to GPT-6 Astra, if I wanted to. And what would happen is now the Kanban decomposer, this decomposer setting that we have here would be using Astra to convert whatever task I put inside of this task card into a series of subtasks that then get assigned to the worker profile which is Waterloo's tutorials",
+              "source": "transcript",
+              "segment_ids": [
+                "T00563",
+                "T00564",
+                "T00565",
+                "T00566",
+                "T00567",
+                "T00568",
+                "T00569"
+              ],
+              "score": 11.50035
+            },
+            {
+              "id": "transcript:57",
+              "start": 1712.78,
+              "end": 1744.54,
+              "text": "that I currently have set at Terra. So that's just a really powerful way for you to significantly reduce the cost of your operations by having a powerful planning model and a less powerful execution model or implementer or worker agent. And we can see up at the top here that we have a default board. So what we can do is we can click on the default, we can rename that board if we want to, or create a new one. So I can, for example, create a new board called test, create board. And now when I click on this, I can switch between different boards.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00570",
+                "T00571",
+                "T00572",
+                "T00573",
+                "T00574",
+                "T00575"
+              ],
+              "score": 11.32426
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:55",
+        "start": 1651.7,
+        "end": 1680.22,
+        "text": "to break that task into a task graph. So you can control what you want these models to be here. Perhaps the specifier is a very lightweight model because you're basically just using text to explain text a little bit better, but for the decomposer, you probably want a much more powerful model. And Hermes Docs actually has a strategy for this where they say decomposing a project, breaking it into well scoped cards takes frontier level judgment, using the most intelligence that you have, but executing a card that has a clear goal,",
+        "source": "transcript",
+        "segment_ids": [
+          "T00551",
+          "T00552",
+          "T00553",
+          "T00554",
+          "T00555",
+          "T00556",
+          "T00557",
+          "T00558",
+          "T00559",
+          "T00560",
+          "T00561",
+          "T00562"
+        ],
+        "score": 19.55971,
+        "evidence_id": "E001",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "transcript:56",
+        "start": 1680.22,
+        "end": 1712.78,
+        "text": "context and handoff doesn't really need that same level of intelligence, especially if it's running in a loop. Workers are where the vast majority of tokens are spent, so that's typically where the cost is. So that's what I'm getting at when I talk about this decomposer here. We can set this model to whatever we want. I could set this, for example, to GPT-6 Astra, if I wanted to. And what would happen is now the Kanban decomposer, this decomposer setting that we have here would be using Astra to convert whatever task I put inside of this task card into a series of subtasks that then get assigned to the worker profile which is Waterloo's tutorials",
+        "source": "transcript",
+        "segment_ids": [
+          "T00563",
+          "T00564",
+          "T00565",
+          "T00566",
+          "T00567",
+          "T00568",
+          "T00569"
+        ],
+        "score": 11.50035,
+        "evidence_id": "E002",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "transcript:57",
+        "start": 1712.78,
+        "end": 1744.54,
+        "text": "that I currently have set at Terra. So that's just a really powerful way for you to significantly reduce the cost of your operations by having a powerful planning model and a less powerful execution model or implementer or worker agent. And we can see up at the top here that we have a default board. So what we can do is we can click on the default, we can rename that board if we want to, or create a new one. So I can, for example, create a new board called test, create board. And now when I click on this, I can switch between different boards.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00570",
+          "T00571",
+          "T00572",
+          "T00573",
+          "T00574",
+          "T00575"
+        ],
+        "score": 11.32426,
+        "evidence_id": "E003",
+        "modality": "transcript",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The presenter suggests using a powerful Kanban decomposer and a less powerful worker because the decomposer needs to be capable of handling complex task decomposition and strategic planning, while the worker is responsible for executing tasks and is where most of the computational cost occurs. The decomposer uses a more intelligent model to break down tasks into well-scoped cards, whereas the worker, which handles execution, can be less powerful to reduce operational costs. This is supported by the transcript, where the presenter states that the decomposer requires a powerful model for task graphing and planning, while the worker is where most tokens are spent and thus where cost is concentrated.\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"insufficient_evidence\",\"answer\":\"The transcript does not provide enough information to confirm the specific reasoning behind the presenter's suggestion. It mentions that the decomposer needs a powerful model for task graphing and planning, while the worker is where most tokens are spent and thus where cost is concentrated. However, the evidence is limited to a single transcript segment, and no further details are provided about the presenter's reasoning or the specific context of the decision-making process.\"}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "error",
+    "answer": "",
+    "citations": [],
+    "stop_reason": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+    "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+    "error_type": "invalid_model_response",
+    "question_id": "speech_10",
+    "question": "Locate the later Kanban task-estimation demonstration where the estimate drops from 45,000 to 18,000 tokens. What two limits does the presenter add before re-estimating?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 18.2129,
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 4590,
+      "output_tokens": 456
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "Locate the later Kanban task-estimation demonstration where the estimate drops from 45,000 to 18,000 tokens. What two limits does the presenter add before re-estimating?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:64",
+              "start": 1920.39,
+              "end": 1952.25,
+              "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00653",
+                "T00654",
+                "T00655",
+                "T00656",
+                "T00657",
+                "T00658",
+                "T00659",
+                "T00660",
+                "T00661",
+                "T00662",
+                "T00663",
+                "T00664",
+                "T00665",
+                "T00666"
+              ],
+              "score": 18.36358
+            },
+            {
+              "id": "transcript:0",
+              "start": 0.0,
+              "end": 33.04,
+              "text": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+              "source": "transcript",
+              "segment_ids": [
+                "T00001",
+                "T00002",
+                "T00003",
+                "T00004",
+                "T00005",
+                "T00006",
+                "T00007",
+                "T00008"
+              ],
+              "score": 16.2287
+            },
+            {
+              "id": "transcript:63",
+              "start": 1890.41,
+              "end": 1920.39,
+              "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00637",
+                "T00638",
+                "T00639",
+                "T00640",
+                "T00641",
+                "T00642",
+                "T00643",
+                "T00644",
+                "T00645",
+                "T00646",
+                "T00647",
+                "T00648",
+                "T00649",
+                "T00650",
+                "T00651",
+                "T00652"
+              ],
+              "score": 11.37838
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:64",
+        "start": 1920.39,
+        "end": 1952.25,
+        "text": "It just dropped from 45,000 tokens down to 18,000. There's a rough estimate researching up to five sources, comparing this particular task and then a synthesis under 500 words. And that dropped the complexity of this task down to medium. That's a cool way for you to do a lightweight check ahead of time to make sure that your task isn't going to blow through your whole quota. So now let's click Create Task. And this brings up the board that I was talking about. The triage section is where raw ideas. We have a specifier that's going to flesh out the spec. So it's going to be converted from this into a different card. And this is using that auxiliary model that I was talking about.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00653",
+          "T00654",
+          "T00655",
+          "T00656",
+          "T00657",
+          "T00658",
+          "T00659",
+          "T00660",
+          "T00661",
+          "T00662",
+          "T00663",
+          "T00664",
+          "T00665",
+          "T00666"
+        ],
+        "score": 18.36358,
+        "evidence_id": "E001",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "transcript:0",
+        "start": 0.0,
+        "end": 33.04,
+        "text": "That's just a really powerful way for you to significantly reduce the cost. There we go. It just dropped from 45,000 tokens down to 18,000. One agent can already delegate to subagents. So what is making an agent team actually add? This is the question I get asked most often about multi-agent workflows. Why build a team if one capable agent can actually get the job done? And honestly, sometimes you shouldn't. One powerful agent with subagents can often be enough. But other times a more complex workflow can improve the quality and the efficiency. Hi, my name is Callum, also known as Waterloots, and welcome to today's video on Agents, Loops,",
+        "source": "transcript",
+        "segment_ids": [
+          "T00001",
+          "T00002",
+          "T00003",
+          "T00004",
+          "T00005",
+          "T00006",
+          "T00007",
+          "T00008"
+        ],
+        "score": 16.2287,
+        "evidence_id": "E002",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "transcript:63",
+        "start": 1890.41,
+        "end": 1920.39,
+        "text": "And what's cool too is we can also estimate the cost of what this task is going to be. So I can click estimate and then it gives me a list of the tokens that it thinks is going to cost for this particular prompt here. So it took this task and it analyzed it to give you an estimate. So it says it's going to be a broad ambiguous research task requiring extensive source review, synthesis, architecture comparison and likely iterative documentation or prototyping. So now, for example, I can include a limitation here. Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it. There we go.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00637",
+          "T00638",
+          "T00639",
+          "T00640",
+          "T00641",
+          "T00642",
+          "T00643",
+          "T00644",
+          "T00645",
+          "T00646",
+          "T00647",
+          "T00648",
+          "T00649",
+          "T00650",
+          "T00651",
+          "T00652"
+        ],
+        "score": 11.37838,
+        "evidence_id": "E003",
+        "modality": "transcript",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The later Kanban task-estimation demonstration where the estimate drops from 45,000 to 18,000 tokens occurs in the segment where the presenter discusses estimating task costs. The two limits added before re-estimating are: 1) limiting the search to five sources, and 2) limiting the output document to 500 words or less. This is explicitly stated in the transcript at 1890.41–1920.39, where the presenter says, 'Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it.'\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The later Kanban task-estimation demonstration where the estimate drops from 45,000 to 18,000 tokens occurs in the segment where the presenter discusses estimating task costs. The two limits added before re-estimating are: 1) limiting the search to five sources, and 2) limiting the output document to 500 words or less. This is explicitly stated in the transcript at 1890.41–1920.39, where the presenter says, 'Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it.'\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The later Kanban task-estimation demonstration where the estimate drops from 45,000 to 18,000 tokens occurs in the segment where the presenter discusses estimating task costs. The two limits added before re-estimating are: 1) limiting the search to five sources, and 2) limiting the output document to 500 words or less. This is explicitly stated in the transcript at 1890.41–1920.39, where the presenter says, 'Please limit your search to five sources and the output document to 500 words or less. And then I can re-estimate it.'\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "insufficient_evidence",
+    "answer": "the two researcher tasks finish before the report-delivery task becomes unblocked and starts running",
+    "citations": [],
+    "question_id": "speech_11",
+    "question": "In the demonstrated Kanban research workflow around 35 minutes, do the two researcher tasks finish before or after the report-delivery task becomes unblocked and starts running?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 5.4455,
+    "usage": {
+      "model_calls": 2,
+      "input_tokens": 2777,
+      "output_tokens": 136
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "In the demonstrated Kanban research workflow around 35 minutes, do the two researcher tasks finish before or after the report-delivery task becomes unblocked and starts running?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:70",
+              "start": 2101.71,
+              "end": 2131.77,
+              "text": "and once they were finished, the to do of delivering the report was unblocked because the previous tasks were completed. And then once that was unblocked, the dispatcher running in the background moved it over to ready. And then once it was ready, shifted it into running. And again, we can see all of this was done by the auto decomposer. And here's the specific prompt. So it's pretty complex here. This is where it's important to be really strategic with the information and the tools and the memory and the context, the skills and everything that you're giving to your specialized agents because you don't want to accidentally",
+              "source": "transcript",
+              "segment_ids": [
+                "T00734",
+                "T00735",
+                "T00736",
+                "T00737",
+                "T00738",
+                "T00739",
+                "T00740",
+                "T00741",
+                "T00742",
+                "T00743",
+                "T00744",
+                "T00745"
+              ],
+              "score": 13.77176
+            },
+            {
+              "id": "transcript:66",
+              "start": 1982.33,
+              "end": 2010.77,
+              "text": "a big enough change, we can even send a message and then recue it and have it start that task over again. So we get a chance to go through and see how all of this is working, what it's actually doing, how it's analyzing it. And we can see this for each card that's running here. So you get a lot of flexibility for controlling these cards here. And what's cool too is, For example, I can go back to the to-do section, which are the currently blocked tasks. So these ones are waiting for the researcher to finish before they run. And we can see this one was actually assigned to default instead of orchestrator.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00679",
+                "T00680",
+                "T00681",
+                "T00682",
+                "T00683",
+                "T00684",
+                "T00685",
+                "T00686",
+                "T00687",
+                "T00688"
+              ],
+              "score": 12.92683
+            },
+            {
+              "id": "transcript:74",
+              "start": 2220.08,
+              "end": 2252.2,
+              "text": "And what happened is you can see this was created by dashboard. So this was created by me. I assigned it to the orchestrator and I gave it this particular prompt. Then we can see that the auto decomposer commented and said, Hey, I decomposed. I broke up this task into these three subtasks. So these were the two research tasks and then the writing of the article task. The root, this question here, this task will wake once all the children complete. So it took that description. It broke it into those three subtasks. It went through and ran. The researcher went into running completed its two tasks here, sent it back",
+              "source": "transcript",
+              "segment_ids": [
+                "T00776",
+                "T00777",
+                "T00778",
+                "T00779",
+                "T00780",
+                "T00781",
+                "T00782",
+                "T00783",
+                "T00784",
+                "T00785",
+                "T00786",
+                "T00787"
+              ],
+              "score": 10.77791
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:70",
+        "start": 2101.71,
+        "end": 2131.77,
+        "text": "and once they were finished, the to do of delivering the report was unblocked because the previous tasks were completed. And then once that was unblocked, the dispatcher running in the background moved it over to ready. And then once it was ready, shifted it into running. And again, we can see all of this was done by the auto decomposer. And here's the specific prompt. So it's pretty complex here. This is where it's important to be really strategic with the information and the tools and the memory and the context, the skills and everything that you're giving to your specialized agents because you don't want to accidentally",
+        "source": "transcript",
+        "segment_ids": [
+          "T00734",
+          "T00735",
+          "T00736",
+          "T00737",
+          "T00738",
+          "T00739",
+          "T00740",
+          "T00741",
+          "T00742",
+          "T00743",
+          "T00744",
+          "T00745"
+        ],
+        "score": 13.77176,
+        "evidence_id": "E001",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "transcript:66",
+        "start": 1982.33,
+        "end": 2010.77,
+        "text": "a big enough change, we can even send a message and then recue it and have it start that task over again. So we get a chance to go through and see how all of this is working, what it's actually doing, how it's analyzing it. And we can see this for each card that's running here. So you get a lot of flexibility for controlling these cards here. And what's cool too is, For example, I can go back to the to-do section, which are the currently blocked tasks. So these ones are waiting for the researcher to finish before they run. And we can see this one was actually assigned to default instead of orchestrator.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00679",
+          "T00680",
+          "T00681",
+          "T00682",
+          "T00683",
+          "T00684",
+          "T00685",
+          "T00686",
+          "T00687",
+          "T00688"
+        ],
+        "score": 12.92683,
+        "evidence_id": "E002",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "transcript:74",
+        "start": 2220.08,
+        "end": 2252.2,
+        "text": "And what happened is you can see this was created by dashboard. So this was created by me. I assigned it to the orchestrator and I gave it this particular prompt. Then we can see that the auto decomposer commented and said, Hey, I decomposed. I broke up this task into these three subtasks. So these were the two research tasks and then the writing of the article task. The root, this question here, this task will wake once all the children complete. So it took that description. It broke it into those three subtasks. It went through and ran. The researcher went into running completed its two tasks here, sent it back",
+        "source": "transcript",
+        "segment_ids": [
+          "T00776",
+          "T00777",
+          "T00778",
+          "T00779",
+          "T00780",
+          "T00781",
+          "T00782",
+          "T00783",
+          "T00784",
+          "T00785",
+          "T00786",
+          "T00787"
+        ],
+        "score": 10.77791,
+        "evidence_id": "E003",
+        "modality": "transcript",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The two researcher tasks finish before the report-delivery task becomes unblocked and starts running. This is supported by the transcript, where it states that 'once they were finished, the to do of delivering the report was unblocked' and 'the researcher went into running completed its two tasks here, sent it back'. The report-delivery task is only unblocked after the researcher tasks are completed, indicating the researcher tasks finish before the report delivery task starts running.\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"insufficient_evidence\",\"answer\":\"the two researcher tasks finish before the report-delivery task becomes unblocked and starts running\"}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  },
+  {
+    "status": "insufficient_evidence",
+    "answer": "The 95% confidence interval for the token-usage difference between delegated single-agent and orchestrator-only workflows is not reported in the provided transcript. The transcript mentions token usage values (102,000 vs. 37,000) but does not provide a confidence interval for the difference. Therefore, the requested information cannot be established from the evidence provided.",
+    "citations": [],
+    "question_id": "speech_12",
+    "question": "In the closing comparison of coordination methods, what 95% confidence interval is reported for the token-usage difference between delegated single-agent and orchestrator-only workflows?",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 7.9199,
+    "usage": {
+      "model_calls": 2,
+      "input_tokens": 2729,
+      "output_tokens": 197
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "In the closing comparison of coordination methods, what 95% confidence interval is reported for the token-usage difference between delegated single-agent and orchestrator-only workflows?",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "transcript:82",
+              "start": 2461.79,
+              "end": 2493.9,
+              "text": "of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00856",
+                "T00857",
+                "T00858",
+                "T00859",
+                "T00860",
+                "T00861"
+              ],
+              "score": 19.57208
+            },
+            {
+              "id": "transcript:11",
+              "start": 331.6,
+              "end": 360.56,
+              "text": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+              "source": "transcript",
+              "segment_ids": [
+                "T00077",
+                "T00078",
+                "T00079",
+                "T00080",
+                "T00081",
+                "T00082",
+                "T00083",
+                "T00084",
+                "T00085",
+                "T00086",
+                "T00087",
+                "T00088",
+                "T00089",
+                "T00090"
+              ],
+              "score": 14.57928
+            },
+            {
+              "id": "transcript:12",
+              "start": 360.56,
+              "end": 391.16,
+              "text": "There was more context used, but that context that made it back into the main higher intelligence agent was significantly compressed relative to the agent that just did it all itself and had 102,000. If I ran this turn one more time, I might have to compress the context here and then you lose some quality. So that's the first comparison, just using a single agent versus using a single agent with multiple subagents. So the biggest difference is that one uses up a lot more context, but this was also a very basic example. And the results of both of these are basically the same. Build an accountable action steward",
+              "source": "transcript",
+              "segment_ids": [
+                "T00091",
+                "T00092",
+                "T00093",
+                "T00094",
+                "T00095",
+                "T00096",
+                "T00097",
+                "T00098",
+                "T00099",
+                "T00100",
+                "T00101",
+                "T00102",
+                "T00103",
+                "T00104",
+                "T00105",
+                "T00106"
+              ],
+              "score": 10.01777
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "transcript:82",
+        "start": 2461.79,
+        "end": 2493.9,
+        "text": "of my testing. So my thought was there's a lot of different coordination methods here, which one actually makes the most sense. The results showed that a single agent with task delegation for a simple task at least and running the orchestrator without the auto decomposer actually had pretty similar token usage and pretty similar quality, but using the auto decomposer and adding the goal loop actually added more overhead for this particular task. So this is obviously a very simple example. It's not by any means a proper benchmark.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00856",
+          "T00857",
+          "T00858",
+          "T00859",
+          "T00860",
+          "T00861"
+        ],
+        "score": 19.57208,
+        "evidence_id": "E001",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "transcript:11",
+        "start": 331.6,
+        "end": 360.56,
+        "text": "all of the pages itself. So the overall idea here is that we're delegating the work but not the judgment. And just to see how this compares, I'm gonna give the same prompt, asking it to do research, but do not delegate to sub-agent. So the approach where I just use a single agent and told it not to delegate to sub-agents. We can see that used 102,000 tokens, whereas the one that delegated to sub-agents only used 37,000 tokens. So keep in mind, this is not taking into account the sub-agent token usage. So the overall tokens was larger.",
+        "source": "transcript",
+        "segment_ids": [
+          "T00077",
+          "T00078",
+          "T00079",
+          "T00080",
+          "T00081",
+          "T00082",
+          "T00083",
+          "T00084",
+          "T00085",
+          "T00086",
+          "T00087",
+          "T00088",
+          "T00089",
+          "T00090"
+        ],
+        "score": 14.57928,
+        "evidence_id": "E002",
+        "modality": "transcript",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "transcript:12",
+        "start": 360.56,
+        "end": 391.16,
+        "text": "There was more context used, but that context that made it back into the main higher intelligence agent was significantly compressed relative to the agent that just did it all itself and had 102,000. If I ran this turn one more time, I might have to compress the context here and then you lose some quality. So that's the first comparison, just using a single agent versus using a single agent with multiple subagents. So the biggest difference is that one uses up a lot more context, but this was also a very basic example. And the results of both of these are basically the same. Build an accountable action steward",
+        "source": "transcript",
+        "segment_ids": [
+          "T00091",
+          "T00092",
+          "T00093",
+          "T00094",
+          "T00095",
+          "T00096",
+          "T00097",
+          "T00098",
+          "T00099",
+          "T00100",
+          "T00101",
+          "T00102",
+          "T00103",
+          "T00104",
+          "T00105",
+          "T00106"
+        ],
+        "score": 10.01777,
+        "evidence_id": "E003",
+        "modality": "transcript",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The 95% confidence interval for the token-usage difference between delegated single-agent and orchestrator-only workflows is not reported in the provided transcript. The transcript mentions that the single agent with task delegation used 102,000 tokens, while the orchestrator-only workflow used 37,000 tokens, but it does not provide a confidence interval for this difference. Therefore, the requested information cannot be established from the evidence provided.\"}",
+        "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+        "error_type": "invalid_model_response"
+      },
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"insufficient_evidence\",\"answer\":\"The 95% confidence interval for the token-usage difference between delegated single-agent and orchestrator-only workflows is not reported in the provided transcript. The transcript mentions token usage values (102,000 vs. 37,000) but does not provide a confidence interval for the difference. Therefore, the requested information cannot be established from the evidence provided.\"}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  }
+]

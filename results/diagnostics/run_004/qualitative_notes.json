@@ -1,0 +1,64 @@
+{
+  "reviewer": "Codex assistant",
+  "method": "Non-blind qualitative diagnostic comparison of selected saved output text with already reviewed source frames and frozen rubrics. Not independent human validation.",
+  "used_for_metrics": false,
+  "semantic_scores_assigned": false,
+  "reference_files": [
+    {
+      "path": "results\\research_v2\\run_004\\questions.selected.json",
+      "sha256": "7895d228681d140d61555dc30cacad49ff47911f206ee6ce535065805b4267ae"
+    },
+    {
+      "path": "data\\assignment_v7\\reference_frames\\point_610.png",
+      "sha256": "bb0b453b4da758892952211e8d2025a49237bfa08a0d84a66dddfd07686d6f22"
+    }
+  ],
+  "observations": [
+    {
+      "question_id": "v7_timestamp_610",
+      "modes": [
+        "adaptive",
+        "static",
+        "uniform"
+      ],
+      "observation": "Delivered answers incorrectly describe four numbered steps, counting FAIL -> RETRY as step 4. The reference image has three numbered main steps; retry is an outcome branch. All three answering-model self-audits still mark the claim supported. Temporal success alone is therefore not content correctness."
+    },
+    {
+      "question_id": "v7_negative_total_tokens",
+      "modes": [
+        "retrieval-only",
+        "static",
+        "uniform"
+      ],
+      "observation": "Delivered answers assert an exact delegated total of 102,000; the frozen negative-control rubric says the all-subagent total is not given. Self-audit accepts these assertions. This is a content failure distinct from response-format or infrastructure errors."
+    },
+    {
+      "question_id": "v7_timestamp_range_constraints",
+      "modes": [
+        "adaptive",
+        "uniform"
+      ],
+      "observation": "Rejected finalizer drafts contain both requested limits (five sources and 500 words), but cite fewer observation windows than the runtime requires. Content similarity does not repair the saved status=error or establish complete supporting citations. These outputs remain failures in the archived denominator."
+    },
+    {
+      "question_id": "v7_timestamp_range_titles",
+      "modes": [
+        "static"
+      ],
+      "observation": "The rejected draft names Article to Curated Knowledge followed by Two Loops, One Knowledge Workflow, matching the frozen title/order rubric text. It only cites E001 and is rejected by the every-window validator. Do not retroactively turn this draft into a successful saved answer."
+    },
+    {
+      "question_id": "v7_negative_dispatch_cost",
+      "modes": [
+        "static",
+        "uniform"
+      ],
+      "observation": "Delivered prose states that the exact dollar cost is not visible/shown, while the structured status is answered. The strict negative-control evaluator records failure because the abstention status was not used. This should not be described as an invented dollar-cost answer; status compliance and semantic abstention are distinct."
+    }
+  ],
+  "limits": [
+    "These are selected explanatory examples, not exhaustive adjudication of 34 delivered answers.",
+    "No review files were filled and no archived quality metrics were recomputed.",
+    "All 23 terminal errors remain failures; no categories are forgiven or dropped."
+  ]
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "status": "answered",
+    "answer": "The full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library is located at approximately 1200.032 seconds to 1260.0 seconds. This is supported by the caption E001, which explicitly describes the diagram and its stages in the video frame at 1200.032 seconds. The diagram is also referenced in the transcript at 1200.57 seconds, confirming its presence in the video timeline.",
+    "citations": [
+      {
+        "evidence_id": "E001",
+        "start": 1200.032,
+        "end": 1260.0
+      }
+    ],
+    "question_id": "visual_03",
+    "question": "Locate the full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library. Give its approximate time interval.",
+    "mode": "retrieval-only",
+    "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+    "tool_calls": 1,
+    "frames_used": 0,
+    "unique_sampled_timestamps": [],
+    "latency_seconds": 10.1485,
+    "usage": {
+      "model_calls": 1,
+      "input_tokens": 1179,
+      "output_tokens": 158
+    },
+    "trace": [
+      {
+        "call": 1,
+        "tool": "search",
+        "args": {
+          "query": "Locate the full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library. Give its approximate time interval.",
+          "top_k": 3
+        },
+        "ok": true,
+        "result": {
+          "hits": [
+            {
+              "id": "caption:40",
+              "start": 1200.0,
+              "end": 1260.0,
+              "text": "- The first frame (1200.032 seconds) displays a flowchart titled \"Article to Curated Knowledge.\"\n- It shows a process with five stages: \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\"\n- The second frame (1259.992 seconds) shows a diagram titled \"Two Loops, One Knowledge Workflow.\"\n- It illustrates two loops: \"RESEARCH LOOP\" and \"CURATION LOOP,\" with a \"Library\" as the central point of interaction.\n- The diagram includes characters representing a researcher, a librarian, and a user, with arrows showing the flow of information and actions.",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00020"
+              ],
+              "score": 46.07375
+            },
+            {
+              "id": "caption:38",
+              "start": 1140.0,
+              "end": 1200.0,
+              "text": "- **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library",
+              "source": "caption",
+              "segment_ids": [
+                "caption_00019"
+              ],
+              "score": 43.33121
+            },
+            {
+              "id": "transcript:40",
+              "start": 1200.57,
+              "end": 1230.73,
+              "text": "YouTube video or some other resource and you've taken some notes on it. You can drop in the raw source and your notes and you can send it off to the librarian. The librarian agent can try and find the fit. How does this fit into your existing knowledge base? It'll check the context, connections, and draft an entry for you for your review to see is this good enough for it to make it into your knowledge base, into your curated library. If it's not good enough, you can suggest revisions and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+              "source": "transcript",
+              "segment_ids": [
+                "T00413",
+                "T00414",
+                "T00415",
+                "T00416",
+                "T00417",
+                "T00418"
+              ],
+              "score": 33.46153
+            }
+          ],
+          "empty": false
+        }
+      }
+    ],
+    "evidence": {
+      "E001": {
+        "id": "caption:40",
+        "start": 1200.0,
+        "end": 1260.0,
+        "text": "- The first frame (1200.032 seconds) displays a flowchart titled \"Article to Curated Knowledge.\"\n- It shows a process with five stages: \"Article + notes,\" \"Find the fit,\" \"Draft an entry,\" \"Human review,\" and \"Connected library.\"\n- The second frame (1259.992 seconds) shows a diagram titled \"Two Loops, One Knowledge Workflow.\"\n- It illustrates two loops: \"RESEARCH LOOP\" and \"CURATION LOOP,\" with a \"Library\" as the central point of interaction.\n- The diagram includes characters representing a researcher, a librarian, and a user, with arrows showing the flow of information and actions.",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00020"
+        ],
+        "score": 46.07375,
+        "evidence_id": "E001",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E002": {
+        "id": "caption:38",
+        "start": 1140.0,
+        "end": 1200.0,
+        "text": "- **Frame 1140.006**: A workflow diagram titled \"One Workflow, Two Views\" is displayed. It shows a task list on the left with tasks like \"Add Markdown export\" and \"Build & check export,\" each with a status of \"Waiting.\" A dependency graph illustrates the workflow, showing tasks like \"Build + check\" and \"Review\" with characters representing the process. The right side shows a \"Done\" section with a \"human merge\" and \"release approval\" note.\n- **Frame 1199.999**: A process flow titled \"Article to Curated Knowledge\" is shown. It includes steps: \"Article + notes\" → \"Find the fit\" → \"Draft an entry\" → \"Human review\" → \"Connected library.\" The \"Human review\" step has a note about \"Review placement + claims,\" and the final step is \"Approved\" with a \"Connected library",
+        "source": "caption",
+        "segment_ids": [
+          "caption_00019"
+        ],
+        "score": 43.33121,
+        "evidence_id": "E002",
+        "modality": "caption",
+        "retrieval_only": true
+      },
+      "E003": {
+        "id": "transcript:40",
+        "start": 1200.57,
+        "end": 1230.73,
+        "text": "YouTube video or some other resource and you've taken some notes on it. You can drop in the raw source and your notes and you can send it off to the librarian. The librarian agent can try and find the fit. How does this fit into your existing knowledge base? It'll check the context, connections, and draft an entry for you for your review to see is this good enough for it to make it into your knowledge base, into your curated library. If it's not good enough, you can suggest revisions and the librarian will update the draft entry and then pass it back to you for a review. Once you",
+        "source": "transcript",
+        "segment_ids": [
+          "T00413",
+          "T00414",
+          "T00415",
+          "T00416",
+          "T00417",
+          "T00418"
+        ],
+        "score": 33.46153,
+        "evidence_id": "E003",
+        "modality": "transcript",
+        "retrieval_only": true
+      }
+    },
+    "decisions": [
+      {
+        "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"The full-screen Article to Curated Knowledge diagram showing Article + notes, Find the fit, Draft an entry, Human review, and Connected library is located at approximately 1200.032 seconds to 1260.0 seconds. This is supported by the caption E001, which explicitly describes the diagram and its stages in the video frame at 1200.032 seconds. The diagram is also referenced in the transcript at 1200.57 seconds, confirming its presence in the video timeline.\",\"citations\":[{\"evidence_id\":\"E001\",\"start\":1200.032,\"end\":1260.0}]}"
+      }
+    ],
+    "provenance": {
+      "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+      "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+      "prompt_version": "clipscout-v4-finalizer"
+    },
+    "verification": "citation IDs and interval bounds checked; semantic entailment NOT automatically verified"
+  }
+]

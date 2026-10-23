@@ -1,0 +1,108 @@
+{
+  "status": "insufficient_evidence",
+  "answer": "The requested timestamp 610.0 is not within the provided evidence range. The evidence only contains a single frame at 610.0094, which is not sufficient to describe the slide at 10 minutes 10 seconds. The evidence does not support the claim that the slide was on screen at that time. Therefore, the answer cannot be established from the provided evidence.",
+  "citations": [],
+  "requested_timestamps": [
+    610.0
+  ],
+  "routing": "explicit_timestamp",
+  "question_id": "",
+  "question": "Describe what was on the slide at 10 minutes 10 seconds",
+  "mode": "adaptive",
+  "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+  "tool_calls": 1,
+  "frames_used": 1,
+  "unique_sampled_timestamps": [
+    610.0094
+  ],
+  "latency_seconds": 94.9829,
+  "usage": {
+    "model_calls": 3,
+    "input_tokens": 2096,
+    "output_tokens": 355
+  },
+  "trace": [
+    {
+      "call": 1,
+      "tool": "inspect_clip",
+      "args": {
+        "start": 609.5,
+        "end": 610.5,
+        "timestamp": 610.0,
+        "question": "Describe what was on the slide at 10 minutes 10 seconds"
+      },
+      "selected_by": "explicit_timestamp_router",
+      "ok": true,
+      "result": {
+        "start": 609.5,
+        "end": 610.5,
+        "transcript": "[608.23–610.87] I honestly use this all the time, especially for coding.",
+        "transcript_truncated": false,
+        "transcript_segments": [
+          {
+            "id": "T00202",
+            "start": 608.23,
+            "end": 610.87
+          }
+        ],
+        "visual_observation": "At 610.009 seconds, the slide displays a diagram titled \"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL\". The diagram is a circular flowchart with three main steps: \"1. TRIGGER / GOAL\", \"2. SPAWN SUB-AGENTS\", and \"3. EVALUATE VS. CRITERIA\". The flow is indicated by arrows, with a \"FAIL -> RETRY\" loop on the left and a \"PASS -> EXIT LOOP\" on the right. The slide also includes text describing the mechanism, example constraints, and execution strategy.",
+        "sampled_timestamps": [
+          610.0094
+        ],
+        "modality": "visual+transcript",
+        "coverage": "nearest_target_frame",
+        "cache_hit": false,
+        "requested_timestamp": 610.0,
+        "target_frame_timestamp": 610.0094,
+        "target_frame_verified": true,
+        "target_time_error_seconds": 0.00940000000002783,
+        "evidence_id": "E001"
+      },
+      "latency_seconds": 84.8852
+    }
+  ],
+  "evidence": {
+    "E001": {
+      "start": 609.5,
+      "end": 610.5,
+      "transcript": "[608.23–610.87] I honestly use this all the time, especially for coding.",
+      "transcript_truncated": false,
+      "transcript_segments": [
+        {
+          "id": "T00202",
+          "start": 608.23,
+          "end": 610.87
+        }
+      ],
+      "visual_observation": "At 610.009 seconds, the slide displays a diagram titled \"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL\". The diagram is a circular flowchart with three main steps: \"1. TRIGGER / GOAL\", \"2. SPAWN SUB-AGENTS\", and \"3. EVALUATE VS. CRITERIA\". The flow is indicated by arrows, with a \"FAIL -> RETRY\" loop on the left and a \"PASS -> EXIT LOOP\" on the right. The slide also includes text describing the mechanism, example constraints, and execution strategy.",
+      "sampled_timestamps": [
+        610.0094
+      ],
+      "modality": "visual+transcript",
+      "coverage": "nearest_target_frame",
+      "cache_hit": false,
+      "requested_timestamp": 610.0,
+      "target_frame_timestamp": 610.0094,
+      "target_frame_verified": true,
+      "target_time_error_seconds": 0.00940000000002783,
+      "evidence_id": "E001"
+    }
+  },
+  "decisions": [
+    {
+      "raw": "{\"action\":\"answer\",\"status\":\"answered\",\"answer\":\"At 10 minutes 10 seconds, the slide displayed a diagram titled \\\"GOAL LOOPS PROVIDE AUTONOMOUS QUALITY CONTROL\\\". It featured a circular flowchart with three steps: \\\"1. TRIGGER / GOAL\\\", \\\"2. SPAWN SUB-AGENTS\\\", and \\\"3. EVALUATE VS. CRITERIA\\\". The flow was indicated by arrows, with a \\\"FAIL -> RETRY\\\" loop on the left and a \\\"PASS -> EXIT LOOP\\\" on the right. The slide also included text describing the mechanism, example constraints, and execution strategy.\"}",
+      "error": "Invalid model response: ValueError: An answered result requires at least one inspected citation",
+      "error_type": "invalid_model_response"
+    },
+    {
+      "raw": "{\"action\":\"answer\",\"status\":\"insufficient_evidence\",\"answer\":\"The requested timestamp 610.0 is not within the provided evidence range. The evidence only contains a single frame at 610.0094, which is not sufficient to describe the slide at 10 minutes 10 seconds. The evidence does not support the claim that the slide was on screen at that time. Therefore, the answer cannot be established from the provided evidence.\"}"
+    }
+  ],
+  "provenance": {
+    "video_sha256": "686d883ec68de23543c3c3492ac32c077016201b7a94b1c96d0d3669e32c8efd",
+    "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+    "prompt_version": "clipscout-v5-explicit-moments"
+  },
+  "verification": "citation IDs and interval bounds checked; explicit-moment answers require cited target evidence; semantic entailment NOT automatically verified",
+  "run_id": "20261022T051250Z_49da341a99e2"
+}

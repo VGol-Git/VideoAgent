@@ -1,0 +1,70 @@
+{
+  "created_utc": "2026-10-21T19:54:23.721330+00:00",
+  "backend": "qwen:Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203:cuda",
+  "index_fingerprint": "c2b30ed50e0e87395c773cd04465098c44cb00e975c359ff8abcc41d67b8d7f6",
+  "question_ids": [
+    "visual_01",
+    "visual_02",
+    "visual_04",
+    "visual_06",
+    "visual_08",
+    "speech_05",
+    "speech_06",
+    "speech_07",
+    "speech_08",
+    "speech_09",
+    "speech_10",
+    "speech_11",
+    "speech_12"
+  ],
+  "modes": [
+    "adaptive",
+    "retrieval-only",
+    "static",
+    "uniform"
+  ],
+  "vision": true,
+  "frames_per_clip": 4,
+  "max_frames": 16,
+  "image_size": 560,
+  "max_new_tokens": 384,
+  "max_tool_calls": 4,
+  "cache_enabled": false,
+  "prompt_version": "clipscout-v4-finalizer",
+  "split": "test",
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "question_file_sha256": "69e053f8a6c5d2dec5d4cca8242ec3280be8bcc73ac77d18ca1fbd5056bcc772",
+  "provenance": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.6.0+cu124",
+      "torchvision": "0.21.0+cu124",
+      "transformers": "4.57.6",
+      "numpy": "2.2.6",
+      "Pillow": "12.3.0",
+      "opencv-python-headless": "4.11.0.86",
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.6.0",
+      "av": "19.0.2"
+    },
+    "source_sha256": {
+      "__init__.py": "0fea446cab00641a910e7be4f11c790955039a633ae4f1303aac1c8fe0d61c8a",
+      "__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+      "agent.py": "e927ad224d19127255aeb44ce67ffd94d5b86e065c4feaac8ab28b07cfbd8fca",
+      "backends.py": "f1129ccb04733318400bc0dee100a767914d0e743aa0c0110d12f0899f0329b1",
+      "cli.py": "5e644fbe57e4f5e8ef5d713d655406f511e930f985112f8dd14b1deae314ee6d",
+      "evaluation.py": "73c27877e4ee42c3b935c03e831804c1eb015927b40f3d3222fbcff7894ad2eb",
+      "index.py": "e8cecebe74aef4947c3e9a4f904b01b4dac6a1c11b329645aa651b4808f89598",
+      "media.py": "91b8bade978603fd2ae5eadfabcd11fb874264c7ab8e2e13653dd5b2264407a8",
+      "server.py": "4a26abdeb01827ad4f3896391788d6c246cf51d2c85690eb391a188273b7cd34",
+      "transcribe.py": "4fc5de271f44a00d7eaef32cdd398022dae250bb59979fd516db66a3fc41172e"
+    }
+  },
+  "warmup_seconds": 10.821347899996908,
+  "warmup_frames": 4,
+  "warmup_usage": {
+    "model_calls": 1,
+    "input_tokens": 790,
+    "output_tokens": 2
+  }
+}
