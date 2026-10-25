@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+from contextlib import nullcontext
 from datetime import datetime, timezone
 import hashlib
 from importlib import metadata as package_metadata
@@ -13,7 +14,8 @@ import platform
 import tempfile
 import time
 
-from .agent import AgentConfig, VideoAgent, PROMPT_VERSION
+from .agent import AgentConfig, VideoAgent, PROMPT_VERSION, UNIFORM_POLICY_VERSION
+from .backends import is_cuda_oom
 from .index import Segment, VideoIndex, read_subtitles
 
 
@@ -193,12 +195,23 @@ def main(argv=None):
                         "prompt_version": PROMPT_VERSION,
                         "split": args.split, "python": sys.version, "question_file_sha256": hashlib.sha256(Path(args.questions).read_bytes()).hexdigest(),
                         "provenance": experiment_provenance()}
+            if "uniform" in args.modes:
+                manifest["uniform_policy_version"] = UNIFORM_POLICY_VERSION
+                if hasattr(agent.backend, "UNIFORM_OBSERVATION_TOKENS"):
+                    manifest["uniform_inference_limits"] = {
+                        "observation_max_new_tokens": min(args.max_new_tokens, agent.backend.UNIFORM_OBSERVATION_TOKENS),
+                        "action_max_new_tokens": min(args.max_new_tokens, agent.backend.UNIFORM_ACTION_TOKENS),
+                        "max_context_tokens": min(agent.backend.max_context_tokens, agent.backend.UNIFORM_CONTEXT_TOKENS),
+                        "cuda_oom_retries_per_generation": 1,
+                    }
             previous = out / "manifest.json"
             if args.resume and previous.exists():
                 old = json.loads(previous.read_text(encoding="utf-8"))
                 for k in ("backend", "index_fingerprint", "question_ids", "vision", "frames_per_clip", "max_frames", "question_file_sha256", "image_size", "max_new_tokens", "cache_enabled", "prompt_version"):
                     if old.get(k) != manifest.get(k):
                         raise ValueError(f"Cannot resume changed experiment: {k}")
+                if "uniform" in args.modes and old.get("uniform_policy_version") != manifest["uniform_policy_version"]:
+                    raise ValueError("Cannot resume changed experiment: uniform_policy_version; choose a fresh output directory")
                 if old.get("provenance") != manifest["provenance"]:
                     raise ValueError("Cannot resume with changed source code or runtime")
             # All model load and a real warm-up generation happen before question timers.
@@ -208,7 +221,22 @@ def main(argv=None):
                 from .media import extract_frames
                 warmup_images = extract_frames(agent.index.video_path, 0, min(4.0, agent.index.duration),
                                                count=args.frames_per_clip, max_side=args.image_size)
-            agent.backend.generate("Reply with the single word READY.", "Initialize inference.", images=warmup_images)
+            # Uniform has its own bounded inference policy; leave the adaptive
+            # warm-up and generation settings unchanged.
+            uniform_warmup = getattr(agent.backend, "uniform_session", None) if args.modes == ["uniform"] else None
+            try:
+                with uniform_warmup() if uniform_warmup else nullcontext():
+                    agent.backend.generate("Reply with the single word READY.", "Initialize inference.", images=warmup_images)
+            except Exception as exc:
+                if args.modes == ["uniform"] and is_cuda_oom(exc):
+                    manifest.update(status="failed_cuda_oom", complete=False, failed_mode="uniform",
+                                    failure_stage="warmup", error=f"{type(exc).__name__}: {exc}",
+                                    saved_predictions=0, finished_utc=datetime.now(timezone.utc).isoformat())
+                    save_json(previous, manifest)
+                    save_json(out / "uniform.predictions.json", [])
+                    save_json(out / "uniform.metrics.json", evaluate(questions, [], max_frames=args.max_frames))
+                    parser.exit(3, "clipscout: uniform warm-up CUDA recovery exhausted; no questions were started.\n")
+                raise
             manifest["warmup_seconds"] = time.perf_counter() - warmup_started
             manifest["warmup_frames"] = len(warmup_images or [])
             manifest["warmup_usage"] = dict(agent.backend.usage)
@@ -230,6 +258,16 @@ def main(argv=None):
                     predictions.append(pred)
                     save_json(predictions_file, predictions)
                     print(f"  {pred['status']} / {pred['tool_calls']} calls / {pred['latency_seconds']:.1f}s", flush=True)
+                    if mode == "uniform" and pred["status"] == "error" and is_cuda_oom(pred.get("error", "")):
+                        # The backend already attempted one clean recovery. A
+                        # poisoned CUDA state must not cascade across the set.
+                        save_json(out / f"{mode}.metrics.json", evaluate(questions, predictions, max_frames=args.max_frames))
+                        manifest.update(status="failed_cuda_oom", complete=False, failed_mode=mode,
+                                        failed_question_id=q["id"], saved_predictions=len(predictions),
+                                        finished_utc=datetime.now(timezone.utc).isoformat())
+                        save_json(previous, manifest)
+                        print("Persistent CUDA out of memory in uniform after backend recovery. Saved predictions and partial metrics; aborting remaining questions and modes.", flush=True)
+                        parser.exit(3, "clipscout: uniform CUDA recovery exhausted; use a fresh process and output directory.\n")
                 save_json(out / f"{mode}.metrics.json", evaluate(questions, predictions, max_frames=args.max_frames))
         elif args.command == "serve":
             from .server import serve

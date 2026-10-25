@@ -3,6 +3,8 @@ param(
     [string]$QuestionsPath = (Join-Path (Split-Path $PSScriptRoot -Parent) 'questions.json'),
     [string]$OutputRoot = (Join-Path $PSScriptRoot 'results\assignment_v6_adaptive'),
     [ValidateSet('adaptive', 'retrieval-only', 'static', 'uniform')][string[]]$Modes = @('adaptive'),
+    [ValidateRange(1, 2048)][int]$MaxNewTokens = 768,
+    [string]$InvocationScript,
     [switch]$StopDemo,
     [switch]$PlanOnly
 )
@@ -133,6 +135,7 @@ print('Question format validated without loading a model.')
     }
     $sourceFiles = @(Get-ChildItem -LiteralPath (Join-Path $projectRoot 'clipscout') -Recurse -File -Filter '*.py')
     $sourceFiles += @(Get-Item -LiteralPath $PSCommandPath, (Join-Path $projectRoot 'run.ps1'), (Join-Path $projectRoot 'pyproject.toml'))
+    if ($InvocationScript) { $sourceFiles += @(Get-Item -LiteralPath $InvocationScript) }
     $sourceHashes = @{}
     foreach ($source in $sourceFiles) {
         $relative = $source.FullName.Substring($projectRoot.Length).TrimStart([char[]]'\/')
@@ -145,6 +148,7 @@ print('Question format validated without loading a model.')
         status = 'running'; started_at_utc = [DateTime]::UtcNow.ToString('o'); branch = $branch
         git_commit = (& git -C $projectRoot rev-parse HEAD); agent = 'v6'; modes = $Modes; split = $Split
         planned_predictions = $plannedPredictions
+        requested_max_new_tokens = $MaxNewTokens
         question_count = $selected.Count; question_ids = @($selected.id); source_sha256 = $sourceHashes
         original_questions_sha256 = (Get-FileHash -LiteralPath $questionPath -Algorithm SHA256).Hash.ToLowerInvariant()
         adapted_questions_sha256 = (Get-FileHash -LiteralPath $adaptedPath -Algorithm SHA256).Hash.ToLowerInvariant()
@@ -164,7 +168,7 @@ print('Question format validated without loading a model.')
         # Windows PowerShell 5.1 represents native stderr as ErrorRecord objects.
         # Log warnings as well as stdout; the process exit code decides failure.
         $ErrorActionPreference = 'Continue'
-        & $runtimePython -u -m clipscout evaluate --index (Join-Path $projectRoot 'data\indexes\user_video.json') --questions $adaptedPath --output $runDir --modes @Modes --split $Split --device cuda --local-files-only --max-new-tokens 768 --frames-per-clip 4 --max-frames 16 --image-size 560 2>&1 | ForEach-Object {
+        & $runtimePython -u -m clipscout evaluate --index (Join-Path $projectRoot 'data\indexes\user_video.json') --questions $adaptedPath --output $runDir --modes @Modes --split $Split --device cuda --local-files-only --max-new-tokens $MaxNewTokens --frames-per-clip 4 --max-frames 16 --image-size 560 2>&1 | ForEach-Object {
             $line = [string]$_
             $consoleWriter.WriteLine($line)
             Write-Host $line
@@ -195,6 +199,12 @@ print('Question format validated without loading a model.')
         $state['saved_predictions'] = $totalSaved
         $state['response_errors'] = $totalErrors
         if ($runExitCode -eq 0 -and $totalErrors -gt 0) { $state['status'] = 'completed_with_response_errors' }
+        $evaluationManifestPath = Join-Path $runDir 'manifest.json'
+        if (Test-Path -LiteralPath $evaluationManifestPath) {
+            $evaluationManifest = Get-Content -LiteralPath $evaluationManifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+            if ($evaluationManifest.status -eq 'failed_cuda_oom') { $state['status'] = 'failed_cuda_oom' }
+        }
+        if ($runExitCode -eq 0 -and $totalSaved -lt $plannedPredictions) { $state['status'] = 'incomplete' }
         Write-Host "Saved $totalSaved/$plannedPredictions predictions; $totalErrors response errors."
         Save-RunJson $statePath $state
         Write-Host "Outputs: $runDir"

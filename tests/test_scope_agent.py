@@ -185,10 +185,9 @@ class ScopeAgentTests(unittest.TestCase):
         for question, start, end in USER_CASES:
             for mode in ("retrieval-only", "static", "uniform"):
                 with self.subTest(question=question, mode=mode):
-                    # The fixed uniform baseline can have no positions in a short requested interval.
-                    fixed_count = sum(DURATION * f - 15 < end and DURATION * f + 15 > start
-                                      for f in (.125, .375, .625, .875))
-                    count = fixed_count if mode == "uniform" else 3
+                    # Uniform now distributes its deterministic windows inside
+                    # the requested interval, including short intervals.
+                    count = 4 if mode == "uniform" else 3
                     agent = self.make_agent([overview(count) if count else no_evidence()], start, end)
                     with patch("clipscout.media.extract_frames", side_effect=decode_midpoints):
                         result = agent.run(question, mode=mode)

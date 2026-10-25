@@ -336,7 +336,7 @@ class AgentBehaviorTests(unittest.TestCase):
                                          ({"action": "answer", "status": "error", "answer": "model-chosen error",
                                            "citations": []}, "invalid_model_response")):
                 with self.subTest(mode=mode, response=response):
-                    attempts = 1 if isinstance(response, Exception) else 3
+                    attempts = 1 if isinstance(response, Exception) else 2 if mode == "uniform" else 3
                     backend = ScriptedBackend([response] * attempts)
                     result = VideoAgent(small_index(), backend,
                                         AgentConfig(use_vision=False)).run("entropy", mode=mode)
