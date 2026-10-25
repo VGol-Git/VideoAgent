@@ -7,11 +7,16 @@ cache inside this project. No backend silently falls back to a remote service.
 from __future__ import annotations
 
 import base64
+from contextlib import contextmanager
+import gc
 import io
 import json
 import math
 import os
 from pathlib import Path
+import sys
+import time
+import traceback
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -23,6 +28,19 @@ QWEN_REVISION = "89644892e4d85e24eaac8bacfd4f463576704203"
 
 class BackendError(RuntimeError):
     """The configured backend could not complete a generation."""
+
+
+class BackendOOMError(BackendError):
+    """CUDA generation still failed after one clean, same-request retry."""
+
+
+def is_cuda_oom(error):
+    """Recognize CUDA OOMs without importing torch or retaining exceptions."""
+    message = str(error).lower()
+    if "cuda out of memory" in message or "cuda error: out of memory" in message:
+        return True
+    kind = type(error)
+    return kind.__name__ == "OutOfMemoryError" and kind.__module__.startswith("torch")
 
 
 def _integer(value, name, minimum, maximum):
@@ -123,6 +141,10 @@ class QwenBackend:
     Oversized contexts fail explicitly, preserving image/token alignment.
     """
 
+    UNIFORM_OBSERVATION_TOKENS = 256
+    UNIFORM_ACTION_TOKENS = 384
+    UNIFORM_CONTEXT_TOKENS = 6144
+
     def __init__(self, model="Qwen/Qwen3-VL-2B-Instruct", cache_dir=None,
                  device="cuda", max_new_tokens=512, max_context_tokens=8192,
                  max_images=16, max_image_pixels=560 * 560, local_files_only=False):
@@ -144,6 +166,21 @@ class QwenBackend:
         self.local_files_only = bool(local_files_only)
         self.usage = {"model_calls": 0, "input_tokens": 0, "output_tokens": 0}
         self._model = self._processor = self._torch = None
+        self._uniform_depth = 0
+        self.generation_events = []
+
+    @contextmanager
+    def uniform_session(self):
+        """Enable bounded decoding and OOM recovery only for uniform policy.
+
+        The configured limits are never increased and are not mutated. Nested
+        sessions are supported; exceptions also restore the caller's scope.
+        """
+        self._uniform_depth += 1
+        try:
+            yield self
+        finally:
+            self._uniform_depth -= 1
 
     def _load(self):
         if self._model is not None:
@@ -191,7 +228,72 @@ class QwenBackend:
         return self._generate(system, user, stop_json=True)
 
     def _generate(self, system: str, user: str, images=None, stop_json=False) -> str:
-        _validate_text(system, user, self.max_context_tokens * 4)
+        if not self._uniform_depth:
+            return self._generate_once(system, user, images, stop_json)
+        # Materialize one-shot image iterables once so recovery repeats the
+        # identical request rather than silently losing visual evidence.
+        images = None if images is None else list(images)
+        for attempt in (1, 2):
+            result, oom_message = self._uniform_attempt(system, user, images, stop_json, attempt)
+            if oom_message is None:
+                return result
+            # The attempt helper has returned and cleared its exception and
+            # generation frames before models/caches are released here.
+            recovery_error = None
+            try:
+                self._recover_cuda_oom()
+            except Exception as exc:
+                recovery_error = f"{type(exc).__name__}: {exc}"
+                traceback.clear_frames(exc.__traceback__)
+                exc.__traceback__ = exc.__cause__ = exc.__context__ = None
+            if recovery_error is not None:
+                self.generation_events[-1]["recovery_error"] = recovery_error
+                raise BackendOOMError("CUDA out of memory; uniform recovery failed: " + recovery_error)
+        raise BackendOOMError(
+            "CUDA out of memory after a clean uniform retry of the same request: " + oom_message)
+
+    def _uniform_attempt(self, system, user, images, stop_json, attempt):
+        output_limit = min(self.max_new_tokens, self.UNIFORM_ACTION_TOKENS if stop_json
+                           else self.UNIFORM_OBSERVATION_TOKENS)
+        context_limit = min(self.max_context_tokens, self.UNIFORM_CONTEXT_TOKENS)
+        event = {"stage": "action" if stop_json else "observation", "attempt": attempt,
+                 "retry": attempt > 1, "oom": False, "status": "ok", "input_tokens": 0,
+                 "output_tokens": 0, "max_new_tokens": output_limit,
+                 "max_context_tokens": context_limit}
+        began = time.perf_counter()
+        try:
+            return self._generate_once(system, user, images, stop_json,
+                                       max_new_tokens=output_limit, max_context_tokens=context_limit,
+                                       attempt_event=event), None
+        except Exception as exc:
+            if self.device != "cuda" or not is_cuda_oom(exc):
+                event.update(status="error", error_type=type(exc).__name__)
+                raise
+            message = str(exc)
+            event.update(status="cuda_oom", oom=True, error_type=type(exc).__name__, error=message)
+            # An OOM traceback owns the failed generate()/to()/load() frames,
+            # including their GPU tensors. Do not collect/cache-clear while
+            # these frames are still live, or retain them in a retry exception.
+            traceback.clear_frames(exc.__traceback__)
+            exc.__traceback__ = exc.__cause__ = exc.__context__ = None
+            return None, message
+        finally:
+            event["elapsed_seconds"] = round(time.perf_counter() - began, 4)
+            self.generation_events.append(event)
+
+    def _recover_cuda_oom(self):
+        self._model = self._processor = None
+        torch = self._torch or sys.modules.get("torch")
+        gc.collect()
+        if torch is not None:
+            torch.cuda.empty_cache()
+
+    def _generate_once(self, system: str, user: str, images=None, stop_json=False,
+                       *, max_new_tokens=None, max_context_tokens=None, attempt_event=None) -> str:
+        # Defaults deliberately retain the original adaptive generation path.
+        output_limit = self.max_new_tokens if max_new_tokens is None else max_new_tokens
+        context_limit = self.max_context_tokens if max_context_tokens is None else max_context_tokens
+        _validate_text(system, user, context_limit * 4)
         images = _prepare_images(images, self.max_images, self.max_image_pixels)
         self._load()
         content = [{"type": "text", "text": user}]
@@ -208,10 +310,12 @@ class QwenBackend:
         inputs = self._processor(**arguments)
         inputs.pop("token_type_ids", None)
         input_count = int(inputs["input_ids"].shape[-1])
-        if input_count + self.max_new_tokens > self.max_context_tokens:
+        if attempt_event is not None:
+            attempt_event["input_tokens"] = input_count
+        if input_count + output_limit > context_limit:
             raise BackendError(
-                f"Context budget exceeded: {input_count} input + {self.max_new_tokens} output "
-                f"> {self.max_context_tokens}. Reduce evidence or images.")
+                f"Context budget exceeded: {input_count} input + {output_limit} output "
+                f"> {context_limit}. Reduce evidence or images.")
         inputs = inputs.to(self.device)
         generation_options = {}
         if stop_json:
@@ -220,11 +324,13 @@ class QwenBackend:
         self.usage["model_calls"] += 1
         self.usage["input_tokens"] += input_count
         with self._torch.inference_mode():
-            generated = self._model.generate(**inputs, max_new_tokens=self.max_new_tokens,
+            generated = self._model.generate(**inputs, max_new_tokens=output_limit,
                                              do_sample=False, temperature=1.0, top_p=1.0, top_k=50,
                                              use_cache=True, **generation_options)
         output_ids = generated[:, input_count:]
         self.usage["output_tokens"] += int(output_ids.shape[-1])
+        if attempt_event is not None:
+            attempt_event["output_tokens"] = int(output_ids.shape[-1])
         result = self._processor.batch_decode(
             output_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0].strip()
         if not result:
